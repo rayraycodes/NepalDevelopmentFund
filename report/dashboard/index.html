@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>External Development Funding to Nepal — Dashboard</title>
+<style>
+  :root{
+    --bg:#eef1f6; --card:#ffffff; --ink:#0f1d2e; --muted:#5b6b7d; --line:#e3e8ef;
+    --navy:#0d2440; --teal:#0e7c86;
+    --donor:#2563eb; --recipient:#dc2626; --anchor:#64748b; --amber:#f59e0b; --green:#0f9d58;
+    --shadow:0 1px 2px rgba(16,29,46,.06),0 8px 24px rgba(16,29,46,.06);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.5;-webkit-font-smoothing:antialiased}
+  a{color:var(--teal);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+
+  header{position:sticky;top:0;z-index:50;
+    background:linear-gradient(180deg,rgba(13,36,64,.97),rgba(13,36,64,.92));
+    backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
+  .hbar{display:flex;align-items:center;gap:16px;padding:12px 0;color:#fff}
+  .hbar .logo{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--teal),#37b3bd);
+    display:grid;place-items:center;font-weight:800;color:#fff;flex:none}
+  .hbar h1{font-size:15px;margin:0;font-weight:650;letter-spacing:.2px}
+  .hbar .sub{font-size:12px;color:#a9bdd4;margin-top:1px}
+  nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+  nav a{color:#cdd9e8;font-size:13px;padding:6px 10px;border-radius:7px}
+  nav a:hover{background:rgba(255,255,255,.08);text-decoration:none;color:#fff}
+
+  .hero{background:radial-gradient(1100px 360px at 70% -40%,rgba(14,124,134,.18),transparent),var(--navy);
+    color:#fff;padding:40px 0 30px}
+  .hero h2{font-size:30px;line-height:1.18;margin:0 0 10px;font-weight:740;max-width:760px}
+  .hero p{color:#bcccdf;max-width:680px;margin:0 0 18px;font-size:15px}
+  .badges{display:flex;gap:8px;flex-wrap:wrap}
+  .badge{font-size:12px;color:#d6e2f0;background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.14);padding:5px 10px;border-radius:999px}
+
+  .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:-34px 0 8px;position:relative;z-index:2}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 15px 14px;box-shadow:var(--shadow)}
+  .kpi .v{font-size:23px;font-weight:760;letter-spacing:-.3px}
+  .kpi .l{font-size:11.5px;color:var(--muted);margin-top:3px;line-height:1.35}
+  .kpi .bar{height:3px;border-radius:3px;background:var(--teal);width:30px;margin-bottom:10px}
+
+  section{padding:30px 0 6px}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:.10em;text-transform:uppercase;color:var(--teal)}
+  h3{font-size:21px;margin:6px 0 6px;font-weight:700}
+  .lead{color:var(--muted);max-width:760px;margin:0 0 16px;font-size:14.5px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow)}
+  .chart{width:100%;height:420px}
+  .chart.sm{height:360px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .controls{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+  select{font:inherit;font-size:13px;padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+  .note{font-size:12.5px;color:var(--muted);margin-top:10px}
+
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:700}
+  .pill{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:999px;white-space:nowrap}
+  .p-cons{background:#e6f6ec;color:#0f7a3d}.p-exp{background:#eef1f6;color:#475569}
+  .p-key{background:#fef3e2;color:#a86412}.p-high{background:#e6f6ec;color:#0f7a3d}
+  .p-med{background:#fff7e6;color:#a86412}.p-low{background:#fdeaea;color:#b4322b}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+  .chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 13px;font-size:13px;font-weight:600;box-shadow:var(--shadow)}
+  .src{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+  .src .side{font-size:11px;color:var(--muted);width:74px;flex:none}
+  footer{margin-top:36px;padding:26px 0 50px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+  .disclaim{background:#fff;border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:10px;
+    padding:13px 16px;font-size:13.5px;color:#3a4a5c;margin-top:14px}
+  @media(max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}.hero h2{font-size:24px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap hbar">
+    <div class="logo">अ</div>
+    <div>
+      <h1>External Development Funding to Nepal</h1>
+      <div class="sub">Donor side vs recipient side · 2015–2024 · fully sourced</div>
+    </div>
+    <nav>
+      <a href="#flows">Flows</a><a href="#donors">Donors</a><a href="#china">China</a>
+      <a href="#sectors">Sectors</a><a href="#gaps">Discrepancies</a><a href="#sources">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h2>What Nepal receives, and what donors report giving — compared, not merged.</h2>
+    <p>A verifiable, fully sourced view of official development finance to Nepal. Every figure is
+    traced to a primary source, separated into commitments and disbursements, and tagged by
+    confidence. The two ledgers are compared rather than added.</p>
+    <div class="badges" id="badges"></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="kpis" id="kpis"></div>
+
+  <section id="flows">
+    <div class="kicker">The triangulation</div>
+    <h3>Donor side vs recipient side vs anchor</h3>
+    <p class="lead">The OECD donor-side total and the World Bank net-ODA anchor overlap almost to
+    the dollar (both OECD-rooted). Nepal's own Development Cooperation Report runs higher in
+    2016–2019 and peaks near US$2.0bn in 2019. The divergence is real and explained below.</p>
+    <div class="card"><div id="c-flows" class="chart"></div>
+      <div class="note">US$ millions, current. Donor = OECD DAC2A (net); recipient = Nepal DCR
+      (gross, by fiscal-year start); anchor = World Bank DT.ODA.ODAT.CD.</div></div>
+  </section>
+
+  <section id="donors">
+    <div class="kicker">Who funds Nepal</div>
+    <h3>Top donors, by ledger side</h3>
+    <p class="lead">The ranking agrees across both ledgers: the World Bank and ADB lead, then
+    Japan, the US, the UK and the EU. India appears only on the recipient side (it is a non-DAC
+    donor); ADB is larger there because Nepal records gross loan disbursement.</p>
+    <div class="controls"><label for="donorYear">Year</label>
+      <select id="donorYear"></select></div>
+    <div class="grid2">
+      <div class="card"><div id="c-donor" class="chart sm"></div></div>
+      <div class="card"><div id="c-recip" class="chart sm"></div></div>
+    </div>
+  </section>
+
+  <section id="china">
+    <div class="kicker">A closer look</div>
+    <h3>China: large commitments, modest recorded disbursements</h3>
+    <p class="lead">China's headline numbers for Nepal are commitments and pledges. The
+    disbursements Nepal actually records (in its own Development Cooperation Report) are small and
+    fell sharply after 2018. OECD statistics do not capture China at all.</p>
+    <div class="card"><div id="c-china" class="chart sm"></div>
+      <div class="note">Commitments: AidData GCDF v3.0 (to 2021). Disbursements: Nepal DCR.</div></div>
+  </section>
+
+  <section id="sectors">
+    <div class="kicker">Where it goes</div>
+    <h3>Sector composition</h3>
+    <p class="lead">From OECD CRS activity-level data (gross disbursement). CRS gross runs about
+    1.1–1.3x the net-ODA anchor.</p>
+    <div class="controls"><label for="sectorYear">Year</label>
+      <select id="sectorYear"></select></div>
+    <div class="card"><div id="c-sectors" class="chart sm"></div></div>
+  </section>
+
+  <section id="gaps">
+    <div class="kicker">Data integrity</div>
+    <h3>Donor minus recipient gap, and the discrepancy log</h3>
+    <p class="lead">Negative bars are years Nepal reports receiving more than OECD donors report
+    giving (net). Each material mismatch is logged with its most likely cause.</p>
+    <div class="card"><div id="c-gap" class="chart sm"></div></div>
+    <div class="card" style="margin-top:16px;overflow-x:auto">
+      <table id="disc"><thead><tr><th>ID</th><th>Comparison</th><th>Magnitude</th>
+      <th>Verdict</th><th>Most likely cause</th></tr></thead><tbody></tbody></table>
+    </div>
+    <p class="lead" style="margin-top:18px">Donors that OECD statistics miss entirely (captured
+    only on Nepal's recipient side):</p>
+    <div class="chips" id="nondac"></div>
+  </section>
+
+  <section id="sources">
+    <div class="kicker">Provenance</div>
+    <h3>Sources</h3>
+    <p class="lead">Nine sources, retrieved 2026-06-03. Every record carries its source URL,
+    retrieval time and a SHA-256 snapshot in the manifest.</p>
+    <div class="card" id="srclist"></div>
+    <div class="disclaim"><strong>Data-integrity note.</strong> Commitments and disbursements are
+    never added together. The donor-side headline is OECD DAC2A only; the recipient-side headline
+    is the Nepal DCR only; the two are compared, never merged. IATI is de-duplicated by
+    identifier. China, India and the Gulf funds are absent from OECD and come from Nepal's own
+    reporting. Nothing is fabricated: unverifiable figures are left blank and labelled MISSING.</div>
+  </section>
+
+  <footer>
+    Built from primary sources, retrieved 2026-06-03 (UTC). Full report:
+    <a href="../report.md">report.md</a> · machine-readable:
+    <a href="../../data/processed/core_long.csv">core_long.csv</a>,
+    <a href="../../data/processed/core_headline.csv">core_headline.csv</a> · provenance:
+    <a href="../../data/manifest.csv">manifest.csv</a>.
+    <span id="meta-foot"></span>
+  </footer>
+</div>
+
+<script src="vendor/echarts.min.js"></script>
+<script src="data.js"></script>
+<script>
+const D = window.NEPAL_DATA;
+const C = {donor:'#2563eb',recipient:'#dc2626',anchor:'#64748b',amber:'#f59e0b',
+  green:'#0f9d58',ink:'#0f1d2e',grid:'#eef1f6'};
+const fmt = v => v==null ? '—' : '$'+Number(v).toLocaleString(undefined,{maximumFractionDigits:0})+'m';
+const charts = [];
+function mk(id){const c=echarts.init(document.getElementById(id));charts.push(c);return c;}
+window.addEventListener('resize',()=>charts.forEach(c=>c.resize()));
+const baseText = {fontFamily:'Inter,system-ui,sans-serif',color:C.ink};
+
+// badges
+document.getElementById('badges').innerHTML =
+  [`Fully sourced`,`${D.meta.n_sources} sources`,
+   `${D.meta.n_rows.toLocaleString()} records`,
+   `${D.meta.n_headline} verified headline rows`,`Retrieved ${D.meta.retrieved_at}`]
+  .map(t=>`<span class="badge">${t}</span>`).join('');
+
+// KPIs
+const k = D.kpis;
+const kcards = [
+  {v:fmt(k.net_oda_2023), l:'Net ODA received, 2023 (World Bank / OECD)'},
+  {v:fmt(k.peak_value), l:`Peak year (${k.peak_year}), net ODA received`},
+  {v:k.largest_partner, l:'Largest single partner'},
+  {v:k.largest_nondac+' · '+fmt(k.largest_nondac_value), l:'Largest donor OECD misses (FY2022/23)'},
+  {v:k.n_sources+' / '+k.n_rows.toLocaleString(), l:'Sources / records, validated'},
+];
+document.getElementById('kpis').innerHTML = kcards.map(c=>
+  `<div class="kpi"><div class="bar"></div><div class="v">${c.v}</div><div class="l">${c.l}</div></div>`).join('');
+
+// flows line chart
+const R = D.reconciliation;
+mk('c-flows').setOption({
+  textStyle:baseText, grid:{left:58,right:24,top:46,bottom:38},
+  tooltip:{trigger:'axis', valueFormatter:v=>fmt(v)},
+  legend:{top:6, data:['World Bank anchor','Donor side (OECD)','Recipient side (Nepal DCR)']},
+  xAxis:{type:'category', data:R.map(x=>x.year), boundaryGap:false,
+    axisLine:{lineStyle:{color:'#cbd5e1'}}},
+  yAxis:{type:'value', name:'US$ m', splitLine:{lineStyle:{color:C.grid}}},
+  series:[
+    {name:'World Bank anchor', type:'line', data:R.map(x=>x.anchor), symbol:'circle',
+      symbolSize:7, lineStyle:{width:2,color:C.anchor}, itemStyle:{color:C.anchor}},
+    {name:'Donor side (OECD)', type:'line', data:R.map(x=>x.donor), symbol:'rect',
+      symbolSize:7, lineStyle:{width:3,color:C.donor}, itemStyle:{color:C.donor}},
+    {name:'Recipient side (Nepal DCR)', type:'line', data:R.map(x=>x.recipient), symbol:'triangle',
+      symbolSize:8, lineStyle:{width:3,color:C.recipient}, itemStyle:{color:C.recipient}},
+  ],
+});
+
+// top donors (year selector)
+const dc = mk('c-donor'), rc = mk('c-recip');
+function barH(title,color){return{textStyle:baseText, title:{text:title,left:'center',top:4,
+  textStyle:{fontSize:14,fontWeight:600,color:C.ink}}, grid:{left:8,right:46,top:42,bottom:12,containLabel:true},
+  tooltip:{trigger:'axis',axisPointer:{type:'shadow'},valueFormatter:v=>fmt(v)},
+  xAxis:{type:'value',splitLine:{lineStyle:{color:C.grid}}}, yAxis:{type:'category',data:[],inverse:true},
+  series:[{type:'bar',data:[],itemStyle:{color:color,borderRadius:[0,4,4,0]},
+    label:{show:true,position:'right',formatter:p=>fmt(p.value),fontSize:11,color:C.ink}}]};}
+function setDonors(year){
+  const d=D.topDonors.donor[year]||[], r=D.topDonors.recipient[year]||[];
+  const od=barH('Donor side · OECD DAC2A',C.donor);
+  od.yAxis.data=d.map(x=>x.name); od.series[0].data=d.map(x=>x.usd); dc.setOption(od);
+  const or=barH('Recipient side · Nepal DCR',C.recipient);
+  or.yAxis.data=r.map(x=>x.name); or.series[0].data=r.map(x=>x.usd); rc.setOption(or);
+}
+const dy=document.getElementById('donorYear');
+Object.keys(D.topDonors.donor).sort().reverse().forEach(y=>dy.add(new Option(y,y)));
+dy.value='2022'; dy.onchange=()=>setDonors(dy.value); setDonors('2022');
+
+// china
+const ch=D.china;
+mk('c-china').setOption({textStyle:baseText, grid:{left:58,right:20,top:42,bottom:34},
+  tooltip:{trigger:'axis',valueFormatter:v=>fmt(v)}, legend:{top:6},
+  xAxis:{type:'category',data:ch.years}, yAxis:{type:'value',name:'US$ m',splitLine:{lineStyle:{color:C.grid}}},
+  series:[
+    {name:'Commitments (AidData)',type:'bar',data:ch.commitments,itemStyle:{color:C.amber,borderRadius:[4,4,0,0]}},
+    {name:'Disbursements recorded by Nepal',type:'bar',data:ch.disbursements,itemStyle:{color:C.recipient,borderRadius:[4,4,0,0]}},
+  ]});
+
+// sectors (year selector)
+const sc=mk('c-sectors');
+function setSectors(year){const s=D.sectors[year]||[];
+  sc.setOption({textStyle:baseText, grid:{left:8,right:54,top:14,bottom:12,containLabel:true},
+    tooltip:{trigger:'axis',axisPointer:{type:'shadow'},valueFormatter:v=>fmt(v)},
+    xAxis:{type:'value',name:'US$ m',splitLine:{lineStyle:{color:C.grid}}},
+    yAxis:{type:'category',inverse:true,data:s.map(x=>x.name)},
+    series:[{type:'bar',data:s.map(x=>x.usd),itemStyle:{color:C.green,borderRadius:[0,4,4,0]},
+      label:{show:true,position:'right',formatter:p=>fmt(p.value),fontSize:11,color:C.ink}}]},true);}
+const sy=document.getElementById('sectorYear');
+Object.keys(D.sectors).sort().reverse().forEach(y=>sy.add(new Option(y,y)));
+sy.value='2022'; sy.onchange=()=>setSectors(sy.value); setSectors('2022');
+
+// gap
+const g=R.filter(x=>x.gap_pct!=null);
+mk('c-gap').setOption({textStyle:baseText, grid:{left:48,right:20,top:18,bottom:34},
+  tooltip:{trigger:'axis',valueFormatter:v=>v+'%'},
+  xAxis:{type:'category',data:g.map(x=>x.year)},
+  yAxis:{type:'value',name:'%',splitLine:{lineStyle:{color:C.grid}}},
+  series:[{type:'bar',data:g.map(x=>({value:x.gap_pct,itemStyle:{color:x.gap_pct<0?C.recipient:C.donor,borderRadius:3}})),
+    label:{show:true,position:'top',formatter:p=>p.value+'%',fontSize:10,color:C.ink}}]});
+
+// discrepancy table
+const pillCls={CONSISTENT:'p-cons',EXPECTED:'p-exp',EXPLAINED:'p-exp','KEY FINDING':'p-key'};
+document.querySelector('#disc tbody').innerHTML = D.discrepancies.map(d=>
+  `<tr><td><strong>${d.id}</strong></td><td>${d.comparison}</td><td>${d.magnitude}</td>
+   <td><span class="pill ${pillCls[d.verdict]||'p-exp'}">${d.verdict}</span></td><td>${d.cause}</td></tr>`).join('');
+
+// non-DAC chips
+document.getElementById('nondac').innerHTML = D.nondac_missing.map(n=>`<span class="chip">${n}</span>`).join('');
+
+// sources
+const sb={high:'p-high',med:'p-med',low:'p-low'};
+document.getElementById('srclist').innerHTML = D.sources.map(s=>
+  `<div class="src"><span class="side">${s.side}</span>
+   <span style="flex:1"><a href="${s.url}" target="_blank" rel="noopener">${s.name}</a></span>
+   <span class="pill ${sb[s.status]}">${s.status}</span></div>`).join('');
+
+document.getElementById('meta-foot').textContent =
+  ` Build ${D.meta.version}. Donor-side and recipient-side headline series are compared, never summed.`;
+</script>
+</body>
+</html>

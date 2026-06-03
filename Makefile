@@ -32,7 +32,14 @@ validate:
 figures:
 	$(PY) scripts/80_figures.py
 
-all: anchor fetch build validate figures
+dashboard-data:
+	$(PY) scripts/85_dashboard_data.py
+
+# serve the self-contained dashboard at http://127.0.0.1:8848
+serve: dashboard-data
+	cd report/dashboard && $(PY) -m http.server 8848 --bind 127.0.0.1
+
+all: anchor fetch build validate figures dashboard-data
 
 clean:
 	rm -rf data/interim/* data/processed/* data/manifest_*.csv

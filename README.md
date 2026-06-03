@@ -24,7 +24,14 @@ make anchor     # Phase 1: World Bank net-ODA anchor + OECD DAC2A (verified core
 make fetch      # Phase 2: remaining donor sources
 make build      # Phase 3: dedupe, reconcile, assemble core_long
 make validate   # integrity assertions
+make figures    # generate report/figures/*.png
+make serve      # build dashboard data + serve the interactive dashboard at :8848
 ```
+
+An interactive, self-contained dashboard (ECharts, works offline) lives in
+[`report/dashboard/`](report/dashboard/index.html): donor vs recipient triangulation, top
+donors by ledger side, the China commitments-vs-disbursements story, sectors, the gap, and the
+full discrepancy log and source list. Run `make serve` and open http://127.0.0.1:8848.
 
 Each fetch writes an **immutable, dated raw snapshot** under `data/raw/<source>/` and a
 SHA-256 row to `data/manifest_<source>.csv`. Outputs land in `data/processed/`.

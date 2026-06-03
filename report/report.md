@@ -5,6 +5,10 @@ ISO-3 NPL). Primary measure: current (nominal) US dollars unless stated. This re
 with what is verified, is explicit about what is uncertain, and never presents an estimate
 as a confirmed fact. Every quantitative claim links to a working source.
 
+An interactive, self-contained dashboard of these findings is in
+[`report/dashboard/index.html`](dashboard/index.html) (run `make serve`, then open
+http://127.0.0.1:8848).
+
 ## What is verified (read this first)
 
 1. **The donor-side headline reconciles across two independent OECD-rooted sources and an
