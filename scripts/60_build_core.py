@@ -76,6 +76,9 @@ def main():
     hl = (df["counts_in_headline"].astype(str).str.lower() == "true")
     df["_usd"] = num(df, "amount_usd")
 
+    # slim headline-only export (the non-double-counted donor + recipient series)
+    df[hl][C.CORE_COLUMNS].to_csv(C.PROCESSED / "core_headline.csv", index=False)
+
     # by-donor: headline rows only (donor-side = OECD leaf; recipient-side = DCR)
     dy = df[hl].groupby(["side", "donor_name", "year", "flow_stage"], as_index=False)["_usd"].sum()
     dy.rename(columns={"_usd": "amount_usd"}, inplace=True)
