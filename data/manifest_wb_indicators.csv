@@ -1,0 +1,2 @@
+source,snapshot_path,url,params,sha256,bytes,http_status,retrieved_at
+wb_indicators,data/raw/wb_indicators/DT.ODA.ODAT.CD_NPL_20260603T161029Z.json,https://api.worldbank.org/v2/country/NPL/indicator/DT.ODA.ODAT.CD?format=json&date=2015:2024&per_page=100,"{'format': 'json', 'date': '2015:2024', 'per_page': '100'}",065c3689914ef0ffe915d5e6feb9ae8404f69eabbdbba5c6654680a9d50d169e,2539,200,2026-06-03T16:10:29Z

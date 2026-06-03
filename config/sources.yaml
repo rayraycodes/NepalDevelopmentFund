@@ -1,0 +1,84 @@
+# Source registry — exact endpoints, access method, coverage, limitations.
+# Human-readable; scripts hardcode their own endpoints, this is the canonical reference
+# that feeds the Source Registry deliverable. Verified live 2026-06-03.
+
+oecd_dac2a:
+  name: OECD DAC2A — ODA disbursements by recipient
+  side: donor
+  access: SDMX-CSV via curl/requests with browser User-Agent (WebFetch is 403-blocked)
+  endpoint: https://sdmx.oecd.org/public/rest/data/OECD.DCD.FSD,DSD_DAC2@DF_DAC2A,/.NPL...
+  params: "startPeriod=2015&endPeriod=2024&dimensionAtObservation=AllDimensions"
+  accept: application/vnd.sdmx.data+csv;labels=both
+  recipient_code: NPL
+  dataflow_version: "1.5"
+  coverage: "2015-2024 (latest varies)"
+  limitations: >
+    Response mixes aggregate donors (DACEU_EC, DAC totals) with individual donors — filter.
+    Returns both current (V) and constant (Q, base 2024) price rows.
+
+oecd_crs:
+  name: OECD CRS — activity level (instrument + sector authority)
+  side: donor
+  endpoint: https://sdmx.oecd.org/public/rest/data/OECD.DCD.FSD,DSD_CRS@DF_CRS,/...NPL...
+  dataflow_version: "1.6"
+  coverage: "final to ~2023, 2024 preliminary"
+  limitations: Excludes most non-DAC donors (China, India, Gulf).
+
+oecd_dac1:
+  name: OECD DAC1 — donor aggregates (reconciliation only)
+  side: donor
+  dataflow_version: "1.7"
+
+wb_indicators:
+  name: World Bank — Net ODA received (DT.ODA.ODAT.CD), OECD-sourced ANCHOR
+  side: donor
+  endpoint: https://api.worldbank.org/v2/country/NPL/indicator/DT.ODA.ODAT.CD
+  params: "format=json&date=2015:2024&per_page=100"
+  coverage: "2015-2023"
+  limitations: Aggregate total; used as benchmark, not summed into headline.
+
+wb_projects:
+  name: World Bank — Projects (commitments)
+  side: donor
+  endpoint: https://search.worldbank.org/api/v3/projects
+  params: "format=json&countrycode_exact=NP&rows=500"
+  coverage: "~280 Nepal projects"
+  limitations: Approvals = commitments, not disbursements.
+
+iati_dportal:
+  name: IATI via d-portal (no key)
+  side: donor
+  endpoint: http://d-portal.org/q
+  params: "from=act&country_code=NP&form=json&limit=N&offset=N"
+  limitations: >
+    select=stats is broken — use the activity form. No native USD (only *_eur/_gbp/_cad).
+    Non-additive: dedupe by iati-identifier across publishers.
+
+adb_iati:
+  name: ADB IATI publication (XM-DAC-46004)
+  side: donor
+  endpoint: https://www.adb.org/iati/iati-activities-np.xml
+  coverage: "~7.3 MB XML, last-mod 2026-05-26"
+  limitations: Excludes Technical Assistance Special Fund (undercount). data.adb.org portal is 403-blocked.
+
+us_fa:
+  name: US ForeignAssistance.gov (+ Heiss mirror)
+  side: donor
+  endpoint: https://foreignassistance.gov/
+  mirror: https://github.com/andrewheiss/foreign-assistance-data
+  limitations: Volatile post-2025 (USAID->State, rescissions). Cross-check vs OECD CRS.
+
+nepal_dcr:
+  name: Nepal MoF IECCD — Development Cooperation Report (RECIPIENT side)
+  side: recipient
+  endpoint: https://mof.gov.np/divisions/ieccd/category/dcr/
+  amis: https://amis.mof.gov.np/
+  fiscal_basis: nepal_fy
+  limitations: PDF extraction; includes China and India (OECD misses these).
+
+aiddata_gcdf:
+  name: AidData Global Chinese Development Finance v3.0
+  side: donor
+  endpoint: https://www.aiddata.org/data/aiddatas-geospatial-global-chinese-development-finance-dataset-version-3-0
+  coverage: "to ~2021 commitments"
+  limitations: Lags ~4 years; fills China gap.

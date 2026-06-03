@@ -1,0 +1,25 @@
+dac_purpose_prefix,sector,description
+110,education,Education
+120,health,Health
+130,population,Population policies and reproductive health
+140,water,Water supply and sanitation
+150,governance,Government and civil society
+160,other_social,Other social infrastructure and services
+210,transport,Transport and storage
+220,communications,Communications
+230,energy,Energy
+240,finance,Banking and financial services
+250,business,Business and other services
+310,agriculture,"Agriculture, forestry, fishing"
+320,industry,"Industry, mining, construction"
+330,trade,Trade policy and tourism
+410,environment,General environment protection
+430,multisector,Other multisector
+510,budget_support,General budget support
+520,food_aid,Development food assistance
+530,commodity_aid,Other commodity and general programme assistance
+600,debt,Action relating to debt
+700,humanitarian,Humanitarian aid
+910,admin,Administrative costs of donors
+930,refugees_in_donor,Refugees in donor countries
+998,unallocated,Unallocated / unspecified

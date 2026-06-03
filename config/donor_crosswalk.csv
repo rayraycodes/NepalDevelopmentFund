@@ -1,0 +1,26 @@
+key,oecd_donor_code,iso3,iati_org_id,donor_name,type,verified,notes
+ADB,46004,,XM-DAC-46004,Asian Development Bank,multilateral,yes,IATI org id confirmed live 2026-06-03
+WORLDBANK_IDA,905,,44000,World Bank (IDA),multilateral,partial,IATI org 44000 is World Bank group; OECD IDA code to confirm in CRS
+WORLDBANK_IBRD,901,,44000,World Bank (IBRD),multilateral,partial,confirm OECD code in CRS
+EU_INST,918,,XI-IATI-EC,EU Institutions,multilateral,partial,DAC code 918 for EU Institutions; separate from member states
+IMF,,,XM-DAC-998,IMF,multilateral,no,confirm code; concessional trust vs general
+AIIB,,,,Asian Infrastructure Investment Bank,multilateral,no,confirm IATI org id
+IFAD,,,XM-DAC-41108,IFAD,multilateral,no,confirm
+UNDP,,,XM-DAC-41114,UNDP,multilateral,no,confirm
+UNICEF,,,XM-DAC-41122,UNICEF,multilateral,no,confirm
+WHO,,,XM-DAC-928,WHO,multilateral,no,confirm
+WFP,,,XM-DAC-41140,WFP,multilateral,no,confirm
+GLOBALFUND,,,XM-DAC-47045,Global Fund,vertical_fund,no,confirm
+GAVI,,,XM-DAC-47122,Gavi,vertical_fund,no,confirm
+GCF,,,XM-DAC-47135,Green Climate Fund,vertical_fund,no,confirm
+USA,,USA,US-GOV,United States,bilateral_dac,partial,USAID folded into State 2025
+GBR,,GBR,GB-GOV-1,United Kingdom (FCDO),bilateral_dac,partial,confirm org id
+JPN,,JPN,XM-DAC-701,Japan,bilateral_dac,no,JICA implements; confirm
+DEU,,DEU,XM-DAC-5,Germany,bilateral_dac,no,GIZ/KfW; confirm
+CHE,,CHE,XM-DAC-801,Switzerland (SDC),bilateral_dac,no,confirm
+NOR,,NOR,XM-DAC-7,Norway (Norad),bilateral_dac,no,confirm
+CHN,,CHN,,China,bilateral_nondac,no,non-DAC; from Nepal DCR + AidData
+IND,,IND,,India,bilateral_nondac,no,non-DAC; from Nepal DCR
+SAUDI_FUND,,,,Saudi Fund for Development,bilateral_nondac,no,project-by-project
+KUWAIT_FUND,,,,Kuwait Fund,bilateral_nondac,no,project-by-project
+OPEC_FUND,,,,OPEC Fund (OFID),multilateral_nondac,no,project-by-project
