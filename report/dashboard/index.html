@@ -77,6 +77,10 @@
   .chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:13.5px;font-weight:600;box-shadow:var(--shadow)}
   .src{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14px;flex-wrap:wrap}
   .src .side{font-size:11px;color:var(--muted);width:84px;flex:none;text-transform:uppercase;letter-spacing:.03em}
+  .conf-legend h4{margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+  .conf-legend .row{display:flex;gap:11px;align-items:flex-start;padding:6px 0;font-size:13.5px}
+  .conf-legend .row .pill{flex:none;margin-top:1px;min-width:66px;text-align:center}
+  .conf-legend .row span{color:#3a4a5c}
   details.gloss{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px 18px;box-shadow:var(--shadow)}
   details.gloss summary{cursor:pointer;font-weight:650;padding:12px 0;font-size:16px}
   details.gloss dl{margin:0 0 12px}details.gloss dt{font-weight:650;margin-top:12px}
@@ -192,6 +196,7 @@
     <h3 data-i18n="sources_title">Sources</h3>
     <p class="lead" data-i18n="sources_lead">Nine sources, retrieved 3 June 2026. Every record keeps its source link and a verifiable snapshot.</p>
     <div class="card" id="srclist"></div>
+    <div class="card conf-legend" id="conf-legend" style="margin-top:14px"></div>
     <div class="disclaim" data-i18n="integrity">Commitments and disbursements are never added together. The donor side comes only from OECD; the recipient side only from Nepal's report; the two are compared, never merged. Nothing is invented: figures that cannot be verified are left blank.</div>
   </section>
 
@@ -260,6 +265,10 @@ const I18N = {
   // verdicts / confidence / side
   v_CONSISTENT:"Matches",v_EXPECTED:"Expected",v_EXPLAINED:"Explained","v_KEY FINDING":"Key finding",
   conf_high:"high",conf_med:"medium",conf_low:"low",side_donor:"donor",side_recipient:"recipient",
+  conf_legend_title:"What the confidence labels mean",
+  conf_high_def:"Comes straight from an official data system, in US dollars, and matches an independent check. Trust these most (e.g. World Bank, OECD).",
+  conf_med_def:"Official, but needed an adjustment (converting currencies, gross vs net, or a different fiscal year). Solid, with a caveat.",
+  conf_low_def:"Taken from a PDF, estimated, or a few years out of date. Useful for the overall picture, but treat the exact number with care.",
  },
  ne:{
   skip:"सामग्रीमा जानुहोस्", site_title:"नेपाललाई विकास सहायता",
@@ -298,6 +307,10 @@ const I18N = {
   b_sourced:"पूर्ण स्रोतसहित",b_sources:"{n} स्रोत",b_records:"{n} अभिलेख",b_headline:"{n} जाँचिएका मुख्य अङ्क",b_ret:"३ जुन २०२६ मा लिइएको",
   v_CONSISTENT:"मिल्दो",v_EXPECTED:"अपेक्षित",v_EXPLAINED:"व्याख्या गरिएको","v_KEY FINDING":"मुख्य निष्कर्ष",
   conf_high:"उच्च",conf_med:"मध्यम",conf_low:"न्यून",side_donor:"दाता",side_recipient:"प्राप्तकर्ता",
+  conf_legend_title:"विश्वसनीयता तहको अर्थ",
+  conf_high_def:"सीधै आधिकारिक डाटा प्रणालीबाट, डलरमा, र स्वतन्त्र जाँचसँग मिल्छ। यिनलाई सबैभन्दा बढी विश्वास गर्नुहोस् (जस्तै विश्व बैंक, OECD)।",
+  conf_med_def:"आधिकारिक, तर समायोजन चाहियो (मुद्रा रूपान्तरण, कुल बनाम खुद, वा फरक आर्थिक वर्ष)। भरपर्दो, तर एक सावधानीसहित।",
+  conf_low_def:"PDF बाट निकालिएको, अनुमानित, वा केही वर्ष पुरानो। समग्र चित्रका लागि उपयोगी, तर ठ्याक्कै अङ्कलाई सावधानीसाथ लिनुहोस्।",
  }
 };
 
@@ -419,6 +432,10 @@ function render(){
     `<div class="src"><span class="side">${t('side_'+s.side)}</span>
      <span style="flex:1;min-width:200px"><a href="${s.url}" target="_blank" rel="noopener">${s.name}</a></span>
      <span class="pill ${sb[s.status]}">${t('conf_'+s.status)}</span></div>`).join('');
+  document.getElementById('conf-legend').innerHTML=
+    `<h4>${t('conf_legend_title')}</h4>`+
+    [['high','conf_high_def'],['med','conf_med_def'],['low','conf_low_def']].map(([lvl,def])=>
+      `<div class="row"><span class="pill ${sb[lvl]}">${t('conf_'+lvl)}</span><span>${t(def)}</span></div>`).join('');
 
   // selectors
   const dy=document.getElementById('donorYear'); if(!dy.options.length){
