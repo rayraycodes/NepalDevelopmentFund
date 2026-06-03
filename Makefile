@@ -29,7 +29,10 @@ build:
 validate:
 	$(PY) scripts/90_validate.py
 
-all: anchor fetch build validate
+figures:
+	$(PY) scripts/80_figures.py
+
+all: anchor fetch build validate figures
 
 clean:
 	rm -rf data/interim/* data/processed/* data/manifest_*.csv
