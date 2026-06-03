@@ -1,0 +1,1366 @@
+source,sector,year,flow_stage,amount_usd
+adb_iati,11110,2018,commitment,168584000.0
+adb_iati,11110,2018,disbursement,8000000.0
+adb_iati,11110,2019,disbursement,22293382.19
+adb_iati,11110,2020,disbursement,25163515.86
+adb_iati,11110,2021,disbursement,30018823.099999998
+adb_iati,11110,2022,commitment,201000000.0
+adb_iati,11110,2022,disbursement,19983353.05
+adb_iati,11110,2023,disbursement,25192110.869999997
+adb_iati,11110,2024,disbursement,51477847.17
+adb_iati,11110,2025,disbursement,37276186.24
+adb_iati,11110,2026,disbursement,1310394.81
+adb_iati,11220,2015,commitment,200000000.0
+adb_iati,11220,2015,disbursement,10310000.0
+adb_iati,11220,2016,disbursement,12640576.68
+adb_iati,11220,2017,disbursement,34007866.31
+adb_iati,11220,2018,disbursement,62507664.66
+adb_iati,11220,2019,disbursement,38536582.47
+adb_iati,11220,2020,disbursement,6985160.850000001
+adb_iati,11320,2016,commitment,120000000.0
+adb_iati,11320,2016,disbursement,14999999.99
+adb_iati,11320,2017,disbursement,20000000.0
+adb_iati,11320,2018,disbursement,8000000.0
+adb_iati,11320,2019,disbursement,20000000.009999998
+adb_iati,11320,2020,disbursement,20161176.54
+adb_iati,11320,2021,disbursement,19271800.8
+adb_iati,11320,2022,disbursement,11203483.14
+adb_iati,11330,2015,disbursement,3057273.9899999998
+adb_iati,11330,2016,disbursement,4576124.68
+adb_iati,11330,2017,disbursement,298027.57
+adb_iati,11330,2019,disbursement,287824.55
+adb_iati,12220,2020,commitment,250000000.0
+adb_iati,12220,2020,disbursement,250000000.0
+adb_iati,13040,2021,commitment,165000000.0
+adb_iati,13040,2021,disbursement,42141664.02
+adb_iati,13040,2022,disbursement,-6702867.069999999
+adb_iati,13040,2023,disbursement,48627116.269999996
+adb_iati,13040,2024,disbursement,420329.55
+adb_iati,14015,2015,disbursement,2283594.67
+adb_iati,14015,2016,disbursement,3648305.4400000004
+adb_iati,14015,2017,disbursement,5379091.43
+adb_iati,14015,2018,disbursement,4491987.04
+adb_iati,14015,2019,disbursement,4521157.37
+adb_iati,14015,2020,disbursement,1070808.86
+adb_iati,14015,2021,disbursement,531273.23
+adb_iati,14015,2022,disbursement,1899953.74
+adb_iati,14015,2023,disbursement,212388.1
+adb_iati,14022,2015,disbursement,10310854.66
+adb_iati,14022,2016,disbursement,9400192.17
+adb_iati,14022,2017,disbursement,13219445.15
+adb_iati,14022,2018,disbursement,10969509.64
+adb_iati,14022,2019,disbursement,12595986.68
+adb_iati,14022,2020,disbursement,5902650.98
+adb_iati,14022,2021,disbursement,7675426.43
+adb_iati,14022,2022,disbursement,5493884.31
+adb_iati,14022,2023,disbursement,4945480.51
+adb_iati,14022,2024,disbursement,2274065.7900000005
+adb_iati,14022,2025,disbursement,5573222.45
+adb_iati,14022,2026,disbursement,1482097.06
+adb_iati,14031,2015,disbursement,25138437.5
+adb_iati,14031,2016,disbursement,22807235.689999998
+adb_iati,14031,2017,disbursement,24834098.32
+adb_iati,14031,2018,commitment,130000000.0
+adb_iati,14031,2018,disbursement,12112611.41
+adb_iati,14031,2019,disbursement,20506538.939999998
+adb_iati,14031,2020,disbursement,14605873.26
+adb_iati,14031,2021,disbursement,18694800.68
+adb_iati,14031,2022,disbursement,19378289.97
+adb_iati,14031,2023,disbursement,15011739.87
+adb_iati,14031,2024,disbursement,10098150.61
+adb_iati,14031,2025,disbursement,3625716.54
+adb_iati,14032,2015,commitment,3000000.0
+adb_iati,15111,2023,commitment,100000000.0
+adb_iati,15111,2023,disbursement,100000000.0
+adb_iati,15111,2024,commitment,200000.0
+adb_iati,15185,2016,disbursement,10000000.0
+adb_iati,15185,2025,commitment,100000000.0
+adb_iati,15185,2026,disbursement,100000000.0
+adb_iati,16011,2022,commitment,12000000.0
+adb_iati,16011,2024,disbursement,535376.73
+adb_iati,16011,2025,disbursement,1068412.21
+adb_iati,16011,2026,disbursement,13380.0
+adb_iati,21011,2015,disbursement,1770978.19
+adb_iati,21011,2016,disbursement,1632189.03
+adb_iati,21011,2017,disbursement,745406.28
+adb_iati,21011,2018,disbursement,3424.63
+adb_iati,21011,2019,disbursement,207342.3
+adb_iati,21011,2020,commitment,50000000.0
+adb_iati,21011,2020,disbursement,25000000.0
+adb_iati,21023,2015,disbursement,12366456.05
+adb_iati,21023,2016,disbursement,17279035.63
+adb_iati,21023,2017,commitment,186800000.0
+adb_iati,21023,2017,disbursement,24314712.38
+adb_iati,21023,2018,commitment,180000000.0
+adb_iati,21023,2018,disbursement,8966184.94
+adb_iati,21023,2019,commitment,195000000.0
+adb_iati,21023,2019,disbursement,18810413.77
+adb_iati,21023,2020,disbursement,32027188.490000002
+adb_iati,21023,2021,disbursement,33152719.42
+adb_iati,21023,2022,disbursement,29971791.52
+adb_iati,21023,2023,commitment,300000000.0
+adb_iati,21023,2023,disbursement,65648684.120000005
+adb_iati,21023,2024,disbursement,90115677.34
+adb_iati,21023,2025,disbursement,100186158.66
+adb_iati,21023,2026,disbursement,9323100.57
+adb_iati,21050,2015,disbursement,10091405.55
+adb_iati,21050,2016,disbursement,7041933.71
+adb_iati,21050,2017,disbursement,2555578.78
+adb_iati,21050,2018,disbursement,3994007.65
+adb_iati,21050,2019,disbursement,2086003.4699999997
+adb_iati,21050,2020,commitment,150000000.0
+adb_iati,21050,2020,disbursement,644984.54
+adb_iati,21050,2021,disbursement,286495.85
+adb_iati,21050,2022,disbursement,5377579.34
+adb_iati,21050,2023,disbursement,10004644.379999999
+adb_iati,21050,2024,disbursement,10085666.799999999
+adb_iati,21050,2025,disbursement,11146167.4
+adb_iati,21050,2026,disbursement,1840331.63
+adb_iati,22020,2015,disbursement,4282967.0600000005
+adb_iati,22020,2016,disbursement,1479212.83
+adb_iati,22020,2017,disbursement,185837.28
+adb_iati,22020,2018,disbursement,38969.63
+adb_iati,22020,2019,disbursement,1385399.67
+adb_iati,22040,2026,commitment,40000000.0
+adb_iati,23111,2015,disbursement,94743.23
+adb_iati,23111,2016,disbursement,155765.93
+adb_iati,23183,2023,commitment,4000000.0
+adb_iati,23220,2015,disbursement,1731341.8399999999
+adb_iati,23220,2016,disbursement,3184078.75
+adb_iati,23220,2017,disbursement,5133076.0600000005
+adb_iati,23220,2018,disbursement,7251509.04
+adb_iati,23220,2019,commitment,30000000.0
+adb_iati,23220,2019,disbursement,8154707.0
+adb_iati,23220,2020,disbursement,6947150.48
+adb_iati,23220,2021,disbursement,12524210.17
+adb_iati,23220,2022,disbursement,9631233.74
+adb_iati,23220,2023,disbursement,17710254.71
+adb_iati,23220,2024,disbursement,27674004.08
+adb_iati,23220,2025,disbursement,18798637.46
+adb_iati,23220,2026,disbursement,5236314.63
+adb_iati,23630,2015,disbursement,17933516.29
+adb_iati,23630,2016,disbursement,22493659.14
+adb_iati,23630,2017,commitment,170000000.0
+adb_iati,23630,2017,disbursement,39624714.96
+adb_iati,23630,2018,commitment,20000000.0
+adb_iati,23630,2018,disbursement,28140578.66
+adb_iati,23630,2019,disbursement,45980897.71
+adb_iati,23630,2020,commitment,356000000.0
+adb_iati,23630,2020,disbursement,49413201.51
+adb_iati,23630,2021,commitment,60000000.0
+adb_iati,23630,2021,disbursement,46250749.48
+adb_iati,23630,2022,disbursement,47753047.35
+adb_iati,23630,2023,disbursement,78154016.21000001
+adb_iati,23630,2024,commitment,373600000.0
+adb_iati,23630,2024,disbursement,79708816.84
+adb_iati,23630,2025,disbursement,60561890.48
+adb_iati,23630,2026,disbursement,20600595.83
+adb_iati,24010,2015,disbursement,27612366.2
+adb_iati,24030,2015,disbursement,193029.76
+adb_iati,24030,2016,disbursement,174355.97
+adb_iati,24030,2019,disbursement,432217.48
+adb_iati,24030,2020,disbursement,-36023.47
+adb_iati,24040,2019,commitment,50000000.0
+adb_iati,24040,2020,disbursement,5000000.0
+adb_iati,24040,2021,disbursement,7000000.0
+adb_iati,24040,2022,disbursement,5000000.0
+adb_iati,24040,2023,commitment,21300000.0
+adb_iati,24040,2023,disbursement,18000000.0
+adb_iati,24040,2024,disbursement,5000000.0
+adb_iati,24040,2025,disbursement,5000000.0
+adb_iati,31110,2019,commitment,50000000.0
+adb_iati,31110,2019,disbursement,25000000.0
+adb_iati,31110,2022,disbursement,25000000.0
+adb_iati,31110,2024,commitment,185000000.0
+adb_iati,31110,2025,disbursement,104466427.0
+adb_iati,31110,2026,disbursement,1085525.8099999998
+adb_iati,31130,2024,commitment,31250000.0
+adb_iati,31130,2026,disbursement,164472.91
+adb_iati,31140,2015,disbursement,5343259.07
+adb_iati,31140,2016,disbursement,5837154.23
+adb_iati,31140,2017,disbursement,1004266.78
+adb_iati,31140,2019,disbursement,814277.06
+adb_iati,31140,2020,disbursement,1028525.06
+adb_iati,31161,2024,commitment,125000000.0
+adb_iati,31161,2025,disbursement,1450000.0
+adb_iati,31161,2026,disbursement,1124014.69
+adb_iati,31191,2018,commitment,100000000.0
+adb_iati,31191,2018,disbursement,13435782.66
+adb_iati,31191,2019,disbursement,20232587.45
+adb_iati,31191,2020,disbursement,11701144.97
+adb_iati,31191,2021,disbursement,14557179.19
+adb_iati,31191,2022,disbursement,13946570.09
+adb_iati,31191,2023,commitment,100000000.0
+adb_iati,31191,2023,disbursement,5160789.27
+adb_iati,31191,2024,disbursement,6700570.640000001
+adb_iati,31191,2025,disbursement,11406134.35
+adb_iati,31191,2026,disbursement,3164652.44
+adb_iati,32110,2017,commitment,21000000.0
+adb_iati,32110,2017,disbursement,10000000.0
+adb_iati,32110,2019,disbursement,11258703.04
+adb_iati,32110,2023,commitment,50000000.0
+adb_iati,32161,2015,disbursement,5496897.87
+adb_iati,32161,2016,disbursement,7259837.14
+adb_iati,32161,2017,disbursement,1291140.48
+adb_iati,32161,2019,disbursement,-10595.559999999998
+adb_iati,32161,2020,disbursement,22869.61
+adb_iati,32161,2022,commitment,79000000.0
+adb_iati,32161,2023,disbursement,131323.12
+adb_iati,32161,2024,disbursement,2637625.09
+adb_iati,32161,2025,disbursement,1872620.9
+adb_iati,32161,2026,disbursement,241504.37
+adb_iati,43032,2024,commitment,185000000.0
+adb_iati,43032,2026,disbursement,2980908.62
+adb_iati,43060,2015,disbursement,7282438.99
+adb_iati,43060,2016,disbursement,10383597.94
+adb_iati,43060,2017,commitment,150000000.0
+adb_iati,43060,2017,disbursement,25937164.55
+adb_iati,43060,2018,disbursement,30101190.32
+adb_iati,43060,2019,commitment,63000000.0
+adb_iati,43060,2019,disbursement,26618666.080000002
+adb_iati,43060,2020,commitment,50750000.0
+adb_iati,43060,2020,disbursement,20024898.91
+adb_iati,43060,2021,disbursement,15574553.35
+adb_iati,43060,2022,disbursement,8188037.33
+adb_iati,43060,2023,disbursement,12513833.16
+adb_iati,43060,2024,commitment,166000000.0
+adb_iati,43060,2024,disbursement,13783734.93
+adb_iati,43060,2025,commitment,2000000.0
+adb_iati,43060,2025,disbursement,13415707.08
+adb_iati,43060,2026,disbursement,3540623.49
+oecd_crs,admin,2015,commitment,3427384.0
+oecd_crs,admin,2015,disbursement,3441140.0
+oecd_crs,admin,2016,commitment,924844.0
+oecd_crs,admin,2016,disbursement,901188.0
+oecd_crs,admin,2017,commitment,29689399.0
+oecd_crs,admin,2017,disbursement,17766666.0
+oecd_crs,admin,2018,commitment,19345535.0
+oecd_crs,admin,2018,disbursement,19736749.0
+oecd_crs,admin,2019,commitment,23016748.0
+oecd_crs,admin,2019,disbursement,26149456.0
+oecd_crs,admin,2020,commitment,21444536.0
+oecd_crs,admin,2020,disbursement,21504807.0
+oecd_crs,admin,2021,commitment,24319800.0
+oecd_crs,admin,2021,disbursement,25870123.0
+oecd_crs,admin,2022,commitment,22111849.0
+oecd_crs,admin,2022,disbursement,23690920.0
+oecd_crs,admin,2023,commitment,66257767.0
+oecd_crs,admin,2023,disbursement,31542128.0
+oecd_crs,admin,2024,commitment,37785508.0
+oecd_crs,admin,2024,disbursement,33064640.0
+oecd_crs,agriculture,2015,commitment,89031976.0
+oecd_crs,agriculture,2015,disbursement,75819387.0
+oecd_crs,agriculture,2016,commitment,38334562.0
+oecd_crs,agriculture,2016,disbursement,85135000.0
+oecd_crs,agriculture,2017,commitment,209518888.0
+oecd_crs,agriculture,2017,disbursement,117308420.0
+oecd_crs,agriculture,2018,commitment,155815587.0
+oecd_crs,agriculture,2018,disbursement,85800072.0
+oecd_crs,agriculture,2019,commitment,128995313.0
+oecd_crs,agriculture,2019,disbursement,100026439.0
+oecd_crs,agriculture,2020,commitment,156454503.0
+oecd_crs,agriculture,2020,disbursement,70673346.0
+oecd_crs,agriculture,2021,commitment,30507321.0
+oecd_crs,agriculture,2021,disbursement,77632613.0
+oecd_crs,agriculture,2022,commitment,122430554.0
+oecd_crs,agriculture,2022,disbursement,112248284.0
+oecd_crs,agriculture,2023,commitment,33118966.0
+oecd_crs,agriculture,2023,disbursement,74005690.0
+oecd_crs,agriculture,2024,commitment,359562428.0
+oecd_crs,agriculture,2024,disbursement,74473355.0
+oecd_crs,budget_support,2015,commitment,216229406.0
+oecd_crs,budget_support,2015,disbursement,99756860.0
+oecd_crs,budget_support,2016,disbursement,55521630.0
+oecd_crs,budget_support,2017,disbursement,46153117.0
+oecd_crs,budget_support,2018,disbursement,254751.0
+oecd_crs,budget_support,2019,disbursement,1707993.0
+oecd_crs,budget_support,2020,commitment,437085868.0
+oecd_crs,budget_support,2020,disbursement,437897047.0
+oecd_crs,budget_support,2021,commitment,123001.0
+oecd_crs,budget_support,2021,disbursement,885087.0
+oecd_crs,budget_support,2022,commitment,76087114.0
+oecd_crs,budget_support,2022,disbursement,76914120.0
+oecd_crs,budget_support,2023,commitment,209223910.0
+oecd_crs,budget_support,2023,disbursement,209223910.0
+oecd_crs,budget_support,2024,commitment,183366520.0
+oecd_crs,budget_support,2024,disbursement,83366520.0
+oecd_crs,business,2015,commitment,6161509.0
+oecd_crs,business,2015,disbursement,4559322.0
+oecd_crs,business,2016,commitment,5102921.0
+oecd_crs,business,2016,disbursement,3980364.0
+oecd_crs,business,2017,commitment,211719.0
+oecd_crs,business,2017,disbursement,3733396.0
+oecd_crs,business,2018,commitment,2529046.0
+oecd_crs,business,2018,disbursement,2772102.0
+oecd_crs,business,2019,commitment,15906959.0
+oecd_crs,business,2019,disbursement,5235146.0
+oecd_crs,business,2020,commitment,11411977.0
+oecd_crs,business,2020,disbursement,10979748.0
+oecd_crs,business,2021,commitment,7569847.0
+oecd_crs,business,2021,disbursement,7474436.0
+oecd_crs,business,2022,commitment,14100520.0
+oecd_crs,business,2022,disbursement,7709591.0
+oecd_crs,business,2023,commitment,6723159.0
+oecd_crs,business,2023,disbursement,10315862.0
+oecd_crs,business,2024,commitment,34195434.0
+oecd_crs,business,2024,disbursement,25154818.0
+oecd_crs,communications,2015,commitment,710828.0
+oecd_crs,communications,2015,disbursement,6012462.0
+oecd_crs,communications,2016,commitment,1024378.0
+oecd_crs,communications,2016,disbursement,3280460.0
+oecd_crs,communications,2017,commitment,629633.0
+oecd_crs,communications,2017,disbursement,5802536.0
+oecd_crs,communications,2018,commitment,2797746.0
+oecd_crs,communications,2018,disbursement,3568367.0
+oecd_crs,communications,2019,commitment,566036.0
+oecd_crs,communications,2019,disbursement,14946558.0
+oecd_crs,communications,2020,commitment,1056297.0
+oecd_crs,communications,2020,disbursement,1258215.0
+oecd_crs,communications,2021,commitment,71572.0
+oecd_crs,communications,2021,disbursement,156612.0
+oecd_crs,communications,2022,commitment,151281648.0
+oecd_crs,communications,2022,disbursement,272568.0
+oecd_crs,communications,2023,commitment,327204.0
+oecd_crs,communications,2023,disbursement,459914.0
+oecd_crs,communications,2024,commitment,662479.0
+oecd_crs,communications,2024,disbursement,3551266.0
+oecd_crs,debt,2015,commitment,22185.0
+oecd_crs,debt,2015,disbursement,343871.0
+oecd_crs,debt,2016,commitment,11058.0
+oecd_crs,debt,2016,disbursement,276457.0
+oecd_crs,debt,2017,commitment,11273.0
+oecd_crs,debt,2017,disbursement,236727.0
+oecd_crs,debt,2018,disbursement,118022.0
+oecd_crs,debt,2020,disbursement,17876226.0
+oecd_crs,debt,2021,disbursement,14260000.0
+oecd_crs,education,2015,commitment,290068221.0
+oecd_crs,education,2015,disbursement,137363278.0
+oecd_crs,education,2016,commitment,283504067.0
+oecd_crs,education,2016,disbursement,127877875.0
+oecd_crs,education,2017,commitment,290483358.0
+oecd_crs,education,2017,disbursement,149204612.0
+oecd_crs,education,2018,commitment,228973635.0
+oecd_crs,education,2018,disbursement,204512973.0
+oecd_crs,education,2019,commitment,78028775.0
+oecd_crs,education,2019,disbursement,190497566.0
+oecd_crs,education,2020,commitment,109999321.0
+oecd_crs,education,2020,disbursement,249781981.0
+oecd_crs,education,2021,commitment,211958815.0
+oecd_crs,education,2021,disbursement,230017835.0
+oecd_crs,education,2022,commitment,337367546.0
+oecd_crs,education,2022,disbursement,180375467.0
+oecd_crs,education,2023,commitment,203533465.0
+oecd_crs,education,2023,disbursement,192279396.0
+oecd_crs,education,2024,commitment,78009656.0
+oecd_crs,education,2024,disbursement,155371398.0
+oecd_crs,energy,2015,commitment,44207865.0
+oecd_crs,energy,2015,disbursement,71265181.0
+oecd_crs,energy,2016,commitment,148964407.0
+oecd_crs,energy,2016,disbursement,72968768.0
+oecd_crs,energy,2017,commitment,195182056.0
+oecd_crs,energy,2017,disbursement,97232745.0
+oecd_crs,energy,2018,commitment,174707821.0
+oecd_crs,energy,2018,disbursement,184036768.0
+oecd_crs,energy,2019,commitment,474759302.0
+oecd_crs,energy,2019,disbursement,148789976.0
+oecd_crs,energy,2020,commitment,486072350.0
+oecd_crs,energy,2020,disbursement,223458339.0
+oecd_crs,energy,2021,commitment,179380983.0
+oecd_crs,energy,2021,disbursement,141688301.0
+oecd_crs,energy,2022,commitment,165383737.0
+oecd_crs,energy,2022,disbursement,154078489.0
+oecd_crs,energy,2023,commitment,400372966.0
+oecd_crs,energy,2023,disbursement,172847423.0
+oecd_crs,energy,2024,commitment,472265417.0
+oecd_crs,energy,2024,disbursement,275573362.0
+oecd_crs,environment,2015,commitment,35301371.0
+oecd_crs,environment,2015,disbursement,28288441.0
+oecd_crs,environment,2016,commitment,30950539.0
+oecd_crs,environment,2016,disbursement,39296899.0
+oecd_crs,environment,2017,commitment,20397936.0
+oecd_crs,environment,2017,disbursement,27197635.0
+oecd_crs,environment,2018,commitment,43690211.0
+oecd_crs,environment,2018,disbursement,34710338.0
+oecd_crs,environment,2019,commitment,21281007.0
+oecd_crs,environment,2019,disbursement,19237860.0
+oecd_crs,environment,2020,commitment,19493529.0
+oecd_crs,environment,2020,disbursement,28621483.0
+oecd_crs,environment,2021,commitment,72716856.0
+oecd_crs,environment,2021,disbursement,28238045.0
+oecd_crs,environment,2022,commitment,23288049.0
+oecd_crs,environment,2022,disbursement,13051431.0
+oecd_crs,environment,2023,commitment,30291675.0
+oecd_crs,environment,2023,disbursement,21749517.0
+oecd_crs,environment,2024,commitment,86027075.0
+oecd_crs,environment,2024,disbursement,34941345.0
+oecd_crs,finance,2015,commitment,106114481.0
+oecd_crs,finance,2015,disbursement,124944753.0
+oecd_crs,finance,2016,commitment,13493621.0
+oecd_crs,finance,2016,disbursement,7797707.0
+oecd_crs,finance,2017,commitment,100243593.0
+oecd_crs,finance,2017,disbursement,107291702.0
+oecd_crs,finance,2018,commitment,90607625.0
+oecd_crs,finance,2018,disbursement,18761660.0
+oecd_crs,finance,2019,commitment,96750095.0
+oecd_crs,finance,2019,disbursement,99522875.0
+oecd_crs,finance,2020,commitment,205012838.0
+oecd_crs,finance,2020,disbursement,11249717.0
+oecd_crs,finance,2021,commitment,57844779.0
+oecd_crs,finance,2021,disbursement,272751750.0
+oecd_crs,finance,2022,commitment,336261668.0
+oecd_crs,finance,2022,disbursement,180876991.0
+oecd_crs,finance,2023,commitment,76754675.0
+oecd_crs,finance,2023,disbursement,38918176.0
+oecd_crs,finance,2024,commitment,89630291.0
+oecd_crs,finance,2024,disbursement,70648954.0
+oecd_crs,food_aid,2015,commitment,14985600.0
+oecd_crs,food_aid,2015,disbursement,9784610.0
+oecd_crs,food_aid,2016,commitment,3656426.0
+oecd_crs,food_aid,2016,disbursement,3619182.0
+oecd_crs,food_aid,2017,commitment,443946.0
+oecd_crs,food_aid,2017,disbursement,4124501.0
+oecd_crs,food_aid,2018,commitment,6933420.0
+oecd_crs,food_aid,2018,disbursement,3680469.0
+oecd_crs,food_aid,2019,commitment,504608.0
+oecd_crs,food_aid,2019,disbursement,3689054.0
+oecd_crs,food_aid,2020,commitment,776078.0
+oecd_crs,food_aid,2020,disbursement,3177284.0
+oecd_crs,food_aid,2021,commitment,3973190.0
+oecd_crs,food_aid,2021,disbursement,466190.0
+oecd_crs,food_aid,2022,commitment,262908.0
+oecd_crs,food_aid,2022,disbursement,3829293.0
+oecd_crs,food_aid,2023,commitment,33383094.0
+oecd_crs,food_aid,2023,disbursement,283094.0
+oecd_crs,food_aid,2024,commitment,79550.0
+oecd_crs,food_aid,2024,disbursement,23573811.0
+oecd_crs,governance,2015,commitment,67083873.0
+oecd_crs,governance,2015,disbursement,107717190.0
+oecd_crs,governance,2016,commitment,56979065.0
+oecd_crs,governance,2016,disbursement,123274157.0
+oecd_crs,governance,2017,commitment,105312455.0
+oecd_crs,governance,2017,disbursement,122330141.0
+oecd_crs,governance,2018,commitment,282008261.0
+oecd_crs,governance,2018,disbursement,287098369.0
+oecd_crs,governance,2019,commitment,246332940.0
+oecd_crs,governance,2019,disbursement,190824919.0
+oecd_crs,governance,2020,commitment,156655173.0
+oecd_crs,governance,2020,disbursement,149249677.0
+oecd_crs,governance,2021,commitment,172247424.0
+oecd_crs,governance,2021,disbursement,181201809.0
+oecd_crs,governance,2022,commitment,110135763.0
+oecd_crs,governance,2022,disbursement,115217740.0
+oecd_crs,governance,2023,commitment,147353133.0
+oecd_crs,governance,2023,disbursement,193038662.0
+oecd_crs,governance,2024,commitment,186975675.0
+oecd_crs,governance,2024,disbursement,141793913.0
+oecd_crs,health,2015,commitment,85943293.0
+oecd_crs,health,2015,disbursement,113497306.0
+oecd_crs,health,2016,commitment,35326050.0
+oecd_crs,health,2016,disbursement,96159169.0
+oecd_crs,health,2017,commitment,166768253.0
+oecd_crs,health,2017,disbursement,88152708.0
+oecd_crs,health,2018,commitment,47494762.0
+oecd_crs,health,2018,disbursement,107523860.0
+oecd_crs,health,2019,commitment,43826455.0
+oecd_crs,health,2019,disbursement,133209787.0
+oecd_crs,health,2020,commitment,157381970.0
+oecd_crs,health,2020,disbursement,185947100.0
+oecd_crs,health,2021,commitment,410128647.0
+oecd_crs,health,2021,disbursement,266913276.0
+oecd_crs,health,2022,commitment,81976492.0
+oecd_crs,health,2022,disbursement,118191509.0
+oecd_crs,health,2023,commitment,166430092.0
+oecd_crs,health,2023,disbursement,168769976.0
+oecd_crs,health,2024,commitment,103469344.0
+oecd_crs,health,2024,disbursement,77240033.0
+oecd_crs,humanitarian,2015,commitment,680841246.0
+oecd_crs,humanitarian,2015,disbursement,246718688.0
+oecd_crs,humanitarian,2016,commitment,77423371.0
+oecd_crs,humanitarian,2016,disbursement,152090815.0
+oecd_crs,humanitarian,2017,commitment,187748176.0
+oecd_crs,humanitarian,2017,disbursement,152464797.0
+oecd_crs,humanitarian,2018,commitment,44634197.0
+oecd_crs,humanitarian,2018,disbursement,179518232.0
+oecd_crs,humanitarian,2019,commitment,90860299.0
+oecd_crs,humanitarian,2019,disbursement,180803158.0
+oecd_crs,humanitarian,2020,commitment,204893381.0
+oecd_crs,humanitarian,2020,disbursement,174257573.0
+oecd_crs,humanitarian,2021,commitment,30488436.0
+oecd_crs,humanitarian,2021,disbursement,136411944.0
+oecd_crs,humanitarian,2022,commitment,358522612.0
+oecd_crs,humanitarian,2022,disbursement,126114751.0
+oecd_crs,humanitarian,2023,commitment,57307697.0
+oecd_crs,humanitarian,2023,disbursement,40675307.0
+oecd_crs,humanitarian,2024,commitment,209849984.0
+oecd_crs,humanitarian,2024,disbursement,69816067.0
+oecd_crs,industry,2015,commitment,13412279.0
+oecd_crs,industry,2015,disbursement,29998813.0
+oecd_crs,industry,2016,commitment,12752291.0
+oecd_crs,industry,2016,disbursement,16348525.0
+oecd_crs,industry,2017,commitment,17727805.0
+oecd_crs,industry,2017,disbursement,32975931.0
+oecd_crs,industry,2018,commitment,1003763.0
+oecd_crs,industry,2018,disbursement,13998190.0
+oecd_crs,industry,2019,commitment,2782056.0
+oecd_crs,industry,2019,disbursement,10639328.0
+oecd_crs,industry,2020,commitment,2725093.0
+oecd_crs,industry,2020,disbursement,4750207.0
+oecd_crs,industry,2021,commitment,20002652.0
+oecd_crs,industry,2021,disbursement,7396142.0
+oecd_crs,industry,2022,commitment,30511807.0
+oecd_crs,industry,2022,disbursement,5761188.0
+oecd_crs,industry,2023,commitment,39098536.0
+oecd_crs,industry,2023,disbursement,19958019.0
+oecd_crs,industry,2024,commitment,32895615.0
+oecd_crs,industry,2024,disbursement,5932115.0
+oecd_crs,multisector,2015,commitment,235349409.0
+oecd_crs,multisector,2015,disbursement,80382333.0
+oecd_crs,multisector,2016,commitment,25085334.0
+oecd_crs,multisector,2016,disbursement,143665125.0
+oecd_crs,multisector,2017,commitment,288702787.0
+oecd_crs,multisector,2017,disbursement,99214758.0
+oecd_crs,multisector,2018,commitment,45612220.0
+oecd_crs,multisector,2018,disbursement,159057815.0
+oecd_crs,multisector,2019,commitment,78229318.0
+oecd_crs,multisector,2019,disbursement,131296382.0
+oecd_crs,multisector,2020,commitment,329180549.0
+oecd_crs,multisector,2020,disbursement,129168749.0
+oecd_crs,multisector,2021,commitment,20002282.0
+oecd_crs,multisector,2021,disbursement,87527983.0
+oecd_crs,multisector,2022,commitment,21601133.0
+oecd_crs,multisector,2022,disbursement,70303826.0
+oecd_crs,multisector,2023,commitment,130803528.0
+oecd_crs,multisector,2023,disbursement,69098284.0
+oecd_crs,multisector,2024,commitment,137153994.0
+oecd_crs,multisector,2024,disbursement,83724708.0
+oecd_crs,other_social,2015,commitment,23783624.0
+oecd_crs,other_social,2015,disbursement,36784061.0
+oecd_crs,other_social,2016,commitment,26435457.0
+oecd_crs,other_social,2016,disbursement,53368458.0
+oecd_crs,other_social,2017,commitment,19575361.0
+oecd_crs,other_social,2017,disbursement,39577591.0
+oecd_crs,other_social,2018,commitment,19233102.0
+oecd_crs,other_social,2018,disbursement,24342512.0
+oecd_crs,other_social,2019,commitment,158382622.0
+oecd_crs,other_social,2019,disbursement,28653839.0
+oecd_crs,other_social,2020,commitment,94774516.0
+oecd_crs,other_social,2020,disbursement,84706260.0
+oecd_crs,other_social,2021,commitment,75507859.0
+oecd_crs,other_social,2021,disbursement,76858210.0
+oecd_crs,other_social,2022,commitment,23741394.0
+oecd_crs,other_social,2022,disbursement,56484477.0
+oecd_crs,other_social,2023,commitment,11088358.0
+oecd_crs,other_social,2023,disbursement,37427979.0
+oecd_crs,other_social,2024,commitment,47454971.0
+oecd_crs,other_social,2024,disbursement,51108690.0
+oecd_crs,population,2015,commitment,60744720.0
+oecd_crs,population,2015,disbursement,63347701.0
+oecd_crs,population,2016,commitment,58403569.0
+oecd_crs,population,2016,disbursement,48899893.0
+oecd_crs,population,2017,commitment,27939521.0
+oecd_crs,population,2017,disbursement,56243242.0
+oecd_crs,population,2018,commitment,31902905.0
+oecd_crs,population,2018,disbursement,58042760.0
+oecd_crs,population,2019,commitment,45601735.0
+oecd_crs,population,2019,disbursement,39829794.0
+oecd_crs,population,2020,commitment,105010543.0
+oecd_crs,population,2020,disbursement,106819296.0
+oecd_crs,population,2021,commitment,75248811.0
+oecd_crs,population,2021,disbursement,48942430.0
+oecd_crs,population,2022,commitment,42504877.0
+oecd_crs,population,2022,disbursement,46110428.0
+oecd_crs,population,2023,commitment,58773487.0
+oecd_crs,population,2023,disbursement,55072559.0
+oecd_crs,population,2024,commitment,63022530.0
+oecd_crs,population,2024,disbursement,56217818.0
+oecd_crs,refugees_in_donor,2020,commitment,6397.0
+oecd_crs,refugees_in_donor,2020,disbursement,6397.0
+oecd_crs,trade,2015,commitment,5620994.0
+oecd_crs,trade,2015,disbursement,3675448.0
+oecd_crs,trade,2016,commitment,1420979.0
+oecd_crs,trade,2016,disbursement,4735125.0
+oecd_crs,trade,2017,commitment,15360018.0
+oecd_crs,trade,2017,disbursement,15289433.0
+oecd_crs,trade,2018,commitment,15704864.0
+oecd_crs,trade,2018,disbursement,9025921.0
+oecd_crs,trade,2019,commitment,1694887.0
+oecd_crs,trade,2019,disbursement,13372852.0
+oecd_crs,trade,2020,commitment,79216475.0
+oecd_crs,trade,2020,disbursement,4990137.0
+oecd_crs,trade,2021,commitment,801052.0
+oecd_crs,trade,2021,disbursement,5456836.0
+oecd_crs,trade,2022,commitment,5153520.0
+oecd_crs,trade,2022,disbursement,4800289.0
+oecd_crs,trade,2023,commitment,30197745.0
+oecd_crs,trade,2023,disbursement,34609443.0
+oecd_crs,trade,2024,commitment,22864442.0
+oecd_crs,trade,2024,disbursement,24196970.0
+oecd_crs,transport,2015,commitment,63914919.0
+oecd_crs,transport,2015,disbursement,82704730.0
+oecd_crs,transport,2016,commitment,242180439.0
+oecd_crs,transport,2016,disbursement,85605627.0
+oecd_crs,transport,2017,commitment,228884757.0
+oecd_crs,transport,2017,disbursement,108661452.0
+oecd_crs,transport,2018,commitment,321583531.0
+oecd_crs,transport,2018,disbursement,123120764.0
+oecd_crs,transport,2019,commitment,206747160.0
+oecd_crs,transport,2019,disbursement,93755940.0
+oecd_crs,transport,2020,commitment,625430788.0
+oecd_crs,transport,2020,disbursement,149913640.0
+oecd_crs,transport,2021,commitment,3588230.0
+oecd_crs,transport,2021,disbursement,72468759.0
+oecd_crs,transport,2022,commitment,130950949.0
+oecd_crs,transport,2022,disbursement,89936111.0
+oecd_crs,transport,2023,commitment,351673562.0
+oecd_crs,transport,2023,disbursement,132810061.0
+oecd_crs,transport,2024,commitment,105863528.0
+oecd_crs,transport,2024,disbursement,199138468.0
+oecd_crs,unallocated,2015,commitment,1325540.0
+oecd_crs,unallocated,2015,disbursement,16543898.0
+oecd_crs,unallocated,2016,commitment,5952255.0
+oecd_crs,unallocated,2016,disbursement,26553648.0
+oecd_crs,unallocated,2017,commitment,815426.0
+oecd_crs,unallocated,2017,disbursement,15327120.0
+oecd_crs,unallocated,2018,commitment,4386742.0
+oecd_crs,unallocated,2018,disbursement,18818187.0
+oecd_crs,unallocated,2019,commitment,5107193.0
+oecd_crs,unallocated,2019,disbursement,35275578.0
+oecd_crs,unallocated,2020,commitment,4228293.0
+oecd_crs,unallocated,2020,disbursement,16006613.0
+oecd_crs,unallocated,2021,commitment,4994200.0
+oecd_crs,unallocated,2021,disbursement,21657296.0
+oecd_crs,unallocated,2022,commitment,7795815.0
+oecd_crs,unallocated,2022,disbursement,14065186.0
+oecd_crs,unallocated,2023,commitment,3409748.0
+oecd_crs,unallocated,2023,disbursement,15550796.0
+oecd_crs,unallocated,2024,commitment,4162779.0
+oecd_crs,unallocated,2024,disbursement,5580082.0
+oecd_crs,water,2015,commitment,76195941.0
+oecd_crs,water,2015,disbursement,72702465.0
+oecd_crs,water,2016,commitment,183946357.0
+oecd_crs,water,2016,disbursement,83673141.0
+oecd_crs,water,2017,commitment,104719576.0
+oecd_crs,water,2017,disbursement,129978910.0
+oecd_crs,water,2018,commitment,176463074.0
+oecd_crs,water,2018,disbursement,94042519.0
+oecd_crs,water,2019,commitment,50380675.0
+oecd_crs,water,2019,disbursement,103630585.0
+oecd_crs,water,2020,commitment,36279538.0
+oecd_crs,water,2020,disbursement,99191281.0
+oecd_crs,water,2021,commitment,34467346.0
+oecd_crs,water,2021,disbursement,152255996.0
+oecd_crs,water,2022,commitment,107550859.0
+oecd_crs,water,2022,disbursement,97716373.0
+oecd_crs,water,2023,commitment,17832764.0
+oecd_crs,water,2023,disbursement,71976212.0
+oecd_crs,water,2024,commitment,230406038.0
+oecd_crs,water,2024,disbursement,64648589.0
+us_fa,Administrative Costs,2001,commitment,2488872.0
+us_fa,Administrative Costs,2001,disbursement,1929666.0
+us_fa,Administrative Costs,2002,commitment,2400390.0
+us_fa,Administrative Costs,2002,disbursement,2636173.0
+us_fa,Administrative Costs,2003,commitment,2421869.0
+us_fa,Administrative Costs,2003,disbursement,2796237.0
+us_fa,Administrative Costs,2004,commitment,2735158.0
+us_fa,Administrative Costs,2004,disbursement,2686147.0
+us_fa,Administrative Costs,2005,commitment,2438487.0
+us_fa,Administrative Costs,2005,disbursement,2499764.0
+us_fa,Administrative Costs,2006,commitment,2310679.0
+us_fa,Administrative Costs,2006,disbursement,2453803.0
+us_fa,Administrative Costs,2007,commitment,3055953.0
+us_fa,Administrative Costs,2007,disbursement,1917968.0
+us_fa,Administrative Costs,2008,commitment,4835041.0
+us_fa,Administrative Costs,2008,disbursement,4361459.0
+us_fa,Administrative Costs,2009,commitment,5277788.0
+us_fa,Administrative Costs,2009,disbursement,4953702.0
+us_fa,Administrative Costs,2010,commitment,8917367.0
+us_fa,Administrative Costs,2010,disbursement,7052703.0
+us_fa,Administrative Costs,2011,commitment,7068040.0
+us_fa,Administrative Costs,2011,disbursement,7590006.0
+us_fa,Administrative Costs,2012,commitment,9864700.0
+us_fa,Administrative Costs,2012,disbursement,8748794.0
+us_fa,Administrative Costs,2013,commitment,10322361.0
+us_fa,Administrative Costs,2013,disbursement,10726543.0
+us_fa,Administrative Costs,2014,commitment,11792347.0
+us_fa,Administrative Costs,2014,disbursement,10025719.0
+us_fa,Administrative Costs,2015,commitment,13881179.0
+us_fa,Administrative Costs,2015,disbursement,11685164.0
+us_fa,Administrative Costs,2016,commitment,13200660.0
+us_fa,Administrative Costs,2016,disbursement,13784726.0
+us_fa,Administrative Costs,2017,commitment,26104335.0
+us_fa,Administrative Costs,2017,disbursement,14525788.0
+us_fa,Administrative Costs,2018,commitment,14936489.0
+us_fa,Administrative Costs,2018,disbursement,15653545.0
+us_fa,Administrative Costs,2019,commitment,15025124.0
+us_fa,Administrative Costs,2019,disbursement,18347213.0
+us_fa,Administrative Costs,2020,commitment,12072955.0
+us_fa,Administrative Costs,2020,disbursement,12635750.0
+us_fa,Administrative Costs,2021,commitment,16784229.0
+us_fa,Administrative Costs,2021,disbursement,19412640.0
+us_fa,Administrative Costs,2022,commitment,18367763.0
+us_fa,Administrative Costs,2022,disbursement,18427589.0
+us_fa,Administrative Costs,2023,commitment,64802094.0
+us_fa,Administrative Costs,2023,disbursement,30085944.0
+us_fa,Administrative Costs,2024,commitment,28803438.0
+us_fa,Administrative Costs,2024,disbursement,27796694.0
+us_fa,Agriculture,2001,commitment,-2355.0
+us_fa,Agriculture,2001,disbursement,3123540.0
+us_fa,Agriculture,2002,commitment,3478244.0
+us_fa,Agriculture,2002,disbursement,2293818.0
+us_fa,Agriculture,2003,commitment,1048488.0
+us_fa,Agriculture,2003,disbursement,2408565.0
+us_fa,Agriculture,2004,commitment,2174173.0
+us_fa,Agriculture,2004,disbursement,2068856.0
+us_fa,Agriculture,2005,commitment,2268487.0
+us_fa,Agriculture,2005,disbursement,2453392.0
+us_fa,Agriculture,2006,commitment,932324.0
+us_fa,Agriculture,2006,disbursement,2489815.0
+us_fa,Agriculture,2007,commitment,44740.0
+us_fa,Agriculture,2007,disbursement,1098981.0
+us_fa,Agriculture,2008,commitment,3422650.0
+us_fa,Agriculture,2008,disbursement,1742340.0
+us_fa,Agriculture,2009,commitment,266188.0
+us_fa,Agriculture,2009,disbursement,1870726.0
+us_fa,Agriculture,2010,commitment,1468653.0
+us_fa,Agriculture,2010,disbursement,277946.0
+us_fa,Agriculture,2011,commitment,7782128.0
+us_fa,Agriculture,2011,disbursement,1905181.0
+us_fa,Agriculture,2012,commitment,9033418.0
+us_fa,Agriculture,2012,disbursement,10950768.0
+us_fa,Agriculture,2013,commitment,10120629.0
+us_fa,Agriculture,2013,disbursement,5575600.0
+us_fa,Agriculture,2014,commitment,4483250.0
+us_fa,Agriculture,2014,disbursement,7562231.0
+us_fa,Agriculture,2015,commitment,32384516.0
+us_fa,Agriculture,2015,disbursement,14398667.0
+us_fa,Agriculture,2016,commitment,35710437.0
+us_fa,Agriculture,2016,disbursement,21001879.0
+us_fa,Agriculture,2017,commitment,21837371.0
+us_fa,Agriculture,2017,disbursement,35478601.0
+us_fa,Agriculture,2018,commitment,21784638.0
+us_fa,Agriculture,2018,disbursement,24738310.0
+us_fa,Agriculture,2019,commitment,12878647.0
+us_fa,Agriculture,2019,disbursement,20296124.0
+us_fa,Agriculture,2020,commitment,13313207.0
+us_fa,Agriculture,2020,disbursement,14215248.0
+us_fa,Agriculture,2021,commitment,12615039.0
+us_fa,Agriculture,2021,disbursement,9956756.0
+us_fa,Agriculture,2022,commitment,17865686.0
+us_fa,Agriculture,2022,disbursement,10061100.0
+us_fa,Agriculture,2023,commitment,14976757.0
+us_fa,Agriculture,2023,disbursement,12891155.0
+us_fa,Agriculture,2024,commitment,47077339.0
+us_fa,Agriculture,2024,disbursement,17996418.0
+us_fa,Commodity Assistance,1992,commitment,1074600.0
+us_fa,Commodity Assistance,1993,commitment,391200.0
+us_fa,Commodity Assistance,1995,commitment,295000.0
+us_fa,Commodity Assistance,1996,commitment,1300000.0
+us_fa,Commodity Assistance,1997,commitment,272600.0
+us_fa,Commodity Assistance,2001,commitment,3627083.0
+us_fa,Commodity Assistance,2002,commitment,50000.0
+us_fa,Commodity Assistance,2002,disbursement,50000.0
+us_fa,Commodity Assistance,2015,commitment,4601546.0
+us_fa,Commodity Assistance,2015,disbursement,4433190.0
+us_fa,Commodity Assistance,2016,commitment,243003.0
+us_fa,Commodity Assistance,2016,disbursement,261256.0
+us_fa,Commodity Assistance,2017,commitment,375480.0
+us_fa,Commodity Assistance,2017,disbursement,371028.0
+us_fa,Commodity Assistance,2018,commitment,644413.0
+us_fa,Commodity Assistance,2018,disbursement,452902.0
+us_fa,Commodity Assistance,2019,commitment,388384.0
+us_fa,Commodity Assistance,2019,disbursement,438430.0
+us_fa,Commodity Assistance,2020,commitment,279251.0
+us_fa,Commodity Assistance,2020,disbursement,365349.0
+us_fa,Commodity Assistance,2021,commitment,413511.0
+us_fa,Commodity Assistance,2021,disbursement,379668.0
+us_fa,Commodity Assistance,2022,commitment,3837082.0
+us_fa,Commodity Assistance,2022,disbursement,3696852.0
+us_fa,Commodity Assistance,2023,commitment,33100000.0
+us_fa,Commodity Assistance,2023,disbursement,172571.0
+us_fa,Economic Growth,2001,commitment,3768406.0
+us_fa,Economic Growth,2001,disbursement,26369.0
+us_fa,Economic Growth,2002,commitment,2298321.0
+us_fa,Economic Growth,2002,disbursement,1034774.0
+us_fa,Economic Growth,2003,commitment,1845699.0
+us_fa,Economic Growth,2003,disbursement,2096076.0
+us_fa,Economic Growth,2004,commitment,1844403.0
+us_fa,Economic Growth,2004,disbursement,2428355.0
+us_fa,Economic Growth,2005,commitment,1585966.0
+us_fa,Economic Growth,2005,disbursement,1770245.0
+us_fa,Economic Growth,2006,commitment,2110197.0
+us_fa,Economic Growth,2006,disbursement,2182620.0
+us_fa,Economic Growth,2007,commitment,739628.0
+us_fa,Economic Growth,2007,disbursement,1455555.0
+us_fa,Economic Growth,2008,commitment,82067.0
+us_fa,Economic Growth,2008,disbursement,477679.0
+us_fa,Economic Growth,2009,commitment,157520.0
+us_fa,Economic Growth,2009,disbursement,226711.0
+us_fa,Economic Growth,2010,commitment,172854.0
+us_fa,Economic Growth,2010,disbursement,143628.0
+us_fa,Economic Growth,2011,commitment,5586533.0
+us_fa,Economic Growth,2011,disbursement,2690962.0
+us_fa,Economic Growth,2012,commitment,912842.0
+us_fa,Economic Growth,2012,disbursement,3506415.0
+us_fa,Economic Growth,2013,commitment,2581751.0
+us_fa,Economic Growth,2013,disbursement,3201043.0
+us_fa,Economic Growth,2014,disbursement,13351.0
+us_fa,Economic Growth,2015,commitment,3500389.0
+us_fa,Economic Growth,2015,disbursement,389.0
+us_fa,Economic Growth,2016,disbursement,2511376.0
+us_fa,Economic Growth,2017,disbursement,988623.0
+us_fa,Economic Growth,2018,commitment,169556.0
+us_fa,Economic Growth,2018,disbursement,78252.0
+us_fa,Economic Growth,2019,commitment,2801990.0
+us_fa,Economic Growth,2019,disbursement,16592.0
+us_fa,Economic Growth,2020,commitment,1985978.0
+us_fa,Economic Growth,2020,disbursement,3017922.0
+us_fa,Economic Growth,2021,commitment,57973.0
+us_fa,Economic Growth,2021,disbursement,1565467.0
+us_fa,Economic Growth,2022,commitment,8145379.0
+us_fa,Economic Growth,2022,disbursement,1531194.0
+us_fa,Economic Growth,2023,commitment,1448555.0
+us_fa,Economic Growth,2023,disbursement,4351822.0
+us_fa,Economic Growth,2024,commitment,1242536.0
+us_fa,Economic Growth,2024,disbursement,4010085.0
+us_fa,Education,2002,commitment,9094.0
+us_fa,Education,2002,disbursement,9094.0
+us_fa,Education,2003,commitment,2833165.0
+us_fa,Education,2003,disbursement,2833165.0
+us_fa,Education,2005,commitment,11948496.0
+us_fa,Education,2005,disbursement,11948496.0
+us_fa,Education,2006,commitment,4637734.0
+us_fa,Education,2006,disbursement,4637734.0
+us_fa,Education,2008,commitment,550000.0
+us_fa,Education,2009,commitment,2406000.0
+us_fa,Education,2009,disbursement,290907.0
+us_fa,Education,2010,commitment,681780.0
+us_fa,Education,2010,disbursement,2665092.0
+us_fa,Education,2011,commitment,2000000.0
+us_fa,Education,2011,disbursement,2649845.0
+us_fa,Education,2012,commitment,6152896.0
+us_fa,Education,2012,disbursement,4786895.0
+us_fa,Education,2013,commitment,5788198.0
+us_fa,Education,2013,disbursement,7098396.0
+us_fa,Education,2014,commitment,1076242.0
+us_fa,Education,2014,disbursement,4954501.0
+us_fa,Education,2015,commitment,20378826.0
+us_fa,Education,2015,disbursement,7060738.0
+us_fa,Education,2016,commitment,9504654.0
+us_fa,Education,2016,disbursement,22184173.0
+us_fa,Education,2017,commitment,30890671.0
+us_fa,Education,2017,disbursement,39007785.0
+us_fa,Education,2018,commitment,18249045.0
+us_fa,Education,2018,disbursement,35631398.0
+us_fa,Education,2019,commitment,27440220.0
+us_fa,Education,2019,disbursement,21411486.0
+us_fa,Education,2020,commitment,10983992.0
+us_fa,Education,2020,disbursement,29873976.0
+us_fa,Education,2021,commitment,34893488.0
+us_fa,Education,2021,disbursement,25435113.0
+us_fa,Education,2022,commitment,3346805.0
+us_fa,Education,2022,disbursement,23239369.0
+us_fa,Education,2023,commitment,56057776.0
+us_fa,Education,2023,disbursement,15421460.0
+us_fa,Education,2024,commitment,13315225.0
+us_fa,Education,2024,disbursement,11636699.0
+us_fa,Governance,1970,commitment,5000.0
+us_fa,Governance,1971,commitment,12000.0
+us_fa,Governance,1972,commitment,24000.0
+us_fa,Governance,1973,commitment,33000.0
+us_fa,Governance,1974,commitment,25000.0
+us_fa,Governance,1975,commitment,28000.0
+us_fa,Governance,1976,commitment,41000.0
+us_fa,Governance,1977,commitment,29000.0
+us_fa,Governance,1978,commitment,64000.0
+us_fa,Governance,1979,commitment,51000.0
+us_fa,Governance,1980,commitment,26000.0
+us_fa,Governance,1981,commitment,62000.0
+us_fa,Governance,1982,commitment,87000.0
+us_fa,Governance,1983,commitment,74000.0
+us_fa,Governance,1984,commitment,108000.0
+us_fa,Governance,1985,commitment,122000.0
+us_fa,Governance,1986,commitment,86000.0
+us_fa,Governance,1987,commitment,104000.0
+us_fa,Governance,1988,commitment,100000.0
+us_fa,Governance,1989,commitment,99000.0
+us_fa,Governance,1990,commitment,131000.0
+us_fa,Governance,1991,commitment,197000.0
+us_fa,Governance,1992,commitment,213000.0
+us_fa,Governance,1993,commitment,194000.0
+us_fa,Governance,1994,commitment,429000.0
+us_fa,Governance,1995,commitment,327864.0
+us_fa,Governance,1996,commitment,330000.0
+us_fa,Governance,1997,commitment,377799.0
+us_fa,Governance,1998,commitment,1097000.0
+us_fa,Governance,1999,commitment,789000.0
+us_fa,Governance,2000,commitment,2356000.0
+us_fa,Governance,2001,commitment,10379636.0
+us_fa,Governance,2001,disbursement,3759187.0
+us_fa,Governance,2002,commitment,15975182.0
+us_fa,Governance,2002,disbursement,15825488.0
+us_fa,Governance,2003,commitment,6589666.0
+us_fa,Governance,2003,disbursement,6159862.0
+us_fa,Governance,2004,commitment,7915629.0
+us_fa,Governance,2004,disbursement,7088357.0
+us_fa,Governance,2005,commitment,19635226.0
+us_fa,Governance,2005,disbursement,14701855.0
+us_fa,Governance,2006,commitment,15351963.0
+us_fa,Governance,2006,disbursement,12305253.0
+us_fa,Governance,2007,commitment,30350585.0
+us_fa,Governance,2007,disbursement,20460545.0
+us_fa,Governance,2008,commitment,21839175.0
+us_fa,Governance,2008,disbursement,25026554.0
+us_fa,Governance,2009,commitment,30191875.0
+us_fa,Governance,2009,disbursement,21068324.0
+us_fa,Governance,2010,commitment,17886784.0
+us_fa,Governance,2010,disbursement,19761855.0
+us_fa,Governance,2011,commitment,17463513.0
+us_fa,Governance,2011,disbursement,21849924.0
+us_fa,Governance,2012,commitment,7897991.0
+us_fa,Governance,2012,disbursement,14170028.0
+us_fa,Governance,2013,commitment,40915071.0
+us_fa,Governance,2013,disbursement,20797319.0
+us_fa,Governance,2014,commitment,12553177.0
+us_fa,Governance,2014,disbursement,21343038.0
+us_fa,Governance,2015,commitment,35589223.0
+us_fa,Governance,2015,disbursement,25622584.0
+us_fa,Governance,2016,commitment,51483939.0
+us_fa,Governance,2016,disbursement,60763724.0
+us_fa,Governance,2017,commitment,27471921.0
+us_fa,Governance,2017,disbursement,27869286.0
+us_fa,Governance,2018,commitment,22236938.0
+us_fa,Governance,2018,disbursement,23117586.0
+us_fa,Governance,2019,commitment,36457080.0
+us_fa,Governance,2019,disbursement,27463148.0
+us_fa,Governance,2020,commitment,19796335.0
+us_fa,Governance,2020,disbursement,21193179.0
+us_fa,Governance,2021,commitment,32706561.0
+us_fa,Governance,2021,disbursement,36526976.0
+us_fa,Governance,2022,commitment,66248806.0
+us_fa,Governance,2022,disbursement,63875004.0
+us_fa,Governance,2023,commitment,24018492.0
+us_fa,Governance,2023,disbursement,15165787.0
+us_fa,Governance,2024,commitment,15028803.0
+us_fa,Governance,2024,disbursement,13100567.0
+us_fa,Health and Population,1999,commitment,418689.0
+us_fa,Health and Population,2000,commitment,732338.0
+us_fa,Health and Population,2001,commitment,19727081.0
+us_fa,Health and Population,2001,disbursement,9240658.0
+us_fa,Health and Population,2002,commitment,21125658.0
+us_fa,Health and Population,2002,disbursement,11687417.0
+us_fa,Health and Population,2003,commitment,22248369.0
+us_fa,Health and Population,2003,disbursement,17462750.0
+us_fa,Health and Population,2004,commitment,21895600.0
+us_fa,Health and Population,2004,disbursement,21662679.0
+us_fa,Health and Population,2005,commitment,26379371.0
+us_fa,Health and Population,2005,disbursement,22030893.0
+us_fa,Health and Population,2006,commitment,16235035.0
+us_fa,Health and Population,2006,disbursement,30163278.0
+us_fa,Health and Population,2007,commitment,18522530.0
+us_fa,Health and Population,2007,disbursement,22653517.0
+us_fa,Health and Population,2008,commitment,22074782.0
+us_fa,Health and Population,2008,disbursement,19781063.0
+us_fa,Health and Population,2009,commitment,21339608.0
+us_fa,Health and Population,2009,disbursement,22983708.0
+us_fa,Health and Population,2010,commitment,24970245.0
+us_fa,Health and Population,2010,disbursement,21233023.0
+us_fa,Health and Population,2011,commitment,23910515.0
+us_fa,Health and Population,2011,disbursement,21381381.0
+us_fa,Health and Population,2012,commitment,25355986.0
+us_fa,Health and Population,2012,disbursement,21526088.0
+us_fa,Health and Population,2013,commitment,29191691.0
+us_fa,Health and Population,2013,disbursement,28218355.0
+us_fa,Health and Population,2014,commitment,32370135.0
+us_fa,Health and Population,2014,disbursement,28977418.0
+us_fa,Health and Population,2015,commitment,68843619.0
+us_fa,Health and Population,2015,disbursement,46215500.0
+us_fa,Health and Population,2016,commitment,51524999.0
+us_fa,Health and Population,2016,disbursement,41721738.0
+us_fa,Health and Population,2017,commitment,37620988.0
+us_fa,Health and Population,2017,disbursement,44276409.0
+us_fa,Health and Population,2018,commitment,40168173.0
+us_fa,Health and Population,2018,disbursement,54626612.0
+us_fa,Health and Population,2019,commitment,46138683.0
+us_fa,Health and Population,2019,disbursement,39734656.0
+us_fa,Health and Population,2020,commitment,43486202.0
+us_fa,Health and Population,2020,disbursement,36223471.0
+us_fa,Health and Population,2021,commitment,77436712.0
+us_fa,Health and Population,2021,disbursement,48859683.0
+us_fa,Health and Population,2022,commitment,36449597.0
+us_fa,Health and Population,2022,disbursement,62692632.0
+us_fa,Health and Population,2023,commitment,47729241.0
+us_fa,Health and Population,2023,disbursement,49182343.0
+us_fa,Health and Population,2024,commitment,68781014.0
+us_fa,Health and Population,2024,disbursement,39988606.0
+us_fa,Humanitarian,1992,commitment,27900.0
+us_fa,Humanitarian,1993,commitment,127100.0
+us_fa,Humanitarian,1995,commitment,215000.0
+us_fa,Humanitarian,1996,commitment,1242200.0
+us_fa,Humanitarian,1997,commitment,14200.0
+us_fa,Humanitarian,1998,commitment,642800.0
+us_fa,Humanitarian,1999,commitment,203720.0
+us_fa,Humanitarian,2000,commitment,800000.0
+us_fa,Humanitarian,2001,commitment,5872742.0
+us_fa,Humanitarian,2001,disbursement,3800063.0
+us_fa,Humanitarian,2002,commitment,3971761.0
+us_fa,Humanitarian,2002,disbursement,3709860.0
+us_fa,Humanitarian,2003,commitment,3517845.0
+us_fa,Humanitarian,2003,disbursement,2110502.0
+us_fa,Humanitarian,2004,commitment,3734683.0
+us_fa,Humanitarian,2004,disbursement,2660470.0
+us_fa,Humanitarian,2005,commitment,4518338.0
+us_fa,Humanitarian,2005,disbursement,4319392.0
+us_fa,Humanitarian,2006,commitment,7159198.0
+us_fa,Humanitarian,2006,disbursement,5050287.0
+us_fa,Humanitarian,2007,commitment,15662719.0
+us_fa,Humanitarian,2007,disbursement,10428000.0
+us_fa,Humanitarian,2008,commitment,38252490.0
+us_fa,Humanitarian,2008,disbursement,25970123.0
+us_fa,Humanitarian,2009,commitment,21036160.0
+us_fa,Humanitarian,2009,disbursement,20300153.0
+us_fa,Humanitarian,2010,commitment,12896667.0
+us_fa,Humanitarian,2010,disbursement,8086520.0
+us_fa,Humanitarian,2011,commitment,22650943.0
+us_fa,Humanitarian,2011,disbursement,16680190.0
+us_fa,Humanitarian,2012,commitment,18340804.0
+us_fa,Humanitarian,2012,disbursement,8300258.0
+us_fa,Humanitarian,2013,commitment,12014944.0
+us_fa,Humanitarian,2013,disbursement,3464917.0
+us_fa,Humanitarian,2014,commitment,7477460.0
+us_fa,Humanitarian,2014,disbursement,3365034.0
+us_fa,Humanitarian,2015,commitment,64744934.0
+us_fa,Humanitarian,2015,disbursement,26807641.0
+us_fa,Humanitarian,2016,commitment,7844776.0
+us_fa,Humanitarian,2016,disbursement,32332247.0
+us_fa,Humanitarian,2017,commitment,3979982.0
+us_fa,Humanitarian,2017,disbursement,5418914.0
+us_fa,Humanitarian,2018,commitment,1987421.0
+us_fa,Humanitarian,2018,disbursement,5667883.0
+us_fa,Humanitarian,2019,commitment,17985497.0
+us_fa,Humanitarian,2019,disbursement,3289279.0
+us_fa,Humanitarian,2020,commitment,8298992.0
+us_fa,Humanitarian,2020,disbursement,4502883.0
+us_fa,Humanitarian,2021,commitment,2095730.0
+us_fa,Humanitarian,2021,disbursement,12147245.0
+us_fa,Humanitarian,2022,commitment,9573712.0
+us_fa,Humanitarian,2022,disbursement,14077596.0
+us_fa,Humanitarian,2023,commitment,5107878.0
+us_fa,Humanitarian,2023,disbursement,9355526.0
+us_fa,Humanitarian,2024,commitment,4904732.0
+us_fa,Humanitarian,2024,disbursement,2110803.0
+us_fa,Infrastructure,2001,commitment,190500.0
+us_fa,Infrastructure,2001,disbursement,1333923.0
+us_fa,Infrastructure,2002,commitment,-43739.0
+us_fa,Infrastructure,2002,disbursement,431676.0
+us_fa,Infrastructure,2003,disbursement,3734.0
+us_fa,Infrastructure,2008,commitment,388475.0
+us_fa,Infrastructure,2008,disbursement,296342.0
+us_fa,Infrastructure,2009,commitment,29266.0
+us_fa,Infrastructure,2009,disbursement,11583.0
+us_fa,Infrastructure,2010,commitment,9475.0
+us_fa,Infrastructure,2010,disbursement,33219.0
+us_fa,Infrastructure,2011,commitment,62123.0
+us_fa,Infrastructure,2011,disbursement,64003.0
+us_fa,Infrastructure,2012,commitment,15.0
+us_fa,Infrastructure,2012,disbursement,3238.0
+us_fa,Infrastructure,2013,commitment,-72.0
+us_fa,Infrastructure,2013,disbursement,369.0
+us_fa,Infrastructure,2014,commitment,-80664.0
+us_fa,Infrastructure,2017,commitment,28501000.0
+us_fa,Infrastructure,2018,commitment,2575000.0
+us_fa,Infrastructure,2019,commitment,2167229.0
+us_fa,Infrastructure,2019,disbursement,7279170.0
+us_fa,Infrastructure,2020,commitment,1722764.0
+us_fa,Infrastructure,2020,disbursement,2715443.0
+us_fa,Infrastructure,2021,commitment,1646341.0
+us_fa,Infrastructure,2021,disbursement,5227343.0
+us_fa,Infrastructure,2022,commitment,931328.0
+us_fa,Infrastructure,2022,disbursement,2223853.0
+us_fa,Infrastructure,2023,commitment,429635810.0
+us_fa,Infrastructure,2023,disbursement,4679518.0
+us_fa,Infrastructure,2024,commitment,9708097.0
+us_fa,Infrastructure,2024,disbursement,20326038.0
+us_fa,Other,1952,commitment,200000.0
+us_fa,Other,1953,commitment,500000.0
+us_fa,Other,1954,commitment,900000.0
+us_fa,Other,1955,commitment,2600000.0
+us_fa,Other,1956,commitment,2000000.0
+us_fa,Other,1957,commitment,4300000.0
+us_fa,Other,1958,commitment,7600000.0
+us_fa,Other,1959,commitment,2800000.0
+us_fa,Other,1960,commitment,19800000.0
+us_fa,Other,1961,commitment,4800000.0
+us_fa,Other,1962,commitment,4300000.0
+us_fa,Other,1963,commitment,19500000.0
+us_fa,Other,1964,commitment,6786000.0
+us_fa,Other,1965,commitment,13426000.0
+us_fa,Other,1966,commitment,23140000.0
+us_fa,Other,1967,commitment,8646000.0
+us_fa,Other,1968,commitment,11614000.0
+us_fa,Other,1969,commitment,12214000.0
+us_fa,Other,1970,commitment,15600000.0
+us_fa,Other,1971,commitment,12500000.0
+us_fa,Other,1972,commitment,11200000.0
+us_fa,Other,1973,commitment,16600000.0
+us_fa,Other,1974,commitment,5100000.0
+us_fa,Other,1975,commitment,4100000.0
+us_fa,Other,1976,commitment,5801000.0
+us_fa,Other,1977,commitment,8952000.0
+us_fa,Other,1978,commitment,13363000.0
+us_fa,Other,1979,commitment,16780000.0
+us_fa,Other,1980,commitment,20608000.0
+us_fa,Other,1981,commitment,19735000.0
+us_fa,Other,1982,commitment,18937000.0
+us_fa,Other,1983,commitment,18543000.0
+us_fa,Other,1984,commitment,17541000.0
+us_fa,Other,1985,commitment,23159000.0
+us_fa,Other,1986,commitment,21181000.0
+us_fa,Other,1987,commitment,19250000.0
+us_fa,Other,1988,commitment,16255000.0
+us_fa,Other,1989,commitment,19515000.0
+us_fa,Other,1990,commitment,20942000.0
+us_fa,Other,1991,commitment,29056000.0
+us_fa,Other,1992,commitment,18455000.0
+us_fa,Other,1993,commitment,23324000.0
+us_fa,Other,1994,commitment,19333000.0
+us_fa,Other,1995,commitment,16483000.0
+us_fa,Other,1996,commitment,13125000.0
+us_fa,Other,1997,commitment,19103000.0
+us_fa,Other,1998,commitment,28928000.0
+us_fa,Other,1999,commitment,19409585.0
+us_fa,Other,2000,commitment,18708000.0
+us_fa,Other,2001,commitment,4955091.0
+us_fa,Other,2001,disbursement,2207325.0
+us_fa,Other,2002,commitment,4377508.0
+us_fa,Other,2002,disbursement,3287008.0
+us_fa,Other,2003,commitment,5975375.0
+us_fa,Other,2003,disbursement,5325990.0
+us_fa,Other,2004,commitment,6844275.0
+us_fa,Other,2004,disbursement,5367941.0
+us_fa,Other,2005,commitment,4504384.0
+us_fa,Other,2005,disbursement,6481486.0
+us_fa,Other,2006,commitment,7815301.0
+us_fa,Other,2006,disbursement,5408657.0
+us_fa,Other,2007,commitment,1145310.0
+us_fa,Other,2007,disbursement,5753650.0
+us_fa,Other,2008,commitment,252496.0
+us_fa,Other,2008,disbursement,778325.0
+us_fa,Other,2009,commitment,1280902.0
+us_fa,Other,2009,disbursement,1285617.0
+us_fa,Other,2010,commitment,558182.0
+us_fa,Other,2010,disbursement,556908.0
+us_fa,Other,2011,commitment,7855014.0
+us_fa,Other,2011,disbursement,264399.0
+us_fa,Other,2012,commitment,1922006.0
+us_fa,Other,2012,disbursement,1530479.0
+us_fa,Other,2013,commitment,9064255.0
+us_fa,Other,2013,disbursement,6963910.0
+us_fa,Other,2014,commitment,9567444.0
+us_fa,Other,2014,disbursement,8511746.0
+us_fa,Other,2015,commitment,17555147.0
+us_fa,Other,2015,disbursement,9124848.0
+us_fa,Other,2016,commitment,28200388.0
+us_fa,Other,2016,disbursement,14819515.0
+us_fa,Other,2017,commitment,16204958.0
+us_fa,Other,2017,disbursement,23872587.0
+us_fa,Other,2018,commitment,17239961.0
+us_fa,Other,2018,disbursement,18834275.0
+us_fa,Other,2019,commitment,12932970.0
+us_fa,Other,2019,disbursement,15393252.0
+us_fa,Other,2020,commitment,12393909.0
+us_fa,Other,2020,disbursement,12001993.0
+us_fa,Other,2021,commitment,3197125.0
+us_fa,Other,2021,disbursement,12340800.0
+us_fa,Other,2022,commitment,11293116.0
+us_fa,Other,2022,disbursement,6170357.0
+us_fa,Other,2023,commitment,19294246.0
+us_fa,Other,2023,disbursement,5445144.0
+us_fa,Other,2024,commitment,7322724.0
+us_fa,Other,2024,disbursement,14199886.0
+wb_projects,(Historic)Electric Power & Other Energy,1975,commitment,0.0
+wb_projects,(Historic)Electric Power & Other Energy,1979,commitment,0.0
+wb_projects,(Historic)Electric Power & Other Energy,1984,commitment,0.0
+wb_projects,(Historic)Electric Power & Other Energy,1988,commitment,0.0
+wb_projects,(Historic)Health and other social services,1989,commitment,0.0
+wb_projects,(Historic)Industry,1981,commitment,0.0
+wb_projects,(Historic)Industry,1984,commitment,0.0
+wb_projects,(Historic)Industry,1986,commitment,0.0
+wb_projects,(Historic)Multisector,1987,commitment,0.0
+wb_projects,(Historic)Multisector,1989,commitment,0.0
+wb_projects,(Historic)Oil & Gas,1982,commitment,0.0
+wb_projects,(Historic)Urban Development,1972,commitment,0.0
+wb_projects,Agriculture,1973,commitment,0.0
+wb_projects,Agriculture,1974,commitment,0.0
+wb_projects,Agriculture,1976,commitment,0.0
+wb_projects,Agriculture,1978,commitment,0.0
+wb_projects,Agriculture,1979,commitment,0.0
+wb_projects,Agriculture,1980,commitment,0.0
+wb_projects,Agriculture,1981,commitment,0.0
+wb_projects,Agriculture,1983,commitment,0.0
+wb_projects,Agriculture,1985,commitment,0.0
+wb_projects,Agriculture,1986,commitment,0.0
+wb_projects,Agriculture,1987,commitment,0.0
+wb_projects,Agriculture,2003,commitment,3000000.0
+wb_projects,Agriculture,2024,commitment,262000000.0
+wb_projects,Agriculture,2025,commitment,137000000.0
+wb_projects,Digital Development,2026,commitment,50000000.0
+wb_projects,Education,1978,commitment,0.0
+wb_projects,Education,1981,commitment,0.0
+wb_projects,Education,1984,commitment,0.0
+wb_projects,Education,1989,commitment,0.0
+wb_projects,Education,2025,commitment,27666250.0
+wb_projects,Energy and Extractives,1990,commitment,47200000.0
+wb_projects,Energy and Extractives,1992,commitment,93000000.0
+wb_projects,Energy and Extractives,1997,commitment,79770000.0
+wb_projects,Energy and Extractives,2007,commitment,5000000.0
+wb_projects,Energy and Mineral Resources,2025,commitment,120000000.0
+wb_projects,Energy and Mineral Resources,2026,commitment,52000000.0
+wb_projects,FY17 - Agriculture,0,commitment,2752108.0
+wb_projects,FY17 - Agriculture,1988,commitment,41300000.0
+wb_projects,FY17 - Agriculture,1989,commitment,30500000.0
+wb_projects,FY17 - Agriculture,1997,commitment,24300000.0
+wb_projects,FY17 - Agriculture,2004,commitment,49000000.0
+wb_projects,FY17 - Agriculture,2006,commitment,67800000.0
+wb_projects,FY17 - Agriculture,2007,commitment,108640974.0
+wb_projects,FY17 - Agriculture,2008,commitment,31000000.0
+wb_projects,FY17 - Agriculture,2009,commitment,71632472.0
+wb_projects,FY17 - Agriculture,2010,commitment,47800000.0
+wb_projects,FY17 - Agriculture,2011,commitment,108000000.0
+wb_projects,FY17 - Agriculture,2012,commitment,50000000.0
+wb_projects,FY17 - Agriculture,2013,commitment,207500000.0
+wb_projects,FY17 - Agriculture,2014,commitment,5000000.0
+wb_projects,FY17 - Agriculture,2016,commitment,250000.0
+wb_projects,FY17 - Agriculture,2017,commitment,46200000.0
+wb_projects,FY17 - Agriculture,2018,commitment,88700000.0
+wb_projects,FY17 - Agriculture,2020,commitment,159500000.0
+wb_projects,FY17 - Agriculture,2021,commitment,45000000.0
+wb_projects,FY17 - Agriculture,2022,commitment,104500000.0
+wb_projects,FY17 - Agriculture,2023,commitment,20000000.0
+wb_projects,FY17 - Education,1989,commitment,11400000.0
+wb_projects,FY17 - Education,1992,commitment,30600000.0
+wb_projects,FY17 - Education,1993,commitment,20000000.0
+wb_projects,FY17 - Education,1994,commitment,50500000.0
+wb_projects,FY17 - Education,1999,commitment,12500000.0
+wb_projects,FY17 - Education,2003,commitment,75000000.0
+wb_projects,FY17 - Education,2004,commitment,50000000.0
+wb_projects,FY17 - Education,2007,commitment,120000000.0
+wb_projects,FY17 - Education,2009,commitment,130000000.0
+wb_projects,FY17 - Education,2010,commitment,2050000.0
+wb_projects,FY17 - Education,2011,commitment,50000000.0
+wb_projects,FY17 - Education,2012,commitment,1507000.0
+wb_projects,FY17 - Education,2013,commitment,100000000.0
+wb_projects,FY17 - Education,2014,commitment,640000.0
+wb_projects,FY17 - Education,2015,commitment,65000000.0
+wb_projects,FY17 - Education,2016,commitment,1164000000.0
+wb_projects,FY17 - Education,2017,commitment,245000000.0
+wb_projects,FY17 - Education,2019,commitment,23958000.0
+wb_projects,FY17 - Education,2020,commitment,10850000.0
+wb_projects,FY17 - Education,2021,commitment,110000000.0
+wb_projects,FY17 - Education,2023,commitment,120000000.0
+wb_projects,FY17 - Energy and Extractives,0,commitment,850000000.0
+wb_projects,FY17 - Energy and Extractives,2003,commitment,133141936.0
+wb_projects,FY17 - Energy and Extractives,2007,commitment,9400000.0
+wb_projects,FY17 - Energy and Extractives,2009,commitment,57092080.0
+wb_projects,FY17 - Energy and Extractives,2011,commitment,137000000.0
+wb_projects,FY17 - Energy and Extractives,2013,commitment,66259572.0
+wb_projects,FY17 - Energy and Extractives,2014,commitment,183900000.0
+wb_projects,FY17 - Energy and Extractives,2015,commitment,20000000.0
+wb_projects,FY17 - Energy and Extractives,2018,commitment,100000000.0
+wb_projects,FY17 - Energy and Extractives,2019,commitment,6110000.0
+wb_projects,FY17 - Energy and Extractives,2021,commitment,1000000.0
+wb_projects,FY17 - Energy and Extractives,2024,commitment,100000000.0
+wb_projects,FY17 - Financial Sector,0,commitment,300000000.0
+wb_projects,FY17 - Financial Sector,2004,commitment,90500000.0
+wb_projects,FY17 - Financial Sector,2005,commitment,50000000.0
+wb_projects,FY17 - Financial Sector,2011,commitment,2380000.0
+wb_projects,FY17 - Financial Sector,2013,commitment,30000000.0
+wb_projects,FY17 - Financial Sector,2015,commitment,100000000.0
+wb_projects,FY17 - Financial Sector,2017,commitment,100000000.0
+wb_projects,FY17 - Financial Sector,2018,commitment,100000000.0
+wb_projects,FY17 - Financial Sector,2020,commitment,200000000.0
+wb_projects,FY17 - Financial Sector,2021,commitment,150000000.0
+wb_projects,FY17 - Financial Sector,2022,commitment,150000000.0
+wb_projects,FY17 - Financial Sector,2024,commitment,80000000.0
+wb_projects,FY17 - Health,1991,commitment,60000000.0
+wb_projects,FY17 - Health,1994,commitment,26700000.0
+wb_projects,FY17 - Health,1996,commitment,16730000.0
+wb_projects,FY17 - Health,2004,commitment,75300000.0
+wb_projects,FY17 - Health,2008,commitment,77000000.0
+wb_projects,FY17 - Health,2010,commitment,139152000.0
+wb_projects,FY17 - Health,2012,commitment,40000000.0
+wb_projects,FY17 - Health,2017,commitment,150000000.0
+wb_projects,FY17 - Health,2020,commitment,154000000.0
+wb_projects,FY17 - Health,2021,commitment,125000000.0
+wb_projects,FY17 - Health,2022,commitment,18000000.0
+wb_projects,FY17 - Health,2023,commitment,100000000.0
+wb_projects,FY17 - Industry,0,commitment,70000000.0
+wb_projects,FY17 - Industry,2005,commitment,3000000.0
+wb_projects,FY17 - Industry,2013,commitment,101750000.0
+wb_projects,FY17 - Industry,2015,commitment,500000000.0
+wb_projects,FY17 - Industry,2017,commitment,310000000.0
+wb_projects,FY17 - Industry,2020,commitment,700375008.0
+wb_projects,FY17 - Industry,2022,commitment,205000000.0
+wb_projects,FY17 - Information and Communications Technologies,1992,commitment,55000000.0
+wb_projects,FY17 - Information and Communications Technologies,2001,commitment,22560000.0
+wb_projects,FY17 - Information and Communications Technologies,2002,commitment,10276829.0
+wb_projects,FY17 - Information and Communications Technologies,2010,commitment,35000.0
+wb_projects,FY17 - Information and Communications Technologies,2016,commitment,6000000.0
+wb_projects,FY17 - Information and Communications Technologies,2017,commitment,4500000.0
+wb_projects,FY17 - Information and Communications Technologies,2018,commitment,148000000.0
+wb_projects,FY17 - Information and Communications Technologies,2022,commitment,140000000.0
+wb_projects,FY17 - Information and Communications Technologies,2025,commitment,56000000.0
+wb_projects,FY17 - Public Administration,1997,commitment,23500000.0
+wb_projects,FY17 - Public Administration,1999,commitment,59500000.0
+wb_projects,FY17 - Public Administration,2007,commitment,42600000.0
+wb_projects,FY17 - Public Administration,2008,commitment,50000000.0
+wb_projects,FY17 - Public Administration,2009,commitment,3000000.0
+wb_projects,FY17 - Public Administration,2011,commitment,29300000.0
+wb_projects,FY17 - Public Administration,2012,commitment,800000.0
+wb_projects,FY17 - Public Administration,2014,commitment,570000.0
+wb_projects,FY17 - Public Administration,2015,commitment,3680000.0
+wb_projects,FY17 - Public Administration,2018,commitment,200000000.0
+wb_projects,FY17 - Public Administration,2019,commitment,100000000.0
+wb_projects,FY17 - Public Administration,2020,commitment,150000000.0
+wb_projects,FY17 - Social Protection,0,commitment,80000000.0
+wb_projects,FY17 - Social Protection,2008,commitment,60000000.0
+wb_projects,FY17 - Social Protection,2011,commitment,2000000.0
+wb_projects,FY17 - Social Protection,2012,commitment,2646777.0
+wb_projects,FY17 - Social Protection,2016,commitment,150000000.0
+wb_projects,FY17 - Social Protection,2017,commitment,3000000.0
+wb_projects,FY17 - Social Protection,2019,commitment,116500000.0
+wb_projects,FY17 - Social Protection,2024,commitment,4600000.0
+wb_projects,FY17 - Transportation,2005,commitment,32000000.0
+wb_projects,FY17 - Transportation,2009,commitment,45000000.0
+wb_projects,FY17 - Transportation,2010,commitment,75000000.0
+wb_projects,FY17 - Transportation,2012,commitment,60000000.0
+wb_projects,FY17 - Transportation,2013,commitment,100000000.0
+wb_projects,FY17 - Transportation,2015,commitment,7470000.0
+wb_projects,FY17 - Transportation,2016,commitment,55000000.0
+wb_projects,FY17 - Transportation,2024,commitment,100000000.0
+wb_projects,FY17 - Water,2009,commitment,273000.0
+wb_projects,FY17 - Water,2012,commitment,4600000.0
+wb_projects,FY17 - Water,2014,commitment,72000000.0
+wb_projects,FY17 - Water,2022,commitment,70055520.0
+wb_projects,Financial Sector,1977,commitment,0.0
+wb_projects,Financial Sector,2001,commitment,1000000.0
+wb_projects,Financial Sector,2010,commitment,27000000.0
+wb_projects,Financial Sector,2026,commitment,95000000.0
+wb_projects,Industry,2026,commitment,85000000.0
+wb_projects,Information and Communications Technologies,1969,commitment,0.0
+wb_projects,Information and Communications Technologies,1973,commitment,0.0
+wb_projects,Information and Communications Technologies,1978,commitment,0.0
+wb_projects,Information and Communications Technologies,1985,commitment,0.0
+wb_projects,Public Administration,1976,commitment,0.0
+wb_projects,Public Administration,1983,commitment,0.0
+wb_projects,Public Administration,2025,commitment,10000000.0
+wb_projects,Social Sustainability and Inclusion,2025,commitment,3000000.0
+wb_projects,Transportation,1970,commitment,0.0
+wb_projects,Transportation,1977,commitment,0.0
+wb_projects,Transportation,1984,commitment,0.0
+wb_projects,Transportation,1988,commitment,0.0
+wb_projects,Transportation,1989,commitment,0.0
+wb_projects,Transportation,2025,commitment,350000000.0
+wb_projects,Water,1974,commitment,0.0
+wb_projects,Water,1977,commitment,0.0
+wb_projects,Water,1980,commitment,0.0
+wb_projects,Water,2004,commitment,15000000.0

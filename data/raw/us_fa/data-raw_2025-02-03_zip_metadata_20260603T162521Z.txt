@@ -1,0 +1,3 @@
+zip_path=/Users/imregan/NepalDevelopmentFund/data/raw/us_fa/data-raw_2025-02-03.zip
+size=114952834
+url=https://www.dropbox.com/scl/fi/btzeaaq84wdpahb7c033g/data-raw_2025-02-03.zip?rlkey=atqpr633ayy4ya9p428vi6lon&dl=1

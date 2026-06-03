@@ -1,0 +1,2 @@
+source,snapshot_path,url,params,sha256,bytes,http_status,retrieved_at
+adb_iati,data/raw/adb_iati/iati-activities-np_20260603T162215Z.xml,https://www.adb.org/iati/iati-activities-np.xml,,0a77ed6d0d25499608dec8c4e68a4a77665ea995b6811b6a7dff90c87aa69798,7260027,200,2026-06-03T16:22:15Z

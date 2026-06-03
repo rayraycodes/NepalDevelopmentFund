@@ -1,0 +1,3 @@
+source,snapshot_path,url,params,sha256,bytes,http_status,retrieved_at
+wb_projects,data/raw/wb_projects/projects_NP_page01_os0_20260603T162309Z.json,https://search.worldbank.org/api/v3/projects?format=json&countrycode_exact=NP&rows=500&os=0,"{'format': 'json', 'countrycode_exact': 'NP', 'rows': 500, 'os': 0}",2a0aa26bc67b0d77a2fd48e6f5ee3d28b21dd7c162e803f2a93ff2c90c221472,438549,200,2026-06-03T16:23:09Z
+wb_projects,data/raw/wb_projects/projects_NP_ALL_20260603T162309Z.json,https://search.worldbank.org/api/v3/projects?format=json&countrycode_exact=NP&rows=500,all pages combined,2a0aa26bc67b0d77a2fd48e6f5ee3d28b21dd7c162e803f2a93ff2c90c221472,438549,200,2026-06-03T16:23:09Z

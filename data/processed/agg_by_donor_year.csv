@@ -1,0 +1,983 @@
+side,donor_name,year,flow_stage,amount_usd
+donor,Adaptation Fund,2015,disbursement,2341906.0
+donor,Adaptation Fund,2020,disbursement,2394909.0
+donor,Adaptation Fund,2021,disbursement,2394909.0
+donor,Adaptation Fund,2022,disbursement,2395436.0
+donor,Arcadia,2018,disbursement,949515.0
+donor,Asian Development Bank,2015,disbursement,84988800.0
+donor,Asian Development Bank,2016,disbursement,129826927.0
+donor,Asian Development Bank,2017,disbursement,199589684.0
+donor,Asian Development Bank,2018,disbursement,160516000.0
+donor,Asian Development Bank,2019,disbursement,215973829.0
+donor,Asian Development Bank,2020,disbursement,417877962.0
+donor,Asian Development Bank,2021,disbursement,173573343.0
+donor,Asian Development Bank,2022,disbursement,155891787.0
+donor,Asian Development Bank,2023,disbursement,360008423.0
+donor,Asian Development Bank,2024,disbursement,191905598.0
+donor,Asian Infrastructure Investment Bank [AIIB],2019,disbursement,621949.0
+donor,Asian Infrastructure Investment Bank [AIIB],2020,disbursement,324333.0
+donor,Australia,2015,disbursement,36309385.0
+donor,Australia,2016,disbursement,16491399.999999998
+donor,Australia,2017,disbursement,19324040.0
+donor,Australia,2018,disbursement,13804836.0
+donor,Australia,2019,disbursement,11776268.0
+donor,Australia,2020,disbursement,10059488.0
+donor,Australia,2021,disbursement,25572130.0
+donor,Australia,2022,disbursement,19079614.0
+donor,Australia,2023,disbursement,18359425.0
+donor,Australia,2024,disbursement,22073090.0
+donor,Austria,2015,disbursement,4502392.0
+donor,Austria,2016,disbursement,1835550.0
+donor,Austria,2017,disbursement,1843706.0
+donor,Austria,2018,disbursement,1862659.0
+donor,Austria,2019,disbursement,2071827.0
+donor,Austria,2020,disbursement,1123401.0
+donor,Austria,2021,disbursement,2299431.0
+donor,Austria,2022,disbursement,1110227.0
+donor,Austria,2023,disbursement,4298674.0
+donor,Austria,2024,disbursement,2727271.0
+donor,Azerbaijan,2015,disbursement,72840.0
+donor,Azerbaijan,2020,disbursement,350000.0
+donor,Belgium,2015,disbursement,980233.0
+donor,Belgium,2016,disbursement,318381.0
+donor,Belgium,2017,disbursement,525147.0
+donor,Belgium,2018,disbursement,906075.0
+donor,Belgium,2019,disbursement,293863.0
+donor,Belgium,2020,disbursement,94641.0
+donor,Belgium,2021,disbursement,191099.0
+donor,Belgium,2022,disbursement,251303.0
+donor,Belgium,2023,disbursement,339536.0
+donor,Belgium,2024,disbursement,477606.0
+donor,Bloomberg Family Foundation,2022,disbursement,446949.0
+donor,Bulgaria,2015,disbursement,40000.0
+donor,COVID-19 Response and Recovery Multi-Partner Trust Fund [UN COVID-19 MPTF],2021,disbursement,-23870.0
+donor,Canada,2015,disbursement,29087843.0
+donor,Canada,2016,disbursement,12405795.0
+donor,Canada,2017,disbursement,12677103.0
+donor,Canada,2018,disbursement,8470074.0
+donor,Canada,2019,disbursement,6816081.0
+donor,Canada,2020,disbursement,4074575.000000001
+donor,Canada,2021,disbursement,7891667.0
+donor,Canada,2022,disbursement,2770485.0
+donor,Canada,2023,disbursement,2453735.0
+donor,Canada,2024,disbursement,3154292.0
+donor,Central Emergency Response Fund [CERF],2017,disbursement,4787881.0
+donor,Central Emergency Response Fund [CERF],2021,disbursement,3202000.0
+donor,Central Emergency Response Fund [CERF],2022,disbursement,3186000.0
+donor,Central Emergency Response Fund [CERF],2024,disbursement,3407000.0
+donor,Charity Projects Ltd (Comic Relief),2015,disbursement,626432.0
+donor,Charity Projects Ltd (Comic Relief),2016,disbursement,220789.0
+donor,Charity Projects Ltd (Comic Relief),2017,disbursement,221096.0
+donor,Charity Projects Ltd (Comic Relief),2018,disbursement,906297.0
+donor,Charity Projects Ltd (Comic Relief),2019,disbursement,822388.0
+donor,Charity Projects Ltd (Comic Relief),2020,disbursement,245821.0
+donor,Charity Projects Ltd (Comic Relief),2021,disbursement,162259.0
+donor,Children's Investment Fund Foundation,2018,disbursement,132710.0
+donor,Citi Foundation,2021,disbursement,80000.0
+donor,Climate Investment Funds [CIF],2015,disbursement,939790.0
+donor,Climate Investment Funds [CIF],2017,disbursement,9705700.0
+donor,Climate Investment Funds [CIF],2018,disbursement,12939938.0
+donor,Climate Investment Funds [CIF],2019,disbursement,8163002.000000001
+donor,Climate Investment Funds [CIF],2020,disbursement,30733999.0
+donor,Climate Investment Funds [CIF],2021,disbursement,1213032.0
+donor,Climate Investment Funds [CIF],2022,disbursement,2404976.0
+donor,Climate Investment Funds [CIF],2023,disbursement,4093000.0
+donor,Climate Investment Funds [CIF],2024,disbursement,4733939.0
+donor,Conrad N. Hilton Foundation,2015,disbursement,500000.0
+donor,Conrad N. Hilton Foundation,2023,disbursement,214000.0
+donor,Czechia,2015,disbursement,835492.0
+donor,Czechia,2016,disbursement,332811.0
+donor,Czechia,2017,disbursement,194777.0
+donor,Czechia,2018,disbursement,19386.0
+donor,Czechia,2019,disbursement,34027.0
+donor,Czechia,2022,disbursement,190239.0
+donor,David and Lucile Packard Foundation,2017,disbursement,862500.0
+donor,David and Lucile Packard Foundation,2018,disbursement,250000.0
+donor,David and Lucile Packard Foundation,2019,disbursement,666667.0
+donor,David and Lucile Packard Foundation,2020,disbursement,31250.0
+donor,David and Lucile Packard Foundation,2021,disbursement,57583.0
+donor,David and Lucile Packard Foundation,2022,disbursement,684500.0
+donor,David and Lucile Packard Foundation,2023,disbursement,439000.0
+donor,David and Lucile Packard Foundation,2024,disbursement,672000.0
+donor,Denmark,2015,disbursement,21477585.0
+donor,Denmark,2016,disbursement,12886317.0
+donor,Denmark,2017,disbursement,19113671.0
+donor,Denmark,2018,disbursement,16285955.000000002
+donor,Denmark,2019,disbursement,-9988369.0
+donor,Denmark,2020,disbursement,3179268.0
+donor,Denmark,2021,disbursement,3212454.0
+donor,Denmark,2022,disbursement,3438411.0
+donor,Denmark,2023,disbursement,2604060.0
+donor,Denmark,2024,disbursement,1809182.0
+donor,Dutch Postcode Lottery,2019,disbursement,559722.0
+donor,Dutch Postcode Lottery,2020,disbursement,34188.0
+donor,Dutch Postcode Lottery,2023,disbursement,522636.0
+donor,EU Institutions,2015,disbursement,47964082.0
+donor,EU Institutions,2016,disbursement,100769125.0
+donor,EU Institutions,2017,disbursement,94879551.0
+donor,EU Institutions,2018,disbursement,54352048.0
+donor,EU Institutions,2019,disbursement,49349233.0
+donor,EU Institutions,2020,disbursement,33877322.0
+donor,EU Institutions,2021,disbursement,115883728.0
+donor,EU Institutions,2022,disbursement,37055001.0
+donor,EU Institutions,2023,disbursement,49941133.0
+donor,EU Institutions,2024,disbursement,97145609.0
+donor,Estonia,2015,disbursement,61009.0
+donor,Finland,2015,disbursement,26820755.0
+donor,Finland,2016,disbursement,25927469.0
+donor,Finland,2017,disbursement,22759736.0
+donor,Finland,2018,disbursement,18936430.0
+donor,Finland,2019,disbursement,14741436.0
+donor,Finland,2020,disbursement,20597526.0
+donor,Finland,2021,disbursement,23077867.0
+donor,Finland,2022,disbursement,17126494.0
+donor,Finland,2023,disbursement,18656819.0
+donor,Finland,2024,disbursement,16912317.0
+donor,Fondation Botnar,2019,disbursement,23479.0
+donor,Food and Agriculture Organisation [FAO],2018,disbursement,324500.0
+donor,Food and Agriculture Organisation [FAO],2019,disbursement,364858.0
+donor,Food and Agriculture Organisation [FAO],2020,disbursement,300103.0
+donor,Food and Agriculture Organisation [FAO],2021,disbursement,687360.0
+donor,Food and Agriculture Organisation [FAO],2022,disbursement,1049431.0
+donor,Food and Agriculture Organisation [FAO],2023,disbursement,530583.0
+donor,Food and Agriculture Organisation [FAO],2024,disbursement,1094163.0
+donor,Ford Foundation,2017,disbursement,325000.0
+donor,Ford Foundation,2018,disbursement,435227.0
+donor,Ford Foundation,2019,disbursement,334574.0
+donor,Ford Foundation,2020,disbursement,176240.0
+donor,Ford Foundation,2021,disbursement,604000.0
+donor,Ford Foundation,2022,disbursement,820505.0
+donor,Ford Foundation,2023,disbursement,100800.0
+donor,Ford Foundation,2024,disbursement,697000.0
+donor,France,2015,disbursement,1224916.0
+donor,France,2016,disbursement,-334857.0
+donor,France,2017,disbursement,796907.0
+donor,France,2018,disbursement,47883.0
+donor,France,2019,disbursement,508519.00000000006
+donor,France,2020,disbursement,1566481.0
+donor,France,2021,disbursement,1166449.0
+donor,France,2022,disbursement,5379678.0
+donor,France,2023,disbursement,6789915.0
+donor,France,2024,disbursement,1029266.0
+donor,Gates Foundation,2015,disbursement,5311528.0
+donor,Gates Foundation,2016,disbursement,2600765.0
+donor,Gates Foundation,2017,disbursement,3189649.0
+donor,Gates Foundation,2018,disbursement,2588648.0
+donor,Gates Foundation,2019,disbursement,5098563.0
+donor,Gates Foundation,2020,disbursement,4916356.0
+donor,Gates Foundation,2021,disbursement,4431636.0
+donor,Gates Foundation,2022,disbursement,7339502.0
+donor,Gates Foundation,2023,disbursement,6430690.0
+donor,Gates Foundation,2024,disbursement,5296790.0
+donor,German Postcode Lottery,2022,disbursement,106233.0
+donor,German Postcode Lottery,2023,disbursement,104433.0
+donor,Germany,2015,disbursement,38868977.0
+donor,Germany,2016,disbursement,35020930.0
+donor,Germany,2017,disbursement,44643456.0
+donor,Germany,2018,disbursement,51639889.0
+donor,Germany,2019,disbursement,45848005.0
+donor,Germany,2020,disbursement,57485261.0
+donor,Germany,2021,disbursement,54328303.0
+donor,Germany,2022,disbursement,60925843.0
+donor,Germany,2023,disbursement,50924720.0
+donor,Germany,2024,disbursement,48866676.0
+donor,Global Alliance for Vaccines and Immunization [GAVI],2015,disbursement,29703180.0
+donor,Global Alliance for Vaccines and Immunization [GAVI],2016,disbursement,16607900.0
+donor,Global Alliance for Vaccines and Immunization [GAVI],2017,disbursement,10650530.0
+donor,Global Alliance for Vaccines and Immunization [GAVI],2018,disbursement,15047090.0
+donor,Global Alliance for Vaccines and Immunization [GAVI],2019,disbursement,24761093.0
+donor,Global Alliance for Vaccines and Immunization [GAVI],2020,disbursement,8477672.0
+donor,Global Alliance for Vaccines and Immunization [GAVI],2021,disbursement,30326731.0
+donor,Global Alliance for Vaccines and Immunization [GAVI],2022,disbursement,20158107.0
+donor,Global Alliance for Vaccines and Immunization [GAVI],2023,disbursement,16403981.000000002
+donor,Global Alliance for Vaccines and Immunization [GAVI],2024,disbursement,20809663.0
+donor,Global Environment Facility [GEF],2015,disbursement,4903308.0
+donor,Global Environment Facility [GEF],2016,disbursement,4779672.0
+donor,Global Environment Facility [GEF],2017,disbursement,1922100.0
+donor,Global Environment Facility [GEF],2018,disbursement,881051.0
+donor,Global Environment Facility [GEF],2019,disbursement,-3581.0
+donor,Global Environment Facility [GEF],2020,disbursement,14337.0
+donor,Global Environment Facility [GEF],2021,disbursement,464100.0
+donor,Global Environment Facility [GEF],2022,disbursement,1011586.0
+donor,Global Environment Facility [GEF],2023,disbursement,1662769.0
+donor,Global Environment Facility [GEF],2024,disbursement,4737548.0
+donor,Global Fund,2015,disbursement,18633000.0
+donor,Global Fund,2016,disbursement,15991020.0
+donor,Global Fund,2017,disbursement,22672624.0
+donor,Global Fund,2018,disbursement,18096014.0
+donor,Global Fund,2019,disbursement,14273492.0
+donor,Global Fund,2020,disbursement,16232423.0
+donor,Global Fund,2021,disbursement,22386138.0
+donor,Global Fund,2022,disbursement,22703295.0
+donor,Global Fund,2023,disbursement,23111287.0
+donor,Global Fund,2024,disbursement,18820232.0
+donor,Global Green Growth Institute [GGGI],2015,disbursement,41516.0
+donor,Global Green Growth Institute [GGGI],2016,disbursement,136714.0
+donor,Global Green Growth Institute [GGGI],2017,disbursement,606437.0
+donor,Global Green Growth Institute [GGGI],2018,disbursement,400150.0
+donor,Global Green Growth Institute [GGGI],2019,disbursement,253180.00000000003
+donor,Global Green Growth Institute [GGGI],2020,disbursement,256166.99999999997
+donor,Global Green Growth Institute [GGGI],2021,disbursement,56294.0
+donor,Global Green Growth Institute [GGGI],2022,disbursement,140000.0
+donor,Global Green Growth Institute [GGGI],2023,disbursement,157359.0
+donor,Global Green Growth Institute [GGGI],2024,disbursement,67573.0
+donor,Good Ventures Foundation,2022,disbursement,376981.0
+donor,Good Ventures Foundation,2023,disbursement,20500.0
+donor,Good Ventures Foundation,2024,disbursement,2088300.0
+donor,Greece,2015,disbursement,690.0
+donor,Greece,2022,disbursement,1052.0
+donor,Green Climate Fund [GCF],2017,disbursement,465410.0
+donor,Green Climate Fund [GCF],2018,disbursement,418605.0
+donor,Green Climate Fund [GCF],2019,disbursement,479904.0
+donor,Green Climate Fund [GCF],2020,disbursement,2461472.0
+donor,Green Climate Fund [GCF],2021,disbursement,2908095.0
+donor,Green Climate Fund [GCF],2022,disbursement,5506870.0
+donor,Green Climate Fund [GCF],2023,disbursement,5506874.0
+donor,H&M Foundation,2015,disbursement,100000.0
+donor,Hungary,2015,disbursement,4262.0
+donor,Hungary,2016,disbursement,7073.0
+donor,Hungary,2017,disbursement,20646.0
+donor,Hungary,2019,disbursement,6551.0
+donor,Hungary,2020,disbursement,11359.0
+donor,Hungary,2021,disbursement,350812.0
+donor,Hungary,2024,disbursement,2459.0
+donor,IFAD,2015,disbursement,2545153.0
+donor,IFAD,2016,disbursement,14512815.0
+donor,IFAD,2017,disbursement,7989791.0
+donor,IFAD,2018,disbursement,10393900.0
+donor,IFAD,2019,disbursement,12714227.0
+donor,IFAD,2020,disbursement,2794457.0
+donor,IFAD,2021,disbursement,12982000.0
+donor,IFAD,2022,disbursement,5918310.0
+donor,IFAD,2023,disbursement,5975660.0
+donor,IFAD,2024,disbursement,7827000.0
+donor,IKEA Foundation,2023,disbursement,855399.0
+donor,IMF Concessional Trust Funds,2015,disbursement,35915270.0
+donor,IMF Concessional Trust Funds,2016,disbursement,-17836020.0
+donor,IMF Concessional Trust Funds,2017,disbursement,-12355332.0
+donor,IMF Concessional Trust Funds,2018,disbursement,-8075723.0
+donor,IMF Concessional Trust Funds,2020,disbursement,218542934.0
+donor,IMF Concessional Trust Funds,2021,disbursement,7130000.0
+donor,IMF Concessional Trust Funds,2023,disbursement,95077375.0
+donor,IMF Concessional Trust Funds,2024,disbursement,32218240.0
+donor,Iceland,2015,disbursement,300000.0
+donor,Iceland,2024,disbursement,5796.0
+donor,International Atomic Energy Agency [IAEA],2015,disbursement,376816.0
+donor,International Atomic Energy Agency [IAEA],2016,disbursement,431227.0
+donor,International Atomic Energy Agency [IAEA],2017,disbursement,393496.0
+donor,International Atomic Energy Agency [IAEA],2018,disbursement,700795.0
+donor,International Atomic Energy Agency [IAEA],2019,disbursement,463465.0
+donor,International Atomic Energy Agency [IAEA],2020,disbursement,794651.0
+donor,International Atomic Energy Agency [IAEA],2021,disbursement,438297.0
+donor,International Atomic Energy Agency [IAEA],2022,disbursement,494105.0
+donor,International Atomic Energy Agency [IAEA],2023,disbursement,1521196.0
+donor,International Atomic Energy Agency [IAEA],2024,disbursement,930051.0
+donor,International Development Association [IDA],2015,disbursement,273563632.0
+donor,International Development Association [IDA],2016,disbursement,188371782.0
+donor,International Development Association [IDA],2017,disbursement,250561254.0
+donor,International Development Association [IDA],2018,disbursement,545073337.0
+donor,International Development Association [IDA],2019,disbursement,428588362.0
+donor,International Development Association [IDA],2020,disbursement,473378719.0
+donor,International Development Association [IDA],2021,disbursement,611426335.0
+donor,International Development Association [IDA],2022,disbursement,380814590.0
+donor,International Development Association [IDA],2023,disbursement,178148430.0
+donor,International Development Association [IDA],2024,disbursement,289551947.0
+donor,International Labour Organisation [ILO],2015,disbursement,1721850.0
+donor,International Labour Organisation [ILO],2016,disbursement,777730.0
+donor,International Labour Organisation [ILO],2017,disbursement,1043370.0
+donor,International Labour Organisation [ILO],2018,disbursement,1146097.0
+donor,International Labour Organisation [ILO],2019,disbursement,2112820.0
+donor,International Labour Organisation [ILO],2020,disbursement,1919476.0
+donor,International Labour Organisation [ILO],2021,disbursement,1400800.0
+donor,International Labour Organisation [ILO],2022,disbursement,1588575.0
+donor,International Labour Organisation [ILO],2023,disbursement,2284620.0
+donor,International Labour Organisation [ILO],2024,disbursement,353840.0
+donor,Ireland,2015,disbursement,560000.0
+donor,Ireland,2016,disbursement,375628.0
+donor,Ireland,2017,disbursement,479678.0
+donor,Ireland,2018,disbursement,442318.0
+donor,Ireland,2019,disbursement,508407.00000000006
+donor,Ireland,2020,disbursement,578739.0
+donor,Ireland,2021,disbursement,1059589.0
+donor,Ireland,2022,disbursement,758775.0
+donor,Ireland,2023,disbursement,802835.0
+donor,Ireland,2024,disbursement,927070.0
+donor,Islamic Development Bank [IsDB],2016,disbursement,227380.0
+donor,Islamic Development Bank [IsDB],2017,disbursement,100530.0
+donor,Islamic Development Bank [IsDB],2019,disbursement,160000.0
+donor,Islamic Development Bank [IsDB],2020,disbursement,100000.0
+donor,Islamic Development Bank [IsDB],2022,disbursement,63895.99999999999
+donor,Islamic Development Bank [IsDB],2023,disbursement,18590.0
+donor,Israel,2015,disbursement,6651527.0
+donor,Israel,2016,disbursement,83548.0
+donor,Israel,2017,disbursement,137538.0
+donor,Israel,2018,disbursement,267341.0
+donor,Israel,2019,disbursement,179770.0
+donor,Israel,2020,disbursement,264899.0
+donor,Israel,2021,disbursement,293881.0
+donor,Israel,2022,disbursement,272110.0
+donor,Israel,2023,disbursement,239421.0
+donor,Israel,2024,disbursement,284779.0
+donor,Italy,2015,disbursement,2691137.0
+donor,Italy,2016,disbursement,1867408.0
+donor,Italy,2017,disbursement,2830160.0
+donor,Italy,2018,disbursement,743715.0
+donor,Italy,2019,disbursement,1564352.0
+donor,Italy,2020,disbursement,843607.0
+donor,Italy,2021,disbursement,1319213.0
+donor,Italy,2022,disbursement,894178.0
+donor,Italy,2023,disbursement,1183283.0
+donor,Italy,2024,disbursement,1170035.0
+donor,Japan,2015,disbursement,48820000.0
+donor,Japan,2016,disbursement,65129999.99999999
+donor,Japan,2017,disbursement,97406034.0
+donor,Japan,2018,disbursement,107074638.0
+donor,Japan,2019,disbursement,126516414.0
+donor,Japan,2020,disbursement,82689183.0
+donor,Japan,2021,disbursement,91139383.0
+donor,Japan,2022,disbursement,146740303.0
+donor,Japan,2023,disbursement,65435682.0
+donor,Japan,2024,disbursement,65967999.00000001
+donor,Joint Sustainable Development Goals Fund [Joint SDG Fund],2022,disbursement,749994.0
+donor,Joint Sustainable Development Goals Fund [Joint SDG Fund],2024,disbursement,699999.0
+donor,Kazakhstan,2015,disbursement,200000.0
+donor,Kazakhstan,2023,disbursement,1535.0
+donor,Kazakhstan,2024,disbursement,2849.0
+donor,Korea,2015,disbursement,17563416.0
+donor,Korea,2016,disbursement,15654049.0
+donor,Korea,2017,disbursement,16565206.0
+donor,Korea,2018,disbursement,12033276.0
+donor,Korea,2019,disbursement,18548757.0
+donor,Korea,2020,disbursement,14799520.0
+donor,Korea,2021,disbursement,13413554.0
+donor,Korea,2022,disbursement,10917352.0
+donor,Korea,2023,disbursement,12405343.0
+donor,Korea,2024,disbursement,14134306.0
+donor,Kuwait,2015,disbursement,-112481.0
+donor,Kuwait,2016,disbursement,302750.0
+donor,Kuwait,2017,disbursement,51096.0
+donor,Kuwait,2018,disbursement,3236120.0
+donor,Kuwait,2019,disbursement,102347.0
+donor,Kuwait,2020,disbursement,2847335.0
+donor,Kuwait,2021,disbursement,1616173.0
+donor,Kuwait,2022,disbursement,3096393.0
+donor,Kuwait,2023,disbursement,-769793.0
+donor,Kuwait,2024,disbursement,-637137.0
+donor,LEGO Foundation,2021,disbursement,2184384.0
+donor,La Caixa Banking Foundation,2019,disbursement,16232.0
+donor,La Caixa Banking Foundation,2021,disbursement,25893.0
+donor,La Caixa Banking Foundation,2022,disbursement,23983.0
+donor,La Caixa Banking Foundation,2023,disbursement,36211.0
+donor,Latvia,2015,disbursement,22185.0
+donor,Laudes Foundation,2015,disbursement,224379.0
+donor,Laudes Foundation,2016,disbursement,39724.0
+donor,Lithuania,2015,disbursement,19967.0
+donor,Lithuania,2018,disbursement,1345.0
+donor,Lithuania,2019,disbursement,1539.0
+donor,Lithuania,2020,disbursement,4713.0
+donor,Lithuania,2021,disbursement,65261.0
+donor,Lithuania,2022,disbursement,5174.0
+donor,Lithuania,2024,disbursement,2549.0
+donor,Luxembourg,2015,disbursement,2378199.0
+donor,Luxembourg,2016,disbursement,2812549.0
+donor,Luxembourg,2017,disbursement,2982719.0
+donor,Luxembourg,2018,disbursement,3503381.0
+donor,Luxembourg,2019,disbursement,2762393.0
+donor,Luxembourg,2020,disbursement,2392255.0
+donor,Luxembourg,2021,disbursement,2886062.0
+donor,Luxembourg,2022,disbursement,2711635.0
+donor,Luxembourg,2023,disbursement,1933013.0
+donor,Luxembourg,2024,disbursement,2764930.0
+donor,Malta,2019,disbursement,2862.0
+donor,Malta,2022,disbursement,2083.0
+donor,Malta,2023,disbursement,6650.0
+donor,Margaret A. Cargill Foundation,2016,disbursement,3389336.0
+donor,Margaret A. Cargill Foundation,2017,disbursement,2804501.0
+donor,Margaret A. Cargill Foundation,2018,disbursement,4775000.0
+donor,Margaret A. Cargill Foundation,2019,disbursement,4304000.0
+donor,Margaret A. Cargill Foundation,2020,disbursement,1449970.0
+donor,Margaret A. Cargill Foundation,2021,disbursement,2233333.0
+donor,Margaret A. Cargill Foundation,2022,disbursement,2083333.0
+donor,MetLife Foundation,2015,disbursement,343750.0
+donor,MetLife Foundation,2016,disbursement,250000.0
+donor,MetLife Foundation,2018,disbursement,22330.0
+donor,Netherlands,2015,disbursement,9800333.0
+donor,Netherlands,2016,disbursement,236094.0
+donor,Netherlands,2017,disbursement,35830.0
+donor,Netherlands,2018,disbursement,66957.0
+donor,Netherlands,2019,disbursement,53802.0
+donor,New Zealand,2015,disbursement,2900000.0
+donor,New Zealand,2016,disbursement,1040000.0
+donor,New Zealand,2017,disbursement,750000.0
+donor,New Zealand,2018,disbursement,784778.0
+donor,New Zealand,2019,disbursement,993101.0
+donor,New Zealand,2020,disbursement,341476.0
+donor,New Zealand,2021,disbursement,1185546.0
+donor,New Zealand,2022,disbursement,273415.0
+donor,New Zealand,2023,disbursement,246835.0
+donor,New Zealand,2024,disbursement,345940.0
+donor,Nordic Development Fund [NDF],2015,disbursement,-440322.0
+donor,Nordic Development Fund [NDF],2016,disbursement,-619827.0
+donor,Nordic Development Fund [NDF],2017,disbursement,-248236.0
+donor,Nordic Development Fund [NDF],2018,disbursement,-309514.0
+donor,Nordic Development Fund [NDF],2019,disbursement,-553916.0
+donor,Nordic Development Fund [NDF],2020,disbursement,-145143.0
+donor,Nordic Development Fund [NDF],2021,disbursement,-210632.0
+donor,Nordic Development Fund [NDF],2022,disbursement,-1526775.0
+donor,Nordic Development Fund [NDF],2023,disbursement,-1003311.0
+donor,Nordic Development Fund [NDF],2024,disbursement,-1107367.0
+donor,Norway,2015,disbursement,61029828.0
+donor,Norway,2016,disbursement,30718862.0
+donor,Norway,2017,disbursement,32293624.0
+donor,Norway,2018,disbursement,32855652.0
+donor,Norway,2019,disbursement,25600180.0
+donor,Norway,2020,disbursement,32768045.0
+donor,Norway,2021,disbursement,39677685.0
+donor,Norway,2022,disbursement,33853493.0
+donor,Norway,2023,disbursement,33098858.0
+donor,Norway,2024,disbursement,31867123.0
+donor,OPEC Fund for International Development [OPEC Fund],2015,disbursement,8593300.0
+donor,OPEC Fund for International Development [OPEC Fund],2016,disbursement,7590680.0
+donor,OPEC Fund for International Development [OPEC Fund],2017,disbursement,12155990.0
+donor,OPEC Fund for International Development [OPEC Fund],2018,disbursement,7737639.0
+donor,OPEC Fund for International Development [OPEC Fund],2019,disbursement,-8118873.000000001
+donor,OPEC Fund for International Development [OPEC Fund],2020,disbursement,2998559.0
+donor,OPEC Fund for International Development [OPEC Fund],2021,disbursement,3691419.0
+donor,OPEC Fund for International Development [OPEC Fund],2022,disbursement,-811482.0
+donor,OPEC Fund for International Development [OPEC Fund],2023,disbursement,-6744892.0
+donor,OPEC Fund for International Development [OPEC Fund],2024,disbursement,-7385270.0
+donor,Oak Foundation,2017,disbursement,400000.0
+donor,Oak Foundation,2019,disbursement,178048.0
+donor,Oak Foundation,2023,disbursement,400000.0
+donor,Open Society Foundations,2021,disbursement,1554405.0
+donor,Open Society Foundations,2022,disbursement,1048035.0
+donor,Open Society Foundations,2023,disbursement,200000.0
+donor,People's Postcode Lottery,2022,disbursement,369822.0
+donor,Poland,2015,disbursement,163027.0
+donor,Poland,2016,disbursement,2282.0
+donor,Poland,2017,disbursement,412640.0
+donor,Poland,2018,disbursement,3732.0
+donor,Poland,2019,disbursement,200087.0
+donor,Poland,2020,disbursement,150177.0
+donor,Poland,2021,disbursement,162035.0
+donor,Poland,2022,disbursement,121274.0
+donor,Poland,2023,disbursement,122998.0
+donor,Poland,2024,disbursement,123252.0
+donor,Portugal,2017,disbursement,2878.0
+donor,Portugal,2019,disbursement,2773.0
+donor,Portugal,2020,disbursement,3076.0
+donor,Portugal,2022,disbursement,10930.0
+donor,Portugal,2023,disbursement,52274.0
+donor,Private Infrastructure Development Group,2021,disbursement,250000.0
+donor,Qatar,2019,disbursement,84610.0
+donor,Qatar,2020,disbursement,1972765.0
+donor,Qatar,2021,disbursement,1817646.0
+donor,Qatar,2022,disbursement,1999815.0
+donor,Qatar,2023,disbursement,1870139.0
+donor,Qatar,2024,disbursement,1224185.0
+donor,Romania,2015,disbursement,56418.0
+donor,Romania,2016,disbursement,3029.0
+donor,Romania,2017,disbursement,3599.0
+donor,Romania,2018,disbursement,4383.0
+donor,Romania,2019,disbursement,5621.0
+donor,Romania,2020,disbursement,9231.0
+donor,Romania,2021,disbursement,4906.0
+donor,Romania,2022,disbursement,15090.0
+donor,Romania,2023,disbursement,13733.0
+donor,Romania,2024,disbursement,14735.0
+donor,Slovak Republic,2015,disbursement,120000.0
+donor,Slovak Republic,2019,disbursement,35830.0
+donor,Slovenia,2015,disbursement,55463.0
+donor,Slovenia,2021,disbursement,224693.0
+donor,Slovenia,2022,disbursement,42065.0
+donor,Spain,2015,disbursement,1354231.0
+donor,Spain,2016,disbursement,127570.0
+donor,Spain,2017,disbursement,60196.0
+donor,Spain,2018,disbursement,125840.0
+donor,Spain,2019,disbursement,67345.0
+donor,Spain,2020,disbursement,133745.0
+donor,Spain,2021,disbursement,170439.0
+donor,Spain,2022,disbursement,85354.0
+donor,Spain,2023,disbursement,164689.0
+donor,Spain,2024,disbursement,66551.0
+donor,Sweden,2015,disbursement,9805371.0
+donor,Sweden,2016,disbursement,1206995.0
+donor,Sweden,2017,disbursement,1823599.0
+donor,Sweden,2018,disbursement,1110009.0
+donor,Sweden,2019,disbursement,1901435.0
+donor,Sweden,2020,disbursement,1953670.0
+donor,Sweden,2021,disbursement,5672942.0
+donor,Sweden,2022,disbursement,4748994.0
+donor,Sweden,2023,disbursement,6246785.0
+donor,Sweden,2024,disbursement,5179610.0
+donor,Swedish Postcode Lottery,2018,disbursement,552334.0
+donor,Swedish Postcode Lottery,2020,disbursement,214991.0
+donor,Switzerland,2015,disbursement,52657082.0
+donor,Switzerland,2016,disbursement,47729187.0
+donor,Switzerland,2017,disbursement,37755556.0
+donor,Switzerland,2018,disbursement,32418652.0
+donor,Switzerland,2019,disbursement,37728232.0
+donor,Switzerland,2020,disbursement,38849881.0
+donor,Switzerland,2021,disbursement,46111475.0
+donor,Switzerland,2022,disbursement,33406354.0
+donor,Switzerland,2023,disbursement,35297099.0
+donor,Switzerland,2024,disbursement,32105367.0
+donor,Thailand,2015,disbursement,436655.0
+donor,Thailand,2016,disbursement,82110.0
+donor,Thailand,2017,disbursement,190744.0
+donor,Thailand,2018,disbursement,228510.0
+donor,Thailand,2019,disbursement,257325.00000000003
+donor,Thailand,2020,disbursement,180487.0
+donor,Thailand,2021,disbursement,83213.0
+donor,Thailand,2022,disbursement,54208.0
+donor,Thailand,2024,disbursement,17553.0
+donor,Timor-Leste,2015,disbursement,500000.0
+donor,Türkiye,2015,disbursement,550000.0
+donor,Türkiye,2016,disbursement,250000.0
+donor,Türkiye,2017,disbursement,322123.0
+donor,Türkiye,2018,disbursement,6080.0
+donor,Türkiye,2019,disbursement,217596.0
+donor,Türkiye,2020,disbursement,149746.0
+donor,Türkiye,2021,disbursement,161360.0
+donor,Türkiye,2022,disbursement,172634.0
+donor,Türkiye,2023,disbursement,436367.0
+donor,Türkiye,2024,disbursement,703436.0
+donor,UBS Optimus Foundation,2019,disbursement,5953340.0
+donor,UBS Optimus Foundation,2020,disbursement,3119027.0
+donor,UBS Optimus Foundation,2021,disbursement,78212.0
+donor,UBS Optimus Foundation,2022,disbursement,795000.0
+donor,UBS Optimus Foundation,2023,disbursement,1609323.0
+donor,UBS Optimus Foundation,2024,disbursement,1523777.0
+donor,UN Capital Development Fund [UNCDF],2020,disbursement,46365.0
+donor,UN Capital Development Fund [UNCDF],2021,disbursement,46331.0
+donor,UN Capital Development Fund [UNCDF],2022,disbursement,44627.0
+donor,UN Capital Development Fund [UNCDF],2023,disbursement,5289.0
+donor,UN Development Coordination Office,2019,disbursement,887323.0
+donor,UN Development Coordination Office,2020,disbursement,925913.0
+donor,UN Development Coordination Office,2021,disbursement,1127128.0
+donor,UN Development Coordination Office,2022,disbursement,1036873.0
+donor,UN Development Coordination Office,2023,disbursement,1123721.0
+donor,UN Development Coordination Office,2024,disbursement,1140142.0
+donor,UN Peacebuilding Fund [UNPBF],2015,disbursement,2762321.0
+donor,UN Peacebuilding Fund [UNPBF],2016,disbursement,1794202.0
+donor,UN Peacebuilding Fund [UNPBF],2017,disbursement,-21303.0
+donor,UN Peacebuilding Fund [UNPBF],2018,disbursement,-10049.0
+donor,UN Peacebuilding Fund [UNPBF],2021,disbursement,-7700.0
+donor,UN Women,2021,disbursement,768756.0
+donor,UN Women,2022,disbursement,801659.0
+donor,UN Women,2023,disbursement,1037950.0
+donor,UNAIDS,2015,disbursement,634045.0
+donor,UNAIDS,2016,disbursement,431842.0
+donor,UNAIDS,2017,disbursement,375400.0
+donor,UNAIDS,2018,disbursement,32214.0
+donor,UNAIDS,2019,disbursement,186816.0
+donor,UNAIDS,2022,disbursement,103745.0
+donor,UNAIDS,2023,disbursement,275788.0
+donor,UNAIDS,2024,disbursement,240732.0
+donor,UNDP,2015,disbursement,8071244.999999999
+donor,UNDP,2016,disbursement,6395539.0
+donor,UNDP,2017,disbursement,6478450.0
+donor,UNDP,2018,disbursement,5061873.0
+donor,UNDP,2019,disbursement,7147308.0
+donor,UNDP,2020,disbursement,6877011.0
+donor,UNDP,2021,disbursement,8589680.0
+donor,UNDP,2022,disbursement,6597065.0
+donor,UNDP,2024,disbursement,6491998.0
+donor,UNFPA,2015,disbursement,4376432.0
+donor,UNFPA,2016,disbursement,3505603.0
+donor,UNFPA,2017,disbursement,2448466.0
+donor,UNFPA,2018,disbursement,2298310.0
+donor,UNFPA,2019,disbursement,3118019.0
+donor,UNFPA,2020,disbursement,3511770.0
+donor,UNFPA,2021,disbursement,4104050.0
+donor,UNFPA,2022,disbursement,3717870.0
+donor,UNFPA,2023,disbursement,3822730.0
+donor,UNFPA,2024,disbursement,3476970.0
+donor,UNHCR,2015,disbursement,5057869.0
+donor,UNHCR,2016,disbursement,4584644.0
+donor,UNHCR,2017,disbursement,5102030.0
+donor,UNHCR,2018,disbursement,3273435.0
+donor,UNHCR,2019,disbursement,3235234.0
+donor,UNHCR,2020,disbursement,2340597.0
+donor,UNHCR,2021,disbursement,2433430.0
+donor,UNHCR,2022,disbursement,2035900.0
+donor,UNHCR,2023,disbursement,2023600.0
+donor,UNICEF,2015,disbursement,5825466.0
+donor,UNICEF,2016,disbursement,7799686.0
+donor,UNICEF,2017,disbursement,8075080.0
+donor,UNICEF,2018,disbursement,8253791.0
+donor,UNICEF,2019,disbursement,8531000.0
+donor,UNICEF,2020,disbursement,7026000.0
+donor,UNICEF,2021,disbursement,6682000.0
+donor,UNICEF,2022,disbursement,6715000.0
+donor,UNICEF,2023,disbursement,7024000.0
+donor,UNICEF,2024,disbursement,6397000.0
+donor,United Arab Emirates,2015,disbursement,1379187.0
+donor,United Arab Emirates,2016,disbursement,1393370.0
+donor,United Arab Emirates,2017,disbursement,1848000.0
+donor,United Arab Emirates,2018,disbursement,1068830.0
+donor,United Arab Emirates,2019,disbursement,519553.00000000006
+donor,United Arab Emirates,2020,disbursement,1428147.0
+donor,United Arab Emirates,2021,disbursement,1959790.0
+donor,United Arab Emirates,2022,disbursement,113966.0
+donor,United Arab Emirates,2023,disbursement,333680.0
+donor,United Arab Emirates,2024,disbursement,187979.0
+donor,United Kingdom,2015,disbursement,134774706.0
+donor,United Kingdom,2016,disbursement,139041806.0
+donor,United Kingdom,2017,disbursement,129131395.0
+donor,United Kingdom,2018,disbursement,127393135.0
+donor,United Kingdom,2019,disbursement,114922546.0
+donor,United Kingdom,2020,disbursement,108068312.0
+donor,United Kingdom,2021,disbursement,81567073.0
+donor,United Kingdom,2022,disbursement,45909036.0
+donor,United Kingdom,2023,disbursement,47675042.0
+donor,United Kingdom,2024,disbursement,79283369.0
+donor,United States,2015,disbursement,161384682.0
+donor,United States,2016,disbursement,159494575.0
+donor,United States,2017,disbursement,186968850.0
+donor,United States,2018,disbursement,173404660.0
+donor,United States,2019,disbursement,150693770.0
+donor,United States,2020,disbursement,133175424.0
+donor,United States,2021,disbursement,160097380.0
+donor,United States,2022,disbursement,129034333.0
+donor,United States,2023,disbursement,139001435.0
+donor,United States,2024,disbursement,193935638.0
+donor,WFP,2015,disbursement,5672827.0
+donor,WFP,2016,disbursement,1364295.0
+donor,WFP,2017,disbursement,4574510.0
+donor,WFP,2018,disbursement,1475679.0
+donor,WFP,2019,disbursement,1801778.0
+donor,WFP,2020,disbursement,575397.0
+donor,WFP,2021,disbursement,398500.0
+donor,WFP,2022,disbursement,1121032.0
+donor,WFP,2023,disbursement,1410642.0
+donor,WFP,2024,disbursement,549500.0
+donor,WHO-Strategic Preparedness and Response Plan [SPRP],2021,disbursement,765800.0
+donor,WHO-Strategic Preparedness and Response Plan [SPRP],2022,disbursement,47256.0
+donor,WHO-Strategic Preparedness and Response Plan [SPRP],2023,disbursement,100000.0
+donor,WTO - International Trade Centre [ITC],2020,disbursement,246813.0
+donor,WTO - International Trade Centre [ITC],2021,disbursement,111804.0
+donor,WTO - International Trade Centre [ITC],2024,disbursement,18854.0
+donor,Wellcome Trust,2017,disbursement,399294.0
+donor,Wellcome Trust,2019,disbursement,42177.0
+donor,Wellcome Trust,2021,disbursement,1702067.0
+donor,Wellcome Trust,2022,disbursement,39275.0
+donor,Wellcome Trust,2023,disbursement,1600378.0
+donor,Wellcome Trust,2024,disbursement,326167.0
+donor,William and Flora Hewlett Foundation,2017,disbursement,325000.0
+donor,William and Flora Hewlett Foundation,2018,disbursement,900000.0
+donor,William and Flora Hewlett Foundation,2019,disbursement,200000.0
+donor,William and Flora Hewlett Foundation,2021,disbursement,216667.0
+donor,William and Flora Hewlett Foundation,2022,disbursement,216667.0
+donor,World Diabetes Foundation,2016,disbursement,170000.0
+donor,World Diabetes Foundation,2017,disbursement,565245.0
+donor,World Diabetes Foundation,2019,disbursement,227340.0
+donor,World Diabetes Foundation,2023,disbursement,359670.0
+donor,World Diabetes Foundation,2024,disbursement,1007837.0
+donor,World Health Organisation [WHO],2015,disbursement,4240871.0
+donor,World Health Organisation [WHO],2016,disbursement,3266066.0
+donor,World Health Organisation [WHO],2017,disbursement,2559394.0
+donor,World Health Organisation [WHO],2018,disbursement,3388026.0
+donor,World Health Organisation [WHO],2019,disbursement,3763460.0
+donor,World Health Organisation [WHO],2020,disbursement,2824782.0
+donor,World Health Organisation [WHO],2021,disbursement,4623600.0
+donor,World Health Organisation [WHO],2022,disbursement,3230965.0
+donor,World Health Organisation [WHO],2023,disbursement,6066506.0
+donor,World Health Organisation [WHO],2024,disbursement,4200574.0
+donor,World Trade Organisation,2024,disbursement,12625.0
+recipient,ADB,2010,disbursement,184419986.0
+recipient,ADB,2011,disbursement,193400498.0
+recipient,ADB,2012,disbursement,101204607.0
+recipient,ADB,2013,disbursement,155553208.0
+recipient,ADB,2014,disbursement,147894405.0
+recipient,ADB,2015,disbursement,217685705.0
+recipient,ADB,2016,disbursement,253898091.0
+recipient,ADB,2017,disbursement,291693735.0
+recipient,ADB,2018,disbursement,292484030.0
+recipient,ADB,2019,disbursement,611453523.0
+recipient,ADB,2020,disbursement,251055059.0
+recipient,ADB,2021,disbursement,290036751.0
+recipient,ADB,2022,disbursement,334407445.0
+recipient,Australia,2010,disbursement,22067850.0
+recipient,Australia,2011,disbursement,22729014.0
+recipient,Australia,2012,disbursement,16064901.0
+recipient,Australia,2013,disbursement,30237087.0
+recipient,Australia,2014,disbursement,28112555.0
+recipient,Australia,2015,disbursement,21233745.0
+recipient,Australia,2016,disbursement,18559851.0
+recipient,Australia,2017,disbursement,20884676.0
+recipient,Australia,2018,disbursement,15000392.0
+recipient,Australia,2019,disbursement,13975955.0
+recipient,Australia,2020,disbursement,5137227.0
+recipient,Australia,2021,disbursement,12629297.0
+recipient,Australia,2022,disbursement,1142616.0
+recipient,Canada,2010,disbursement,4552367.0
+recipient,Canada,2011,disbursement,546535.0
+recipient,China,2010,disbursement,18843988.0
+recipient,China,2011,disbursement,28344923.0
+recipient,China,2012,disbursement,34120033.0
+recipient,China,2013,disbursement,41381522.0
+recipient,China,2014,disbursement,37948751.0
+recipient,China,2015,disbursement,35364713.0
+recipient,China,2016,disbursement,41244254.0
+recipient,China,2017,disbursement,58727078.0
+recipient,China,2018,disbursement,150370540.0
+recipient,China,2019,disbursement,93026787.0
+recipient,China,2020,disbursement,37081650.0
+recipient,China,2021,disbursement,17402640.0
+recipient,China,2022,disbursement,14451709.0
+recipient,Denmark,2010,disbursement,17832150.0
+recipient,Denmark,2011,disbursement,29099959.0
+recipient,Denmark,2012,disbursement,30549044.0
+recipient,Denmark,2013,disbursement,31368778.0
+recipient,Denmark,2014,disbursement,21953820.0
+recipient,Denmark,2015,disbursement,2700959.0
+recipient,Denmark,2016,disbursement,4560499.0
+recipient,Denmark,2018,disbursement,100000.0
+recipient,European Union,2010,disbursement,42384482.0
+recipient,European Union,2011,disbursement,43974932.0
+recipient,European Union,2012,disbursement,28066696.0
+recipient,European Union,2013,disbursement,51618780.0
+recipient,European Union,2014,disbursement,31378363.0
+recipient,European Union,2015,disbursement,29488509.0
+recipient,European Union,2016,disbursement,83885219.0
+recipient,European Union,2017,disbursement,116178534.0
+recipient,European Union,2018,disbursement,26177011.0
+recipient,European Union,2019,disbursement,49845027.0
+recipient,European Union,2020,disbursement,105444147.0
+recipient,European Union,2021,disbursement,31591940.0
+recipient,European Union,2022,disbursement,17420548.0
+recipient,Finland,2010,disbursement,22153680.0
+recipient,Finland,2011,disbursement,13242353.0
+recipient,Finland,2012,disbursement,6470909.0
+recipient,Finland,2013,disbursement,19419234.0
+recipient,Finland,2014,disbursement,16282477.0
+recipient,Finland,2015,disbursement,6604662.0
+recipient,Finland,2016,disbursement,9698132.0
+recipient,Finland,2017,disbursement,12779120.0
+recipient,Finland,2018,disbursement,10615868.0
+recipient,Finland,2019,disbursement,13910781.0
+recipient,Finland,2020,disbursement,12202386.0
+recipient,Finland,2021,disbursement,3635557.0
+recipient,Finland,2022,disbursement,3568932.0
+recipient,GAVI,2010,disbursement,7520622.0
+recipient,GAVI,2012,disbursement,798529.0
+recipient,GAVI,2013,disbursement,1928093.0
+recipient,GAVI,2014,disbursement,9242811.0
+recipient,GAVI,2015,disbursement,2187991.0
+recipient,GAVI,2016,disbursement,244614.0
+recipient,GAVI,2017,disbursement,1173541.0
+recipient,GAVI,2018,disbursement,22783.0
+recipient,GAVI,2019,disbursement,11693153.0
+recipient,GAVI,2020,disbursement,9329736.0
+recipient,GAVI,2021,disbursement,25488171.0
+recipient,GAVI,2022,disbursement,10229450.0
+recipient,GCF,2021,disbursement,181129.0
+recipient,GCF,2022,disbursement,6038418.0
+recipient,GFATM,2010,disbursement,18973027.0
+recipient,GFATM,2011,disbursement,15094614.0
+recipient,GFATM,2012,disbursement,28241077.0
+recipient,GFATM,2013,disbursement,11287214.0
+recipient,GFATM,2014,disbursement,22059056.0
+recipient,GFATM,2015,disbursement,9106038.0
+recipient,GFATM,2016,disbursement,1720536.0
+recipient,GFATM,2017,disbursement,11867980.0
+recipient,GFATM,2018,disbursement,1724464.0
+recipient,GFATM,2019,disbursement,940327.0
+recipient,GFATM,2020,disbursement,3015332.0
+recipient,GFATM,2021,disbursement,2503134.0
+recipient,GFATM,2022,disbursement,3041788.0
+recipient,Germany,2010,disbursement,27300849.0
+recipient,Germany,2011,disbursement,38830532.0
+recipient,Germany,2012,disbursement,23743866.0
+recipient,Germany,2013,disbursement,26458910.0
+recipient,Germany,2014,disbursement,9697882.0
+recipient,Germany,2015,disbursement,6646850.0
+recipient,Germany,2016,disbursement,25058320.0
+recipient,Germany,2017,disbursement,28902395.0
+recipient,Germany,2018,disbursement,36115866.0
+recipient,Germany,2019,disbursement,26091090.0
+recipient,Germany,2020,disbursement,31170430.0
+recipient,Germany,2021,disbursement,24097296.0
+recipient,Germany,2022,disbursement,19153185.0
+recipient,IFAD,2013,disbursement,4042736.0
+recipient,IFAD,2014,disbursement,1913022.0
+recipient,IFAD,2015,disbursement,9226879.0
+recipient,IFAD,2016,disbursement,11559988.0
+recipient,IFAD,2017,disbursement,15818547.0
+recipient,IFAD,2018,disbursement,15204107.0
+recipient,IFAD,2019,disbursement,7047401.0
+recipient,IFAD,2020,disbursement,6471462.0
+recipient,IMF,2019,disbursement,214000000.0
+recipient,IMF,2021,disbursement,110000000.0
+recipient,IMF,2022,disbursement,52800000.0
+recipient,India,2010,disbursement,50728502.0
+recipient,India,2011,disbursement,50620749.0
+recipient,India,2012,disbursement,63813269.0
+recipient,India,2013,disbursement,47796349.0
+recipient,India,2014,disbursement,22227306.0
+recipient,India,2015,disbursement,35767655.0
+recipient,India,2016,disbursement,59259429.0
+recipient,India,2017,disbursement,56762100.0
+recipient,India,2018,disbursement,58944224.0
+recipient,India,2019,disbursement,93571298.0
+recipient,India,2020,disbursement,72320905.0
+recipient,India,2021,disbursement,58945361.0
+recipient,India,2022,disbursement,99759728.0
+recipient,Japan,2010,disbursement,58691311.0
+recipient,Japan,2011,disbursement,44090184.0
+recipient,Japan,2012,disbursement,65759647.0
+recipient,Japan,2013,disbursement,40592722.0
+recipient,Japan,2014,disbursement,39867923.0
+recipient,Japan,2015,disbursement,45913262.0
+recipient,Japan,2016,disbursement,77652833.0
+recipient,Japan,2017,disbursement,106207039.0
+recipient,Japan,2018,disbursement,110502190.0
+recipient,Japan,2019,disbursement,72612032.0
+recipient,Japan,2020,disbursement,32977147.0
+recipient,Japan,2021,disbursement,55366549.0
+recipient,Japan,2022,disbursement,146151642.0
+recipient,KFAED,2013,disbursement,103037.0
+recipient,KFAED,2014,disbursement,95246.0
+recipient,KFAED,2015,disbursement,541771.0
+recipient,KFAED,2016,disbursement,649148.0
+recipient,KFAED,2017,disbursement,3274490.0
+recipient,KFAED,2018,disbursement,2652546.0
+recipient,KFAED,2019,disbursement,267163.0
+recipient,KFAED,2020,disbursement,797826.0
+recipient,KFAED,2021,disbursement,79587.0
+recipient,KFAED,2022,disbursement,32299.0
+recipient,Korea,2010,disbursement,22203697.0
+recipient,Korea,2011,disbursement,4715410.0
+recipient,Korea,2012,disbursement,14247876.0
+recipient,Korea,2013,disbursement,8754915.0
+recipient,Korea,2014,disbursement,16683337.0
+recipient,Korea,2015,disbursement,11451879.0
+recipient,Korea,2016,disbursement,7638528.0
+recipient,Korea,2017,disbursement,6874412.0
+recipient,Korea,2018,disbursement,7652068.0
+recipient,Korea,2019,disbursement,7425546.0
+recipient,Korea,2020,disbursement,8124983.0
+recipient,Korea,2021,disbursement,7715204.0
+recipient,Korea,2022,disbursement,6711118.0
+recipient,Netherlands,2010,disbursement,2503206.0
+recipient,Netherlands,2011,disbursement,858916.0
+recipient,Netherlands,2012,disbursement,1015515.0
+recipient,Netherlands,2014,disbursement,1138305.0
+recipient,Netherlands,2015,disbursement,683109.0
+recipient,Netherlands,2018,disbursement,1478866.0
+recipient,Netherlands,2020,disbursement,1322302.0
+recipient,Netherlands,2021,disbursement,124820.0
+recipient,Nordic Development Fund,2010,disbursement,2943806.0
+recipient,Nordic Development Fund,2014,disbursement,1202500.0
+recipient,Nordic Development Fund,2016,disbursement,739865.0
+recipient,Nordic Development Fund,2018,disbursement,498907.0
+recipient,Norway,2010,disbursement,32818161.0
+recipient,Norway,2011,disbursement,41686343.0
+recipient,Norway,2012,disbursement,32823348.0
+recipient,Norway,2013,disbursement,24467086.0
+recipient,Norway,2014,disbursement,30797758.0
+recipient,Norway,2015,disbursement,35535102.0
+recipient,Norway,2016,disbursement,20318915.0
+recipient,Norway,2017,disbursement,23984012.0
+recipient,Norway,2018,disbursement,23584627.0
+recipient,Norway,2019,disbursement,15876280.0
+recipient,Norway,2020,disbursement,21868100.0
+recipient,Norway,2021,disbursement,30258625.0
+recipient,Norway,2022,disbursement,20315502.0
+recipient,OFID,2010,disbursement,5280000.0
+recipient,OFID,2012,disbursement,13214303.0
+recipient,OFID,2013,disbursement,6730793.0
+recipient,OFID,2014,disbursement,15124926.0
+recipient,OFID,2016,disbursement,11377029.0
+recipient,OFID,2018,disbursement,11583420.0
+recipient,OFID,2019,disbursement,4993013.0
+recipient,OFID,2020,disbursement,4277126.0
+recipient,OFID,2021,disbursement,1947773.0
+recipient,OFID,2022,disbursement,1621194.0
+recipient,Others,2011,disbursement,142555.0
+recipient,SAARC Dev Fund,2013,disbursement,92412.0
+recipient,SAARC Dev Fund,2014,disbursement,963503.0
+recipient,SAARC Dev Fund,2015,disbursement,223685.0
+recipient,SAARC Dev Fund,2016,disbursement,143500.0
+recipient,SAARC Dev Fund,2017,disbursement,68843.0
+recipient,SAARC Dev Fund,2018,disbursement,150249.0
+recipient,SAARC Dev Fund,2019,disbursement,138792.0
+recipient,SAARC Dev Fund,2021,disbursement,63075.0
+recipient,Saudi Fund,2010,disbursement,1141351.0
+recipient,Saudi Fund,2012,disbursement,798696.0
+recipient,Saudi Fund,2013,disbursement,1012251.0
+recipient,Saudi Fund,2014,disbursement,900429.0
+recipient,Saudi Fund,2015,disbursement,1035317.0
+recipient,Saudi Fund,2016,disbursement,2382612.0
+recipient,Saudi Fund,2017,disbursement,331559.0
+recipient,Saudi Fund,2018,disbursement,568013.0
+recipient,Saudi Fund,2019,disbursement,3110778.0
+recipient,Saudi Fund,2020,disbursement,16768405.0
+recipient,Saudi Fund,2021,disbursement,2744921.0
+recipient,Saudi Fund,2022,disbursement,449748.0
+recipient,Switzerland,2010,disbursement,27632405.0
+recipient,Switzerland,2011,disbursement,33417302.0
+recipient,Switzerland,2012,disbursement,41767109.0
+recipient,Switzerland,2013,disbursement,33853529.0
+recipient,Switzerland,2014,disbursement,32467406.0
+recipient,Switzerland,2015,disbursement,36981936.0
+recipient,Switzerland,2016,disbursement,34941429.0
+recipient,Switzerland,2017,disbursement,26412734.0
+recipient,Switzerland,2018,disbursement,25880596.0
+recipient,Switzerland,2019,disbursement,36734500.0
+recipient,Switzerland,2020,disbursement,24397709.0
+recipient,Switzerland,2021,disbursement,27807888.0
+recipient,Switzerland,2022,disbursement,28138141.0
+recipient,UN,2010,disbursement,112543336.0
+recipient,UN,2011,disbursement,108169072.0
+recipient,UN,2012,disbursement,68661608.0
+recipient,UN,2013,disbursement,26684005.0
+recipient,UN,2014,disbursement,44236346.0
+recipient,UN,2015,disbursement,113576926.0
+recipient,UN,2016,disbursement,120729957.0
+recipient,UN,2017,disbursement,65622702.0
+recipient,UN,2018,disbursement,64077836.0
+recipient,UN,2019,disbursement,44385419.0
+recipient,UN,2020,disbursement,56384483.0
+recipient,UN,2021,disbursement,74908975.0
+recipient,UN,2022,disbursement,53648936.0
+recipient,USAID,2010,disbursement,48450255.0
+recipient,USAID,2011,disbursement,22487717.0
+recipient,USAID,2012,disbursement,67196696.0
+recipient,USAID,2013,disbursement,45360254.0
+recipient,USAID,2014,disbursement,132370217.0
+recipient,USAID,2015,disbursement,118933332.0
+recipient,USAID,2016,disbursement,134056598.0
+recipient,USAID,2017,disbursement,117831730.0
+recipient,USAID,2018,disbursement,77545174.0
+recipient,USAID,2019,disbursement,125163031.0
+recipient,USAID,2020,disbursement,105941208.0
+recipient,USAID,2021,disbursement,101308051.0
+recipient,USAID,2022,disbursement,120178694.0
+recipient,United Kingdom,2010,disbursement,92612422.0
+recipient,United Kingdom,2011,disbursement,84240019.0
+recipient,United Kingdom,2012,disbursement,89989120.0
+recipient,United Kingdom,2013,disbursement,151135383.0
+recipient,United Kingdom,2014,disbursement,168073845.0
+recipient,United Kingdom,2015,disbursement,89478104.0
+recipient,United Kingdom,2016,disbursement,128313164.0
+recipient,United Kingdom,2017,disbursement,123870280.0
+recipient,United Kingdom,2018,disbursement,117238011.0
+recipient,United Kingdom,2019,disbursement,95227536.0
+recipient,United Kingdom,2020,disbursement,83974700.0
+recipient,United Kingdom,2021,disbursement,56742341.0
+recipient,United Kingdom,2022,disbursement,44385194.0
+recipient,World Bank Group,2010,disbursement,256113102.0
+recipient,World Bank Group,2011,disbursement,269605647.0
+recipient,World Bank Group,2012,disbursement,231404440.0
+recipient,World Bank Group,2013,disbursement,276770043.0
+recipient,World Bank Group,2014,disbursement,188122967.0
+recipient,World Bank Group,2015,disbursement,243692504.0
+recipient,World Bank Group,2016,disbursement,345968357.0
+recipient,World Bank Group,2017,disbursement,533515228.0
+recipient,World Bank Group,2018,disbursement,528313473.0
+recipient,World Bank Group,2019,disbursement,461311832.0
+recipient,World Bank Group,2020,disbursement,794605737.0
+recipient,World Bank Group,2021,disbursement,484879470.0
+recipient,World Bank Group,2022,disbursement,387403534.0

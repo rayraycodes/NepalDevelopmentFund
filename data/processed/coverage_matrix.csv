@@ -1,0 +1,131 @@
+donor_name,donor_side,recipient_side,coverage
+ADB,False,True,recipient_only
+Adaptation Fund,True,False,donor_only
+All development partners (DCR total),False,True,recipient_only
+All development partners (by sector),False,True,recipient_only
+All development partners (signed ODA agreements),False,True,recipient_only
+All development partners (total ODA commitments),False,True,recipient_only
+Arcadia,True,False,donor_only
+Asian Development Bank,True,False,donor_only
+Asian Infrastructure Investment Bank [AIIB],True,False,donor_only
+Australia,True,True,both
+Austria,True,False,donor_only
+Azerbaijan,True,False,donor_only
+Belgium,True,False,donor_only
+Bloomberg Family Foundation,True,False,donor_only
+Bulgaria,True,False,donor_only
+COVID-19 Response and Recovery Multi-Partner Trust Fund [UN COVID-19 MPTF],True,False,donor_only
+Canada,True,True,both
+Central Emergency Response Fund [CERF],True,False,donor_only
+Charity Projects Ltd (Comic Relief),True,False,donor_only
+Children's Investment Fund Foundation,True,False,donor_only
+China,False,True,recipient_only
+Citi Foundation,True,False,donor_only
+Climate Investment Funds [CIF],True,False,donor_only
+Conrad N. Hilton Foundation,True,False,donor_only
+Czechia,True,False,donor_only
+David and Lucile Packard Foundation,True,False,donor_only
+Denmark,True,True,both
+Dutch Postcode Lottery,True,False,donor_only
+EU Institutions,True,False,donor_only
+Estonia,True,False,donor_only
+European Union,False,True,recipient_only
+Finland,True,True,both
+Fondation Botnar,True,False,donor_only
+Food and Agriculture Organisation [FAO],True,False,donor_only
+Ford Foundation,True,False,donor_only
+France,True,False,donor_only
+GAVI,False,True,recipient_only
+GCF,False,True,recipient_only
+GFATM,False,True,recipient_only
+Gates Foundation,True,False,donor_only
+German Postcode Lottery,True,False,donor_only
+Germany,True,True,both
+Global Alliance for Vaccines and Immunization [GAVI],True,False,donor_only
+Global Environment Facility [GEF],True,False,donor_only
+Global Fund,True,False,donor_only
+Global Green Growth Institute [GGGI],True,False,donor_only
+Good Ventures Foundation,True,False,donor_only
+Greece,True,False,donor_only
+Green Climate Fund [GCF],True,False,donor_only
+H&M Foundation,True,False,donor_only
+Hungary,True,False,donor_only
+IFAD,True,True,both
+IKEA Foundation,True,False,donor_only
+IMF,False,True,recipient_only
+IMF Concessional Trust Funds,True,False,donor_only
+Iceland,True,False,donor_only
+India,False,True,recipient_only
+International Atomic Energy Agency [IAEA],True,False,donor_only
+International Development Association [IDA],True,False,donor_only
+International Labour Organisation [ILO],True,False,donor_only
+Ireland,True,False,donor_only
+Islamic Development Bank [IsDB],True,False,donor_only
+Israel,True,False,donor_only
+Italy,True,False,donor_only
+Japan,True,True,both
+Joint Sustainable Development Goals Fund [Joint SDG Fund],True,False,donor_only
+KFAED,False,True,recipient_only
+Kazakhstan,True,False,donor_only
+Korea,True,True,both
+Kuwait,True,False,donor_only
+LEGO Foundation,True,False,donor_only
+La Caixa Banking Foundation,True,False,donor_only
+Latvia,True,False,donor_only
+Laudes Foundation,True,False,donor_only
+Lithuania,True,False,donor_only
+Luxembourg,True,False,donor_only
+Malta,True,False,donor_only
+Margaret A. Cargill Foundation,True,False,donor_only
+MetLife Foundation,True,False,donor_only
+Netherlands,True,True,both
+New Zealand,True,False,donor_only
+Nordic Development Fund,False,True,recipient_only
+Nordic Development Fund [NDF],True,False,donor_only
+Norway,True,True,both
+OFID,False,True,recipient_only
+OPEC Fund for International Development [OPEC Fund],True,False,donor_only
+Oak Foundation,True,False,donor_only
+Open Society Foundations,True,False,donor_only
+Others,False,True,recipient_only
+People's Postcode Lottery,True,False,donor_only
+Poland,True,False,donor_only
+Portugal,True,False,donor_only
+Private Infrastructure Development Group,True,False,donor_only
+Qatar,True,False,donor_only
+Romania,True,False,donor_only
+SAARC Dev Fund,False,True,recipient_only
+Saudi Fund,False,True,recipient_only
+Slovak Republic,True,False,donor_only
+Slovenia,True,False,donor_only
+Spain,True,False,donor_only
+Sweden,True,False,donor_only
+Swedish Postcode Lottery,True,False,donor_only
+Switzerland,True,True,both
+Thailand,True,False,donor_only
+Timor-Leste,True,False,donor_only
+Türkiye,True,False,donor_only
+UBS Optimus Foundation,True,False,donor_only
+UN,False,True,recipient_only
+UN Capital Development Fund [UNCDF],True,False,donor_only
+UN Development Coordination Office,True,False,donor_only
+UN Peacebuilding Fund [UNPBF],True,False,donor_only
+UN Women,True,False,donor_only
+UNAIDS,True,False,donor_only
+UNDP,True,False,donor_only
+UNFPA,True,False,donor_only
+UNHCR,True,False,donor_only
+UNICEF,True,False,donor_only
+USAID,False,True,recipient_only
+United Arab Emirates,True,False,donor_only
+United Kingdom,True,True,both
+United States,True,False,donor_only
+WFP,True,False,donor_only
+WHO-Strategic Preparedness and Response Plan [SPRP],True,False,donor_only
+WTO - International Trade Centre [ITC],True,False,donor_only
+Wellcome Trust,True,False,donor_only
+William and Flora Hewlett Foundation,True,False,donor_only
+World Bank Group,False,True,recipient_only
+World Diabetes Foundation,True,False,donor_only
+World Health Organisation [WHO],True,False,donor_only
+World Trade Organisation,True,False,donor_only

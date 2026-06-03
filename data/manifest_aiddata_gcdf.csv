@@ -1,0 +1,3 @@
+source,snapshot_path,url,params,sha256,bytes,http_status,retrieved_at
+aiddata_gcdf,data/raw/aiddata_gcdf/AidDatas_GCDF_v3.0_20260603T162437Z.zip,https://docs.aiddata.org/ad4/datasets/AidDatas_Global_Chinese_Development_Finance_Dataset_Version_3_0.zip,all_recipients; will filter to NPL,290da2887a6984beaa6d269d2171798951e0644cae579497dafb8bd78646e097,28561122,200,2026-06-03T16:24:37Z
+aiddata_gcdf,data/raw/aiddata_gcdf/AidDatasGlobalChineseDevelopmentFinanceDataset_v3.0_20260603T162437Z.xlsx,https://docs.aiddata.org/ad4/datasets/AidDatas_Global_Chinese_Development_Finance_Dataset_Version_3_0.zip,extracted from ZIP,52239cc315e65041864fa08c3b95109d821fa3d6c2cfe1aea0198f6ccefd4c38,26428152,200,2026-06-03T16:24:37Z
