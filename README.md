@@ -31,7 +31,10 @@ make serve      # build dashboard data + serve the interactive dashboard at :884
 An interactive, self-contained dashboard (ECharts, works offline) lives in
 [`report/dashboard/`](report/dashboard/index.html): donor vs recipient triangulation, top
 donors by ledger side, the China commitments-vs-disbursements story, sectors, the gap, and the
-full discrepancy log and source list. Run `make serve` and open http://127.0.0.1:8848.
+full discrepancy log and source list. It is **bilingual (English / नेपाली**, toggle in the
+header), mobile-friendly, and built for accessibility: a plain-language "How to read this"
+guide, a glossary, ARIA-labelled charts, keyboard focus, and reduced-motion support. Run
+`make serve` and open http://127.0.0.1:8848.
 
 Each fetch writes an **immutable, dated raw snapshot** under `data/raw/<source>/` and a
 SHA-256 row to `data/manifest_<source>.csv`. Outputs land in `data/processed/`.
