@@ -62,11 +62,15 @@ adb_iati:
   limitations: Excludes Technical Assistance Special Fund (undercount). data.adb.org portal is 403-blocked.
 
 us_fa:
-  name: US ForeignAssistance.gov (+ Heiss mirror)
+  name: US ForeignAssistance.gov (official data-api)
   side: donor
-  endpoint: https://foreignassistance.gov/
-  mirror: https://github.com/andrewheiss/foreign-assistance-data
-  limitations: Volatile post-2025 (USAID->State, rescissions). Cross-check vs OECD CRS.
+  page: https://foreignassistance.gov/cd/nepal
+  endpoint: https://foreignassistance.gov/data-api/by-usg-sector.json?country_code=NPL
+  params: "per_page=1000 paginated; keep transaction types Obligations + Disbursements"
+  coverage: "FY2001-FY2026 (FY2026 partial)"
+  limitations: >
+    Counts all US assistance (broader than ODA) on a US fiscal year. Budget/appropriation
+    transaction types excluded. 2025 restructuring cut new obligations sharply.
 
 nepal_dcr:
   name: Nepal MoF IECCD — Development Cooperation Report (RECIPIENT side)

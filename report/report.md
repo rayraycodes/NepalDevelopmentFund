@@ -38,8 +38,9 @@ http://127.0.0.1:8848).
 What is **missing or weak**: China's recent flows (AidData ends ~2021; Nepal's DCR records only
 modest Chinese *disbursements*); Gulf/Arab funds (Saudi, Kuwait, OPEC) are visible only in
 Nepal's DCR and not itemised elsewhere; the DCR is a single edition (FY2022/23), so FY2023/24
-onward is not yet captured; US FY2025 is absent (the data snapshot predates the 2025
-restructuring). IATI activity-level data is included as an inventory only and is not summed.
+onward is not yet captured; the 2025 US restructuring shows up as a ~74% fall in new US
+obligations (to about US$56m in FY2025) while pipeline disbursements held near US$210m. IATI
+activity-level data is included as an inventory only and is not summed.
 
 ---
 
@@ -57,7 +58,7 @@ All sources retrieved 2026-06-03. Snapshots and SHA-256 checksums are in
 | World Bank Projects | donor | REST JSON. [endpoint](https://search.worldbank.org/api/v3/projects?format=json&countrycode_exact=NP&rows=500) | 1988-2027 | Commitments (board approvals), not disbursements. |
 | IATI (d-portal) | donor | No-key activity query. [endpoint](http://d-portal.org/q?from=act&country_code=NP&form=json&limit=500&offset=0) | activity-level | No native USD (FX-converted, ESTIMATED); year is a start-date proxy; multi-country activities inflate totals. Inventory only, not summed. |
 | ADB IATI | donor | XML, reporting-org XM-DAC-46004. [file](https://www.adb.org/iati/iati-activities-np.xml) | 2015-2026 | Excludes Technical Assistance Special Fund (undercount). data.adb.org portal is 403-blocked. |
-| US ForeignAssistance | donor | Community mirror CSV (snapshot 2025-02-03). [mirror](https://github.com/andrewheiss/foreign-assistance-data); [official](https://foreignassistance.gov/data) | FY1952-FY2024 | US fiscal year. No FY2025 (USAID folded into State, 2025 rescissions). |
+| US ForeignAssistance.gov | donor | Official data-api behind the country page. [endpoint](https://foreignassistance.gov/data-api/by-usg-sector.json?country_code=NPL); [page](https://foreignassistance.gov/cd/nepal) | FY2001-FY2026 | US fiscal year. Obligations + disbursements (budget/appropriation types excluded). Counts all US assistance, broader than ODA. |
 | Nepal MoF DCR | **recipient** | PDF, Annex A + B. [IECCD page](https://mof.gov.np/divisions/ieccd/category/dcr/); [FY2022/23 PDF](https://giwmscdntwo.gov.np/media/pdf_upload/DCR%20Report%202022_23_pt2fped.pdf) | FY2010/11-FY2022/23 | Includes China and India. Single edition obtainable; listing page is a JS SPA. Nepal FY = mid-July to mid-July. |
 | AidData GCDF v3.0 | donor (non-DAC) | Bulk dataset, filtered to Nepal. [dataset](https://www.aiddata.org/data/aiddatas-geospatial-global-chinese-development-finance-dataset-version-3-0) | 2000-2021 | China finance. Commitments (mostly), lags ~4 years. |
 
@@ -75,7 +76,7 @@ code is ISO-3 alpha for bilaterals and an OECD agency code for multilaterals (sh
 | Asian Development Bank | multilateral | 5ASDB0 | XM-DAC-46004 | OECD, ADB IATI, DCR. Second largest. TASF excluded from IATI. |
 | EU Institutions | multilateral | 4EU001 | XI-IATI-EC | OECD (distinct from member states), DCR. |
 | IMF | multilateral | 5IMF02 (concessional trust) | - | OECD, DCR. |
-| United States | bilateral (DAC) | USA | US-GOV | OECD, CRS, US ForeignAssistance (to FY2024), DCR (as USAID). |
+| United States | bilateral (DAC) | USA | US-GOV | OECD, CRS, official ForeignAssistance.gov (FY2001-FY2026), DCR (as USAID). |
 | Japan | bilateral (DAC) | JPN | XM-DAC-701 | OECD, CRS, IATI, DCR. |
 | United Kingdom | bilateral (DAC) | GBR | GB-GOV-1 | OECD, CRS, IATI, DCR. |
 | Germany | bilateral (DAC) | DEU | XM-DAC-5 | OECD, CRS, DCR. |
@@ -214,7 +215,7 @@ Every material mismatch found, with magnitude and most likely cause.
 | D3 | Donor side (OECD net) vs recipient side (Nepal DCR) | -33% to +15% by year | (a) DCR is gross, OECD is net of loan repayments; (b) DCR includes China, India and Gulf funds that OECD omits; (c) Nepal fiscal year vs calendar year; (d) on/off-budget and classification differences. |
 | D4 | OECD CRS gross vs OECD DAC2A net, all donors | CRS 1.12-1.30x DAC2A | Expected: CRS is gross disbursement by activity; DAC2A net deducts loan principal repayments. |
 | D5 | ADB: OECD net vs ADB IATI gross vs DCR, 2022 | US$155.9m / US$196.1m / US$334.4m | DAC2A is net concessional; ADB IATI is gross and excludes the TA Special Fund; DCR records gross loan disbursement including non-concessional. |
-| D6 | United States: OECD net (CY) vs ForeignAssistance (FY) vs CRS gross, 2022 | US$129.0m / US$206.0m / ~US$130m | US fiscal year vs calendar year; gross vs net; ForeignAssistance counts a broader set of US accounts (incl. MCC; FY2023 obligations spiked to ~US$696m on the MCC compact). |
+| D6 | United States: official ForeignAssistance.gov (FY) vs OECD ODA (CY), 2022 | disbursement US$206.0m vs OECD ODA ~US$130m | ForeignAssistance.gov counts ALL US assistance (incl. non-ODA) on a fiscal year; OECD counts ODA only on a calendar year. New US obligations fell ~74% (to ~US$56m) in FY2025 with the 2025 restructuring, while disbursements held at ~US$210m; FY2023 obligations had spiked to ~US$696m on the MCC compact. |
 | D7 | China: Nepal DCR disbursement vs AidData commitments | DCR US$150m (2018) falling to US$14m (2022); AidData commitments US$256m (2018), then tapering, data ends 2021 | China's large headline numbers for Nepal are commitments/pledges (e.g. infrastructure loans), much of it slow-disbursing or undisbursed. Recorded Chinese *disbursements* to Nepal are modest and declined sharply after 2018. |
 | D8 | India | US$99.8m recipient side (DCR FY2022/23); absent on OECD donor side | India is a non-DAC donor and does not report to the OECD CRS. Recipient-side reporting is the only systematic capture. |
 | D9 | World Bank/IDA: OECD net vs DCR | 2022 US$380.8m vs US$387.4m (+1.7%); 2018 US$545.1m vs US$528.3m | Close agreement: both are essentially gross IDA disbursement; small timing/FY differences. |
@@ -255,8 +256,9 @@ largest of these (US$99.8m disbursed FY2022/23).
 **What we could not verify or obtain.** Only the FY2022/23 DCR PDF was retrievable (the IECCD
 listing page is a JavaScript single-page app and other editions returned 404), so FY2023/24
 onward is not captured (a FY2023/24 report is referenced online at ~US$2.5bn committed / ~US$1.58bn
-disbursed but no PDF could be located). US data stops at FY2024 (snapshot 2025-02-03), so the
-2025 restructuring is not reflected. AidData's China coverage ends ~2021. The EU "Team Europe
+disbursed but no PDF could be located). US data now comes from the official ForeignAssistance.gov
+data-api (FY2001-FY2026); the 2025 restructuring is visible as a sharp fall in new obligations
+while disbursements still flow from the existing pipeline. AidData's China coverage ends ~2021. The EU "Team Europe
 Explorer" exposes no API and was not machine-ingested (EU Institutions are covered via OECD).
 IATI d-portal activity data is an inventory only (no native USD, activity-level year proxy,
 multi-country activities inflate totals) and is excluded from all sums.

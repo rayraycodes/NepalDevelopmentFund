@@ -2,7 +2,7 @@ window.NEPAL_DATA = {
  "meta": {
   "retrieved_at": "2026-06-03",
   "version": "2026-06-03.1",
-  "n_rows": 76158,
+  "n_rows": 37800,
   "n_sources": 9,
   "n_headline": 982
  },
@@ -13,7 +13,7 @@ window.NEPAL_DATA = {
   "largest_partner": "World Bank (IDA)",
   "largest_nondac": "India",
   "largest_nondac_value": 99.8,
-  "n_rows": 76158,
+  "n_rows": 37800,
   "n_sources": 9,
   "n_headline": 982
  },
@@ -886,10 +886,10 @@ window.NEPAL_DATA = {
   },
   {
    "id": "D6",
-   "comparison": "US: OECD net (CY) / ForeignAssistance (FY) / CRS gross, 2022",
-   "magnitude": "$129m / $206m / $130m",
+   "comparison": "US official ForeignAssistance.gov (FY) vs OECD ODA (CY), 2022",
+   "magnitude": "$206m vs ~$130m",
    "verdict": "EXPLAINED",
-   "cause": "US fiscal year vs calendar; gross vs net; broader US account scope (incl. MCC)."
+   "cause": "ForeignAssistance.gov counts all US assistance (incl. non-ODA) by fiscal year; OECD counts ODA only by calendar year. New US obligations fell ~74% in FY2025 while disbursements held near $210m."
   },
   {
    "id": "D7",
@@ -938,10 +938,10 @@ window.NEPAL_DATA = {
    "url": "https://www.adb.org/iati/iati-activities-np.xml"
   },
   {
-   "name": "US ForeignAssistance.gov (mirror)",
+   "name": "US ForeignAssistance.gov (official)",
    "side": "donor",
    "status": "med",
-   "url": "https://github.com/andrewheiss/foreign-assistance-data"
+   "url": "https://foreignassistance.gov/cd/nepal"
   },
   {
    "name": "IATI via d-portal",
