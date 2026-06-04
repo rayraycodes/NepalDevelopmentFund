@@ -38,6 +38,12 @@ add these **GitHub repo secrets** (Settings -> Secrets and variables -> Actions)
 The workflow `.github/workflows/deploy.yml` rebuilds `data.js` and runs `wrangler pages deploy`.
 
 ## How the gate works
+The gate lives at **`functions/_middleware.js` in the repository root** — Cloudflare requires the
+`functions` directory at the project root, not inside the build output (`report/dashboard`). A
+mirror copy at `report/dashboard/functions/_middleware.js` covers the `wrangler pages deploy`
+path. With Cloudflare's Git integration (build output `report/dashboard`, default root directory),
+the root `functions/` is the one that runs.
+
 `functions/_middleware.js` runs on every request at the edge, before any asset is served. It
 requires HTTP Basic Auth and compares the supplied password to `SITE_PASSWORD` in constant time.
 No password or hash is shipped to the browser or stored in the repo, so this is a real gate (not
