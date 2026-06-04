@@ -20,7 +20,8 @@ import time
 from datetime import date, datetime, timezone
 from pathlib import Path
 
-import requests
+# NOTE: `requests` is imported lazily inside the HTTP helpers below, so the synthesis and
+# dashboard scripts (which only use the schema/paths) do not require it to be installed.
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -49,15 +50,17 @@ BROWSER_UA = (
 SDMX_CSV_ACCEPT = "application/vnd.sdmx.data+csv;labels=both"
 
 
-def make_session() -> requests.Session:
+def make_session() -> "requests.Session":
+    import requests
     s = requests.Session()
     s.headers.update({"User-Agent": BROWSER_UA, "Accept-Language": "en"})
     return s
 
 
-def get(session: requests.Session, url: str, *, accept: str | None = None,
-        params: dict | None = None, timeout: int = 120, retries: int = 4) -> requests.Response:
+def get(session, url: str, *, accept: str | None = None,
+        params: dict | None = None, timeout: int = 120, retries: int = 4):
     """GET with simple exponential backoff. Raises on final failure."""
+    import requests
     headers = {"Accept": accept} if accept else {}
     last = None
     for attempt in range(retries):
