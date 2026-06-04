@@ -1,0 +1,40 @@
+name: Deploy dashboard to Cloudflare Pages
+
+# Publishes report/dashboard to Cloudflare Pages on every push to main.
+# The page is password-gated by report/dashboard/functions/_middleware.js, which reads the
+# SITE_PASSWORD secret configured in the Cloudflare Pages project (not here).
+#
+# Required GitHub repository secrets (Settings -> Secrets and variables -> Actions):
+#   CLOUDFLARE_API_TOKEN   - a Cloudflare API token with "Cloudflare Pages: Edit"
+#   CLOUDFLARE_ACCOUNT_ID  - your Cloudflare account id
+# The Cloudflare Pages project must be named "nepal-development-fund" (or edit --project-name below).
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Rebuild dashboard data from processed CSVs
+        run: |
+          pip install pandas
+          python scripts/85_dashboard_data.py
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy report/dashboard --project-name=nepal-development-fund --branch=main
