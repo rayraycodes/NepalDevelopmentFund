@@ -44,4 +44,7 @@ jobs:
 
       - name: Deploy skipped (Cloudflare secrets not set)
         if: ${{ env.CF_API_TOKEN == '' }}
-        run: echo "Built data.js but skipped deploy: set CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID repo secrets (see DEPLOY.md). Cloudflare's native Git build can deploy instead."
+        run: |
+          echo "Built data.js but skipped the Cloudflare deploy."
+          echo "Add CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID repo secrets to enable it (see DEPLOY.md)."
+          echo "Cloudflare native Git build can deploy instead."
