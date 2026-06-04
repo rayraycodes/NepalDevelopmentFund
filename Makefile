@@ -18,7 +18,10 @@ fetch:
 	$(PY) scripts/13_fetch_iati_dportal.py
 	$(PY) scripts/14_fetch_adb_iati.py
 	$(PY) scripts/15_fetch_us.py
+	$(PY) scripts/19_fetch_us_agency.py
+	$(PY) scripts/16_fetch_nepal_dcr.py
 	$(PY) scripts/17_fetch_aiddata.py
+	$(PY) scripts/18_fetch_oecd_crs.py
 
 # Phase 3 — synthesis
 build:

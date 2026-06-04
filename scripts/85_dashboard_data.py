@@ -63,15 +63,41 @@ def main():
              "commitments": [round(com.get(y, 0) / 1e6, 1) for y in years],
              "disbursements": [round(dis.get(y, 0) / 1e6, 1) for y in years]}
 
-    # sectors (CRS) by year
-    sectors = {}
-    for y in (2020, 2021, 2022, 2023):
-        s = sec[(sec["year"] == y) & (sec["flow_stage"] == "disbursement") &
-                (sec["source"] == "oecd_crs")].copy()
-        s["amount_usd"] = num(s["amount_usd"])
-        s = s.nlargest(10, "amount_usd")
-        sectors[str(y)] = [{"name": row["sector"], "usd": round(row["amount_usd"] / 1e6, 1)}
-                           for _, row in s.iterrows()]
+    # sectors by year, per source: oecd = all donors (CRS), us = United States (mapped from USG).
+    # Lets the dashboard toggle the sector view between all-donors and the US alone.
+    sectors = {"oecd": {}, "us": {}}
+    for src, key in (("oecd_crs", "oecd"), ("us_fa", "us")):
+        for y in (2020, 2021, 2022, 2023):
+            s = sec[(sec["year"] == y) & (sec["flow_stage"] == "disbursement") &
+                    (sec["source"] == src)].copy()
+            s["amount_usd"] = num(s["amount_usd"])
+            s = s.nlargest(10, "amount_usd")
+            sectors[key][str(y)] = [{"name": row["sector"], "usd": round(row["amount_usd"] / 1e6, 1)}
+                                    for _, row in s.iterrows()]
+
+    # US by funding agency (disbursements), top agencies + Other, by year (the USAID->MCC shift)
+    us_agency = {"years": [], "series": []}
+    ag_path = C.PROCESSED / "us_by_agency.csv"
+    if ag_path.exists():
+        ag = pd.read_csv(ag_path)
+        ag = ag[ag["flow_stage"] == "disbursement"].copy()
+        ag["amount_usd"] = num(ag["amount_usd"])
+        ag["year"] = num(ag["year"])
+        years = list(range(2018, 2027))
+        totals = ag.groupby("agency_acronym")["amount_usd"].sum().sort_values(ascending=False)
+        top = list(totals.index[:5])
+        disp = {"USAID": "USAID", "STATE": "State", "MCC": "MCC", "AGR": "USDA",
+                "PC": "Peace Corps", "State/USAID": "State/USAID", "DOD": "Defense"}
+        series = []
+        for ac in top:
+            byyr = ag[ag["agency_acronym"] == ac].groupby("year")["amount_usd"].sum()
+            series.append({"name": disp.get(ac, ac),
+                           "data": [round(float(byyr.get(y, 0)) / 1e6, 1) for y in years]})
+        oth = ag[~ag["agency_acronym"].isin(top)].groupby("year")["amount_usd"].sum()
+        if float(oth.sum()) > 0:
+            series.append({"name": "Other",
+                           "data": [round(float(oth.get(y, 0)) / 1e6, 1) for y in years]})
+        us_agency = {"years": years, "series": series}
 
     # KPIs
     anchor_2023 = next((x["anchor"] for x in reconciliation if x["year"] == 2023), None)
@@ -139,7 +165,7 @@ def main():
                  "n_rows": kpis["n_rows"], "n_sources": kpis["n_sources"],
                  "n_headline": kpis["n_headline"]},
         "kpis": kpis, "reconciliation": reconciliation, "topDonors": topDonors,
-        "china": china, "sectors": sectors, "nondac_missing": nondac_missing,
+        "china": china, "sectors": sectors, "us_agency": us_agency, "nondac_missing": nondac_missing,
         "discrepancies": discrepancies, "sources": sources,
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)

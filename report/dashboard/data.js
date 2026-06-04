@@ -1,7 +1,7 @@
 window.NEPAL_DATA = {
  "meta": {
   "retrieved_at": "2026-06-03",
-  "version": "2026-06-03.1",
+  "version": "2026-06-04.1",
   "n_rows": 37800,
   "n_sources": 9,
   "n_headline": 982
@@ -678,172 +678,395 @@ window.NEPAL_DATA = {
   ]
  },
  "sectors": {
-  "2020": [
-   {
-    "name": "budget_support",
-    "usd": 437.9
-   },
-   {
-    "name": "education",
-    "usd": 249.8
-   },
-   {
-    "name": "energy",
-    "usd": 223.5
-   },
-   {
-    "name": "health",
-    "usd": 185.9
-   },
-   {
-    "name": "humanitarian",
-    "usd": 174.3
-   },
-   {
-    "name": "transport",
-    "usd": 149.9
-   },
-   {
-    "name": "governance",
-    "usd": 149.2
-   },
-   {
-    "name": "multisector",
-    "usd": 129.2
-   },
-   {
-    "name": "population",
-    "usd": 106.8
-   },
-   {
-    "name": "water",
-    "usd": 99.2
-   }
+  "oecd": {
+   "2020": [
+    {
+     "name": "budget_support",
+     "usd": 437.9
+    },
+    {
+     "name": "education",
+     "usd": 249.8
+    },
+    {
+     "name": "energy",
+     "usd": 223.5
+    },
+    {
+     "name": "health",
+     "usd": 185.9
+    },
+    {
+     "name": "humanitarian",
+     "usd": 174.3
+    },
+    {
+     "name": "transport",
+     "usd": 149.9
+    },
+    {
+     "name": "governance",
+     "usd": 149.2
+    },
+    {
+     "name": "multisector",
+     "usd": 129.2
+    },
+    {
+     "name": "population",
+     "usd": 106.8
+    },
+    {
+     "name": "water",
+     "usd": 99.2
+    }
+   ],
+   "2021": [
+    {
+     "name": "finance",
+     "usd": 272.8
+    },
+    {
+     "name": "health",
+     "usd": 266.9
+    },
+    {
+     "name": "education",
+     "usd": 230.0
+    },
+    {
+     "name": "governance",
+     "usd": 181.2
+    },
+    {
+     "name": "water",
+     "usd": 152.3
+    },
+    {
+     "name": "energy",
+     "usd": 141.7
+    },
+    {
+     "name": "humanitarian",
+     "usd": 136.4
+    },
+    {
+     "name": "multisector",
+     "usd": 87.5
+    },
+    {
+     "name": "agriculture",
+     "usd": 77.6
+    },
+    {
+     "name": "other_social",
+     "usd": 76.9
+    }
+   ],
+   "2022": [
+    {
+     "name": "finance",
+     "usd": 180.9
+    },
+    {
+     "name": "education",
+     "usd": 180.4
+    },
+    {
+     "name": "energy",
+     "usd": 154.1
+    },
+    {
+     "name": "humanitarian",
+     "usd": 126.1
+    },
+    {
+     "name": "health",
+     "usd": 118.2
+    },
+    {
+     "name": "governance",
+     "usd": 115.2
+    },
+    {
+     "name": "agriculture",
+     "usd": 112.2
+    },
+    {
+     "name": "water",
+     "usd": 97.7
+    },
+    {
+     "name": "transport",
+     "usd": 89.9
+    },
+    {
+     "name": "budget_support",
+     "usd": 76.9
+    }
+   ],
+   "2023": [
+    {
+     "name": "budget_support",
+     "usd": 209.2
+    },
+    {
+     "name": "governance",
+     "usd": 193.0
+    },
+    {
+     "name": "education",
+     "usd": 192.3
+    },
+    {
+     "name": "energy",
+     "usd": 172.8
+    },
+    {
+     "name": "health",
+     "usd": 168.8
+    },
+    {
+     "name": "transport",
+     "usd": 132.8
+    },
+    {
+     "name": "agriculture",
+     "usd": 74.0
+    },
+    {
+     "name": "water",
+     "usd": 72.0
+    },
+    {
+     "name": "multisector",
+     "usd": 69.1
+    },
+    {
+     "name": "population",
+     "usd": 55.1
+    }
+   ]
+  },
+  "us": {
+   "2020": [
+    {
+     "name": "health",
+     "usd": 48.1
+    },
+    {
+     "name": "multisector",
+     "usd": 29.9
+    },
+    {
+     "name": "governance",
+     "usd": 19.9
+    },
+    {
+     "name": "admin",
+     "usd": 18.0
+    },
+    {
+     "name": "education",
+     "usd": 17.6
+    },
+    {
+     "name": "humanitarian",
+     "usd": 4.9
+    },
+    {
+     "name": "environment",
+     "usd": 0.1
+    }
+   ],
+   "2021": [
+    {
+     "name": "health",
+     "usd": 54.9
+    },
+    {
+     "name": "governance",
+     "usd": 34.8
+    },
+    {
+     "name": "multisector",
+     "usd": 29.6
+    },
+    {
+     "name": "admin",
+     "usd": 21.3
+    },
+    {
+     "name": "education",
+     "usd": 16.0
+    },
+    {
+     "name": "humanitarian",
+     "usd": 15.0
+    },
+    {
+     "name": "environment",
+     "usd": 0.5
+    }
+   ],
+   "2022": [
+    {
+     "name": "health",
+     "usd": 70.0
+    },
+    {
+     "name": "governance",
+     "usd": 63.2
+    },
+    {
+     "name": "admin",
+     "usd": 21.7
+    },
+    {
+     "name": "education",
+     "usd": 18.5
+    },
+    {
+     "name": "multisector",
+     "usd": 15.6
+    },
+    {
+     "name": "humanitarian",
+     "usd": 14.2
+    },
+    {
+     "name": "environment",
+     "usd": 2.8
+    }
+   ],
+   "2023": [
+    {
+     "name": "health",
+     "usd": 56.7
+    },
+    {
+     "name": "admin",
+     "usd": 32.1
+    },
+    {
+     "name": "multisector",
+     "usd": 25.5
+    },
+    {
+     "name": "governance",
+     "usd": 13.7
+    },
+    {
+     "name": "humanitarian",
+     "usd": 9.4
+    },
+    {
+     "name": "education",
+     "usd": 7.8
+    },
+    {
+     "name": "environment",
+     "usd": 1.7
+    }
+   ]
+  }
+ },
+ "us_agency": {
+  "years": [
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025,
+   2026
   ],
-  "2021": [
+  "series": [
    {
-    "name": "finance",
-    "usd": 272.8
+    "name": "USAID",
+    "data": [
+     102.9,
+     90.2,
+     80.3,
+     95.6,
+     100.7,
+     80.5,
+     86.3,
+     73.9,
+     5.9
+    ]
    },
    {
-    "name": "health",
-    "usd": 266.9
+    "name": "State",
+    "data": [
+     52.8,
+     47.1,
+     39.6,
+     57.3,
+     89.0,
+     48.3,
+     48.7,
+     42.6,
+     2.9
+    ]
    },
    {
-    "name": "education",
-    "usd": 230.0
+    "name": "MCC",
+    "data": [
+     3.7,
+     12.4,
+     2.9,
+     7.2,
+     4.9,
+     7.6,
+     20.9,
+     74.8,
+     66.3
+    ]
    },
    {
-    "name": "governance",
-    "usd": 181.2
+    "name": "USDA",
+    "data": [
+     17.3,
+     1.7,
+     13.4,
+     9.9,
+     9.2,
+     8.6,
+     23.6,
+     16.7,
+     0.0
+    ]
    },
    {
-    "name": "water",
-    "usd": 152.3
+    "name": "Defense",
+    "data": [
+     6.2,
+     0.3,
+     0.1,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
    },
    {
-    "name": "energy",
-    "usd": 141.7
-   },
-   {
-    "name": "humanitarian",
-    "usd": 136.4
-   },
-   {
-    "name": "multisector",
-    "usd": 87.5
-   },
-   {
-    "name": "agriculture",
-    "usd": 77.6
-   },
-   {
-    "name": "other_social",
-    "usd": 76.9
-   }
-  ],
-  "2022": [
-   {
-    "name": "finance",
-    "usd": 180.9
-   },
-   {
-    "name": "education",
-    "usd": 180.4
-   },
-   {
-    "name": "energy",
-    "usd": 154.1
-   },
-   {
-    "name": "humanitarian",
-    "usd": 126.1
-   },
-   {
-    "name": "health",
-    "usd": 118.2
-   },
-   {
-    "name": "governance",
-    "usd": 115.2
-   },
-   {
-    "name": "agriculture",
-    "usd": 112.2
-   },
-   {
-    "name": "water",
-    "usd": 97.7
-   },
-   {
-    "name": "transport",
-    "usd": 89.9
-   },
-   {
-    "name": "budget_support",
-    "usd": 76.9
-   }
-  ],
-  "2023": [
-   {
-    "name": "budget_support",
-    "usd": 209.2
-   },
-   {
-    "name": "governance",
-    "usd": 193.0
-   },
-   {
-    "name": "education",
-    "usd": 192.3
-   },
-   {
-    "name": "energy",
-    "usd": 172.8
-   },
-   {
-    "name": "health",
-    "usd": 168.8
-   },
-   {
-    "name": "transport",
-    "usd": 132.8
-   },
-   {
-    "name": "agriculture",
-    "usd": 74.0
-   },
-   {
-    "name": "water",
-    "usd": 72.0
-   },
-   {
-    "name": "multisector",
-    "usd": 69.1
-   },
-   {
-    "name": "population",
-    "usd": 55.1
+    "name": "Other",
+    "data": [
+     2.0,
+     2.0,
+     2.2,
+     2.1,
+     2.3,
+     1.9,
+     2.1,
+     2.1,
+     0.0
+    ]
    }
   ]
  },

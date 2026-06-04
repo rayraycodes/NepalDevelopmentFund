@@ -117,6 +117,7 @@
       <a href="#donors" data-i18n="nav_donors">Donors</a>
       <a href="#china" data-i18n="nav_china">China</a>
       <a href="#sectors" data-i18n="nav_sectors">Sectors</a>
+      <a href="#usagency" data-i18n="nav_agency">US</a>
       <a href="#gaps" data-i18n="nav_gaps">Gaps</a>
       <a href="#sources" data-i18n="nav_sources">Sources</a>
     </nav>
@@ -171,9 +172,19 @@
   <section id="sectors">
     <div class="kicker" data-i18n="sectors_kicker">Where it goes</div>
     <h3 data-i18n="sectors_title">What the money pays for</h3>
-    <p class="lead" data-i18n="sectors_lead">The main areas aid supports, from detailed OECD activity records.</p>
-    <div class="controls"><label for="sectorYear" data-i18n="year">Year</label><select id="sectorYear"></select></div>
+    <p class="lead" data-i18n="sectors_lead">Use the toggle to switch the sector view between all donors (OECD) and the United States alone. US sectors are mapped from ForeignAssistance.gov categories.</p>
+    <div class="controls">
+      <label for="sectorSource" data-i18n="sector_src">Show</label><select id="sectorSource"></select>
+      <label for="sectorYear" data-i18n="year">Year</label><select id="sectorYear"></select></div>
     <div class="card"><div id="c-sectors" class="chart sm" role="img"></div></div>
+  </section>
+
+  <section id="usagency">
+    <div class="kicker" data-i18n="agency_kicker">US in focus</div>
+    <h3 data-i18n="agency_title">US assistance by agency: the shift to MCC</h3>
+    <p class="lead" data-i18n="agency_lead">As USAID and State disbursements fall after FY2024 (and sharply in FY2026), the Millennium Challenge Corporation compact becomes the main US channel.</p>
+    <div class="card"><div id="c-agency" class="chart sm" role="img"></div>
+      <div class="note" data-i18n="agency_note">Official ForeignAssistance.gov, disbursements, current US$. FY2026 is partial.</div></div>
   </section>
 
   <section id="gaps">
@@ -242,7 +253,11 @@ const I18N = {
   china_lead:"The large Chinese figures for Nepal are mostly promises (commitments). The money Nepal records actually arriving is much smaller and fell after 2018. The international aid statistics do not track China at all.",
   china_note:"Promises: AidData (to 2021). Delivered: Nepal's own report.",
   sectors_kicker:"Where it goes",sectors_title:"What the money pays for",
-  sectors_lead:"The main areas aid supports, from detailed OECD activity records.",
+  sectors_lead:"Use the toggle to switch between all donors (OECD) and the United States alone. US sectors are mapped from ForeignAssistance.gov categories.",
+  sector_src:"Show",sector_opt_oecd:"All donors (OECD)",sector_opt_us:"United States only",
+  nav_agency:"US",agency_kicker:"US in focus",agency_title:"US assistance by agency: the shift to MCC",
+  agency_lead:"As USAID and State disbursements fall after FY2024 (and sharply in FY2026), the Millennium Challenge Corporation (MCC) compact becomes the main US channel. Stacked US disbursements by agency.",
+  agency_note:"Official ForeignAssistance.gov, disbursements, current US$. FY2026 is partial.",agency_other:"Other",
   gaps_kicker:"Honesty about the numbers",gaps_title:"Why the two sides differ",
   gaps_lead:"Red bars are years Nepal reports receiving more than donors report giving. Below, every notable mismatch is listed with the most likely reason. None of these are errors to hide; they are the honest result of two systems counting differently.",
   nondac_lead:"Donors the international system misses entirely (seen only on Nepal's side):",
@@ -288,7 +303,11 @@ const I18N = {
   china_lead:"नेपालका लागि चीनका ठूला अङ्कहरू प्रायः वाचा (प्रतिबद्धता) हुन्। नेपालले वास्तवमा आइपुगेको भनी टिपेको रकम धेरै कम छ र २०१८ पछि घट्यो। अन्तर्राष्ट्रिय सहायता तथ्याङ्कले चीनलाई पटक्कै समेट्दैन।",
   china_note:"वाचा: AidData (२०२१ सम्म)। वितरण: नेपालको आफ्नै प्रतिवेदन।",
   sectors_kicker:"कहाँ जान्छ",sectors_title:"पैसाले के-केमा खर्च हुन्छ",
-  sectors_lead:"OECD को विस्तृत क्रियाकलाप अभिलेखअनुसार सहायताले सघाउने मुख्य क्षेत्रहरू।",
+  sectors_lead:"टगलले सबै दाता (OECD) र अमेरिका मात्रको क्षेत्र दृश्य फेर्नुहोस्। अमेरिकी क्षेत्र ForeignAssistance.gov कोटिबाट म्याप गरिएको।",
+  sector_src:"देखाउनुहोस्",sector_opt_oecd:"सबै दाता (OECD)",sector_opt_us:"अमेरिका मात्र",
+  nav_agency:"अमेरिका",agency_kicker:"अमेरिकामा केन्द्रित",agency_title:"निकायअनुसार अमेरिकी सहायता: MCC तर्फको मोड",
+  agency_lead:"FY2024 पछि USAID र State को वितरण घट्दै (र FY2026 मा तीव्र रूपमा), Millennium Challenge Corporation (MCC) सम्झौता मुख्य अमेरिकी माध्यम बन्छ। निकायअनुसार अमेरिकी वितरण (थपिएको)।",
+  agency_note:"आधिकारिक ForeignAssistance.gov, वितरण, हालको डलर। FY2026 आंशिक।",agency_other:"अन्य",
   gaps_kicker:"अङ्कप्रति इमानदारी",gaps_title:"दुई पक्ष किन फरक हुन्छन्",
   gaps_lead:"रातो स्तम्भ ती वर्ष हुन् जब नेपालले दाताले दिएभन्दा बढी पाएको रिपोर्ट गर्छ। तल, हरेक उल्लेखनीय भिन्नता सम्भावित कारणसहित सूचीबद्ध छ। यी लुकाउनुपर्ने त्रुटि होइनन्; दुई प्रणालीले फरक गणना गर्दाको इमानदार परिणाम हुन्।",
   nondac_lead:"अन्तर्राष्ट्रिय प्रणालीले पूरै छुटाउने दाताहरू (नेपालको पक्षमा मात्र देखिने):",
@@ -382,7 +401,7 @@ window.addEventListener('resize',()=>Object.values(charts).forEach(c=>c.resize()
 const baseText = ()=>({fontFamily:lang==='ne'?'"Noto Sans Devanagari",Inter,sans-serif':'Inter,system-ui,sans-serif',color:C.ink});
 const anim = !RM;
 
-let donorYear='2022', sectorYear='2022';
+let donorYear='2022', sectorYear='2022', sectorSrc='oecd';
 
 function render(){
   document.documentElement.lang = lang;
@@ -442,10 +461,13 @@ function render(){
     Object.keys(D.topDonors.donor).sort().reverse().forEach(y=>dy.add(new Option(y,y)));
     dy.value=donorYear; dy.onchange=()=>{donorYear=dy.value; drawDonors();}; }
   const sy=document.getElementById('sectorYear'); if(!sy.options.length){
-    Object.keys(D.sectors).sort().reverse().forEach(y=>sy.add(new Option(y,y)));
+    Object.keys(D.sectors.oecd).sort().reverse().forEach(y=>sy.add(new Option(y,y)));
     sy.value=sectorYear; sy.onchange=()=>{sectorYear=sy.value; drawSectors();}; }
+  const ss=document.getElementById('sectorSource');  // rebuilt each render for translated labels
+  ss.innerHTML=`<option value="oecd">${t('sector_opt_oecd')}</option><option value="us">${t('sector_opt_us')}</option>`;
+  ss.value=sectorSrc; ss.onchange=()=>{sectorSrc=ss.value; drawSectors();};
 
-  drawFlows(); drawDonors(); drawChina(); drawSectors(); drawGap();
+  drawFlows(); drawDonors(); drawChina(); drawSectors(); drawAgency(); drawGap();
 }
 
 function aria(id,text){ document.getElementById(id).setAttribute('aria-label',text); }
@@ -487,8 +509,20 @@ function drawChina(){
       {name:t('ch_disb'),type:'bar',data:ch.disbursements,itemStyle:{color:C.recipient,borderRadius:[4,4,0,0]}}]},true);
 }
 function drawSectors(){
-  const s=D.sectors[sectorYear]||[]; aria('c-sectors',t('sectors_title'));
-  chart('c-sectors').setOption(barH('',C.green,s.map(x=>sName(x.name)),s.map(x=>x.usd)),true);
+  const s=(D.sectors[sectorSrc]||{})[sectorYear]||[]; aria('c-sectors',t('sectors_title'));
+  chart('c-sectors').setOption(barH('',sectorSrc==='us'?C.donor:C.green,s.map(x=>sName(x.name)),s.map(x=>x.usd)),true);
+}
+function drawAgency(){
+  const ua=D.us_agency; if(!ua||!ua.series||!ua.series.length) return;
+  aria('c-agency',t('agency_title'));
+  const pal=['#2563eb','#0e7c86','#f59e0b','#0f9d58','#94a3b8','#cbd5e1'];
+  chart('c-agency').setOption({animation:anim,textStyle:baseText(),
+    grid:{left:54,right:16,top:42,bottom:30},
+    tooltip:{trigger:'axis',valueFormatter:fmt},legend:{top:6,type:'scroll'},
+    xAxis:{type:'category',data:ua.years},
+    yAxis:{type:'value',name:t('ch_usdm'),splitLine:{lineStyle:{color:C.grid}}},
+    series:ua.series.map((x,i)=>({name:x.name==='Other'?t('agency_other'):x.name,type:'bar',stack:'us',
+      data:x.data,itemStyle:{color:pal[i%pal.length]}}))},true);
 }
 function drawGap(){
   const g=D.reconciliation.filter(x=>x.gap_pct!=null); aria('c-gap',t('ch_gapname'));

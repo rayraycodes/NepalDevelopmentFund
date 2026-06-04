@@ -1,5 +1,5 @@
 {
-  "schema_version": "2026-06-03.1",
+  "schema_version": "2026-06-04.1",
   "grain": "one row = one (source, record, flow_stage, year) observation",
   "fields": {
     "obs_id": "deterministic sha1(source|record|flow_stage|year)[:16], primary key",

@@ -1,0 +1,2 @@
+source,snapshot_path,url,params,sha256,bytes,http_status,retrieved_at
+us_fa_agency,data/raw/us_fa_agency/fa_by_funding_agency_NPL_p1_20260604T113042Z.json,https://foreignassistance.gov/data-api/by-funding-agency.json?country_code=NPL&per_page=1000&page=1,country_code=NPL;per_page=1000;page=1,7a7a4f02eb1ca5d4fb7961c82c3ce507657051e30264a35847931905ca85dbe7,429460,200,2026-06-04T11:30:42Z

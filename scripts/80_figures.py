@@ -110,7 +110,35 @@ def fig5():
     fig.tight_layout(); fig.savefig(FIG / "fig5_gap.png"); plt.close(fig)
 
 
+# --- Fig 6: US assistance by agency (stacked), the USAID -> MCC shift ---
+def fig6():
+    path = C.PROCESSED / "us_by_agency.csv"
+    if not path.exists():
+        return
+    a = pd.read_csv(path)
+    a = a[a["flow_stage"] == "disbursement"].copy()
+    a["amount_usd"] = pd.to_numeric(a["amount_usd"], errors="coerce").fillna(0)
+    a["year"] = pd.to_numeric(a["year"], errors="coerce")
+    years = list(range(2018, 2027))
+    totals = a.groupby("agency_acronym")["amount_usd"].sum().sort_values(ascending=False)
+    top = list(totals.index[:5])
+    disp = {"USAID": "USAID", "STATE": "State", "MCC": "MCC", "AGR": "USDA", "PC": "Peace Corps"}
+    colors = ["#2563eb", "#0e7c86", "#f59e0b", "#0f9d58", "#94a3b8", "#cbd5e1"]
+    fig, ax = plt.subplots(figsize=(9, 5))
+    bottom = [0] * len(years)
+    series = [(disp.get(ac, ac), [a[(a.agency_acronym == ac) & (a.year == y)]["amount_usd"].sum() / 1e6 for y in years]) for ac in top]
+    oth = [a[(~a.agency_acronym.isin(top)) & (a.year == y)]["amount_usd"].sum() / 1e6 for y in years]
+    series.append(("Other", oth))
+    for (name, vals), col in zip(series, colors):
+        ax.bar(years, vals, bottom=bottom, label=name, color=col)
+        bottom = [b + v for b, v in zip(bottom, vals)]
+    ax.set_title("US assistance to Nepal by agency: the shift to MCC (disbursements)")
+    ax.set_xlabel("US fiscal year (FY2026 partial)"); ax.set_ylabel("US$ millions")
+    ax.legend(fontsize=8, ncol=3)
+    fig.tight_layout(); fig.savefig(FIG / "fig6_us_agency.png"); plt.close(fig)
+
+
 if __name__ == "__main__":
-    for f in (fig1, fig2, fig3, fig4, fig5):
+    for f in (fig1, fig2, fig3, fig4, fig5, fig6):
         f(); print(f"  wrote {f.__name__}")
     print("figures ->", FIG)

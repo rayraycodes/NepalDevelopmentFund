@@ -202,6 +202,12 @@ donors report giving (net).
 
 ![Gap over time](figures/fig5_gap.png)
 
+**US assistance by agency.** From the official ForeignAssistance.gov data-api. As USAID and State
+disbursements fall after FY2024 (and collapse in the partial FY2026), the Millennium Challenge
+Corporation compact becomes the dominant US channel.
+
+![US assistance by agency](figures/fig6_us_agency.png)
+
 ---
 
 ## 4. Discrepancy Log
@@ -319,7 +325,8 @@ d-portal's `select=stats` form is broken and the `from=act` form must be used.
 | [`data/processed/core_long.json`](../data/processed/core_long.json) | same, JSON records |
 | [`data/processed/core_headline.csv`](../data/processed/core_headline.csv) | slim headline-only series (982 rows: 686 donor-side OECD + 296 recipient-side DCR) |
 | [`data/processed/agg_by_donor_year.csv`](../data/processed/agg_by_donor_year.csv) | headline donor and recipient totals by year and flow stage |
-| [`data/processed/agg_by_sector_year.csv`](../data/processed/agg_by_sector_year.csv) | sector composition (CRS) |
+| [`data/processed/agg_by_sector_year.csv`](../data/processed/agg_by_sector_year.csv) | sector composition (OECD CRS, plus US mapped from USG categories) |
+| [`data/processed/us_by_agency.csv`](../data/processed/us_by_agency.csv) | US assistance by funding agency and year (official ForeignAssistance.gov; alternative cut of the US totals, not additive with the sector view) |
 | [`data/processed/reconciliation_donor_vs_recipient.csv`](../data/processed/reconciliation_donor_vs_recipient.csv) | per-year donor vs recipient vs anchor, gaps |
 | [`data/processed/coverage_matrix.csv`](../data/processed/coverage_matrix.csv) | which donors appear donor-side, recipient-side, or both |
 | [`data/processed/data_dictionary.json`](../data/processed/data_dictionary.json) | field and code definitions |

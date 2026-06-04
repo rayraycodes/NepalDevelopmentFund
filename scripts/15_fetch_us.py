@@ -22,6 +22,19 @@ API = "https://foreignassistance.gov/data-api/by-usg-sector.json"
 PAGE_URL = "https://foreignassistance.gov/cd/nepal"  # human-facing source for citations
 FLOW = {"Obligations": "commitment", "Disbursements": "disbursement"}
 MIN_YEAR = 2015  # project window; source covers 2001+
+# approximate map from ForeignAssistance.gov USG category -> common (DAC-style) sector,
+# so US appears alongside OECD CRS in the sector view. sector_raw keeps the precise USG sector.
+USG_CAT_SECTOR = {
+    "Health": "health",
+    "Education and Social Services": "education",
+    "Economic Development": "multisector",
+    "Multi-sector": "multisector",
+    "Democracy, Human Rights, and Governance": "governance",
+    "Peace and Security": "governance",
+    "Environment": "environment",
+    "Humanitarian Assistance": "humanitarian",
+    "Program Support": "admin",
+}
 
 
 def main():
@@ -61,7 +74,7 @@ def main():
         out.append(C.new_row(
             side="donor", source=SOURCE, source_record_id=f"FA|{x['id']}",
             donor_name="United States", donor_dac_code="USA", donor_iati_id="US-GOV",
-            sector="", sector_raw=f"{cat} / {sec}".strip(" /"),
+            sector=USG_CAT_SECTOR.get(cat, ""), sector_raw=f"{cat} / {sec}".strip(" /"),
             flow_stage=FLOW[tt], instrument="grant",
             amount_usd=float(cur) if cur not in (None, "") else "",
             amount_usd_constant=float(con) if con not in (None, "") else "",

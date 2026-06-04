@@ -1,0 +1,186 @@
+agency_acronym,agency_name,year,flow_stage,amount_usd,source,source_url,retrieved_at
+USAID,U.S. Agency for International Development,2015,commitment,149854890.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+STATE,Department of State,2015,commitment,82929752.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+USAID,U.S. Agency for International Development,2015,disbursement,67910110.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+STATE,Department of State,2015,disbursement,56194147.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOD,Department of Defense,2015,commitment,21473510.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOD,Department of Defense,2015,disbursement,10077510.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+AGR,Department of Agriculture,2015,disbursement,9285399.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+AGR,Department of Agriculture,2015,commitment,4638592.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+MCC,Millennium Challenge Corporation,2015,commitment,1097809.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOL,Department of Labor,2015,disbursement,932697.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOL,Department of Labor,2015,commitment,882717.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOI,Department of the Interior,2015,commitment,393382.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOI,Department of the Interior,2015,disbursement,382076.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+PC,Peace Corps,2015,disbursement,366571.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+PC,Peace Corps,2015,commitment,208729.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+MCC,Millennium Challenge Corporation,2015,disbursement,200214.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+USAID,U.S. Agency for International Development,2016,disbursement,107883047.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+USAID,U.S. Agency for International Development,2016,commitment,107120355.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+STATE,Department of State,2016,disbursement,69561160.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+STATE,Department of State,2016,commitment,68911523.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+MCC,Millennium Challenge Corporation,2016,commitment,14214853.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+AGR,Department of Agriculture,2016,disbursement,12429768.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOD,Department of Defense,2016,disbursement,11767863.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+MCC,Millennium Challenge Corporation,2016,disbursement,1576815.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+AGR,Department of Agriculture,2016,commitment,536057.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOD,Department of Defense,2016,commitment,421863.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOI,Department of the Interior,2016,commitment,412039.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+PC,Peace Corps,2016,commitment,358068.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+PC,Peace Corps,2016,disbursement,280257.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOL,Department of Labor,2016,disbursement,204454.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOI,Department of the Interior,2016,disbursement,-60809.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+USAID,U.S. Agency for International Development,2017,disbursement,114902641.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+USAID,U.S. Agency for International Development,2017,commitment,101378255.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+STATE,Department of State,2017,disbursement,48511351.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+MCC,Millennium Challenge Corporation,2017,commitment,45422798.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+STATE,Department of State,2017,commitment,43992457.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+AGR,Department of Agriculture,2017,disbursement,16499036.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+MCC,Millennium Challenge Corporation,2017,disbursement,10309153.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+PC,Peace Corps,2017,disbursement,1237417.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+PC,Peace Corps,2017,commitment,1188924.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOI,Department of the Interior,2017,commitment,628794.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+AGR,Department of Agriculture,2017,commitment,375480.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOI,Department of the Interior,2017,disbursement,190572.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOL,Department of Labor,2017,disbursement,158850.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+USAID,U.S. Agency for International Development,2018,disbursement,102916740.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+USAID,U.S. Agency for International Development,2018,commitment,89713914.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+STATE,Department of State,2018,disbursement,52777988.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+STATE,Department of State,2018,commitment,42868748.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+AGR,Department of Agriculture,2018,disbursement,17256482.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOD,Department of Defense,2018,disbursement,6176780.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOD,Department of Defense,2018,commitment,6126780.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+MCC,Millennium Challenge Corporation,2018,disbursement,3659353.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOL,Department of Labor,2018,commitment,2600000.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+MCC,Millennium Challenge Corporation,2018,commitment,2180561.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+PC,Peace Corps,2018,commitment,1600581.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+PC,Peace Corps,2018,disbursement,1582650.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+AGR,Department of Agriculture,2018,commitment,644413.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOI,Department of the Interior,2018,commitment,225666.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOI,Department of the Interior,2018,disbursement,198523.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOL,Department of Labor,2018,disbursement,195504.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+TREAS,Department of the Treasury,2018,disbursement,36743.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+TREAS,Department of the Treasury,2018,commitment,30972.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+USAID,U.S. Agency for International Development,2019,commitment,113663069.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+USAID,U.S. Agency for International Development,2019,disbursement,90179695.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+STATE,Department of State,2019,commitment,54389415.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+STATE,Department of State,2019,disbursement,47101535.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+MCC,Millennium Challenge Corporation,2019,disbursement,12399579.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+MCC,Millennium Challenge Corporation,2019,commitment,3062583.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+PC,Peace Corps,2019,disbursement,1882115.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+PC,Peace Corps,2019,commitment,1791708.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+AGR,Department of Agriculture,2019,disbursement,1668511.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOI,Department of the Interior,2019,commitment,560658.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+AGR,Department of Agriculture,2019,commitment,385868.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOL,Department of Labor,2019,disbursement,340168.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOD,Department of Defense,2019,disbursement,324052.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOD,Department of Defense,2019,commitment,324052.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOE,Department of Energy,2019,disbursement,41345.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+TREAS,Department of the Treasury,2019,commitment,32737.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOE,Department of Energy,2019,commitment,5737.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+TREAS,Department of the Treasury,2019,disbursement,-935.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOI,Department of the Interior,2019,disbursement,-266720.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+USAID,U.S. Agency for International Development,2020,disbursement,80296730.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+USAID,U.S. Agency for International Development,2020,commitment,78249480.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+STATE,Department of State,2020,commitment,44291755.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+STATE,Department of State,2020,disbursement,39592243.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+AGR,Department of Agriculture,2020,disbursement,13402309.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+MCC,Millennium Challenge Corporation,2020,disbursement,2942920.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+PC,Peace Corps,2020,commitment,1802081.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+PC,Peace Corps,2020,disbursement,1630555.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+MCC,Millennium Challenge Corporation,2020,commitment,1367578.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOL,Department of Labor,2020,disbursement,827181.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+AGR,Department of Agriculture,2020,commitment,279251.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOD,Department of Defense,2020,disbursement,81320.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOD,Department of Defense,2020,commitment,81320.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOE,Department of Energy,2020,disbursement,256.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+TREAS,Department of the Treasury,2020,disbursement,177.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOI,Department of the Interior,2020,commitment,-1910.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOI,Department of the Interior,2020,disbursement,-292511.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+USAID,U.S. Agency for International Development,2021,disbursement,95624284.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+USAID,U.S. Agency for International Development,2021,commitment,86831174.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+STATE,Department of State,2021,commitment,66173274.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+STATE,Department of State,2021,disbursement,57348229.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+AGR,Department of Agriculture,2021,commitment,25413511.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+AGR,Department of Agriculture,2021,disbursement,9932577.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+MCC,Millennium Challenge Corporation,2021,disbursement,7158135.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+MCC,Millennium Challenge Corporation,2021,commitment,2441348.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+PC,Peace Corps,2021,disbursement,1123299.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+PC,Peace Corps,2021,commitment,912995.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOL,Department of Labor,2021,disbursement,909722.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOL,Department of Labor,2021,commitment,250000.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOI,Department of the Interior,2021,commitment,126458.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOE,Department of Energy,2021,disbursement,40811.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOE,Department of Energy,2021,commitment,2146.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+USAID,U.S. Agency for International Development,2022,disbursement,100680802.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+USAID,U.S. Agency for International Development,2022,commitment,93939054.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+STATE,Department of State,2022,disbursement,88975874.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+STATE,Department of State,2022,commitment,77159045.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+AGR,Department of Agriculture,2022,disbursement,9188600.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+MCC,Millennium Challenge Corporation,2022,disbursement,4869379.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOI,Department of the Interior,2022,commitment,1726204.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+MCC,Millennium Challenge Corporation,2022,commitment,1699545.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+PC,Peace Corps,2022,commitment,1300618.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+PC,Peace Corps,2022,disbursement,1211071.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOL,Department of Labor,2022,disbursement,1054065.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+AGR,Department of Agriculture,2022,commitment,160286.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOE,Department of Energy,2022,commitment,74523.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOE,Department of Energy,2022,disbursement,47675.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOI,Department of the Interior,2022,disbursement,-22736.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+MCC,Millennium Challenge Corporation,2023,commitment,460233698.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+USAID,U.S. Agency for International Development,2023,commitment,102069972.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+USAID,U.S. Agency for International Development,2023,disbursement,80518272.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+AGR,Department of Agriculture,2023,commitment,65957450.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+STATE,Department of State,2023,commitment,60004978.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+STATE,Department of State,2023,disbursement,48272247.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+AGR,Department of Agriculture,2023,disbursement,8607646.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+MCC,Millennium Challenge Corporation,2023,disbursement,7590213.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DFC,U.S. International Development Finance Corporation,2023,commitment,4998950.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+PC,Peace Corps,2023,commitment,1671871.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+PC,Peace Corps,2023,disbursement,1523943.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+TDA,Trade and Development Agency,2023,commitment,750000.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOI,Department of the Interior,2023,commitment,542468.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOI,Department of the Interior,2023,disbursement,358958.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOE,Department of Energy,2023,commitment,12777.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOE,Department of Energy,2023,disbursement,1153.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+USAID,U.S. Agency for International Development,2024,commitment,125126704.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+USAID,U.S. Agency for International Development,2024,disbursement,86348569.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+STATE,Department of State,2024,commitment,81309091.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+STATE,Department of State,2024,disbursement,48659154.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+AGR,Department of Agriculture,2024,disbursement,23586313.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+MCC,Millennium Challenge Corporation,2024,disbursement,20876471.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+MCC,Millennium Challenge Corporation,2024,commitment,3063311.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+PC,Peace Corps,2024,commitment,1847825.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+PC,Peace Corps,2024,disbursement,1817885.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOI,Department of the Interior,2024,commitment,487211.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOL,Department of Labor,2024,disbursement,248529.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOE,Department of Energy,2024,disbursement,228867.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+TDA,Trade and Development Agency,2024,disbursement,195372.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOE,Department of Energy,2024,commitment,103990.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+AGR,Department of Agriculture,2024,commitment,50000.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+EPA,Environmental Protection Agency,2024,commitment,30000.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOI,Department of the Interior,2024,disbursement,-400026.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+MCC,Millennium Challenge Corporation,2025,disbursement,74849224.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+USAID,U.S. Agency for International Development,2025,disbursement,73949112.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+STATE,Department of State,2025,disbursement,42569957.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+STATE,Department of State,2025,commitment,38321420.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+AGR,Department of Agriculture,2025,disbursement,16659749.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+AGR,Department of Agriculture,2025,commitment,9239210.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+USAID,U.S. Agency for International Development,2025,commitment,5603066.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+PC,Peace Corps,2025,disbursement,1408851.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+PC,Peace Corps,2025,commitment,1170631.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+MCC,Millennium Challenge Corporation,2025,commitment,919121.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOL,Department of Labor,2025,disbursement,316345.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOL,Department of Labor,2025,commitment,260000.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOI,Department of the Interior,2025,disbursement,194851.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+TDA,Trade and Development Agency,2025,disbursement,167193.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+MCC,Millennium Challenge Corporation,2026,disbursement,66319973.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+MCC,Millennium Challenge Corporation,2026,commitment,50154427.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+USAID,U.S. Agency for International Development,2026,disbursement,5881105.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+STATE,Department of State,2026,disbursement,2865315.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+AGR,Department of Agriculture,2026,disbursement,7327.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOT,Department of Transportation,2026,commitment,150.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+DOT,Department of Transportation,2026,disbursement,150.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+AGR,Department of Agriculture,2026,commitment,-42731.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+STATE,Department of State,2026,commitment,-488163.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
+USAID,U.S. Agency for International Development,2026,commitment,-1444273.0,us_fa_agency,https://foreignassistance.gov/cd/nepal,2026-06-04T11:30:43Z
