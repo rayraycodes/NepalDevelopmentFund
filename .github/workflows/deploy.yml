@@ -1,13 +1,9 @@
-name: Deploy dashboard to Cloudflare Pages
+name: Build & validate dashboard data
 
-# Publishes report/dashboard to Cloudflare Pages on every push to main.
-# The page is password-gated by report/dashboard/functions/_middleware.js, which reads the
-# SITE_PASSWORD secret configured in the Cloudflare Pages project (not here).
-#
-# Required GitHub repository secrets (Settings -> Secrets and variables -> Actions):
-#   CLOUDFLARE_API_TOKEN   - a Cloudflare API token with "Cloudflare Pages: Edit"
-#   CLOUDFLARE_ACCOUNT_ID  - your Cloudflare account id
-# The Cloudflare Pages project must be named "nepal-development-fund" (or edit --project-name below).
+# Cloudflare deploys the site on every push to main via its native Git integration
+# (report/dashboard/wrangler.jsonc; gated by report/dashboard/_worker.js + the SITE_PASSWORD secret).
+# This workflow just rebuilds data.js from the committed processed CSVs and runs the integrity
+# checks, so a push that breaks the data fails CI. It does not deploy (Cloudflare does that).
 
 on:
   push:
@@ -18,10 +14,8 @@ permissions:
   contents: read
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    env:
-      CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
     steps:
       - uses: actions/checkout@v4
 
@@ -29,22 +23,8 @@ jobs:
         with:
           python-version: "3.13"
 
-      - name: Rebuild dashboard data from processed CSVs
+      - name: Rebuild dashboard data + validate integrity
         run: |
           pip install pandas
           python scripts/85_dashboard_data.py
-
-      - name: Deploy to Cloudflare Pages
-        if: ${{ env.CF_API_TOKEN != '' }}
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy report/dashboard --project-name=nepal-development-fund --branch=main
-
-      - name: Deploy skipped (Cloudflare secrets not set)
-        if: ${{ env.CF_API_TOKEN == '' }}
-        run: |
-          echo "Built data.js but skipped the Cloudflare deploy."
-          echo "Add CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID repo secrets to enable it (see DEPLOY.md)."
-          echo "Cloudflare native Git build can deploy instead."
+          python scripts/90_validate.py

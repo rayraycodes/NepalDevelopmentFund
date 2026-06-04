@@ -1,55 +1,47 @@
-# Deploying the dashboard (Cloudflare Pages, password-gated)
+# Deploying the dashboard (Cloudflare Workers static assets, password-gated)
 
-The dashboard (`report/dashboard/`) is published to **Cloudflare Pages** and protected by a
-single shared password enforced at the edge by a Pages Function
-(`report/dashboard/functions/_middleware.js`). The password lives only in a Cloudflare secret,
-never in this repo. The GitHub repo is **private**.
-
-## One-time setup (you do this in Cloudflare + GitHub — I cannot access your accounts)
-
-### 1. Create the Cloudflare Pages project
-- Cloudflare dashboard -> Workers & Pages -> Create -> Pages -> **Connect to Git** ->
-  pick `rayraycodes/NepalDevelopmentFund`.
-- Build settings: **Framework preset = None**, **Build command =** (leave empty),
-  **Build output directory = `report/dashboard`**.
-- Name the project **`nepal-development-fund`** (must match `--project-name` in
-  `.github/workflows/deploy.yml`, or edit that line).
-- (If you prefer the GitHub Actions workflow to deploy instead of Cloudflare's native Git build,
-  you can disable automatic builds on the Pages project and rely on the Action below.)
-
-### 2. Set the page password (the gate)
-- Pages project -> Settings -> **Environment variables** -> Production -> add:
-  - `SITE_PASSWORD` = the complex password (provided separately; do not commit it).
-- Redeploy. Visiting the site now prompts for credentials: **any username, password =
-  `SITE_PASSWORD`**. If `SITE_PASSWORD` is unset the site returns 503 (fail-closed).
-
-### 3. Point the custom domain `reganmaharjan.info.np`
-- Make sure the `info.np` zone (or `reganmaharjan.info.np`) is in your Cloudflare account
-  (same as `reganmaharjan.com.np`).
-- Pages project -> **Custom domains** -> Set up a custom domain -> `reganmaharjan.info.np`.
-- Cloudflare auto-creates the CNAME and provisions TLS. (Because the domain is already on
-  Cloudflare, no manual DNS record is needed; if it asks, accept the CNAME it proposes.)
-
-### 4. (Optional) GitHub Actions deploy
-If you want pushes to deploy via GitHub Actions (instead of Cloudflare's native Git build),
-add these **GitHub repo secrets** (Settings -> Secrets and variables -> Actions):
-- `CLOUDFLARE_API_TOKEN` — a token with the **Cloudflare Pages: Edit** permission.
-- `CLOUDFLARE_ACCOUNT_ID` — your account id (Cloudflare dashboard URL or Workers & Pages overview).
-The workflow `.github/workflows/deploy.yml` rebuilds `data.js` and runs `wrangler pages deploy`.
+When the repo was connected to Cloudflare, it was set up as a **Cloudflare Workers project with
+static assets** (Cloudflare added `report/dashboard/wrangler.jsonc`). Cloudflare redeploys on every
+push to `main`. The site is protected by a single shared password enforced by a Worker
+(`report/dashboard/_worker.js`) that runs **before** any asset is served
+(`assets.run_worker_first = true`). The password lives only in a Cloudflare secret, never in this
+repo. The GitHub repo is **private**.
 
 ## How the gate works
-The gate lives at **`functions/_middleware.js` in the repository root** — Cloudflare requires the
-`functions` directory at the project root, not inside the build output (`report/dashboard`). A
-mirror copy at `report/dashboard/functions/_middleware.js` covers the `wrangler pages deploy`
-path. With Cloudflare's Git integration (build output `report/dashboard`, default root directory),
-the root `functions/` is the one that runs.
+`report/dashboard/_worker.js` is the Worker entry (set as `main` in `wrangler.jsonc`). Because
+`assets.run_worker_first` is `true`, it runs on every request — including `index.html`, `data.js`
+and the charts — checks HTTP Basic Auth against `SITE_PASSWORD` in constant time, and only then
+serves the asset via `env.ASSETS.fetch(request)`. No password or hash is shipped to the browser or
+stored in the repo, and there is no `*.workers.dev`/asset path that bypasses it. Sign in with
+**any username** and **password = `SITE_PASSWORD`**. If `SITE_PASSWORD` is unset the site returns
+503 (fail-closed). For per-user (not shared-password) access, use Cloudflare Access instead.
 
-`functions/_middleware.js` runs on every request at the edge, before any asset is served. It
-requires HTTP Basic Auth and compares the supplied password to `SITE_PASSWORD` in constant time.
-No password or hash is shipped to the browser or stored in the repo, so this is a real gate (not
-client-side theater). It is a single shared password; for per-user access use Cloudflare Access
-instead.
+## Setup (you do this in the Cloudflare dashboard — I cannot access your account)
+
+### 1. Project (already connected)
+Workers & Pages -> `nepal-development-fund`. Build output / assets = `report/dashboard` (this is
+what `wrangler.jsonc` with `assets.directory: "."` means, since the config lives in that folder).
+No build command is needed; `data.js` is committed.
+
+### 2. Set the password (the gate)
+Project -> **Settings -> Variables and Secrets** -> add a **Secret**:
+- `SITE_PASSWORD` = the complex password (provided separately; do not commit it).
+Then redeploy (Deployments -> Retry/redeploy, or just push). Visiting the site now prompts for
+credentials: any username, that password.
+
+### 3. Point the custom domain `reganmaharjan.info.np`
+Project -> **Settings -> Domains & Routes -> Add -> Custom domain** -> `reganmaharjan.info.np`.
+Cloudflare creates the DNS record and TLS automatically (the `info.np` zone must be in your
+Cloudflare account, like `com.np`). If a leftover DNS record for that hostname exists, let
+Cloudflare replace it.
+
+## Deployment
+Cloudflare's native Git integration builds and deploys on every push to `main` — no GitHub Action
+is required for publishing. The workflow in `.github/workflows/` is **CI only**: it rebuilds
+`data.js` from the committed CSVs and runs the integrity check, so a bad push fails CI. (If you
+ever want GitHub Actions to deploy instead, disable Cloudflare's auto-build and use
+`wrangler deploy` from `report/dashboard` with a `CLOUDFLARE_API_TOKEN` secret.)
 
 ## Updating the data
-Locally: `make all` (or at least `make build && make dashboard-data`) regenerates
-`report/dashboard/data.js` from the processed CSVs, then commit. The deploy refreshes the page.
+Locally run `make build && make dashboard-data` to regenerate `report/dashboard/data.js` from the
+processed CSVs, then commit and push. Cloudflare redeploys automatically.
