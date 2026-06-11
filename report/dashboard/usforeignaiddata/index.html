@@ -185,6 +185,29 @@
     </div>
   </section>
 
+  <section id="ledger">
+    <div class="kicker" data-i18n="lg_kicker">Every project, triaged</div>
+    <h3 data-i18n="lg_title">The full project ledger</h3>
+    <p class="lead" data-i18n="lg_lead">Every individual US award implemented in Nepal since FY2015 — all 2,609 of them — triaged by where they stand today. "Ended 2025–26" means the award's period ended inside the restructuring window: that bucket mixes natural completions with early terminations, because the public data does not say which is which. The cross-check from the IATI transparency feeds shows only 6 US activities formally marked cancelled or suspended — official status reporting clearly lags reality.</p>
+    <div class="card" id="ledger-sum" style="font-weight:650;font-size:15px"></div>
+    <div class="card" style="margin-top:16px"><div id="c-cohorts" class="chart sm" role="img"></div>
+      <div class="note" data-i18n="lg_cohort_note">Number of awards whose period of performance overlaps each US fiscal year.</div></div>
+    <div class="controls" style="margin-top:16px">
+      <label for="lgStatus" data-i18n="lg_f_status">Status</label><select id="lgStatus"></select>
+      <label for="lgSearch" data-i18n="lg_f_search">Search</label>
+      <input id="lgSearch" type="search" style="font:inherit;font-size:14px;padding:9px 12px;border:1px solid var(--line);border-radius:8px;min-height:42px;min-width:200px" placeholder="SUAAHARA, health, Chemonics…">
+    </div>
+    <div class="card" style="overflow-x:auto">
+      <table id="ledger-table" style="min-width:680px"><thead><tr>
+        <th class="num" data-i18n="pj_t_amt">US$ m</th><th data-i18n="pj_t_rec">Recipient</th>
+        <th data-i18n="pj_t_desc">Project (official description)</th><th data-i18n="pj_t_period">Period</th>
+        <th data-i18n="lg_t_status">Status</th>
+      </tr></thead><tbody></tbody></table>
+      <div class="note" id="ledger-count"></div>
+      <div class="note" data-i18n="lg_note">Showing awards of $1m and above; the complete ledger of all 2,609 awards is in us_projects_all.csv. Obligations basis, place of performance Nepal.</div>
+    </div>
+  </section>
+
   <section id="goals">
     <div class="kicker" data-i18n="gl_kicker">The long game</div>
     <h3 data-i18n="gl_title">Stated long-term goals</h3>
@@ -233,6 +256,7 @@
 <script src="../vendor/echarts.min.js"></script>
 <script src="us_data.js"></script>
 <script src="us_partners.js"></script>
+<script src="us_projects.js"></script>
 <script>
 const D = window.US_DATA;
 const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -278,6 +302,16 @@ const I18N = {
   pj_group:"Type", pj_assist:"Grants & cooperative agreements", pj_contract:"Contracts",
   pj_t_amt:"US$ m", pj_t_rec:"Recipient", pj_t_desc:"Project (official description)",
   pj_t_period:"Period", pj_t_agency:"Awarded by",
+  lg_kicker:"Every project, triaged", lg_title:"The full project ledger",
+  lg_lead:"Every individual US award implemented in Nepal since FY2015 — all 2,609 of them — triaged by where they stand today. \"Ended 2025–26\" means the award's period ended inside the restructuring window: that bucket mixes natural completions with early terminations, because the public data does not say which is which. The cross-check from the IATI transparency feeds shows only 6 US activities formally marked cancelled or suspended — official status reporting clearly lags reality.",
+  lg_sum:"{total} awards · completed before 2025: {comp} (${compm}m) · ended in the 2025–26 window: {e26} (${e26m}m) · still active: {act} (${actm}m)",
+  lg_cohort_note:"Number of awards whose period of performance overlaps each US fiscal year.",
+  lg_f_status:"Status", lg_f_search:"Search",
+  lg_t_status:"Status", lg_all:"All statuses",
+  lg_s_active:"Active", lg_s_completed:"Completed", lg_s_ended_2526:"Ended 2025–26", lg_s_undated:"Undated",
+  lg_count:"Showing {shown} of {match} matching awards",
+  lg_note:"Showing awards of $1m and above; the complete ledger of all 2,609 awards is in us_projects_all.csv. Obligations basis, place of performance Nepal.",
+  lg_cohort_t:"Awards active per fiscal year",
   gl_kicker:"The long game", gl_title:"Stated long-term goals",
   gl_lead:"What the money says it is for, from the official program documents — each card links to its source.",
   dc_kicker:"Primary documents", dc_title:"The supporting documents, read and archived",
@@ -366,6 +400,16 @@ const I18N = {
   pj_group:"प्रकार", pj_assist:"अनुदान तथा सहकार्य सम्झौता", pj_contract:"ठेक्का",
   pj_t_amt:"डलर (मि.)", pj_t_rec:"प्राप्तकर्ता", pj_t_desc:"परियोजना (आधिकारिक विवरण)",
   pj_t_period:"अवधि", pj_t_agency:"अवार्ड दिने",
+  lg_kicker:"हरेक परियोजना, वर्गीकृत", lg_title:"पूर्ण परियोजना खाता",
+  lg_lead:"FY2015 देखि नेपालमा कार्यान्वयन भएका हरेक अमेरिकी अवार्ड — सबै २,६०९ — आज कहाँ छन् भनेर वर्गीकृत। \"२०२५–२६ मा सकिएको\" भनेको अवार्डको अवधि पुनर्संरचना अवधिभित्र सकिएको हो: त्यो समूहमा स्वाभाविक समापन र अग्रिम रद्द दुवै मिसिएका छन्, किनकि सार्वजनिक तथ्याङ्कले कुन-कुन हो भन्दैन। IATI पारदर्शिता फिडको जाँचमा जम्मा ६ अमेरिकी क्रियाकलाप मात्र औपचारिक रूपमा रद्द/निलम्बित देखिन्छन् — आधिकारिक स्थिति रिपोर्टिङ यथार्थभन्दा पछि छ।",
+  lg_sum:"{total} अवार्ड · २०२५ अघि सम्पन्न: {comp} (${compm}m) · २०२५–२६ अवधिमा सकिएको: {e26} (${e26m}m) · हाल चालु: {act} (${actm}m)",
+  lg_cohort_note:"हरेक अमेरिकी आर्थिक वर्षसँग अवधि जुध्ने अवार्डको सङ्ख्या।",
+  lg_f_status:"स्थिति", lg_f_search:"खोज्नुहोस्",
+  lg_t_status:"स्थिति", lg_all:"सबै स्थिति",
+  lg_s_active:"चालु", lg_s_completed:"सम्पन्न", lg_s_ended_2526:"२०२५–२६ मा सकिएको", lg_s_undated:"मिति नभएको",
+  lg_count:"{match} मिल्ने अवार्डमध्ये {shown} देखाइएको",
+  lg_note:"$1m र माथिका अवार्ड देखाइएको; सबै २,६०९ अवार्डको पूर्ण खाता us_projects_all.csv मा छ। प्रतिबद्धता आधार, कार्यस्थल नेपाल।",
+  lg_cohort_t:"आर्थिक वर्षअनुसार चालु अवार्ड",
   gl_kicker:"दीर्घकालीन खेल", gl_title:"घोषित दीर्घकालीन लक्ष्यहरू",
   gl_lead:"आधिकारिक कार्यक्रम दस्तावेजअनुसार यो रकम केका लागि हो — हरेक कार्ड स्रोतसँग जोडिएको छ।",
   dc_kicker:"प्राथमिक दस्तावेज", dc_title:"आधार दस्तावेजहरू: पढिएको र अभिलेख गरिएको",
@@ -462,7 +506,52 @@ function render(){
   ag.value=awGroup; ag.onchange=()=>{awGroup=ag.value; drawAwards();};
 
   drawArc(); drawFunnel(); drawPurpose(); drawAccounts(); drawSankey(); drawTreemap(); drawManaging();
-  drawPartners(); drawAwards(); drawGoals(); drawDocs(); drawCuts();
+  drawPartners(); drawAwards(); drawLedger(); drawGoals(); drawDocs(); drawCuts();
+}
+
+let lgStatus='all', lgQuery='';
+function drawLedger(){
+  const P=window.US_PROJECTS; if(!P) return;
+  const S=P.summary, g=k=>S[k]||{n:0,usd:0};
+  document.getElementById('ledger-sum').textContent = t('lg_sum')
+    .replace('{total}',P.meta.n_total.toLocaleString())
+    .replace('{comp}',g('completed').n.toLocaleString()).replace('{compm}',Math.round(g('completed').usd).toLocaleString())
+    .replace('{e26}',g('ended_2526').n).replace('{e26m}',Math.round(g('ended_2526').usd).toLocaleString())
+    .replace('{act}',g('active').n).replace('{actm}',Math.round(g('active').usd).toLocaleString());
+
+  aria('c-cohorts', t('lg_cohort_t'));
+  chart('c-cohorts').setOption({animation:anim,textStyle:baseText(),
+    title:{text:t('lg_cohort_t'),left:'center',top:2,textStyle:{fontSize:14,fontWeight:600}},
+    grid:{left:50,right:16,top:36,bottom:28},
+    tooltip:{trigger:'axis'},
+    xAxis:{type:'category',data:P.cohorts.map(c=>c.fy)},
+    yAxis:{type:'value',splitLine:{lineStyle:{color:'#eef1f6'}}},
+    series:[{type:'bar',data:P.cohorts.map(c=>({value:c.n,
+      itemStyle:{color:c.fy>=2025?'#dc2626':'#0e7c86',borderRadius:[3,3,0,0]}}))}]},true);
+
+  // status filter options (rebuilt for language)
+  const sel=document.getElementById('lgStatus');
+  sel.innerHTML=`<option value="all">${t('lg_all')}</option>`+
+    ['active','ended_2526','completed','undated'].map(s=>`<option value="${s}">${t('lg_s_'+s)}</option>`).join('');
+  sel.value=lgStatus; sel.onchange=()=>{lgStatus=sel.value; renderLedgerRows();};
+  const inp=document.getElementById('lgSearch');
+  inp.oninput=()=>{lgQuery=inp.value.toLowerCase(); renderLedgerRows();};
+  renderLedgerRows();
+}
+
+function renderLedgerRows(){
+  const P=window.US_PROJECTS; if(!P) return;
+  const pills={active:'p-cons',completed:'p-exp',ended_2526:'p-low',undated:'p-med'};
+  const match=P.list.filter(a=>(lgStatus==='all'||a.status===lgStatus) &&
+    (!lgQuery||(a.recipient+' '+a.desc+' '+a.agency).toLowerCase().includes(lgQuery)));
+  const shown=match.slice(0,30);
+  document.querySelector('#ledger-table tbody').innerHTML=shown.map(a=>{
+    const d=a.link?`<a href="${a.link}" target="_blank" rel="noopener">${a.desc||'—'}</a>`:(a.desc||'—');
+    return `<tr><td class="num">$${a.usd.toFixed(1)}</td><td>${a.recipient}</td><td>${d}</td>
+      <td style="white-space:nowrap">${(a.start||'?').slice(0,7)} → ${(a.end||'?').slice(0,7)}</td>
+      <td><span class="pill ${pills[a.status]||'p-exp'}">${t('lg_s_'+a.status)}</span></td></tr>`;}).join('');
+  document.getElementById('ledger-count').textContent =
+    t('lg_count').replace('{shown}',shown.length).replace('{match}',match.length);
 }
 
 function drawDocs(){

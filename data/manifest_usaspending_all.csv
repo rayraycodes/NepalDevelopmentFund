@@ -1,0 +1,3 @@
+source,snapshot_path,url,params,sha256,bytes,http_status,retrieved_at
+usaspending_all,data/raw/usaspending_all/all_awards_assistance_p1_20260611T223113Z.json,https://api.usaspending.gov/api/v2/search/spending_by_award,group=assistance;limit=100,06fb1f870cfd8f09bfef1967353362c6b34702d2e530017ae2d9a32c31f04dbf,50166,200,2026-06-11T22:31:13Z
+usaspending_all,data/raw/usaspending_all/all_awards_contracts_p1_20260611T223115Z.json,https://api.usaspending.gov/api/v2/search/spending_by_award,group=contracts;limit=100,8944f538211aa365eec2c71338062c544d895c3110787e484b2e910c14024afb,47938,200,2026-06-11T22:31:15Z

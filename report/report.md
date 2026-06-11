@@ -333,6 +333,7 @@ d-portal's `select=stats` form is broken and the `from=act` form must be used.
 | [`data/processed/us_partners.csv`](../data/processed/us_partners.csv) | top US implementing partners for Nepal (USASpending.gov awards, obligations, place of performance NPL; separate accounting frame, not additive with the above) |
 | [`data/processed/us_awards.csv`](../data/processed/us_awards.csv) | largest named US awards for Nepal with official descriptions, periods, awarding agencies and award links (USASpending.gov) |
 | [`data/processed/documents.csv`](../data/processed/documents.csv) | registry of archived primary documents (MCC compact agreement, USAID CDCS 2020-25 recovered from grants.gov, US ICS, ADB CPS 2025-29, WB CPF FY2025-31) with SHA-256, page counts and original URLs; PDFs in `data/raw/docs/`, extracted text in `data/interim/docs/` |
+| [`data/processed/us_projects_all.csv`](../data/processed/us_projects_all.csv) | the FULL US project ledger: all 2,609 awards implemented in Nepal FY2015-26 (USASpending), each triaged completed / active / ended-in-2025-26-window / undated, with description, period, agency and award link |
 | [`data/processed/reconciliation_donor_vs_recipient.csv`](../data/processed/reconciliation_donor_vs_recipient.csv) | per-year donor vs recipient vs anchor, gaps |
 | [`data/processed/coverage_matrix.csv`](../data/processed/coverage_matrix.csv) | which donors appear donor-side, recipient-side, or both |
 | [`data/processed/data_dictionary.json`](../data/processed/data_dictionary.json) | field and code definitions |
