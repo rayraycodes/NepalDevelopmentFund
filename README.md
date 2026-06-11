@@ -36,6 +36,14 @@ header), mobile-friendly, and built for accessibility: a plain-language "How to 
 guide, a glossary, ARIA-labelled charts, keyboard focus, and reduced-motion support. Run
 `make serve` and open http://127.0.0.1:8848.
 
+A second page, [`/usforeignaiddata`](report/dashboard/usforeignaiddata/index.html), is a
+**US deep dive** built from three mutually-reconciling cuts of the official
+ForeignAssistance.gov data-api (FY2001–FY2026): the 25-year promised-vs-delivered arc (current
+and constant-2024 dollars), budget-account plumbing (stacked + agency→account sankey), a
+category→program treemap, funding vs implementing agencies, and an account-by-account table of
+the 2025–26 restructuring (18 active accounts in FY2024 → 7 in FY2026; MCC becomes the dominant
+channel). Also bilingual and mobile-friendly.
+
 Each fetch writes an **immutable, dated raw snapshot** under `data/raw/<source>/` and a
 SHA-256 row to `data/manifest_<source>.csv`. Outputs land in `data/processed/`.
 

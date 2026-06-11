@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>US Foreign Aid to Nepal — Deep Dive</title>
+<style>
+  :root{
+    --bg:#eef1f6; --card:#fff; --ink:#0f1d2e; --muted:#56697d; --line:#e3e8ef;
+    --navy:#0d2440; --teal:#0e7c86;
+    --ob:#f59e0b; --di:#2563eb; --con:#64748b; --bad:#dc2626; --good:#0f9d58;
+    --shadow:0 1px 2px rgba(16,29,46,.06),0 8px 24px rgba(16,29,46,.06);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);overflow-x:clip;font-size:16px;
+    font-family:"Inter","Noto Sans Devanagari",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  html[lang="ne"] body{line-height:1.7}
+  a{color:var(--teal)} a:hover{text-decoration:underline}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 18px}
+  .skip{position:absolute;left:-999px;top:0;background:#fff;color:var(--navy);padding:10px 14px;border-radius:8px;z-index:200}
+  .skip:focus{left:12px;top:8px}
+  :focus-visible{outline:3px solid #37b3bd;outline-offset:2px;border-radius:6px}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(13,36,64,.97);backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(255,255,255,.08)}
+  .hbar{display:flex;align-items:center;gap:12px;padding:11px 0;color:#fff;flex-wrap:wrap}
+  .logo{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,#b91c1c,#1d4ed8);
+    display:grid;place-items:center;font-weight:800;color:#fff;flex:none}
+  .hbar h1{font-size:15px;margin:0;font-weight:650}
+  .hbar .sub{font-size:12px;color:#a9bdd4;margin-top:1px}
+  .backlink{color:#cdd9e8;font-size:13px;padding:8px 10px;border-radius:7px;white-space:nowrap}
+  .backlink:hover{background:rgba(255,255,255,.08);color:#fff;text-decoration:none}
+  .lang{display:inline-flex;border:1px solid rgba(255,255,255,.25);border-radius:8px;overflow:hidden;margin-left:auto}
+  .lang button{background:transparent;color:#cdd9e8;border:0;padding:8px 11px;font:inherit;font-size:13px;cursor:pointer;min-height:40px;min-width:46px}
+  .lang button[aria-pressed="true"]{background:var(--teal);color:#fff;font-weight:600}
+
+  .hero{background:radial-gradient(1100px 360px at 75% -40%,rgba(185,28,28,.22),transparent),var(--navy);color:#fff;padding:36px 0 30px}
+  .hero h2{font-size:28px;line-height:1.2;margin:0 0 10px;font-weight:740;max-width:820px}
+  .hero p{color:#bcccdf;max-width:720px;margin:0}
+
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin:-30px 0 8px;position:relative;z-index:2}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px;box-shadow:var(--shadow)}
+  .kpi .v{font-size:22px;font-weight:760;letter-spacing:-.3px}
+  .kpi .l{font-size:12px;color:var(--muted);margin-top:4px}
+  .kpi .bar{height:3px;border-radius:3px;background:linear-gradient(90deg,#b91c1c,#1d4ed8);width:34px;margin-bottom:10px}
+
+  section{padding:28px 0 4px}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:.10em;text-transform:uppercase;color:var(--teal)}
+  h3{font-size:21px;margin:6px 0 6px;font-weight:700}
+  .lead{color:var(--muted);max-width:800px;margin:0 0 16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow);max-width:100%}
+  .chart{width:100%;height:400px}.chart.sm{height:350px}.chart.tall{height:460px}
+  .scrollwrap{overflow-x:auto}.scrollwrap .chart{min-width:620px}
+  .controls{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+  label{font-size:13.5px;color:var(--muted)}
+  select{font:inherit;font-size:14px;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);min-height:42px}
+  .note{font-size:12.5px;color:var(--muted);margin-top:10px}
+
+  .explain{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+  .term{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:11px;padding:14px 16px;box-shadow:var(--shadow)}
+  .term b{display:block;font-size:15px;margin-bottom:4px}
+  .term span{font-size:13.5px;color:#3a4a5c}
+
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:700}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+  .zero{color:var(--bad);font-weight:700}
+  .disclaim{background:#fff;border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:10px;padding:13px 16px;font-size:13.5px;color:#3a4a5c;margin-top:14px}
+  footer{margin-top:34px;padding:22px 0 46px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+  #cuts-table{min-width:560px}
+  @media(max-width:880px){
+    .kpis{grid-template-columns:repeat(2,1fr)}.explain{grid-template-columns:1fr}
+    .hero h2{font-size:22px}.hbar .sub{display:none}
+    .chart{height:330px}.chart.sm{height:310px}.chart.tall{height:420px}
+  }
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#arc" data-i18n="skip">Skip to content</a>
+<header>
+  <div class="wrap hbar">
+    <div class="logo" aria-hidden="true">US</div>
+    <div>
+      <h1 data-i18n="title">US Foreign Aid to Nepal — Deep Dive</h1>
+      <div class="sub" data-i18n="subtitle">Official ForeignAssistance.gov data · FY2001–FY2026</div>
+    </div>
+    <a class="backlink" href="../" data-i18n="back">← Main dashboard</a>
+    <div class="lang" role="group" aria-label="Language">
+      <button id="lang-en" aria-pressed="true" onclick="setLang('en')">EN</button>
+      <button id="lang-ne" aria-pressed="false" onclick="setLang('ne')" lang="ne">नेपाली</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h2 data-i18n="hero">Two billion dollars, account by account: how US aid to Nepal is built, and how it is being rebuilt.</h2>
+    <p data-i18n="hero_p">The most granular public view of US assistance to Nepal: every budget account, every sub-sector, who funds it and who runs it — from the US government's own reporting system.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="kpis" id="kpis"></div>
+
+  <section id="guide">
+    <div class="kicker" data-i18n="g_kicker">Start here</div>
+    <h3 data-i18n="g_title">Four words that unlock this page</h3>
+    <div class="explain" id="explain"></div>
+  </section>
+
+  <section id="arc">
+    <div class="kicker" data-i18n="arc_kicker">The 25-year arc</div>
+    <h3 data-i18n="arc_title">Promised vs delivered, FY2001–FY2026</h3>
+    <p class="lead" data-i18n="arc_lead">Amber is money promised (obligations); blue is money actually paid out (disbursements). The huge amber spike in FY2023 is the $460m Millennium Challenge Corporation compact being signed into obligation. The dashed gray line restates delivery in constant 2024 dollars: in real terms, US aid today is at its highest level ever — even as the system shrinks.</p>
+    <div class="card"><div id="c-arc" class="chart" role="img"></div>
+      <div class="note" data-i18n="arc_note">US fiscal years (October–September). FY2026 is partial-year data.</div></div>
+  </section>
+
+  <section id="accounts">
+    <div class="kicker" data-i18n="acc_kicker">The plumbing</div>
+    <h3 data-i18n="acc_title">Which budget accounts carry the money</h3>
+    <p class="lead" data-i18n="acc_lead">US aid is not one pot: it flows through named budget accounts created by Congress. For Nepal the backbone has been the Economic Support Fund, Global Health, and Development Assistance. Watch the orange MCC compact arrive in FY2025–26 as most other accounts fade.</p>
+    <div class="card"><div class="scrollwrap"><div id="c-accounts" class="chart" role="img"></div></div></div>
+  </section>
+
+  <section id="sankey">
+    <div class="kicker" data-i18n="sk_kicker">Follow the dollar</div>
+    <h3 data-i18n="sk_title">From agency to account</h3>
+    <p class="lead" data-i18n="sk_lead">Each band is money flowing from a US government agency (left) into one of its budget accounts (right) in the chosen year. Switch between FY2024 and FY2026 to watch a many-channel system collapse into a few pipes.</p>
+    <div class="controls"><label for="skYear" data-i18n="year">Year</label><select id="skYear"></select></div>
+    <div class="card"><div class="scrollwrap"><div id="c-sankey" class="chart tall" role="img"></div></div></div>
+  </section>
+
+  <section id="sectors">
+    <div class="kicker" data-i18n="sec_kicker">What it buys</div>
+    <h3 data-i18n="sec_title">Inside the sectors</h3>
+    <p class="lead" data-i18n="sec_lead">"Health" is not one thing. The treemap opens each category into its real programs: maternal and child health, HIV, tuberculosis, family planning, basic education, agriculture. Click a block to zoom; click the breadcrumb to come back.</p>
+    <div class="controls"><label for="tmYear" data-i18n="year">Year</label><select id="tmYear"></select></div>
+    <div class="card"><div id="c-treemap" class="chart tall" role="img"></div></div>
+  </section>
+
+  <section id="managing">
+    <div class="kicker" data-i18n="mg_kicker">Who runs it</div>
+    <h3 data-i18n="mg_title">Funding vs running: the implementing agencies</h3>
+    <p class="lead" data-i18n="mg_lead">The agency that owns the budget is not always the one managing the work on the ground. This view shows who actually administers US assistance in Nepal — and how, after the 2025 restructuring, implementation concentrates in MCC and the State Department.</p>
+    <div class="card"><div class="scrollwrap"><div id="c-managing" class="chart sm" role="img"></div></div></div>
+  </section>
+
+  <section id="cuts">
+    <div class="kicker" data-i18n="cut_kicker">The restructuring, account by account</div>
+    <h3 data-i18n="cut_title">What was cut, what survived (new obligations)</h3>
+    <p class="lead" data-i18n="cut_lead">New promises by account, before and after the 2025 restructuring. Red zeros are channels that stopped receiving new money. Disbursements from earlier promises can continue for a while even where new obligations stop.</p>
+    <div class="card" style="overflow-x:auto">
+      <table id="cuts-table"><thead><tr>
+        <th data-i18n="t_acct">Budget account</th><th data-i18n="t_agency">Agency</th>
+        <th class="num">FY2024</th><th class="num">FY2025</th><th class="num">FY2026*</th>
+      </tr></thead><tbody></tbody></table>
+      <div class="note" data-i18n="cut_note">* FY2026 is partial. New obligations only; current US$ millions.</div>
+    </div>
+  </section>
+
+  <section id="method">
+    <div class="kicker" data-i18n="m_kicker">Method</div>
+    <h3 data-i18n="m_title">Source and integrity</h3>
+    <div class="disclaim" data-i18n="m_body">All figures come from the official ForeignAssistance.gov data service (the same one behind the US government's Nepal country page), retrieved 2026-06-04, using three independent cuts of the same money: by sector, by funding account, and by implementing agency. The three cuts reconcile to the dollar in every year. Only actual flows are shown (obligations and disbursements); budget requests and appropriations are excluded. Constant dollars are as published, base year 2024. Account and program names are kept in English because they are official US budget titles.</div>
+    <p class="note" style="margin-top:10px">
+      <a href="https://foreignassistance.gov/cd/nepal" target="_blank" rel="noopener">foreignassistance.gov/cd/nepal</a> ·
+      <span data-i18n="m_csv">machine-readable:</span>
+      <code>us_by_account.csv</code> · <code>us_by_usg_sector_detail.csv</code> · <code>us_by_managing_agency.csv</code>
+    </p>
+  </section>
+
+  <footer>
+    <span data-i18n="foot">Part of the Nepal Development Funding dataset.</span>
+    <a href="../" data-i18n="back2">Main dashboard</a>
+  </footer>
+</div>
+
+<script src="../vendor/echarts.min.js"></script>
+<script src="us_data.js"></script>
+<script>
+const D = window.US_DATA;
+const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const PAL = ['#2563eb','#0e7c86','#f59e0b','#0f9d58','#7c3aed','#db2777','#64748b','#b45309','#0891b2','#94a3b8'];
+
+const I18N = {
+ en:{
+  skip:"Skip to content", title:"US Foreign Aid to Nepal — Deep Dive",
+  subtitle:"Official ForeignAssistance.gov data · FY2001–FY2026",
+  back:"← Main dashboard", back2:"Main dashboard", year:"Year",
+  hero:"Two billion dollars, account by account: how US aid to Nepal is built, and how it is being rebuilt.",
+  hero_p:"The most granular public view of US assistance to Nepal: every budget account, every sub-sector, who funds it and who runs it — from the US government's own reporting system.",
+  g_kicker:"Start here", g_title:"Four words that unlock this page",
+  arc_kicker:"The 25-year arc", arc_title:"Promised vs delivered, FY2001–FY2026",
+  arc_lead:"Amber is money promised (obligations); blue is money actually paid out (disbursements). The huge amber spike in FY2023 is the $460m Millennium Challenge Corporation compact being signed into obligation. The dashed gray line restates delivery in constant 2024 dollars: in real terms, US aid today is at its highest level ever — even as the system shrinks.",
+  arc_note:"US fiscal years (October–September). FY2026 is partial-year data.",
+  acc_kicker:"The plumbing", acc_title:"Which budget accounts carry the money",
+  acc_lead:"US aid is not one pot: it flows through named budget accounts created by Congress. For Nepal the backbone has been the Economic Support Fund, Global Health, and Development Assistance. Watch the orange MCC compact arrive in FY2025–26 as most other accounts fade.",
+  sk_kicker:"Follow the dollar", sk_title:"From agency to account",
+  sk_lead:"Each band is money flowing from a US government agency (left) into one of its budget accounts (right) in the chosen year. Switch between FY2024 and FY2026 to watch a many-channel system collapse into a few pipes.",
+  sec_kicker:"What it buys", sec_title:"Inside the sectors",
+  sec_lead:"\"Health\" is not one thing. The treemap opens each category into its real programs: maternal and child health, HIV, tuberculosis, family planning, basic education, agriculture. Click a block to zoom; click the breadcrumb to come back.",
+  mg_kicker:"Who runs it", mg_title:"Funding vs running: the implementing agencies",
+  mg_lead:"The agency that owns the budget is not always the one managing the work on the ground. This view shows who actually administers US assistance in Nepal — and how, after the 2025 restructuring, implementation concentrates in MCC and the State Department.",
+  cut_kicker:"The restructuring, account by account", cut_title:"What was cut, what survived (new obligations)",
+  cut_lead:"New promises by account, before and after the 2025 restructuring. Red zeros are channels that stopped receiving new money. Disbursements from earlier promises can continue for a while even where new obligations stop.",
+  cut_note:"* FY2026 is partial. New obligations only; current US$ millions.",
+  t_acct:"Budget account", t_agency:"Agency",
+  m_kicker:"Method", m_title:"Source and integrity",
+  m_body:"All figures come from the official ForeignAssistance.gov data service (the same one behind the US government's Nepal country page), retrieved 2026-06-04, using three independent cuts of the same money: by sector, by funding account, and by implementing agency. The three cuts reconcile to the dollar in every year. Only actual flows are shown (obligations and disbursements); budget requests and appropriations are excluded. Constant dollars are as published, base year 2024. Account and program names are kept in English because they are official US budget titles.",
+  m_csv:"machine-readable:", foot:"Part of the Nepal Development Funding dataset. ",
+  // chart strings
+  s_ob:"Promised (obligations)", s_di:"Delivered (disbursements)", s_dic:"Delivered, constant 2024 $",
+  usdm:"US$ m", other:"Other",
+  kpi1:"Delivered to Nepal, FY2015–FY2026", kpi2:"Real-terms peak year",
+  kpi3:"MCC compact obligated in FY2023", kpi4:"Active budget accounts, FY2024 → FY2026",
+  terms:[
+    ["Obligation = a promise","A signed, legally binding commitment of money. It can pay out over several years — or be cancelled."],
+    ["Disbursement = delivery","Money actually paid out. This is the line to watch if you want to know what really arrived."],
+    ["Budget account = the pipe","Congress funds aid through named accounts (Economic Support Fund, Global Health…). Each has its own rules and politics."],
+    ["Funding vs implementing","One agency can own the budget while another runs the program. Both views are shown here, and they reconcile exactly."],
+  ],
+ },
+ ne:{
+  skip:"सामग्रीमा जानुहोस्", title:"नेपाललाई अमेरिकी वैदेशिक सहायता — गहिरो विश्लेषण",
+  subtitle:"आधिकारिक ForeignAssistance.gov तथ्याङ्क · FY2001–FY2026",
+  back:"← मुख्य ड्यासबोर्ड", back2:"मुख्य ड्यासबोर्ड", year:"वर्ष",
+  hero:"दुई अर्ब डलर, खाता-खातामा: नेपाललाई अमेरिकी सहायता कसरी बनेको छ, र कसरी पुनर्निर्माण हुँदैछ।",
+  hero_p:"नेपाललाई अमेरिकी सहायताको सबैभन्दा विस्तृत सार्वजनिक चित्र: हरेक बजेट खाता, हरेक उप-क्षेत्र, कसले रकम दिन्छ र कसले चलाउँछ — अमेरिकी सरकारकै रिपोर्टिङ प्रणालीबाट।",
+  g_kicker:"यहाँबाट सुरु गर्नुहोस्", g_title:"यो पृष्ठ खोल्ने चार शब्द",
+  arc_kicker:"२५ वर्षको यात्रा", arc_title:"वाचा बनाम वितरण, FY2001–FY2026",
+  arc_lead:"सुनौलो रङ भनेको वाचा गरिएको रकम (प्रतिबद्धता); नीलो भनेको वास्तवमा भुक्तानी भएको (वितरण)। FY2023 को ठूलो सुनौलो उकालो $460m को Millennium Challenge Corporation सम्झौता हो। खैरो धर्के रेखाले वितरणलाई स्थिर २०२४ डलरमा देखाउँछ: वास्तविक मूल्यमा अमेरिकी सहायता अहिले इतिहासकै उच्च छ — प्रणाली खुम्चिँदै गर्दा पनि।",
+  arc_note:"अमेरिकी आर्थिक वर्ष (अक्टोबर–सेप्टेम्बर)। FY2026 आंशिक।",
+  acc_kicker:"भित्री संरचना", acc_title:"कुन बजेट खाताबाट रकम बग्छ",
+  acc_lead:"अमेरिकी सहायता एउटै भाँडोबाट आउँदैन: कंग्रेसले बनाएका नाम भएका बजेट खाताबाट बग्छ। नेपालका लागि मुख्य आधार Economic Support Fund, Global Health र Development Assistance रहेका छन्। FY2025–26 मा सुन्तला रङको MCC सम्झौता आइपुगेको र अरू धेरै खाता मधुरो भएको हेर्नुहोस्।",
+  sk_kicker:"डलरलाई पछ्याउनुहोस्", sk_title:"निकायबाट खातासम्म",
+  sk_lead:"हरेक पट्टी भनेको रोजिएको वर्षमा अमेरिकी सरकारी निकाय (बायाँ) बाट उसको बजेट खाता (दायाँ) मा बगेको रकम हो। FY2024 र FY2026 साट्नुहोस् — धेरै नली भएको प्रणाली थोरै नलीमा खुम्चिएको देखिन्छ।",
+  sec_kicker:"के किनिन्छ", sec_title:"क्षेत्रभित्र पस्दा",
+  sec_lead:"\"स्वास्थ्य\" एउटै कुरा होइन। ट्रिम्यापले हरेक कोटिलाई वास्तविक कार्यक्रममा खोल्छ: मातृ-शिशु स्वास्थ्य, HIV, क्षयरोग, परिवार नियोजन, आधारभूत शिक्षा, कृषि। ब्लकमा क्लिक गरे भित्र पस्छ; माथिको ब्रेडक्रम्बले फर्काउँछ।",
+  mg_kicker:"कसले चलाउँछ", mg_title:"रकम दिने बनाम चलाउने निकाय",
+  mg_lead:"बजेटको मालिक निकाय नै सधैँ काम चलाउने निकाय हुँदैन। यो दृश्यले नेपालमा अमेरिकी सहायता वास्तवमा कसले प्रशासन गर्छ देखाउँछ — र २०२५ को पुनर्संरचनापछि कार्यान्वयन MCC र State Department मा केन्द्रित हुँदै गएको।",
+  cut_kicker:"पुनर्संरचना, खाता-खातामा", cut_title:"के काटियो, के बाँच्यो (नयाँ प्रतिबद्धता)",
+  cut_lead:"२०२५ को पुनर्संरचना अघि र पछि, खाताअनुसार नयाँ वाचा। रातो शून्य भनेको नयाँ रकम आउन बन्द भएका च्यानल हुन्। नयाँ प्रतिबद्धता रोकिए पनि पुराना वाचाको वितरण केही समय चल्न सक्छ।",
+  cut_note:"* FY2026 आंशिक। नयाँ प्रतिबद्धता मात्र; हालको अमेरिकी डलर, मिलियनमा।",
+  t_acct:"बजेट खाता", t_agency:"निकाय",
+  m_kicker:"विधि", m_title:"स्रोत र शुद्धता",
+  m_body:"सबै अङ्क आधिकारिक ForeignAssistance.gov डाटा सेवाबाट आएका हुन् (अमेरिकी सरकारकै नेपाल पृष्ठ पछाडिको सेवा), २०२६-०६-०४ मा लिइएको, एउटै रकमका तीन स्वतन्त्र कट प्रयोग गरेर: क्षेत्रअनुसार, बजेट खाताअनुसार, र कार्यान्वयन निकायअनुसार। तीनै कट हरेक वर्ष डलरसम्म मिल्छन्। वास्तविक प्रवाह मात्र देखाइएको छ (प्रतिबद्धता र वितरण); बजेट अनुरोध र विनियोजन हटाइएको छ। स्थिर डलर प्रकाशित रूपमै छ, आधार वर्ष २०२४। खाता र कार्यक्रमका नाम अमेरिकी बजेटका आधिकारिक शीर्षक भएकाले अंग्रेजीमै राखिएका छन्।",
+  m_csv:"मेसिन-पठनीय:", foot:"नेपाल विकास सहायता डेटासेटको अंश। ",
+  s_ob:"वाचा (प्रतिबद्धता)", s_di:"वितरण", s_dic:"वितरण, स्थिर २०२४ डलर",
+  usdm:"डलर (मिलियन)", other:"अन्य",
+  kpi1:"नेपाललाई वितरण, FY2015–FY2026", kpi2:"वास्तविक मूल्यमा उच्चतम वर्ष",
+  kpi3:"FY2023 मा प्रतिबद्ध MCC सम्झौता", kpi4:"सक्रिय बजेट खाता, FY2024 → FY2026",
+  terms:[
+    ["प्रतिबद्धता = वाचा","हस्ताक्षरित, कानुनी रूपमा बाध्यकारी रकमको वाचा। यो केही वर्षमा भुक्तानी हुन सक्छ — वा रद्द पनि।"],
+    ["वितरण = पुर्‍याइएको","वास्तवमा भुक्तानी भएको रकम। के साँच्चै आइपुग्यो भनेर हेर्ने रेखा यही हो।"],
+    ["बजेट खाता = नली","कंग्रेसले नाम भएका खाताबाट सहायता दिन्छ (Economic Support Fund, Global Health…)। हरेकका आफ्नै नियम र राजनीति छन्।"],
+    ["रकम दिने बनाम चलाउने","एउटा निकायको बजेट हुन सक्छ, अर्कोले कार्यक्रम चलाउन सक्छ। यहाँ दुवै दृश्य छन्, र ठ्याक्कै मिल्छन्।"],
+  ],
+ }
+};
+
+let lang = localStorage.getItem('nepal_lang') || 'en';
+const t = k => (I18N[lang][k] ?? I18N.en[k] ?? k);
+const fmt = v => v==null ? '—' : '$'+Number(v).toLocaleString('en-US',{maximumFractionDigits:1})+'m';
+const charts = {};
+const ro = ('ResizeObserver' in window) ? new ResizeObserver(es=>es.forEach(e=>{const c=charts[e.target.id]; if(c) c.resize();})) : null;
+function chart(id){ if(!charts[id]){ const el=document.getElementById(id); charts[id]=echarts.init(el); if(ro) ro.observe(el);} return charts[id]; }
+window.addEventListener('resize',()=>Object.values(charts).forEach(c=>c.resize()));
+const baseText = ()=>({fontFamily:lang==='ne'?'"Noto Sans Devanagari",Inter,sans-serif':'Inter,system-ui,sans-serif',color:'#0f1d2e'});
+const anim = !RM;
+let skYear='2024', tmYear='2022';
+
+function aria(id,label){ const el=document.getElementById(id); el.setAttribute('role','img'); el.setAttribute('aria-label',label); }
+
+function render(){
+  document.documentElement.lang = lang;
+  document.getElementById('lang-en').setAttribute('aria-pressed', lang==='en');
+  document.getElementById('lang-ne').setAttribute('aria-pressed', lang==='ne');
+  document.querySelectorAll('[data-i18n]').forEach(el=>el.innerHTML=t(el.dataset.i18n));
+
+  const k=D.kpis;
+  const cards=[
+    {v:'$'+(k.total_2015_2026/1000).toFixed(1)+'bn', l:t('kpi1')},
+    {v:'FY'+k.peak_year+' · '+fmt(k.peak), l:t('kpi2')},
+    {v:fmt(k.mcc_ob_2023), l:t('kpi3')},
+    {v:k.accounts_2024+' → '+k.accounts_2026, l:t('kpi4')},
+  ];
+  document.getElementById('kpis').innerHTML=cards.map(c=>
+    `<div class="kpi"><div class="bar" aria-hidden="true"></div><div class="v">${c.v}</div><div class="l">${c.l}</div></div>`).join('');
+  document.getElementById('explain').innerHTML=I18N[lang].terms.map(([a,b])=>
+    `<div class="term"><b>${a}</b><span>${b}</span></div>`).join('');
+
+  // selectors (rebuild keeps selection)
+  const sk=document.getElementById('skYear');
+  if(!sk.options.length){ D.meta.years.slice().reverse().forEach(y=>sk.add(new Option('FY'+y,y)));
+    sk.value=skYear; sk.onchange=()=>{skYear=sk.value; drawSankey();}; }
+  const tm=document.getElementById('tmYear');
+  if(!tm.options.length){ D.meta.years.slice().reverse().forEach(y=>tm.add(new Option('FY'+y,y)));
+    tm.value=tmYear; tm.onchange=()=>{tmYear=tm.value; drawTreemap();}; }
+
+  drawArc(); drawAccounts(); drawSankey(); drawTreemap(); drawManaging(); drawCuts();
+}
+
+function drawArc(){
+  aria('c-arc', t('arc_title'));
+  chart('c-arc').setOption({animation:anim,textStyle:baseText(),grid:{left:56,right:18,top:64,bottom:34},
+    tooltip:{trigger:'axis',valueFormatter:fmt},
+    legend:{top:6,type:'scroll',data:[t('s_ob'),t('s_di'),t('s_dic')]},
+    xAxis:{type:'category',data:D.flows.map(x=>x.y),boundaryGap:false},
+    yAxis:{type:'value',name:t('usdm'),splitLine:{lineStyle:{color:'#eef1f6'}}},
+    series:[
+      {name:t('s_ob'),type:'line',data:D.flows.map(x=>x.ob),symbol:'circle',symbolSize:5,
+        lineStyle:{width:2.5,color:'#f59e0b'},itemStyle:{color:'#f59e0b'},areaStyle:{opacity:.08,color:'#f59e0b'}},
+      {name:t('s_di'),type:'line',data:D.flows.map(x=>x.di),symbol:'rect',symbolSize:5,
+        lineStyle:{width:3,color:'#2563eb'},itemStyle:{color:'#2563eb'}},
+      {name:t('s_dic'),type:'line',data:D.flows.map(x=>x.dic),symbol:'none',
+        lineStyle:{width:2,color:'#64748b',type:'dashed'},itemStyle:{color:'#64748b'}},
+    ]},true);
+}
+
+function drawAccounts(){
+  aria('c-accounts', t('acc_title'));
+  chart('c-accounts').setOption({animation:anim,textStyle:baseText(),
+    grid:{left:56,right:18,top:78,bottom:30},
+    tooltip:{trigger:'axis',axisPointer:{type:'shadow'},valueFormatter:fmt},
+    legend:{top:4,type:'scroll',textStyle:{fontSize:11}},
+    xAxis:{type:'category',data:D.meta.years},
+    yAxis:{type:'value',name:t('usdm'),splitLine:{lineStyle:{color:'#eef1f6'}}},
+    series:D.accounts.series.map((s,i)=>({name:s.name==='Other'?t('other'):s.name,type:'bar',stack:'a',
+      data:s.data,itemStyle:{color:s.name==='MCC compact'?'#f59e0b':PAL[i%PAL.length]}}))},true);
+}
+
+function drawSankey(){
+  aria('c-sankey', t('sk_title')+' FY'+skYear);
+  const ls=(D.accounts.sankey[skYear]||[]);
+  const nodes=new Set();
+  ls.forEach(l=>{nodes.add('a:'+l.ag); nodes.add('b:'+l.acct);});
+  chart('c-sankey').setOption({animation:anim,textStyle:baseText(),
+    tooltip:{trigger:'item',valueFormatter:fmt},
+    series:[{type:'sankey',left:8,right:170,top:14,bottom:14,nodeWidth:14,nodeGap:10,
+      emphasis:{focus:'adjacency'},
+      data:[...nodes].map(n=>({name:n, label:{formatter:n.slice(2), fontSize:11}})),
+      links:ls.map(l=>({source:'a:'+l.ag, target:'b:'+l.acct, value:l.v})),
+      lineStyle:{color:'gradient',opacity:.45}}]},true);
+}
+
+function drawTreemap(){
+  aria('c-treemap', t('sec_title')+' FY'+tmYear);
+  const rows=D.sectors[tmYear]||[];
+  const byCat={};
+  rows.forEach(r=>{(byCat[r.cat]=byCat[r.cat]||[]).push({name:r.sec,value:r.v});});
+  const data=Object.entries(byCat).map(([cat,children])=>({name:cat,children}));
+  chart('c-treemap').setOption({animation:anim,textStyle:baseText(),
+    tooltip:{valueFormatter:fmt},
+    series:[{type:'treemap',roam:false,width:'100%',height:'92%',top:8,
+      breadcrumb:{show:true,top:'bottom'},
+      label:{show:true,fontSize:11,formatter:p=>p.name+'\n'+fmt(p.value)},
+      upperLabel:{show:true,height:22,fontSize:11,color:'#fff'},
+      levels:[{itemStyle:{borderColor:'#fff',borderWidth:2,gapWidth:2}},
+              {colorSaturation:[0.3,0.6],itemStyle:{borderColorSaturation:0.7,gapWidth:1}}],
+      data}]},true);
+}
+
+function drawManaging(){
+  aria('c-managing', t('mg_title'));
+  chart('c-managing').setOption({animation:anim,textStyle:baseText(),
+    grid:{left:56,right:18,top:42,bottom:30},
+    tooltip:{trigger:'axis',axisPointer:{type:'shadow'},valueFormatter:fmt},
+    legend:{top:4,type:'scroll'},
+    xAxis:{type:'category',data:D.meta.years},
+    yAxis:{type:'value',name:t('usdm'),splitLine:{lineStyle:{color:'#eef1f6'}}},
+    series:D.managing.map((s,i)=>({name:s.name==='Other'?t('other'):s.name,type:'bar',stack:'m',
+      data:s.data,itemStyle:{color:PAL[i%PAL.length]}}))},true);
+}
+
+function drawCuts(){
+  const fmtc=v=>v>=0.05?('$'+v.toFixed(1)+'m'):'<span class="zero">0</span>';
+  document.querySelector('#cuts-table tbody').innerHTML=D.accounts.cuts.slice(0,12).map(c=>
+    `<tr><td>${c.acct}</td><td>${c.agency}</td>
+     <td class="num">${fmtc(c.ob24)}</td><td class="num">${fmtc(c.ob25)}</td><td class="num">${fmtc(c.ob26)}</td></tr>`).join('');
+}
+
+function setLang(l){ lang=l; localStorage.setItem('nepal_lang',l); render(); }
+render();
+</script>
+</body>
+</html>

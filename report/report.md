@@ -327,6 +327,9 @@ d-portal's `select=stats` form is broken and the `from=act` form must be used.
 | [`data/processed/agg_by_donor_year.csv`](../data/processed/agg_by_donor_year.csv) | headline donor and recipient totals by year and flow stage |
 | [`data/processed/agg_by_sector_year.csv`](../data/processed/agg_by_sector_year.csv) | sector composition (OECD CRS, plus US mapped from USG categories) |
 | [`data/processed/us_by_agency.csv`](../data/processed/us_by_agency.csv) | US assistance by funding agency and year (official ForeignAssistance.gov; alternative cut of the US totals, not additive with the sector view) |
+| [`data/processed/us_by_account.csv`](../data/processed/us_by_account.csv) | US assistance by funding agency and named budget account (52 accounts), FY2001-FY2026, current + constant-2024 USD |
+| [`data/processed/us_by_usg_sector_detail.csv`](../data/processed/us_by_usg_sector_detail.csv) | US assistance by USG category and sub-sector (~50 programs), FY2001-FY2026 |
+| [`data/processed/us_by_managing_agency.csv`](../data/processed/us_by_managing_agency.csv) | US assistance by implementing (managing) agency; reconciles to the funding-agency cut to the dollar |
 | [`data/processed/reconciliation_donor_vs_recipient.csv`](../data/processed/reconciliation_donor_vs_recipient.csv) | per-year donor vs recipient vs anchor, gaps |
 | [`data/processed/coverage_matrix.csv`](../data/processed/coverage_matrix.csv) | which donors appear donor-side, recipient-side, or both |
 | [`data/processed/data_dictionary.json`](../data/processed/data_dictionary.json) | field and code definitions |
