@@ -192,6 +192,13 @@
     <div class="explain" id="goals-cards"></div>
   </section>
 
+  <section id="docs">
+    <div class="kicker" data-i18n="dc_kicker">Primary documents</div>
+    <h3 data-i18n="dc_title">The supporting documents, read and archived</h3>
+    <p class="lead" data-i18n="dc_lead">The five strategy and agreement documents behind the money, downloaded from their official sites, archived with checksums in this project (USAID's own website is already gone — its strategy survived only as a grants attachment), and read so you don't have to. One cross-check worth knowing: the signed MCC compact specifies $459.5m of program funding — and the funding data shows a $460.2m obligation the year it entered force. The legal document and the statistical system agree.</p>
+    <div class="explain" id="docs-cards" style="grid-template-columns:repeat(2,1fr)"></div>
+  </section>
+
   <section id="cuts">
     <div class="kicker" data-i18n="cut_kicker">The restructuring, account by account</div>
     <h3 data-i18n="cut_title">What was cut, what survived (new obligations)</h3>
@@ -273,6 +280,30 @@ const I18N = {
   pj_t_period:"Period", pj_t_agency:"Awarded by",
   gl_kicker:"The long game", gl_title:"Stated long-term goals",
   gl_lead:"What the money says it is for, from the official program documents — each card links to its source.",
+  dc_kicker:"Primary documents", dc_title:"The supporting documents, read and archived",
+  dc_lead:"The five strategy and agreement documents behind the money, downloaded from their official sites, archived with checksums in this project (USAID's own website is already gone — its strategy survived only as a grants attachment), and read so you don't have to. One cross-check worth knowing: the signed MCC compact specifies $459.5m of program funding — and the funding data shows a $460.2m obligation the year it entered force. The legal document and the statistical system agree. Across all five, the same vocabulary recurs: jobs, resilience, inclusion — the US adds democracy, the banks add climate.",
+  docs:[
+    ["Millennium Challenge Compact (signed agreement)",
+     "MCC · signed 2017-09-14 · 78 pages · archived",
+     "The legal text. Program funding US$459.5m plus Nepal's own contribution of US$130m. Objectives, verbatim: increase electricity consumption \"by facilitating power trade and by improving the availability and reliability\" of the grid, and \"maintain road quality across the strategic road network.\" Matches the $460.2m FY2023 obligation in the funding data.",
+     "https://assets.mcc.gov/content/uploads/compact-nepal.pdf","mcc.gov (PDF)"],
+    ["USAID Nepal Country Development Cooperation Strategy 2020–2025",
+     "USAID · Dec 2020 · 36 pages · recovered & archived",
+     "The strategy behind most grant programs in this dashboard. Goal, verbatim: \"A more self-reliant, prosperous, and inclusive Nepal that delivers improved democratic governance and health and education outcomes\" — under the 'Journey to Self-Reliance' framing, with federalism, inclusion and resilience woven throughout. Its home website no longer exists; this copy survived as a grants.gov attachment.",
+     "https://apply07.grants.gov/grantsws/rest/opportunity/att/download/331087","grants.gov (PDF)"],
+    ["US Integrated Country Strategy: Nepal",
+     "State Department · 2022 (updated 2024) · 25 pages · archived",
+     "The whole-of-US-government frame. Three mission goals: strengthen good governance, democratic values and security; advance inclusive, equitable economic growth and a clean economy; and help Nepal become \"more self-reliant, independent, and resilient\" — diplomatic language for reducing dependence on any single neighbour.",
+     "https://2021-2025.state.gov/wp-content/uploads/2022/06/ICS_SCA_Nepal_Public.pdf","state.gov (PDF)"],
+    ["ADB Country Partnership Strategy: Nepal 2025–2029",
+     "Asian Development Bank · May 2025 · 21 pages · archived",
+     "Nepal's second-largest funder, for comparison. Three strategic priorities: private sector-led, employment-intensive green growth; inclusive, quality human capital; and environmental sustainability and climate resilience — with governance and capacity development cross-cutting.",
+     "https://www.adb.org/sites/default/files/institutional-document/1058276/cps-nep-2025-2029.pdf","adb.org (PDF)"],
+    ["World Bank Group Country Partnership Framework: Nepal FY2025–FY2031",
+     "World Bank Group · May 2025 · 112 pages · archived",
+     "The largest funder's seven-year plan. Four high-level outcomes: increased, equitable access to public services; more and better private-sector jobs; more inclusive and sustainable returns to human, natural and physical assets; and enhanced resilience to economic and environmental shocks.",
+     "https://documents.worldbank.org/curated/en/099050625143524020/pdf/BOSIB-16a89439-c3ef-4002-9acb-ca6b2c267585.pdf","worldbank.org (PDF)"],
+  ],
   goals:[
     ["MCC Compact (2023–2028): power and roads",
      "A $500m grant: about 300 km of high-voltage transmission lines including a cross-border link to India to enable electricity trade, plus a maintenance regime for some 300 km of strategic roads. Long-term aim: unlock Nepal's hydropower exports and cut transport costs. Signed 2017, ratified by parliament February 2022, in force 30 August 2023.",
@@ -337,6 +368,30 @@ const I18N = {
   pj_t_period:"अवधि", pj_t_agency:"अवार्ड दिने",
   gl_kicker:"दीर्घकालीन खेल", gl_title:"घोषित दीर्घकालीन लक्ष्यहरू",
   gl_lead:"आधिकारिक कार्यक्रम दस्तावेजअनुसार यो रकम केका लागि हो — हरेक कार्ड स्रोतसँग जोडिएको छ।",
+  dc_kicker:"प्राथमिक दस्तावेज", dc_title:"आधार दस्तावेजहरू: पढिएको र अभिलेख गरिएको",
+  dc_lead:"पैसाका पछाडिका पाँच रणनीति र सम्झौता दस्तावेज, आधिकारिक साइटबाट झिकेर यस परियोजनामा चेकसमसहित अभिलेख गरिएका (USAID को आफ्नै वेबसाइट गइसक्यो — उसको रणनीति grants.gov को संलग्न फाइलका रूपमा मात्र बाँच्यो), र तपाईंका लागि पढिएका। एउटा महत्त्वपूर्ण जाँच: हस्ताक्षरित MCC सम्झौताले $459.5m कार्यक्रम रकम तोक्छ — र कोष तथ्याङ्कले लागू भएकै वर्ष $460.2m को प्रतिबद्धता देखाउँछ। कानुनी दस्तावेज र तथ्याङ्क प्रणाली मिल्छन्। पाँचै दस्तावेजमा एउटै शब्दावली दोहोरिन्छ: रोजगारी, उत्थानशीलता, समावेशिता — अमेरिकाले लोकतन्त्र थप्छ, बैंकहरूले जलवायु।",
+  docs:[
+    ["Millennium Challenge Compact (हस्ताक्षरित सम्झौता)",
+     "MCC · हस्ताक्षर २०१७-०९-१४ · ७८ पृष्ठ · अभिलेखित",
+     "कानुनी पाठ। कार्यक्रम रकम US$459.5m र नेपालको आफ्नै योगदान US$130m। उद्देश्य, शब्दशः: बिजुली व्यापार सहज बनाएर र ग्रिडको उपलब्धता/विश्वसनीयता सुधारेर बिजुली खपत बढाउने; र रणनीतिक सडक सञ्जालको गुणस्तर कायम राख्ने। कोष तथ्याङ्कको FY2023 को $460.2m प्रतिबद्धतासँग मिल्छ।",
+     "https://assets.mcc.gov/content/uploads/compact-nepal.pdf","mcc.gov (PDF)"],
+    ["USAID नेपाल विकास सहयोग रणनीति (CDCS) २०२०–२०२५",
+     "USAID · डिसेम्बर २०२० · ३६ पृष्ठ · पुनःप्राप्त र अभिलेखित",
+     "यो ड्यासबोर्डका अधिकांश अनुदान कार्यक्रमका पछाडिको रणनीति। लक्ष्य, शब्दशः: \"बढी आत्मनिर्भर, समृद्ध र समावेशी नेपाल, जसले सुधारिएको लोकतान्त्रिक शासन तथा स्वास्थ्य र शिक्षा परिणाम दिन्छ\" — 'आत्मनिर्भरताको यात्रा' ढाँचाअन्तर्गत, संघीयता, समावेशिता र उत्थानशीलता सबैतिर बुनिएका। यसको मूल वेबसाइट अब छैन; यो प्रति grants.gov को संलग्नका रूपमा बाँच्यो।",
+     "https://apply07.grants.gov/grantsws/rest/opportunity/att/download/331087","grants.gov (PDF)"],
+    ["US Integrated Country Strategy: नेपाल",
+     "State Department · २०२२ (२०२४ अद्यावधिक) · २५ पृष्ठ · अभिलेखित",
+     "सम्पूर्ण-अमेरिकी-सरकारको ढाँचा। तीन लक्ष्य: सुशासन, लोकतान्त्रिक मूल्य र सुरक्षा बलियो बनाउने; समावेशी, न्यायोचित आर्थिक वृद्धि र स्वच्छ अर्थतन्त्र अघि बढाउने; र नेपाललाई \"बढी आत्मनिर्भर, स्वतन्त्र र उत्थानशील\" बनाउन सघाउने — कुनै एक छिमेकीमाथिको निर्भरता घटाउने कूटनीतिक भाषा।",
+     "https://2021-2025.state.gov/wp-content/uploads/2022/06/ICS_SCA_Nepal_Public.pdf","state.gov (PDF)"],
+    ["ADB देश साझेदारी रणनीति: नेपाल २०२५–२०२९",
+     "एसियाली विकास बैंक · मे २०२५ · २१ पृष्ठ · अभिलेखित",
+     "तुलनाका लागि, नेपालको दोस्रो ठूलो दाता। तीन रणनीतिक प्राथमिकता: निजी क्षेत्र-नेतृत्वको, रोजगारमूलक हरित वृद्धि; समावेशी, गुणस्तरीय मानव पुँजी; र वातावरणीय दिगोपन तथा जलवायु उत्थानशीलता — सुशासन र क्षमता विकास साझा विषय।",
+     "https://www.adb.org/sites/default/files/institutional-document/1058276/cps-nep-2025-2029.pdf","adb.org (PDF)"],
+    ["विश्व बैंक समूह देश साझेदारी ढाँचा: नेपाल FY2025–FY2031",
+     "विश्व बैंक समूह · मे २०२५ · ११२ पृष्ठ · अभिलेखित",
+     "सबैभन्दा ठूलो दाताको सात-वर्षे योजना। चार उच्च-स्तरीय परिणाम: सार्वजनिक सेवामा न्यायोचित पहुँच; निजी क्षेत्रका बढी र राम्रा रोजगारी; मानव, प्राकृतिक र भौतिक सम्पत्तिबाट समावेशी, दिगो प्रतिफल; र आर्थिक तथा वातावरणीय धक्काप्रति उत्थानशीलता।",
+     "https://documents.worldbank.org/curated/en/099050625143524020/pdf/BOSIB-16a89439-c3ef-4002-9acb-ca6b2c267585.pdf","worldbank.org (PDF)"],
+  ],
   goals:[
     ["MCC सम्झौता (२०२३–२०२८): बिजुली र सडक",
      "$500m अनुदान: भारतसँगको सीमापार लाइनसहित करिब ३०० किमी उच्च-भोल्टेज प्रसारण लाइन (बिजुली व्यापारका लागि), र करिब ३०० किमी रणनीतिक सडकको मर्मत प्रणाली। दीर्घकालीन उद्देश्य: नेपालको जलविद्युत् निर्यात खोल्ने र ढुवानी लागत घटाउने। २०१७ मा हस्ताक्षर, फेब्रुअरी २०२२ मा संसदबाट अनुमोदन, ३० अगस्ट २०२३ देखि लागू।",
@@ -407,7 +462,15 @@ function render(){
   ag.value=awGroup; ag.onchange=()=>{awGroup=ag.value; drawAwards();};
 
   drawArc(); drawFunnel(); drawPurpose(); drawAccounts(); drawSankey(); drawTreemap(); drawManaging();
-  drawPartners(); drawAwards(); drawGoals(); drawCuts();
+  drawPartners(); drawAwards(); drawGoals(); drawDocs(); drawCuts();
+}
+
+function drawDocs(){
+  document.getElementById('docs-cards').innerHTML=I18N[lang].docs.map(([h,meta,b,url,label])=>
+    `<div class="term"><b>${h}</b>
+     <div style="font-size:11.5px;color:#56697d;margin:2px 0 7px">${meta}</div>
+     <span>${b}</span>
+     <div style="margin-top:8px;font-size:12.5px"><a href="${url}" target="_blank" rel="noopener">${label} ↗</a></div></div>`).join('');
 }
 
 function drawFunnel(){

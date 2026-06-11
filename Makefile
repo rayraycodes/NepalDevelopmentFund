@@ -23,6 +23,10 @@ fetch:
 	$(PY) scripts/17_fetch_aiddata.py
 	$(PY) scripts/18_fetch_oecd_crs.py
 
+# primary supporting documents (strategies, compact agreements) -> data/raw/docs + registry
+docs:
+	$(PY) scripts/88_fetch_docs.py
+
 # Phase 3 — synthesis
 build:
 	$(PY) scripts/40_dedupe_iati.py

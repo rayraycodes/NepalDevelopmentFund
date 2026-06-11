@@ -1,0 +1,6 @@
+source,snapshot_path,url,params,sha256,bytes,http_status,retrieved_at
+docs,data/raw/docs/us_ics_nepal_2022_20260611T222149Z.pdf,https://2021-2025.state.gov/wp-content/uploads/2022/06/ICS_SCA_Nepal_Public.pdf,,b9bafc6ea2e28e8cd399d6344684fa9897a6c4f7d3fe49ca1b8577e74e0eafb5,293327,200,2026-06-11T22:21:49Z
+docs,data/raw/docs/usaid_cdcs_nepal_2020_2025_20260611T222151Z.pdf,https://apply07.grants.gov/grantsws/rest/opportunity/att/download/331087,,a1b3c95574c1ea1a28d574306d8e2f2dbc9389fbbda081d3315955bfb8cd1485,1510436,200,2026-06-11T22:21:51Z
+docs,data/raw/docs/mcc_nepal_compact_2017_20260611T222318Z.pdf,https://assets.mcc.gov/content/uploads/compact-nepal.pdf,,431965eb5bf160f8b1f419848e0488d4d28ac3898129993138368be8265d1196,1290132,200,2026-06-11T22:23:18Z
+docs,data/raw/docs/adb_cps_nepal_2025_2029_20260611T222319Z.pdf,https://www.adb.org/sites/default/files/institutional-document/1058276/cps-nep-2025-2029.pdf,,8321859cabf2acfdadd9f24423e000d6daaa09f593877972d2fb8e02a8345439,612516,200,2026-06-11T22:23:19Z
+docs,data/raw/docs/wb_cpf_nepal_fy2025_31_20260611T222320Z.pdf,https://documents.worldbank.org/curated/en/099050625143524020/pdf/BOSIB-16a89439-c3ef-4002-9acb-ca6b2c267585.pdf,,681712a6f25a58b1e4bd13a9deada5ad1c027b260d984f1186e0a1febd82bbe0,1697202,200,2026-06-11T22:23:20Z

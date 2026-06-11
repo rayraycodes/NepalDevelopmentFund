@@ -1,0 +1,1681 @@
+                  UNCLASSIFIED (U)
+
+
+
+
+                                    NEPAL
+
+
+
+
+                                              PHOTO CREDIT: THOMAS CHRISTOFOLETTI
+
+
+
+
+COUNTRY DEVELOPMENT
+COOPERATION STRATEGY
+       (CDCS)
+
+DECEMBER 2020 - DECEMBER 2025
+
+
+                Approved for Public Release
+ CONTENTS
+ ACRONYMS                                                                         2
+ EXECUTIVE SUMMARY                                                                3
+ COUNTRY CONTEXT                                                                  5
+   IMPACT OF COVID-19                                                             7
+   ALIGNMENT WITH GON PRIORITIES                                                  7
+   THE JOURNEY TO SELF RELIANCE (J2SR)                                            7
+ STRATEGIC APPROACH                                                             10
+   SUPPORTING THE TRANSITION TO FEDERALISM                                       10
+   INCLUSION AS A PRIMARY TARGET OF INTERVENTION                                 11
+   INTEGRATING RESILIENCE INTO OUTCOMES                                          12
+ RESULTS FRAMEWORK                                                              13
+   GOAL STATEMENT AND NARRATIVE                                                  13
+   DO 1: MORE EFFECTIVE, PARTICIPATORY, AND EQUITABLE DEMOCRATIC ECOSYSTEM       13
+   DO 2: BROAD-BASED AND INCLUSIVE ECONOMIC GROWTH FOSTERED                      16
+   DO 3: INCLUSIVE HEALTH & EDUCATION SYSTEMS STRENGTHENED                       20
+   DO 4: MORE EQUITABLE & IMPROVED NATURAL RESOURCES & DISASTER RISK
+   MANAGEMENT                                                                    24
+ MONITORING, EVALUATION, AND LEARNING                                           28
+ ANNEXES                                                                        29
+   A. JOURNEY TO SELF-RELIANCE COUNTRY ROADMAP                                   30
+   B. ENDNOTES                                                                   32
+
+
+
+
+USAID.GOV                                                         USAID NEPAL CDCS | 1
+ ACRONYMS
+ ADB             Asian Development Bank
+ CDCS            Country Development Cooperation Strategy
+ CEFM            Child and Early Forced Marriage
+ COVID-19        Novel coronavirus SARS-CoV2
+ CSO             Civil Society Organization
+ DO              Development Objective
+ DIS             Development Information Solution
+ DfID            United Kingdom Department for International Development
+ DRM             Disaster Risk Management
+ EU              European Union
+ FSR             Financing Self Reliance
+ G2G             Government to Government
+ GBV             Gender Based Violence
+ GDP             Gross Domestic Product
+ GESI            Gender Equality and Social Inclusion
+ GIS             Geographic Information System
+ GON             Government of Nepal
+ GPE             Global Partnership for Education
+ GTZ             Deutsche Gesellschaft für Technische Zusammenarbeit (German Technical Cooperation)
+ ICT             Information Communications Technology
+ IMF             International Monetary Fund
+ INGO            International Non-Governmental Organization
+ IR              Intermediate Result
+ J2SR            Journey to Self Reliance
+ JICA            Japan International Cooperation Agency
+ NDRRMA          National Disaster Risk Reduction Management Authority
+ NGO             Non-Governmental Organization
+ NPI             New Partner Initiative
+ NUP             New and Underutilized Partners
+ PFM             Public Financial Management
+ PMP             Performance Management Plan
+ PSE             Private Sector Engagement
+ RDR             Redefining the Development Relationship
+ TIP             Trafficking in Persons
+ UN              United Nations
+ UNDP            United Nations Development Programme
+ UNICEF          United Nation Children’s Fund
+ WASH            Water, Sanitation, and Hygiene
+ WHO             World Health Organization
+ WYM             Women, Youth, and Marginalized
+
+
+
+
+2 | USAID NEPAL CDCS                                                                       USAID.GOV
+ EXECUTIVE SUMMARY
+ Nepal faces enormous and complicated development challenges, including social exclusion, inadequate
+ basic service delivery, insufficient economic opportunity and sources of growth, relatively new and
+ largely untested decentralized processes and institutions, incomplete reconstruction from the 2015
+ earthquakes, and vast natural resources and biodiversity that require protection. The COVID-19
+ pandemic has made existing development challenges even more pronounced and dire. It has widened the
+ gap between those who have access to resources and power, and those who do not; it has decreased
+ economic activity and opportunity; it has forced up to 1 million Nepali migrant workers home from over
+ a dozen countries; it has undermined key sectors of the economy that Nepal depends on for survival;
+ and it has threatened to erase hard earned gains in health, education, and public service delivery.
+
+ The next five years are crucial for Nepal, not just to recover from COVID-19 and continue its previous
+ development trajectory, but also to make the gains needed to attain its own goal of reaching middle
+ income country status by 2030. To achieve this progress, Nepal will need to tap deeper into its own
+ productive resources, implement policies that attract investment, and more aggressively engage the
+ private sector in higher growth and more productive economic sectors, all the while building
+ connectivity within the region. It also needs to ensure that its federal experiment is successful by giving
+ voice, power, and authority to all of its diverse population. This will provide Nepal with a strong
+ foundation for long-term inclusive, equitable, and sustainable economic growth and social development.
+
+ Built on this context, USAID’s goal for the 2020-2025 CDCS is “A more self-reliant, prosperous, and
+ inclusive Nepal that delivers improved democratic governance and health and education outcomes.”
+ Over the strategy period, USAID will make significant investments to increase self-reliance, prosperity,
+ and inclusiveness that will advance Nepal’s development trajectory and allow Nepal to make impressive
+ development gains that benefit all citizens. The first component of the goal, comprising the principles of
+ self-reliance, prosperity, and inclusion cut across all aspects of the CDCS; they represent core elements
+ crucial for Nepal’s development and are key to how the Mission will adapt its approach to build the
+ capacity and institutions necessary to advance the Journey to Self-Reliance (J2SR) in Nepal.
+
+ The second component of the goal focuses on advancing democracy and human capacity development,
+ each of which are intertwined and are dependent on how successful Nepal is in establishing and
+ implementing federalism. For example, the provision of critical public services - namely, health and
+ education - is a measure of the success of federalism and its implementation, and is inherently linked to
+ citizen capacity. COVID-19 further complicates the situation, disproportionately affecting both health
+ and education outcomes, reducing access and quality - especially for the most marginalized -
+ exacerbating existing inequality and vulnerability. Because Nepal has made federalism a fundamental
+ component to the success of its democracy, it features prominently throughout the CDCS. Federalism is
+ also one of the essential mechanisms for increasing self-reliance, inclusiveness, prosperity, democratic
+ governance, and human capacity development over the next five years.
+
+ To support Nepal’s development vision, USAID has woven three strategic approaches throughout the
+ CDCS: Supporting the transition to federalism; Inclusion as a primary target of intervention; and,
+ Integrating resilience into outcomes.
+
+ Building off of the J2SR Country Roadmap, evidence, and experience, USAID’s CDCS constructs a
+ results framework (see diagram below) that establishes meaningful, achievable, and instrumental results
+ to further Nepal on its J2SR. In support of the goal, USAID will implement the CDCS through four
+ Development Objectives (DOs): DO 1 More Effective, Participatory, and Equitable Democratic
+ Ecosystem; DO 2 Broad-Based and Inclusive Economic Growth Fostered; DO 3 Inclusive Health and
+ Education Systems Strengthened; DO 4 More Equitable and Improved Natural Resources and Disaster
+ Risk Management.
+
+
+
+USAID.GOV                                                                                  USAID NEPAL CDCS | 3
+ During the course of this CDCS, the Mission will make several strategic transitions and engage in new
+ areas of collaboration with the Government of Nepal (GON) towards advancement of the J2SR. USAID
+ will strategically shift from post-earthquake recovery to climate and disaster risk mitigation, and from
+ health and education service delivery to systems strengthening. As new areas, USAID will support Nepal
+ in strengthening broad-based economic growth in partnership with the private sector, in addition to
+ continued engagement on agriculture; and integrate rule of law programs as an additional measure to
+ consolidate democracy and strengthen the entire federal governance ecosystem. To implement these
+ transitions, USAID assistance will more explicitly focus on sustainability and self-reliance issues related
+ to financing self-reliance (FSR), private sector engagement (PSE), and building upon or redefining our
+ development relationship (RDR) with GON counterparts. In regular consultation with all levels of
+ government, donors, and civil society, the Mission will also pursue opportunities for USAID to adopt
+ more locally-owned and -led development models; strengthen the host-country government’s ability - at
+ the central and local levels - to continue to take the lead in addressing, managing and funding their own
+ development challenges; and support partnerships and approaches that expand access to finance,
+ mobilize private capital, and improve access to markets.
+
+
+                                 USAID/NEPAL CDCS 2020-2025
+                                RESULTS FRAMEWORK DIAGRAM
+
+
+
+
+4 | USAID NEPAL CDCS                                                                                 USAID.GOV
+ COUNTRY CONTEXT
+ Nepal is a relatively young democracy. In 2006, the country ended
+ a decade long civil war. In 2017, two years after the adoption of the
+ new constitution, Nepal began to devolve authority to local
+ governments, as mandated in the constitution, to seven provinces
+ and 753 new local governments in a process called federalism.
+ While the central, provincial and local governments are meant to
+ have harmonized policies and processes, several challenges -
+ including, the limited capacity among sub-national governments, the
+ distribution and allocation of resources, ethnic and linguistic
+ heterogeneity, tax harmonization, intergovernmental relations, and
+ most importantly lack of consensus on the approach and objectives
+ of federalism - have delayed the devolution and implementation of
+ authorities. Federalism promises to bring the government closer to
+ its constituents and to improve equity in democracy and public
+ services; however, it is a monumental undertaking involving central,
+ provincial, and local government institutions that are understaffed
+ and insufficiently prepared. Federalism in Nepal is not a fait
+ accompli; potential challenges include poor service delivery, lack of
+ will among those who prefer the centralized structure, corruption,
+ lack of social inclusion and accountability, and/or a human-made or
+ natural shock that destabilizes Nepal and its political and
+ governance structures. The COVID-19 pandemic is perhaps the
+ first real crisis and test for federalism in Nepal, requiring increased
+ support from both the GON and development partners to local                 Map of Nepal
+ governments to ensure the governance system’s effectiveness.              Source: CIA Factbook
+
+ Buoyed by years of donor-driven reconstruction and earthquake
+ recovery efforts, Nepal’s economy is not performing adequately
+ and needs systemic shifts to create job and investment
+ opportunities and alleviate poverty. 1 The economy lacks diversity,
+ relying predominantly on subsistence agriculture, which currently
+ makes up 30 percent of GDP, employs about two-thirds of the
+ economically active population, and is challenged by low
+ productivity. Agricultural development alone will not be sufficient
+ to drive Nepal into middle income status. The business
+ environment remains inadequate to drive broad based and inclusive
+ growth in Nepal, as evidenced by the low investment rates (Private
+ Fixed Capital Formation-to-GDP of 17.41% for Nepal compared to
+ 33.16% average for selected neighbors in the South Asia region;
+ FDI-to-GDP in 2018 of 0.55% for Nepal compared to 1.48% region
+ average 2). Despite reductions in nationwide levels, poverty remains
+ disturbingly high (up to three times the national average of 7.8%),
+ especially in remote geographic areas and among marginalized
+ groups including Dalits (Hill Dalits at 14% and Madhesi Dalits at
+ 23.9%), Madhesi Other Caste (11.1%), and Muslims (12.7%). 3 Nepal
+ will need to remove these constraints to inclusive, broad-based
+ growth and catalyze increased trade and investment to build a
+ more diversified and vibrant economy, and to sustainably reduce
+ poverty.
+
+
+
+
+USAID.GOV                                                                    USAID NEPAL CDCS | 5
+ Nepal continues to grapple with addressing deep-rooted historical discrimination based on gender,
+ ethnicity, religion, and caste that hinders development progress. Gender-based violence (GBV) is
+ experienced by 22 percent of women aged 15- 49 and gender discrimination remains prevalent,
+ particularly for the Muslims, Dalits and Madhesi Other Castes. 4 The COVID-19 pandemic has
+ exacerbated GBV and hampered efforts to curtail child, early and forced marriage (CEFM). Nepal has
+ high rates of CEFM: 44.1% of girls marry before their 18th birthday, even though the legal age for
+ marriage is 20 years of age, and is most prevalent among Madhesi Dalit (73.5%), Madhesi Other Castes
+ (69.5 %), and Muslims (60%). 5 Women who marry early are at increased risk of domestic violence and of
+ being impoverished throughout their lives. 6
+
+ Public health and education efforts in Nepal have made tremendous strides in reducing childhood
+ mortality and morbidity 7 and achieving universal access to basic education; 8 however, enormous unmet
+ needs remain including: inadequate access to family planning; malnutrition; high rates of maternal and
+ neonatal mortality, morbidity and mortality, caused by infectious diseases and poor water, sanitation and
+ hygiene; disability; and education quality. 9 There also are disparities in health 10 and education 11
+ outcomes by caste, economic status, and gender. In addition, as responsibility for service implementation
+ moves to the local level under federalism, existing systems have become disrupted, presenting risks to
+ delivery of essential public services and threatening hard-won gains in health and education; COVID-19
+ only amplifies these risks.
+
+ With altitudes ranging from 60 meters to the highest elevation in the world of 8,848 meters above sea
+ level, Nepal’s location at the junction of two major biogeographic regions - the Indo-Malayan and the
+ Palearctic - creates a unique environment with abundant natural resources and globally significant
+ biodiversity. Nepal occupies only about 0.1 percent of the earth, yet it is the home to 118 distinct
+ ecosystems with 3.2 percent of the world’s flora and 1.1 percent of its fauna, 12 creating a comparative
+ advantage with tremendous potential for sustainable, natural resource-based economic development. It
+ is also endowed with extraordinary water resources for a country its size, including approximately 6,000
+ rivers. 13 Those rivers have the ability to produce 40,000 commercially viable gigawatts of energy from
+ hydropower alone - over 30 times more than Nepal’s current energy usage - with significant implications
+ for investment, growth and regional energy market advances. 14
+
+ Nepal remains among the most vulnerable countries in the world to natural disasters. Every year, tens
+ of thousands of people are affected by disasters such as earthquakes, landslides, and floods, with
+ landslides and floods becoming worse with climate change. Studies estimate that disasters reduce GDP
+ growth in Nepal by an average of 1.5% per year, regularly pushing thousands of households back into
+ poverty. 15 Approximately 700,000 Nepalis fell below the poverty line as a result of the 2015
+ earthquakes. These recurrent shocks hinder Nepal’s ability to progress along its path to self-reliance and
+ achieve its goal of becoming a middle-income country by 2030. The emergence of COVID-19 is the
+ latest in the pattern of shocks and disasters in Nepal. Despite five years of rebuilding Nepal from the
+ 2015 earthquakes, COVID-19 threatens to inflict deep and lasting economic damage to the country,
+ and may exacerbate inequality throughout Nepal, especially in-service delivery, while also jeopardizing
+ the most vulnerable populations’ resilience to shocks. Already, the widespread damage wrought by
+ COVID-19 has emphasized the importance of strengthening systems and boosting resilience to reduce
+ the severity of these recurring shocks and foster self-reliance.
+
+ The U.S. Government (USG), starting through USAID’s precursor and continuing with USAID, is Nepal’s
+ oldest development partner, working together for over 72 years. While the USG is the 3rd largest
+ donor in Nepal (after the World Bank and Asian Development Bank (ADB)), it is the largest bilateral
+ donor and the largest donor overall in terms of grant funding. In cooperation with other donors through
+ the International Development Partners Group, USAID has provided its expertise and impact in several
+ sectors, including democracy and governance, health, education, natural resource management,
+
+
+
+6 | USAID NEPAL CDCS                                                                                USAID.GOV
+ agricultural development, and reconstruction and disaster risk reduction. To leverage donor efforts,
+ USAID will continue to collaborate with the World Bank, DFID, and EU, among others to advance the
+ transition to federalism. Over the course of this strategy, USAID will build on and expand coordination
+ with donors to solicit feedback on new designs and continue to find opportunities for partnerships on
+ shared goals.
+ IMPACT OF COVID-19
+ The spread of COVID-19 in Nepal was delayed by a preventive 100-day nation-wide lockdown;
+ however, after the lockdown was relaxed, cases rose significantly. The provision of most basic public
+ services, including education and health, have slowed or ceased. Many public schools are unable to
+ continue in-person teaching and are unable to transition to virtual classrooms. Access and use of health
+ services have decreased due to public fears, health commodity shortages, and additional health needs,
+ burdening an already strained and under-resourced health system. With hundreds of thousands of
+ Nepali migrant workers returning to Nepal, and faced with a severe and complex public health crisis, the
+ COVID-19 response immediately challenged GON institutions, officials, and elected representatives to
+ provide the necessary response, policies, and services to control the virus. Although Nepal’s official
+ unemployment is rather low, the return of migrant workers will strain public services and create
+ challenging community dynamics related to migrant reintegration, employment, and overall social
+ cohesion. The financial hardships for households and businesses, in addition to the lack of capacity of
+ local governments to implement basic services has challenged many citizens. Youth, women, and
+ marginalized populations continue to bear a disproportionate burden of COVID-19 impacts, yet are still
+ not able to substantially participate in decision-making on response and relief measures.
+ ALIGNMENT WITH GON PRIORITIES
+ USAID’s new CDCS is aligned with Nepal’s recent 15th Periodic Plan (2019-2024), the strategy that
+ defines the GON’s development policy and direction, including: fully implementing the constitution
+ (including inclusiveness and development for marginalized communities); improving economic growth
+ (specifically energy, tourism, and agriculture); reducing absolute poverty; and coordinating among all
+ tiers of government to balance development across the provincial and local levels. 16 The GON has
+ expressed its preference for budget support, which will be an important area of consideration in
+ USAID’s new strategy period. The devolution of authority to the provincial and local levels presents
+ new opportunities to support the GON with government to government (G2G) assistance, contributing
+ to the Agency’s goal of building upon and redefining its development relationship with host countries
+ (RDR).
+ THE JOURNEY TO SELF RELIANCE (J2SR)
+ Under this CDCS, USAID has strategically prioritized the sub-dimensions and metrics from the J2SR
+ Country Roadmap for investment that are most critical for Nepal’s development objectives. 17 The
+ selection of these sub-dimensions and metrics reflect a mix of strengths and challenges from the
+ Country Roadmap that together define the strategic areas that are most important for building capacity
+ and commitment to further Nepal’s journey to self-reliance.
+
+ COMMITMENT
+ Open and Accountable Governance: The Liberal Democracy and Open Government metrics, while
+ currently rated high, are threatened by the challenges associated with the shift to federalism and do not
+ capture the issues associated with operationalizing the constitution. Nepal will need to prevent
+ democratic backsliding and take positive steps to advance open government and governance that
+ encourages citizen participation and collaboration, regardless of caste, ethnicity, gender, sexual
+ orientation, and economic status.
+
+
+
+
+USAID.GOV                                                                                USAID NEPAL CDCS | 7
+                             Inclusive Development: While the Inclusive Development J2SR
+                             Country Roadmap sub-dimension appears high for Nepal, it is
+                             inflated largely due to gains made by women from elite Newari and
+                             Brahmin-Chetri populations, not the population at large. 18 Also,
+                             gender gaps vary greatly among different castes/ethnicities, classes,
+                             and regions. Disparities between marginalized and non-marginalized
+                             groups remain high, especially for the marginalized Hill and Madhesi
+                             Dalits, Madhesi Other Castes, Tarai Janajatis, and Muslims- who
+                             comprise nearly 40 percent of the population. 19 Women have
+                             gained a greater foothold in the labor market; however, this is
+                             likely due to the mass migration of male workers, which often
+                             leaves women with the additional burden of household labor.
+                             Inequity is often cited as one of the driving factors for conflict in
+                             Nepal, including the Maoist insurgency, and not adequately
+                             addressing deep-rooted social and historical inequities presents the
+                             risk that conflict will resurface.
+
+                             Economic Policy: While the Economic Policy sub-dimension is
+                             considered average according to the J2SR Country Roadmap, the
+                             Business Environment metric within this sub-dimension remains
+                             inadequate in Nepal to build the vibrant private sector needed to
+                             lift a large part of the population out of poverty and propel the
+                             country into middle income status. The Trade Freedom metric is
+                             well below the J2SR Country Roadmap average, but is
+                             commensurate with the region. The Environmental Policy metric
+                             scored close to average; however, given Nepal’s incredible
+                             biodiversity and natural resources - landscapes, forests, wildlife, and
+                             water resources - this area remains a priority as it is critical to
+ Nepal’s Journey to Self-    providing the underlying natural capital that drives food security,
+ Reliance Country Roadmap    energy development, resilience to climate risks, and sustainable
+ Commitment Sub-Dimensions   economic growth - such as supporting the tourism sector that was
+ and Metrics                 robust before COVID-19. Given Nepal’s few economic
+                             comparative advantages, coupled with the advent of
+                             decentralization and rapid infrastructure development that pose
+                             threats to protected areas, conservation of Nepal’s natural
+                             resources is paramount for reducing disaster risks and furthering
+                             the J2SR.
+
+                             CAPACITY
+                             The Government Effectiveness and Tax System Effectiveness
+                             metrics are rated below average due to challenges in collecting,
+                             managing, and effectively expending public finances. The federal
+                             transition also poses immense challenges to the ability of sub-
+                             national governments to direct the limited resources where they
+                             are needed, rectify their limited government capacity, clarify new
+                             expenditure responsibilities, and resolve disputes over revenue
+                             sharing and taxation authority. 20
+
+                             Civil Society Capacity: Nepal’s high civil society metric score likely
+                             reflects the prolific number of organizations registered, rather than
+
+
+
+
+8 | USAID NEPAL CDCS                                                                        USAID.GOV
+ actual capacity. Civil society plays an important role in the
+ consolidation of democratic institutions in order to deliver on the
+ promise of democracy in Nepal.
+
+ Citizen Capacity: Nepal’s poverty rate metric is significantly worse
+ than its peers on the roadmap. This is especially true for remote
+ geographic areas and among marginalized groups that have higher
+ poverty rates than the national average. The GON’s Sustainable
+ Development Goals 2016 - 2030 report notes that there are large
+ disparities in regional, caste/ethnicity, gender, and geographical
+ outcomes. 21 The Multidimensional Poverty Index, using a more
+ encompassing poverty definition, states that 34 percent of Nepal’s
+ population were in multidimensional poverty in 2016 (the last
+ available year for data). 22 The Poverty Probability Index is highest
+ for Madhesi Dalits (23.9%), Hill Dalits (14%), and Muslims
+ (12.7%). 23 Routine shocks regularly cause Nepalis who have made
+ economic progress to fall back into poverty. Also, increasing
+ environmental risks, caused by urban expansion and poor-quality
+ infrastructure, disproportionately impact the poor, such as
+ increased exposure to pollution and risk for water borne disease
+ transmission. Health indicators have improved dramatically in
+ Nepal over the past twenty years. For example, under-five and
+ neonatal mortality rates have declined by nearly 70 percent and 60
+ percent respectively. However, there are still areas where progress
+ lags behind (maternal mortality, malnutrition), and there are
+ disparities in health outcomes by caste, wealth, and gender.
+ Additionally, federalism and COVID-19 has disrupted every major
+ health system (human resources, health information systems for
+ evidence-based decision making, procurement and distribution of
+ quality medicines, and others), and Nepal’s remarkable health gains
+ are at risk of backsliding. On the surface, significant gains have been       Nepal’s Journey to Self-
+ made in education - Nepal has achieved universal access to                Reliance Country Roadmap
+ education and more Nepalis than ever are accessing higher                        Capacity Sub-Dimensions
+ education. Unfortunately, when measuring learning-adjusted years                             and Metrics
+ of schooling, a Nepali student only receives about 6.9 years of
+ schooling despite attending school for 11.7 years 24 - a clear sign of
+ quality issues that will only be exacerbated when the
+ responsibilities for primary and secondary education devolve to
+ unprepared local authorities and the full impact of COVID-19 is
+ realized.
+
+ Capacity of the Economy: One of the reasons, identified in the
+ Economic Policy sub-dimension, for Nepal’s low GDP per capita
+ ranking in the Country Roadmap is the constant recurrence of
+ natural disasters that divert productive resources - human and
+ capital - from investment into the economy. It is estimated that due
+ to Nepal’s lack of disaster preparedness for floods alone, over1.5
+ percent in GDP is lost annually. This does not even account for the
+ recurrent, generational catastrophes, like the 2015 earthquakes,
+ that drove over 700,000 people into poverty, incurred a
+ reconstruction cost of over $8 billion, severely damaged or
+
+
+
+USAID.GOV                                                                               USAID NEPAL CDCS | 9
+ destroyed over 800,000 homes, 8,200 schools, 1,200 health facilities, and killed an estimated 9,000
+ people. Without addressing these significant and persistent climactic and environmental shocks, 25 Nepal
+ will struggle to advance toward self-reliance.
+
+ Taken together, these metrics and sub-dimensions indicate that to further Nepal’s self-reliance, USAID
+ should strategically invest in programs that: (1) improve government effectiveness, particularly as it
+ relates to supporting the transition to federalism, the provision of basic public services, and inclusion of
+ all citizens to realize the potential of Nepal’s promise of democracy; (2) reform economic policy and
+ build economic capacity for all people (especially for women and marginalized groups) to provide new
+ opportunities for economic growth; and (3) address the opportunities and risks that the environment
+ poses to Nepal, reducing the risk of persistent shocks and also catalyzing future economic growth based
+ on Nepal’s unique and rich environmental resources.
+
+ During the course of this CDCS, the Mission envisions several strategic transitions on the J2SR: USAID
+ will shift its focus to climate and disaster risk mitigation and away from post-earthquake recovery and
+ reconstruction; health and education systems strengthening rather than service delivery; broad-based
+ economic growth rather than focusing exclusively on agriculture; and consolidating democracy through
+ partnerships that strengthen the entire federal governance ecosystem. To implement these transitions,
+ USAID will more explicitly focus on sustainability and self-reliance issues related to financing self-reliance
+ (FSR), private sector engagement (PSE), and building upon or redefining the development relationship
+ (RDR) with Nepal. The Mission will also pursue opportunities for USAID to adopt more locally owned
+ and led development models that put local actors in the lead; strengthen the host-country government’s
+ leadership ability - at the central and local levels - in addressing, managing and funding their own
+ development challenges; and support partnerships and approaches that expand access to finance,
+ mobilize private capital, and improve access to markets. The Strategic Approach below discusses how
+ USAID will operationalize this transition towards self-reliance and lay the foundations for the more self-
+ reliant Nepal of tomorrow.
+
+ STRATEGIC APPROACH
+ The United States recognized Nepal in 1947, and the two countries established diplomatic relations in
+ 1948. Helping Nepal build a peaceful, prosperous, resilient and democratic society is a key US objective.
+ USAID’s strategy will support Nepal to improve the livelihoods of its people through good governance,
+ sound economic opportunity, improved public services, and world class environmental stewardship.
+ During the development of the CDCS, three themes - federalism, inclusion, and resilience - repeatedly
+ emerged as crucial and necessary approaches to realize Nepal’s development vision. USAID has woven
+ these three strategic approaches throughout the CDCS across development objectives to ensure that
+ USAID’s programmatic response adequately accounts for and integrates these factors that are crucial to
+ successfully addressing Nepal’s development challenges.
+ SUPPORTING THE TRANSITION TO FEDERALISM
+ Nepal has embarked upon a difficult and complex, but strategic, transition to bring democracy closer to
+ the people via federalism. Federalism, however, is not only a governance issue; it permeates all social
+ and economic sectors and facets of life in Nepal and - if well implemented and managed - can serve as a
+ vehicle to accelerate the country on its path to self-reliance. USAID will support the GON in the
+ implementation of federalism as it is the model of democratic governance adopted by Nepal and is the
+ approach through which the CDCS intends to plan, implement, and support to ensure success across all
+ sectors. To work towards this goal, the Mission will: support policy development, systems, and practices
+ across all levels of government; engage citizens and civil society organizations to actively participate in
+ local decision-making and oversight; and help Nepal’s efforts to improve public budget execution so that
+ it can channel its resources towards productive investments, improving effectiveness, transparency, and
+ accountability of public expenditures.
+
+
+
+10 | USAID NEPAL CDCS                                                                                  USAID.GOV
+ USAID will calibrate efforts at both the national and subnational
+ levels to assist Nepal to implement policy and operational shifts
+ that devolve services and responsibilities to the appropriate level.
+ The Mission will pursue G2G agreements to strengthen systems
+ under federalism and increase accountability in support of
+ improved governance. This CDCS will also support improved
+ public financial management of host government resources as a
+ means to create greater transparency and accountability, both for
+ the public and for all levels of government to ensure the effective
+ devolution of responsibility, authority, and budget.
+
+ The devolution of public service responsibilities to the subnational
+ level of government under federalism presents both an opportunity
+ and a challenge, as local governments are eager to improve
+ systems, but need greater capacity to deliver services. USAID will
+ integrate federalism into its capacity building approach across all           “Federalism is not only a
+ development objectives so that local actors - public officials,                     governance issue; it
+ entrepreneurs, health care workers, educators, civil society                   permeates all social and
+ organizations, and citizens - improve their understanding of
+ federalism and contribute to its implementation. COVID-19 has                     economic sectors and
+ exacerbated local government capacity gaps making local                     facets of life in Nepal and
+ governments function less effectively. USAID will help increase              - if well implemented and
+ capacity for local, healthcare, and education officials to ensure that      managed - can serve as a
+ they can better plan, respond, and account for their devolved
+ duties under federalism and be responsive to citizen needs.                vehicle to accelerate Nepal
+                                                                                       on its path to self-
+ In support of federalism, USAID will work with a wide variety of
+ actors - including national and local officials, citizens, civil society
+                                                                                                reliance.”
+ organizations, and local businesses - to strengthen the
+                                                                                       - USAID/Nepal CDCS
+ implementation and oversight of federalism, build capacity of local
+                                                                                          Strategic Approach
+ actors, ensure that public services benefit all Nepalis, and create
+ the conditions for sustainable local economic growth. Over the life
+ of this CDCS, locally elected officials, including more women,
+ youth, and members of marginalized groups, will become stronger
+ interlocutors for citizen engagement, public service provision, and
+ public accountability.
+
+ To advance essential policy issues related to federalism, USAID will
+ continue to play a significant role in coordinating support from
+ donors, such as GIZ, DFID, the UN, World Bank, and EU, through
+ the federalism working group. USAID will also maintain close
+ collaboration with development partners engaged in health and
+ education to ensure that donors supporting these tangible services
+ - either through project or non-project modalities - under
+ federalism are fully coordinated.
+ INCLUSION AS A PRIMARY TARGET OF INTERVENTION
+ With an estimated 40% of the population in Nepal considered to
+ be marginalized, inclusion is simultaneously a challenge,
+ programming opportunity, and overarching goal for the CDCS. To
+ ensure this goal is fully implemented, USAID integrated inclusion
+
+
+
+
+USAID.GOV                                                                                USAID NEPAL CDCS | 11
+ within its strategy at every level, both to underscore the role inclusion must play to assist Nepal in
+ achieving its development goals and to ensure that Mission programming directly addresses issues of
+ exclusion throughout the implementation cycle. This approach has been further refined by an evidence-
+ base illustrating which groups specifically have been historically marginalized and what fundamental rights
+ remain unmet.
+
+ While GON policies are largely in place, gaps remain in terms of implementation and overcoming
+ historical systemic discrimination for marginalized groups. USAID recognizes the catalytic role that civil
+ society will play in advocacy for and oversight of GON inclusion policies, especially human rights, equal
+ access to public services, gender-responsive budgeting of host government resources, and risk mitigation
+ measures to ensure resilience. Increasing the equity of access to health and education service will be
+ critical to building the human capacity needed to improve livelihoods for those most vulnerable to
+ economic exclusion and poverty.
+
+ The Mission will undertake a concerted effort to more actively target marginalized groups and regions
+ where appropriate (for example, removing barriers for women, youth and marginalized groups, which
+ may include Dalits, Madhesi Other Caste, Tarai Janajatis, Muslims, and other ethnic and religious
+ minorities). To further advance inclusion, USAID may coordinate efforts with other donors, such as the
+ UN and contribute to the attainment of the UN's 2030 Sustainable Development Goals. The Mission will
+ work closely with the U.S. Department of Justice and other development partners to implement human
+ rights and counter trafficking in persons (CTIP) programming that address the problems that often arise
+ from exclusion in Nepal.
+ INTEGRATING RESILIENCE INTO OUTCOMES
+ Nepal is routinely struck with disasters and shocks that erode development progress, reduce the
+ effectiveness of governance institutions, exacerbate exclusion, keep the most vulnerable in poverty, and
+ drive others into poverty. Shocks refer to “external short-term deviations from long-term trends that
+ have substantial negative effects on people’s current state of well-being, level of assets, livelihoods, safety
+ or their ability to withstand future shocks. Shocks can be slow-onset like drought, or relatively rapid
+ onset like flooding, disease outbreak, or market fluctuations.” 26 COVID-19 and its secondary and
+ tertiary effects on public services, the economy, and social structures and institutions is a new and
+ severe shock, and is the latest in a long line of shocks that impact Nepal, including the insurgency,
+ earthquakes, flooding, landslides, and other disasters. To make sustainable and lasting development gains,
+ this CDCS will utilize a systems approach that takes into account the roles of interconnected sets of
+ actors throughout Mission programming needed to advance resilience; two key means to build that
+ resilience include engaging the private sector and strengthening government capacity.
+
+ To promote resilience, the Mission will engage non-traditional stakeholders, including the private sector,
+ to offer innovative, nimble, and sustainable approaches in the wake of natural disasters and other shocks.
+ By promoting vibrant, diverse, and free market systems that are responsive to citizen needs, this CDCS
+ will help to create an economy that provides ample opportunity for youth to seek employment at home,
+ rather than turning to opportunities abroad as a mechanism to cope with shocks. It will also ensure that
+ the economic makeup of Nepal is more diverse so that shocks to one sector or location are less capable
+ of producing ripple effects that reverberate throughout the economy and threaten livelihoods on a large
+ scale. Following a natural disaster, the private sector also has the potential to offer market-based
+ solutions that can be more rapidly deployed than government or donor responses, while also reducing
+ the strain on limited government resources. To implement this approach to resilience, the Mission will
+ use an array of PSE tools - business incubation, business support services, entrepreneurial and financial
+ support, information sharing, and workforce development - that will strengthen the capacity of the
+ economy to progress, even when faced with the inevitable shocks and disasters.
+
+
+
+
+12 | USAID NEPAL CDCS                                                                                   USAID.GOV
+ To build more resilient government capacity, USAID will partner with the public health and education
+ systems to plan, prevent, mitigate, and respond appropriately to shocks and disasters with available host
+ country resources, minimizing the need for outside assistance. Working at both the national and sub-
+ national levels, this CDCS will target health and education systems so they become more adequately
+ prepared to mitigate and respond to current and future shocks so that they may continue to deliver
+ services during crises and can recover more quickly from crises.
+
+ RESULTS FRAMEWORK
+ GOAL STATEMENT AND NARRATIVE
+ “A more self-reliant, prosperous, and inclusive Nepal that delivers improved democratic governance and
+ health and education outcomes” is USAID’s 2020-2025 CDCS goal. Based on USAID’s J2SR Country
+ Roadmap for Nepal, a preponderance of evidence and experience, and the development priorities that
+ emerged from the Mission’s inclusive CDCS process, “self-reliance,” “prosperity,” and “inclusiveness”
+ are the main ideals where the Mission will advance Nepal’s J2SR. “Self-reliant” relates to the J2SR that
+ has come to define USAID’s overarching approach to development and the framework by which we
+ measure progress. “Prosperous” refers to the GON’s ambitions to achieve middle-income country
+ status by 2030 and to the J2SR’s Poverty Rate metric, which is relatively low compared to its neighbors.
+ “Inclusive” has been woven into every Development Objective (DO) as an important concept and
+ operating principle given the widespread marginalization of 40% of the population (including religious
+ and ethnic minorities), the socio-economic consolidation and concentration of power in the country,
+ and the impending risk and threat that COVID-19 will push more Nepalis into poverty and further
+ exacerbate inequality. Inclusive also refers to the need for Nepal to address long standing equity gaps
+ among specific marginalized ethnic and religious minorities to realize its development goals.
+
+ The second component of the goal statement focuses on supporting democracy and human capacity
+ development, both of which are among Nepal’s greatest near-term development challenges that will
+ shape development progress and its sustainability in the future. “Democratic governance” is key given
+ Nepal’s recent transition and commitment to federal governance and the connection of federalism to
+ almost all parts of socio-economic life in Nepal. The provision of critical public services - namely, health
+ and education - is a measure of how well federalism is implemented and is an indicator of citizen
+ capacity. Moreover, in the current context, COVID-19 disproportionately affects both health and
+ education outcomes, reducing access and quality, especially for the most marginalized, exacerbating
+ existing inequality and vulnerability.
+
+ In regular consultation with all levels of government, donors, and civil society, USAID is able to
+ effectively coordinate and leverage its resources, reduce overlap, and ensure local buy-in. Throughout
+ the CDCS, USAID will analytically and opportunistically target its development efforts across Nepal
+ using three lenses: identifying areas and actors where there is a medium to high level of commitment for
+ change, but a medium to low level of capacity; prioritizing areas where a maximum number of
+ marginalized populations are either direct partners or beneficiaries; and selecting areas and actors with a
+ high potential for impact on systems and outcomes for Nepal. In some cases, such as education, support
+ may be nationwide, while in other cases, such as agriculture, support may be limited to select growers in
+ the Feed the Future zone of influence. Through regular internal and external consultative processes,
+ USAID will define the beneficiaries and systems for intervention that offer the best opportunities for an
+ effective partnership that will yield expected results.
+
+ DO 1: MORE EFFECTIVE, PARTICIPATORY, AND EQUITABLE DEMOCRATIC ECOSYSTEM
+ Development Hypothesis Statement: If Nepalis effectively engage with democracy, and if Nepali institutions
+ include all citizens, and if governance institutions are capable of meeting citizen demand, then Nepal's
+
+
+
+
+USAID.GOV                                                                                  USAID NEPAL CDCS | 13
+ democracy will develop the systems and values needed to support a more prosperous, equitable, and
+ self-reliant Nepal.
+
+ Development Hypothesis Narrative: Several assessments 27 highlight that one of Nepal’s primary
+ development challenges is the successful implementation of federalism, in particular building capacity at
+ the sub-national level. 28 Additional assessments, including the J2SR Country Roadmap, have also pointed
+ to meaningful 29 and equitable 30 participation in decision-making across sectors and at all levels, as well as
+ government effectiveness, as critical to maintaining public trust in elected representatives and building
+ self-reliance towards a stronger democracy.
+
+ To address these gaps, “More effective, participatory, and equitable democratic ecosystem” is USAID’s
+ first development objective. “Democratic ecosystem” describes the complex system formed by all of the
+ interdependent structural (laws, institutions, systems, and the bureaucracy) and functional (civil society,
+ media, and private citizens) parts that constitute a working democracy. Ultimately, the health and
+ effectiveness of the democratic ecosystem is contingent on both the integrity of the structures and the
+ trust and participation of the people.
+
+ This DO supports many self-reliance metrics, as well as the effective delivery of democracy through
+ federalism, a GON priority. Moreover, this DO will work to strengthen democratic systems, including:
+ the integrity of electoral processes; the independence of media and information integrity; a robust civil
+ society that is capable of government oversight, civic engagement and advocacy on behalf of citizen
+ interests, including the political participation of women; advancing the rule of law and instituting anti-
+ corruption measures; and citizen-responsive governance that upholds and protects fundamental rights.
+
+ By strengthening government capacity/systems and building the foundations of accountable governance
+ vital for reforms and broad-based economic growth, this DO will ensure that Nepal leads its own
+ development efforts. Moreover, by improving accountability and reducing corruption through public
+ financial management, this DO will also ensure that Nepal sustainably finances its own development
+ efforts.
+
+ The emergence of COVID-19 has impacted governance systems and caught elected officials at all levels
+ unprepared. Sub-national governments are overwhelmed, making it difficult to provide participatory,
+ accountable, and transparent COVID-19 responses and ensure that women, youth, and marginalized
+ groups’ (WYM) equities are represented in decision-making. Citizens also need access to accurate
+ information on the pandemic through CSOs and media. To mitigate the impacts of COVID-19 in Nepal,
+ this DO will support sub-national governments to be more participatory, accountable and transparent,
+ and therefore more targeted, in their COVID-19 response, as well as make citizens aware of COVID-19
+ through information from CSOs and media. This DO will also take into account the increasing
+ challenges of youth, women, and marginalized communities and their growing vulnerability to trafficking.
+ IR STATEMENTS AND NARRATIVES
+ Three interdependent intermediate results (IRs) support DO 1. Combined, they will strengthen both
+ structural governance institutions to be more responsive to citizen demands and functional (civil society,
+ media, and private citizens) governance components to create a more effective, participatory, and
+ equitable democratic system.
+
+ IR 1.1: INTEGRITY OF DEMOCRATIC SYSTEMS STRENGTHENED
+ IR 1.1: “Integrity of democratic systems strengthened” will strengthen the supply side of democratic
+ institutions - specifically sub-national governance, electoral processes, and public financial management -
+ to improve their transparency, integrity, and accountability, ultimately making them more effective in the
+ face of corruption that threatens to undermine the democratic system. 31 While the overarching policies
+
+
+
+
+14 | USAID NEPAL CDCS                                                                                   USAID.GOV
+ to enact federalism at the central level exist, to be fully effective
+ devolution needs strong democratic process policies at the
+ subnational level. To address these needs, USAID will: improve
+ awareness and capacity of newly elected local officials; build human
+ resource capacity within the sub-national government bureaucracy;
+ and harmonize local and national policies concerning devolution. By
+ increasing effective sub-national governance, USAID will counter
+ corruption at the local level 32 and strengthen the ability of local
+ governments to deliver services as mandated under federalism. 33
+ USAID support for electoral processes will improve the integrity of
+ political systems. To build greater transparency and government
+ effectiveness, USAID will support public financial management
+ (PFM) to reduce opportunities for fraud, waste, and abuse of public
+ funds 34 both at the national and sub-national level.
+
+ IR 1.2. EQUALITY UNDER THE LAW FOR WOMEN, YOUTH
+ AND MARGINALIZED (WYM) COMMUNITIES IMPROVED
+ IR 1.2: “Equality under the law for women, youth and marginalized       “By increasing effective
+ (WYM) communities improved” will enact recommendations from             sub-national governance,
+ various assessments to support women, youth, and marginalized           USAID will counter
+ communities 35 via rule of law 36 to ensure that Nepal’s democracy
+ delivers better on the constitutional promise of equality. 37 This IR   corruption at the local level
+ will integrate gender equality and social inclusion via support for     and strengthen the ability
+ human rights, including continued assistance to counter human           of local governments to
+ trafficking. 38
+                                                                         deliver services as
+ While Nepali law and jurisprudence are relatively strong in             mandated under
+ comparison to its South Asian neighbors in terms of the rights of       federalism.”
+ women and rights against discrimination, laws and court decisions
+ lack enforcement. As a result, the most marginalized groups,            - USAID/Nepal IR 1.1
+ comprised of Dalits, Madhesi other Castes, Muslims, and Tarai
+ Janajatis, which make up 40 percent of the population, 39 have been
+ excluded from meaningful political participation and the full
+ exercise of their rights. Up to 81 percent of the Dom, Santhal,
+ Halkhor, and Marwadi minority groups lack citizenship due to non-
+ existent birth registrations and other necessary legal documents,
+ effectively excluding them from accessing basic rights. 40 Compared
+ to other groups, women and marginalized groups have far less
+ knowledge about their fundamental civil and political rights and the
+ affirmative policies meant to benefit them, a compounding
+ disadvantage for women from marginalized groups. Ninety-two
+ percent of Nepali women are unaware about where to lodge
+ formal complaints and only 28 percent believe that justice is easily
+ accessible to all citizens. 41 Weak enforcement is due to dominant
+ social norms that discriminate on the basis of gender, caste,
+ ethnicity, and religion. Equal protection under the law can be
+ advanced by expanding leadership opportunities for local leaders
+ from WYM groups who understand the challenges faced and can
+ sustain efforts to produce institutional change. This IR will
+ specifically focus on WYM and decreasing the culture of impunity
+ experienced by minorities; 42 increasing accountability for ensuring
+
+
+
+USAID.GOV                                                                             USAID NEPAL CDCS | 15
+ GBV crimes are brought to justice; strengthening rule of law for the most marginalized; improving
+ access to justice for WYM; and protecting the fundamental rights of WYM (including, but not limited to,
+ advancing religious freedom, rights of LGBTQI and addressing GBV and CEFM). These efforts will
+ ultimately ensure that equality under the law for all groups (including men and majority communities) is
+ improved. To support local systems, this IR will work with municipalities and judicial actors (police,
+ prosecutors, judiciary, judicial committees, traditional leaders, and community mediators), while also
+ promoting community engagement and actively targeting WYM. Additionally, this IR will be able to
+ address the needs of women through increased public accountability and gender-responsive budgeting.
+
+ IR 1.3. CITIZEN DEMAND FOR DEMOCRACY STRENGTHENED
+ IR 1.3: “Citizen demand for democracy strengthened” will support the functional (civil society, media,
+ and private citizens) components of the democratic ecosystem to increase citizen participation, 43
+ improve effectiveness and decrease corruption 44 of institutions.
+
+ This IR will enhance the leadership of civil society, improve oversight of public services, and support
+ access to credible information. 45 Nepal's legal environment for the protection of civic space is complex,
+ with multiple agencies and laws meant to oversee civil society organizations in Nepal. In addition,
+ multiple draft pieces of legislation have recently been discussed in Parliament that could restrict
+ fundamental freedoms of assembly, press, and association. In support of local systems, this IR will
+ strengthen governance - at both the local and national levels where local civil society and media partners
+ play a vital role in holding governments accountable to the public. Additionally, this IR will build the
+ capacity of local systems, including non-government organizations, thematic networks, federations, and
+ private sector actors (media houses) to support demand for democratic governance.
+ DO 2: BROAD-BASED AND INCLUSIVE ECONOMIC GROWTH FOSTERED
+ Development Hypothesis Statement: If Nepal is able to identify and seize upon emerging economic
+ comparative advantages and enact meaningful reforms that support market-oriented and inclusive
+ economic policies, then the foundations for broad-based economic growth will be significantly increased,
+ making Nepal more prosperous, equitable, and self-reliant.
+
+ Development Hypothesis Narrative: DO 2 “Broad-based and Inclusive Economic Growth Fostered” will
+ contribute to the CDCS’s goal statement of a more self-reliant and prosperous Nepal. It also
+ contributes to Nepal’s ambitious goal of reaching middle-income country status by 2030. 46 By supporting
+ the transition of Nepal from over-reliance on less productive sectors with low returns to sectors that
+ are more productive, and by increasing productivity for areas that are ripe for growth, this DO will
+ foster economic growth that is both broad-based 47 and inclusive. 48 Analysis shows that increasing
+ product diversity (broad-based) towards more complex products can accelerate an economy’s long-
+ term growth rate by 1.6 percentage points for every one standard deviation increase in product
+ complexity. 49 Similarly, a more inclusive economy boosts GDP growth; a 1% reduction in inequality
+ increases GDP by 0.6% to 1.1%. 50 USAID investments will focus on high-growth sectors that
+ demonstrate potential to meet domestic market demand, expand trade, generate income and
+ employment, and reduce poverty.
+
+ This DO contributes to Nepal’s J2SR by promoting economic governance and business models that
+ strengthen Nepal’s economic sovereignty and promote positive linkages to fair economic trade and
+ international norms. This DO will contribute to development progress within seven areas covered in
+ the J2SR Roadmap - Business Environment, Trade Freedom, Poverty Rate, ICT Adoption, Government
+ Effectiveness, Social Group Equality, Economic Gender Gap - and three components - RDR, FSR, and
+ PSE. To promote broad-based and inclusive growth, DO 2 will strengthen the competitiveness of
+ agriculture and non-agriculture sectors, improve the investment climate and business enabling
+ environment through targeted policy engagement, and address the systemic barriers that prevent the full
+
+
+
+
+16 | USAID NEPAL CDCS                                                                               USAID.GOV
+ participation of socio-economically disadvantaged segments of the
+ population. This DO’s focus on economic activities that are
+ primarily mediated through markets offer rich opportunities for the
+ private sector to apply market-based solutions to development
+ problems.
+
+ COVID-19 has exacerbated Nepal’s constraints to the formation
+ and growth of firms, imposing additional layers of constraint on
+ enterprises, such as lack of profitability, cash flow problems, and
+ solvency. Nepal will most likely experience one year without any
+ growth in GDP, at a minimum, while impacts may last longer due
+ to uncertainties as the outbreak continues to evolve. Should the
+ impacts of COVID exceed current projections, the economy may
+ continue to contract beyond the expected 12 months, which could
+ lead to elements of an economic collapse and worsening food
+ security. In response to COVID-19, the implementation of this DO
+ will be strategically sequenced to provide relief, recovery, reform,
+ and resilience. Beginning with relief, this DO will emphasize lifelines   “This DO contributes to
+ to firms on the verge of insolvency so that they can survive the          Nepal’s J2SR by promoting
+ pandemic. This may involve (under IR 2.2) advocating for a GON            economic governance and
+ credit guarantee program and assisting firms to access GON
+ financial assistance programs, or facilitating access to agricultural     business models that
+ lending through farmers cooperatives (under IR 2.1). The recovery         strengthen Nepal’s
+ phase of the DO will support efforts to enable firms to re-establish      economic sovereignty and
+ profitability and thrive once the pandemic subsides. This may
+ involve re-building disrupted supply chains (under IR 2.1), providing
+                                                                           promote positive linkages
+ technical and vocational training and accelerating digitization,          to fair economic trade and
+ specifically targeting marginalized groups to increase their market       international norms.”
+ participation and building private sector capacity to reach these
+ vulnerable populations with services and inputs (under IR 2.2 and         - USAID/Nepal DO 2
+ IR 2.4). Once firms regain solvency, this DO will shift to address
+ longer-term capacity development to achieve profitability and
+ competitiveness, such as accelerating the adoption of productivity-
+ enhancing innovations and technologies, while pursuing policy
+ reform opportunistically to improve the investment climate and
+ business environment (under IR 2.1, IR 2.2, and IR 2.3).
+ Throughout the life of the CDCS, this DO will concurrently
+ reinforce resilience by integrating WYM, including harnessing the
+ skills of migrant returnees, into markets to ensure that they
+ connect to and benefit from the new economic opportunities that
+ are created as the economy grows (under IR 2.4).
+
+ IR STATEMENTS AND NARRATIVES
+ Four IRs directly support DO 2 by linking economic growth with
+ enterprise investment to improve productivity and enhance
+ competitiveness, which in turn, attracts more investment as
+ markets expand, and as a result creates a virtuous cycle that
+ ultimately transforms an economy. Common traits characterizing
+ transformed economies include: accelerated investment lasting
+ more than a decade; increased world market orientation; increased
+ share of more complex products for export; exponential growth in
+
+
+
+USAID.GOV                                                                              USAID NEPAL CDCS | 17
+ per capita GDP; decreased population growth rate; and increased investment in human capital. 51
+ Enterprises invest when presented with market incentives and enabled by access to inputs/resources,
+ which are ultimately determined as a country lowers the cost and risk of doing business and improves
+ the functioning of input markets (absence of distortions and enhanced competition) through good
+ economic governance and a favorable business enabling environment. GDP growth, while a necessary
+ factor of economic transformation, is not a sufficient condition for achieving inclusive progress in living
+ standards. Therefore, it is necessary to integrate marginalized and vulnerable groups into markets to
+ increase the likelihood for them to connect to and benefit from new economic opportunities created by
+ a growing economy.
+
+ IR 2.1. INCLUSIVE, PRIVATE SECTOR-DRIVEN GROWTH IN AGRICULTURE PROMOTED
+ USAID has been a steady partner in Nepal’s agriculture sector since the start of FTF in 2010,
+ successfully advocating for market-led reforms that lay the foundation for broader economic growth in
+ the near term. To build on USAID’s comparative advantage and strong GON support for the sector, IR
+ 2.1 “Inclusive, Private Sector-Driven Growth in Agriculture Promoted” will address agriculture
+ productivity and policy needs. The agriculture policy environment is improving; there is an increasing
+ openness to key policy reforms and a market-centric approach in agriculture. By focusing on agricultural
+ production, the IR acknowledges that increasing on-farm labor productivity is necessary to improve the
+ sector’s profitability and efficiency so that the labor can move to higher productivity non-agriculture
+ areas. Gains in on-farm productivity alone will not propel Nepal to middle-income country status, but
+ when coupled with strengthening off-farm market system actors, including all types of agribusinesses and
+ food industries, and addressing critical gaps in food safety (sub-IR 2.1.2), it will form the foundation along
+ with IR 2.2 to diversify Nepal’s economic growth. USAID will take an inclusive market system approach
+ to this IR, facilitating linkages among producers, market actors (including agribusinesses and food
+ industries), and consumers, ultimately stimulating sustainable private sector-led agricultural development
+ and improving food security. Throughout this IR, USAID will take into account the effects of climate
+ change on agricultural productivity, which will ultimately affect investments in off-farm market systems
+ up the value chain. USAID will pilot various approaches to better link women, youth, and marginalized
+ groups to markets, ensuring that these groups have opportunities for advancement and participation at
+ different levels of agricultural value chains. Other important local actors will include think tanks and
+ universities - to spur innovation - and relevant government actors to foster a strong enabling
+ environment.
+
+ IR 2.2 COMPETITIVENESS OF SELECT HIGH-GROWTH SECTORS INCREASED
+ While Nepal’s productive capacity, as measured by the complexity index of the products that the
+ country produces and exports, is greater than what is expected given its level of income, its economy
+ clearly has the potential to grow through product intensification and diversification and by increasing the
+ competitiveness of select high-growth sectors. 52 Nepal’s economy has not kept pace with its
+ competitors, limiting market opportunities for Nepali enterprises and disincentivizing investment that
+ ultimately weakens the country’s growth performance. 53 Additionally, Nepal ranks 69th of 77 countries
+ in terms of labor productivity (GDP per labor employed), which is the lowest in all of Asia. 54 Growing
+ evidence 55 suggests that “diversification” serves as the initial driver of growth, for enterprises to acquire
+ mastery over a broader range of productive activities first, which will open more opportunities for
+ countries to advance to more complex export products. To respond to these critical needs, USAID will
+ have a new area of focus under IR 2.2: “Competitiveness of Select High-Growth Sectors Increased” and
+ partner with a discrete number of enterprises in high-growth sectors to strengthen their capacity and
+ competitiveness. USAID support will focus on services that will benefit the sector as a whole, and may
+ include improving the access or availability of business development services, workforce skills
+ development, financial products and services serving the sector, and expanding access to productivity-
+ enhancing technologies. To support local systems, USAID will strengthen the capacity of private Nepali
+ SME agribusinesses and facilitate relationships between local actors in order to expand sustainable and
+
+
+
+18 | USAID NEPAL CDCS                                                                                  USAID.GOV
+ inclusive agriculture market systems. Where necessary,
+ investments under this IR will take into account the potential
+ effects of climate change on high-growth sectors and market
+ systems. USAID will also partner with local private actors and
+ encourage cost-sharing arrangements in the delivery of services,
+ products and technologies that will improve the sector’s
+ competitiveness. The GON is making strides at policy reforms
+ needed to spur competitiveness and attract FDI, and this IR will
+ assist the GON to continue to streamline the policy approval
+ process, enhance investment incentives and guarantees, and
+ establish a robust dispute settlement regime. In addition, the GON
+ has demonstrated a willingness to reform and requested the World
+ Bank’s assistance to enact regulatory reform in order to lower the
+ cost and risk of doing business in Nepal relative to other countries.
+ USAID will coordinate with the World Bank and other donors,
+ private sector actors, and relevant government stakeholders to
+ advance this IR.
+                                                                         “If Nepal is to achieve its
+ IR 2.3 ECONOMIC GOVERNANCE AND BUSINESS ENABLING                        economic aspirations, it
+ ENVIRONMENT IMPROVED                                                    needs to create a business
+ In addition to competitiveness and private-sector driven growth,
+ Nepal needs a business enabling environment that incentivizes           enabling environment that
+ productivity-enhancing investment, rewards competition, and             incentivizes productivity-
+ facilitates new market entrants, in order to achieve its economic       enhancing investment,
+ aspirations. The lack of competition that has emerged due to the
+ unclear economic governance, and insufficient business-enabling
+                                                                         rewards competition, and
+ and investment environments constrain the foundations to                facilitates new market
+ economic growth in Nepal. 56 As a new area for USAID, IR 2.3:           entrants.”
+ “Economic Governance and Business Enabling Environment
+ Improved” acts on this need. This IR will support Nepal to improve      - USAID/Nepal IR 2.3
+ its economic governance and the business enabling environment by
+ incorporating international best practices in the policy and
+ regulatory framework governing trade and investment in Nepal. It
+ will also strengthen the capacity of GON agencies that implement
+ those policies and regulations, streamlining their processes to
+ lessen the regulatory burden borne by enterprises. USAID will
+ leverage its convening power and leadership within the donor
+ community to bring together like-minded development partners in
+ advocating for and complementing economic policy and regulatory
+ reforms that will improve Nepal's investment climate and business
+ enabling environment.
+
+ IR 2.4 MARGINALIZED AND VULNERABLE COMMUNITIES
+ INTEGRATED INTO MARKET SYSTEMS
+ As stated above, GDP growth alone is not sufficient to create
+ broad-based economic growth that improves living standards for all
+ Nepalis. For the most part, Nepal’s women, youth and marginalized
+ groups (WYM) often operate in the informal segments of the
+ economy that do not provide security and fair benefits to workers.
+ Of the 21 million Nepali working age population, 61% (12.7 million)
+ are engaged in self-contained economic activities for final own-
+
+
+
+USAID.GOV                                                                             USAID NEPAL CDCS | 19
+ household use. Of those engaged in economic activities for pay or profit, another 21% (4.4 million) are
+ employed in the informal sector. Abundant empirical evidence 57 shows that improving economic
+ inclusion boosts economic growth in the long-run and critical at this juncture of Nepal’s development.
+ IR 2.4: “Marginalized and Vulnerable Communities Integrated into Market Systems” will work to
+ integrate marginalized and vulnerable groups into markets and increase the likelihood for them to
+ connect to, and benefit from new economic opportunities created by a growing economy. This IR will:
+ enhance the participation of WYM in formal economic activities through entrepreneurship and/or skills
+ training and job placement to ensure that they are securely integrated into market systems; stimulate
+ entrepreneurship by increasing WYM’s access to business services that can enhance their productivity,
+ including access to finance, technology, business licenses and registrations, and markets, including input
+ markets, and; enhance meaningful private-sector representation of WYMs by expanding their leadership
+ roles and ensure that private and public sector institutions prioritize WYM’s interests in their
+ development activities and services. There is still a significant need to formulate and implement gender
+ sensitive and socially inclusive economic laws and policies to foster an enabling environment for WYM
+ private sector stakeholders (this includes understanding and mitigating the effects of social/gender norms
+ and gender-based violence that hinder women’s economic empowerment). This IR will engage local
+ actors such as WYM entrepreneur networks, vocational training centers, and various local private
+ sector actors.
+ DO 3: INCLUSIVE HEALTH & EDUCATION SYSTEMS STRENGTHENED
+ Development Hypothesis Statement: If the quality of health and education services is improved, equitable
+ access to health and education services is expanded, and the capacity of the health and education
+ systems to prepare for and recover from shocks is increased, then health and education systems will be
+ more inclusive and strengthened.
+
+ Development Hypothesis Narrative: Marginalized groups in Nepal have not equally benefited from essential
+ public services compared to other groups. In addition to the quality of education being unequal for girls,
+ given a preference to invest in the sons’ future, children of Madhesi Other Caste, Madhesi Dalit, and
+ Muslim communities have significantly lower school attendance and completion than their peers of other
+ groups. 58 Marginalized groups also experience lower uptake of crucial health services and practices
+ including toilet facilities, vaccination, antenatal care, and hospital delivery. 59 This marginalization from
+ public services may also have unintended consequences including gender-based violence, and child, early,
+ and forced marriage.
+
+ Effective and inclusive health and education systems are important in and of themselves to build human
+ capacity. In Nepal, they take on additional significance, as they represent the two basic and fundamental
+ services by which Nepalis can tangibly see and feel the effects of federalism, as these services have been
+ devolved to the local level to be more responsive to the needs of the constituents. The GON has
+ recognized the importance of removing inequities through federalism in its Fifteenth Periodic Plan 60 and
+ boosting social capital in order to meet Nepal’s long term development goals. Assessments 61 and the
+ J2SR Country Roadmap have demonstrated that effective and inclusive health and education systems are
+ essential to fulfilling the promises of democracy and economic growth for all Nepalis, and are the basis
+ for a more prosperous, stable, and independent Nepal. Based on these critical needs and gaps, DO 3 is
+ “Inclusive health and education systems strengthened.” Health and education “systems” 62 in this DO,
+ refers to all the activities whose primary purpose is to promote, restore and/or maintain health and
+ education, including the combination of people, institutions and resources, in accordance with
+ established policies, to improve the health and education of the populations they serve. “Systems
+ strengthening” therefore implies a process of identifying and implementing changes in policy and practice
+ in a country’s health or education system, so that the country can respond better to its health and
+ education challenges. 63 The building blocks of health and education systems strengthening include: i)
+ leadership and governance, ii) financing, iii) human resources, iv) products and technologies, v)
+
+
+
+20 | USAID NEPAL CDCS                                                                                 USAID.GOV
+ information and research, and vi) service delivery. 64 “Inclusive” refers to the need to build equity in
+ health and education systems and comprises several dimensions, including, but not limited to:
+ gender/sex, sexual orientation, people with disabilities, religion, ethnicity/caste, socio-economic
+ background, and geographic location. Given the systems approach of this DO, interventions will occur at
+ all levels of federalized Nepal - central, provincial, municipal, and community. Driven by data and need,
+ local level interventions will be targeted to build on past achievements or address persistent gaps in
+ service delivery systems and outcomes. In some cases, geographic selection will align with interventions
+ from other DOs to allow for synergies (for example, WASH and watershed management, nutrition and
+ agriculture programming, or schools and health facility reconstruction). Technical interventions within
+ this DO will focus on strengthening systems to deliver public services and target private service delivery,
+ where appropriate.
+
+ This DO contributes to the Goal by directly and indirectly advancing self-reliance metrics, as well as
+ supporting the inclusive delivery of services to increase health and learning outcomes for all. This DO
+ will contribute to development progress within four areas covered in the J2SR Roadmap - child health,
+ education quality, social group equality, and government effectiveness - and three components - FSR,
+ PSE, and RDR - to increase commitment through improved policy, transparency, accountability, and
+ equity, and improve capacity through improved planning, implementation, and advocacy. Through a
+ systems strengthening approach, this DO will target public financial management and governance issues
+ to improve FSR. Similarly, by using G2G mechanisms in both education and health, this DO will be able
+ to address key policy decisions and result milestones, advancing not only RDR, but also FSR. G2G
+ mechanisms also allow this DO to leverage the contributions of other donors to multiply impacts. In the
+ health sector, strengthening Nepali pharmaceutical companies, training of private providers, and public
+ private partnerships will contribute to PSE efforts.
+
+ In the current context, the socio-economic effects of COVID-19 on health and education systems have
+ been tremendous. This has included: mounting infections; exceeding of the capacity of the health system
+ to manage all COVID-19 cases; interruptions in routine non-COVID-19 health care; and education at a
+ virtual standstill. Health systems, from the Ministry down to the lowest local level, have redirected
+ technical and managerial attention, as well as already scarce financial and human resources, to deal with
+ COVID-19. A positive sign throughout the pandemic has been the strengthening of systems-building
+ processes and capacity development, as well as closer USAID-government relationships and
+ consultations. On the education side, schools have remained closed since March 2020, with only a
+ fraction of schools using digital technology to continue learning. While the Ministry of Education,
+ Science, and Technology has been able to provide distance learning options, such as print materials,
+ radio, television lessons, and increasingly digital online platforms, the majority of students do not have
+ consistent access to these services. It remains unclear the extent of learning taking place under distance
+ education. Currently, a Nepali student attending school for 11.7 years, when measuring learning-
+ adjusted years of schooling, only receives about 6.9 years of education. 65 Given the disruption of
+ COVID-19 to the education system, this is projected to decline even further. 66 Health service outcomes
+ and quality have suffered, especially with regard to maternal and child health. 67 Institutional childbirth has
+ declined, resulting in increases in neonatal mortality, and decreases in quality of care. Child immunization
+ coverage and family planning have decreased, not only because of the lockdown, but also because of
+ disruptions to the health commodity supply chain, which has resulted in health commodity shortages. If
+ COVID’s impact worsens beyond current projections, deaths and infection rates may skyrocket,
+ exceeding the health system’s capacity and causing a collapse of the system. If continued school closures
+ remain in effect, Nepali students may not rebound from the loss of education, leading to lost learning
+ and enrollment outcomes, and eventually losses in workforce development and economic productivity.
+ To address the effects of COVID-19 in the near term, this DO’s focus on sustainable systems
+ strengthening, with a particular emphasis on disaster/pandemic preparation and response, will facilitate
+ the rapid diffusion of innovations from the fast-evolving science of COVID-19. In addition, USAID will
+
+
+
+USAID.GOV                                                                                   USAID NEPAL CDCS | 21
+ incorporate adaptive risk mitigation measures into its programming (including community-based
+ programming and virtual outreach) to remain compliant with public health measures and protect all
+ parties while finding alternative, safer means of achieving results.
+ IR STATEMENTS AND NARRATIVES
+ In support of DO 3 there are three, mutually-reinforcing IRs that define the three necessary and
+ sufficient results to strengthen the health and education systems in Nepal’s context - quality, equity, and
+ resilience. IR 3.1 and 3.2 unite many of the building blocks that comprise the definition of effective health
+ and education systems. Given that Nepal is one of the most disaster-prone countries in the world, IR
+ 3.3 will address the need to strengthen the resilience of the health and education systems so that they
+ are better able to prepare for disasters and respond to them appropriately when they occur, and to
+ continue effective service delivery in the face of crises.
+
+ IR 3.1. QUALITY OF HEALTH AND EDUCATION SERVICES IMPROVED
+ IR 3.1: “Quality of health and education services improved” will address persisting quality gaps in
+ health 68 and education. 69 In the Nepal context, high-quality systems require: governance and
+ partnerships across sectors; platforms for service delivery; workforce numbers and skills; tools and
+ resources, from materials to data; and the population’s health and learning needs and expectations.
+ Additionally, effective systems need to measure and use data to learn and improve interventions. 70 As
+ sub-national governments are newly responsible for delivering health and education services, USAID will
+ work with the GON to strengthen health and education systems’ governance to address gaps in
+ leadership, policy planning and implementation, public financial management, monitoring and supervision,
+ and the availability and distribution of required materials/resources/supplies to where they are needed.
+ Similarly, USAID will ensure that appropriate human resources are in the right places and with the right
+ skills, which are critical to delivering quality services. Lastly, USAID will promote increased use of
+ evidence-based interventions that reflect best practices, international standards, or innovative methods
+ across the entirety of coverage areas to ensure that health and education outcomes are improved.
+ Across this IR, USAID will engage with the GON to provide G2G assistance through various
+ mechanisms, including results-based financing incentives, and technical assistance for systems
+ strengthening. USAID will leverage support from other donors (WHO, UNICEF, DfID, GTZ, World
+ Bank, ADB, JICA, Norway, Finland, EU, GPE) on sector-wide approaches, multi-donor funds, or
+ common strategic frameworks for financing. To facilitate local ownership, interventions under this IR
+ will work directly with both municipalities and provincial governments to assess capacity and develop
+ tailored capacity-building interventions. Activities will work with other non-governmental local actors,
+ such as sector committees (WASH, School Management Committee), operations and management
+ committees (health facilities or schools), support groups, civil society organizations, and local businesses
+ (such as media organizations or radio stations). By including a wide range of local actors in interventions
+ designed to improve the quality of health and education services, these groups will help reinforce the
+ responsiveness and sustainability of local service delivery systems.
+
+ IR 3.2 EQUITABLE ACCESS TO HEALTH AND EDUCATION SERVICES IMPROVED
+ Despite improvements over the past 20 years in health service utilization and in universal free basic
+ education, there remain geographic areas with highly vulnerable populations, out-of-school children, and
+ low uptake of health services. 71 In health, there are disparities in service utilization by gender,
+ geographic area, socio-economic status, education, and caste/ethnicity, as well as by the disabled, and
+ age groups such as adolescents. Given that health services are not always accessible to these
+ marginalized populations, their health outcomes are generally poorer. 72 In education, the net enrolment
+ rate at the basic level (grades 1-8) is 92.7%. Specific “last-mile” efforts are, therefore, needed for
+ improved quality of service delivery, and to ensure that interventions reach marginalized groups in terms
+ of both access and relevance of education. Moreover, assessments have indicated that learning
+ outcomes among marginalized or disadvantaged students, poor and remote districts, and public schools
+
+
+
+22 | USAID NEPAL CDCS                                                                                 USAID.GOV
+ compared to private, are well below average. 73 Also, children with
+ disabilities receive inadequate accommodations in Nepal to allow
+ them to attend school and learn once in the classroom. In certain
+ geographic areas, cultural norms and traditions prevent adolescent
+ girls from completing their education. To address these challenges,
+ IR 3.2: “Equitable access to health and education services
+ improved” will improve equitable access for the most marginalized.
+ Within this IR, “equitable access” to services indicates the need for
+ relevant services that meet the diverse needs of beneficiaries by
+ gender/sex, caste/ethnicity, culture, language, disability, wealth
+ quintile, age, and geographic location. 74 Development efforts will be
+ specifically customized to the particular needs of some in order to
+ enhance the opportunity of access to all. USAID will customize the
+ modes of service delivery to remove barriers for specific groups          “USAID will customize the
+ and enhance the relevance of services through innovative and              modes of service delivery
+ evidence-based models, and shape the contents of services                 to remove barriers for
+ packages to meet specific beneficiary needs. This will include
+ continuing to address the needs for GBV prevention and survivor
+                                                                           specific groups and
+ support. Additionally, policy work at the national and sub-national       enhance the relevance of
+ levels will ensure that service delivery takes into account the           services through innovative
+ specific needs of marginalized communities. USAID will also work          and evidence-based
+ directly with local communities and community groups to build
+ demand for quality services and ensure that these groups adopt
+                                                                           models, and shape the
+ high-impact interventions. This IR will leverage PSE and FSR to           contents of services
+ intentionally mobilize market-based solutions and domestic                packages to meet specific
+ resources towards prioritized areas with inadequate service               beneficiary needs…
+ provision for marginalized groups.
+                                                                           Development efforts will
+ IR 3.3 HEALTH AND EDUCATION SYSTEMS’ CAPACITY TO                          be specifically customized
+ PREPARE FOR AND RECOVER FROM SHOCKS INCREASED                             to the particular needs of
+ As one of the most disaster-prone countries in the world, Nepal
+ regularly experiences shocks that limit its ability to provide health     some in order to enhance
+ and education services and maintain utilization of those services         the opportunity of access
+ during and after the trauma. Currently due to COVID-19, health            to all.”
+ data indicate greater difficulty providing and accessing care, or self-
+ imposed delays to seeking care due to fear of infection. Likewise,        - USAID/Nepal IR 3.2
+ schools have remained closed, severely limiting education and
+ learning since the onset of the pandemic. Aside from COVID-19,
+ seasonal floods and landslides repeatedly interrupt service
+ continuity and jeopardize health and education outcomes. As was
+ the case following the 2015 earthquake, health and education
+ systems have not been adequately prepared to limit risks, reduce
+ the impacts on beneficiaries, and maintain service delivery. IR 3.3:
+ “Health and education systems’ capacity to prepare for and
+ recover from shocks increased” will address this need. This IR will
+ increase measures in health and education systems and facilities to
+ prevent COVID-19 transmission, mitigate disease outbreaks during
+ other types of emergencies, and will ensure that health and
+ education systems are adequately prepared for current and future
+ shocks. To reduce the impacts of disasters on service provision,
+ this IR will promote evidence-based practices including but not
+
+
+
+USAID.GOV                                                                               USAID NEPAL CDCS | 23
+                                limited to: infection prevention control; comprehensive school
+                                safety guidelines and plans, including school re-opening guidelines;
+                                human resource allocations; safe facility construction; water
+                                reserves; and advance procurement of supplies. Additionally, the
+                                capacity of the health and education sectors will be strengthened
+                                to include alternative modes of service delivery. That can include:
+                                distance learning; virtual training and supportive
+                                supervision/mentoring; teacher/volunteer mobilization to teach
+                                smaller groups; accelerated and remedial education; multigrade
+                                teaching; and community-based distribution of medicines. This will
+                                both meet demand and inspire confidence in systems to safely
+                                deliver during shocks. It will also ensure that systems do not
+                                become overwhelmed, continue to deliver services during crises,
+ “The environmental             and can recover more quickly from crises. To strengthen local
+ richness of Nepal presents     systems and responses, USAID will work with existing emergency
+ an opportunity to lift         structures and local entities (state and non-state) at the municipal
+ Nepalis out of poverty; at     level, including municipal health and education departments, health
+                                facilities and schools, Operation and Management Committees,
+ the same time, natural         peer and community groups, and private sector actors.
+ disasters repeatedly push
+                                DO 4: MORE EQUITABLE & IMPROVED NATURAL
+ the vulnerable back into       RESOURCES & DISASTER RISK MANAGEMENT
+ poverty and undermine          Development Hypothesis Statement: If Nepal effectively manages
+ economic opportunity and       environmental opportunities and threats by protecting its natural
+ potential for all. Improving   resources, developing its energy sector, and reducing the damage
+                                caused by recurrent natural and human-made disasters, then more
+ natural resources              sustainable and broad-based livelihood opportunities will be
+ management and disaster        created and promising new sources of economic development
+ risk management is crucial     opportunities will be realized.
+ to Nepal’s long-term           Development Hypothesis Narrative: Nepal, like other countries in the
+ sustainable social and         region, depends on its natural resources, including energy, water,
+ economic development,          land, and clean air for long-term growth. Yet the sustainability of
+                                these natural resources—and the vulnerable communities that
+ stability, and                 depend on them for their livelihoods—are threatened by natural
+ independence.”                 disasters, overuse, pollution, and infrastructure development that is
+                                not always mindful of environmental and social safeguards. 75 The
+ - USAID/Nepal DO 4             environmental richness of Nepal presents an opportunity to lift
+                                Nepalis out of poverty; at the same time, natural disasters
+                                repeatedly push the vulnerable back into poverty and undermine
+                                economic opportunity and potential for all. Improving natural
+                                resources management and disaster risk management is crucial to
+                                Nepal’s long-term sustainable social and economic development,
+                                stability, and independence.
+
+                                Nepal’s unique biodiversity and natural attractions offer a one-of-a-
+                                kind comparative advantage for tourism and create immense
+                                untapped energy generation potential. In 2018, the tourism sector
+                                generated $2 billion in revenue, contributed to 7.9% of GDP and
+                                directly or indirectly generated employment for over a million
+                                Nepalis. 76 In 2019, ecotourism attracted 50 percent of the 1.19
+
+
+
+24 | USAID NEPAL CDCS                                                                         USAID.GOV
+ million tourists to Nepal, with 35 percent visiting national parks and conservation areas and an additional
+ 14 percent for trekking. 77 Nepal’s abundant natural resources also present an opportunity for renewable
+ energy to catalyze further economic development, with an immense hydropower potential of more than
+ 80,000 megawatts (about 40,000 of which are considered economically viable), rich solar and wind
+ resources, and growing cities ripe for economic development and sustainable transportation advances. 78
+
+ Conversely, natural disasters (floods, landslides, earthquakes, fires, and glacial lake outbursts, among
+ others) hinder growth and reduce Nepal’s GDP growth by an average of 1.5% per year. 79 According to
+ multiple vulnerability indices, Nepal is among the most vulnerable countries in the world to global
+ climate change, and about 32% of the total area and 28% of the total population of Nepal is exposed to
+ risks from three or more hazards. 80
+
+ Nepali households’ lack of resilience leaves them vulnerable to natural disasters and undermines their
+ health, educational, and economic progress. An estimated 25 to 30 percent of Nepali households either
+ fell into poverty for the first time or escaped poverty only to fall back into poverty between 2003 and
+ 2013. 81 The World Bank estimates that 700,000 Nepalis fell below the poverty line after the 2015
+ earthquakes. 82 Thousands more have their lives and livelihoods swept away by floods and landslides
+ every year. Poverty backsliding among vulnerable and socially excluded populations is compounded by
+ the fact that these groups have limited social capital and possess little power in determining which
+ services are prioritized and delivered from the government, the private sector, or other development
+ actors.
+
+ Assessments 83 and the J2SR Country Roadmap demonstrate the need for continued efforts under
+ natural resource management to improve biodiversity conservation, strengthen disaster risk
+ management systems, advance energy sector reforms, and reduce the risks for marginalized groups who
+ are more reliant on natural resources and also less resilient to shocks from natural disasters. DO 4
+ “More equitable and improved natural resources 84 and disaster risk management 85” represents the
+ junction where the environment intersects with economic growth opportunities (nature-based tourism
+ and hydro-power) and where the environment intersects with resiliency and safeguard opportunities
+ (disaster risk management and decreasing the impact of disasters on those most vulnerable).
+
+ Key interventions under DO 4 will be focused at the policy and planning level with national scale and
+ impact. Site-based activities focused on enhancing natural resources (IR 4.1) will primarily focus on two
+ conservation landscapes that the GON has identified as a high-priority due to their unique ecological
+ attributes, significant biodiversity, and tourism value - the GON-designated Chitwan Annapurna
+ Landscape and the GON-proposed Karnali Conservation Landscape. Securing these corridors is
+ essential for nature-based tourism to meet its full potential as a driver of conservation and sustainable
+ growth in Nepal. Disaster risk management (DRM) and resilience programming will be focused on
+ disaster prone municipalities in each province as well as the Karnali River Basin, an area where the risks
+ associated with floods and droughts are compounded by their overlap in areas of high poverty and low
+ access to water and sanitation services.
+
+ Equitable and effective natural resources and disaster risk management is necessary to achieve the
+ CDCS goal, given the extent to which Nepal’s economy directly depends on its natural resource base,
+ the extent to which disasters constrain growth and disproportionately impact vulnerable Nepalis, and
+ the extent to which the livelihoods of a large percentage of its population depend directly on ecosystem
+ services. 86
+
+ This DO will contribute to development progress within three areas covered in the J2SR Roadmap -
+ Government Effectiveness, Social Group Equity, Environmental Policy - and four components - PSE, FSR,
+ and RDR. Private sector partners will alleviate some of the financing burden from the GON and provide
+ innovative and sustainable natural resource management (NRM), energy, and DRM solutions, particularly
+
+
+
+USAID.GOV                                                                                USAID NEPAL CDCS | 25
+ for biodiversity conservation and energy needs. FSR resources will be used to help the government
+ mobilize and leverage financing to respond and recover quickly when disasters occur and for enhanced
+ disaster risk reduction. These efforts will reduce the need for donor funding. USAID will apply RDR
+ principles to lay the foundations for nascent disaster mitigation, preparedness, and response institutions
+ - such as the National Disaster Risk Reduction Management Authority (NDRRMA) - ultimately
+ supporting sustained government effectiveness through this DO.
+
+ In the current COVID-19 context, the lockdown and its economic fallout have increased
+ unemployment, resulted in the return of substantial numbers of migrants, and strained overall resilience.
+ To cope, more households turn to natural resources, threatening positive gains in conservation. Should
+ effects exceed current projections, disaster preparedness, response, and management systems may
+ become overextended. Additionally, households may become more vulnerable to shocks and resort to
+ environmental crime and destruction as a coping mechanism. To mitigate impacts and risks, this DO will
+ increase the capacity of the GON and civil society to conduct disease research and surveillance among
+ humans, wildlife, and livestock at key interfaces. USAID will work to restore forests and wetlands to
+ reverse fragmentation and degradation and increase habitat area and connectivity, thereby reducing
+ potential zoonotic disease spillover threats. This DO will also: address the most damaging effects of
+ COVID-19 on the energy sector (including decreased revenue collection and significant new financing
+ constraints); build the institutional foundations through the NDRRMA and other institutions to
+ contribute to the national COVID-19 response and to strengthen local disaster management
+ committees as they respond to COVID-19 and future disasters; and support and improve the resilience
+ of returning migrant workers, who could otherwise become more vulnerable and have a domino effect
+ on the households they support through remittances, which are roughly equivalent to 25% of Nepal’s
+ annual GDP.
+ IR STATEMENTS AND NARRATIVES
+ Four IRs support DO 4; USAID’s investments to enhance natural resource conservation (IR 4.1),
+ accelerate Nepal’s energy sector transformation (IR 4.2), strengthen disaster risk management systems
+ (IR 4.3) and increase the resilience of women, marginalized and vulnerable groups (IR 4.4) are necessary
+ and sufficient intermediate results to achieve the overall development objective of more equitable and
+ improved natural resources and disaster risk management.
+
+ IR 4.1. NATURAL RESOURCES CONSERVATION ENHANCED
+ Biodiversity conservation and habitat protection have made impressive progress, most clearly illustrated
+ by the recovery of the tiger population. This gain and others, however, are vulnerable to unplanned
+ development, unequal enforcement of environmental and social safeguards, and the impacts of climate
+ change. 87 IR 4.1 “Natural resources conservation enhanced” will improve biodiversity and natural
+ resource safeguard elements that are core to the J2SR. Investments in this DO will address the
+ underlying systemic issues of climate change impacts, habitat fragmentation, and wildlife crime that
+ increase the risks of disease spillover, such as the current global pandemic caused by COVID-19. They
+ also seek to mitigate the anticipated negative impacts on natural resources from an economic downturn
+ and demographic pressures. This will be achieved through better management of watersheds and
+ conservation areas, and creating additional livelihood opportunities for communities through natural
+ resource-based enterprises that give them economic incentives to conserve resources, including
+ biodiversity. Strengthening environmental and social safeguards will further mitigate the negative impacts
+ of development and climate risks through, for example, green infrastructure and monitoring zoonotic
+ diseases that can impact humans, wildlife, and livestock. Reducing environmental crimes, including illegal
+ wildlife trafficking, mining and fishing, is a proven approach to conserving biodiversity, bolstering local
+ governance systems, and reducing corruption. The GON has existing national level environment acts,
+ policies, and strategies and is a signatory to international treaties, 88 but capacity gaps hinder effective
+ implementation. Policies and strategies must also be adapted and applied to the federal context. In this
+
+
+
+26 | USAID NEPAL CDCS                                                                                 USAID.GOV
+ CDCS, improving safeguards policies, especially related to infrastructure development, facilitating
+ economic incentive models for resource conservation, as well as social safeguards that protect
+ indigenous people’s rights and prevent sexual harassment will be priorities. In support of local systems,
+ this IR will strengthen the natural resource governance capacity of local and provincial governments
+ within the new federal structure by scaling up its current support of community-municipality co-
+ management models, imparting technical know-how, connecting to private sector initiatives, and
+ facilitating municipal, provincial, and national policy and legislation in the sector. USAID will support
+ work with CSOs to increase their capacity for advocacy for better, inclusive natural resource
+ management and help improve citizen scientist capacity for resource monitoring.
+
+ IR 4.2 SUSTAINABILITY OF THE ENERGY SECTOR IMPROVED
+ Despite recent gains, approximately 20-25% percent of Nepali households remain off-grid. At roughly
+ 267 kilowatt hours per year, Nepal’s per capita electricity consumption has increased significantly in
+ recent years, but remains among the lowest in the world, constraining growth and productivity. 89
+ Developing Nepal’s energy potential may ensure its energy security and position Nepal as a reliable and
+ clean energy supplier for the South Asia region, directly contributing towards enhancing regional
+ connectivity, stability, growth, and self-reliance. Developments in the energy sector in Nepal particularly
+ need to have sound environmental safeguards in place to avoid potential negative impacts to its
+ environment, tourism, and vulnerable communities, which all rely on rivers for livelihoods. Energy access
+ and security are central to the health and welfare of Nepalis and to Nepal’s future sustainable
+ development, powering everything from health centers, to schools to new enterprises seeking to use IT
+ in innovative and job-creating ways, 90 which is embodied in IR 4.2 “Sustainability of the energy sector
+ improved.” The private sector will be a key partner for most investments under this DO, particularly for
+ increasing energy generation. Continued energy generation advances will require more transparent and
+ competitive procurements and effective public-private business models to catalyze private sector
+ investment. In line with FSR, this DO will continue to work closely with the Nepal Electricity Authority
+ on commercial loss reductions and operational management and performance improvement
+ opportunities, and with Nepal’s new electricity regulator, the Electricity Regulatory Commission on
+ developing the bylaws, directives and tariff guidelines that can help shape efficiency-improving
+ competition and ensure cost recovery. To support local systems, interventions in support of this IR will
+ carefully coordinate with relevant GON institutions to ensure our energy-sector partnerships adaptively
+ meet the GON’s sector assistance priorities, engage with key local private sector and academic actors,
+ and provide robust support for the GON’s plan to decentralize the energy sector.
+
+ IR 4.3 DISASTER RISK MANAGEMENT SYSTEMS STRENGTHENED
+ Investing in improved DRM is a proven and cost-effective means of advancing Nepal’s self-reliance
+ priorities. The 2015 earthquakes killed 9,000 people, destroyed or severely damaged 811,000 homes,
+ 8,200 schools, and 1,200 health facilities. Reconstruction costs totaled $8 billion. Investments in risk
+ mitigation greatly reduce the need for response. Every $1 invested in DRM reduces the need for
+ response by $6 on average. 91 For the 2015 earthquakes, less than 3% of the damage to buildings and
+ infrastructure was covered by some form of insurance, and it is estimated that 80% of the Nepali
+ population has no insurance for their real property. 92 Nepal desperately needs to complete and
+ implement a Disaster Risk Financing Strategy that will ensure that the right investments are made ahead
+ of the next disaster to not only support enhanced implementation of DRM but leverage global equity
+ and insurance markets to ensure that they have the resources to adequately respond to future disasters
+ when they strike. IR 4.3 “Disaster risk management systems strengthened” will continue to develop the
+ nascent institutional and governance foundations for disaster risk management systems to respond to
+ the various shocks that continue to threaten Nepali lives and livelihoods. Though progress has been
+ made in recent years to formulate and pass laws, regulations, and codes to ensure public infrastructure,
+ homes and commercial buildings are built to withstand natural hazards, enforcement of these rules is
+ often lacking, especially in the informal sector, which produces the majority of housing in Nepal. USAID
+
+
+
+USAID.GOV                                                                                USAID NEPAL CDCS | 27
+ will seek partnerships with private sector construction firms to increase compliance with disaster
+ resilient building codes and international best practices for disaster resilient construction. To increase
+ sustainability, USAID will help governments, businesses, and homeowners better calculate and price
+ disaster risk in Nepal and make strategic decisions about when and how they will retain and transfer
+ that risk, including through risk sensitive insurance pricing that will incentivize disaster resilient practices.
+
+ The first response in any disaster happens at a community level. Federalism has reinforced this reality by
+ giving broad new DRM roles to local governments and local disaster management committees (DMCs).
+ As a result, it is critical that community groups and the DMCs are adequately trained to implement
+ lifesaving actions when early warning is given and in the immediate aftermath of a disaster. There is also
+ deep local knowledge that can be tapped at a community level to help us better tailor activities designed
+ to reduce disaster risk. To support local systems, this IR aims to strengthen the NDRRMA at the center,
+ provincial and local disaster management committees, community-based organizations, as well as
+ national and local businesses.
+
+ IR 4.4 RESILIENCE OF WOMEN, MARGINALIZED AND VULNERABLE GROUPS INCREASED
+ Vulnerability to the impact of disasters 93 and environmental shocks and stressors 94 is increased by
+ gender inequality, particular gender norms and social marginalization. Moreover, data 95 reveals that
+ marginalized groups are more likely to live in chronic poverty compared to others and overall resilience
+ capacities across caste groups are highly impacted by their levels of education, household assets and
+ social capital. 96 Disasters reinforce, perpetuate and increase gender inequality and social discrimination. 97
+ They compound existing inequalities and vulnerabilities - the poorest people are more likely to suffer
+ death, injury and damage to property, as they live in more hazard-exposed areas and are less able to
+ invest in risk-reducing measures - leaving the most marginalized furthest behind. 98 Under IR 4.4
+ “Resilience of women, marginalized and vulnerable groups increased”, USAID will work to address
+ gender, caste and ethnic disparities that have made women and historically marginalized populations
+ more vulnerable and less likely to recover from shocks and stresses. “Resilience” refers to the ability of
+ people, households, communities, countries, and systems to mitigate, adapt to, and recover from shocks
+ and stresses in a manner that reduces chronic vulnerability and facilitates inclusive growth. “Marginalized
+ and Vulnerable” refers to people who are typically denied access to legal protection or social and
+ economic participation and programs (i.e., police protection, political participation, access to healthcare,
+ education, employment), whether in practice or in principle, for historical, cultural, political, geographical
+ and/or other contextual reasons. The GON’s policy for grant disbursement for housing reconstruction
+ was based on ownership, which posed a big setback for female headed households, joint families and
+ households with no formal ownership. 99 These groups often suffer from discrimination in the application
+ of laws and policy and/or access to resources, services, and social protection, and may be subject to
+ persecution, harassment, and/or violence. To disrupt the endless cycle of poverty, particularly for
+ women, marginalized and vulnerable groups, this IR will enhance leadership opportunities, meaningful
+ participation in decision making, and improve the access to resources to ultimately improve resilience
+ and equity. In support of local systems, USAID will utilize a process for identifying and engaging the
+ marginalized and vulnerable communities to identify the key constraints and power dynamics that hinder
+ meaningful participation in government, private sector, civil society and donor development assistance.
+
+ MONITORING, EVALUATION, AND LEARNING
+ USAID’s Monitoring, Evaluation, and Learning (MEL) approach will promote accountability, learning, and
+ evidence-based programming. In order to measure progress of achieving the CDCS objectives, the
+ Mission will utilize Collaborating, Learning, and Adapting (CLA) techniques to continuously monitor
+ progress, evaluate performance and impact of its activities, learn from a wide variety of data sources,
+ and adapt its implementation.
+
+
+
+
+28 | USAID NEPAL CDCS                                                                                     USAID.GOV
+ ANNEXES
+     A. Journey to Self-Reliance Country Roadmap
+     B. Endnotes
+
+
+
+
+USAID.GOV                                          USAID NEPAL CDCS | 29
+ A. JOURNEY TO SELF-RELIANCE COUNTRY ROADMAP
+
+
+
+
+30 | USAID NEPAL CDCS                          USAID.GOV
+USAID.GOV   USAID NEPAL CDCS | 31
+ B. ENDNOTES
+
+
+ 1 MOF Budget Speech and NRB's Balance of Payments Statements include money coming in as Grants.
+ 2 World Bank. Gross Fixed Capital Formation, Private Sector (% of GDP) and World Bank. Foreign Direct Investment, Net
+ Inflows (% of GDP)
+ 3 Gurung, Yogendra B., Pradhan, Meeta S. & Shakya, Dhanendra V. (2020). State of Social Inclusion in Nepal: Caste, Ethnicity
+ and Gender [Evidence from Nepal Social Inclusion Survey 2018]. Kathmandu: Central Department of Anthropology, Tribhuvan
+ University
+ 4 Brhane, M., Rana, P.S. & Shah, T.N. (2020). Nepal Gender Equality and Social Inclusion Analysis 2020
+ 5 Gurung, Yogendra B., Pradhan, Meeta S. & Shakya, Dhanendra V. (2020). State of Social Inclusion in Nepal: Caste, Ethnicity
+ and Gender [Evidence from Nepal Social Inclusion Survey 2018]. Kathmandu: Central Department of Anthropology, Tribhuvan
+ University.
+ 6 Brhane, M., Rana, P.S. & Shah, T.N. (2020). Nepal Gender Equality and Social Inclusion Analysis 2020.
+ 7 Under-five and neonatal mortality rates have declined by nearly 70 percent and 60 percent respectively. over the past 20
+ years.
+ 8 Ministry of Education, Science and Technology (2020). Integrated Education Management Information System (Flash I) 2019/20
+ shows the Net Enrolment Rates at 96.6% and 92.7% at lower basic (grade 1-5) and upper basic (grades 1-8) respectively.
+ 9 Learning Adjusted years of schooling, a Nepali student only receives about 6.9 years of schooling despite attending school for
+ 11.7 years - a clear sign of poor quality.
+ 10 Ministry of Health Nepal, New ERA Nepal, and ICF (2017). Nepal Demographic and Health Survey 2016, GON CBS and
+ UNICEF (2015). Nepal Multiple Indicator Cluster Survey 2014, Suaahara II 2019 Household Survey_Family Planning, and the
+ MOHP’s information systems such as Health Management Information System (HMIS) and Logistics Management Information
+ System (LMIS) data and trends indicate that despite progress, Nepal falls short on equitable health outcomes, especially for
+ women of reproductive age/mothers, adolescents and children.
+ 11 Bessières, H., Dolidze, N., Peano, S., Ray, S., Pant, B.B., Khanal, D. et al. (2019). School Sector Development Plan (SSDP) Mid-
+ Term Review as well as the National Assessment of Student Achievement of grades 3, 5 and 8, have indicated that learning
+ outcomes among marginalized or disadvantaged students, poor and remote districts, and public schools compared to private,
+ are well below average.
+ 12 Nepal National Biodiversity Strategy and Action Plan (2014 - 2020), July 2014.
+ 13 ADB, 2020, Hydropower and Economic Development in Nepal.
+ 14 ADB, 2020, Hydropower and Economic Development in Nepal.
+ 15 UN Office for Disaster Risk Reduction (2019) Disaster Risk Reduction in Nepal: Status Report 2019.
+ 16 Government of Nepal (2019) Fifteenth Periodic Plan with Long Term Vision.
+ 17 See https://selfreliance.usaid.gov/country/nepal for the latest Country Roadmap.
+ 18 Pradhan, Meeta S. and Y.B. Gurung. (2020). “Who are left behind? Tracking Progress on the Sustainable Development Goals
+ in Nepal.” Kathmandu: Central Department of Anthropology, Tribhuvan University.
+ 19 Gurung, Yogendra B., Pradhan, Meeta S. & Shakya, Dhanendra V. (2020). State of Social Inclusion in Nepal: Caste, Ethnicity and
+ Gender [Evidence from Nepal Social Inclusion Survey 2018]. Kathmandu: Central Department of Anthropology, Tribhuvan
+ University
+ 20 IMF (2019) Nepal Article IV Review: Selected Issues. Chapter 2 - Managing Effective Federalism.
+ 21 The Government of Nepal National Planning Commission. Sustainable Development Goals 2016-2030 National (Preliminary)
+ Report 2015
+ 22 United Nations Development Programme and Oxford Poverty and Human Development Initiative. 2020. Global
+ Multidimensional Poverty Index 2020. Charting pathways out of multidimensional poverty: Achieving the SDGs
+ 23 Gurung, Yogendra B., Pradhan, Meeta S. & Shakya, Dhanendra V. State of Social Inclusion in Nepal : Caste, Ethnicity and
+ Gender (2020) Kathmandu: Central Department of Anthropology, Tribhuvan University
+ 24 World Bank. 2018. The Human Capital Project
+ 25 See Annex F.
+ 26 Sagara, B. (2018). Resilience Measurement Practical Guidance Note Series 2: Measuring Shocks and Stresses.
+ 27 World Bank (2019). Capacity Needs Assessment for the Transition to Federalism
+ 28 Lis, J., Pradhan, P., Pandey, C. & Pradhan, A. (2019). Nepal Democracy, Human Rights and Governance Assessment
+ 29 USAID DRG Center (2019). Nepal Development Context Assessment
+ 30 Brhane, M., Rana, P.S. & Shah, T.N. (2020). Nepal Gender Equality and Social Inclusion Analysis 2020
+
+
+
+
+32 | USAID NEPAL CDCS                                                                                                      USAID.GOV
+ 31 Lis, J., Pradhan, P., Pandey, C. & Pradhan, A. (2019). Nepal Democracy, Human Rights and Governance Assessment
+ 32 GoN CIAA (2020). A Study on Local Government-Level Corruption (2018-2019) (in Nepali)
+ 33 Lis, J., Pradhan, P., Pandey, C. & Pradhan, A. (2019). Nepal Democracy, Human Rights and Governance Assessment
+ 34 Lis, J., Pradhan, P., Pandey, C. & Pradhan, A. (2019). Nepal Democracy, Human Rights and Governance Assessment
+ 35 USAID DRG Center (2019). Nepal Development Context Assessment
+ 36 Lis, J., Pradhan, P., Pandey, C. & Pradhan, A. (2019). Nepal Democracy, Human Rights and Governance Assessment; and
+ Pokharel, B. and Pradhan, M. (2020). “State of Inclusive Governance in Nepal”. Kathmandu: Central Department of
+ Anthropology, Tribhuvan University.
+ 37 Freedom House (2019). Freedom in the World 2019, Democracy in Retreat
+ 38 Lis, J., Pradhan, P., Pandey, C. & Pradhan, A. (2019). Nepal Democracy, Human Rights and Governance Assessment
+ 39 Gurung, Yogendra B., Pradhan, Meeta S. & Shakya, Dhanendra V. (2020). State of Social Inclusion in Nepal: Caste, Ethnicity and
+ Gender [Evidence from Nepal Social Inclusion Survey 2018]. Kathmandu: Central Department of Anthropology, Tribhuvan
+ University
+ 40 Brhane, M., Rana, P.S. & Shah, T.N. (2020). Nepal Gender Equality and Social Inclusion Analysis 2020
+ 41 Pokharel, B. and Pradhan, M. (2020). State of Inclusive Governance in Nepal. Kathmandu: Central Department of
+ Anthropology, Tribhuvan University
+ 42 USAID DRG Center (2019). Nepal Development Context Assessment
+ 43 USAID DRG Center (2019). Nepal Development Context Assessment.
+ 44 Lis, J., Pradhan, P., Pandey, C. & Pradhan, A. (2019). Nepal Democracy, Human Rights and Governance Assessment.
+ 45 Lis, J., Pradhan, P., Pandey, C. & Pradhan, A. (2019). Nepal Democracy, Human Rights and Governance Assessment.
+ 46 Government of Nepal (2019) Fifteenth Periodic Plan with Long Term Vision
+ 47 Broad-based in this context is defined as: Increasing product diversity towards more complex products.
+ 48 Inclusive is in this context defined as: benefitting not just the dominant socio-economic groups, but also women, youth, and
+ marginalized populations.
+ 49 Hausmann, R. Hidalgo, C. et al. 2011. The Atlas of Economic Complexity.
+ 50 OECD. Growth and Inequality: A Close Relationship.
+ 51 USAID/Nepal. 2020. Nepal PSE Assessment, 2020
+ 52 Hausmann, R. Hidalgo, C. et al. 2011. The Atlas of Economic Complexity; Atlas of Economic Complexity. Atlas 5.1, 2020
+ 53 USAID/Nepal. 2020. Nepal PSE Assessment, 2020
+ 54 World Economic Forum. 2018. The Inclusive Development Index 2018: Summary and Data Highlights
+ 55 Rodrik, D. 2004. Industrial Policy for the Twenty-First Century
+ 56 USAID/Nepal (2020). Nepal PSE assessment, 2020.
+ 57 OECD. Growth and Inequality: A Close Relationship.
+ 58 Brhane, M., Rana, P.S. & Shah, T.N. (2020). Nepal Gender Equality and Social Inclusion Analysis 2020.; and Gurung, Yogendra
+ B., Pradhan, Meeta S. & Shakya, Dhanendra V. (2020). State of Social Inclusion in Nepal: Caste, Ethnicity and Gender
+ Kathmandu: Central Department of Anthropology, Tribhuvan University
+ 59 Ministry of Health Nepal, New ERA Nepal, and ICF (2017). Nepal Demographic and Health Survey 2016, GON CBS and
+ UNICEF (2015). Nepal Multiple Indicator Cluster Survey 2014, Suaahara II 2019 Household Survey_Family Planning, and the
+ MOHP’s information systems such as Health Management Information System (HMIS) and Logistics Management Information
+ System (LMIS) data and trends indicate that despite progress, Nepal falls short on equitable health outcomes, especially for
+ women of reproductive age/mothers, adolescents and children
+ 60 Government of Nepal (2019) Fifteenth Periodic Plan
+ 61 USAID DRG Center (2019). Nepal Development Context Assessment
+ 62 WHO (2011). Health Systems Strengthening Glossary
+ 63 WHO (2011). Health Systems Strengthening Glossary
+ 64 WHO (2010). Monitoring the Building Blocks of Health Systems: A Handbook of Indicators and Their Measurement
+ Strategies
+ 65 World Bank. 2018. The Human Capital Project
+ 66 Learning Loss as a Result of COVID-19 in Nepal
+ 67 Lancet Global Health, Aug 10, 2020 Nepal COVID Lockdown impacts_Facility MNH_Aug 2020
+ 68 Ministry of Health, Nepal; New ERA, Nepal; Nepal Health Sector Support Program (NHSSP); and ICF (2017). Nepal Health
+ Facility Survey 2015
+
+
+
+
+USAID.GOV                                                                                                   USAID NEPAL CDCS | 33
+ 69 NORC at University of Chicago (2020).      Impact Evaluation of the Early Grade Reading Program in Nepal - Endline report
+ (Draft)
+ 70 Kruk, M.E., Gage, A.D., Arsenault, C., Jordan, K., Leslie, H.H., Roder-DeWan, S. et al. (2018). High-quality health systems in
+ the Sustainable Development Goals era: time for a revolution
+ 71 USAID DCHA/DRG (2018). Suggested Approaches for Integrating Inclusive Development Across the Program Cycle and in
+ Mission Operations (ADS 201 Additional Help).
+ 72 Ghimire, U., Manandhar, J., Gautam, A., Tuladhar, S., Prasai, Y. & Gebreselassie, T. (2019). Inequalities in Health Outcomes
+ and Access to Services by Caste/Ethnicity, Province, and Wealth Quintile in Nepal.
+ 73 Ministry of Education Science and Technology (2019), Nepal. Mid-term review of the MOEST’s national School Sector
+ Development Plan (2016-2021) as well as the National Assessment of Student Achievement of grades 3, 5 and 8.
+ 74 Consolidated Equity Strategy, 2014, MOEST and Equity Index in Education, 2018, MOEST.
+ 75 In this DO, “safeguards” refers to the tools to prevent and mitigate harm to the environment and people during
+ development.
+ 76 World Travel and Tourism Council (2019) WTTC Travel & Tourism Economic Impact Report
+ 77 Ministry of Culture, Tourism, and Aviation (2020) Nepal Tourism Statistics 2019
+ 78 K.C. Surendra et al. (2010) Current status of renewable energy in Nepal: Opportunities and challenges.
+ 79 UN Office for Disaster Risk Reduction (2019) Disaster Risk Reduction in Nepal: Status Report 2019
+ 80 United Nations Development Programme (2011) Disaster Risk Reduction In Nepal Flagship Programmes
+ 81 Vidya Diwakar, Overseas Development Institute (2018). Resilience and Sustainable Poverty Escapes in Nepal.
+ 82 Government of Nepal, National Planning Commission (2015). Nepal Earthquake 2015 Post Disaster Needs Assessment Vol.
+ A: Key Findings
+ 83 USAID (2019) Biodiversity and Tropical Forests Analysis, USAID (2019) Disaster Risk Assessment
+ 84 “Natural resources” are materials found in nature that can be exploited for economic gain which may be renewable (e.g.,
+ forests, wind, water) or nonrenewable (e.g., fossil fuels).
+ 85 “Disaster Risk Management” (DRM) as a term encompasses the whole disaster cycle from response and recovery to risk
+ reduction and preparedness.
+ 86 “Ecosystem services” as defined by USAID’s Biodiversity Policy entails the short- and long-term benefits people obtain from
+ ecosystems which includes: 1) provisioning goods and services, or the production of basic goods such as food, water, fish, fuels,
+ timber, and fiber; 2) regulating services, such as flood protection, purification of air and water, waste absorption, disease
+ control, and climate regulation; 3) cultural services that provide spiritual, aesthetic, and recreational benefits; and 4) supporting
+ services necessary for the production of all other ecosystem services, such as soil formation, production of oxygen, crop
+ pollination, carbon sequestration, photosynthesis, and nutrient cycling.
+ 87 USAID/Nepal 2020 Biodiversity and Tropical Forests Analysis
+ 88 Convention on International Trade in Endangered Species (CITES), United Nations Framework Convention on Climate
+ Change (UNFCC)
+ 89 Electricity consumption increases to 267 units (02/13/2020): The Himalayan Times and World Bank global data
+ 90 International Institute for Applied Systems Analysis (2012): Global Energy Assessment
+ 91 Multihazard Mitigation Council (2017) Natural Hazard Mitigation Saves 2017 Interim Report: An Independent Study –
+ Summary of Findings. Principal Investigator Porter, K.; co-Principal Investigators Scawthorn, C.; Dash, N.; Santos, J.; P.
+ Schneider, Director, MMC. National Institute of Building Sciences, Washington.
+ 92 Pengwern Associates. 2020 Presentation to the USAID/Nepal.
+ 93 Wisner, Ben. (2017). The Next Paradigm Shift: From 'Disaster Risk Reduction' to 'Resisting Disaster Risk Creation'. Wisner
+ et al. 2012.UNIS
+ 94 Bahadur, A.V., Tanner, T., King, D., Kirbyshire, A. and Morsi, H. (2015) Resilience Scan October-December 2015: A review
+ of literature, debates and social media activity on resilience, Overseas Development Institute, London.
+ 95Central Bureau of Statistics, Nepal. Nepal Living Standards Survey (NLSS). https://cbs.gov.np/wp-
+ content/upLoads/2018/12/Statistical_Report_Vol1.pdf
+ 96 Nepal Resilience Research Report, (2017); USAID Nepal GESI Analysis 2020
+ 97 Dwyer, E. and Woolf, L. (2018) Down by the river: addressing the rights, needs and strengths of Fijian sexual and gender
+ minorities in disaster risk reduction and humanitarian response
+ 98 Lovell, E. and V. Le Masson (2014), Equity and inclusion in disaster risk reduction: Building resilience for all, Climate and
+ Development Knowledge Network and Overseas Development Institute, London.
+ 99 Tamang, Mukta S., Shakya, D.V., Pradhan, Meeta S., Gurung, Yogendra B., and Mabuhang, B. (2020). “Community Resilience
+ Capacity: A Study on Nepal's 2015 Earthquakes and Aftermath.” Kathmandu: Central Department of Anthropology, Tribhuvan
+ University.
+
+
+34 | USAID NEPAL CDCS                                                                                                        USAID.GOV
+

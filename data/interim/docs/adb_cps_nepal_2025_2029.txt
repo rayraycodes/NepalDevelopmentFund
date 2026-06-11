@@ -1,0 +1,1080 @@
+Country Partnership Strategy
+
+
+
+PUBLIC
+
+
+May 2025
+
+
+
+
+Nepal, 2025–2029
+—A Partnership for Private Sector-Led Growth,
+Youth Employment, and Resilience
+
+
+
+
+This document is being disclosed to the public prior to its consideration by ADB’s Board of
+Directors in accordance with ADB’s Access to Information Policy.
+                                   CURRENCY EQUIVALENTS
+                                      (as of 26 May 2025)
+
+                         Currency Unit        –      Nepalese rupee/s (NRe/NRs)
+                             NRe1.00          =      $0.0073
+                                $1.00         =      NRe136.346
+
+                                         ABBREVIATIONS
+
+        ADB               –     Asian Development Bank
+        ADF               –     Asian Development Fund
+        CAPR              –     country assistance program review
+        CKP               –     country knowledge plan
+        COL               –     concessional ordinary capital resources lending
+        CPS               –     country partnership strategy
+        DRM               –     disaster risk management
+        FDI               –     foreign direct investment
+        GBV               –     gender-based violence
+        GDP               –     gross domestic product
+        GRID              –     Green, Resilience, and Inclusive Development
+        LDC               –     Least Developed Country
+        LTS               –     Long-Term Strategy for Net-zero Emissions
+        mMtCO2            –     million metric tons
+        MSMEs             –     micro, small, and medium-sized enterprises
+        MW                –     megawatt
+        NAP               –     National Adaptation Plan
+        NDC               –     nationally determined contribution
+        O&M               –     operation and maintenance
+        PPP               –     public–private partnership
+        PSD               –     private sector development
+        PWD               –     persons with disabilities
+        SASEC             –     South Asia Subregional Economic Cooperation
+        SDG               –     Sustainable Development Goal
+        TA                –     technical assistance
+        TVET              –     technical and vocational education and training
+        WBG               –     World Bank Group
+
+                                               NOTES
+
+(i)    The fiscal year (FY) of the Government of Nepal ends in mid-July. “FY” before a calendar
+       year denotes the year in which the fiscal year ends, e.g., FY2025 ends in mid-July 2025.
+
+(ii)   In this report, “$” refers to United States dollars.
+Vice-President            Yingming Yang, Office of the Vice-President (South, Central
+                             and West Asia)
+Director General          Takeo Konishi, South Asia Department (SARD)
+Deputy Director General   Sona Shrestha, SARDa
+Country Director          Arnaud Cauchois, Nepal Resident Mission (NRM), SARD
+
+Team leaders              Jan Hansen, Principal Economist, NRM, SARD
+                          Shreejana Rajbhandari, Programs Officer, NRM, SARD
+Team members              Jiwan Sharma Acharya, Principal Energy Specialist, Energy
+                               Sector Office (SG-ENE), Sectors Department 1 (SD1)
+                          Bhupendra C. Bhatt, Senior Project Officer (Transport),
+                              Transport Sector Office (SG-TRA), SD1
+                          Sin W. Chong, Transport Specialist, SG-TRA, SD1
+                          Angelita M. Cortez, Senior Results Management Officer,
+                               Results Management and Aid Effectiveness Division
+                               (SPRA), Strategy, Policy, and Partnerships Department
+                               (SPD)
+                          Mary Ann E. Cuevas, Results Management Officer, SPRA,
+                               SPD
+                          Rudi Van Dael, Principal Social Sector Specialist, Human and
+                              Social    Development     Office     (SG-HSD),     Sectors
+                              Department 3 (SD3)
+                          Saugata Dasgupta, Senior Transport Specialist, SG-TRA, SD1
+                          Avani Dixit; Senior Climate Change Officer; Climate Change,
+                              Resilience, and Environment Cluster (CCRE); Climate
+                              Change and Sustainable Development Department
+                              (CCSD)
+                          Naresh Giri, Senior Project Officer (Urban Development),
+                              Water and Urban Development Office (SG-WUD), Sectors
+                              Department 2 (SD2)
+                          Smita Gyawali, Principal Project Officer (Education), SG-HSD,
+                              SD2
+                          Arnaud Heckmann, Country Operations Head, NRM, SARD
+                          Arndt C. Husar, Principal Operations Specialist, Operations
+                              Coordination Unit (SAOC), SARD
+                          Malika KC (Thapa), Senior Operations Assistant, NRM, SARD
+                          Binita S. Khadka, Principal Communication Officer, NRM,
+                              SARD
+                          Manbar S. Khadka, Senior Economics Officer, NRM, SARD
+                          Shuvechha Khadka, Senior Social Development Officer
+                              (Gender), NRM, SARD
+                          Sameer Khatiwada, Senior Public Sector Economist, Public
+                              Sector Management and Governance Office (SG-PSMG),
+                              SD3
+                          Aditya Khurana, Results Management Specialist, SPRA, SPD
+                          Marie L'hostis, Water Resources Specialist; Agriculture, Food,
+                              Nature, and Rural Development Office (SG-AFNR), SD2
+                          Pushkar Manandhar, Energy Specialist, SG-ENE, SD1
+                          Neelina Nakarmi, Associate Economics Officer, NRM, SARD
+                          Unnikrishnan D. Nair, Senior Climate Change Specialist,
+                                               CCRE, CCSD
+                                           Nikunj Oli, Senior Investment Specialist, Private Sector
+                                               Financial Institutions Division (PSFI), Private Sector
+                                               Operations Department
+                                           David D. Oldfield; Senior Advisor, Office of the Vice-President
+                                               (East and Southeast Asia, and the Pacific) b
+                                           Rabindra Osti, Principal Climate Change Specialist, SG-
+                                                AFNR, SD2
+                                           Anjan Panday, Senior Programs Officer, Office of the Director
+                                               General, SARD
+                                           Krishna Pathak, Senior Public Management Officer, SG-
+                                               PSMG, SD3
+                                           Arun S. Rana, Principal Project Officer, SG-AFNR, SD2
+                                           Cecile H. Sarfati, Associate Operations Officer, SAOC, SARD
+                                           Grishma Shah, Senior Project Officer (Energy), SG-ENE, SD1
+                                           Hikaru Shoji, Unit Head, Portfolio Management, SG-WUD,
+                                               SD2
+                                           Rachana Shrestha, Senior Public Sector Specialist, SG-
+                                               PSMG, SD3
+                                           Deepak B. Singh, Principal Safeguards Officer (Environment),
+                                               Office of Safeguards (OSFG)
+                                           Helen Steward, Principal Markets Development Advisory
+                                               Specialist, Special Initiatives and Funds, Office of Markets
+                                               Development and Public–Private Partnership
+                                           Laxmi P. Subedi, Lead Safeguards Officer (Social), OSFG
+                                           Hemant Tiwari, Senior Project Officer (Transport), SG-TRA,
+                                               SD1
+                                           Francesco Tornieri, Principal Social Development Specialist
+                                               (Social Inclusion), SG-HSD, SD3
+                                           Rajani Tuladhar, Associate Portfolio Management Officer,
+                                                NRM, SARD
+Peer reviewers                             Edward Faber, Senior Country Economist, Mongolia Resident
+                                               Mission, East Asia Department
+                                           Declan Magee, Principal Economist, Office of the Director
+                                               General, CCSD
+a
+    Cindy Malvicini, former deputy director general, SARD, retired from ADB effective 18 January 2025.
+b
+    The contribution was made during a previous assignment as principal planning and policy specialist, SPD.
+
+
+
+
+In preparing any country partnership strategy, financing any project, or by making any designation
+of or reference to a particular territory or geographic area in this document, the Asian
+Development Bank does not intend to make any judgments as to the legal or other status of any
+territory or area.
+                                         CONTENTS
+
+                                                               Page
+COUNTRY AT A GLANCE
+I.     COUNTRY PARTNERSHIP STRATEGY SNAPSHOT                      1
+II.    COUNTRY DEVELOPMENT CONTEXT                                1
+III.   COUNTRY STRATEGY FRAMEWORK                                 7
+       A.   Lessons from Previous Strategy                        7
+       B.   National Development Strategy                         7
+       C.   Role of Development Partners                          8
+       D.   ADB’s Strategic Priorities and Focus Areas            8
+       E.   Priorities for Knowledge Support                     14
+IV.    STRATEGY IMPLEMENTATION                                   15
+       A.   Cost-Sharing Arrangements                            15
+       B.   Implementation Priorities                            15
+       C.   Monitoring of Results                                15
+       D.   Risks                                                15
+
+ANNEXES
+1.     Inclusive and Sustainable Growth Assessment
+2.     Development Coordination Matrix
+3.     Country Partnership Strategy Results Framework
+4.     Country Knowledge Plan
+5.     Country Climate Plan
+6.     Private Sector Development Plan
+7.     ADB and the World Bank Group Joint Strategic Approach
+                                                   COUNTRY AT A GLANCE
+Economic                                                               FY2020       FY2021          FY2022        FY2023            FY2024
+GDP ($ billion, current)                                                    33.4       36.9              41.2         41.0              42.9
+GDP per capita ($, current)                                             1,166.7     1,276.7          1,410.7      1,393.2           1,443.1
+GDP growth (%, in constant prices)                                         (2.4)         4.8              5.6          2.0                3.7
+Consumption (annual % change)a                                              12.2       11.2              14.1          7.1                7.5
+Investment (annual % change)a                                              (9.2)         7.8             13.0        (8.5)                5.2
+Consumer price index (annual % change)                                       6.2         3.6              6.3          7.7                5.4
+Overall fiscal surplus or deficit (% of GDP)                               (5.4)       (4.0)            (3.2)        (5.8)              (2.4)
+Total revenue (% of GDP)                                                    22.2       23.3              21.4         17.9              18.7
+Tax revenue (% of GDP)                                                      18.0       20.0              19.8         16.1              16.2
+Merchandise export ($) growth (annual % change)                            (7.6)       31.0              43.9       (19.9)              (2.3)
+Merchandise import ($) growth (annual % change)                           (18.9)       26.6              21.9       (22.0)              (2.2)
+Current account balance (% of GDP)                                         (0.9)       (7.7)           (12.5)        (0.9)                3.9
+External debt (% of GDP)                                                    21.1       21.5              20.6         21.9              22.0
+General government gross debt (% of GDP)a                                   15.8       18.4              19.8         21.1              20.7
+Reserves ($ million)                                                   11,646.1    11,752.6          9,512.6     11,708.8          15,270.9
+Average exchange rate (LCU/$)                                             116.3       117.9            120.8        130.7              133.0
+Poverty and Social                                                                                 Previous                          Latest
+Population (million)                                                                              24.8 [2006]                    29.7 [2024]
+Population growth (annual % change)                                                                        1.2                            0.9
+Unemployment rate d                                                                                                              10.7 [2023]
+Population with access to electricity (%)                                                                                        96.7 [2023]
+Maternal mortality ratio (per 100,000 live births)                                               281.0 [2006]                  151.0 [2021]
+Infant mortality rate (below 1 year/per 1,000 live births)                                        44.6 [2006]                    23.0 [2022]
+Life expectancy at birth (years)                                                                  65.9 [2006]                    70.5 [2022]
+Mean years of schooling                                                                            7.5 [2004]                     8.9 [2023]
+Completion rate for primary education (%)                                                                                        81.8 [2019]
+Child malnutrition (% below 5 years old)                                                           49.0 [2006]                   25.0 [2022]
+Population below poverty line (%)                                                                  25.2 [2011]                   20.3 [2023]
+Proportion of population using safely managed drinking water services                              28.3 [2006]                   16.1 [2022]
+Proportion of population using (a) safely managed sanitation services and (b)                  (a)19.6 [2006];               (a)50.6 [2022];
+handwashing facility with soap and water                                                       (b)46.5                       (b)63.5
+Environment
+Greenhouse gas emissions (tons) [2021]                                                                                28,166.06 Gg CO2eq
+Greenhouse gas emissions per capita (tons) [2021]                                                                                    1.06
+Forest area (million hectares) [2022]                                                                                                6.16
+Urban population (% of total population) [2023]                                                                                     66.17
+Renewable energy share in total final energy consumption [2023]                                                                   10.33%
+ADB Portfolio (active loans and ADF grants)b                                                                     As of 31 December 2024
+Total number of loans and ADF grants                                                                                                  55
+   Sovereign                                                                                                                          53
+   Nonsovereign                                                                                                                        2
+Total loan and ADF grant amount ($ million)c                                                                                    4,246.45
+   Sovereign                                                                                                                    4,166.45
+   Nonsovereign                                                                                                                     80.0
+Disbursements {sovereign}
+   Disbursed amount, total ($ million, 2024)                                                                                        312.48
+   Disbursed amount, excluding PBL ($ million, 2024)                                                                                312.48
+   Disbursement ratio, excluding PBL (%)                                                                                              15.3
+… = not available, ( ) = negative, [ ] = latest year for which data are available, ADB = Asian Development Bank, ADF = Asian
+Development Fund, GDP = gross domestic product, Gg CO2eq = gigagrams carbon dioxide equivalent, LCU = local currency unit,
+OCR = ordinary capital resources, PBL = policy-based lending.
+a
+  In current prices; investment does not include change in stock.
+b
+  Covers ADF and OCR financing for projects and programs, including PBL, unless otherwise stated.
+c
+  Net of droppage and cancellation.
+d
+  Data based on World Development Indicators (modeled International Labor Organization estimate).
+Sources: Asian Development Bank; Government of Nepal, Central Bureau of Statistics. 2014. National Population and Housing
+Census 2011 (Population Projection 2011–2031); Financial Comptroller General’s Office; Government of Nepal, Ministry of Finance.
+2024. FY2025 Budget Speech; Government of Nepal, National Statistics Office. 2024. FY2025 National Accounts Statistics;
+Government of Nepal, National Statistics Office. 2024. Nepal Living Standards Survey IV 2022/23; Government of Nepal, National
+Statistics, Office of the Prime Minister and Council of Ministers. 2023. National Population and Housing Census 2021. National
+Report.; Government of Nepal, Ministry of Health and Population; New ERA; and ICF. 2022. Nepal Demographic and Health Survey
+2022: Key Indicators Report; Nepal Rastra Bank. 2024. Current Macro-Economic and Financial Situation; United Nations
+Development Programme. 2024. Human Development Report 2023/2024; UNICEF Data Warehouse.(accessed 7 April 2025); World
+Development Indicators database (accessed 7 April 2025). Government of Nepal, National Planning Commission. 2022. Climate
+Change Related Indicators of Nepal; Ministry of Forests and Environment. 2024. National Land Cover Monitoring System of Nepal;
+Water and Energy Commission Secretariat. 2024. Energy Synopsis Report 2024.
+                   I.       COUNTRY PARTNERSHIP STRATEGY SNAPSHOT
+
+1.      Key development challenges. Nepal has exhibited economic resilience while reducing
+poverty since the mid-1990s—despite persistent political volatility, structural challenges, and
+multiple disasters triggered by natural hazards. However, the country continues to face major
+development challenges, including low competitiveness because of its landlocked and
+mountainous topography, inadequate business climate, infrastructure gaps, low agricultural
+productivity, unplanned urbanization, and dependence on remittances. Nepal is also highly
+vulnerable to increasing natural hazards. Further, Nepal’s transition to federalism following the
+comprehensive peace agreement in 2006 has highlighted the need to strengthen institutional
+capacities, funds, and functionaries of all three tiers of government.
+
+2.       Strategic objective and priorities. The country partnership strategy (CPS) is aligned
+with the government’s 16th Plan and the Asian Development Bank (ADB) Strategy 2030 and its
+midterm review.1 The CPS will support the country’s development priorities by focusing on (i)
+promoting private sector-led, employment-intensive, and green economic transformation; (ii)
+promoting inclusive and quality human capital development and public services; and (iii)
+enhancing environmental sustainability and climate resilience. Cross-cutting themes include
+digital development, good governance and capacity building for federalism, and empowerment of
+women and disadvantaged and vulnerable groups.
+
+3.      ADB’s selectivity, flexibility, and value-addition. To maximize the development
+outcomes of the CPS, ADB will ensure selectivity, integration, and synergies in its support by
+focusing on the primary objectives of private sector-led growth, youth employment, and resilience.
+In collaboration with the World Bank Group (WBG), ADB’s assistance will concentrate on the core
+sectors of energy; transport; water and other urban infrastructure and services; agriculture, natural
+resources, and rural development; and education. Enabling areas such as public sector
+management as primary enabling sector, finance, industry and trade, climate mitigation and
+adaptation, and private sector development (PSD) will support the core sectors. Given the
+dynamic country context and global uncertainties, ADB’s country program will remain flexible.
+
+                           II.      COUNTRY DEVELOPMENT CONTEXT
+
+4.       Nepal is a lower middle-income country that is classified as a Least Developed Country
+(LDC) by the United Nations.2 The country’s gross domestic product (GDP) was $42.9 billion in
+FY2024 with gross national income per capita of $1,430 in 2023.3 Nepal has exhibited economic
+resilience since the mid-1990s by maintaining macroeconomic stability and moderate economic
+growth while substantially reducing poverty—despite persistent political volatility, structural
+challenges, and multiple disasters triggered by natural hazards.4 Under the South Asia
+Subregional Economic Cooperation (SASEC) program, Nepal has increased integration and
+improved connectivity through investments in the transport corridor network, trade facilitation
+reforms, and energy investments.
+
+1 Government of Nepal, National Planning Commission. 2024. Sixteenth Five Year Development Plan (FY2025–
+  FY2029); ADB. 2018. Strategy 2030: Achieving a Prosperous, Inclusive, Resilient, and Sustainable Asia and the
+  Pacific; and ADB. 2024. Strategy 2030 Midterm Review. An Evolution Approach for the Asian Development Bank.
+2
+  The Inclusive and Sustainable Growth Assessment (Annex 1) provides details on Nepal’s development challenges
+  and opportunities.
+3 Atlas method. FY before a calendar year denotes the year in which the FY ends, e.g., FY2024 ended on 15 July
+
+  2024.
+4 World Bank. 2025. Country Economic Memorandum. Unlocking Nepal’s Growth Potential: Nepal Country Economic
+
+  Memorandum 2025.
+2
+
+
+5.       Macroeconomic trends. Following 2 years of strong expansion since the coronavirus
+disease pandemic, Nepal’s economic growth fell to 2.0% in FY2023. The larger-than-expected
+drop was the result of tight monetary policy and import restrictions to address accelerating inflation
+and pressure on foreign exchange reserves, as well as fiscal consolidation. The current account
+deficit, which had surged to 12.5% of GDP in FY2022, narrowed to 0.9% in FY2023, driven by
+moderation in the trade deficit and strong remittance inflows. The shrinking current account deficit
+contributed to an increase in foreign exchange reserves to $11.7 billion, equivalent to 10 months
+of imports, in FY2023. GDP growth accelerated to 3.7% in FY2024 as domestic demand gradually
+revived following stronger remittances inflows, increased private investment because of monetary
+easing, higher electricity output, and the continued recovery of tourism. Preliminary estimates
+show that GDP expanded by 4.6% in FY2025.5 The fiscal deficit, which widened to 5.8% of GDP
+in FY2023 on sharp revenue shortfalls, is estimated to have dropped to 2.4% of GDP in FY2024.6
+
+6.       Structural transformation has bypassed the industry sector. Nepal’s landlocked and
+mountainous topography raises the costs of production and trade, which contributes to
+inadequate productivity and economic competitiveness. It also limits the benefits of Nepal’s
+proximity to the large and fast-growing markets of India and the People’s Republic of China. From
+FY1996 to FY2024, Nepal’s economy grew at an annual average of 4.3%. The economic structure
+has shifted from agriculture to services, bypassing the industry sector. Services accounted for the
+largest share of GDP in FY2024 (62.4%), followed by agriculture, forestry, and fishing (24.7%)
+and industry (12.9%), while manufacturing contributed only 4.9% to GDP (footnote 5). Economic
+growth has heavily depended on remittances from migrant workers, which have grown over the
+past 2 decades and were among the highest in the world at 25.3% of GDP in FY2024.7
+Remittances have made private consumption the main driver of economic growth, but they have
+likely contributed to an appreciation in the real effective exchange rate. This reduces the country’s
+export competitiveness and contributes to the low and falling share of manufacturing in GDP, a
+phenomenon known as “Dutch disease”- like effects (footnote 4). Merchandise exports dropped
+from 15.4% of GDP in FY2000 to 3.2% of GDP in FY2024.
+
+7.      Low agricultural productivity and resilience. Agriculture is essential to rural livelihoods,
+poverty reduction, and job creation. However, agricultural productivity and competitiveness
+remain low, mainly because of (i) fragmented landholdings, (ii) labor shortages and abandoned
+farmland caused by migration, (iii) lack of year-round irrigation, (iv) limited access to formal
+financial services, (v) poor storage and market access, and (vi) an inadequate business climate
+for investments in agro-processing facilities. The agriculture sector is vulnerable to increasingly
+unpredictable weather patterns because of Nepal’s geography, unsustainable farming practices,
+and weak institutional capacity. Farming remains subsistent in nature.
+
+8.      Inadequate environment for private sector growth. Despite recent progress, doing
+business in Nepal, including access to finance, continues to be difficult. The private sector
+remains predominantly small and noncompetitive; half of businesses employing a quarter of the
+workforce are unregistered.8 In addition to the challenging geography, Nepal’s inadequate
+competitiveness is attributed to high tariffs and excise taxes, an appreciation of real exchange
+rates, and an infrastructure gap. Trade and logistics facilities are underdeveloped, which deters
+
+5 Government of Nepal, National Statistics Office. 2025. National Accounts of Nepal FY2025.
+6 ADB. 2024. Asian Development Outlook (April).
+7 Government of Nepal, Nepal Rastra Bank. 2025. Current Macroeconomic and Financial Situation of Nepal. As per
+
+  the Ministry of Labor, Employment and Social Security, the top destinations for foreign employment in FY2024 were
+  the United Arab Emirates, Malaysia, Saudi Arabia, Qatar, Kuwait, and the Republic of Korea. Including 460,103 new
+  departures, 741,302 people were employed abroad.
+8 Government of Nepal, National Statistics Office. 2018. National Economic Census 2018.
+                                                                                                                    3
+
+
+foreign direct investment (FDI) and participation in value chains. FDI in Nepal averaged 0.3% of
+GDP from FY2020 to FY2024. Although a legal and regulatory framework for public–private
+partnerships (PPPs) is in place, institutional capacity in project procurement and implementation
+is weak. As a result, PPPs have been limited to the power sector.9
+
+9.      Low youth employability. The inadequately skilled workforce has been a major barrier
+to growth, limiting the supply of labor and creation of quality jobs. Children are not learning basic
+literacy and numerical skills at the primary level; at the secondary level, limited qualified teachers
+in key subjects of science, mathematics, and English pose serious challenges. Upon completion
+of general education, few choose technical and vocational education and training (TVET)
+programs, as these are plagued with systemic problems related to quality, capacity, and
+governance. More youth are choosing to finish their studies abroad, leading to decreasing
+enrollment in TVET and tertiary education. As the labor market is dominated by micro, small, and
+medium-sized enterprises (MSMEs), linking TVET with available jobs through engagement with
+industry organizations is only feasible for a few sectors in Nepal. It needs to be complemented
+with more flexible approaches focused on self-employment.
+
+10.    Low employment creation. The working age population (15–64 years) in Nepal has been
+increasing faster than the total population since 1992. This trend is expected to continue until
+2047, providing a demographic window of opportunity for growth and development. However,
+Nepal’s employment ratio fell by an average 0.46 percentage points per year from 2000 to 2022
+because growth of the working age population outpaced job creation (footnote 4), which implies
+that Nepal’s demographic dividend has not been fully utilized.
+
+11.       Long-term growth rate. Nepal needs faster growth to progress to an upper middle-
+income country in less than 2 decades (footnote 4). To reach that target, the country needs to
+switch from the current growth model that relies on remittances and private consumption to one
+fueled by productivity gains and the creation of jobs through (i) domestic private investments and
+FDI, (ii) access to quality infrastructure, (iii) adoption of new technologies and accumulation of
+skills, (iv) integration with regional and global value chains, and (v) exports.
+
+12.     Inadequate climate-resilient infrastructure and renewable energy. Large
+infrastructure gaps impede connectivity, raise the costs of doing business, and undermine public
+service delivery. This degrades living conditions and deters private investment, competitiveness,
+exports, and job creation. The inadequate climate and disaster resilience in infrastructure planning
+and design substantially increases damages and economic losses from climate-induced
+disasters. While the performance of Nepal’s energy sector has improved and electricity access
+reached 96.7% in 2023, the reliability of the electricity supply remains problematic.10 The main
+challenges include underdeveloped infrastructure, limitations in transmission and distribution
+network capacity, exposure to multiple disasters triggered by natural hazards, and limited access
+to finance including FDI. As of October 2024, Nepal’s installed power generation capacity was
+3,403 megawatts (MW), virtually all from hydropower.11 Because power generation is dominated
+by run-of-river hydropower plants, the country experiences capacity and energy deficits during
+most of the dry season (December–May) and surpluses during the wet season (June–November).
+This presents an opportunity for Nepal to engage in cross-border energy trade with India and
+Bangladesh. In 2024, India committed to buy 10,000 MW of power from Nepal over 10 years
+
+9  The Private Sector Development Plan (Annex 6) provides details on Nepal’s private sector development including
+   the PPP framework.
+10 Government of Nepal, Water and Energy Commission Secretariat. Energy Sector Synopsis Report 2024.
+11 Government of Nepal, Ministry of Energy, Water Resources, and Irrigation. 2025. Details of major activities carried
+
+   out from 16 October 2024 to 15 January 2025.
+4
+
+
+during the rainy season, while Bangladesh agreed to buy 40 MW of power over 5 years. The
+development of hydropower storage facilities is essential for Nepal to increase the generation
+capacity, reliability, and export potential of hydropower.
+
+13.     Poor urban planning, infrastructure, and services. Nepal has been unable to fully tap
+the economic and human development potential of urbanization, mainly because of problems
+related to urban sprawl, service delivery gaps, and crumbling essential infrastructure.12 In addition
+to earthquake vulnerability, Nepal's urban sector is also vulnerable to increasing disasters such
+as floods and landslides. While many of Nepal’s cities are rich in cultural heritage and could serve
+as hubs for nature-based and cultural tourism and commerce, they have been unable to fully
+harness existing assets and potential development.13 The poor livability of urban centers raises
+the cost of doing business and makes it difficult for investors to attract and retain skilled workers,
+which may choose to migrate for better living conditions abroad.
+
+14.     Challenges in Nepal’s transition to federalism. The adoption of a new Constitution in
+2015 established Nepal as a federal republic with three tiers of government—federal, provincial,
+and local—entrusted with developing public infrastructure and delivering quality and efficient
+services to the population. Nepal has made some progress, including through ADB support, in
+establishing institutional structures, adopting key legislation, and building blocks for public
+financial management (PFM). The institutional capacity, funds, and functionaries required at all
+three tiers of government for the effective transition to federalism are gradually evolving and
+require strengthening.
+
+15.      With the pending enactment of the federal civil service act and the absence of other
+consistent legal frameworks, weak public administration is an implementation challenge for
+Nepal’s transition to the federal system of governance.14 In addition, institutional capacity issues
+in national and subnational governments include weak resource planning and management,
+characterized by a disconnect between development plans, investment projects, and budgets, as
+well as a chronic inability to utilize the capital expenditure budget and manage assets. Provincial
+and local governments have not fully executed many of the responsibilities specified in the
+Constitution because of limited fiscal space, lack of relevant legal and policy frameworks,
+insufficient human resources, and overlapping jurisdictions at different levels of government.
+
+16.     Falling government revenue share of gross domestic product and chronically low
+capital spending. The central government tax revenue-to-GDP ratio declined from 19.1% in
+FY2019 to 16.2% in FY2024, reflecting a combination of factors including the reliance on trade
+taxes and weaker imports and a transition to electric vehicles with lower import duties. Low capital
+budget allocations and expenditure are severe development constraints. This is attributed to (i)
+revenue shortfalls, (ii) frequent transfers of senior government officials, (iii) weak project cycle
+management capacity, and (iv) lack of project readiness and a pipeline of bankable projects. The
+quantity and quality of capital spending are low, including infrastructure investments funded by
+development partners.
+
+
+
+12 World Bank. 2019. Nepal Infrastructure Sector Assessment: Private sector solutions for sustainable infrastructure
+
+   development; and Government of Nepal, Ministry of Urban Development. 2017. National Urban Development
+   Strategy.
+13 ADB. 2024 Sudurpaschim: Integrated Economic and Tourism Development Study.
+14 The absence of a new federal civil service law has adversely impacted on management of civil servants and resulted
+
+   in demotivation and lower productivity through ambiguities over their placements, responsibilities, accountability,
+   benefits and career development.
+                                                                                                                   5
+
+
+17.      Geographical challenges. Nepal's mountainous geography and glacier-dependent river
+system, heavy reliance on climate-sensitive sectors and poor infrastructure make the country
+highly vulnerable to increasing natural multi-hazards. These include extreme weather events and
+glacial lake outburst floods that often have devastating impacts on lives, livelihoods, and
+infrastructure. With temperatures rising, snow and glaciers melting, and rainfall becoming more
+erratic, the impacts of disasters triggered by natural hazards are likely to increase. These include
+more variable and unpredictable water availability, declining agricultural productivity, higher
+incidence of vector- and waterborne diseases, and heightened risks of floods and landslides.
+Nepal is also one of the most earthquake-prone economies. Its vulnerabilities stem from a lack of
+resilient infrastructure, unplanned settlements, and unsustainable agriculture practices, including
+dependence on monsoon-fed irrigation, overgrazing, overuse of chemical fertilizers, and poor
+development of value chains. Indoor and outdoor air pollution, forest fires, water pollution,
+seasonal water scarcity, inadequate solid waste management, land degradation, and biodiversity
+loss are some of Nepal’s other environmental challenges.
+
+18.    Policy ambitions to tackle escalating risks from disasters triggered by natural
+hazards. Nepal is dedicated to fulfilling the Paris Agreement on climate change and the Sendai
+Framework for Disaster Risk Reduction.15 In its 2021 Long-Term Strategy for Net-zero Emissions
+(LTS), Nepal aims to achieve carbon neutrality by 2045 and reach net-zero greenhouse gas
+emissions by 2050.16 Under the third nationally determined contribution (NDC), Nepal plans to
+reduce its greenhouse gas emissions by 26.79%, source 15% of energy from clean sources, and
+ensure that 95% of private vehicle sales are electric by 2035. Nepal also started implementing
+the Sendai Framework through its National Disaster Risk Reduction and Management Strategy,
+improved disaster early warning systems, and strengthened community-based disaster risk
+management (DRM). The government-led Green, Resilient, and Inclusive Development (GRID)
+approach integrates environmental sustainability, climate resilience, and social inclusion into
+development efforts. ADB’s collaboration with the government through technical assistance (TA)
+addresses gaps in climate and disaster risk assessment and formulation of comprehensive risk
+management and adaptation investment plans.17 The TA will also support the government in
+implementing the disaster risk reduction plans. However, investment in disaster risk reduction
+remains insufficient.
+
+19.     Comprehensive financing approach needed. Meeting Nepal’s climate and disaster risk
+reduction ambitions will require significant financial and technical resources. The cost to meet the
+NDC’s mitigation target is estimated at $73.7 billion until 2035, while implementation of the
+National Adaptation Plan (NAP) is projected to cost $47.4 billion until 2050.18 A feasible financing
+plan for the implementation of national climate strategies is needed. Fragmented approaches and
+capacity constraints have prevented Nepal from mobilizing the funds required to build climate
+resilience.
+
+20.    Progress in empowering women and disadvantaged and vulnerable groups, but
+multidimensional inequalities remain. Nepal’s Constitution upholds the rights of women and
+disadvantaged and vulnerable groups, particularly those facing intersectional exclusion based on
+
+15 United Nations Office for Disaster Risk Reduction. 2015. Sendai Framework for Disaster Risk Reduction 2015-2023.
+
+  Nepal ratified the Paris Agreement on 4 November 2016.
+16 Government of Nepal. 2021. Nepal's Long-term Strategy for Net-zero Emissions. Nepal's greenhouse gas emissions
+
+  are low, accounting for about 0.027% of total global emissions.
+17 ADB. 2023. Technical Assistance for Building Adaptation and Resilience in the Hindu Kush Himalayas-Bhutan and
+
+  Nepal; and ADB. 2022. Technical Assistance for Identifying Climate Adaptation Investment Priorities (Subproject 4).
+18 Government of Nepal. 2025. Third Nationally Determined Contributions; and Government of Nepal. 2021. National
+
+  Adaptation Plan (2021–2050).
+6
+
+
+gender, old age, disability, and social identities such as caste and ethnicity.19 Following enactment
+of the Constitution in 2015, reforms and political progress have been substantial. The government
+has adopted rules and regulations on women’s rights, including laws on discriminatory practices
+such as untouchability and gender-based violence (GBV). Political representation of women and
+disadvantaged groups has improved since the transition to federalism. In 2017, women were
+elected to 41% of the seats in local governments and more than 33% in provincial and federal
+assemblies—higher than the global average of women’s representation in parliaments (25%).20
+In 2022, women (14,778) were selected for 40% of seats at all three tiers of government. Women’s
+participation in the civil service also rose to 28.2% in FY2023 from 11.1% in FY2009.21
+
+21.       Women and disadvantaged groups, such as the Dalits, Muslims, and Tharus, remain
+exposed to ingrained adverse practices based on gender, caste, and ethnicity, which continue to
+constrain their access to resources, education, mobility, and economic opportunities. In the labor
+market, women’s participation (26.3%) is about half that of men (53.8%).22 Persons with
+disabilities (PWDs), who represent 2.2% of the population, still tend to be the poorest in their
+communities.23 Almost a quarter of women aged 15–49 years reported experiencing violence in
+their lifetime; 15% experienced physical and/or sexual violence in 2021.24
+
+22.     Progress on Sustainable Development Goals for poverty reduction and income
+inequality. In FY2023, 20.3% of the population lived below the poverty line, down from 25.2% in
+FY2011.25 The Gini coefficient dipped to 0.30 in FY2023 (from 0.33 in FY2011). A comparison of
+progress reports from 2015 to 2024 shows that Nepal is making progress toward achieving some
+targets under the Sustainable Development Goals (SDGs) on good health and well-being, quality
+education, gender equality, clean water and sanitation, and affordable and clean energy.
+However, meeting other SDG targets—including for industry, innovation, and infrastructure; and
+partnerships for goals—remains problematic. Insufficient investment in the SDGs for gender
+equality, climate action, and life on land could limit progress in these areas.26
+
+23.    Implications of graduation from Least Developed Country status. Nepal’s graduation
+is expected in 2026.27 Graduation could impact Nepal’s international trade because of the
+potential loss of international support measures, including preferential market access through
+
+
+19 Disadvantaged      groups, as recognized by constitutional commitments, include socially, economically, and
+   geographically marginalized communities that require affirmative action and targeted policies to ensure their full
+   participation in society. The Constitution guarantees fundamental rights, including citizenship (Article 12), equality
+   (Article 18), protection against untouchability and discrimination (Article 24), the rights of Dalits (Article 40), the rights
+   of senior citizens (Article 41), social justice (Article 42), and social security (Article 43). These provisions uphold the
+   principles of affirmative action and proportional representation, aiming to ensure that marginalized groups receive
+   support for inclusion, empowerment, and equitable development.
+20 Inter-Parliamentary Union. 2019. Women in National Parliaments 2019.
+21 National Network for Beijing+ review Nepal. 2024. Civil Society Report on Beijing+30; and Government of Nepal;
+
+   Ministry of Women, Children, and Senior Citizens. 2024. Gender Equality Report: Facts and Figures, 2024.
+22 Government of Nepal, National Statistics Office. 2019. Nepal Labor Force Survey III, 2017/18; 2016. Nepal Labor
+
+   Force Survey I, 1998/99; and 2016. Nepal Labor Force Survey II, 2008.
+23 Government of Nepal, National Statistics Office. 2021. National Population and Housing Census 2021: Disability;
+
+   and S. Prasai and A. Pant. 2018. Monitoring the Employment Rights of People with Disabilities in Kathmandu, Nepal.
+   York University, Canada: Disability Rights Promotion International.
+24 Government of Nepal, Ministry of Health and Population. 2023. Nepal Demographic Health Survey 2022.
+25 The national poverty line was revised in FY2023 to NRs72,908 per person per year. In FY2011, the poverty line was
+
+   NRs19,261 per person per year, which when adjusted for inflation would be NRs42,845 per person per year.
+   Government of Nepal, National Statistics Office. 2024. Fourth Nepal Living Standards Survey 2022–2023.
+26 Government of Nepal, National Planning Commission. 2024. Voluntary National Review of Sustainable Development
+
+   Goals.
+27 United Nations. 2021. UNGA adopts resolution on Nepal’s graduation from LDC category.
+                                                                                                                     7
+
+
+LDC-specific schemes.28 The World Trade Organization estimates that Nepal’s exports could drop
+between $20 million to $59 million, or 2.5% to 4.2% of total exports, with the largest impact from
+higher tariffs applied on clothing and textiles.29 30 The International Labor Organization estimates
+that the impact of LDC graduation on access and terms of development finance will be small as
+LDC status is not a main criterion for most multilateral and bilateral development partners for
+development cooperation. The loss of international support measures will require Nepalese
+companies to improve their competitiveness to maintain current levels of exports.31
+
+                              III.     COUNTRY STRATEGY FRAMEWORK
+
+A.        Lessons from Previous Strategy
+
+24.    The country assistance program review (CAPR) recommended the following priorities for
+the CPS: (i) capacity building for federalism, (ii) better integration of investments in sectors and
+thematic priorities, and (iii) PSD. The CAPR validation agreed with the CAPR’s overall
+assessment of ADB’s country program as successful. Further, it agreed with the three CAPR
+recommendations and provided supplementary suggestions, including (i) reducing the number of
+sectors that ADB supports, (ii) using the sector development program modality to maximize
+synergies in supporting policy reforms and investments, (iii) expanding support for renewable
+energy, and (iv) considering investment in the finance sector. 32
+
+25.    The CAPR validation also suggested a more comprehensive approach to risk
+management when preparing infrastructure and other investments in Nepal’s river systems, which
+ADB has been implementing through the Building Adaptation and Resilience in the Hindu Kush
+Himalayas initiative and the upcoming Green and Resilience Financing Facility. Further, the
+CAPR validation emphasized that the well-functioning system of development partner
+coordination, especially the close collaboration between ADB and WBG, offers an opportunity to
+expand cooperation on large, transformational infrastructure projects. The ADB–WBG
+collaboration on the Dudh Koshi and Upper Arun hydropower projects are good examples for this
+approach.33
+
+B.        National Development Strategy
+
+26.     Continued economic growth through focused transformational strategies. The CPS
+is closely aligned with the government's 16th Plan (FY2025–FY2029), which aims to achieve
+"good governance, social justice, and prosperity” (footnote 1). It focuses on the main development
+challenges by emphasizing (i) enhancing productive employment, developing resilient
+infrastructure to boost productivity, and increasing production and capacity in manufacturing for
+
+28 P.R.  Pandey et al. 2022. Nepal’s graduation from the LDC category: Implications for international trade and
+   development cooperation. South Asia Watch on Trade, Economics and Environment.
+29 World Trade Organization. 2020. Trade impacts of LDC graduation: Insights from country-specific market access
+
+   analyses; International Trade Center. 2022. Nepal after LDC Graduation: New avenues for exports; National Planning
+   Commission; and United Nation Development Program. 2020. Beyond Graduation: Productive Transformation and
+   Prosperity.
+30 Given Nepal’s low export share for the United States (11.4%) and unique export products, the direct impact on the
+
+   economy by the tariffs announced on 2 April 2025 is not expected to be significant. The tariffs could however affect
+   Nepal’s growth prospects by increasing global economic uncertainty and reducing remittances.
+31 International Labor Organization. Forthcoming. Employment Impact Assessment on Nepal’s LDC Graduation.
+32 Independent Evaluation Department. 2024. Nepal: Validation of the Country Assistance Program Review, 2020–
+
+   2024. ADB.
+33 Systemic and deep collaboration between ADB and WBG has advanced by the approval of the Full Mutual Reliance
+
+   Framework in early 2025.
+8
+
+
+improved competitiveness; (ii) universal access to essential public services, such as health care,
+education, skills development, drinking water, housing, and sustainable urbanization; and (iii)
+climate change considerations, DRM, biodiversity, and the promotion of a green economy.
+
+27.     Alignment with the Green, Resilient, and Inclusive Development framework. The
+government rolled out the homegrown GRID approach in 2021 which focuses on integrating
+environmental sustainability, climate resilience, and social inclusion into development efforts to
+withstand and recover from environmental shocks and ensure that development benefits are
+equitably shared across all segments of society.34 The GRID Strategic Action Plan 2024 – 2034
+includes 10 priority transitions and four cross cutting themes. In coordination with World Bank,
+ADB is supporting operationalization of the GRID framework with focus on reforms to unlock
+policy, regulatory and institutional bottlenecks.
+
+C.        Role of Development Partners
+
+28.      Strong collaboration among development partners in Nepal. Sector and thematic
+working groups discuss planned and ongoing operations, including implementation challenges
+and sector-level policy issues.35 ADB will continue to foster collaboration and enhance
+development outcomes by (i) organizing bilateral mini-retreats with development partners to
+facilitate in-depth discussions and align strategies; and (ii) sharing the forward-looking 3-year
+rolling country program and project concepts to align country programming and explore potential
+areas for collaboration and cofinancing, as well as to avoid duplications.
+
+29.     Joint strategic approach of ADB and World Bank Group. ADB and WBG provide about
+70% of official development assistance to Nepal. The two institutions have closely collaborated
+to align interventions and jointly address multifaceted challenges. Collaboration is undertaken
+through high-level policy dialogue, portfolio performance reviews, memorandums of
+understanding for the joint development and financing of two mega hydropower projects, joint
+peer reviews and other knowledge work, and capacity development. The collaboration has led to
+the development of the joint approach for ADB and WBG country strategies (Annex 7).
+
+D.        ADB’s Strategic Priorities and Focus Areas
+
+30.      To address Nepal’s development challenges, the overarching objective of the CPS is to
+support inclusive, resilient, green, and employment-intensive economic growth. It has three
+strategic priorities (figure) that are closely aligned with ADB’s Strategy 2030 and its midterm
+review, the government’s 16th Plan and GRID approach, and recommendations of the CAPR and
+its validation. ADB is strengthening the integration of its investments across sectors, subsectors
+within a sector, and thematic priorities in the country program and ongoing portfolio to create
+synergies and achieve greater development impact.
+
+
+
+
+34 World Bank. 2021. Government of Nepal and Development Partners Join Forces on Nepal’s Green, Resilient, and
+
+    Inclusive Development. Press release. 24 September.
+35 The Development Coordination Matrix is in Annex 2.
+                                                                                                   9
+
+
+            Strategic Framework for Country Partnership Strategy (2025–2029)
+
+
+
+
+31.     Strategic Priority 1: Promote private sector-led, employment-intensive, green
+economic transformation. ADB operations aim to increase the demand for labor by
+strengthening PSD, increasing the productivity, sustainability and resilience of agriculture and
+natural resources, and increasing access to sustainable and resilient economic infrastructure
+including transport and renewable energy.
+
+32.      Private sector development strengthened. ADB will support competitiveness and green
+economic transformation by (i) improving the business climate; (ii) reducing the cost of business;
+and (iii) promoting private sector investments including FDI through streamlining of legal and
+regulatory frameworks, including leveraging green finance initiatives. This will be driven by close
+collaboration between sovereign and nonsovereign operations. Further, ADB will strengthen
+innovation and scale up private sector solutions by targeting investments in sectors with the
+potential to increase exports (e.g., agriculture, light manufacturing, energy, and tourism). ADB will
+consider support for financial intermediaries to expand lending to MSMEs, promote inclusive
+finance and green initiatives, and provide early-stage support to MSMEs. Tourism has significant
+potential to create jobs with strong backward and forward links with other sectors, while
+information technology has shown strong potential for growth and job creation over the past 20
+years. ADB will support PPPs by building capacity across different tiers of government in project
+initiation, feasibility studies, and screening in order to develop a pipeline of viable PPP projects
+and competitive tendering (footnote 9). ADB will engage with subnational governments on PPP
+capacity building and transaction advisory support.
+
+33.      Productivity, sustainability, and resilience of agriculture and natural resources
+increased. ADB will support investments in irrigation, agricultural production and value chain
+development, integrated water resources management, and ecotourism. ADB will also support
+agricultural commercialization through increased year-round irrigation, mechanization, improved
+access to finance, and promotion of climate-smart farming practices. Further, ADB will consider
+support for policy reforms with strong regional cooperation and integration dimensions through
+the SASEC program to promote agricultural enablers (e.g., green and organic certification,
+sanitary and phytosanitary standards, export promotion, and large-scale farming). These efforts
+will increase and diversify farmers’ incomes and help them cover operation and maintenance
+10
+
+
+(O&M) costs, leading to greater sustainability. ADB will institutionalize integrated land and water
+resources management, taking into consideration nature-based solutions and regenerative
+agriculture. Nepal should specialize in commodities in which it has a comparative advantage over
+countries that export agricultural products to Nepal and generally have lower production costs.
+
+34.     Access to sustainable and resilient economic infrastructure increased. Nepal
+integrates more deeply into regional and global markets through the SASEC program. SASEC
+member countries want to improve the access of landlocked countries, such as Nepal, to
+subregional and global markets through seaports in Bangladesh and India. ADB will continue to
+invest in the upgrading of Nepal’s national highway network, including the East–West Highway,
+and improvements of provincial and local roads. The O&M budget for maintaining these roads will
+be monitored throughout the project life cycle using road asset management plans. Post-project
+sustainability will be supported through performance-based O&M contracts. ADB will also support
+mobility projects (regulatory frameworks, access to finance, smart mobility solutions, electric
+vehicles, urban mobility infrastructure and potentially other green transportation modes for urban
+transport or carrying of agricultural produce to the nearest markets.
+
+35.    ADB will continue to support trade and transport facilitation enhancements to promote
+exports. The implementation of subregional initiatives under SASEC, such as coordinated cross-
+border management, electronic cargo tracking, and pre-arrival electronic customs data exchange,
+will be supported.36 ADB will ensure that its infrastructure investments are environmentally
+sustainable and resilient to multiple natural hazards.
+
+36.    Hydropower can become a cornerstone of Nepal’s development. Hydropower can (i)
+provide clean and reliable energy; (ii) generate export revenue and foreign exchange; (iii) boost
+productivity across industries, particularly in energy-intensive sectors such as manufacturing,
+agro-processing, and green technology; (iv) promote ecotourism; and (v) attract foreign
+investment. To improve reliability and mitigate the impact of unpredictable hydrology on the
+hydroelectricity supply, ADB will prioritize investments in storage and peaking run-of-the-river
+hydropower projects, while expanding and modernizing transmission and distribution networks to
+enhance reliability and boost domestic demand and cross-border power trade. ADB will support
+advanced technologies, such as smart grids, smart meters, and automated systems. Climate
+adaptation and disaster resilience will be embedded in the design of hydropower dams,
+transmission lines, and substations.
+
+37.     ADB will continue supporting the diversification of energy generation sources from
+hydropower to solar and other renewable energy sources. Further, ADB will explore policy reforms
+and regulatory reviews, including cost-reflective tariff-setting and designing of power purchase
+agreements to promote private sector participation in the energy sector. The sustainability of the
+Nepal Electricity Authority will be strengthened through ongoing support for financial management
+and internal control reforms, implementation of information technology solutions, and capacity
+building. Under the SASEC program, the development of regional power markets will enable
+Nepal to effectively manage seasonal fluctuations in hydropower generation and achieve a more
+stable and reliable power supply.
+
+38.    Strategic Priority 2: Promote inclusive and quality human capital development and
+public services. ADB will improve inclusion and increase employment by expanding the labor
+
+36 ADB will continue to support Nepal’s participation in subregional transport facilitation agreements, such as the
+  Bangladesh, Bhutan, India, and Nepal Motor Vehicle Agreement. Once implemented, it will facilitate the seamless
+  flow of passenger, personal, and cargo vehicular traffic between and among the four countries.
+                                                                                                  11
+
+
+supply by (i) improving youth employability, (ii) improving urban livability and equitable access to
+municipal services, and (iii) strengthening public sector capacity for inclusive public service
+delivery.
+
+39.      Youth employability improved. ADB’s investments in school education and TVET will
+continue to support government-led sector reform programs to increase youth employability and
+employment of women and disadvantaged and vulnerable groups. In school education, ADB will
+continue to focus on interventions to reduce the remaining inequities in participation and
+accelerate learning and resilience. ADB’s support will focus on strengthening foundational skills
+in early grades; establishing school-based professional support systems for teachers; and
+enhancing local government capacity in educational planning, monitoring, and reporting. The
+government’s strategic plan for TVET proposes reforms to increase the role of industry, improve
+attractiveness, and strengthen quality. ADB will support implementation of the plan by focusing
+on upgrading institutions to provide TVET in areas such as agribusiness, health care, and
+manufacturing, including entrepreneurship and digital skills development. In higher education,
+ADB will be selective and target sectors with labor shortages and opportunities for job creation.
+
+40.     Urban livability and equitable access to municipal services improved. ADB supports
+the government’s strategy of integrated urban development through regional planning that
+develops spatial strategies, prioritizes multi-sector investments, and strengthens institutions and
+upgrades municipal services. This approach leverages urban centers to improve livability, support
+PSD, attract investments, and increase job creation by (i) augmenting infrastructure; (ii)
+integrating nature-based solutions; and (iii) supporting tourism through enabling infrastructure,
+restoration of cultural heritage, and protection of natural reserves to attract and retain skilled
+workers who might otherwise migrate for better living conditions abroad. In water supply and
+sanitation, ADB is assisting the government with a holistic approach to improving the sustainability
+and resilience of the water supply system in the Kathmandu Valley. This includes investments in
+future phases of bulk water supply and sanitation, as well as support for institutional strengthening
+and governance. ADB will also continue to improve infrastructure and water, sanitation, and
+hygiene services in secondary towns and towns of cultural, touristic, and economic importance.
+
+41.      ADB will assist the government in addressing challenges caused by increasing natural
+hazards and overcoming systemic deficiencies using an integrated urban development approach
+with two main components. First, it will use a thematic focus on multi-sector strategic investments
+in potential urban growth centers that anchor the tourism subsector, as well as support for the
+development of regional economic corridors under the SASEC program. Second, it will assist the
+government with urgent livability and public health issues of (i) congestion; (ii) environmental
+degradation and pollution in emerging sectors, including solid waste management in secondary
+cities; (iii) e-mobility; (iv) green space enhancement; and (v) urban water quality and reducing
+flood risks. The sustainability of the municipalities will be supported primarily by building
+institutional capacity to implement devolved functions; increasing municipal revenue generation;
+and reducing reliance on federal assistance for operational needs, including O&M.
+
+42.    Public sector capacity for inclusive public service delivery strengthened. ADB will
+continue supporting the availability and efficiency of public services, including for poor and
+vulnerable groups and youth, by strengthening PFM and federalism. ADB will assist the
+government in finalizing and implementing the PFM reform strategy and plan. ADB will focus on
+enhancing expenditure and debt management and reducing fiscal risks through public finance
+reforms at all government levels. The reforms include (i) implementing the Public Debt
+Management Act and strengthening the public debt management office; (ii) improving
+management and governance of public enterprises and reducing fiscal risks and contingent
+12
+
+
+liabilities of those enterprises; (iii) operationalizing identification of fiscal risks and mitigating
+strategies through the annual budget; and (iv) improving contract management through the
+upgradation of e-government procurement.
+
+43.      Increasing revenues and improving resource management. ADB support for resource
+planning and management will focus on (i) improving coordinated planning and establishing
+effective links between policies, projects, and budgets, including measures to establish project
+banks; (ii) improving tax policies and administration, including strengthening of property taxes and
+digitalization of revenue administration; (iii) strengthening the framework for subnational
+borrowing; (iv) institutionalizing public asset management systems; and (v) developing and rolling
+out public investment management guidelines for local authorities. These measures are expected
+to improve the efficiency and effectiveness of capital expenditure.
+
+44.    Enhanced fiscal federalism. ADB will help the government clarify roles and
+responsibilities and improve coordination among sector agencies at all levels regarding policy
+formulation and execution, planning, expenditure and revenue functions, and program and project
+implementation. Initiatives to strengthen fiscal federalism will also be supported to improve fiscal
+equalization and reduce fiscal imbalances.
+
+45.     Strategic Priority 3: Enhance environmental sustainability and climate resilience.
+The CPS and ADB’s investments will be implemented in a shifting climate context. Besides
+mainstreaming climate resilience, DRM, and environmental sustainability in country
+programming, project design, implementation, monitoring and evaluation of development
+outcomes, ADB will address challenges through specific project components, tackling both
+mitigation and adaptation (Annex 5).
+
+46.     Policy, legal, regulatory, and institutional framework for environmental
+sustainability, climate resilience, and disaster risk management improved. In line with the
+GRID framework, ADB will assist the government in conducting detailed upstream analysis in key
+sectors to identify actions to unlock the bottlenecks to achieve Nepal’s climate ambitions, DRM,
+and environmental sustainability. ADB will assist the government with crucial policy and regulatory
+reforms to create an environment conducive to integrating biodiversity, disaster, and resilience
+into sovereign and nonsovereign projects and systems.
+
+47.     Environmental sustainability and climate resilience of infrastructure and economic
+transformation supported. In addition to mainstreaming, ADB will support the integration of
+specific components on climate resilience, DRM, and environmental sustainability into the
+objective and scope of projects. For support of implementation of the NDC, the country program
+includes investments in hydropower, grid infrastructure (to reduce transmission and distribution
+losses), and the promotion of clean public transport and logistic solutions such as ropeways and
+electric buses. For support of implementation of the NAP, the country program includes (i) support
+for flood-resistant and all-weather roads, (ii) integrated water resources management, (iii)
+development of year-round irrigation, (iv) flood risk management, (v) resilient urban and water
+supply development, (vi) ecotourism, natural and cultural heritage; and (vii) disaster-resilient
+school buildings.
+
+48.    Further, ADB will explore the possibility of government and private sector access to carbon
+finance through greenhouse gas emission reduction (e.g. in e-mobility projects and promotion of
+e-cookstoves). ADB will also analyze rising multi-hazard risks in catchments to inform project
+design with a strong regional cooperation and integration dimension. The regional TA for Building
+Adaptation and Resilience in the Hindu Kush Himalayas (footnote 17) will leverage technical
+                                                                                                   13
+
+
+knowledge from international partners to build the capacity of the government and the private
+sector in planning and designing climate-resilient infrastructure. This will improve Nepal’s capacity
+for resilience and DRM by developing comprehensive multi-hazard risk assessments, as well as
+de-risking and risk-transfer strategies.
+
+49.      ADB will also use sector specific investment and technical assistance to include support
+for environmental sustainability in projects, such as (i) increasing agricultural productivity through
+sustainable farming practices, (ii) restoring degraded watershed and protecting water sources,
+(iii) adopting nature-based solutions, (iv) promoting ecotourism, and (v) supporting the use of
+more environment-friendly modes of public transport and cooking stoves.
+
+50.     Climate finance mobilized, and engagement of the private sector strengthened. ADB
+can help maximize the opportunities for Nepal to catalyze additional climate finance by using the
+predictability of ADB’s country allocation and grant funding from the Asian Development Fund
+(ADF) 14 thematic window. ADB is also establishing a large financing facility—the Green and
+Resilience Financing Facility—to narrow institutional, capacity, and financing gaps in
+implementing the NDC, NAP, LTS, and Disaster Risk Reduction Strategic Action Plan, as well as
+providing access to global climate funds. The access of governments and the private sector to
+international climate financing needs to be expanded to meet the substantial costs of mitigation
+and adaptation, including exploring mobilization of funds from green bonds.
+
+51.     Cross-cutting themes. The three strategic priorities will be supported by three cross-
+cutting themes to address binding constraints and improve development effectiveness: good
+governance and capacity building for federalism, digital development, and empowerment of
+women and disadvantaged and vulnerable groups.
+
+52.      Good governance and capacity building for federalism. In addition to the reforms to
+strengthen fiscal management, public investments, and fiscal federalism under the second
+strategic priority, ADB will mainstream good governance and capacity development in public
+institutions, focusing on subnational governments. ADB’s support will include digitalization of
+operations; formulation of guidelines and strategies; tailor-made training programs; development
+of technical skills; and mechanisms for accountability, transparency, and coordination.
+
+53.      Digital development. Mainstreaming digitalization in ADB operations offers opportunities
+to (i) improve government efficiency and service delivery, (ii) increase trust in institutions and
+control corruption, (iii) enhance inclusion and cohesion, and (iv) boost productivity. The private
+sector needs to play a fundamental role in Nepal’s digital development. Energy, in particular, is a
+sector of significant strategic importance for the government and ADB with a high potential for
+digital transformation under the leadership of ADB. In addition, as the knowledge and research
+agenda in Nepal is underdeveloped, ADB could research innovative approaches for building
+digital public infrastructure, undertake detailed analysis of digital businesses, and produce a tool
+kit and handbook for government officials on procurement of digital assets, as well as support
+innovative applications to enhance service delivery under ADB initiatives. In collaboration with
+other development partners, ADB is considering building the capabilities of local governments for
+digital transformation and strengthening of the digital education and training systems.
+
+54.    Empowerment of women and disadvantaged and vulnerable groups. ADB will
+support the government’s efforts to remove barriers to empowerment of women and intersecting
+dimensions of historical marginalization and vulnerability through mainstreaming of actions in key
+sectors and targeted operations. This includes ADB support for integrating empowerment of
+women and disadvantaged and vulnerable groups into sector policy reforms and strengthening
+14
+
+
+institutional mechanisms and practices. ADB will also strengthen the government’s efforts to
+eliminate discrimination against women, sexual exploitation and abuse, and harassment and GBV
+by building the capacity of executing and implementing agencies and continuing work with civil
+society organizations. ADB will carry out targeted interventions to address challenges to economic
+participation and financial inclusion of women and disadvantaged and vulnerable groups
+(including PWDs), and to support access to financial products and services. ADB will help build
+their resilience to increasing natural hazards and disaster impacts, focusing on participation in
+capacity building, diversified livelihood options, and improved access to basic services. ADB will
+continue to strengthen the response of the federal government and selected provincial
+governments to GBV through quality services.
+
+55.     Selectivity and flexibility. ADB will ensure selectivity under the Strategy 2030 and its
+midterm review by focusing on the primary objectives of private sector-led growth, youth
+employment, and resilience. In collaboration with WBG, ADB’s assistance will concentrate on the
+following core sectors: energy; transport; water and other urban infrastructure and services;
+agriculture, natural resources, and rural development; and education. Support for enabling areas,
+such as public sector management as primary enabling sector with a substantial ensuing country
+program, finance, industry and trade, climate mitigation and adaptation, and PSD will strengthen
+the core sectors. An integrated approach across sectors and thematic priorities for ADB’s
+operations requires investments in a broad range of core and enabling sectors to maximize
+development outcomes to achieve synergies. As ADB’s operations make up a substantial portion
+of Nepal’s public capital expenditure, they need to be programmed broadly across sectors to
+ensure the government’s investment budget is balanced. Working across multiple sectors through
+outcome-based programming and maintaining a diverse portfolio is expected to improve portfolio
+performance by spreading project implementation risks, calibrating portfolios to the
+implementation capacity of executing and implementing agencies and balancing the utilization of
+limited implementation capacity, while improving the ability to respond to complex country
+development challenges.
+
+56.     ADB’s operations in each sector will be selected in accordance with ADB’s comparative
+advantages, the government’s priorities and capacity to deliver, the ADB and WBG joint strategic
+approach, and cooperation with other development partners. ADB’s country program will remain
+flexible given the dynamic country context and global uncertainties, particularly the ending of
+operations of the United States Agency for International Development and the Millennium
+Challenge Corporation, which trigger funding gaps in key sectors, including the social sectors.
+
+57.      Indicative resources. Nepal, a group A developing member country at low risk of debt
+distress, is eligible for concessional ordinary capital resources lending (COL).37 The indicative
+country allocation for 2025–2028 (ADF 14) totals $1,915 million in COL for sovereign operations.
+The resources committed for each year of the program period will depend on the government’s
+priorities, the outcome of the country performance assessment, and project readiness. ADB plans
+to support the mobilization of innovative financing tools, including the issuance of thematic and
+local currency bonds (i.e., Nepalese rupee-linked bonds) to international investors.
+
+E.      Priorities for Knowledge Support
+
+58.     The knowledge work outlined in the country knowledge plan (CKP) is aligned with the
+strategic and cross-cutting priorities of the CPS and addresses gaps identified in the sector and
+
+37 ADB. 2008. Review of the 1998 Graduation Policy of the Asian Development Bank (full document not available for
+
+  public disclosure); and ADB. 1998. A Graduation Policy for ADB’s DMCs.
+                                                                                                   15
+
+
+thematic background assessments (Annex 4). The CKP sets out how knowledge solutions for
+development challenges and opportunities support policy dialogue and reforms, investment
+pipelines, policy-based lending, capacity building, and innovations across ADB’s operations. The
+CKP remains dynamic to address any emerging and urgent needs of the government, which will
+be reviewed during annual country programming. Partnerships, especially with WBG, will be
+leveraged for joint knowledge initiatives.
+
+                                IV.     STRATEGY IMPLEMENTATION
+
+A.      Cost-Sharing Arrangements
+
+59.     As a group A developing member country, Nepal is eligible for COL and grants from the
+ADF thematic pool. The cost-sharing arrangements during 2025–2029 will continue with a ceiling
+of up to 80% for loans and grants and up to 85% for TA, both on a portfolio-wide basis. Actual
+cost-sharing parameters will be determined based on project-specific considerations and justified
+during a project’s economic and financial due diligence.
+
+B.      Implementation Priorities
+
+60.     Improved portfolio performance. Nepal’s high-cost, low-capacity environment needs to
+be reflected in the level of supporting inputs and in the project design. ADB mitigates
+implementation risks and constraints through regular country and tripartite portfolio review
+meetings with the World Bank and chaired by the Ministry of Finance with the participation of line
+ministries. The quality of safeguard compliance has slowly improved with ADB’s continued
+capacity building efforts. During the new CPS period, ADB will aim to improve the quality of
+infrastructure investments through the recently approved TA that supports the government in
+removing systemic bottlenecks in procurement efficiency, contract management, project
+readiness, the e-government procurement system, and pilot e-governance and digital solutions.38
+
+C.      Monitoring of Results
+
+61.     ADB will use the results framework (Annex 3) to track the progress of CPS implementation.
+The key outcomes are closely aligned with the strategic priorities of the CPS, and the key
+performance indicators reflect the anticipated results of ADB-financed operations during the CPS
+reporting period. If the country’s needs change, the key outcomes and indicators may be adjusted.
+
+D.      Risks
+
+62.      Public financial management, procurement, and anticorruption. PFM risks include
+budget credibility and transparency, low execution and bunching of capital expenditure at the end
+of the fiscal year, weak public asset management, financial reporting, internal auditing, and fiscal
+risk registry. These risks need to be addressed jointly by ADB and other development partners,
+including at subnational levels. Examples of public procurement risks include abnormally low bids,
+inadequate due diligence, and lack of fair competition. Measures to mitigate these risks include
+improving the government’s digitalized procurement system, strengthening review processes in
+the Public Procurement Monitoring Office, and building the capacity of local entities. Important
+ways to combat corruption include strengthening the capacity of local governments, working with
+other development partners, and digitizing financial functions.
+
+38 ADB. 2024. Technical Assistance for Public Investment Implementation Performance Improvement.
+
