@@ -38,6 +38,7 @@ figures:
 dashboard-data:
 	$(PY) scripts/85_dashboard_data.py
 	$(PY) scripts/86_us_dashboard_data.py
+	$(PY) scripts/87_us_partners_data.py
 
 # serve the self-contained dashboard at http://127.0.0.1:8848
 serve: dashboard-data

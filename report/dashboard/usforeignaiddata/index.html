@@ -150,6 +150,35 @@
     <div class="card"><div class="scrollwrap"><div id="c-managing" class="chart sm" role="img"></div></div></div>
   </section>
 
+  <section id="partners">
+    <div class="kicker" data-i18n="pt_kicker">Who receives it</div>
+    <h3 data-i18n="pt_title">The implementing partners</h3>
+    <p class="lead" data-i18n="pt_lead">The organisations actually awarded US money for work in Nepal: UN agencies, international NGOs, and development contractors. From the US government's award system (USASpending.gov). The largest single award — $509.5m, redacted at source because the recipient is a foreign government entity — is the MCC compact grant to Nepal, running to August 2028.</p>
+    <div class="card"><div class="scrollwrap"><div id="c-partners" class="chart tall" role="img"></div></div>
+      <div class="note" data-i18n="pt_note">Obligations, awards with place of performance Nepal, FY2015–FY2026. A different accounting frame from the charts above — use for who/what, not for totals.</div></div>
+  </section>
+
+  <section id="projects">
+    <div class="kicker" data-i18n="pj_kicker">What exactly was funded</div>
+    <h3 data-i18n="pj_title">The named projects</h3>
+    <p class="lead" data-i18n="pj_lead">The largest individual awards, with their official descriptions. Names and descriptions are kept as recorded in the US award system; each row links to its full award record.</p>
+    <div class="controls"><label for="awGroup" data-i18n="pj_group">Type</label><select id="awGroup"></select></div>
+    <div class="card" style="overflow-x:auto">
+      <table id="awards-table" style="min-width:680px"><thead><tr>
+        <th data-i18n="pj_t_amt" class="num">US$ m</th><th data-i18n="pj_t_rec">Recipient</th>
+        <th data-i18n="pj_t_desc">Project (official description)</th><th data-i18n="pj_t_period">Period</th>
+        <th data-i18n="pj_t_agency">Awarded by</th>
+      </tr></thead><tbody></tbody></table>
+    </div>
+  </section>
+
+  <section id="goals">
+    <div class="kicker" data-i18n="gl_kicker">The long game</div>
+    <h3 data-i18n="gl_title">Stated long-term goals</h3>
+    <p class="lead" data-i18n="gl_lead">What the money says it is for, from the official program documents — each card links to its source.</p>
+    <div class="explain" id="goals-cards"></div>
+  </section>
+
   <section id="cuts">
     <div class="kicker" data-i18n="cut_kicker">The restructuring, account by account</div>
     <h3 data-i18n="cut_title">What was cut, what survived (new obligations)</h3>
@@ -169,8 +198,9 @@
     <div class="disclaim" data-i18n="m_body">All figures come from the official ForeignAssistance.gov data service (the same one behind the US government's Nepal country page), retrieved 2026-06-04, using three independent cuts of the same money: by sector, by funding account, and by implementing agency. The three cuts reconcile to the dollar in every year. Only actual flows are shown (obligations and disbursements); budget requests and appropriations are excluded. Constant dollars are as published, base year 2024. Account and program names are kept in English because they are official US budget titles.</div>
     <p class="note" style="margin-top:10px">
       <a href="https://foreignassistance.gov/cd/nepal" target="_blank" rel="noopener">foreignassistance.gov/cd/nepal</a> ·
+      <a href="https://www.usaspending.gov/" target="_blank" rel="noopener">usaspending.gov</a> ·
       <span data-i18n="m_csv">machine-readable:</span>
-      <code>us_by_account.csv</code> · <code>us_by_usg_sector_detail.csv</code> · <code>us_by_managing_agency.csv</code>
+      <code>us_by_account.csv</code> · <code>us_by_usg_sector_detail.csv</code> · <code>us_by_managing_agency.csv</code> · <code>us_partners.csv</code> · <code>us_awards.csv</code>
     </p>
   </section>
 
@@ -182,6 +212,7 @@
 
 <script src="../vendor/echarts.min.js"></script>
 <script src="us_data.js"></script>
+<script src="us_partners.js"></script>
 <script>
 const D = window.US_DATA;
 const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -211,8 +242,29 @@ const I18N = {
   cut_note:"* FY2026 is partial. New obligations only; current US$ millions.",
   t_acct:"Budget account", t_agency:"Agency",
   m_kicker:"Method", m_title:"Source and integrity",
-  m_body:"All figures come from the official ForeignAssistance.gov data service (the same one behind the US government's Nepal country page), retrieved 2026-06-04, using three independent cuts of the same money: by sector, by funding account, and by implementing agency. The three cuts reconcile to the dollar in every year. Only actual flows are shown (obligations and disbursements); budget requests and appropriations are excluded. Constant dollars are as published, base year 2024. Account and program names are kept in English because they are official US budget titles.",
+  m_body:"All figures come from the official ForeignAssistance.gov data service (the same one behind the US government's Nepal country page), retrieved 2026-06-04, using three independent cuts of the same money: by sector, by funding account, and by implementing agency. The three cuts reconcile to the dollar in every year. Only actual flows are shown (obligations and disbursements); budget requests and appropriations are excluded. Constant dollars are as published, base year 2024. The partners and named-projects sections come from USASpending.gov (the US award system, retrieved 2026-06-11): a different accounting frame — awards by place of performance, obligations basis — so those amounts deliberately do not reconcile with the account/sector totals above. Account, partner and program names are kept in English because they are official US records.",
   m_csv:"machine-readable:", foot:"Part of the Nepal Development Funding dataset. ",
+  pt_kicker:"Who receives it", pt_title:"The implementing partners",
+  pt_lead:"The organisations actually awarded US money for work in Nepal: UN agencies, international NGOs, and development contractors. From the US government's award system (USASpending.gov). The largest single award — $509.5m, redacted at source because the recipient is a foreign government entity — is the MCC compact grant to Nepal, running to August 2028.",
+  pt_note:"Obligations, awards with place of performance Nepal, FY2015–FY2026. A different accounting frame from the charts above — use for who/what, not for totals.",
+  pj_kicker:"What exactly was funded", pj_title:"The named projects",
+  pj_lead:"The largest individual awards, with their official descriptions. Names and descriptions are kept as recorded in the US award system; each row links to its full award record.",
+  pj_group:"Type", pj_assist:"Grants & cooperative agreements", pj_contract:"Contracts",
+  pj_t_amt:"US$ m", pj_t_rec:"Recipient", pj_t_desc:"Project (official description)",
+  pj_t_period:"Period", pj_t_agency:"Awarded by",
+  gl_kicker:"The long game", gl_title:"Stated long-term goals",
+  gl_lead:"What the money says it is for, from the official program documents — each card links to its source.",
+  goals:[
+    ["MCC Compact (2023–2028): power and roads",
+     "A $500m grant: about 300 km of high-voltage transmission lines including a cross-border link to India to enable electricity trade, plus a maintenance regime for some 300 km of strategic roads. Long-term aim: unlock Nepal's hydropower exports and cut transport costs. Signed 2017, ratified by parliament February 2022, in force 30 August 2023.",
+     "https://www.mcc.gov/where-we-work/program/nepal-compact/","mcc.gov"],
+    ["USAID strategy (FY2020–25): four development objectives",
+     "A more participatory democratic ecosystem; broad-based, inclusive economic growth; stronger, more inclusive health and education systems; better natural-resource and disaster-risk management — with support for federalism, social inclusion and resilience as cross-cutting themes. USAID was folded into the State Department in mid-2025; how this strategy continues is not yet documented.",
+     "https://www.usaid.gov/nepal","usaid.gov"],
+    ["Flagship programs visible in the awards",
+     "SUAAHARA I+II (~$146m, Save the Children then Helen Keller International): household nutrition for mothers and children. Hariyo Ban ($35m, WWF): forests, biodiversity and climate resilience. Health System Strengthening ($35m, Abt): Nepal's federal health system. McGovern-Dole ($33m+, WFP): school meals.",
+     "https://www.usaspending.gov/search/?hash=","usaspending.gov"],
+  ],
   // chart strings
   s_ob:"Promised (obligations)", s_di:"Delivered (disbursements)", s_dic:"Delivered, constant 2024 $",
   usdm:"US$ m", other:"Other",
@@ -248,8 +300,29 @@ const I18N = {
   cut_note:"* FY2026 आंशिक। नयाँ प्रतिबद्धता मात्र; हालको अमेरिकी डलर, मिलियनमा।",
   t_acct:"बजेट खाता", t_agency:"निकाय",
   m_kicker:"विधि", m_title:"स्रोत र शुद्धता",
-  m_body:"सबै अङ्क आधिकारिक ForeignAssistance.gov डाटा सेवाबाट आएका हुन् (अमेरिकी सरकारकै नेपाल पृष्ठ पछाडिको सेवा), २०२६-०६-०४ मा लिइएको, एउटै रकमका तीन स्वतन्त्र कट प्रयोग गरेर: क्षेत्रअनुसार, बजेट खाताअनुसार, र कार्यान्वयन निकायअनुसार। तीनै कट हरेक वर्ष डलरसम्म मिल्छन्। वास्तविक प्रवाह मात्र देखाइएको छ (प्रतिबद्धता र वितरण); बजेट अनुरोध र विनियोजन हटाइएको छ। स्थिर डलर प्रकाशित रूपमै छ, आधार वर्ष २०२४। खाता र कार्यक्रमका नाम अमेरिकी बजेटका आधिकारिक शीर्षक भएकाले अंग्रेजीमै राखिएका छन्।",
+  m_body:"सबै अङ्क आधिकारिक ForeignAssistance.gov डाटा सेवाबाट आएका हुन् (अमेरिकी सरकारकै नेपाल पृष्ठ पछाडिको सेवा), २०२६-०६-०४ मा लिइएको, एउटै रकमका तीन स्वतन्त्र कट प्रयोग गरेर: क्षेत्रअनुसार, बजेट खाताअनुसार, र कार्यान्वयन निकायअनुसार। तीनै कट हरेक वर्ष डलरसम्म मिल्छन्। वास्तविक प्रवाह मात्र देखाइएको छ (प्रतिबद्धता र वितरण); बजेट अनुरोध र विनियोजन हटाइएको छ। स्थिर डलर प्रकाशित रूपमै छ, आधार वर्ष २०२४। साझेदार र परियोजना खण्ड USASpending.gov (अमेरिकी अवार्ड प्रणाली, २०२६-०६-११ मा लिइएको) बाट हो: फरक लेखा आधार — कार्यस्थलअनुसार अवार्ड, प्रतिबद्धता — त्यसैले ती रकम माथिका खाता/क्षेत्र जोडसँग जानाजानी मिल्दैनन्। खाता, साझेदार र कार्यक्रमका नाम आधिकारिक अमेरिकी अभिलेख भएकाले अंग्रेजीमै छन्।",
   m_csv:"मेसिन-पठनीय:", foot:"नेपाल विकास सहायता डेटासेटको अंश। ",
+  pt_kicker:"कसले पाउँछ", pt_title:"कार्यान्वयन साझेदारहरू",
+  pt_lead:"नेपालमा कामका लागि वास्तवमा अमेरिकी रकम पाउने संस्थाहरू: संयुक्त राष्ट्रका निकाय, अन्तर्राष्ट्रिय गैसस र विकास ठेकेदार। अमेरिकी सरकारकै अवार्ड प्रणाली (USASpending.gov) बाट। सबैभन्दा ठूलो एकल अवार्ड — $509.5m, प्राप्तकर्ता विदेशी सरकारी निकाय भएकाले स्रोतमै गोप्य — नेपाललाई MCC सम्झौता अनुदान हो, अगस्ट २०२८ सम्म चल्ने।",
+  pt_note:"प्रतिबद्धता; कार्यस्थल नेपाल भएका अवार्ड, FY2015–FY2026। माथिका चार्टभन्दा फरक लेखा आधार — को/के का लागि प्रयोग गर्नुहोस्, जोडका लागि होइन।",
+  pj_kicker:"ठ्याक्कै के मा खर्च भयो", pj_title:"नाम भएका परियोजनाहरू",
+  pj_lead:"सबैभन्दा ठूला अवार्ड, आधिकारिक विवरणसहित। नाम र विवरण अमेरिकी अवार्ड प्रणालीमा भएजस्तै राखिएका छन्; हरेक पङ्क्ति पूरा अभिलेखसँग जोडिएको छ।",
+  pj_group:"प्रकार", pj_assist:"अनुदान तथा सहकार्य सम्झौता", pj_contract:"ठेक्का",
+  pj_t_amt:"डलर (मि.)", pj_t_rec:"प्राप्तकर्ता", pj_t_desc:"परियोजना (आधिकारिक विवरण)",
+  pj_t_period:"अवधि", pj_t_agency:"अवार्ड दिने",
+  gl_kicker:"दीर्घकालीन खेल", gl_title:"घोषित दीर्घकालीन लक्ष्यहरू",
+  gl_lead:"आधिकारिक कार्यक्रम दस्तावेजअनुसार यो रकम केका लागि हो — हरेक कार्ड स्रोतसँग जोडिएको छ।",
+  goals:[
+    ["MCC सम्झौता (२०२३–२०२८): बिजुली र सडक",
+     "$500m अनुदान: भारतसँगको सीमापार लाइनसहित करिब ३०० किमी उच्च-भोल्टेज प्रसारण लाइन (बिजुली व्यापारका लागि), र करिब ३०० किमी रणनीतिक सडकको मर्मत प्रणाली। दीर्घकालीन उद्देश्य: नेपालको जलविद्युत् निर्यात खोल्ने र ढुवानी लागत घटाउने। २०१७ मा हस्ताक्षर, फेब्रुअरी २०२२ मा संसदबाट अनुमोदन, ३० अगस्ट २०२३ देखि लागू।",
+     "https://www.mcc.gov/where-we-work/program/nepal-compact/","mcc.gov"],
+    ["USAID रणनीति (FY2020–25): चार विकास उद्देश्य",
+     "बढी सहभागितामूलक लोकतान्त्रिक प्रणाली; फराकिलो, समावेशी आर्थिक वृद्धि; बलियो र समावेशी स्वास्थ्य तथा शिक्षा प्रणाली; प्राकृतिक स्रोत र विपद् जोखिम व्यवस्थापन — संघीयता, समावेशिता र उत्थानशीलता साझा विषयका रूपमा। USAID २०२५ मध्यमा State Department मा गाभियो; यो रणनीति कसरी अघि बढ्छ अझै लेखिएको छैन।",
+     "https://www.usaid.gov/nepal","usaid.gov"],
+    ["अवार्डमै देखिने प्रमुख कार्यक्रमहरू",
+     "SUAAHARA I+II (~$146m, Save the Children पछि Helen Keller International): आमा र बालबालिकाको पोषण। Hariyo Ban ($35m, WWF): वन, जैविक विविधता र जलवायु। Health System Strengthening ($35m, Abt): संघीय स्वास्थ्य प्रणाली। McGovern-Dole ($33m+, WFP): विद्यालय खाजा।",
+     "https://www.usaspending.gov/search/?hash=","usaspending.gov"],
+  ],
   s_ob:"वाचा (प्रतिबद्धता)", s_di:"वितरण", s_dic:"वितरण, स्थिर २०२४ डलर",
   usdm:"डलर (मिलियन)", other:"अन्य",
   kpi1:"नेपाललाई वितरण, FY2015–FY2026", kpi2:"वास्तविक मूल्यमा उच्चतम वर्ष",
@@ -264,6 +337,7 @@ const I18N = {
 };
 
 let lang = localStorage.getItem('nepal_lang') || 'en';
+let awGroup = 'assistance';
 const t = k => (I18N[lang][k] ?? I18N.en[k] ?? k);
 const fmt = v => v==null ? '—' : '$'+Number(v).toLocaleString('en-US',{maximumFractionDigits:1})+'m';
 const charts = {};
@@ -302,7 +376,43 @@ function render(){
   if(!tm.options.length){ D.meta.years.slice().reverse().forEach(y=>tm.add(new Option('FY'+y,y)));
     tm.value=tmYear; tm.onchange=()=>{tmYear=tm.value; drawTreemap();}; }
 
-  drawArc(); drawAccounts(); drawSankey(); drawTreemap(); drawManaging(); drawCuts();
+  // awards type selector (rebuilt each render for translated labels)
+  const ag=document.getElementById('awGroup');
+  ag.innerHTML=`<option value="assistance">${t('pj_assist')}</option><option value="contracts">${t('pj_contract')}</option>`;
+  ag.value=awGroup; ag.onchange=()=>{awGroup=ag.value; drawAwards();};
+
+  drawArc(); drawAccounts(); drawSankey(); drawTreemap(); drawManaging();
+  drawPartners(); drawAwards(); drawGoals(); drawCuts();
+}
+
+function drawPartners(){
+  const P=window.US_PARTNERS; if(!P) return;
+  aria('c-partners', t('pt_title'));
+  const ps=P.partners.slice().reverse();
+  chart('c-partners').setOption({animation:anim,textStyle:baseText(),
+    grid:{left:8,right:56,top:10,bottom:24,containLabel:true},
+    tooltip:{trigger:'axis',axisPointer:{type:'shadow'},valueFormatter:fmt},
+    xAxis:{type:'value',name:t('usdm'),splitLine:{lineStyle:{color:'#eef1f6'}}},
+    yAxis:{type:'category',data:ps.map(p=>p.name.length>42?p.name.slice(0,40)+'…':p.name),
+      axisLabel:{fontSize:11}},
+    series:[{type:'bar',data:ps.map(p=>p.usd),
+      itemStyle:{color:'#0e7c86',borderRadius:[0,4,4,0]},
+      label:{show:true,position:'right',formatter:p=>fmt(p.value),fontSize:11,color:'#0f1d2e'}}]},true);
+}
+
+function drawAwards(){
+  const P=window.US_PARTNERS; if(!P) return;
+  const rows=(P.awards[awGroup]||[]).slice(0,12);
+  document.querySelector('#awards-table tbody').innerHTML=rows.map(a=>{
+    const desc=a.link?`<a href="${a.link}" target="_blank" rel="noopener">${a.desc||'—'}</a>`:(a.desc||'—');
+    return `<tr><td class="num">$${a.usd.toFixed(1)}</td><td>${a.recipient}</td>
+      <td>${desc}</td><td>${a.start||'?'} → ${a.end||'?'}</td><td>${a.agency}</td></tr>`;}).join('');
+}
+
+function drawGoals(){
+  document.getElementById('goals-cards').innerHTML=I18N[lang].goals.map(([h,b,url,src])=>
+    `<div class="term"><b>${h}</b><span>${b}</span>
+     <div style="margin-top:8px;font-size:12.5px"><a href="${url}" target="_blank" rel="noopener">${src} ↗</a></div></div>`).join('');
 }
 
 function drawArc(){
