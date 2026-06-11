@@ -212,6 +212,34 @@ def main():
     mo = [M(sum(man[a].get(y, 0) for a in man if a not in man_top)) for y in years_s]
     managing.append({"name": "Other", "data": mo})
 
+    # ---- the funnel: promise -> delivery -> purpose (cumulative FY2015-26) ----
+    ob_tot = {a: sum(per_ob[a].get(y, 0) for y in years_s) for a in per_ob}
+    di_tot = {a: sum(per[a].get(y, 0) for y in years_s) for a in per}
+    fun_accts = []
+    for a in sorted(ob_tot, key=ob_tot.get, reverse=True)[:10]:
+        ob_a, di_a = ob_tot.get(a, 0), di_tot.get(a, 0)
+        if ob_a < 5e6:
+            continue
+        fun_accts.append({"acct": a, "agency": acct_agency.get(a, ""),
+                          "ob": M(ob_a), "di": M(di_a),
+                          "rate": round(100 * di_a / ob_a, 1) if ob_a else None})
+    overall_ob = sum(ob.get(y, 0) for y in years_s)
+    overall_di = sum(di.get(y, 0) for y in years_s)
+    # purpose split: USG categories of DELIVERED money; "Program Support" = explicit admin lines
+    cat_di = defaultdict(float)
+    for f, y, cur, _c, x in sec_rows:
+        if f == "disbursement" and y >= SY0:
+            cat_di[x.get("usg_category_name", "")] += cur
+    purpose = [{"cat": c, "di": M(v)} for c, v in sorted(cat_di.items(), key=lambda kv: -kv[1])]
+    support_di = cat_di.get("Program Support", 0)
+    mcc_di_tot = di_tot.get("MCC compact", 0)
+    funnel = {"overall": {"ob": M(overall_ob), "di": M(overall_di),
+                          "rate": round(100 * overall_di / overall_ob, 1)},
+              "accounts": fun_accts, "purpose": purpose,
+              "support_share": round(100 * support_di / sum(cat_di.values()), 1),
+              "mcc": {"ob": M(per_ob["MCC compact"].get(2023, 0) + per_ob["MCC compact"].get(2024, 0)),
+                      "di": M(mcc_di_tot)}}
+
     # ---- KPIs + analysis prints ----
     total15 = sum(di.get(y, 0) for y in range(SY0, Y1 + 1))
     peak_y = max((y for y in years_all if y <= 2025), key=lambda y: di.get(y, 0))
@@ -233,7 +261,7 @@ def main():
                      "years_all": years_all, "years": years_s, "fy26_partial": True,
                      "constant_base": constant_base},
             "kpis": kpis, "flows": flows, "accounts": {"series": series, "sankey": sankey, "cuts": cuts},
-            "sectors": sectors, "managing": managing}
+            "sectors": sectors, "managing": managing, "funnel": funnel}
     OUT_JS.parent.mkdir(parents=True, exist_ok=True)
     OUT_JS.write_text("window.US_DATA = " + json.dumps(data) + ";\n")
     print(f"\nwrote {OUT_JS} ({OUT_JS.stat().st_size:,} bytes)")

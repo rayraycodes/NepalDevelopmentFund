@@ -5,7 +5,7 @@ All retrieved 2026-06-03 (UTC). Snapshots + SHA-256 in [`data/manifest.csv`](../
 | Source | URL |
 |---|---|
 | OECD DAC2A (ODA by recipient) | https://sdmx.oecd.org/public/rest/data/OECD.DCD.FSD,DSD_DAC2@DF_DAC2A,/.NPL...?startPeriod=2015&endPeriod=2024&dimensionAtObservation=AllDimensions |
-| OECD CRS (activity level) | https://sdmx.oecd.org/dcd-public/rest/data/OECD.DCD.FSD,DSD_CRS@DF_CRS,/.NPL... |
+| OECD CRS (activity level) | https://sdmx.oecd.org/dcd-public/rest/data/OECD.DCD.FSD,DSD_CRS@DF_CRS,/.NPL..._T._T..._T..?startPeriod=2015&endPeriod=2015&dimensionAtObservation=AllDimensions (loop startPeriod/endPeriod per year 2015-2024) |
 | World Bank net ODA received (DT.ODA.ODAT.CD) | https://api.worldbank.org/v2/country/NPL/indicator/DT.ODA.ODAT.CD?format=json&date=2015:2024&per_page=100 |
 | World Bank Projects | https://search.worldbank.org/api/v3/projects?format=json&countrycode_exact=NP&rows=500 |
 | IATI (d-portal, no key) | http://d-portal.org/q?from=act&country_code=NP&form=json |

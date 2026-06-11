@@ -120,6 +120,19 @@
       <div class="note" data-i18n="arc_note">US fiscal years (October–September). FY2026 is partial-year data.</div></div>
   </section>
 
+  <section id="funnel">
+    <div class="kicker" data-i18n="fn_kicker">Follow the money to its purpose</div>
+    <h3 data-i18n="fn_title">The funnel: promised → delivered → purpose</h3>
+    <p class="lead" data-i18n="fn_lead">Three gates. First: how much of what was promised actually arrived. Second: of the money that arrived, how much went to the stated purpose — health, education, agriculture — and how much to running the machine. Mature accounts deliver 84–100% of what they promise. But of every delivered dollar, about 18 cents went to explicitly administrative and support lines — and that is only the visible overhead; what partners spend on their own administration inside program awards is not published anywhere.</p>
+    <div class="card" id="funnel-sum" style="font-weight:650;font-size:15px"></div>
+    <div class="grid2" style="margin-top:16px">
+      <div class="card"><div id="c-funnel" class="chart tall" role="img"></div>
+        <div class="note" data-i18n="fn_note1">Cumulative FY2015–FY2026. Rates above 100% mean disbursements drew on promises made before FY2015. MCC's low rate is timing, not failure: the compact disburses until August 2028.</div></div>
+      <div class="card"><div id="c-purpose" class="chart tall" role="img"></div>
+        <div class="note" data-i18n="fn_note2">"Program Support" (red) bundles operating expenses, administration and oversight, and program design/evaluation — as classified by the US government itself.</div></div>
+    </div>
+  </section>
+
   <section id="accounts">
     <div class="kicker" data-i18n="acc_kicker">The plumbing</div>
     <h3 data-i18n="acc_title">Which budget accounts carry the money</h3>
@@ -244,6 +257,12 @@ const I18N = {
   m_kicker:"Method", m_title:"Source and integrity",
   m_body:"All figures come from the official ForeignAssistance.gov data service (the same one behind the US government's Nepal country page), retrieved 2026-06-04, using three independent cuts of the same money: by sector, by funding account, and by implementing agency. The three cuts reconcile to the dollar in every year. Only actual flows are shown (obligations and disbursements); budget requests and appropriations are excluded. Constant dollars are as published, base year 2024. The partners and named-projects sections come from USASpending.gov (the US award system, retrieved 2026-06-11): a different accounting frame — awards by place of performance, obligations basis — so those amounts deliberately do not reconcile with the account/sector totals above. Account, partner and program names are kept in English because they are official US records.",
   m_csv:"machine-readable:", foot:"Part of the Nepal Development Funding dataset. ",
+  fn_kicker:"Follow the money to its purpose", fn_title:"The funnel: promised → delivered → purpose",
+  fn_lead:"Three gates. First: how much of what was promised actually arrived. Second: of the money that arrived, how much went to the stated purpose — health, education, agriculture — and how much to running the machine. Mature accounts deliver 84–100% of what they promise. But of every delivered dollar, about 18 cents went to explicitly administrative and support lines — and that is only the visible overhead; what partners spend on their own administration inside program awards is not published anywhere.",
+  fn_sum:"FY2015–26: promised {ob} → delivered {di} ({rate}%) · of delivered money, {support}% went to explicit admin/support lines · MCC compact: {mccdi} of {mccob} delivered so far (runs to Aug 2028)",
+  fn_note1:"Cumulative FY2015–FY2026. Rates above 100% mean disbursements drew on promises made before FY2015. MCC's low rate is timing, not failure: the compact disburses until August 2028.",
+  fn_note2:"\"Program Support\" (red) bundles operating expenses, administration and oversight, and program design/evaluation — as classified by the US government itself.",
+  fn_acct_t:"Delivered vs promised, by account", fn_pur_t:"What delivered money was for",
   pt_kicker:"Who receives it", pt_title:"The implementing partners",
   pt_lead:"The organisations actually awarded US money for work in Nepal: UN agencies, international NGOs, and development contractors. From the US government's award system (USASpending.gov). The largest single award — $509.5m, redacted at source because the recipient is a foreign government entity — is the MCC compact grant to Nepal, running to August 2028.",
   pt_note:"Obligations, awards with place of performance Nepal, FY2015–FY2026. A different accounting frame from the charts above — use for who/what, not for totals.",
@@ -259,8 +278,8 @@ const I18N = {
      "A $500m grant: about 300 km of high-voltage transmission lines including a cross-border link to India to enable electricity trade, plus a maintenance regime for some 300 km of strategic roads. Long-term aim: unlock Nepal's hydropower exports and cut transport costs. Signed 2017, ratified by parliament February 2022, in force 30 August 2023.",
      "https://www.mcc.gov/where-we-work/program/nepal-compact/","mcc.gov"],
     ["USAID strategy (FY2020–25): four development objectives",
-     "A more participatory democratic ecosystem; broad-based, inclusive economic growth; stronger, more inclusive health and education systems; better natural-resource and disaster-risk management — with support for federalism, social inclusion and resilience as cross-cutting themes. USAID was folded into the State Department in mid-2025; how this strategy continues is not yet documented.",
-     "https://www.usaid.gov/nepal","usaid.gov"],
+     "A more participatory democratic ecosystem; broad-based, inclusive economic growth; stronger, more inclusive health and education systems; better natural-resource and disaster-risk management — with support for federalism, social inclusion and resilience as cross-cutting themes. USAID was folded into the State Department in mid-2025 and its website is offline; the link is the official US Integrated Country Strategy for Nepal, which embeds these goals.",
+     "https://2021-2025.state.gov/wp-content/uploads/2022/06/ICS_SCA_Nepal_Public.pdf","state.gov (Integrated Country Strategy, PDF)"],
     ["Flagship programs visible in the awards",
      "SUAAHARA I+II (~$146m, Save the Children then Helen Keller International): household nutrition for mothers and children. Hariyo Ban ($35m, WWF): forests, biodiversity and climate resilience. Health System Strengthening ($35m, Abt): Nepal's federal health system. McGovern-Dole ($33m+, WFP): school meals.",
      "https://www.usaspending.gov/search/?hash=","usaspending.gov"],
@@ -302,6 +321,12 @@ const I18N = {
   m_kicker:"विधि", m_title:"स्रोत र शुद्धता",
   m_body:"सबै अङ्क आधिकारिक ForeignAssistance.gov डाटा सेवाबाट आएका हुन् (अमेरिकी सरकारकै नेपाल पृष्ठ पछाडिको सेवा), २०२६-०६-०४ मा लिइएको, एउटै रकमका तीन स्वतन्त्र कट प्रयोग गरेर: क्षेत्रअनुसार, बजेट खाताअनुसार, र कार्यान्वयन निकायअनुसार। तीनै कट हरेक वर्ष डलरसम्म मिल्छन्। वास्तविक प्रवाह मात्र देखाइएको छ (प्रतिबद्धता र वितरण); बजेट अनुरोध र विनियोजन हटाइएको छ। स्थिर डलर प्रकाशित रूपमै छ, आधार वर्ष २०२४। साझेदार र परियोजना खण्ड USASpending.gov (अमेरिकी अवार्ड प्रणाली, २०२६-०६-११ मा लिइएको) बाट हो: फरक लेखा आधार — कार्यस्थलअनुसार अवार्ड, प्रतिबद्धता — त्यसैले ती रकम माथिका खाता/क्षेत्र जोडसँग जानाजानी मिल्दैनन्। खाता, साझेदार र कार्यक्रमका नाम आधिकारिक अमेरिकी अभिलेख भएकाले अंग्रेजीमै छन्।",
   m_csv:"मेसिन-पठनीय:", foot:"नेपाल विकास सहायता डेटासेटको अंश। ",
+  fn_kicker:"पैसालाई उद्देश्यसम्म पछ्याउनुहोस्", fn_title:"फनेल: वाचा → वितरण → उद्देश्य",
+  fn_lead:"तीन ढोका। पहिलो: वाचा गरिएको रकमको कति वास्तवमा आइपुग्यो। दोस्रो: आइपुगेको रकमको कति घोषित उद्देश्य — स्वास्थ्य, शिक्षा, कृषि — मा गयो, र कति संयन्त्र चलाउनमा। परिपक्व खाताले वाचाको ८४–१००% पुर्‍याउँछन्। तर वितरित हरेक डलरको करिब १८ सेन्ट स्पष्ट प्रशासनिक/सहयोगी शीर्षकमा गयो — र त्यो देखिने ओभरहेड मात्र हो; साझेदारले कार्यक्रमभित्र आफ्नै प्रशासनमा गर्ने खर्च कतै प्रकाशित हुँदैन।",
+  fn_sum:"FY2015–26: वाचा {ob} → वितरण {di} ({rate}%) · वितरित रकमको {support}% स्पष्ट प्रशासन/सहयोग शीर्षकमा · MCC सम्झौता: {mccob} मध्ये {mccdi} वितरण (अगस्ट २०२८ सम्म चल्ने)",
+  fn_note1:"संचित FY2015–FY2026। १००% भन्दा माथिको दरको अर्थ FY2015 अघिका वाचाबाट वितरण भएको हो। MCC को न्यून दर समयको कुरा हो, असफलता होइन: सम्झौता अगस्ट २०२८ सम्म वितरण गर्छ।",
+  fn_note2:"\"Program Support\" (रातो) मा सञ्चालन खर्च, प्रशासन र निगरानी, तथा कार्यक्रम डिजाइन/मूल्याङ्कन पर्छन् — अमेरिकी सरकारकै वर्गीकरणअनुसार।",
+  fn_acct_t:"खाताअनुसार वितरण बनाम वाचा", fn_pur_t:"वितरित रकम केका लागि थियो",
   pt_kicker:"कसले पाउँछ", pt_title:"कार्यान्वयन साझेदारहरू",
   pt_lead:"नेपालमा कामका लागि वास्तवमा अमेरिकी रकम पाउने संस्थाहरू: संयुक्त राष्ट्रका निकाय, अन्तर्राष्ट्रिय गैसस र विकास ठेकेदार। अमेरिकी सरकारकै अवार्ड प्रणाली (USASpending.gov) बाट। सबैभन्दा ठूलो एकल अवार्ड — $509.5m, प्राप्तकर्ता विदेशी सरकारी निकाय भएकाले स्रोतमै गोप्य — नेपाललाई MCC सम्झौता अनुदान हो, अगस्ट २०२८ सम्म चल्ने।",
   pt_note:"प्रतिबद्धता; कार्यस्थल नेपाल भएका अवार्ड, FY2015–FY2026। माथिका चार्टभन्दा फरक लेखा आधार — को/के का लागि प्रयोग गर्नुहोस्, जोडका लागि होइन।",
@@ -317,8 +342,8 @@ const I18N = {
      "$500m अनुदान: भारतसँगको सीमापार लाइनसहित करिब ३०० किमी उच्च-भोल्टेज प्रसारण लाइन (बिजुली व्यापारका लागि), र करिब ३०० किमी रणनीतिक सडकको मर्मत प्रणाली। दीर्घकालीन उद्देश्य: नेपालको जलविद्युत् निर्यात खोल्ने र ढुवानी लागत घटाउने। २०१७ मा हस्ताक्षर, फेब्रुअरी २०२२ मा संसदबाट अनुमोदन, ३० अगस्ट २०२३ देखि लागू।",
      "https://www.mcc.gov/where-we-work/program/nepal-compact/","mcc.gov"],
     ["USAID रणनीति (FY2020–25): चार विकास उद्देश्य",
-     "बढी सहभागितामूलक लोकतान्त्रिक प्रणाली; फराकिलो, समावेशी आर्थिक वृद्धि; बलियो र समावेशी स्वास्थ्य तथा शिक्षा प्रणाली; प्राकृतिक स्रोत र विपद् जोखिम व्यवस्थापन — संघीयता, समावेशिता र उत्थानशीलता साझा विषयका रूपमा। USAID २०२५ मध्यमा State Department मा गाभियो; यो रणनीति कसरी अघि बढ्छ अझै लेखिएको छैन।",
-     "https://www.usaid.gov/nepal","usaid.gov"],
+     "बढी सहभागितामूलक लोकतान्त्रिक प्रणाली; फराकिलो, समावेशी आर्थिक वृद्धि; बलियो र समावेशी स्वास्थ्य तथा शिक्षा प्रणाली; प्राकृतिक स्रोत र विपद् जोखिम व्यवस्थापन — संघीयता, समावेशिता र उत्थानशीलता साझा विषयका रूपमा। USAID २०२५ मध्यमा State Department मा गाभियो र उसको वेबसाइट बन्द छ; लिङ्क नेपालका लागि आधिकारिक US Integrated Country Strategy हो, जसमा यिनै लक्ष्य छन्।",
+     "https://2021-2025.state.gov/wp-content/uploads/2022/06/ICS_SCA_Nepal_Public.pdf","state.gov (ICS, PDF)"],
     ["अवार्डमै देखिने प्रमुख कार्यक्रमहरू",
      "SUAAHARA I+II (~$146m, Save the Children पछि Helen Keller International): आमा र बालबालिकाको पोषण। Hariyo Ban ($35m, WWF): वन, जैविक विविधता र जलवायु। Health System Strengthening ($35m, Abt): संघीय स्वास्थ्य प्रणाली। McGovern-Dole ($33m+, WFP): विद्यालय खाजा।",
      "https://www.usaspending.gov/search/?hash=","usaspending.gov"],
@@ -381,8 +406,48 @@ function render(){
   ag.innerHTML=`<option value="assistance">${t('pj_assist')}</option><option value="contracts">${t('pj_contract')}</option>`;
   ag.value=awGroup; ag.onchange=()=>{awGroup=ag.value; drawAwards();};
 
-  drawArc(); drawAccounts(); drawSankey(); drawTreemap(); drawManaging();
+  drawArc(); drawFunnel(); drawPurpose(); drawAccounts(); drawSankey(); drawTreemap(); drawManaging();
   drawPartners(); drawAwards(); drawGoals(); drawCuts();
+}
+
+function drawFunnel(){
+  const F=D.funnel; if(!F) return;
+  const fm=v=>'$'+Math.round(v).toLocaleString()+'m';
+  document.getElementById('funnel-sum').textContent = t('fn_sum')
+    .replace('{ob}',fm(F.overall.ob)).replace('{di}',fm(F.overall.di)).replace('{rate}',F.overall.rate)
+    .replace('{support}',F.support_share).replace('{mccdi}',fm(F.mcc.di)).replace('{mccob}',fm(F.mcc.ob));
+  aria('c-funnel', t('fn_acct_t'));
+  const rows=F.accounts.slice(0,9).reverse();
+  chart('c-funnel').setOption({animation:anim,textStyle:baseText(),
+    title:{text:t('fn_acct_t'),left:'center',top:2,textStyle:{fontSize:14,fontWeight:600}},
+    grid:{left:8,right:64,top:54,bottom:24,containLabel:true},
+    tooltip:{trigger:'axis',axisPointer:{type:'shadow'},valueFormatter:fmt},
+    legend:{top:26,data:[t('s_ob'),t('s_di')]},
+    xAxis:{type:'value',name:t('usdm'),splitLine:{lineStyle:{color:'#eef1f6'}}},
+    yAxis:{type:'category',data:rows.map(a=>a.acct),axisLabel:{fontSize:11}},
+    series:[
+      {name:t('s_ob'),type:'bar',data:rows.map(a=>a.ob),barGap:'-55%',barWidth:14,
+        itemStyle:{color:'#fcd9a0',borderRadius:[0,4,4,0]},z:1},
+      {name:t('s_di'),type:'bar',data:rows.map(a=>a.di),barWidth:14,
+        itemStyle:{color:'#2563eb',borderRadius:[0,4,4,0]},z:2,
+        label:{show:true,position:'right',fontSize:10.5,color:'#0f1d2e',
+          formatter:p=>{const a=rows[p.dataIndex];return a.rate!=null?a.rate+'%':'';}}},
+    ]},true);
+}
+
+function drawPurpose(){
+  const F=D.funnel; if(!F) return;
+  aria('c-purpose', t('fn_pur_t'));
+  const rows=F.purpose.filter(p=>p.di>=1).reverse();
+  chart('c-purpose').setOption({animation:anim,textStyle:baseText(),
+    title:{text:t('fn_pur_t'),left:'center',top:2,textStyle:{fontSize:14,fontWeight:600}},
+    grid:{left:8,right:60,top:36,bottom:24,containLabel:true},
+    tooltip:{trigger:'axis',axisPointer:{type:'shadow'},valueFormatter:fmt},
+    xAxis:{type:'value',name:t('usdm'),splitLine:{lineStyle:{color:'#eef1f6'}}},
+    yAxis:{type:'category',data:rows.map(p=>p.cat),axisLabel:{fontSize:11}},
+    series:[{type:'bar',data:rows.map(p=>({value:p.di,
+      itemStyle:{color:p.cat==='Program Support'?'#dc2626':'#0e7c86',borderRadius:[0,4,4,0]}})),
+      label:{show:true,position:'right',formatter:p=>fmt(p.value),fontSize:10.5,color:'#0f1d2e'}}]},true);
 }
 
 function drawPartners(){
