@@ -240,6 +240,51 @@ def main():
               "mcc": {"ob": M(per_ob["MCC compact"].get(2023, 0) + per_ob["MCC compact"].get(2024, 0)),
                       "di": M(mcc_di_tot)}}
 
+    # ---- people vs system vs machine: a TRANSPARENT 3-way classification of every
+    # USG sector (published in full on the page; contestable by design) ----
+    # people  = the immediate object of spending is a person (care, food, classroom, cash, water)
+    # system  = building institutions/assets AROUND people (governance, infrastructure,
+    #           policies, security, markets, environment, surveillance, preparedness)
+    # machine = running the aid operation itself (admin, oversight, M&E)
+    PEOPLE = {"Nutrition", "Maternal and Child Health", "Family Planning and Reproductive Health",
+              "HIV/AIDS", "Malaria", "Water Supply and Sanitation", "Basic Education",
+              "Higher Education", "Social Assistance", "Social Services",
+              "Protection, Assistance and Solutions", "Agriculture",
+              "Health - General", "Education and Social Services - General",
+              "Humanitarian Assistance - General", "Economic Opportunity"}
+    MACHINE_CATS = {"Program Support"}
+    def cls(cat, sec):
+        if cat in MACHINE_CATS:
+            return "machine"
+        return "people" if sec in PEOPLE else "system"
+
+    ppl_year = defaultdict(lambda: defaultdict(float))   # year -> class -> usd
+    ppl_cat = defaultdict(lambda: defaultdict(float))    # category -> class -> usd
+    classmap = defaultdict(float)                        # (cat, sec, class) -> usd
+    for f, y, cur, _c, x in sec_rows:
+        if f != "disbursement" or y < SY0:
+            continue
+        cat, sec = x.get("usg_category_name", ""), x.get("usg_sector_name", "")
+        k = cls(cat, sec)
+        ppl_year[y][k] += cur
+        ppl_cat[cat][k] += cur
+        classmap[(cat, sec, k)] += cur
+    tot_all = sum(sum(v.values()) for v in ppl_year.values())
+    split = {k: round(100 * sum(ppl_year[y][k] for y in ppl_year) / tot_all, 1)
+             for k in ("people", "system", "machine")}
+    people = {
+        "split": split,
+        "byYear": [{"y": y, "people": M(ppl_year[y]["people"]), "system": M(ppl_year[y]["system"]),
+                    "machine": M(ppl_year[y]["machine"])} for y in sorted(ppl_year)],
+        "byCat": [{"cat": c, "people": M(v["people"]), "system": M(v["system"]),
+                   "machine": M(v["machine"])}
+                  for c, v in sorted(ppl_cat.items(), key=lambda kv: -sum(kv[1].values()))
+                  if sum(v.values()) >= 1e6],
+        "classmap": [{"cat": c, "sec": s, "cls": k, "di": M(v)}
+                     for (c, s, k), v in sorted(classmap.items(), key=lambda kv: -kv[1])
+                     if v >= 50000],
+    }
+
     # ---- KPIs + analysis prints ----
     total15 = sum(di.get(y, 0) for y in range(SY0, Y1 + 1))
     peak_y = max((y for y in years_all if y <= 2025), key=lambda y: di.get(y, 0))
@@ -261,7 +306,7 @@ def main():
                      "years_all": years_all, "years": years_s, "fy26_partial": True,
                      "constant_base": constant_base},
             "kpis": kpis, "flows": flows, "accounts": {"series": series, "sankey": sankey, "cuts": cuts},
-            "sectors": sectors, "managing": managing, "funnel": funnel}
+            "sectors": sectors, "managing": managing, "funnel": funnel, "people": people}
     OUT_JS.parent.mkdir(parents=True, exist_ok=True)
     OUT_JS.write_text("window.US_DATA = " + json.dumps(data) + ";\n")
     print(f"\nwrote {OUT_JS} ({OUT_JS.stat().st_size:,} bytes)")

@@ -133,6 +133,27 @@
     </div>
   </section>
 
+  <section id="people">
+    <div class="kicker" data-i18n="pp_kicker">People vs the system</div>
+    <h3 data-i18n="pp_title">How much reached people, and how much ran the machinery</h3>
+    <p class="lead" data-i18n="pp_lead">Every delivered dollar, sorted three ways using the US government's own sector labels: money whose immediate object is a person (a meal, a clinic visit, a classroom, a water tap, a farmer's training) — money that builds the systems around people (courts, grids, roads, ministries, markets, disease surveillance) — and money that runs the aid machine itself. The classification is ours, it is published in full below, and reasonable people can move lines: building a health system is not waste, it is how care continues after the project ends.</p>
+    <div class="card"><div id="pp-bar"></div></div>
+    <div class="grid2" style="margin-top:16px">
+      <div class="card"><div id="c-ppyear" class="chart sm" role="img"></div>
+        <div class="note" data-i18n="pp_note1">Share of delivered money per fiscal year. FY2026 is partial — note the machine's share when programs stop but operations continue.</div></div>
+      <div class="card"><div id="c-ppcat" class="chart sm" role="img"></div>
+        <div class="note" data-i18n="pp_note2">Inside each sector category. All operational cost is booked centrally under "Program Support" — the US system does not attribute admin to sectors, which is itself worth knowing.</div></div>
+    </div>
+    <details class="gloss" style="margin-top:16px">
+      <summary data-i18n="pp_map_t">The full classification, sector by sector (contestable by design)</summary>
+      <div style="overflow-x:auto"><table id="pp-map" style="min-width:560px"><thead><tr>
+        <th data-i18n="pp_m_cat">Category</th><th data-i18n="pp_m_sec">Official sector</th>
+        <th data-i18n="pp_m_cls">Classified as</th><th class="num">US$ m</th>
+      </tr></thead><tbody></tbody></table></div>
+    </details>
+    <div class="disclaim" style="margin-top:14px" data-i18n="pp_caveat">Honesty notes: "machine" counts only explicitly booked administration (Direct Administrative Costs, M&E, operating expenses). The overhead partners charge inside program awards is not published anywhere, so the true cost of the system is higher than 18%. And "system" money can serve people deeply — a maternal clinic needs a grid and a road; the split shows emphasis, not virtue.</div>
+  </section>
+
   <section id="accounts">
     <div class="kicker" data-i18n="acc_kicker">The plumbing</div>
     <h3 data-i18n="acc_title">Which budget accounts carry the money</h3>
@@ -294,6 +315,16 @@ const I18N = {
   fn_note1:"Cumulative FY2015–FY2026. Rates above 100% mean disbursements drew on promises made before FY2015. MCC's low rate is timing, not failure: the compact disburses until August 2028.",
   fn_note2:"\"Program Support\" (red) bundles operating expenses, administration and oversight, and program design/evaluation — as classified by the US government itself.",
   fn_acct_t:"Delivered vs promised, by account", fn_pur_t:"What delivered money was for",
+  pp_kicker:"People vs the system", pp_title:"How much reached people, and how much ran the machinery",
+  pp_lead:"Every delivered dollar, sorted three ways using the US government's own sector labels: money whose immediate object is a person (a meal, a clinic visit, a classroom, a water tap, a farmer's training) — money that builds the systems around people (courts, grids, roads, ministries, markets, disease surveillance) — and money that runs the aid machine itself. The classification is ours, it is published in full below, and reasonable people can move lines: building a health system is not waste, it is how care continues after the project ends.",
+  pp_note1:"Share of delivered money per fiscal year. FY2026 is partial — note the machine's share when programs stop but operations continue.",
+  pp_note2:"Inside each sector category. All operational cost is booked centrally under \"Program Support\" — the US system does not attribute admin to sectors, which is itself worth knowing.",
+  pp_map_t:"The full classification, sector by sector (contestable by design)",
+  pp_m_cat:"Category", pp_m_sec:"Official sector", pp_m_cls:"Classified as",
+  pp_caveat:"Honesty notes: \"machine\" counts only explicitly booked administration (Direct Administrative Costs, M&E, operating expenses). The overhead partners charge inside program awards is not published anywhere, so the true cost of the system is higher than 18%. And \"system\" money can serve people deeply — a maternal clinic needs a grid and a road; the split shows emphasis, not virtue.",
+  pp_people:"Directly to people", pp_system:"Building the systems", pp_machine:"Running the machine",
+  pp_bar_t:"Of every delivered dollar, FY2015–26:",
+  pp_year_t:"The split, year by year", pp_cat_t:"Inside each category",
   pt_kicker:"Who receives it", pt_title:"The implementing partners",
   pt_lead:"The organisations actually awarded US money for work in Nepal: UN agencies, international NGOs, and development contractors. From the US government's award system (USASpending.gov). The largest single award — $509.5m, redacted at source because the recipient is a foreign government entity — is the MCC compact grant to Nepal, running to August 2028.",
   pt_note:"Obligations, awards with place of performance Nepal, FY2015–FY2026. A different accounting frame from the charts above — use for who/what, not for totals.",
@@ -392,6 +423,16 @@ const I18N = {
   fn_note1:"संचित FY2015–FY2026। १००% भन्दा माथिको दरको अर्थ FY2015 अघिका वाचाबाट वितरण भएको हो। MCC को न्यून दर समयको कुरा हो, असफलता होइन: सम्झौता अगस्ट २०२८ सम्म वितरण गर्छ।",
   fn_note2:"\"Program Support\" (रातो) मा सञ्चालन खर्च, प्रशासन र निगरानी, तथा कार्यक्रम डिजाइन/मूल्याङ्कन पर्छन् — अमेरिकी सरकारकै वर्गीकरणअनुसार।",
   fn_acct_t:"खाताअनुसार वितरण बनाम वाचा", fn_pur_t:"वितरित रकम केका लागि थियो",
+  pp_kicker:"जनता बनाम प्रणाली", pp_title:"कति जनतासम्म पुग्यो, कति संयन्त्र चलाउनमा गयो",
+  pp_lead:"वितरित हरेक डलर, अमेरिकी सरकारकै क्षेत्र-लेबल प्रयोग गरेर तीन भागमा छुट्याइएको: जसको तत्काल उद्देश्य व्यक्ति हो (खाना, क्लिनिक, कक्षाकोठा, धारा, किसानको तालिम) — जसले जनताका वरिपरिका प्रणाली बनाउँछ (अदालत, ग्रिड, सडक, मन्त्रालय, बजार, रोग निगरानी) — र जसले सहायता संयन्त्र नै चलाउँछ। वर्गीकरण हाम्रो हो, तल पूरै प्रकाशित छ, र रेखा सार्न मिल्छ: स्वास्थ्य प्रणाली बनाउनु खेर जानु होइन, परियोजना सकिएपछि पनि सेवा चल्ने उपाय हो।",
+  pp_note1:"हरेक आर्थिक वर्षको वितरित रकमको हिस्सा। FY2026 आंशिक — कार्यक्रम रोकिँदा पनि सञ्चालन चल्दा संयन्त्रको हिस्सा हेर्नुहोस्।",
+  pp_note2:"हरेक क्षेत्र कोटिभित्र। सबै सञ्चालन खर्च केन्द्रीय रूपमा \"Program Support\" मा राखिन्छ — अमेरिकी प्रणालीले प्रशासनलाई क्षेत्रमा बाँड्दैन, त्यो आफैँमा जान्नलायक कुरा हो।",
+  pp_map_t:"पूर्ण वर्गीकरण, क्षेत्र-क्षेत्रमा (बहसयोग्य बनाइएको)",
+  pp_m_cat:"कोटि", pp_m_sec:"आधिकारिक क्षेत्र", pp_m_cls:"वर्गीकरण",
+  pp_caveat:"इमानदारीका टिप्पणी: \"संयन्त्र\" मा स्पष्ट रूपमा लेखिएको प्रशासन मात्र छ (प्रत्यक्ष प्रशासनिक खर्च, अनुगमन-मूल्याङ्कन, सञ्चालन खर्च)। साझेदारले कार्यक्रमभित्र लिने ओभरहेड कतै प्रकाशित हुँदैन, त्यसैले प्रणालीको वास्तविक लागत १८% भन्दा बढी छ। अनि \"प्रणाली\" रकमले पनि जनतालाई गहिरो सेवा गर्न सक्छ — मातृ क्लिनिकलाई ग्रिड र सडक चाहिन्छ; यो विभाजनले जोड देखाउँछ, गुण-दोष होइन।",
+  pp_people:"सीधै जनतामा", pp_system:"प्रणाली निर्माण", pp_machine:"संयन्त्र सञ्चालन",
+  pp_bar_t:"वितरित हरेक डलरमध्ये, FY2015–26:",
+  pp_year_t:"वर्ष-वर्षको विभाजन", pp_cat_t:"हरेक कोटिभित्र",
   pt_kicker:"कसले पाउँछ", pt_title:"कार्यान्वयन साझेदारहरू",
   pt_lead:"नेपालमा कामका लागि वास्तवमा अमेरिकी रकम पाउने संस्थाहरू: संयुक्त राष्ट्रका निकाय, अन्तर्राष्ट्रिय गैसस र विकास ठेकेदार। अमेरिकी सरकारकै अवार्ड प्रणाली (USASpending.gov) बाट। सबैभन्दा ठूलो एकल अवार्ड — $509.5m, प्राप्तकर्ता विदेशी सरकारी निकाय भएकाले स्रोतमै गोप्य — नेपाललाई MCC सम्झौता अनुदान हो, अगस्ट २०२८ सम्म चल्ने।",
   pt_note:"प्रतिबद्धता; कार्यस्थल नेपाल भएका अवार्ड, FY2015–FY2026। माथिका चार्टभन्दा फरक लेखा आधार — को/के का लागि प्रयोग गर्नुहोस्, जोडका लागि होइन।",
@@ -505,7 +546,7 @@ function render(){
   ag.innerHTML=`<option value="assistance">${t('pj_assist')}</option><option value="contracts">${t('pj_contract')}</option>`;
   ag.value=awGroup; ag.onchange=()=>{awGroup=ag.value; drawAwards();};
 
-  drawArc(); drawFunnel(); drawPurpose(); drawAccounts(); drawSankey(); drawTreemap(); drawManaging();
+  drawArc(); drawFunnel(); drawPurpose(); drawPeople(); drawAccounts(); drawSankey(); drawTreemap(); drawManaging();
   drawPartners(); drawAwards(); drawLedger(); drawGoals(); drawDocs(); drawCuts();
 }
 
@@ -600,6 +641,51 @@ function drawPurpose(){
     series:[{type:'bar',data:rows.map(p=>({value:p.di,
       itemStyle:{color:p.cat==='Program Support'?'#dc2626':'#0e7c86',borderRadius:[0,4,4,0]}})),
       label:{show:true,position:'right',formatter:p=>fmt(p.value),fontSize:10.5,color:'#0f1d2e'}}]},true);
+}
+
+const PP_COL={people:'#0f9d58',system:'#2563eb',machine:'#dc2626'};
+function drawPeople(){
+  const P=D.people; if(!P) return;
+  // the dollar bar (plain HTML, accessible)
+  const seg=k=>`<div style="flex:${P.split[k]};background:${PP_COL[k]};color:#fff;padding:10px 8px;
+    font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden">${P.split[k]}%</div>`;
+  document.getElementById('pp-bar').innerHTML=
+    `<div style="font-weight:650;margin-bottom:8px">${t('pp_bar_t')}</div>
+     <div role="img" aria-label="${t('pp_people')} ${P.split.people}%, ${t('pp_system')} ${P.split.system}%, ${t('pp_machine')} ${P.split.machine}%"
+       style="display:flex;border-radius:8px;overflow:hidden">${seg('people')}${seg('system')}${seg('machine')}</div>
+     <div style="display:flex;gap:16px;margin-top:8px;font-size:12.5px;flex-wrap:wrap">
+       <span><span style="color:${PP_COL.people}">●</span> ${t('pp_people')}</span>
+       <span><span style="color:${PP_COL.system}">●</span> ${t('pp_system')}</span>
+       <span><span style="color:${PP_COL.machine}">●</span> ${t('pp_machine')}</span></div>`;
+  // year shares (100% stacked)
+  aria('c-ppyear', t('pp_year_t'));
+  const ys=P.byYear;
+  const share=(r,k)=>{const tot=r.people+r.system+r.machine; return tot?+(100*r[k]/tot).toFixed(1):0;};
+  chart('c-ppyear').setOption({animation:anim,textStyle:baseText(),
+    title:{text:t('pp_year_t'),left:'center',top:2,textStyle:{fontSize:14,fontWeight:600}},
+    grid:{left:40,right:14,top:48,bottom:26},
+    tooltip:{trigger:'axis',valueFormatter:v=>v+'%'},legend:{top:24,textStyle:{fontSize:11}},
+    xAxis:{type:'category',data:ys.map(r=>r.y)},
+    yAxis:{type:'value',max:100,name:'%',splitLine:{lineStyle:{color:'#eef1f6'}}},
+    series:['people','system','machine'].map(k=>({name:t('pp_'+k),type:'bar',stack:'s',
+      data:ys.map(r=>share(r,k)),itemStyle:{color:PP_COL[k]}}))},true);
+  // per-category composition
+  aria('c-ppcat', t('pp_cat_t'));
+  const cats=P.byCat.slice().reverse();
+  chart('c-ppcat').setOption({animation:anim,textStyle:baseText(),
+    title:{text:t('pp_cat_t'),left:'center',top:2,textStyle:{fontSize:14,fontWeight:600}},
+    grid:{left:8,right:46,top:48,bottom:24,containLabel:true},
+    tooltip:{trigger:'axis',axisPointer:{type:'shadow'},valueFormatter:fmt},
+    legend:{top:24,textStyle:{fontSize:11}},
+    xAxis:{type:'value',name:t('usdm'),splitLine:{lineStyle:{color:'#eef1f6'}}},
+    yAxis:{type:'category',data:cats.map(c=>c.cat.length>30?c.cat.slice(0,28)+'…':c.cat),axisLabel:{fontSize:10.5}},
+    series:['people','system','machine'].map(k=>({name:t('pp_'+k),type:'bar',stack:'c',
+      data:cats.map(c=>c[k]),itemStyle:{color:PP_COL[k]}}))},true);
+  // full classification table
+  document.querySelector('#pp-map tbody').innerHTML=P.classmap.map(r=>
+    `<tr><td>${r.cat}</td><td>${r.sec}</td>
+     <td><span class="pill" style="background:${PP_COL[r.cls]}1a;color:${PP_COL[r.cls]}">${t('pp_'+r.cls)}</span></td>
+     <td class="num">$${r.di.toFixed(1)}</td></tr>`).join('');
 }
 
 function drawPartners(){
