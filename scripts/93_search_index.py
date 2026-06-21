@@ -204,6 +204,11 @@ def main():
         # country also becomes a searchable keyword (e.g. find all US contractors / Nepali orgs)
         if key in ORG_LOC and ORG_LOC[key].get("country"):
             entry["k"] = sorted(set(entry["k"]) | {ORG_LOC[key]["country"]})
+        # For sub-recipients we have no registered address, but we DO know the Nepal districts
+        # their money landed in. Surface a compact list (top-level so it loads on both pages) so
+        # the profile can show "Worked in <districts>" as an honest location signal.
+        if o["sub"] and o["sub"].get("dist"):
+            entry["wd"] = [d["n"] for d in o["sub"]["dist"][:4]]
         index.append(entry)
 
     # ---- districts -------------------------------------------------------

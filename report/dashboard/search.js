@@ -16,7 +16,7 @@
       empty: 'Search every dataset at once — organisations, sub-recipients, districts, projects, donors, budget accounts, sectors, sources and audits. Pick any result to open its full profile.',
       findhint: 'Search for any organisation, district, project, or funder, and see everything we know about it in one place.',
       no: 'No matches for', sug: 'Try one of these', count: '{n} results',
-      roles: { prime: 'Prime partner', sub: 'Sub-recipient' }, based_in: 'Based in',
+      roles: { prime: 'Prime partner', sub: 'Sub-recipient' }, based_in: 'Based in', worked_in: 'Worked in',
       types: { org: 'Organisation', district: 'District', project: 'Project', donor: 'Donor', account: 'Budget account', sector: 'Sector', source: 'Source', audit: 'Audit' },
       as_prime: 'As a prime partner', as_sub: 'As a sub-recipient',
       obligated: 'Obligated', outlayed: 'Outlayed (actually spent)', onward: 'Passed onward',
@@ -43,7 +43,7 @@
       empty: 'सबै डेटासेट एकैपटक खोज्नुहोस् — संस्था, उप-प्राप्तकर्ता, जिल्ला, परियोजना, दाता, बजेट खाता, क्षेत्र, स्रोत र लेखापरीक्षण। पूरा विवरण हेर्न कुनै नतिजा छान्नुहोस्।',
       findhint: 'कुनै पनि संस्था, जिल्ला, परियोजना वा दाता खोज्नुहोस्, र त्यसबारे हामीसँग भएको सबै जानकारी एकै ठाउँमा हेर्नुहोस्।',
       no: 'नतिजा भेटिएन:', sug: 'यीमध्ये प्रयास गर्नुहोस्', count: '{n} नतिजा',
-      roles: { prime: 'प्रमुख साझेदार', sub: 'उप-प्राप्तकर्ता' }, based_in: 'अवस्थित',
+      roles: { prime: 'प्रमुख साझेदार', sub: 'उप-प्राप्तकर्ता' }, based_in: 'अवस्थित', worked_in: 'कार्यक्षेत्र',
       types: { org: 'संस्था', district: 'जिल्ला', project: 'परियोजना', donor: 'दाता', account: 'बजेट खाता', sector: 'क्षेत्र', source: 'स्रोत', audit: 'लेखापरीक्षण' },
       as_prime: 'प्रमुख साझेदारको रूपमा', as_sub: 'उप-प्राप्तकर्ताको रूपमा',
       obligated: 'प्रतिबद्ध', outlayed: 'वास्तवमा खर्च भएको', onward: 'अगाडि पठाइएको',
@@ -97,6 +97,13 @@
     if (!loc || !(loc.city || loc.country)) return '';
     return '<div class="sx-loc">' + PIN + '<span><b>' + esc(L().based_in) + ':</b> ' + esc(locText(loc)) +
       (loc.addr ? '<br><span class="sx-addr">' + esc(loc.addr) + '</span>' : '') + '</span></div>';
+  }
+  // Sub-recipients have no registered address in the US data, but we know the Nepal districts
+  // their money landed in — show that as an honest "Worked in" location (never claimed as an HQ).
+  function workedInLine(e) {
+    if (e.loc || !e.wd || !e.wd.length) return '';   // a real registered address wins
+    return '<div class="sx-loc">' + PIN + '<span><b>' + esc(L().worked_in) + ':</b> ' +
+      esc(e.wd.join(', ')) + ' · ' + esc(countryName('Nepal')) + '</span></div>';
   }
 
   // ---- search ranking ----
@@ -355,7 +362,7 @@
     if (e.t === 'org') {
       var roles = (p.roles || []).map(function (r) { return '<span class="sx-chip">' + esc(t.roles[r]) + '</span>'; }).join('');
       h += '<div class="sx-roles">' + roles + '</div>';
-      h += locLine(e.loc);
+      h += locLine(e.loc) + workedInLine(e);
       if (p.prime) {
         h += sec(t.as_prime,
           grid([[money(p.prime.out), t.outlayed], [money(p.prime.obl), t.obligated],
