@@ -330,6 +330,10 @@ d-portal's `select=stats` form is broken and the `from=act` form must be used.
 | [`data/processed/us_by_account.csv`](../data/processed/us_by_account.csv) | US assistance by funding agency and named budget account (52 accounts), FY2001-FY2026, current + constant-2024 USD |
 | [`data/processed/us_by_usg_sector_detail.csv`](../data/processed/us_by_usg_sector_detail.csv) | US assistance by USG category and sub-sector (~50 programs), FY2001-FY2026 |
 | [`data/processed/us_by_managing_agency.csv`](../data/processed/us_by_managing_agency.csv) | US assistance by implementing (managing) agency; reconciles to the funding-agency cut to the dollar |
+| [`data/processed/us_project_detail.csv`](../data/processed/us_project_detail.csv) | per-project obligation/outlay/sub-award totals for the 154 awards >= $1m (USASpending) |
+| [`data/processed/us_subawards.csv`](../data/processed/us_subawards.csv) | 1,626 sub-awards to 562 organisations beneath the US primes, with Nepal district where named |
+| [`data/processed/documents.csv`](../data/processed/documents.csv) | archived primary strategy/compact documents (MCC, CDCS, ICS, ADB CPS, WB CPF) with SHA-256 |
+| [`data/processed/audits.csv`](../data/processed/audits.csv) | USAID OIG Nepal audits: questioned costs, verdict, archived-or-not, verified-in-PDF (oig.usaid.gov) |
 | [`data/processed/us_partners.csv`](../data/processed/us_partners.csv) | top US implementing partners for Nepal (USASpending.gov awards, obligations, place of performance NPL; separate accounting frame, not additive with the above) |
 | [`data/processed/us_awards.csv`](../data/processed/us_awards.csv) | largest named US awards for Nepal with official descriptions, periods, awarding agencies and award links (USASpending.gov) |
 | [`data/processed/documents.csv`](../data/processed/documents.csv) | registry of archived primary documents (MCC compact agreement, USAID CDCS 2020-25 recovered from grants.gov, US ICS, ADB CPS 2025-29, WB CPF FY2025-31) with SHA-256, page counts and original URLs; PDFs in `data/raw/docs/`, extracted text in `data/interim/docs/` |

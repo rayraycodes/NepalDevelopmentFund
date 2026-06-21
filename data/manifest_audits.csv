@@ -1,0 +1,5 @@
+source,snapshot_path,url,params,sha256,bytes,http_status,retrieved_at
+audits,data/raw/audits/5-367-23-024-R_20260621T141213Z.pdf,https://oig.usaid.gov/sites/default/files/2023-08/5-367-23-024-R.pdf,,815882ca13becf29a64adba14e4f2893d087bf1bf25055856d46ef7bb374c4eb,316997,200,2026-06-21T14:12:13Z
+audits,data/raw/audits/5-367-22-024-R_20260621T141214Z.pdf,https://oig.usaid.gov/sites/default/files/2022-09/5-367-22-024-R_0.pdf,,7d7a844f4996233fc3799790895f08fe24a59dce541c5336bab0ee1667dc5ec9,270217,200,2026-06-21T14:12:14Z
+audits,data/raw/audits/5-367-20-060-R_20260621T141214Z.pdf,https://oig.usaid.gov/sites/default/files/2020-08/5-367-20-060-R.pdf,,9854fff338d039f447f953e7f0d3330d471ac1dec808349ad64ac22c9c8c3570,101428,200,2026-06-21T14:12:14Z
+audits,data/raw/audits/5-367-18-017-R_20260621T141214Z.pdf,https://oig.usaid.gov/sites/default/files/2018-06/5-367-18-017-r.pdf,,9a23521f6ecfb47da640c0b3b115ab603a1874571eb073fb20ff903034f8e49c,80497,200,2026-06-21T14:12:14Z

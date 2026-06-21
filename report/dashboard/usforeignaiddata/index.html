@@ -269,6 +269,20 @@
     </div>
   </section>
 
+  <section id="audits">
+    <div class="kicker" data-i18n="au_kicker">Accountability</div>
+    <h3 data-i18n="au_title">What the auditors found</h3>
+    <p class="lead" data-i18n="au_lead">The US Inspector General audits US assistance to Nepal. Across the seven Nepal audits we could trace, total questioned costs were $323,161 — about 0.016% of the $2.0bn delivered, and mostly small ineligible or unsupported items on funds managed directly by the Government of Nepal. We archived four of the audit PDFs here with checksums; the rest now live only on USAID's offline document server.</p>
+    <div class="card" id="audits-sum" style="font-weight:650;font-size:15px"></div>
+    <div class="card" style="overflow-x:auto;margin-top:16px">
+      <table id="audits-table" style="min-width:700px"><thead><tr>
+        <th data-i18n="au_t_audit">Audit</th><th data-i18n="au_t_what">What was audited</th>
+        <th data-i18n="au_t_period">Period</th><th class="num" data-i18n="au_t_q">Questioned</th>
+        <th data-i18n="au_t_links">Status</th></tr></thead><tbody></tbody></table>
+      <div class="note" data-i18n="au_note">"Questioned" costs are amounts auditors flagged as ineligible or unsupported and recommended for review or recovery — not proven loss. ✓ means the figure was confirmed in the archived PDF text. Source: USAID Office of Inspector General (oig.usaid.gov).</div>
+    </div>
+  </section>
+
   <section id="method">
     <div class="kicker" data-i18n="m_kicker">Method</div>
     <h3 data-i18n="m_title">Source and integrity</h3>
@@ -292,6 +306,7 @@
 <script src="us_partners.js"></script>
 <script src="us_projects.js"></script>
 <script src="us_detail.js"></script>
+<script src="audits.js"></script>
 <script>
 const D = window.US_DATA;
 const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -363,6 +378,12 @@ const I18N = {
   ld_subrec_t:"Top sub-recipients (US$ m received)", ld_dist_t:"Sub-awards by Nepal district (US$ m)",
   ld_note1:"Top sub-recipients by amount received — a mix of international primes and Nepali organisations (Thakral One Nepal, Subisu, CEAPRED, local NGOs).",
   ld_note2:"Sub-awards naming a Nepal district. USASpending has no recipient-country field, so we show named geography rather than claim a precise share to Nepali organisations.",
+  au_kicker:"Accountability", au_title:"What the auditors found",
+  au_lead:"The US Inspector General audits US assistance to Nepal. Across the seven Nepal audits we could trace, total questioned costs were $323,161 — about 0.016% of the $2.0bn delivered, and mostly small ineligible or unsupported items on funds managed directly by the Government of Nepal. We archived four of the audit PDFs here with checksums; the rest now live only on USAID's offline document server.",
+  au_sum:"7 audits  ·  {q} in questioned costs ({pct}% of delivered aid)  ·  {arch} archived here with checksums",
+  au_t_audit:"Audit", au_t_what:"What was audited", au_t_period:"Period", au_t_q:"Questioned", au_t_links:"Status",
+  au_note:"\"Questioned\" costs are amounts auditors flagged as ineligible or unsupported and recommended for review or recovery — not proven loss. ✓ means the figure was confirmed in the archived PDF text. Source: USAID Office of Inspector General (oig.usaid.gov).",
+  au_clean:"Clean", au_perf:"Performance", au_archived:"Archived ✓", au_offline:"Original offline",
   gl_kicker:"The long game", gl_title:"Stated long-term goals",
   gl_lead:"What the money says it is for, from the official program documents — each card links to its source.",
   dc_kicker:"Primary documents", dc_title:"The supporting documents, read and archived",
@@ -477,6 +498,12 @@ const I18N = {
   ld_subrec_t:"प्रमुख उप-प्राप्तकर्ता (डलर मिलियन)", ld_dist_t:"नेपाल जिल्लाअनुसार उप-अवार्ड (डलर मिलियन)",
   ld_note1:"प्राप्त रकमअनुसार प्रमुख उप-प्राप्तकर्ता — अन्तर्राष्ट्रिय प्राइम र नेपाली संस्था (Thakral One Nepal, Subisu, CEAPRED, स्थानीय गैसस) को मिश्रण।",
   ld_note2:"नेपाल जिल्ला उल्लेख गर्ने उप-अवार्ड। USASpending मा प्राप्तकर्ता-देश क्षेत्र छैन, त्यसैले हामी ठ्याक्कै नेपाली अंश दाबी नगरी नामित भूगोल देखाउँछौं।",
+  au_kicker:"जवाफदेहिता", au_title:"लेखापरीक्षकले के भेट्टाए",
+  au_lead:"अमेरिकी महालेखापरीक्षकले नेपाललाई अमेरिकी सहायताको लेखापरीक्षण गर्छ। हामीले पत्ता लगाएका सात नेपाल लेखापरीक्षणमा, कुल प्रश्नचिह्नित खर्च $323,161 थियो — वितरित $2.0bn को करिब ०.०१६%, र अधिकांश नेपाल सरकारले प्रत्यक्ष व्यवस्थापन गरेको रकममा साना अयोग्य वा अप्रमाणित वस्तु। हामीले चार लेखापरीक्षण PDF यहाँ चेकसमसहित अभिलेख गर्‍यौं; बाँकी अहिले USAID को बन्द दस्तावेज सर्भरमा मात्र छन्।",
+  au_sum:"७ लेखापरीक्षण  ·  {q} प्रश्नचिह्नित खर्च (वितरितको {pct}%)  ·  {arch} यहाँ चेकसमसहित अभिलेख",
+  au_t_audit:"लेखापरीक्षण", au_t_what:"के लेखापरीक्षण भयो", au_t_period:"अवधि", au_t_q:"प्रश्नचिह्नित", au_t_links:"स्थिति",
+  au_note:"\"प्रश्नचिह्नित\" खर्च भनेको लेखापरीक्षकले अयोग्य वा अप्रमाणित भनी औंल्याएको र समीक्षा/फिर्ताका लागि सिफारिस गरिएको रकम हो — प्रमाणित नोक्सान होइन। ✓ ले अभिलेखित PDF मा अङ्क पुष्टि भएको जनाउँछ। स्रोत: USAID महालेखापरीक्षक कार्यालय।",
+  au_clean:"सफा", au_perf:"कार्यसम्पादन", au_archived:"अभिलेखित ✓", au_offline:"मूल बन्द",
   gl_kicker:"दीर्घकालीन खेल", gl_title:"घोषित दीर्घकालीन लक्ष्यहरू",
   gl_lead:"आधिकारिक कार्यक्रम दस्तावेजअनुसार यो रकम केका लागि हो — हरेक कार्ड स्रोतसँग जोडिएको छ।",
   dc_kicker:"प्राथमिक दस्तावेज", dc_title:"आधार दस्तावेजहरू: पढिएको र अभिलेख गरिएको",
@@ -573,10 +600,28 @@ function render(){
   ag.value=awGroup; ag.onchange=()=>{awGroup=ag.value; drawAwards();};
 
   drawArc(); drawFunnel(); drawPurpose(); drawPeople(); drawAccounts(); drawSankey(); drawTreemap(); drawManaging();
-  drawPartners(); drawAwards(); drawLanding(); drawLedger(); drawGoals(); drawDocs(); drawCuts();
+  drawPartners(); drawAwards(); drawLanding(); drawLedger(); drawGoals(); drawDocs(); drawAudits(); drawCuts();
 }
 
 let lgStatus='all', lgQuery='';
+function drawAudits(){
+  const A=window.US_AUDITS; if(!A) return;
+  const m=A.meta;
+  document.getElementById('audits-sum').textContent=t('au_sum')
+    .replace('{q}','$'+m.total_questioned.toLocaleString())
+    .replace('{pct}',(m.total_questioned/2.01e9*100).toFixed(3))
+    .replace('{arch}',m.n_archived);
+  document.querySelector('#audits-table tbody').innerHTML=A.list.map(a=>{
+    const q = a.questioned>0 ? '$'+a.questioned.toLocaleString()
+      : '<span style="color:#5b6b7d">'+(a.verdict==='clean'?t('au_clean'):t('au_perf'))+'</span>';
+    const vb = a.verified==='yes' ? ' <span class="pill p-cons" title="confirmed in archived PDF">✓</span>' : '';
+    const status = a.archived ? '<span class="pill p-cons">'+t('au_archived')+'</span>'
+      : '<span class="pill p-med">'+t('au_offline')+'</span>';
+    return `<tr><td><a href="${a.node_url}" target="_blank" rel="noopener">${a.report}</a>
+        <div style="font-size:11px;color:#5b6b7d">${a.title}</div></td>
+      <td>${a.what}</td><td style="white-space:nowrap">${a.period}</td>
+      <td class="num">${q}${vb}</td><td>${status}</td></tr>`;}).join('');
+}
 function drawLanding(){
   const D2=window.US_DETAIL; if(!D2) return;
   const h=D2.headline;

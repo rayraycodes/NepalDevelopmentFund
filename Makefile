@@ -22,6 +22,10 @@ fetch:
 	$(PY) scripts/16_fetch_nepal_dcr.py
 	$(PY) scripts/17_fetch_aiddata.py
 	$(PY) scripts/18_fetch_oecd_crs.py
+	$(PY) scripts/89_us_projects_data.py
+	$(PY) scripts/90_us_project_detail.py
+	$(PY) scripts/88_fetch_docs.py
+	$(PY) scripts/92_fetch_audits.py
 
 # primary supporting documents (strategies, compact agreements) -> data/raw/docs + registry
 docs:
