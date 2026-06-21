@@ -49,6 +49,12 @@ def main():
             continue
         obl = float(d.get("total_obligation") or 0)
         out = float(d.get("total_outlay") or d.get("total_account_outlay") or 0)
+        # Current award = exercised value (contracts) or total funding (assistance);
+        # Potential award = base + all options (contracts) or total funding (assistance).
+        cur = float(d.get("base_exercised_options") or d.get("total_funding") or obl or 0)
+        pot = float(d.get("base_and_all_options") or d.get("total_funding") or obl or 0)
+        pop = d.get("period_of_performance") or {}
+        start, deadline = pop.get("start_date") or "", pop.get("end_date") or ""
         # sub-awards (paginate)
         sub_rows, page = [], 1
         while True:
@@ -77,7 +83,9 @@ def main():
                          "description": (x.get("description") or "")[:120]})
         details.append({"award_id": aid, "recipient": a["recipient"], "desc": a["desc"],
                         "group": a["group"], "status": a["status"],
-                        "obligated_usd": round(obl, 2), "outlayed_usd": round(out, 2),
+                        "outlayed_usd": round(out, 2), "obligated_usd": round(obl, 2),
+                        "current_award_usd": round(cur, 2), "potential_award_usd": round(pot, 2),
+                        "start": start, "deadline": deadline,
                         "spend_rate_pct": round(100 * out / obl, 1) if obl else None,
                         "subawarded_usd": round(sub_tot, 2), "n_subawards": len(sub_rows)})
         if (i + 1) % 25 == 0:

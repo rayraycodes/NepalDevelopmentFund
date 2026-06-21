@@ -77,6 +77,21 @@ def main():
     sj = C.ROOT / "report/dashboard/usforeignaiddata/us_subawards.js"
     sj.write_text("window.US_SUBS = " + json.dumps(recs, separators=(",", ":")) + ";\n")
     print(f"  + us_subawards.js ({len(recs)} records, {sj.stat().st_size//1024} KB) for drill-down")
+
+    # per-project financial breakdown for the drawer: keyed by award id.
+    # o=outlayed, b=obligated, c=current award, p=potential award, e=deadline, s=start, j=desc, r=recipient
+    meta = {}
+    for d in det:
+        meta[d["award_id"]] = {
+            "o": round(float(d.get("outlayed_usd") or 0)),
+            "b": round(float(d.get("obligated_usd") or 0)),
+            "c": round(float(d.get("current_award_usd") or 0)),
+            "p": round(float(d.get("potential_award_usd") or 0)),
+            "e": d.get("deadline", ""), "s": d.get("start", ""),
+            "j": d.get("desc", ""), "r": d.get("recipient", "")}
+    mj = C.ROOT / "report/dashboard/usforeignaiddata/us_projmeta.js"
+    mj.write_text("window.US_PROJMETA = " + json.dumps(meta, separators=(",", ":")) + ";\n")
+    print(f"  + us_projmeta.js ({len(meta)} projects) for the financial breakdown")
     print(f"onward-flow ${tot_sub/1e6:,.0f}m to {len(by_sub)} orgs "
           f"({100*tot_sub/tot_obl:.0f}% of the ${tot_obl/1e6:,.0f}m obligated) | "
           f"{len(by_dist)} Nepal districts named in {n_dist_aware} sub-awards")

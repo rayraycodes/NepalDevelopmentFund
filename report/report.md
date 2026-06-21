@@ -208,6 +208,42 @@ Corporation compact becomes the dominant US channel.
 
 ![US assistance by agency](figures/fig6_us_agency.png)
 
+### 3g. US project outlays (actually spent) and deadlines
+
+Per project, the figure that matters is the **outlay** (money actually disbursed), not the
+obligation (money committed) or the award ceiling. For the 151 largest US awards we pulled the
+four official USASpending amounts and the period-of-performance end date ("potential deadline").
+Largest by outlay:
+
+| Outlayed (spent) | Obligated | Recipient | Project | Deadline |
+|---:|---:|---|---|---|
+| $43.57m | $91.4m | Helen Keller Internation | Suaahara Ii | 2023-11-30 |
+| $32.75m | $33.0m | DAI Global LLC | The Support Provided In This Project Will Help… | 2024-12-30 |
+| $30.36m | $42.4m | Winrock International In | Kisan Ii Project Will Explore Opportunities To… | 2024-08-30 |
+| $30.33m | $35.0m | Abt Global LLC | Health System Strengthening (Hss) | 2024-07-06 |
+| $18.00m | $18.2m | Cooperative For Assistan | The Goal Of This Activity Is To Support Adoles… | 2027-05-31 |
+| $16.94m | $21.5m | DAI Global LLC | The Goal Of The Kawas (The Activity) Is To Cre… | 2025-02-26 |
+| $16.93m | $25.0m | United Nations World Foo | The Mcgovern-Dole Program Provides For The Don… | 2024-09-30 |
+| $15.87m | $18.7m | Deloitte Consulting LLP | Urja Nepal'S Goal Is To Create A Financially V… | 2025-02-11 |
+| $14.79m | $15.0m | Mercy Corps | The Purpose Of This Req Is To Fund A New Ida (… | 2023-12-31 |
+| $14.16m | $15.3m | DAI Global LLC | The Purpose Of Usaid Biodiversity Is To Improv… | 2025-02-12 |
+| $12.53m | $20.9m | Consortium For Elections | Niti Sambad | 2024-08-02 |
+| $12.47m | $15.4m | Winrock International In | Hamra Samman To Combat Human Trafficking | 2024-03-31 |
+| $11.32m | $29.3m | United Nations World Foo | The Mcgovern-Dole Program Provides For The Don… | 2022-06-30 |
+| $10.95m | $10.9m | Macro Vantage Levant Dmc | This Is An Un-Funded Glaas Action To Issue The… | 2025-05-13 |
+| $10.47m | $12.9m | Chemonics International, | Usaid/Nepal Early Grade Learning (Egl) Activit… | 2025-02-12 |
+
+Each award also carries an *Obligated*, *Current award* and *Potential award* amount, and a
+deadline; the full four-amount breakdown per project (with the project description and its
+sub-recipients) is on the dashboard — click any project recipient to open it. Example, exactly as
+USASpending reports it: RTI's Early Grade Reading Program — **Outlayed $9,950,937.88**, Obligated
+$43,396,190.71, Current and Potential award $52,361,970.89, deadline 2020-10-31 (passed). Full
+data: [`data/processed/us_project_detail.csv`](../data/processed/us_project_detail.csv).
+
+Integrity note: USASpending's outlay field is incomplete for some assistance awards (a completed
+award can show <100% outlay), so these are a floor on actual spending, not a precise final figure;
+the authoritative aggregate delivery rate remains the 81.6% from ForeignAssistance.gov.
+
 ---
 
 ## 4. Discrepancy Log
