@@ -19,6 +19,7 @@
       as_prime: 'As a prime partner', as_sub: 'As a sub-recipient',
       obligated: 'Obligated', outlayed: 'Outlayed (actually spent)', onward: 'Passed onward',
       current: 'Current award', potential: 'Potential award', received: 'Received', delivered: 'Delivered', rate: 'delivery rate',
+      awarded: 'Awarded',
       across: 'across', awards: 'awards', subawards: 'sub-awards',
       funders: 'Top funders', districts_l: 'Where it landed', projects_l: 'Projects', orgs_l: 'Organisations', primes_l: 'Prime partners',
       subs_l: 'Sub-recipients',
@@ -40,6 +41,7 @@
       as_prime: 'प्रमुख साझेदारको रूपमा', as_sub: 'उप-प्राप्तकर्ताको रूपमा',
       obligated: 'प्रतिबद्ध', outlayed: 'वास्तवमा खर्च भएको', onward: 'अगाडि पठाइएको',
       current: 'हालको अवार्ड', potential: 'सम्भावित अवार्ड', received: 'प्राप्त', delivered: 'वितरण', rate: 'वितरण दर',
+      awarded: 'अवार्ड मिति',
       across: '—', awards: 'अवार्ड', subawards: 'उप-अवार्ड',
       funders: 'प्रमुख दाता', districts_l: 'कहाँ पुग्यो', projects_l: 'परियोजना', orgs_l: 'संस्था', primes_l: 'प्रमुख साझेदार',
       subs_l: 'उप-प्राप्तकर्ता',
@@ -301,7 +303,8 @@
           grid([[money(p.prime.out), t.outlayed], [money(p.prime.obl), t.obligated],
                 [money(p.prime.onward), t.onward], [p.prime.n + ' ' + t.awards, t.types.project + 's']]) +
           rows((p.prime.aw || []).map(function (a) {
-            return { v: money(a.o != null ? a.o : a.b), n: a.j, sub: dlText(a.e), act: a.w, kind: 'proj' };
+            var when = (a.s ? L().awarded + ' ' + a.s + ' · ' : '') + dlText(a.e);
+            return { v: money(a.o != null ? a.o : a.b), n: a.j, sub: when, act: a.w, kind: 'proj' };
           })));
       }
       if (p.sub) {
@@ -325,6 +328,7 @@
     else if (e.t === 'project') {
       if (!p.light) {
         h += sec('', grid([[money(p.o), t.outlayed], [money(p.b), t.obligated], [money(p.c), t.current], [money(p.pt), t.potential]]) +
+          (p.s ? '<div class="sx-dl" style="color:var(--ink)">' + esc(t.awarded) + ': ' + esc(p.s) + '</div>' : '') +
           '<div class="sx-dl" style="color:' + (p.e && p.e < TODAY ? '#a51328' : 'var(--ink)') + '">' + dlText(p.e) + '</div>');
         h += metaList([[t.recipient, p.rec], [t.agency, p.ag], [t.status, t.stat[p.st] || p.st]]);
         if (p.subs && p.subs.length) h += sec(t.subs_l, rows(p.subs.map(mapNA)));

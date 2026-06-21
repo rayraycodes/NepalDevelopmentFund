@@ -62,7 +62,8 @@ def main():
     out.write_text("window.US_DETAIL = " + json.dumps(data) + ";\n")
 
     # full sub-award records for client-side drill-down (click a bar/row -> breakdown).
-    # compact keys: s=sub-recipient, a=amount $, d=district, p=prime, j=project desc, w=prime award id
+    # compact keys: s=sub-recipient, a=amount $, d=district, p=prime, j=project desc, w=prime award id,
+    #               t=action date (when the money was awarded onward, YYYY-MM-DD)
     desc_by_award = {d["award_id"]: d["desc"] for d in det}
     recs = []
     for x in subs:
@@ -73,7 +74,8 @@ def main():
         recs.append({"s": x["sub_recipient"], "a": round(amt),
                      "d": d if d in NEPAL_DISTRICTS else "",
                      "p": x["prime"], "w": x["prime_award"],
-                     "j": desc_by_award.get(x["prime_award"], "")[:60]})
+                     "j": desc_by_award.get(x["prime_award"], "")[:60],
+                     "t": (x["action_date"] or "")[:10]})
     sj = C.ROOT / "report/dashboard/usforeignaiddata/us_subawards.js"
     sj.write_text("window.US_SUBS = " + json.dumps(recs, separators=(",", ":")) + ";\n")
     print(f"  + us_subawards.js ({len(recs)} records, {sj.stat().st_size//1024} KB) for drill-down")

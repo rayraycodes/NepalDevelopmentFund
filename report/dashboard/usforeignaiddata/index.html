@@ -445,6 +445,7 @@ const I18N = {
   dr_dist_h:"{t} across {n} sub-awards, to these organisations:",
   dr_proj_h:"passed {t} onward across {n} sub-awards:",
   dr_outlayed:"Outlayed (actually spent)", dr_obligated:"Obligated", dr_current:"Current award", dr_potential:"Potential award",
+  dr_awarded:"Awarded",
   dr_dl_passed:"Deadline passed: {d}", dr_dl_by:"Runs until {d}", dr_dl_none:"No end date recorded",
   au_kicker:"Accountability", au_title:"What the auditors found",
   au_lead:"The US Inspector General audits US assistance to Nepal. Across the seven Nepal audits we could trace, total questioned costs were $323,161 — about 0.016% of the $2.0bn delivered, and mostly small ineligible or unsupported items on funds managed directly by the Government of Nepal. We archived four of the audit PDFs here with checksums; the rest now live only on USAID's offline document server.",
@@ -575,6 +576,7 @@ const I18N = {
   dr_dist_h:"{n} उप-अवार्डमा {t}, यी संस्थाहरूलाई:",
   dr_proj_h:"{n} उप-अवार्डमा {t} अगाडि पठाइयो:",
   dr_outlayed:"वितरण (वास्तविक खर्च)", dr_obligated:"प्रतिबद्ध", dr_current:"हालको अवार्ड", dr_potential:"सम्भावित अवार्ड",
+  dr_awarded:"अवार्ड मिति",
   dr_dl_passed:"म्याद सकियो: {d}", dr_dl_by:"{d} सम्म चल्ने", dr_dl_none:"अन्त्य मिति छैन",
   au_kicker:"जवाफदेहिता", au_title:"लेखापरीक्षकले के भेट्टाए",
   au_lead:"अमेरिकी महालेखापरीक्षकले नेपाललाई अमेरिकी सहायताको लेखापरीक्षण गर्छ। हामीले पत्ता लगाएका सात नेपाल लेखापरीक्षणमा, कुल प्रश्नचिह्नित खर्च $323,161 थियो — वितरित $2.0bn को करिब ०.०१६%, र अधिकांश नेपाल सरकारले प्रत्यक्ष व्यवस्थापन गरेको रकममा साना अयोग्य वा अप्रमाणित वस्तु। हामीले चार लेखापरीक्षण PDF यहाँ चेकसमसहित अभिलेख गर्‍यौं; बाँकी अहिले USAID को बन्द दस्तावेज सर्भरमा मात्र छन्।",
@@ -740,8 +742,9 @@ function openDrawer(title, sub, rows, metaHtml){
   document.getElementById('drawer-sub').textContent=sub;
   document.getElementById('drawer-meta').innerHTML=metaHtml||'';
   const html=rows.sort((x,y)=>y.a-x.a).slice(0,150).map(r=>
-    `<tr><td class="num" style="white-space:nowrap;padding-right:14px;font-weight:700;color:var(--teal)">${money(r.a)}</td>
-      <td>${esc(r.left||'—')}${r.right?`<div style="font-size:11.5px;color:var(--muted);margin-top:1px">${esc(r.right)}</div>`:''}</td></tr>`).join('');
+    `<tr><td class="num" style="white-space:nowrap;padding-right:14px;font-weight:700;color:var(--teal);vertical-align:top">${money(r.a)}</td>
+      <td>${esc(r.left||'—')}${r.right?`<div style="font-size:11.5px;color:var(--muted);margin-top:1px">${esc(r.right)}</div>`:''}</td>
+      <td style="white-space:nowrap;text-align:right;vertical-align:top;font-size:11.5px;color:var(--muted)">${r.date?'<span title="'+t('dr_awarded')+'">'+esc(r.date)+'</span>':''}</td></tr>`).join('');
   document.getElementById('drawer-rows').innerHTML=html||`<tr><td style="color:var(--muted)">${t('dr_empty')}</td></tr>`;
   const dr=document.getElementById('drawer');
   _lastFocused=document.activeElement;          // remember what to return focus to
@@ -776,10 +779,10 @@ document.addEventListener('keydown',e=>{
 const subsAll=()=>window.US_SUBS||[];
 function drillSub(name){const r=subsAll().filter(x=>x.s===name);const tot=r.reduce((a,b)=>a+b.a,0);
   openDrawer(name, t('dr_sub_h').replace('{n}',r.length).replace('{t}',money(tot)),
-    r.map(x=>({a:x.a,left:x.p,right:[x.j,x.d&&(x.d+' '+t('dr_district'))].filter(Boolean).join(' · ')})));}
+    r.map(x=>({a:x.a,left:x.p,date:x.t,right:[x.j,x.d&&(x.d+' '+t('dr_district'))].filter(Boolean).join(' · ')})));}
 function drillDist(name){const r=subsAll().filter(x=>x.d===name);const tot=r.reduce((a,b)=>a+b.a,0);
   openDrawer(name+' '+t('dr_district'), t('dr_dist_h').replace('{n}',r.length).replace('{t}',money(tot)),
-    r.map(x=>({a:x.a,left:x.s,right:x.p})));}
+    r.map(x=>({a:x.a,left:x.s,date:x.t,right:x.p})));}
 function drillProj(aid,label){
   const r=subsAll().filter(x=>x.w===aid); const tot=r.reduce((a,b)=>a+b.a,0);
   const m=(window.US_PROJMETA||{})[aid]; let meta='';
@@ -787,15 +790,17 @@ function drillProj(aid,label){
     const TODAY='2026-06-21';
     const dl=m.e?(m.e<TODAY?t('dr_dl_passed').replace('{d}',m.e):t('dr_dl_by').replace('{d}',m.e)):t('dr_dl_none');
     const cell=(v,lab,col)=>`<div><div style="font-size:19px;font-weight:760;color:${col}">${money(v)}</div><div style="font-size:11px;color:var(--muted)">${lab}</div></div>`;
+    const awarded=m.s?`<span style="font-weight:700;color:var(--ink)">${t('dr_awarded')}: ${m.s}</span>`:'';
     meta=`<div style="background:#f4f6f9;border:1px solid #e3e8ef;border-radius:11px;padding:14px;margin-bottom:12px">
       ${m.j?`<div style="font-size:12.5px;color:#3a4a5c;margin-bottom:10px">${esc(m.j)}</div>`:''}
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px 14px">
         ${cell(m.o,t('dr_outlayed'),'#0a5a61')}${cell(m.b,t('dr_obligated'),'#12233B')}
         ${cell(m.c,t('dr_current'),'#12233B')}${cell(m.p,t('dr_potential'),'#12233B')}</div>
-      <div style="margin-top:10px;font-size:13px;font-weight:700;color:var(--bad)">${dl}</div></div>`;
+      <div style="margin-top:10px;font-size:13px;display:flex;flex-wrap:wrap;gap:4px 14px">${awarded}
+        <span style="font-weight:700;color:var(--bad)">${dl}</span></div></div>`;
   }
   openDrawer(label, t('dr_proj_h').replace('{n}',r.length).replace('{t}',money(tot)),
-    r.map(x=>({a:x.a,left:x.s,right:x.d?(x.d+' '+t('dr_district')):''})), meta);}
+    r.map(x=>({a:x.a,left:x.s,date:x.t,right:x.d?(x.d+' '+t('dr_district')):''})), meta);}
 function drawLedger(){
   const P=window.US_PROJECTS; if(!P) return;
   const S=P.summary, g=k=>S[k]||{n:0,usd:0};

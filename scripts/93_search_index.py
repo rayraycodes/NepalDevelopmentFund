@@ -150,7 +150,7 @@ def main():
         prime_onward[rec] += float(d["subawarded_usd"] or 0)
         prime_awards[rec].append({
             "j": d["desc"], "o": round(out), "b": round(obl),
-            "e": d["deadline"], "st": d["status"], "w": d["award_id"]})
+            "s": d["start"], "e": d["deadline"], "st": d["status"], "w": d["award_id"]})
 
     # ---- merge prime + sub roles into one organisation entity ------------
     orgs = {}   # norm_key -> entity dict
