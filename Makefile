@@ -27,6 +27,7 @@ fetch:
 	$(PY) scripts/88_fetch_docs.py
 	$(PY) scripts/92_fetch_audits.py
 	$(PY) scripts/94_org_audits.py   # org -> FAC Single Audit + OIG (set FAC_API_KEY for a full pull)
+	$(PY) scripts/95_org_locations.py   # org -> registered country/address (USAspending)
 
 # primary supporting documents (strategies, compact agreements) -> data/raw/docs + registry
 docs:

@@ -80,8 +80,23 @@ def main():
     sj.write_text("window.US_SUBS = " + json.dumps(recs, separators=(",", ":")) + ";\n")
     print(f"  + us_subawards.js ({len(recs)} records, {sj.stat().st_size//1024} KB) for drill-down")
 
+    # where each prime organisation is registered (country/state/city), keyed by normalised name
+    import re
+    STOP = {"INC", "INCORPORATED", "LLC", "LTD", "LIMITED", "CORP", "CORPORATION",
+            "CO", "PVT", "PRIVATE", "THE", "AND", "OF", "A"}
+
+    def norm(name):
+        toks = re.sub(r"[^A-Z0-9 ]", " ", (name or "").upper()).split()
+        return " ".join(t for t in toks if t not in STOP)
+    loc_path = C.PROCESSED / "org_locations.json"
+    ORG_LOC = json.loads(loc_path.read_text()) if loc_path.exists() else {}
+    for _v in ORG_LOC.values():
+        if _v.get("country") == "United States Of America":
+            _v["country"] = "United States"
+
     # per-project financial breakdown for the drawer: keyed by award id.
-    # o=outlayed, b=obligated, c=current award, p=potential award, e=deadline, s=start, j=desc, r=recipient
+    # o=outlayed, b=obligated, c=current award, p=potential award, e=deadline, s=start, j=desc,
+    # r=recipient, loc=recipient's registered location
     meta = {}
     for d in det:
         meta[d["award_id"]] = {
@@ -90,7 +105,8 @@ def main():
             "c": round(float(d.get("current_award_usd") or 0)),
             "p": round(float(d.get("potential_award_usd") or 0)),
             "e": d.get("deadline", ""), "s": d.get("start", ""),
-            "j": d.get("desc", ""), "r": d.get("recipient", "")}
+            "j": d.get("desc", ""), "r": d.get("recipient", ""),
+            "loc": ORG_LOC.get(norm(d.get("recipient", "")))}
     mj = C.ROOT / "report/dashboard/usforeignaiddata/us_projmeta.js"
     mj.write_text("window.US_PROJMETA = " + json.dumps(meta, separators=(",", ":")) + ";\n")
     print(f"  + us_projmeta.js ({len(meta)} projects) for the financial breakdown")

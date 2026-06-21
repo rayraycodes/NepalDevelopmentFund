@@ -1,0 +1,597 @@
+{
+ "ABT GLOBAL": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "MD",
+  "city": "Rockville",
+  "addr": "6130 Executive Blvd"
+ },
+ "BBC MEDIA ACTION": {
+  "cc": "GBR",
+  "country": "United Kingdom",
+  "state": "",
+  "city": "London",
+  "addr": "Broadcasting House"
+ },
+ "BIXAL SOLUTIONS": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "VA",
+  "city": "Fairfax",
+  "addr": "3050 Chain Bridge Rd Ste 305"
+ },
+ "BIZSOLUTIONS 360": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "DC",
+  "city": "Washington",
+  "addr": "1725 Desales Street Nw"
+ },
+ "BLUE DIAMOND SOCIETY": {
+  "cc": "NPL",
+  "country": "Nepal",
+  "state": "",
+  "city": "Kathmandu",
+  "addr": "Dhumbarahi"
+ },
+ "C B C CONCERN COMPANY": {
+  "cc": "NPL",
+  "country": "Nepal",
+  "state": "",
+  "city": "Kathmandu",
+  "addr": "Kamaladi"
+ },
+ "CAMRIS INTERNATIONAL": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "MD",
+  "city": "Bethesda",
+  "addr": "6931 Arlington Rd Ste 575"
+ },
+ "CBM CHRISTOFFEL BLINDENMISSION CHRISTIAN BLIND MISSION E V": {
+  "cc": "DEU",
+  "country": "Germany",
+  "state": "",
+  "city": "Bensheim",
+  "addr": "Stubenwald-Allee 5"
+ },
+ "CDM INTERNATIONAL": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "MA",
+  "city": "Boston",
+  "addr": "75 State St, Suite 701"
+ },
+ "CENTRAL DEPARTMENT ANTHROPOLOGY TRIBHUVAN UNIVERSITY": {
+  "cc": "NPL",
+  "country": "Nepal",
+  "state": "",
+  "city": "Kathmandu",
+  "addr": "Kirtipur"
+ },
+ "CENTRO INTERNACIONAL DE MEJORAMIENTO DE MAIZ Y TRIGO INTERNACIONAL": {
+  "cc": "MEX",
+  "country": "Mexico",
+  "state": "",
+  "city": "Texcoco, Estado De Me",
+  "addr": "Carretera Mexico-Veracruz Km. 45"
+ },
+ "CHEMONICS INTERNATIONAL": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "DC",
+  "city": "Washington",
+  "addr": "1717 H St Nw Ste 1"
+ },
+ "CONSORTIUM FOR ELECTIONS POLITICAL PROCESS STRENGTHENING": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "DC",
+  "city": "Washington",
+  "addr": "1225 I St Nw, Ste 700"
+ },
+ "COOPERATIVE FOR ASSISTANCE RELIEF EVERYWHERE": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "GA",
+  "city": "Atlanta",
+  "addr": "151 Ellis St Ne"
+ },
+ "COUNTY LOS ANGELES": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "CA",
+  "city": "Los Angeles",
+  "addr": "5801 S Eastern Ave"
+ },
+ "DAI GLOBAL": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "MD",
+  "city": "Bethesda",
+  "addr": "7600 Wisconsin Ave Ste 200"
+ },
+ "DELOITTE CONSULTING LLP": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "VA",
+  "city": "Arlington",
+  "addr": "1919 N Lynn St"
+ },
+ "DEVELOPMENT PROJECT SERVICE CENTRE": {
+  "cc": "NPL",
+  "country": "Nepal",
+  "state": "",
+  "city": "Kathmandu",
+  "addr": "Thapathali Height"
+ },
+ "DEVWORKS INTERNATIONAL K DEVWORKS INTERNATIONAL": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "MD",
+  "city": "Bethesda",
+  "addr": "7514 Wisconsin Ave Ste 400"
+ },
+ "DT GLOBAL": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "DC",
+  "city": "Washington",
+  "addr": "1625 I St Nw"
+ },
+ "ENCOMPASS": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "MD",
+  "city": "Silver Spring",
+  "addr": "1100 Wayne Ave Ste 1200"
+ },
+ "END CHILD PROSTITUTION CHILD PORNOGRAPHY TRAFFICKING CHILDREN FOR SEXUAL PURPOSES LUXEMBOURG": {
+  "cc": "LUX",
+  "country": "Luxembourg",
+  "state": "",
+  "city": "Luxembourg",
+  "addr": "Rue Des Bains 3"
+ },
+ "EPIK INTERNATIONAL": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "VA",
+  "city": "Fairfax",
+  "addr": "12152 Monument Dr Unit 486"
+ },
+ "FAMILY HEALTH INTERNATIONAL": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "NC",
+  "city": "Durham",
+  "addr": "359 Blackwell St Ste 200"
+ },
+ "FOREIGN AWARDEES UNDISCLOSED": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "DC",
+  "city": "Washington",
+  "addr": "1800 F St Nw"
+ },
+ "FUNDACAO ARIEL GLASER CONTRA O HIV SIDA PEDIATRICO": {
+  "cc": "MOZ",
+  "country": "Mozambique",
+  "state": "",
+  "city": "Maputo",
+  "addr": "Av Agostinho Neto, 620"
+ },
+ "GEORGETOWN UNIVERSITY": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "DC",
+  "city": "Washington",
+  "addr": "37Th & O St Nw"
+ },
+ "HANDICAP INTERNATIONAL K HANDICAP INTERNATIONAL": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "MD",
+  "city": "Silver Spring",
+  "addr": "8757 Georgia Ave Ste 420"
+ },
+ "HEALTHRIGHT INTERNATIONAL": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "NY",
+  "city": "New York",
+  "addr": "14 E 4Th St"
+ },
+ "HELEN KELLER INTERNATIONAL": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "NY",
+  "city": "New York",
+  "addr": "One Dag Hammarskjold Plz Fl 2"
+ },
+ "HIMALAYAN BUILDERS ENGINEERS": {
+  "cc": "NPL",
+  "country": "Nepal",
+  "state": "",
+  "city": "Kathmandu",
+  "addr": "Kathmandu Metropolitan City - 11, Babarmahal"
+ },
+ "IDS INTERNATIONAL": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "MN",
+  "city": "Champlin",
+  "addr": "11140 Zealand Ave N"
+ },
+ "IMC WORLDWIDE": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "VA",
+  "city": "Arlington",
+  "addr": "1201 Wilson Blvd 27Th Fl"
+ },
+ "INTERNATIONAL CENTRE FOR INTEGRATED MOUNTAIN DEVELOPMENT ICIMOD": {
+  "cc": "NPL",
+  "country": "Nepal",
+  "state": "",
+  "city": "Kathmandu",
+  "addr": "G.P.O. Box 3226, Khumaltar, Lalitpur"
+ },
+ "INTERNATIONAL DEVELOPMENT ENTERPRISES": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "CO",
+  "city": "Denver",
+  "addr": "1031 33Rd St Ste 270"
+ },
+ "INTERNATIONAL WATER MANAGEMENT INSTITUTE": {
+  "cc": "LKA",
+  "country": "Sri Lanka",
+  "state": "",
+  "city": "Battaramulla,Colombo",
+  "addr": "127 Sunil Mawatha, Po Box 2075"
+ },
+ "JSI RESEARCH TRAINING INSTITUTE": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "MA",
+  "city": "Boston",
+  "addr": "44 Farnsworth St"
+ },
+ "LA ISLA NETWORK": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "DC",
+  "city": "Washington",
+  "addr": "2219 California St Nw Apartment #52"
+ },
+ "LEGAL AID CONSULTANCY CENTER": {
+  "cc": "NPL",
+  "country": "Nepal",
+  "state": "",
+  "city": "Lalitpur",
+  "addr": "Ward No. 5, Manbhawan"
+ },
+ "LUTHERAN WORLD RELIEF": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "MD",
+  "city": "Baltimore",
+  "addr": "700 Light St"
+ },
+ "MACRO VANTAGE LEVANT DMCC": {
+  "cc": "ARE",
+  "country": "United Arab Emirates",
+  "state": "",
+  "city": "Dubai",
+  "addr": "Suite 1802,1803, Plot No. Jlt-Ph2-T2 One Lake Plaza Jumeirah"
+ },
+ "MERCY CORPS": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "OR",
+  "city": "Portland",
+  "addr": "45 Sw Ankeny St"
+ },
+ "NAMLAN KHOLA HYDROPOWER TA": {
+  "cc": "NPL",
+  "country": "Nepal",
+  "state": "",
+  "city": "Kathmandu",
+  "addr": "Red Cross Rd"
+ },
+ "NATIONAL SOCIETY FOR EARTHQUAKE TECHNOLOGY NEPAL": {
+  "cc": "NPL",
+  "country": "Nepal",
+  "state": "",
+  "city": "Lalitpur",
+  "addr": "Lalitpur Metropolitan City Ward No 25"
+ },
+ "NATIONAL TRUST FOR NATURE CONSERVATION": {
+  "cc": "NPL",
+  "country": "Nepal",
+  "state": "",
+  "city": "Kathmandu",
+  "addr": "Khumaltar, Lalitpur"
+ },
+ "NEPAL CRS COMPANY": {
+  "cc": "NPL",
+  "country": "Nepal",
+  "state": "",
+  "city": "Kathmandu",
+  "addr": "Mahadev Tar, Tokha Road"
+ },
+ "NEPAL TEA COLLECTIVE": {
+  "cc": "NPL",
+  "country": "Nepal",
+  "state": "",
+  "city": "Kathmandu",
+  "addr": "Chabahil-7"
+ },
+ "NVE": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "VA",
+  "city": "Herndon",
+  "addr": "455 Springpark Pl Ste 200B"
+ },
+ "NVIS COMMUNICATIONS": {
+  "cc": "USA",
+  "country": "United States Of America",
+  "state": "CA",
+  "city": "Tehachapi",
+  "addr": "30130 Knight Ct"
+ },
+ "O E S": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "AK",
+  "city": "Wainwright",
+  "addr": "518 Main Street"
+ },
+ "OSPREA LOGISTICS USA": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "NC",
+  "city": "Charlotte",
+  "addr": "11108 Quality Dr"
+ },
+ "PACT": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "DC",
+  "city": "Washington",
+  "addr": "1828 L St Nw Ste 300"
+ },
+ "PAE GOVERNMENT SERVICES": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "VA",
+  "city": "Arlington",
+  "addr": "1320 N. Courthouse Rd, Ste 800"
+ },
+ "PATHWAY TECHNOLOGIES SERVICES": {
+  "cc": "NPL",
+  "country": "Nepal",
+  "state": "",
+  "city": "Kathmandu",
+  "addr": "Ward No. 11, Thapathali"
+ },
+ "PLAN INTERNATIONAL USA": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "RI",
+  "city": "Providence",
+  "addr": "235 Promenade St"
+ },
+ "PRABHU INSURANCE": {
+  "cc": "NPL",
+  "country": "Nepal",
+  "state": "",
+  "city": "Kathmandu",
+  "addr": "3Rd Floor, Prabhu Complex, Tinkune Road"
+ },
+ "Q MAX CONSTRUCTION COMPANY": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "CA",
+  "city": "Fullerton",
+  "addr": "4020 N Palm St Ste 203"
+ },
+ "R M ASIA HK": {
+  "cc": "HKG",
+  "country": "Hong Kong",
+  "state": "",
+  "city": "Causeway Bay",
+  "addr": "1 Matheson St"
+ },
+ "RESEARCH TRIANGLE INSTITUTE": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "NC",
+  "city": "Research Triangle Park",
+  "addr": "3040 Cornwallis Rd"
+ },
+ "RESURGE INTERNATIONAL": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "CA",
+  "city": "Sunnyvale",
+  "addr": "756 N Pastoria Ave"
+ },
+ "RURAL HEALTH EDUCATION SERVICE TRUST": {
+  "cc": "NPL",
+  "country": "Nepal",
+  "state": "",
+  "city": "Kathmandu",
+  "addr": "Bishal Nagar"
+ },
+ "SAVE CHILDREN FEDERATION": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "CT",
+  "city": "Fairfield",
+  "addr": "501 Kings Hwy E Ste 400"
+ },
+ "SEARCH FOR COMMON GROUND": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "DC",
+  "city": "Washington",
+  "addr": "1730 Rhode Island Ave Nw Ste 1101"
+ },
+ "SHRESTHA SARSAFAI SEWA": {
+  "cc": "NPL",
+  "country": "Nepal",
+  "state": "",
+  "city": "Kathmandu",
+  "addr": "Koteshwor-31, Ringroad"
+ },
+ "SOCIAL EMPOWERMENT BUILDING ACCESSIBILITY CENTRE NEPAL": {
+  "cc": "NPL",
+  "country": "Nepal",
+  "state": "",
+  "city": "Kathmandu",
+  "addr": "Tinkune, Subidhanagar"
+ },
+ "SOCIAL IMPACT": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "VA",
+  "city": "Arlington",
+  "addr": "2300 Clarendon Blvd Ste 1000"
+ },
+ "SUPPORT ACTIVITIES FOR POOR PRODUCERS NEPAL": {
+  "cc": "NPL",
+  "country": "Nepal",
+  "state": "",
+  "city": "Kathmandu",
+  "addr": "Prasuti Griha Marga"
+ },
+ "TETRA TECH ES": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "VA",
+  "city": "Arlington",
+  "addr": "1320 N Courthouse Rd Ste 600"
+ },
+ "ASIA FOUNDATION": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "CA",
+  "city": "San Francisco",
+  "addr": "465 California St Fl 7"
+ },
+ "CARTER CENTER": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "GA",
+  "city": "Atlanta",
+  "addr": "453 Freedom Pkwy"
+ },
+ "TIBET FUND": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "NY",
+  "city": "New York",
+  "addr": "241 East 32Nd St"
+ },
+ "TRACE": {
+  "cc": "NPL",
+  "country": "Nepal",
+  "state": "",
+  "city": "Dhangadhi",
+  "addr": "Hasanpur-05"
+ },
+ "TUSKEGEE UNIVERSITY": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "AL",
+  "city": "Tuskegee Institute",
+  "addr": "1200 W Montgomery Rd"
+ },
+ "UBG GAJURMUKHI JOINT VENTU RE": {
+  "cc": "AFG",
+  "country": "Afghanistan",
+  "state": "",
+  "city": "Kabul",
+  "addr": "House No 2988 Street No 2"
+ },
+ "UNITED NATIONS WORLD FOOD PROGRAMME": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "DC",
+  "city": "Washington",
+  "addr": "750 17Th St Nw Ste 600"
+ },
+ "UPPER MUGU KARNALI HYDROPOWER TA": {
+  "cc": "NPL",
+  "country": "Nepal",
+  "state": "",
+  "city": "Kathmandu",
+  "addr": "Red Cross Rd"
+ },
+ "URS GROUP": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "MD",
+  "city": "Germantown",
+  "addr": "12420 Milestone Center Drive Ste 150"
+ },
+ "VIRGINIA POLYTECHNIC INSTITUTE STATE UNIVERSITY": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "VA",
+  "city": "Blacksburg",
+  "addr": "300 Turner St Nw"
+ },
+ "WINROCK INTERNATIONAL INSTITUTE FOR AGRICULTURAL DEVELOPMENT": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "AR",
+  "city": "Little Rock",
+  "addr": "2101 Riverfront Dr"
+ },
+ "WORLD EDUCATION": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "MA",
+  "city": "Boston",
+  "addr": "44 Farnsworth St, Fl 7"
+ },
+ "WORLD WILDLIFE FUND": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "DC",
+  "city": "Washington",
+  "addr": "1250 24Th St N W"
+ },
+ "WS ACQUISITION": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "OR",
+  "city": "Eugene",
+  "addr": "830 Wilson Street"
+ },
+ "WSP CANADA": {
+  "cc": "CAN",
+  "country": "Canada",
+  "state": "",
+  "city": "Montreal",
+  "addr": "1600 Boul Rene-Levesque O"
+ },
+ "WSP USA SOLUTIONS": {
+  "cc": "USA",
+  "country": "United States",
+  "state": "DC",
+  "city": "Washington",
+  "addr": "1250 23Rd St Nw 3Rd Fl"
+ },
+ "ZENJATRA": {
+  "cc": "NPL",
+  "country": "Nepal",
+  "state": "",
+  "city": "Kathmandu",
+  "addr": "Padmamarg"
+ }
+}

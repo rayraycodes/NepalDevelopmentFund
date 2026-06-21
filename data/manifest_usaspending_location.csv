@@ -1,0 +1,2 @@
+source,snapshot_path,url,params,sha256,bytes,http_status,retrieved_at
+usaspending_location,data/raw/usaspending_location/example_award_20260621T165917Z.json,https://api.usaspending.gov/api/v2/awards/ASST_NON_72036718CA00001_072/,,7ec547427a881056dbba164b04ba59ed6199168ca00e56e5fc44505d5e1121eb,4686,200,2026-06-21T16:59:17Z

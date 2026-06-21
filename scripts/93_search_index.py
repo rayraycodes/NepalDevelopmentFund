@@ -98,6 +98,12 @@ def main():
     # org -> financial-accountability records (FAC Single Audits + OIG), keyed by the same norm
     org_audits_path = C.PROCESSED / "org_audits.json"
     ORG_AUDITS = json.loads(org_audits_path.read_text()) if org_audits_path.exists() else {}
+    # org -> registered location (country/state/city/address), keyed by the same norm
+    org_loc_path = C.PROCESSED / "org_locations.json"
+    ORG_LOC = json.loads(org_loc_path.read_text()) if org_loc_path.exists() else {}
+    for _v in ORG_LOC.values():          # tidy a USAspending country-name variant
+        if _v.get("country") == "United States Of America":
+            _v["country"] = "United States"
 
     # award_id -> ledger metadata (link, agency, status, $m) for every named award
     award_meta = {}
@@ -193,6 +199,11 @@ def main():
         aud = ORG_AUDITS.get(key)        # small -> kept at top level so it loads on BOTH pages
         if aud and (aud.get("fac") or aud.get("oig")):
             entry["audit"] = {k2: aud[k2] for k2 in ("fac", "oig") if aud.get(k2)}
+        if key in ORG_LOC:               # where the organisation is registered
+            entry["loc"] = ORG_LOC[key]
+        # country also becomes a searchable keyword (e.g. find all US contractors / Nepali orgs)
+        if key in ORG_LOC and ORG_LOC[key].get("country"):
+            entry["k"] = sorted(set(entry["k"]) | {ORG_LOC[key]["country"]})
         index.append(entry)
 
     # ---- districts -------------------------------------------------------
@@ -220,6 +231,7 @@ def main():
                             "pt": round(float(d["potential_award_usd"] or 0)),
                             "e": d["deadline"], "s": d["start"], "st": d["status"],
                             "rec": d["recipient"], "ag": meta.get("agency", ""),
+                            "loc": ORG_LOC.get(norm(d["recipient"])),
                             "link": meta.get("link", ""),
                             "subs": topn(proj_subs[aid]), "dist": topn(proj_dist[aid]),
                             "onward": round(float(d["subawarded_usd"] or 0)),
@@ -237,6 +249,7 @@ def main():
                       "a": round(float(a.get("usd", 0)) * 1e6), "g": "us", "h": "#projects", "d": aid,
                       "p": {"b": round(float(a.get("usd", 0)) * 1e6), "rec": a.get("recipient", ""),
                             "ag": a.get("agency", ""), "st": a.get("status", ""),
+                            "loc": ORG_LOC.get(norm(a.get("recipient", ""))),
                             "s": a.get("start", ""), "e": a.get("end", ""), "link": a.get("link", ""),
                             "light": 1}})
 

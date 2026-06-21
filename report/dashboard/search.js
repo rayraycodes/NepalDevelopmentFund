@@ -13,9 +13,9 @@
     en: {
       ph: 'Search organisations, districts, projects…', open: 'Search',
       empty: 'Search every dataset at once — organisations, sub-recipients, districts, projects, donors, budget accounts, sectors, sources and audits. Pick any result to open its full profile.',
-      findhint: 'Type a name and open a full profile: a contractor, a Nepali NGO, a district, a project, or a donor — drawn from every dataset on this site.',
+      findhint: 'Search for any organisation, district, project, or funder, and see everything we know about it in one place.',
       no: 'No matches for', sug: 'Try one of these', count: '{n} results',
-      roles: { prime: 'Prime partner', sub: 'Sub-recipient' },
+      roles: { prime: 'Prime partner', sub: 'Sub-recipient' }, based_in: 'Based in',
       types: { org: 'Organisation', district: 'District', project: 'Project', donor: 'Donor', account: 'Budget account', sector: 'Sector', source: 'Source', audit: 'Audit' },
       as_prime: 'As a prime partner', as_sub: 'As a sub-recipient',
       obligated: 'Obligated', outlayed: 'Outlayed (actually spent)', onward: 'Passed onward',
@@ -40,9 +40,9 @@
     ne: {
       ph: 'संस्था, जिल्ला, परियोजना खोज्नुहोस्…', open: 'खोज्नुहोस्',
       empty: 'सबै डेटासेट एकैपटक खोज्नुहोस् — संस्था, उप-प्राप्तकर्ता, जिल्ला, परियोजना, दाता, बजेट खाता, क्षेत्र, स्रोत र लेखापरीक्षण। पूरा विवरण हेर्न कुनै नतिजा छान्नुहोस्।',
-      findhint: 'नाम टाइप गरेर पूरा विवरण खोल्नुहोस्: ठेकेदार, नेपाली गैसस, जिल्ला, परियोजना वा दाता — यस साइटका सबै डेटासेटबाट।',
+      findhint: 'कुनै पनि संस्था, जिल्ला, परियोजना वा दाता खोज्नुहोस्, र त्यसबारे हामीसँग भएको सबै जानकारी एकै ठाउँमा हेर्नुहोस्।',
       no: 'नतिजा भेटिएन:', sug: 'यीमध्ये प्रयास गर्नुहोस्', count: '{n} नतिजा',
-      roles: { prime: 'प्रमुख साझेदार', sub: 'उप-प्राप्तकर्ता' },
+      roles: { prime: 'प्रमुख साझेदार', sub: 'उप-प्राप्तकर्ता' }, based_in: 'अवस्थित',
       types: { org: 'संस्था', district: 'जिल्ला', project: 'परियोजना', donor: 'दाता', account: 'बजेट खाता', sector: 'क्षेत्र', source: 'स्रोत', audit: 'लेखापरीक्षण' },
       as_prime: 'प्रमुख साझेदारको रूपमा', as_sub: 'उप-प्राप्तकर्ताको रूपमा',
       obligated: 'प्रतिबद्ध', outlayed: 'वास्तवमा खर्च भएको', onward: 'अगाडि पठाइएको',
@@ -77,6 +77,26 @@
   }
   function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;'); }
   var TODAY = '2026-06-21';
+
+  // Country names in Nepali (factual; used only when the page is in नेपाली). City/state stay as-is.
+  var COUNTRY_NE = {
+    'United States': 'संयुक्त राज्य अमेरिका', 'Nepal': 'नेपाल', 'United Kingdom': 'बेलायत',
+    'Germany': 'जर्मनी', 'Mexico': 'मेक्सिको', 'Luxembourg': 'लक्जेम्बर्ग', 'Mozambique': 'मोजाम्बिक',
+    'Sri Lanka': 'श्रीलंका', 'United Arab Emirates': 'संयुक्त अरब इमिरेट्स', 'Afghanistan': 'अफगानिस्तान',
+    'Canada': 'क्यानडा', 'Hong Kong': 'हङकङ', 'India': 'भारत', 'China': 'चीन', 'Switzerland': 'स्विट्जरल्यान्ड',
+    'Japan': 'जापान', 'France': 'फ्रान्स', 'Belgium': 'बेल्जियम', 'Netherlands': 'नेदरल्यान्ड्स'
+  };
+  function countryName(c) { return (document.documentElement.lang === 'ne' && COUNTRY_NE[c]) ? COUNTRY_NE[c] : c; }
+  function locText(loc) {
+    if (!loc) return '';
+    return [loc.city, loc.state, countryName(loc.country)].filter(Boolean).join(', ');
+  }
+  var PIN = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 0 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>';
+  function locLine(loc) {
+    if (!loc || !(loc.city || loc.country)) return '';
+    return '<div class="sx-loc">' + PIN + '<span><b>' + esc(L().based_in) + ':</b> ' + esc(locText(loc)) +
+      (loc.addr ? '<br><span class="sx-addr">' + esc(loc.addr) + '</span>' : '') + '</span></div>';
+  }
 
   // ---- search ranking ----
   var TW = { org: 50, donor: 48, district: 45, project: 40, account: 25, audit: 22, sector: 20, source: 12 };
@@ -167,6 +187,9 @@
     font:inherit;font-weight:650;cursor:pointer;padding:8px 4px;min-height:40px}
   .sx-ph{margin:4px 0 2px;font-size:21px;font-weight:760;line-height:1.2}
   .sx-roles{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 4px}
+  .sx-loc{display:flex;align-items:flex-start;gap:7px;font-size:13.5px;color:var(--ink,#10202f);margin:8px 0 2px;line-height:1.4}
+  .sx-loc svg{flex:none;margin-top:2px;color:var(--teal,#0a5a61)}
+  .sx-loc .sx-addr{color:var(--muted,#3d4b5a);font-size:12.5px}
   .sx-sec{margin-top:16px}
   .sx-sec h5{margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted,#3d4b5a);font-weight:700}
   .sx-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;background:#f4f6f9;border:1px solid var(--line,#d8dfe8);border-radius:12px;padding:14px}
@@ -297,7 +320,8 @@
   function optHTML(e, i) {
     var t = L();
     var sub = e.t === 'org'
-      ? (e.p.roles || []).map(function (r) { return t.roles[r]; }).join(' · ')
+      ? (e.p.roles || []).map(function (r) { return t.roles[r]; }).join(' · ') +
+        (e.loc && e.loc.country ? ' · ' + countryName(e.loc.country) : '')
       : (e.t === 'district' && e.ne ? e.ne + ' · ' + t.types.district : t.types[e.t]);
     var amt = e.a > 0 ? money(e.a) : '';
     return '<button type="button" class="sx-opt" role="option" id="sx-o' + i + '" data-ri="' + i + '" aria-selected="false">' +
@@ -330,6 +354,7 @@
     if (e.t === 'org') {
       var roles = (p.roles || []).map(function (r) { return '<span class="sx-chip">' + esc(t.roles[r]) + '</span>'; }).join('');
       h += '<div class="sx-roles">' + roles + '</div>';
+      h += locLine(e.loc);
       if (p.prime) {
         h += sec(t.as_prime,
           grid([[money(p.prime.out), t.outlayed], [money(p.prime.obl), t.obligated],
@@ -363,12 +388,12 @@
         h += sec('', grid([[money(p.o), t.outlayed], [money(p.b), t.obligated], [money(p.c), t.current], [money(p.pt), t.potential]]) +
           (p.s ? '<div class="sx-dl" style="color:var(--ink)">' + esc(t.awarded) + ': ' + esc(p.s) + '</div>' : '') +
           '<div class="sx-dl" style="color:' + (p.e && p.e < TODAY ? '#a51328' : 'var(--ink)') + '">' + dlText(p.e) + '</div>');
-        h += metaList([[t.recipient, p.rec], [t.agency, p.ag], [t.status, t.stat[p.st] || p.st]]);
+        h += metaList([[t.recipient, p.rec], [t.based_in, locText(p.loc)], [t.agency, p.ag], [t.status, t.stat[p.st] || p.st]]);
         if (p.subs && p.subs.length) h += sec(t.subs_l, rows(p.subs.map(mapNA)));
         if (p.dist && p.dist.length) h += sec(t.districts_l, rows(p.dist.map(mapNA)));
       } else {
         h += sec('', grid([[money(p.b), t.obligated]]));
-        h += metaList([[t.recipient, p.rec], [t.agency, p.ag], [t.status, t.stat[p.st] || p.st]]);
+        h += metaList([[t.recipient, p.rec], [t.based_in, locText(p.loc)], [t.agency, p.ag], [t.status, t.stat[p.st] || p.st]]);
       }
       if (p.link) h += '<div><a class="sx-cta sec" href="' + esc(p.link) + '" target="_blank" rel="noopener">' + esc(t.open_record) + ' ↗</a></div>';
     }
