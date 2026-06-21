@@ -143,6 +143,7 @@
   <div class="wrap">
     <h2 data-i18n="hero">Two billion dollars, account by account: how US aid to Nepal is built, and how it is being rebuilt.</h2>
     <p data-i18n="hero_p">The most granular public view of US assistance to Nepal: every budget account, every sub-sector, who funds it and who runs it — from the US government's own reporting system.</p>
+    <div id="sx-hero"></div>
   </div>
 </div>
 
@@ -410,6 +411,7 @@ const I18N = {
   pp_m_cat:"Category", pp_m_sec:"Official sector", pp_m_cls:"Classified as",
   pp_caveat:"Honesty notes: \"machine\" counts only explicitly booked administration (Direct Administrative Costs, M&E, operating expenses). The overhead partners charge inside program awards is not published anywhere, so the true cost of the system is higher than 18%. And \"system\" money can serve people deeply — a maternal clinic needs a grid and a road; the split shows emphasis, not virtue.",
   pp_people:"Directly to people", pp_system:"Building the systems", pp_machine:"Running the machine",
+  pp_headline:"Of {tot} delivered and classified, {d} ({p}) had a person as its immediate object — a meal, a clinic visit, a classroom, a water tap, a farmer's training.",
   pp_bar_t:"Of every delivered dollar, FY2015–26:",
   pp_year_t:"The split, year by year", pp_cat_t:"Inside each category",
   pt_kicker:"Who receives it", pt_title:"The implementing partners",
@@ -541,6 +543,7 @@ const I18N = {
   pp_m_cat:"कोटि", pp_m_sec:"आधिकारिक क्षेत्र", pp_m_cls:"वर्गीकरण",
   pp_caveat:"इमानदारीका टिप्पणी: \"संयन्त्र\" मा स्पष्ट रूपमा लेखिएको प्रशासन मात्र छ (प्रत्यक्ष प्रशासनिक खर्च, अनुगमन-मूल्याङ्कन, सञ्चालन खर्च)। साझेदारले कार्यक्रमभित्र लिने ओभरहेड कतै प्रकाशित हुँदैन, त्यसैले प्रणालीको वास्तविक लागत १८% भन्दा बढी छ। अनि \"प्रणाली\" रकमले पनि जनतालाई गहिरो सेवा गर्न सक्छ — मातृ क्लिनिकलाई ग्रिड र सडक चाहिन्छ; यो विभाजनले जोड देखाउँछ, गुण-दोष होइन।",
   pp_people:"सीधै जनतामा", pp_system:"प्रणाली निर्माण", pp_machine:"संयन्त्र सञ्चालन",
+  pp_headline:"वर्गीकृत {tot} वितरणमध्ये, {d} ({p}) को प्रत्यक्ष लक्ष्य व्यक्ति थियो — खाना, क्लिनिक भेट, कक्षाकोठा, पानीको धारा, किसान तालिम।",
   pp_bar_t:"वितरित हरेक डलरमध्ये, FY2015–26:",
   pp_year_t:"वर्ष-वर्षको विभाजन", pp_cat_t:"हरेक कोटिभित्र",
   pt_kicker:"कसले पाउँछ", pt_title:"कार्यान्वयन साझेदारहरू",
@@ -898,17 +901,27 @@ function drawPurpose(){
 const PP_COL={people:'#0f9d58',system:'#2563eb',machine:'#dc2626'};
 function drawPeople(){
   const P=D.people; if(!P) return;
-  // the dollar bar (plain HTML, accessible)
-  const seg=k=>`<div style="flex:${P.split[k]};background:${PP_COL[k]};color:#fff;padding:10px 8px;
-    font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden">${P.split[k]}%</div>`;
+  // total US$ delivered to each category over all years (byYear is in US$ millions)
+  const tot={people:0,system:0,machine:0};
+  P.byYear.forEach(r=>{tot.people+=r.people;tot.system+=r.system;tot.machine+=r.machine;});
+  const grand=tot.people+tot.system+tot.machine;
+  const fmtM=m=>m>=1000?'$'+(m/1000).toFixed(2)+'bn':'$'+Math.round(m)+'m';
+  // the dollar bar (plain HTML, accessible) — shows BOTH the % and the US$ amount
+  const seg=k=>`<div style="flex:${P.split[k]};background:${PP_COL[k]};color:#fff;padding:9px 8px;
+    font-weight:700;white-space:nowrap;overflow:hidden;min-width:0;text-align:center">
+    <div style="font-size:14px">${P.split[k]}%</div>
+    <div style="font-size:10.5px;font-weight:600;opacity:.95">${fmtM(tot[k])}</div></div>`;
+  const ariaSeg=k=>`${t('pp_'+k)} ${P.split[k]}% (${fmtM(tot[k])})`;
   document.getElementById('pp-bar').innerHTML=
     `<div style="font-weight:650;margin-bottom:8px">${t('pp_bar_t')}</div>
-     <div role="img" aria-label="${t('pp_people')} ${P.split.people}%, ${t('pp_system')} ${P.split.system}%, ${t('pp_machine')} ${P.split.machine}%"
+     <div role="img" aria-label="${ariaSeg('people')}, ${ariaSeg('system')}, ${ariaSeg('machine')}"
        style="display:flex;border-radius:8px;overflow:hidden">${seg('people')}${seg('system')}${seg('machine')}</div>
-     <div style="display:flex;gap:16px;margin-top:8px;font-size:12.5px;flex-wrap:wrap">
-       <span><span style="color:${PP_COL.people}">●</span> ${t('pp_people')}</span>
-       <span><span style="color:${PP_COL.system}">●</span> ${t('pp_system')}</span>
-       <span><span style="color:${PP_COL.machine}">●</span> ${t('pp_machine')}</span></div>`;
+     <div style="display:flex;gap:16px;margin-top:9px;font-size:12.5px;flex-wrap:wrap">
+       <span><span style="color:${PP_COL.people}">●</span> ${t('pp_people')} — <b>${P.split.people}%</b> · <b>${fmtM(tot.people)}</b></span>
+       <span><span style="color:${PP_COL.system}">●</span> ${t('pp_system')} — <b>${P.split.system}%</b> · <b>${fmtM(tot.system)}</b></span>
+       <span><span style="color:${PP_COL.machine}">●</span> ${t('pp_machine')} — <b>${P.split.machine}%</b> · <b>${fmtM(tot.machine)}</b></span></div>
+     <div style="margin-top:11px;font-size:14.5px;line-height:1.5;background:#f4f6f9;border:1px solid var(--line);border-radius:10px;padding:11px 14px">
+       ${t('pp_headline').replace('{d}','<b style="color:'+PP_COL.people+'">'+fmtM(tot.people)+'</b>').replace('{p}','<b>'+P.split.people+'%</b>').replace('{tot}','<b>'+fmtM(grand)+'</b>')}</div>`;
   // year shares (100% stacked)
   aria('c-ppyear', t('pp_year_t'));
   const ys=P.byYear;

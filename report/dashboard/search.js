@@ -12,7 +12,8 @@
   var T = {
     en: {
       ph: 'Search organisations, districts, projects…', open: 'Search',
-      empty: 'Search every dataset at once — organisations, sub-recipients, districts, projects, donors, budget accounts.',
+      empty: 'Search every dataset at once — organisations, sub-recipients, districts, projects, donors, budget accounts, sectors, sources and audits. Pick any result to open its full profile.',
+      findhint: 'Type a name and open a full profile: a contractor, a Nepali NGO, a district, a project, or a donor — drawn from every dataset on this site.',
       no: 'No matches for', sug: 'Try one of these', count: '{n} results',
       roles: { prime: 'Prime partner', sub: 'Sub-recipient' },
       types: { org: 'Organisation', district: 'District', project: 'Project', donor: 'Donor', account: 'Budget account', sector: 'Sector', source: 'Source', audit: 'Audit' },
@@ -34,7 +35,8 @@
     },
     ne: {
       ph: 'संस्था, जिल्ला, परियोजना खोज्नुहोस्…', open: 'खोज्नुहोस्',
-      empty: 'सबै डेटासेट एकैपटक खोज्नुहोस् — संस्था, उप-प्राप्तकर्ता, जिल्ला, परियोजना, दाता, बजेट खाता।',
+      empty: 'सबै डेटासेट एकैपटक खोज्नुहोस् — संस्था, उप-प्राप्तकर्ता, जिल्ला, परियोजना, दाता, बजेट खाता, क्षेत्र, स्रोत र लेखापरीक्षण। पूरा विवरण हेर्न कुनै नतिजा छान्नुहोस्।',
+      findhint: 'नाम टाइप गरेर पूरा विवरण खोल्नुहोस्: ठेकेदार, नेपाली गैसस, जिल्ला, परियोजना वा दाता — यस साइटका सबै डेटासेटबाट।',
       no: 'नतिजा भेटिएन:', sug: 'यीमध्ये प्रयास गर्नुहोस्', count: '{n} नतिजा',
       roles: { prime: 'प्रमुख साझेदार', sub: 'उप-प्राप्तकर्ता' },
       types: { org: 'संस्था', district: 'जिल्ला', project: 'परियोजना', donor: 'दाता', account: 'बजेट खाता', sector: 'क्षेत्र', source: 'स्रोत', audit: 'लेखापरीक्षण' },
@@ -109,6 +111,23 @@
   .sx-trigger .sx-kbd{font-size:11px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.22);
     border-radius:5px;padding:1px 6px;font-weight:700}
   @media(max-width:760px){.sx-trigger .sx-kbd{display:none}.sx-trigger .sx-lbl{display:none}.sx-trigger{padding:0 12px}}
+  /* prominent central search in the hero */
+  .sx-hero{max-width:640px;margin:20px 0 2px}
+  .sx-herobtn{display:flex;align-items:center;gap:11px;width:100%;background:#fff;border:1px solid rgba(255,255,255,.5);
+    border-radius:13px;padding:0 16px;min-height:56px;font:inherit;font-size:16px;color:#3d4b5a;cursor:text;
+    box-shadow:0 8px 26px rgba(0,0,0,.20);text-align:left}
+  .sx-herobtn:hover{border-color:#fff}
+  .sx-herobtn .sx-hicon{flex:none;color:#0a5a61}
+  .sx-herobtn .sx-htext{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .sx-herobtn .sx-hk{flex:none;font-size:12px;color:#3d4b5a;background:#eef1f6;border-radius:6px;padding:3px 9px;font-weight:700}
+  .sx-herohint{color:#cdd9e8;font-size:13px;margin:11px 0 0;line-height:1.55}
+  .sx-herochips{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px}
+  .sx-herochips .sx-try{color:#9fb3cc;font-size:12.5px;align-self:center;margin-right:1px}
+  .sx-herochip{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.34);color:#fff;border-radius:999px;
+    padding:7px 13px;font:inherit;font-size:13px;font-weight:600;cursor:pointer;min-height:38px}
+  .sx-herochip:hover{background:rgba(255,255,255,.24)}
+  .sx-herobtn:focus-visible,.sx-herochip:focus-visible{outline:3px solid #9fe1e8;outline-offset:2px}
+  @media(max-width:560px){.sx-herobtn .sx-hk{display:none}}
   .sx-ov{position:fixed;inset:0;background:rgba(13,36,64,.55);opacity:0;pointer-events:none;transition:opacity .15s;z-index:300;backdrop-filter:blur(3px)}
   .sx-ov.open{opacity:1;pointer-events:auto}
   .sx-modal{position:fixed;left:50%;top:54px;transform:translate(-50%,-8px);width:min(680px,94vw);max-height:84vh;
@@ -461,6 +480,36 @@
     new MutationObserver(function () { btn.querySelector('.sx-lbl').textContent = L().open; })
       .observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
   }
+  function openWith(q) { open(); input.value = q; mode = 'search'; render(); }
+
+  // Prominent, central search in the hero + a teaching line + example chips.
+  var EXAMPLES = PAGE === 'us'
+    ? ['Save the Children', 'Helen Keller', 'Early Grade Reading', 'Surkhet']
+    : ['World Bank', 'India', 'Education', 'Save the Children'];
+  function mountHero() {
+    var host = document.getElementById('sx-hero');
+    if (!host) return;
+    function paint() {
+      var t = L();
+      host.className = 'sx-hero';
+      host.innerHTML =
+        '<button type="button" class="sx-herobtn" id="sx-herobtn" aria-haspopup="dialog">' +
+          '<svg class="sx-hicon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>' +
+          '<span class="sx-htext">' + esc(t.ph) + '</span><span class="sx-hk">/</span>' +
+        '</button>' +
+        '<p class="sx-herohint">' + esc(t.findhint) + '</p>' +
+        '<div class="sx-herochips"><span class="sx-try">' + esc(t.sug) + ':</span>' +
+          EXAMPLES.map(function (x) { return '<button type="button" class="sx-herochip">' + esc(x) + '</button>'; }).join('') +
+        '</div>';
+      host.querySelector('#sx-herobtn').addEventListener('click', open);
+      host.querySelectorAll('.sx-herochip').forEach(function (b) {
+        b.addEventListener('click', function () { openWith(b.textContent); });
+      });
+    }
+    paint();
+    new MutationObserver(paint).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+  }
+
   function globalKeys(e) {
     if ((e.key === 'k' || e.key === 'K') && (e.metaKey || e.ctrlKey)) { e.preventDefault(); ov.classList.contains('open') ? close() : open(); return; }
     var tag = (document.activeElement && document.activeElement.tagName) || '';
@@ -485,7 +534,7 @@
         if (full) IDX[j].p = full;
       }
     }
-    build(); mountTrigger();
+    build(); mountTrigger(); mountHero();
     document.addEventListener('keydown', globalKeys);
     window.addEventListener('hashchange', maybeDeepLink);
     maybeDeepLink();
