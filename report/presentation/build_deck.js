@@ -134,6 +134,19 @@ s.addText("The 18¢ is only the visible overhead; what partners spend on their o
   { x:0.7, y:5.95, w:11.9, h:0.6, fontFace:BFONT, fontSize:12, italic:true, color:MUTE });
 foot(s,5);
 
+// ===== 5b. WHAT — where it landed =====
+s = p.addSlide(); lightBase(s); tag(s,"WHAT","के"); title(s,"Following the money to where it landed");
+s.addText("Big partners win the awards, but much is sub-granted onward — now traceable down to the district.",
+  { x:0.55, y:1.95, w:12, h:0.4, fontFace:BFONT, fontSize:15, color:MUTE });
+statCard(s, 0.7, 2.7, 3.85, "$1.06bn", "sub-granted onward from the largest projects — about half of what was obligated", TEAL);
+statCard(s, 4.75, 2.7, 3.85, "562", "organisations received the money beneath the US primes", NAVY);
+statCard(s, 8.8, 2.7, 3.85, "48 / 77", "of Nepal's districts named as where the work happened", AMBER);
+s.addShape(p.ShapeType.roundRect, { x:0.7, y:4.95, w:11.95, h:1.55, rectRadius:0.08, fill:{color:"E9F4F3"}, line:{color:"BFD8D6",width:1} });
+s.addText([{text:"On the live dashboard:  ", options:{bold:true, color:TEAL}},
+  {text:"click any district — Achham, Surkhet, Kailali — to see the named local NGOs that received US money there, and which international partner passed it down (organisations like Social Empowerment & Building Accessibility Centre Nepal and Bahuuddeshiya Bikash Samaj).", options:{color:INK}}],
+  { x:1.0, y:5.15, w:11.3, h:1.15, fontFace:BFONT, fontSize:14, valign:"middle", lineSpacingMultiple:1.05 });
+foot(s,6);
+
 // ===== 6. WHAT — what the world misses =====
 s = p.addSlide(); lightBase(s); tag(s,"WHAT","के"); title(s,"What the international statistics miss");
 s.addShape(p.ShapeType.roundRect,{x:0.7,y:2.3,w:5.8,h:4.0,rectRadius:0.08,fill:{color:CARD},line:{color:LINE,width:1}});
@@ -147,7 +160,19 @@ s.addText([{text:"Big promises, ",options:{color:AMBER,bold:true}},{text:"small 
   {x:7.15,y:3.2,w:5.3,h:0.7,fontFace:HF,fontSize:26,bold:true});
 s.addText("Chinese commitments to Nepal run to hundreds of millions; the disbursements Nepal actually records fell to about $14m by FY2022/23. The headline numbers are pledges, not cash. A measurement fact, stated neutrally.",
   {x:7.15,y:4.1,w:5.2,h:1.9,fontFace:BFONT,fontSize:14,color:MUTE,lineSpacingMultiple:1.05});
-foot(s,6);
+foot(s,7);
+
+// ===== 6b. WHAT — accountability =====
+s = p.addSlide(); lightBase(s); tag(s,"ACCOUNTABILITY","जवाफदेहिता"); title(s,"What the auditors found");
+s.addText("The US Inspector General audits its assistance to Nepal. We traced every Nepal audit we could find.",
+  { x:0.55, y:1.95, w:12, h:0.4, fontFace:BFONT, fontSize:15, color:MUTE });
+statCard(s, 0.7, 2.7, 5.9, "$323,161", "total questioned costs across 7 audits — just 0.016% of the $2.0bn delivered", TEAL);
+statCard(s, 6.75, 2.7, 5.9, "4 of 7", "audit PDFs archived here with checksums; the rest are now offline", NAVY);
+s.addShape(p.ShapeType.roundRect, { x:0.7, y:4.95, w:11.95, h:1.55, rectRadius:0.08, fill:{color:"E9F4F3"}, line:{color:"BFD8D6",width:1} });
+s.addText([{text:"What this means:  ", options:{bold:true, color:TEAL}},
+  {text:"questioned costs were small ineligible-or-unsupported items, mostly on funds the Government of Nepal managed directly. Financial control was reasonable — and the accountability trail is preserved here even as USAID's own document server goes dark.", options:{color:INK}}],
+  { x:1.0, y:5.15, w:11.3, h:1.15, fontFace:BFONT, fontSize:14, valign:"middle", lineSpacingMultiple:1.05 });
+foot(s,8);
 
 // ===== 7. HOW — integrity =====
 s = p.addSlide(); darkBase(s);
@@ -177,7 +202,7 @@ iconRow(s, 0.7, 3.75, 11.7, "2", "Information sovereignty",
   "Nepal stops depending on foreign portals it cannot control. The record is archived here and updates from Nepal's own AMIS / DCR system.", NAVY);
 iconRow(s, 0.7, 5.25, 11.7, "3", "A public transparency portal",
   "The interactive, bilingual companion to the Development Cooperation Report the Ministry of Finance already publishes — for citizens, parliament and partners.", AMBER);
-foot(s,8);
+foot(s,10);
 
 // ===== 9. CLOSE =====
 s = p.addSlide(); darkBase(s);
