@@ -472,6 +472,15 @@
 
   function init() {
     if (!IDX.length) return;
+    // On the deep-dive page, search_index_us.js adds the heavy profiles (sub-recipient,
+    // award and district lists). Merge them onto the slim core entries. The main board
+    // ships only the headline scalars and reaches the full profile via the #find deep-link.
+    if (window.SEARCH_US) {
+      for (var j = 0; j < IDX.length; j++) {
+        var full = window.SEARCH_US[IDX[j].i];
+        if (full) IDX[j].p = full;
+      }
+    }
     build(); mountTrigger();
     document.addEventListener('keydown', globalKeys);
     window.addEventListener('hashchange', maybeDeepLink);

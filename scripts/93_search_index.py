@@ -327,13 +327,37 @@ def main():
         e["k"] = sorted(kws)
     index.sort(key=lambda e: (-e["a"], e["i"]))    # stable, fully deterministic order
 
+    # --- split: keep every entity SEARCHABLE everywhere (name + headline scalars), but ship
+    # the heavy counterparty LISTS (sub-recipients, awards, districts) only to the deep-dive
+    # page. The main board stays light; the full profile is one click (deep-link) away.
+    ARRAY_FIELDS = {"aw", "from", "dist", "proj", "subs", "orgs", "primes"}  # NOT donor "series" (core, tiny)
+    HEAVY = {"org", "project", "district"}
+
+    def slim(p):
+        out = {}
+        for k, v in (p or {}).items():
+            if k in ARRAY_FIELDS:
+                continue
+            out[k] = {kk: vv for kk, vv in v.items() if kk not in ARRAY_FIELDS} if isinstance(v, dict) else v
+        return out
+
+    us_profiles = {}
+    for e in index:
+        if e["t"] in HEAVY and e.get("p"):
+            us_profiles[e["i"]] = e["p"]      # full profile (with the big lists) -> deep-dive only
+            e["p"] = slim(e["p"])             # headline scalars stay in the core index
+
     out = DASH / "search_index.js"
     out.write_text("window.SEARCH_INDEX = " + json.dumps(index, separators=(",", ":"),
                                                           ensure_ascii=False) + ";\n")
+    usf = DASH / "search_index_us.js"
+    usf.write_text("window.SEARCH_US = " + json.dumps(us_profiles, separators=(",", ":"),
+                                                      ensure_ascii=False) + ";\n")
     by_t = defaultdict(int)
     for e in index:
         by_t[e["t"]] += 1
-    print(f"wrote {out.relative_to(C.ROOT)}  ({len(index)} entities, {out.stat().st_size//1024} KB)")
+    print(f"wrote {out.relative_to(C.ROOT)}  (core, both pages: {len(index)} entities, {out.stat().st_size//1024} KB)")
+    print(f"wrote {usf.relative_to(C.ROOT)}  (deep-dive only: {len(us_profiles)} full profiles, {usf.stat().st_size//1024} KB)")
     print("  by type:", dict(sorted(by_t.items(), key=lambda kv: -kv[1])))
 
 
