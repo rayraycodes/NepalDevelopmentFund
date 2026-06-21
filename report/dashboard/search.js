@@ -29,6 +29,10 @@
       open_ledger: 'See full breakdown', open_us: 'Open in the US deep dive', open_main: 'Open on the main dashboard',
       view_source: 'Open source', open_record: 'Open USAspending record', open_report: 'Open audit report',
       questioned: 'Questioned costs', verdict: 'Finding', nondac: 'Non-DAC partner — recipient-reported (Nepal does, OECD misses)',
+      acct_title: 'Financial accountability', single_audit: 'Single Audit (audited financials)', ein: 'EIN',
+      fac_view: 'View on the Federal Audit Clearinghouse', fac_lookup: 'Look up audited financials (Single Audit)',
+      usas_rec: 'USAspending recipient record', oig_audit: 'USAID Inspector General audit',
+      sa_note: 'A Single Audit is the audited financial statement plus the schedule of US federal awards that a non-federal recipient files each year. For-profit contractors are not required to file one, and foreign organisations do not appear in this US registry.',
       latest: 'Most recent year', back: 'Back to results', close: 'Close',
       both_roles: 'This organisation appears in both roles below.',
       stat: { active: 'Active', completed: 'Completed', ended_2526: 'Ended FY25/26', undated: 'Undated' }
@@ -52,6 +56,10 @@
       open_ledger: 'पूरा विवरण हेर्नुहोस्', open_us: 'US डिप डाइभमा खोल्नुहोस्', open_main: 'मुख्य ड्यासबोर्डमा खोल्नुहोस्',
       view_source: 'स्रोत खोल्नुहोस्', open_record: 'USAspending रेकर्ड खोल्नुहोस्', open_report: 'रिपोर्ट खोल्नुहोस्',
       questioned: 'प्रश्न उठेको खर्च', verdict: 'निष्कर्ष', nondac: 'गैर-DAC साझेदार — प्राप्तकर्ताले रिपोर्ट गर्छ (OECD ले छुटाउँछ)',
+      acct_title: 'वित्तीय जवाफदेहिता', single_audit: 'एकल लेखापरीक्षण (लेखापरीक्षित वित्तीय विवरण)', ein: 'EIN',
+      fac_view: 'Federal Audit Clearinghouse मा हेर्नुहोस्', fac_lookup: 'लेखापरीक्षित वित्तीय विवरण खोज्नुहोस् (Single Audit)',
+      usas_rec: 'USAspending प्राप्तकर्ता रेकर्ड', oig_audit: 'USAID महालेखापरीक्षक लेखापरीक्षण',
+      sa_note: 'Single Audit भनेको अमेरिकी गैर-संघीय प्राप्तकर्ताले हरेक वर्ष पेस गर्ने लेखापरीक्षित वित्तीय विवरण र संघीय अनुदानको तालिका हो। नाफामुखी ठेकेदारले पेस गर्नु पर्दैन, र विदेशी संस्था यो अमेरिकी रजिस्ट्रीमा देखिँदैनन्।',
       latest: 'पछिल्लो वर्ष', back: 'नतिजामा फर्कनुहोस्', close: 'बन्द गर्नुहोस्',
       both_roles: 'यो संस्था तल दुवै भूमिकामा देखिन्छ।',
       stat: { active: 'सक्रिय', completed: 'सम्पन्न', ended_2526: 'FY25/26 मा सकिएको', undated: 'मिति नभएको' }
@@ -177,6 +185,11 @@
   .sx-cta:hover{filter:brightness(1.08)}
   .sx-cta.sec{background:#eef3f6;color:var(--teal,#0a5a61);border:1px solid var(--line,#d8dfe8)}
   .sx-note{font-size:12px;color:var(--muted,#3d4b5a);margin-top:14px;line-height:1.5}
+  .sx-aud{background:#f4f6f9;border:1px solid var(--line,#d8dfe8);border-radius:11px;padding:12px 14px;margin-bottom:9px}
+  .sx-aud .sx-audh{font-weight:700;font-size:14px}
+  .sx-aud .sx-audm{font-size:12.5px;color:var(--muted,#3d4b5a);margin:2px 0 10px;font-variant-numeric:tabular-nums}
+  .sx-aud .sx-cta{min-height:40px}
+  .sx-audlinks{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:6px;font-size:13px}
   .sx-dl{font-size:13px;font-weight:700;margin-top:10px}
   @media(prefers-reduced-motion:reduce){.sx-ov,.sx-modal{transition:none}}
   @media(max-width:560px){.sx-modal{top:0;left:0;transform:none;width:100vw;max-height:100vh;height:100vh;border-radius:0}
@@ -334,6 +347,7 @@
           (p.sub.dist && p.sub.dist.length ? subhead(t.districts_l) + rows(p.sub.dist.map(mapNA)) : '') +
           (p.sub.proj && p.sub.proj.length ? subhead(t.projects_l) + rows(p.sub.proj.map(mapNA)) : ''));
       }
+      h += renderAudit(e);
     }
 
     else if (e.t === 'district') {
@@ -397,6 +411,34 @@
     var dr = body.querySelector('[data-drill]');
     if (dr) dr.addEventListener('click', function () { drillTo(dr.dataset.drill, dr.dataset.key, dr.dataset.label); });
   }
+
+  // Financial accountability: confirmed Single Audit + OIG audits + always-available lookups.
+  function fmtEin(x) { return (x && x.length === 9) ? x.slice(0, 2) + '-' + x.slice(2) : (x || ''); }
+  function renderAudit(e) {
+    var t = L(), a = e.audit || {}, name = e.n, isPrime = e.p && e.p.prime;
+    if (!a.fac && !a.oig && !isPrime) return '';   // nothing meaningful for foreign-only sub-recipients
+    var facSearch = 'https://app.fac.gov/dissemination/search/?query=' + encodeURIComponent(name);
+    var usas = 'https://www.usaspending.gov/search?keyword=' + encodeURIComponent(name);
+    var inner = '';
+    if (a.fac) {
+      var f = a.fac, url = f.summary || facSearch;
+      inner += '<div class="sx-aud"><div class="sx-audh">' + esc(t.single_audit) + ' — FY' + esc(f.year) + '</div>' +
+        '<div class="sx-audm">' + esc(t.ein) + ' ' + esc(fmtEin(f.ein)) +
+        (f.auditee && norm(f.auditee) !== norm(name) ? ' · ' + esc(f.auditee) : '') + '</div>' +
+        '<a class="sx-cta sec" href="' + url + '" target="_blank" rel="noopener">' + esc(t.fac_view) + ' ↗</a></div>';
+    }
+    (a.oig || []).forEach(function (o) {
+      inner += '<div class="sx-aud"><div class="sx-audh">' + esc(t.oig_audit) + ' · ' + esc(o.report) + '</div>' +
+        '<div class="sx-audm">' + (o.questioned > 0 ? esc(t.questioned) + ': ' + money(o.questioned) + ' · ' : '') + esc(o.verdict) + '</div>' +
+        '<a class="sx-cta sec" href="' + esc(o.url) + '" target="_blank" rel="noopener">' + esc(t.open_report) + ' ↗</a></div>';
+    });
+    inner += '<div class="sx-audlinks">' +
+      '<a href="' + facSearch + '" target="_blank" rel="noopener">' + esc(t.fac_lookup) + ' ↗</a>' +
+      '<a href="' + usas + '" target="_blank" rel="noopener">' + esc(t.usas_rec) + ' ↗</a></div>' +
+      '<div class="sx-note">' + esc(t.sa_note) + '</div>';
+    return sec(t.acct_title, inner);
+  }
+  function norm(s) { return String(s || '').toUpperCase().replace(/[^A-Z0-9 ]/g, ' ').replace(/\b(INC|INCORPORATED|LLC|LTD|LIMITED|CORP|CORPORATION|CO|PVT|PRIVATE|THE|AND|OF|A)\b/g, ' ').replace(/\s+/g, ' ').trim(); }
 
   // section + helpers
   function sec(title, inner) { return '<div class="sx-sec">' + (title ? '<h5>' + esc(title) + '</h5>' : '') + inner + '</div>'; }

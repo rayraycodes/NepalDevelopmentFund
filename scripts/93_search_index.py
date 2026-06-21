@@ -95,6 +95,9 @@ def main():
     us_data = load_js_global(US / "us_data.js")
     audits = load_js_global(US / "audits.js")
     main_data = load_js_global(DASH / "data.js")
+    # org -> financial-accountability records (FAC Single Audits + OIG), keyed by the same norm
+    org_audits_path = C.PROCESSED / "org_audits.json"
+    ORG_AUDITS = json.loads(org_audits_path.read_text()) if org_audits_path.exists() else {}
 
     # award_id -> ledger metadata (link, agency, status, $m) for every named award
     award_meta = {}
@@ -184,9 +187,13 @@ def main():
             roles.append("prime")
         if o["sub"]:
             roles.append("sub")
-        index.append({"i": "org:" + key, "t": "org", "n": o["name"],
-                      "k": sorted(o["alias"]), "a": amt, "g": "us",
-                      "p": {"prime": o["prime"], "sub": o["sub"], "roles": roles}})
+        entry = {"i": "org:" + key, "t": "org", "n": o["name"],
+                 "k": sorted(o["alias"]), "a": amt, "g": "us",
+                 "p": {"prime": o["prime"], "sub": o["sub"], "roles": roles}}
+        aud = ORG_AUDITS.get(key)        # small -> kept at top level so it loads on BOTH pages
+        if aud and (aud.get("fac") or aud.get("oig")):
+            entry["audit"] = {k2: aud[k2] for k2 in ("fac", "oig") if aud.get(k2)}
+        index.append(entry)
 
     # ---- districts -------------------------------------------------------
     for d, tot in dist_total.items():

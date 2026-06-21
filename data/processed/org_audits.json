@@ -1,0 +1,122 @@
+{
+ "HELEN KELLER INTERNATIONAL": {
+  "name": "Helen Keller International",
+  "fac": {
+   "auditee": "HELEN KELLER INTERNATIONAL",
+   "ein": "135562162",
+   "year": "2025",
+   "expended": 20327644.0,
+   "report_id": "2025-06-GSAFAC-0000406078",
+   "summary": "https://app.fac.gov/dissemination/summary/2025-06-GSAFAC-0000406078",
+   "pdf": "https://app.fac.gov/dissemination/report/pdf/2025-06-GSAFAC-0000406078"
+  }
+ },
+ "WINROCK INTERNATIONAL INSTITUTE FOR AGRICULTURAL DEVELOPMENT": {
+  "name": "Winrock International Institute For Agricultural Development",
+  "fac": {
+   "auditee": "WINROCK INTERNATIONAL INSTITUTE FOR AGRICULTURAL DEVELOPMENT",
+   "ein": "710603560",
+   "year": "2025",
+   "expended": 0.0,
+   "report_id": "",
+   "summary": "",
+   "pdf": ""
+  }
+ },
+ "RESEARCH TRIANGLE INSTITUTE": {
+  "name": "Research Triangle Institute",
+  "fac": {
+   "auditee": "RESEARCH TRIANGLE INSTITUTE",
+   "ein": "560686338",
+   "year": "2022",
+   "expended": 935856678.0,
+   "report_id": "2022-09-CENSUS-0000081635",
+   "summary": "https://app.fac.gov/dissemination/summary/2022-09-CENSUS-0000081635",
+   "pdf": "https://app.fac.gov/dissemination/report/pdf/2022-09-CENSUS-0000081635"
+  }
+ },
+ "FAMILY HEALTH INTERNATIONAL": {
+  "name": "Family Health International",
+  "fac": {
+   "auditee": "FAMILY HEALTH INTERNATIONAL",
+   "ein": "237413005",
+   "year": "2025",
+   "expended": 432705230.0,
+   "report_id": "2025-09-GSAFAC-0000418082",
+   "summary": "https://app.fac.gov/dissemination/summary/2025-09-GSAFAC-0000418082",
+   "pdf": "https://app.fac.gov/dissemination/report/pdf/2025-09-GSAFAC-0000418082"
+  }
+ },
+ "WORLD WILDLIFE FUND": {
+  "name": "World Wildlife Fund, INC.",
+  "oig": [
+   {
+    "report": "Hariyo-Ban",
+    "what": "Environment/biodiversity program (implemented by WWF)",
+    "questioned": 0,
+    "verdict": "performance findings",
+    "url": "https://oig.usaid.gov/node/3097"
+   }
+  ]
+ },
+ "PACT": {
+  "name": "Pact, INC.",
+  "fac": {
+   "auditee": "PACT, INC.",
+   "ein": "132702768",
+   "year": "2023",
+   "expended": 132870338.0,
+   "report_id": "2023-09-GSAFAC-0000040888",
+   "summary": "https://app.fac.gov/dissemination/summary/2023-09-GSAFAC-0000040888",
+   "pdf": "https://app.fac.gov/dissemination/report/pdf/2023-09-GSAFAC-0000040888"
+  }
+ },
+ "NATIONAL SOCIETY FOR EARTHQUAKE TECHNOLOGY NEPAL": {
+  "name": "National Society For Earthquake Technology-Nepal",
+  "oig": [
+   {
+    "report": "NSET-2022",
+    "what": "NSET-Nepal, multiple USAID agreements",
+    "questioned": 110564,
+    "verdict": "questioned costs",
+    "url": "https://oig.usaid.gov/node/6121"
+   }
+  ]
+ },
+ "GEORGETOWN UNIVERSITY": {
+  "name": "Georgetown University",
+  "fac": {
+   "auditee": "GEORGETOWN UNIVERSITY",
+   "ein": "530196603",
+   "year": "2023",
+   "expended": 458327764.0,
+   "report_id": "2023-06-GSAFAC-0000017019",
+   "summary": "https://app.fac.gov/dissemination/summary/2023-06-GSAFAC-0000017019",
+   "pdf": "https://app.fac.gov/dissemination/report/pdf/2023-06-GSAFAC-0000017019"
+  }
+ },
+ "COUNTY LOS ANGELES": {
+  "name": "County Of Los Angeles",
+  "fac": {
+   "auditee": "COUNTY OF LOS ANGELES",
+   "ein": "956000927",
+   "year": "2022",
+   "expended": 4250169100.0,
+   "report_id": "2022-06-CENSUS-0000131845",
+   "summary": "https://app.fac.gov/dissemination/summary/2022-06-CENSUS-0000131845",
+   "pdf": "https://app.fac.gov/dissemination/report/pdf/2022-06-CENSUS-0000131845"
+  }
+ },
+ "LA ISLA NETWORK": {
+  "name": "La Isla Network, INC.",
+  "fac": {
+   "auditee": "LA ISLA NETWORK INC",
+   "ein": "262384892",
+   "year": "2022",
+   "expended": 793220.0,
+   "report_id": "2022-12-CENSUS-0000259172",
+   "summary": "https://app.fac.gov/dissemination/summary/2022-12-CENSUS-0000259172",
+   "pdf": "https://app.fac.gov/dissemination/report/pdf/2022-12-CENSUS-0000259172"
+  }
+ }
+}
