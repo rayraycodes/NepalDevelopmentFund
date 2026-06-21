@@ -49,6 +49,7 @@ dashboard-data:
 	$(PY) scripts/87_us_partners_data.py
 	$(PY) scripts/91_us_localization.py
 	$(PY) scripts/89_us_projects_data.py
+	$(PY) scripts/93_search_index.py   # cross-dataset entity search index (run last; reads the others)
 
 # serve the self-contained dashboard at http://127.0.0.1:8848
 serve: dashboard-data
