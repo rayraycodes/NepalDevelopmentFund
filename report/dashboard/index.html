@@ -6,10 +6,11 @@
 <title>Development Funding to Nepal — Dashboard</title>
 <style>
   :root{
-    --bg:#eef1f6; --card:#fff; --ink:#0f1d2e; --muted:#56697d; --line:#e3e8ef;
-    --navy:#0d2440; --teal:#0e7c86;
-    --donor:#2563eb; --recipient:#dc2626; --anchor:#64748b; --amber:#f59e0b; --green:#0f9d58;
-    --shadow:0 1px 2px rgba(16,29,46,.06),0 8px 24px rgba(16,29,46,.06);
+    /* AAA contrast: muted, teal-text and link colours all >= 7:1 on white/off-white. */
+    --bg:#eef1f6; --card:#fff; --ink:#10202f; --muted:#3d4b5a; --line:#d8dfe8;
+    --navy:#0d2440; --teal:#0a5a61; --teal-soft:#0e7c86;
+    --donor:#1d4ed8; --recipient:#a51328; --anchor:#475569; --amber:#9a5b00; --green:#0c7a45;
+    --shadow:0 1px 2px rgba(16,29,46,.05),0 6px 20px rgba(16,29,46,.07); --focus:#0a5a61;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -17,11 +18,16 @@
     font-family:"Inter","Noto Sans Devanagari",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     line-height:1.55;-webkit-font-smoothing:antialiased;font-size:16px}
   html[lang="ne"] body{line-height:1.7}
-  a{color:var(--teal)} a:hover{text-decoration:underline}
+  a{color:var(--teal)}
+  a:not(.skip){text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+  header a,nav a{text-decoration:none}
+  a:hover{text-decoration:underline;text-decoration-thickness:2px}
   .wrap{max-width:1140px;margin:0 auto;padding:0 18px}
   .skip{position:absolute;left:-999px;top:0;background:#fff;color:var(--navy);padding:10px 14px;border-radius:8px;z-index:200}
   .skip:focus{left:12px;top:8px}
-  :focus-visible{outline:3px solid #37b3bd;outline-offset:2px;border-radius:6px}
+  /* High-contrast focus ring; lighter on the dark header so it stays visible there. */
+  :focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:6px}
+  header :focus-visible{outline-color:#9fe1e8}
 
   header{position:sticky;top:0;z-index:50;background:rgba(13,36,64,.97);
     backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
@@ -31,10 +37,10 @@
   .hbar h1{font-size:15px;margin:0;font-weight:650}
   .hbar .sub{font-size:12px;color:#a9bdd4;margin-top:1px}
   nav{margin-left:auto;display:flex;gap:2px;flex-wrap:wrap;align-items:center;overflow-x:auto}
-  nav a{color:#cdd9e8;font-size:13px;padding:8px 10px;border-radius:7px;white-space:nowrap;min-height:40px;display:flex;align-items:center}
+  nav a{color:#dbe5f1;font-size:13px;padding:8px 10px;border-radius:7px;white-space:nowrap;min-height:44px;display:flex;align-items:center}
   nav a:hover{background:rgba(255,255,255,.08);text-decoration:none;color:#fff}
   .lang{display:inline-flex;border:1px solid rgba(255,255,255,.25);border-radius:8px;overflow:hidden;margin-left:6px}
-  .lang button{background:transparent;color:#cdd9e8;border:0;padding:8px 11px;font:inherit;font-size:13px;cursor:pointer;min-height:40px;min-width:46px}
+  .lang button{background:transparent;color:#dbe5f1;border:0;padding:8px 11px;font:inherit;font-size:13px;cursor:pointer;min-height:44px;min-width:48px}
   .lang button[aria-pressed="true"]{background:var(--teal);color:#fff;font-weight:600}
 
   .hero{background:radial-gradient(1100px 360px at 70% -40%,rgba(14,124,134,.18),transparent),var(--navy);color:#fff;padding:38px 0 30px}
@@ -59,7 +65,8 @@
   .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
   .controls{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
   label{font-size:13.5px;color:var(--muted)}
-  select{font:inherit;font-size:14px;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);min-height:42px}
+  select{font:inherit;font-size:14px;padding:9px 12px;border:1.5px solid #b8c2cf;border-radius:8px;background:#fff;color:var(--ink);min-height:44px;cursor:pointer}
+  select:hover{border-color:var(--teal)}
   .note{font-size:12.5px;color:var(--muted);margin-top:10px}
 
   .explain{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
@@ -71,8 +78,9 @@
   th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
   th{font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:700}
   .pill{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;white-space:nowrap}
-  .p-cons,.p-high{background:#e6f6ec;color:#0f7a3d}.p-exp{background:#eef1f6;color:#475569}
-  .p-key{background:#fef3e2;color:#a86412}.p-med{background:#fff7e6;color:#a86412}.p-low{background:#fdeaea;color:#b4322b}
+  /* Pill text darkened to >= 7:1 (AAA) against each tinted background. */
+  .p-cons,.p-high{background:#e6f6ec;color:#0a5e2f}.p-exp{background:#eef1f6;color:#3a4656}
+  .p-key{background:#fef3e2;color:#7a4708}.p-med{background:#fff7e6;color:#7a4708}.p-low{background:#fdeaea;color:#8f1f1a}
   .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
   .chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:13.5px;font-weight:600;box-shadow:var(--shadow)}
   .src{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14px;flex-wrap:wrap}

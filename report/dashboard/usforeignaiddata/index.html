@@ -6,10 +6,12 @@
 <title>US Foreign Aid to Nepal — Deep Dive</title>
 <style>
   :root{
-    --bg:#eef1f6; --card:#fff; --ink:#0f1d2e; --muted:#56697d; --line:#e3e8ef;
-    --navy:#0d2440; --teal:#0e7c86;
-    --ob:#f59e0b; --di:#2563eb; --con:#64748b; --bad:#dc2626; --good:#0f9d58;
-    --shadow:0 1px 2px rgba(16,29,46,.06),0 8px 24px rgba(16,29,46,.06);
+    /* AAA contrast on white/off-white: muted, link and alert text all >= 7:1 */
+    --bg:#eef1f6; --card:#fff; --ink:#10202f; --muted:#3d4b5a; --line:#d8dfe8;
+    --navy:#0d2440; --teal:#0a5a61; --teal-soft:#0e7c86;
+    --ob:#9a5b00; --di:#1d4ed8; --con:#475569; --bad:#a51328; --good:#0c7a45;
+    --shadow:0 1px 2px rgba(16,29,46,.05),0 6px 20px rgba(16,29,46,.07);
+    --focus:#0a5a61;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -17,11 +19,15 @@
     font-family:"Inter","Noto Sans Devanagari",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     line-height:1.55;-webkit-font-smoothing:antialiased}
   html[lang="ne"] body{line-height:1.7}
-  a{color:var(--teal)} a:hover{text-decoration:underline}
+  a{color:var(--teal)}
+  a:not(.backlink):not(.skip){text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+  a:hover{text-decoration:underline;text-decoration-thickness:2px}
   .wrap{max-width:1140px;margin:0 auto;padding:0 18px}
   .skip{position:absolute;left:-999px;top:0;background:#fff;color:var(--navy);padding:10px 14px;border-radius:8px;z-index:200}
   .skip:focus{left:12px;top:8px}
-  :focus-visible{outline:3px solid #37b3bd;outline-offset:2px;border-radius:6px}
+  /* High-contrast focus ring; lighter on the dark header/hero so it stays visible there. */
+  :focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:6px}
+  header :focus-visible,.hero :focus-visible{outline-color:#9fe1e8}
 
   header{position:sticky;top:0;z-index:50;background:rgba(13,36,64,.97);backdrop-filter:blur(8px);
     border-bottom:1px solid rgba(255,255,255,.08)}
@@ -29,11 +35,11 @@
   .logo{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,#b91c1c,#1d4ed8);
     display:grid;place-items:center;font-weight:800;color:#fff;flex:none}
   .hbar h1{font-size:15px;margin:0;font-weight:650}
-  .hbar .sub{font-size:12px;color:#a9bdd4;margin-top:1px}
+  .hbar .sub{font-size:12px;color:#c4d3e6;margin-top:1px}
   .backlink{color:#cdd9e8;font-size:13px;padding:8px 10px;border-radius:7px;white-space:nowrap}
   .backlink:hover{background:rgba(255,255,255,.08);color:#fff;text-decoration:none}
   .lang{display:inline-flex;border:1px solid rgba(255,255,255,.25);border-radius:8px;overflow:hidden;margin-left:auto}
-  .lang button{background:transparent;color:#cdd9e8;border:0;padding:8px 11px;font:inherit;font-size:13px;cursor:pointer;min-height:40px;min-width:46px}
+  .lang button{background:transparent;color:#dbe5f1;border:0;padding:8px 11px;font:inherit;font-size:13px;cursor:pointer;min-height:44px;min-width:48px}
   .lang button[aria-pressed="true"]{background:var(--teal);color:#fff;font-weight:600}
 
   .hero{background:radial-gradient(1100px 360px at 75% -40%,rgba(185,28,28,.22),transparent),var(--navy);color:#fff;padding:36px 0 30px}
@@ -55,7 +61,8 @@
   .scrollwrap{overflow-x:auto}.scrollwrap .chart{min-width:620px}
   .controls{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
   label{font-size:13.5px;color:var(--muted)}
-  select{font:inherit;font-size:14px;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);min-height:42px}
+  select{font:inherit;font-size:14px;padding:9px 12px;border:1.5px solid #b8c2cf;border-radius:8px;background:#fff;color:var(--ink);min-height:44px;cursor:pointer}
+  select:hover{border-color:var(--teal)}
   .note{font-size:12.5px;color:var(--muted);margin-top:10px}
 
   .explain{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
@@ -68,6 +75,10 @@
   th{font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:700}
   td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
   .zero{color:var(--bad);font-weight:700}
+  /* Status pills (referenced in JS but never styled here). AAA text on each tinted background. */
+  .pill{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;white-space:nowrap}
+  .p-cons,.p-high{background:#e6f6ec;color:#0a5e2f}.p-exp{background:#eef1f6;color:#3a4656}
+  .p-key{background:#fef3e2;color:#7a4708}.p-med{background:#fff7e6;color:#7a4708}.p-low{background:#fdeaea;color:#8f1f1a}
   .disclaim{background:#fff;border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:10px;padding:13px 16px;font-size:13.5px;color:#3a4a5c;margin-top:14px}
   footer{margin-top:34px;padding:22px 0 46px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
   #cuts-table{min-width:560px}
@@ -77,6 +88,22 @@
     .chart{height:330px}.chart.sm{height:310px}.chart.tall{height:420px}
   }
   .clickable{cursor:pointer}
+  /* Obvious, keyboard-accessible drill trigger (a real <button>, looks like a tappable chip). */
+  .drill{display:inline-flex;align-items:center;gap:5px;font:inherit;font-weight:650;color:var(--teal);
+    background:#e9f3f3;border:1px solid #b7dadd;border-radius:8px;padding:5px 9px;cursor:pointer;
+    min-height:34px;text-align:left;line-height:1.25;transition:background .12s,border-color .12s}
+  .drill:hover{background:#d9ecec;border-color:#8fc8cd}
+  .drill::after{content:"›";font-size:1.15em;font-weight:800;line-height:1;opacity:.8}
+  .drill .v{color:var(--muted);font-weight:600}
+  /* Chip row: keyboard-accessible alternative to clicking the chart bars. */
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .chips-label{font-size:12.5px;color:var(--muted);width:100%;margin-bottom:-2px}
+  .chip-btn{display:inline-flex;align-items:center;gap:7px;font:inherit;font-size:13px;font-weight:650;
+    color:var(--teal);background:#fff;border:1.5px solid var(--teal);border-radius:999px;padding:7px 13px;
+    cursor:pointer;min-height:38px;transition:background .12s,color .12s}
+  .chip-btn:hover{background:var(--teal);color:#fff}
+  .chip-btn:hover .v{color:#dff1f2}
+  .chip-btn .v{color:var(--muted);font-weight:600;font-variant-numeric:tabular-nums}
   .drawer-ov{position:fixed;inset:0;background:rgba(13,36,64,.45);opacity:0;pointer-events:none;transition:opacity .2s;z-index:100}
   .drawer-ov.open{opacity:1;pointer-events:auto}
   .drawer{position:fixed;top:0;right:0;height:100%;width:min(560px,100%);background:#fff;
@@ -85,10 +112,13 @@
   .drawer-head{padding:18px 20px;border-bottom:1px solid var(--line);display:flex;align-items:flex-start;gap:12px}
   .drawer-head h4{margin:0;font-size:18px;font-weight:700}
   .drawer-head .sub{font-size:13px;color:var(--muted);margin-top:4px}
-  .drawer-close{background:#eef1f6;border:0;border-radius:8px;width:36px;height:36px;font-size:20px;cursor:pointer;flex:none;line-height:1}
+  .drawer-close{background:#eef1f6;border:1px solid var(--line);border-radius:9px;width:44px;height:44px;font-size:22px;cursor:pointer;flex:none;line-height:1;color:var(--ink)}
+  .drawer-close:hover{background:#e2e7ef}
   .drawer-body{overflow-y:auto;padding:6px 20px 28px}
   .drawer-body td{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px;vertical-align:top}
-  .hint{font-size:12.5px;color:var(--teal);font-weight:600;margin-top:8px}
+  .hint{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--teal);font-weight:650;
+    margin-top:10px;background:#e9f3f3;border:1px solid #b7dadd;border-radius:999px;padding:5px 12px}
+  .hint::before{content:"👆";font-size:13px}
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.drawer,.drawer-ov{transition:none}}
 </style>
 </head>
@@ -213,8 +243,10 @@
     <p class="hint" data-i18n="ld_hint">Tip: click any bar to see its breakdown.</p>
     <div class="grid2" style="margin-top:6px">
       <div class="card"><div id="c-subrec" class="chart tall" role="img"></div>
+        <div class="chips" id="chips-subrec" role="group" aria-label="Open a sub-recipient breakdown"></div>
         <div class="note" data-i18n="ld_note1">Top sub-recipients by amount received — a mix of international primes and Nepali organisations (Thakral One Nepal, Subisu, CEAPRED, local NGOs).</div></div>
       <div class="card"><div id="c-districts" class="chart tall" role="img"></div>
+        <div class="chips" id="chips-districts" role="group" aria-label="Open a district breakdown"></div>
         <div class="note" data-i18n="ld_note2">Sub-awards naming a Nepal district. USASpending has no recipient-country field, so we show named geography rather than claim a precise "share to Nepali organisations".</div></div>
     </div>
   </section>
@@ -402,10 +434,12 @@ const I18N = {
   ld_lead:"Big international partners win the awards, but much of the money is sub-granted onward. Across the 154 largest projects, $1.06 billion — about half of what was obligated — was passed to 562 other organisations, many of them Nepali firms and local NGOs, reaching 48 of Nepal's 77 districts.",
   ld_sum:"${sub}m passed onward  ·  {orgs} organisations  ·  {dist} of Nepal's 77 districts",
   ld_subrec_t:"Top sub-recipients (US$ m received)", ld_dist_t:"Sub-awards by Nepal district (US$ m)",
+  ld_chips:"Or open one directly:",
   ld_note1:"Top sub-recipients by amount received — a mix of international primes and Nepali organisations (Thakral One Nepal, Subisu, CEAPRED, local NGOs).",
   ld_note2:"Sub-awards naming a Nepal district. USASpending has no recipient-country field, so we show named geography rather than claim a precise share to Nepali organisations.",
   ld_hint:"Tip: click any sub-recipient or district bar to see its full breakdown.",
-  lg_hint:"Tip: click a recipient (▸) to see the Nepali organisations it sub-granted to.",
+  lg_hint:"Tip: select a recipient to see the Nepali organisations it sub-granted to.",
+  lg_view:"View sub-grants",
   dr_district:"district", dr_empty:"No sub-awards recorded for this item (the prime may have delivered the work directly).",
   dr_sub_h:"received {t} across {n} sub-awards, from these projects:",
   dr_dist_h:"{t} across {n} sub-awards, to these organisations:",
@@ -530,10 +564,12 @@ const I18N = {
   ld_lead:"ठूला अन्तर्राष्ट्रिय साझेदारले अवार्ड जित्छन्, तर धेरै पैसा अगाडि उप-अनुदान हुन्छ। १५४ सबैभन्दा ठूला परियोजनामा, $1.06 अर्ब — प्रतिबद्धताको करिब आधा — ५६२ अन्य संस्थालाई पठाइयो, जसमध्ये धेरै नेपाली फर्म र स्थानीय गैसस छन्, नेपालका ७७ मध्ये ४८ जिल्लामा पुग्दै।",
   ld_sum:"${sub}m अगाडि पठाइयो  ·  {orgs} संस्था  ·  ७७ मध्ये {dist} जिल्ला",
   ld_subrec_t:"प्रमुख उप-प्राप्तकर्ता (डलर मिलियन)", ld_dist_t:"नेपाल जिल्लाअनुसार उप-अवार्ड (डलर मिलियन)",
+  ld_chips:"वा सिधै एउटा खोल्नुहोस्:",
   ld_note1:"प्राप्त रकमअनुसार प्रमुख उप-प्राप्तकर्ता — अन्तर्राष्ट्रिय प्राइम र नेपाली संस्था (Thakral One Nepal, Subisu, CEAPRED, स्थानीय गैसस) को मिश्रण।",
   ld_note2:"नेपाल जिल्ला उल्लेख गर्ने उप-अवार्ड। USASpending मा प्राप्तकर्ता-देश क्षेत्र छैन, त्यसैले हामी ठ्याक्कै नेपाली अंश दाबी नगरी नामित भूगोल देखाउँछौं।",
   ld_hint:"सुझाव: पूरा विवरण हेर्न कुनै उप-प्राप्तकर्ता वा जिल्ला बारमा क्लिक गर्नुहोस्।",
-  lg_hint:"सुझाव: कुन नेपाली संस्थालाई उप-अनुदान दियो हेर्न प्राप्तकर्ता (▸) मा क्लिक गर्नुहोस्।",
+  lg_hint:"सुझाव: कुन नेपाली संस्थालाई उप-अनुदान दियो हेर्न प्राप्तकर्ता छान्नुहोस्।",
+  lg_view:"उप-अनुदान हेर्नुहोस्",
   dr_district:"जिल्ला", dr_empty:"यो वस्तुका लागि उप-अवार्ड अभिलेख छैन (प्राइमले प्रत्यक्ष काम गरेको हुनसक्छ)।",
   dr_sub_h:"{n} उप-अवार्डमा {t} प्राप्त, यी परियोजनाहरूबाट:",
   dr_dist_h:"{n} उप-अवार्डमा {t}, यी संस्थाहरूलाई:",
@@ -655,12 +691,12 @@ function drawAudits(){
     .replace('{arch}',m.n_archived);
   document.querySelector('#audits-table tbody').innerHTML=A.list.map(a=>{
     const q = a.questioned>0 ? '$'+a.questioned.toLocaleString()
-      : '<span style="color:#5b6b7d">'+(a.verdict==='clean'?t('au_clean'):t('au_perf'))+'</span>';
+      : '<span style="color:var(--muted)">'+(a.verdict==='clean'?t('au_clean'):t('au_perf'))+'</span>';
     const vb = a.verified==='yes' ? ' <span class="pill p-cons" title="confirmed in archived PDF">✓</span>' : '';
     const status = a.archived ? '<span class="pill p-cons">'+t('au_archived')+'</span>'
       : '<span class="pill p-med">'+t('au_offline')+'</span>';
     return `<tr><td><a href="${a.node_url}" target="_blank" rel="noopener">${a.report}</a>
-        <div style="font-size:11px;color:#5b6b7d">${a.title}</div></td>
+        <div style="font-size:11px;color:var(--muted)">${a.title}</div></td>
       <td>${a.what}</td><td style="white-space:nowrap">${a.period}</td>
       <td class="num">${q}${vb}</td><td>${status}</td></tr>`;}).join('');
 }
@@ -685,6 +721,16 @@ function drawLanding(){
   };
   bar('c-subrec',t('ld_subrec_t'),D2.top_sub,'#0E7C86',x=>drillSub(x.name));
   bar('c-districts',t('ld_dist_t'),D2.top_districts,'#C0152F',x=>drillDist(x.name));
+  // Keyboard-accessible alternative to clicking the chart bars: a row of real <button> chips.
+  const chips=(id,arr,fn)=>{
+    document.getElementById(id).innerHTML=
+      `<span class="chips-label">${t('ld_chips')}</span>`+
+      arr.map((x,i)=>`<button type="button" class="chip-btn" data-i="${i}">`+
+        `${esc(x.name.length>26?x.name.slice(0,24)+'…':x.name)} <span class="v">$${x.m}m</span></button>`).join('');
+    document.querySelectorAll('#'+id+' .chip-btn').forEach(b=>b.onclick=()=>fn(arr[+b.dataset.i].name));
+  };
+  chips('chips-subrec',D2.top_sub,drillSub);
+  chips('chips-districts',D2.top_districts,drillDist);
 }
 
 const esc=s=>String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
@@ -694,14 +740,39 @@ function openDrawer(title, sub, rows, metaHtml){
   document.getElementById('drawer-sub').textContent=sub;
   document.getElementById('drawer-meta').innerHTML=metaHtml||'';
   const html=rows.sort((x,y)=>y.a-x.a).slice(0,150).map(r=>
-    `<tr><td class="num" style="white-space:nowrap;padding-right:14px;font-weight:700;color:#0E7C86">${money(r.a)}</td>
-      <td>${esc(r.left||'—')}${r.right?`<div style="font-size:11.5px;color:#5b6b7d;margin-top:1px">${esc(r.right)}</div>`:''}</td></tr>`).join('');
-  document.getElementById('drawer-rows').innerHTML=html||`<tr><td style="color:#5b6b7d">${t('dr_empty')}</td></tr>`;
-  document.getElementById('drawer').classList.add('open');
+    `<tr><td class="num" style="white-space:nowrap;padding-right:14px;font-weight:700;color:var(--teal)">${money(r.a)}</td>
+      <td>${esc(r.left||'—')}${r.right?`<div style="font-size:11.5px;color:var(--muted);margin-top:1px">${esc(r.right)}</div>`:''}</td></tr>`).join('');
+  document.getElementById('drawer-rows').innerHTML=html||`<tr><td style="color:var(--muted)">${t('dr_empty')}</td></tr>`;
+  const dr=document.getElementById('drawer');
+  _lastFocused=document.activeElement;          // remember what to return focus to
+  dr.classList.add('open');
   document.getElementById('drawer-ov').classList.add('open');
+  document.body.style.overflow='hidden';        // stop the page scrolling behind the panel
+  const cl=dr.querySelector('.drawer-close'); if(cl) cl.focus();  // move focus into the dialog
 }
-function closeDrawer(){document.getElementById('drawer').classList.remove('open');document.getElementById('drawer-ov').classList.remove('open');}
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer();});
+let _lastFocused=null;
+function closeDrawer(){
+  const dr=document.getElementById('drawer');
+  if(!dr.classList.contains('open')) return;
+  dr.classList.remove('open');
+  document.getElementById('drawer-ov').classList.remove('open');
+  document.body.style.overflow='';
+  if(_lastFocused&&_lastFocused.focus){_lastFocused.focus();_lastFocused=null;}  // restore focus
+}
+// Esc closes; Tab is trapped inside the open dialog (WCAG 2.4.3 / 2.1.2).
+document.addEventListener('keydown',e=>{
+  const dr=document.getElementById('drawer');
+  if(!dr.classList.contains('open')) return;
+  if(e.key==='Escape'){closeDrawer();return;}
+  if(e.key==='Tab'){
+    const f=[...dr.querySelectorAll('button,[href],input,select,[tabindex]:not([tabindex="-1"])')]
+      .filter(el=>!el.disabled&&el.offsetParent!==null);
+    if(!f.length) return;
+    const first=f[0], last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  }
+});
 const subsAll=()=>window.US_SUBS||[];
 function drillSub(name){const r=subsAll().filter(x=>x.s===name);const tot=r.reduce((a,b)=>a+b.a,0);
   openDrawer(name, t('dr_sub_h').replace('{n}',r.length).replace('{t}',money(tot)),
@@ -715,13 +786,13 @@ function drillProj(aid,label){
   if(m){
     const TODAY='2026-06-21';
     const dl=m.e?(m.e<TODAY?t('dr_dl_passed').replace('{d}',m.e):t('dr_dl_by').replace('{d}',m.e)):t('dr_dl_none');
-    const cell=(v,lab,col)=>`<div><div style="font-size:19px;font-weight:760;color:${col}">${money(v)}</div><div style="font-size:11px;color:#5b6b7d">${lab}</div></div>`;
+    const cell=(v,lab,col)=>`<div><div style="font-size:19px;font-weight:760;color:${col}">${money(v)}</div><div style="font-size:11px;color:var(--muted)">${lab}</div></div>`;
     meta=`<div style="background:#f4f6f9;border:1px solid #e3e8ef;border-radius:11px;padding:14px;margin-bottom:12px">
       ${m.j?`<div style="font-size:12.5px;color:#3a4a5c;margin-bottom:10px">${esc(m.j)}</div>`:''}
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px 14px">
-        ${cell(m.o,t('dr_outlayed'),'#0E7C86')}${cell(m.b,t('dr_obligated'),'#12233B')}
+        ${cell(m.o,t('dr_outlayed'),'#0a5a61')}${cell(m.b,t('dr_obligated'),'#12233B')}
         ${cell(m.c,t('dr_current'),'#12233B')}${cell(m.p,t('dr_potential'),'#12233B')}</div>
-      <div style="margin-top:10px;font-size:13px;font-weight:700;color:#C0152F">${dl}</div></div>`;
+      <div style="margin-top:10px;font-size:13px;font-weight:700;color:var(--bad)">${dl}</div></div>`;
   }
   openDrawer(label, t('dr_proj_h').replace('{n}',r.length).replace('{t}',money(tot)),
     r.map(x=>({a:x.a,left:x.s,right:x.d?(x.d+' '+t('dr_district')):''})), meta);}
@@ -763,7 +834,7 @@ function renderLedgerRows(){
   document.querySelector('#ledger-table tbody').innerHTML=shown.map(a=>{
     const d=a.link?`<a href="${a.link}" target="_blank" rel="noopener">${a.desc||'—'}</a>`:(a.desc||'—');
     const aid=a.link?a.link.split('/award/')[1]:'';
-    const rec=aid?`<span class="clickable" style="color:var(--teal)" data-aid="${esc(aid)}" data-label="${esc(a.recipient)}" onclick="drillProj(this.dataset.aid,this.dataset.label)">${esc(a.recipient)} ▸</span>`:esc(a.recipient);
+    const rec=aid?`<button type="button" class="drill" data-aid="${esc(aid)}" data-label="${esc(a.recipient)}" aria-label="${t('lg_view')}: ${esc(a.recipient)}" onclick="drillProj(this.dataset.aid,this.dataset.label)">${esc(a.recipient)}</button>`:esc(a.recipient);
     return `<tr><td class="num">$${a.usd.toFixed(1)}</td><td>${rec}</td><td>${d}</td>
       <td style="white-space:nowrap">${(a.start||'?').slice(0,7)} → ${(a.end||'?').slice(0,7)}</td>
       <td><span class="pill ${pills[a.status]||'p-exp'}">${t('lg_s_'+a.status)}</span></td></tr>`;}).join('');
@@ -774,7 +845,7 @@ function renderLedgerRows(){
 function drawDocs(){
   document.getElementById('docs-cards').innerHTML=I18N[lang].docs.map(([h,meta,b,url,label])=>
     `<div class="term"><b>${h}</b>
-     <div style="font-size:11.5px;color:#56697d;margin:2px 0 7px">${meta}</div>
+     <div style="font-size:11.5px;color:var(--muted);margin:2px 0 7px">${meta}</div>
      <span>${b}</span>
      <div style="margin-top:8px;font-size:12.5px"><a href="${url}" target="_blank" rel="noopener">${label} ↗</a></div></div>`).join('');
 }
