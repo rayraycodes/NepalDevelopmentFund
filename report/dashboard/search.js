@@ -6,6 +6,7 @@
 (function () {
   'use strict';
   var IDX = window.SEARCH_INDEX || [];
+  var LOCBYNAME = {};            // normalised org name -> {country, city, ...} for counterparty lists
   var PAGE = window.US_SUBS ? 'us' : 'main';           // which page are we on
   var OTHER = PAGE === 'us' ? '../index.html' : 'usforeignaiddata/index.html';
 
@@ -484,8 +485,10 @@
       var clickable = r.kind === 'proj' && PAGE === 'us' && window.drillProj;
       var tag = clickable ? 'button' : 'div';
       var attr = clickable ? ' data-proj="' + esc(r.act) + '" data-label="' + esc(r.n) + '"' : '';
+      var lc = LOCBYNAME[norm(r.n)];      // show the counterparty's country when we know it
+      var cc = lc && lc.country ? ' <small>· ' + esc(countryName(lc.country)) + '</small>' : '';
       return '<' + tag + ' class="sx-row"' + attr + (clickable ? ' type="button"' : '') + '>' +
-        '<span class="sx-rv">' + r.v + '</span><span class="sx-rn">' + esc(r.n) +
+        '<span class="sx-rv">' + r.v + '</span><span class="sx-rn">' + esc(r.n) + cc +
         (r.sub ? ' <small>· ' + esc(r.sub) + '</small>' : '') + '</span></' + tag + '>';
     }).join('') + '</div>';
   }
@@ -601,6 +604,15 @@
         if (full) IDX[j].p = full;
       }
     }
+    // Look up an organisation's location by name, so counterparty lists (a project's
+    // sub-recipients, a district's partners) can show where each one is based too.
+    IDX.forEach(function (e) {
+      if (e.t === 'org' && e.loc && e.loc.country) {
+        [e.n].concat(e.k || []).forEach(function (nm) {
+          var k = norm(nm); if (k && !LOCBYNAME[k]) LOCBYNAME[k] = e.loc;
+        });
+      }
+    });
     build(); mountTrigger(); mountHero();
     document.addEventListener('keydown', globalKeys);
     window.addEventListener('hashchange', maybeDeepLink);

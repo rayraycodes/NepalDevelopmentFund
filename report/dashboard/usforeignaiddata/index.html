@@ -795,7 +795,7 @@ function drillProj(aid,label){
     const cell=(v,lab,col)=>`<div><div style="font-size:19px;font-weight:760;color:${col}">${money(v)}</div><div style="font-size:11px;color:var(--muted)">${lab}</div></div>`;
     const awarded=m.s?`<span style="font-weight:700;color:var(--ink)">${t('dr_awarded')}: ${m.s}</span>`:'';
     const L=m.loc;
-    const locline=L&&(L.city||L.country)?`<div style="margin-top:9px;font-size:12.5px;color:#3a4a5c">📍 <b>${t('dr_based')}:</b> ${esc([L.city,L.state,L.country].filter(Boolean).join(', '))}${L.addr?` · ${esc(L.addr)}`:''}</div>`:'';
+    const locline=L&&(L.city||L.country)?`<div style="margin-top:9px;font-size:12.5px;color:#3a4a5c">📍 <b>${t('dr_based')}:</b> ${esc([L.city,L.state,ccName(L.country)].filter(Boolean).join(', '))}${L.addr?` · ${esc(L.addr)}`:''}</div>`:'';
     meta=`<div style="background:#f4f6f9;border:1px solid #e3e8ef;border-radius:11px;padding:14px;margin-bottom:12px">
       ${m.j?`<div style="font-size:12.5px;color:#3a4a5c;margin-bottom:10px">${esc(m.j)}</div>`:''}
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px 14px">
@@ -806,6 +806,16 @@ function drillProj(aid,label){
   }
   openDrawer(label, t('dr_proj_h').replace('{n}',r.length).replace('{t}',money(tot)),
     r.map(x=>({a:x.a,left:x.s,date:x.t,right:x.d?(x.d+' '+t('dr_district')):''})), meta);}
+// Recipient location helpers, shared by the drill drawer and the ledger table.
+const COUNTRY_NE={'United States':'संयुक्त राज्य अमेरिका','Nepal':'नेपाल','United Kingdom':'बेलायत','Germany':'जर्मनी','Mexico':'मेक्सिको','Luxembourg':'लक्जेम्बर्ग','Mozambique':'मोजाम्बिक','Sri Lanka':'श्रीलंका','United Arab Emirates':'संयुक्त अरब इमिरेट्स','Afghanistan':'अफगानिस्तान','Canada':'क्यानडा','Hong Kong':'हङकङ','India':'भारत','China':'चीन','Switzerland':'स्विट्जरल्यान्ड','Japan':'जापान'};
+const ccName=c=>(lang==='ne'&&COUNTRY_NE[c])?COUNTRY_NE[c]:(c||'');
+const ccNorm=s=>String(s||'').toUpperCase().replace(/[^A-Z0-9 ]/g,' ').replace(/\b(INC|INCORPORATED|LLC|LTD|LIMITED|CORP|CORPORATION|CO|PVT|PRIVATE|THE|AND|OF|A)\b/g,' ').replace(/\s+/g,' ').trim();
+let _LOCBYREC=null;
+function recLoc(name){           // a recipient name -> its registered location (from US_PROJMETA)
+  if(!_LOCBYREC){_LOCBYREC={};const M=window.US_PROJMETA||{};
+    for(const k in M){if(M[k]&&M[k].loc&&M[k].r&&!_LOCBYREC[ccNorm(M[k].r)])_LOCBYREC[ccNorm(M[k].r)]=M[k].loc;}}
+  return _LOCBYREC[ccNorm(name)]||null;
+}
 function drawLedger(){
   const P=window.US_PROJECTS; if(!P) return;
   const S=P.summary, g=k=>S[k]||{n:0,usd:0};
@@ -844,7 +854,9 @@ function renderLedgerRows(){
   document.querySelector('#ledger-table tbody').innerHTML=shown.map(a=>{
     const d=a.link?`<a href="${a.link}" target="_blank" rel="noopener">${a.desc||'—'}</a>`:(a.desc||'—');
     const aid=a.link?a.link.split('/award/')[1]:'';
-    const rec=aid?`<button type="button" class="drill" data-aid="${esc(aid)}" data-label="${esc(a.recipient)}" aria-label="${t('lg_view')}: ${esc(a.recipient)}" onclick="drillProj(this.dataset.aid,this.dataset.label)">${esc(a.recipient)}</button>`:esc(a.recipient);
+    const recBtn=aid?`<button type="button" class="drill" data-aid="${esc(aid)}" data-label="${esc(a.recipient)}" aria-label="${t('lg_view')}: ${esc(a.recipient)}" onclick="drillProj(this.dataset.aid,this.dataset.label)">${esc(a.recipient)}</button>`:esc(a.recipient);
+    const rl=recLoc(a.recipient);
+    const rec=recBtn+(rl&&rl.country?`<div style="font-size:11px;color:var(--muted);margin-top:2px">📍 ${esc(ccName(rl.country))}</div>`:'');
     return `<tr><td class="num">$${a.usd.toFixed(1)}</td><td>${rec}</td><td>${d}</td>
       <td style="white-space:nowrap">${(a.start||'?').slice(0,7)} → ${(a.end||'?').slice(0,7)}</td>
       <td><span class="pill ${pills[a.status]||'p-exp'}">${t('lg_s_'+a.status)}</span></td></tr>`;}).join('');
