@@ -94,40 +94,10 @@ def main():
                             "action_date", "description"])
         w.writeheader(); w.writerows(subs)
 
-    # aggregate headline
-    tot_obl = sum(d["obligated_usd"] for d in details)
-    tot_out = sum(d["outlayed_usd"] for d in details)
-    tot_sub = sum(d["subawarded_usd"] for d in details)
-    by_sub = defaultdict(float)
-    by_dist = defaultdict(float)
-    for x in subs:
-        by_sub[x["sub_recipient"]] += x["amount_usd"]
-        if x["district"]:
-            by_dist[x["district"]] += x["amount_usd"]
-    top_sub = sorted(by_sub.items(), key=lambda kv: -kv[1])[:18]
-    top_dist = sorted(by_dist.items(), key=lambda kv: -kv[1])[:12]
-    M = lambda v: round(v / 1e6, 2)
-
-    data = {"meta": {"retrieved_at": C.utc_now(), "n_awards": len(details),
-                     "n_subawards": len(subs), "note": "awards >=$1m; sub-award localisation"},
-            "headline": {"obligated_m": M(tot_obl), "outlayed_m": M(tot_out),
-                         "spend_rate": round(100 * tot_out / tot_obl, 1) if tot_obl else None,
-                         "subawarded_m": M(tot_sub), "n_sub_orgs": len(by_sub)},
-            "top_sub": [{"name": n, "m": M(v)} for n, v in top_sub],
-            "top_districts": [{"name": n, "m": M(v)} for n, v in top_dist],
-            "lowest_spend": sorted([d for d in details if d["spend_rate_pct"] is not None
-                                    and d["obligated_usd"] > 5e6],
-                                   key=lambda d: d["spend_rate_pct"])[:8]}
-    out_js = C.ROOT / "report/dashboard/usforeignaiddata/us_detail.js"
-    out_js.write_text("window.US_DETAIL = " + json.dumps(data) + ";\n")
-
-    print(f"\nHEADLINE (awards >=$1m): obligated ${tot_obl/1e6:,.0f}m  outlayed ${tot_out/1e6:,.0f}m "
-          f"({100*tot_out/tot_obl:.0f}% spent)  sub-awarded onward ${tot_sub/1e6:,.0f}m to {len(by_sub)} orgs")
-    print("top sub-recipients:")
-    for n, v in top_sub[:8]:
-        print(f"   ${v/1e6:6.2f}m  {n}")
-    print("top districts:", [(n, round(v/1e6, 2)) for n, v in top_dist[:6]])
-    print(f"wrote us_project_detail.csv ({len(details)}), us_subawards.csv ({len(subs)}), us_detail.js")
+    # NOTE: the localisation summary (us_detail.js) is built from these CSVs by
+    # 91_us_localization.py, which applies the Nepal-district whitelist. This script only
+    # pulls + writes the raw CSVs (separation of fetch from presentation).
+    print(f"wrote us_project_detail.csv ({len(details)}), us_subawards.csv ({len(subs)})")
 
 
 if __name__ == "__main__":

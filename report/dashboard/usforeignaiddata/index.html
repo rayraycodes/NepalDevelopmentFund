@@ -192,6 +192,19 @@
       <div class="note" data-i18n="pt_note">Obligations, awards with place of performance Nepal, FY2015–FY2026. A different accounting frame from the charts above — use for who/what, not for totals.</div></div>
   </section>
 
+  <section id="landed">
+    <div class="kicker" data-i18n="ld_kicker">Where it landed</div>
+    <h3 data-i18n="ld_title">Beneath the primes: the money's onward journey</h3>
+    <p class="lead" data-i18n="ld_lead">Big international partners win the awards, but much of the money is sub-granted onward. Across the 154 largest projects, $1.06 billion — about half of what was obligated — was passed to 562 other organisations, many of them Nepali firms and local NGOs, reaching 48 of Nepal's 77 districts.</p>
+    <div class="card" id="landed-sum" style="font-weight:650;font-size:15px"></div>
+    <div class="grid2" style="margin-top:16px">
+      <div class="card"><div id="c-subrec" class="chart tall" role="img"></div>
+        <div class="note" data-i18n="ld_note1">Top sub-recipients by amount received — a mix of international primes and Nepali organisations (Thakral One Nepal, Subisu, CEAPRED, local NGOs).</div></div>
+      <div class="card"><div id="c-districts" class="chart tall" role="img"></div>
+        <div class="note" data-i18n="ld_note2">Sub-awards naming a Nepal district. USASpending has no recipient-country field, so we show named geography rather than claim a precise "share to Nepali organisations".</div></div>
+    </div>
+  </section>
+
   <section id="projects">
     <div class="kicker" data-i18n="pj_kicker">What exactly was funded</div>
     <h3 data-i18n="pj_title">The named projects</h3>
@@ -278,6 +291,7 @@
 <script src="us_data.js"></script>
 <script src="us_partners.js"></script>
 <script src="us_projects.js"></script>
+<script src="us_detail.js"></script>
 <script>
 const D = window.US_DATA;
 const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -343,6 +357,12 @@ const I18N = {
   lg_count:"Showing {shown} of {match} matching awards",
   lg_note:"Showing awards of $1m and above; the complete ledger of all 2,609 awards is in us_projects_all.csv. Obligations basis, place of performance Nepal.",
   lg_cohort_t:"Awards active per fiscal year",
+  ld_kicker:"Where it landed", ld_title:"Beneath the primes: the money's onward journey",
+  ld_lead:"Big international partners win the awards, but much of the money is sub-granted onward. Across the 154 largest projects, $1.06 billion — about half of what was obligated — was passed to 562 other organisations, many of them Nepali firms and local NGOs, reaching 48 of Nepal's 77 districts.",
+  ld_sum:"${sub}m passed onward  ·  {orgs} organisations  ·  {dist} of Nepal's 77 districts",
+  ld_subrec_t:"Top sub-recipients (US$ m received)", ld_dist_t:"Sub-awards by Nepal district (US$ m)",
+  ld_note1:"Top sub-recipients by amount received — a mix of international primes and Nepali organisations (Thakral One Nepal, Subisu, CEAPRED, local NGOs).",
+  ld_note2:"Sub-awards naming a Nepal district. USASpending has no recipient-country field, so we show named geography rather than claim a precise share to Nepali organisations.",
   gl_kicker:"The long game", gl_title:"Stated long-term goals",
   gl_lead:"What the money says it is for, from the official program documents — each card links to its source.",
   dc_kicker:"Primary documents", dc_title:"The supporting documents, read and archived",
@@ -451,6 +471,12 @@ const I18N = {
   lg_count:"{match} मिल्ने अवार्डमध्ये {shown} देखाइएको",
   lg_note:"$1m र माथिका अवार्ड देखाइएको; सबै २,६०९ अवार्डको पूर्ण खाता us_projects_all.csv मा छ। प्रतिबद्धता आधार, कार्यस्थल नेपाल।",
   lg_cohort_t:"आर्थिक वर्षअनुसार चालु अवार्ड",
+  ld_kicker:"कहाँ पुग्यो", ld_title:"प्राइमभन्दा तल: पैसाको अगाडिको यात्रा",
+  ld_lead:"ठूला अन्तर्राष्ट्रिय साझेदारले अवार्ड जित्छन्, तर धेरै पैसा अगाडि उप-अनुदान हुन्छ। १५४ सबैभन्दा ठूला परियोजनामा, $1.06 अर्ब — प्रतिबद्धताको करिब आधा — ५६२ अन्य संस्थालाई पठाइयो, जसमध्ये धेरै नेपाली फर्म र स्थानीय गैसस छन्, नेपालका ७७ मध्ये ४८ जिल्लामा पुग्दै।",
+  ld_sum:"${sub}m अगाडि पठाइयो  ·  {orgs} संस्था  ·  ७७ मध्ये {dist} जिल्ला",
+  ld_subrec_t:"प्रमुख उप-प्राप्तकर्ता (डलर मिलियन)", ld_dist_t:"नेपाल जिल्लाअनुसार उप-अवार्ड (डलर मिलियन)",
+  ld_note1:"प्राप्त रकमअनुसार प्रमुख उप-प्राप्तकर्ता — अन्तर्राष्ट्रिय प्राइम र नेपाली संस्था (Thakral One Nepal, Subisu, CEAPRED, स्थानीय गैसस) को मिश्रण।",
+  ld_note2:"नेपाल जिल्ला उल्लेख गर्ने उप-अवार्ड। USASpending मा प्राप्तकर्ता-देश क्षेत्र छैन, त्यसैले हामी ठ्याक्कै नेपाली अंश दाबी नगरी नामित भूगोल देखाउँछौं।",
   gl_kicker:"दीर्घकालीन खेल", gl_title:"घोषित दीर्घकालीन लक्ष्यहरू",
   gl_lead:"आधिकारिक कार्यक्रम दस्तावेजअनुसार यो रकम केका लागि हो — हरेक कार्ड स्रोतसँग जोडिएको छ।",
   dc_kicker:"प्राथमिक दस्तावेज", dc_title:"आधार दस्तावेजहरू: पढिएको र अभिलेख गरिएको",
@@ -547,10 +573,31 @@ function render(){
   ag.value=awGroup; ag.onchange=()=>{awGroup=ag.value; drawAwards();};
 
   drawArc(); drawFunnel(); drawPurpose(); drawPeople(); drawAccounts(); drawSankey(); drawTreemap(); drawManaging();
-  drawPartners(); drawAwards(); drawLedger(); drawGoals(); drawDocs(); drawCuts();
+  drawPartners(); drawAwards(); drawLanding(); drawLedger(); drawGoals(); drawDocs(); drawCuts();
 }
 
 let lgStatus='all', lgQuery='';
+function drawLanding(){
+  const D2=window.US_DETAIL; if(!D2) return;
+  const h=D2.headline;
+  document.getElementById('landed-sum').textContent=t('ld_sum')
+    .replace('{sub}',Math.round(h.subawarded_m).toLocaleString())
+    .replace('{orgs}',h.n_sub_orgs).replace('{dist}',h.n_districts);
+  const bar=(id,title,arr,color)=>{
+    aria(id,title);
+    const a=arr.slice().reverse();
+    chart(id).setOption({animation:anim,textStyle:baseText(),
+      title:{text:title,left:'center',top:2,textStyle:{fontSize:13,fontWeight:600,color:'#12233B'}},
+      grid:{left:8,right:54,top:34,bottom:10,containLabel:true},
+      tooltip:{trigger:'axis',axisPointer:{type:'shadow'},valueFormatter:fmt},
+      xAxis:{type:'value',splitLine:{lineStyle:{color:'#eef1f6'}}},
+      yAxis:{type:'category',data:a.map(x=>x.name.length>32?x.name.slice(0,30)+'…':x.name),axisLabel:{fontSize:10}},
+      series:[{type:'bar',data:a.map(x=>x.m),itemStyle:{color,borderRadius:[0,4,4,0]},
+        label:{show:true,position:'right',formatter:p=>'$'+p.value+'m',fontSize:10,color:'#12233B'}}]},true);
+  };
+  bar('c-subrec',t('ld_subrec_t'),D2.top_sub,'#0E7C86');
+  bar('c-districts',t('ld_dist_t'),D2.top_districts,'#C0152F');
+}
 function drawLedger(){
   const P=window.US_PROJECTS; if(!P) return;
   const S=P.summary, g=k=>S[k]||{n:0,usd:0};
