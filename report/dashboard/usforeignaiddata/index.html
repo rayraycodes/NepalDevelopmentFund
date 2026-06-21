@@ -76,7 +76,20 @@
     .hero h2{font-size:22px}.hbar .sub{display:none}
     .chart{height:330px}.chart.sm{height:310px}.chart.tall{height:420px}
   }
-  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  .clickable{cursor:pointer}
+  .drawer-ov{position:fixed;inset:0;background:rgba(13,36,64,.45);opacity:0;pointer-events:none;transition:opacity .2s;z-index:100}
+  .drawer-ov.open{opacity:1;pointer-events:auto}
+  .drawer{position:fixed;top:0;right:0;height:100%;width:min(560px,100%);background:#fff;
+    box-shadow:-8px 0 30px rgba(16,29,46,.22);transform:translateX(101%);transition:transform .22s;z-index:101;display:flex;flex-direction:column}
+  .drawer.open{transform:none}
+  .drawer-head{padding:18px 20px;border-bottom:1px solid var(--line);display:flex;align-items:flex-start;gap:12px}
+  .drawer-head h4{margin:0;font-size:18px;font-weight:700}
+  .drawer-head .sub{font-size:13px;color:var(--muted);margin-top:4px}
+  .drawer-close{background:#eef1f6;border:0;border-radius:8px;width:36px;height:36px;font-size:20px;cursor:pointer;flex:none;line-height:1}
+  .drawer-body{overflow-y:auto;padding:6px 20px 28px}
+  .drawer-body td{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px;vertical-align:top}
+  .hint{font-size:12.5px;color:var(--teal);font-weight:600;margin-top:8px}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.drawer,.drawer-ov{transition:none}}
 </style>
 </head>
 <body>
@@ -197,7 +210,8 @@
     <h3 data-i18n="ld_title">Beneath the primes: the money's onward journey</h3>
     <p class="lead" data-i18n="ld_lead">Big international partners win the awards, but much of the money is sub-granted onward. Across the 154 largest projects, $1.06 billion — about half of what was obligated — was passed to 562 other organisations, many of them Nepali firms and local NGOs, reaching 48 of Nepal's 77 districts.</p>
     <div class="card" id="landed-sum" style="font-weight:650;font-size:15px"></div>
-    <div class="grid2" style="margin-top:16px">
+    <p class="hint" data-i18n="ld_hint">Tip: click any bar to see its breakdown.</p>
+    <div class="grid2" style="margin-top:6px">
       <div class="card"><div id="c-subrec" class="chart tall" role="img"></div>
         <div class="note" data-i18n="ld_note1">Top sub-recipients by amount received — a mix of international primes and Nepali organisations (Thakral One Nepal, Subisu, CEAPRED, local NGOs).</div></div>
       <div class="card"><div id="c-districts" class="chart tall" role="img"></div>
@@ -224,6 +238,7 @@
     <h3 data-i18n="lg_title">The full project ledger</h3>
     <p class="lead" data-i18n="lg_lead">Every individual US award implemented in Nepal since FY2015 — all 2,609 of them — triaged by where they stand today. "Ended 2025–26" means the award's period ended inside the restructuring window: that bucket mixes natural completions with early terminations, because the public data does not say which is which. The cross-check from the IATI transparency feeds shows only 6 US activities formally marked cancelled or suspended — official status reporting clearly lags reality.</p>
     <div class="card" id="ledger-sum" style="font-weight:650;font-size:15px"></div>
+    <p class="hint" data-i18n="lg_hint">Tip: click a recipient to see its sub-grants.</p>
     <div class="card" style="margin-top:16px"><div id="c-cohorts" class="chart sm" role="img"></div>
       <div class="note" data-i18n="lg_cohort_note">Number of awards whose period of performance overlaps each US fiscal year.</div></div>
     <div class="controls" style="margin-top:16px">
@@ -301,12 +316,22 @@
   </footer>
 </div>
 
+<div class="drawer-ov" id="drawer-ov" onclick="closeDrawer()"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+  <div class="drawer-head">
+    <div style="flex:1"><h4 id="drawer-title"></h4><div class="sub" id="drawer-sub"></div></div>
+    <button class="drawer-close" onclick="closeDrawer()" aria-label="Close">×</button>
+  </div>
+  <div class="drawer-body"><table style="width:100%"><tbody id="drawer-rows"></tbody></table></div>
+</aside>
+
 <script src="../vendor/echarts.min.js"></script>
 <script src="us_data.js"></script>
 <script src="us_partners.js"></script>
 <script src="us_projects.js"></script>
 <script src="us_detail.js"></script>
 <script src="audits.js"></script>
+<script src="us_subawards.js"></script>
 <script>
 const D = window.US_DATA;
 const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -378,6 +403,12 @@ const I18N = {
   ld_subrec_t:"Top sub-recipients (US$ m received)", ld_dist_t:"Sub-awards by Nepal district (US$ m)",
   ld_note1:"Top sub-recipients by amount received — a mix of international primes and Nepali organisations (Thakral One Nepal, Subisu, CEAPRED, local NGOs).",
   ld_note2:"Sub-awards naming a Nepal district. USASpending has no recipient-country field, so we show named geography rather than claim a precise share to Nepali organisations.",
+  ld_hint:"Tip: click any sub-recipient or district bar to see its full breakdown.",
+  lg_hint:"Tip: click a recipient (▸) to see the Nepali organisations it sub-granted to.",
+  dr_district:"district", dr_empty:"No sub-awards recorded for this item (the prime may have delivered the work directly).",
+  dr_sub_h:"received {t} across {n} sub-awards, from these projects:",
+  dr_dist_h:"{t} across {n} sub-awards, to these organisations:",
+  dr_proj_h:"passed {t} onward across {n} sub-awards:",
   au_kicker:"Accountability", au_title:"What the auditors found",
   au_lead:"The US Inspector General audits US assistance to Nepal. Across the seven Nepal audits we could trace, total questioned costs were $323,161 — about 0.016% of the $2.0bn delivered, and mostly small ineligible or unsupported items on funds managed directly by the Government of Nepal. We archived four of the audit PDFs here with checksums; the rest now live only on USAID's offline document server.",
   au_sum:"7 audits  ·  {q} in questioned costs ({pct}% of delivered aid)  ·  {arch} archived here with checksums",
@@ -498,6 +529,12 @@ const I18N = {
   ld_subrec_t:"प्रमुख उप-प्राप्तकर्ता (डलर मिलियन)", ld_dist_t:"नेपाल जिल्लाअनुसार उप-अवार्ड (डलर मिलियन)",
   ld_note1:"प्राप्त रकमअनुसार प्रमुख उप-प्राप्तकर्ता — अन्तर्राष्ट्रिय प्राइम र नेपाली संस्था (Thakral One Nepal, Subisu, CEAPRED, स्थानीय गैसस) को मिश्रण।",
   ld_note2:"नेपाल जिल्ला उल्लेख गर्ने उप-अवार्ड। USASpending मा प्राप्तकर्ता-देश क्षेत्र छैन, त्यसैले हामी ठ्याक्कै नेपाली अंश दाबी नगरी नामित भूगोल देखाउँछौं।",
+  ld_hint:"सुझाव: पूरा विवरण हेर्न कुनै उप-प्राप्तकर्ता वा जिल्ला बारमा क्लिक गर्नुहोस्।",
+  lg_hint:"सुझाव: कुन नेपाली संस्थालाई उप-अनुदान दियो हेर्न प्राप्तकर्ता (▸) मा क्लिक गर्नुहोस्।",
+  dr_district:"जिल्ला", dr_empty:"यो वस्तुका लागि उप-अवार्ड अभिलेख छैन (प्राइमले प्रत्यक्ष काम गरेको हुनसक्छ)।",
+  dr_sub_h:"{n} उप-अवार्डमा {t} प्राप्त, यी परियोजनाहरूबाट:",
+  dr_dist_h:"{n} उप-अवार्डमा {t}, यी संस्थाहरूलाई:",
+  dr_proj_h:"{n} उप-अवार्डमा {t} अगाडि पठाइयो:",
   au_kicker:"जवाफदेहिता", au_title:"लेखापरीक्षकले के भेट्टाए",
   au_lead:"अमेरिकी महालेखापरीक्षकले नेपाललाई अमेरिकी सहायताको लेखापरीक्षण गर्छ। हामीले पत्ता लगाएका सात नेपाल लेखापरीक्षणमा, कुल प्रश्नचिह्नित खर्च $323,161 थियो — वितरित $2.0bn को करिब ०.०१६%, र अधिकांश नेपाल सरकारले प्रत्यक्ष व्यवस्थापन गरेको रकममा साना अयोग्य वा अप्रमाणित वस्तु। हामीले चार लेखापरीक्षण PDF यहाँ चेकसमसहित अभिलेख गर्‍यौं; बाँकी अहिले USAID को बन्द दस्तावेज सर्भरमा मात्र छन्।",
   au_sum:"७ लेखापरीक्षण  ·  {q} प्रश्नचिह्नित खर्च (वितरितको {pct}%)  ·  {arch} यहाँ चेकसमसहित अभिलेख",
@@ -628,7 +665,7 @@ function drawLanding(){
   document.getElementById('landed-sum').textContent=t('ld_sum')
     .replace('{sub}',Math.round(h.subawarded_m).toLocaleString())
     .replace('{orgs}',h.n_sub_orgs).replace('{dist}',h.n_districts);
-  const bar=(id,title,arr,color)=>{
+  const bar=(id,title,arr,color,onItem)=>{
     aria(id,title);
     const a=arr.slice().reverse();
     chart(id).setOption({animation:anim,textStyle:baseText(),
@@ -637,12 +674,38 @@ function drawLanding(){
       tooltip:{trigger:'axis',axisPointer:{type:'shadow'},valueFormatter:fmt},
       xAxis:{type:'value',splitLine:{lineStyle:{color:'#eef1f6'}}},
       yAxis:{type:'category',data:a.map(x=>x.name.length>32?x.name.slice(0,30)+'…':x.name),axisLabel:{fontSize:10}},
-      series:[{type:'bar',data:a.map(x=>x.m),itemStyle:{color,borderRadius:[0,4,4,0]},
+      series:[{type:'bar',cursor:'pointer',data:a.map(x=>x.m),itemStyle:{color,borderRadius:[0,4,4,0]},
         label:{show:true,position:'right',formatter:p=>'$'+p.value+'m',fontSize:10,color:'#12233B'}}]},true);
+    const ch=chart(id); ch.off('click'); if(onItem) ch.on('click',pp=>onItem(a[pp.dataIndex]));
   };
-  bar('c-subrec',t('ld_subrec_t'),D2.top_sub,'#0E7C86');
-  bar('c-districts',t('ld_dist_t'),D2.top_districts,'#C0152F');
+  bar('c-subrec',t('ld_subrec_t'),D2.top_sub,'#0E7C86',x=>drillSub(x.name));
+  bar('c-districts',t('ld_dist_t'),D2.top_districts,'#C0152F',x=>drillDist(x.name));
 }
+
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+const money=v=>v>=1e6?'$'+(v/1e6).toFixed(2)+'m':(v>=1000?'$'+Math.round(v/1000)+'k':'$'+Math.round(v));
+function openDrawer(title, sub, rows){
+  document.getElementById('drawer-title').textContent=title;
+  document.getElementById('drawer-sub').textContent=sub;
+  const html=rows.sort((x,y)=>y.a-x.a).slice(0,150).map(r=>
+    `<tr><td class="num" style="white-space:nowrap;padding-right:14px;font-weight:700;color:#0E7C86">${money(r.a)}</td>
+      <td>${esc(r.left||'—')}${r.right?`<div style="font-size:11.5px;color:#5b6b7d;margin-top:1px">${esc(r.right)}</div>`:''}</td></tr>`).join('');
+  document.getElementById('drawer-rows').innerHTML=html||`<tr><td style="color:#5b6b7d">${t('dr_empty')}</td></tr>`;
+  document.getElementById('drawer').classList.add('open');
+  document.getElementById('drawer-ov').classList.add('open');
+}
+function closeDrawer(){document.getElementById('drawer').classList.remove('open');document.getElementById('drawer-ov').classList.remove('open');}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer();});
+const subsAll=()=>window.US_SUBS||[];
+function drillSub(name){const r=subsAll().filter(x=>x.s===name);const tot=r.reduce((a,b)=>a+b.a,0);
+  openDrawer(name, t('dr_sub_h').replace('{n}',r.length).replace('{t}',money(tot)),
+    r.map(x=>({a:x.a,left:x.p,right:[x.j,x.d&&(x.d+' '+t('dr_district'))].filter(Boolean).join(' · ')})));}
+function drillDist(name){const r=subsAll().filter(x=>x.d===name);const tot=r.reduce((a,b)=>a+b.a,0);
+  openDrawer(name+' '+t('dr_district'), t('dr_dist_h').replace('{n}',r.length).replace('{t}',money(tot)),
+    r.map(x=>({a:x.a,left:x.s,right:x.p})));}
+function drillProj(aid,label){const r=subsAll().filter(x=>x.w===aid);const tot=r.reduce((a,b)=>a+b.a,0);
+  openDrawer(label, t('dr_proj_h').replace('{n}',r.length).replace('{t}',money(tot)),
+    r.map(x=>({a:x.a,left:x.s,right:x.d?(x.d+' '+t('dr_district')):''})));}
 function drawLedger(){
   const P=window.US_PROJECTS; if(!P) return;
   const S=P.summary, g=k=>S[k]||{n:0,usd:0};
@@ -680,7 +743,9 @@ function renderLedgerRows(){
   const shown=match.slice(0,30);
   document.querySelector('#ledger-table tbody').innerHTML=shown.map(a=>{
     const d=a.link?`<a href="${a.link}" target="_blank" rel="noopener">${a.desc||'—'}</a>`:(a.desc||'—');
-    return `<tr><td class="num">$${a.usd.toFixed(1)}</td><td>${a.recipient}</td><td>${d}</td>
+    const aid=a.link?a.link.split('/award/')[1]:'';
+    const rec=aid?`<span class="clickable" style="color:var(--teal)" data-aid="${esc(aid)}" data-label="${esc(a.recipient)}" onclick="drillProj(this.dataset.aid,this.dataset.label)">${esc(a.recipient)} ▸</span>`:esc(a.recipient);
+    return `<tr><td class="num">$${a.usd.toFixed(1)}</td><td>${rec}</td><td>${d}</td>
       <td style="white-space:nowrap">${(a.start||'?').slice(0,7)} → ${(a.end||'?').slice(0,7)}</td>
       <td><span class="pill ${pills[a.status]||'p-exp'}">${t('lg_s_'+a.status)}</span></td></tr>`;}).join('');
   document.getElementById('ledger-count').textContent =

@@ -60,6 +60,23 @@ def main():
     }
     out = C.ROOT / "report/dashboard/usforeignaiddata/us_detail.js"
     out.write_text("window.US_DETAIL = " + json.dumps(data) + ";\n")
+
+    # full sub-award records for client-side drill-down (click a bar/row -> breakdown).
+    # compact keys: s=sub-recipient, a=amount $, d=district, p=prime, j=project desc, w=prime award id
+    desc_by_award = {d["award_id"]: d["desc"] for d in det}
+    recs = []
+    for x in subs:
+        amt = float(x["amount_usd"] or 0)
+        if amt <= 0:
+            continue
+        d = (x["district"] or "").strip().title()
+        recs.append({"s": x["sub_recipient"], "a": round(amt),
+                     "d": d if d in NEPAL_DISTRICTS else "",
+                     "p": x["prime"], "w": x["prime_award"],
+                     "j": desc_by_award.get(x["prime_award"], "")[:60]})
+    sj = C.ROOT / "report/dashboard/usforeignaiddata/us_subawards.js"
+    sj.write_text("window.US_SUBS = " + json.dumps(recs, separators=(",", ":")) + ";\n")
+    print(f"  + us_subawards.js ({len(recs)} records, {sj.stat().st_size//1024} KB) for drill-down")
     print(f"onward-flow ${tot_sub/1e6:,.0f}m to {len(by_sub)} orgs "
           f"({100*tot_sub/tot_obl:.0f}% of the ${tot_obl/1e6:,.0f}m obligated) | "
           f"{len(by_dist)} Nepal districts named in {n_dist_aware} sub-awards")
