@@ -26,5 +26,19 @@ jobs:
       - name: Rebuild dashboard data + validate integrity
         run: |
           pip install pandas
+          # Regenerate every dashboard data file that builds from committed inputs only (no network):
+          # the main board (85), the US localisation/sub-awards/projmeta (91), and the search indexes
+          # (93). 86/87 need the live USAspending/ForeignAssistance APIs, so they stay manual.
           python scripts/85_dashboard_data.py
+          python scripts/91_us_localization.py
+          python scripts/93_search_index.py
           python scripts/90_validate.py
+          # The committed dashboard JS (≈0.6 MB the public actually loads) must equal a fresh rebuild.
+          # This fails the build on a hand-edit or a stale-data commit that bypassed the pipeline.
+          git diff --exit-code -- \
+            report/dashboard/data.js \
+            report/dashboard/search_index.js report/dashboard/search_index_us.js \
+            report/dashboard/usforeignaiddata/us_subawards.js \
+            report/dashboard/usforeignaiddata/us_detail.js \
+            report/dashboard/usforeignaiddata/us_projmeta.js \
+            || { echo "::error::Committed dashboard JS is stale — run 'make dashboard-data' and commit."; exit 1; }

@@ -16,6 +16,17 @@ stored in the repo, and there is no `*.workers.dev`/asset path that bypasses it.
 **any username** and **password = `SITE_PASSWORD`**. If `SITE_PASSWORD` is unset the site returns
 503 (fail-closed). For per-user (not shared-password) access, use Cloudflare Access instead.
 
+## Security headers + TLS
+The Worker sets security headers on **every** response: `Strict-Transport-Security` (HSTS, 1 year),
+a `Content-Security-Policy` that allows only same-origin + inline resources (the dashboards load
+nothing from third parties), `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`,
+`Referrer-Policy: no-referrer`, and `Cache-Control: private` on authenticated assets so gated
+content is never stored in a shared/CDN cache (the browser still caches per-user, so the ~1 MB of
+assets are not re-downloaded each visit). For HSTS to be safe, set the zone's SSL/TLS mode to
+**Full (Strict)** and enable **Always Use HTTPS** (SSL/TLS -> Edge Certificates) so there is no
+HTTP downgrade path. If you ever add a third-party script/font/CDN, relax `script-src`/`style-src`
+in `_worker.js` accordingly.
+
 ## Setup (you do this in the Cloudflare dashboard — I cannot access your account)
 
 ### 1. Project (already connected)

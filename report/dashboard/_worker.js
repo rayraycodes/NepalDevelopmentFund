@@ -24,19 +24,43 @@ export default {
       }
       const password = decoded.slice(decoded.indexOf(":") + 1);
       if (timingSafeEqual(password, expected)) {
-        return env.ASSETS.fetch(request); // authenticated -> serve the static asset
+        // authenticated -> serve the static asset, with security headers. Cache-Control:private
+        // keeps gated content out of any SHARED/CDN cache (no leak) while still letting the
+        // viewer's own browser reuse the bytes (no-cache = revalidate via ETag, so the 1 MB of
+        // assets are not re-downloaded every visit).
+        const asset = await env.ASSETS.fetch(request);
+        return harden(asset, "private, no-cache");
       }
     }
 
-    return new Response("Authentication required.", {
-      status: 401,
-      headers: {
-        "WWW-Authenticate": 'Basic realm="Nepal Development Funding", charset="UTF-8"',
-        "Cache-Control": "no-store",
-      },
-    });
+    return harden(
+      new Response("Authentication required.", {
+        status: 401,
+        headers: { "WWW-Authenticate": 'Basic realm="Nepal Development Funding", charset="UTF-8"' },
+      }),
+      "no-store",
+    );
   },
 };
+
+// Security headers on every response. CSP allows only same-origin + inline (the dashboards use
+// inline <script>/<style>/onclick and a vendored ECharts; they load NOTHING from third parties),
+// and forbids framing/downgrade. Relax script-src if a future CDN dependency is added.
+function harden(resp, cacheControl) {
+  const h = new Headers(resp.headers);
+  h.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");
+  h.set("X-Frame-Options", "DENY");
+  h.set("X-Content-Type-Options", "nosniff");
+  h.set("Referrer-Policy", "no-referrer");
+  h.set("Cache-Control", cacheControl);
+  h.set(
+    "Content-Security-Policy",
+    "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; " +
+      "img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; " +
+      "base-uri 'self'; form-action 'self'",
+  );
+  return new Response(resp.body, { status: resp.status, statusText: resp.statusText, headers: h });
+}
 
 // constant-time comparison to avoid timing side-channels
 function timingSafeEqual(a, b) {

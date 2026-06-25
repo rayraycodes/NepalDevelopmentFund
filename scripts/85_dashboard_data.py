@@ -183,11 +183,14 @@ def main():
          "url": "https://www.aiddata.org/data/aiddatas-geospatial-global-chinese-development-finance-dataset-version-3-0"},
     ]
 
-    # Retrieval date = the latest fetch in the data itself (not a frozen literal).
+    # Retrieval date + dataset version come from the DATA (deterministic), not the wall clock:
+    # the version is whatever stamp the committed core_long carries, so data.js does not churn
+    # daily and a CI rebuild reproduces it byte-for-byte.
     retrieved = core["retrieved_at"].str.slice(0, 10).max() or "2026-06-04"
+    version = core["dataset_version"].mode().iat[0] if (core["dataset_version"] != "").any() else C.DATASET_VERSION
 
     data = {
-        "meta": {"retrieved_at": retrieved, "version": C.DATASET_VERSION,
+        "meta": {"retrieved_at": retrieved, "version": version,
                  "n_rows": kpis["n_rows"], "n_sources": kpis["n_sources"],
                  "n_headline": kpis["n_headline"]},
         "kpis": kpis, "reconciliation": reconciliation, "topDonors": topDonors,
