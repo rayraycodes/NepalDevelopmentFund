@@ -91,7 +91,7 @@
   /* Obvious, keyboard-accessible drill trigger (a real <button>, looks like a tappable chip). */
   .drill{display:inline-flex;align-items:center;gap:5px;font:inherit;font-weight:650;color:var(--teal);
     background:#e9f3f3;border:1px solid #b7dadd;border-radius:8px;padding:5px 9px;cursor:pointer;
-    min-height:34px;text-align:left;line-height:1.25;transition:background .12s,border-color .12s}
+    min-height:44px;text-align:left;line-height:1.25;transition:background .12s,border-color .12s}
   .drill:hover{background:#d9ecec;border-color:#8fc8cd}
   .drill::after{content:"›";font-size:1.15em;font-weight:800;line-height:1;opacity:.8}
   .drill .v{color:var(--muted);font-weight:600}
@@ -100,7 +100,7 @@
   .chips-label{font-size:12.5px;color:var(--muted);width:100%;margin-bottom:-2px}
   .chip-btn{display:inline-flex;align-items:center;gap:7px;font:inherit;font-size:13px;font-weight:650;
     color:var(--teal);background:#fff;border:1.5px solid var(--teal);border-radius:999px;padding:7px 13px;
-    cursor:pointer;min-height:38px;transition:background .12s,color .12s}
+    cursor:pointer;min-height:44px;transition:background .12s,color .12s}
   .chip-btn:hover{background:var(--teal);color:#fff}
   .chip-btn:hover .v{color:#dff1f2}
   .chip-btn .v{color:var(--muted);font-weight:600;font-variant-numeric:tabular-nums}
@@ -123,7 +123,7 @@
 </style>
 </head>
 <body>
-<a class="skip" href="#arc" data-i18n="skip">Skip to content</a>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
 <header>
   <div class="wrap hbar">
     <div class="logo" aria-hidden="true">US</div>
@@ -139,9 +139,10 @@
   </div>
 </header>
 
+<main id="main">
 <div class="hero">
   <div class="wrap">
-    <h2 data-i18n="hero">Two billion dollars, account by account: how US aid to Nepal is built, and how it is being rebuilt.</h2>
+    <h2 data-i18n="hero">How the United States spent two billion dollars of aid in Nepal</h2>
     <p data-i18n="hero_p">The most granular public view of US assistance to Nepal: every budget account, every sub-sector, who funds it and who runs it — from the US government's own reporting system.</p>
     <div id="sx-hero"></div>
   </div>
@@ -342,12 +343,15 @@
       <code>us_by_account.csv</code> · <code>us_by_usg_sector_detail.csv</code> · <code>us_by_managing_agency.csv</code> · <code>us_partners.csv</code> · <code>us_awards.csv</code>
     </p>
   </section>
+</div>
+</main>
 
-  <footer>
+<footer>
+  <div class="wrap">
     <span data-i18n="foot">Part of the Nepal Development Funding dataset.</span>
     <a href="../" data-i18n="back2">Main dashboard</a>
-  </footer>
-</div>
+  </div>
+</footer>
 
 <div class="drawer-ov" id="drawer-ov" onclick="closeDrawer()"></div>
 <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
@@ -1078,6 +1082,9 @@ function drawCuts(){
 
 function setLang(l){ lang=l; localStorage.setItem('nepal_lang',l); render(); }
 render();
+// a11y: every data-table column header gets scope="col" (re-applied after each render in case
+// a table body was rebuilt; headers are static so this is cheap and idempotent)
+document.querySelectorAll('th:not([scope])').forEach(function(t){t.setAttribute('scope','col');});
 </script>
 <script src="../search_index.js"></script>
 <script src="../search_index_us.js"></script>

@@ -107,7 +107,7 @@
 </style>
 </head>
 <body>
-<a class="skip" href="#flows" data-i18n="skip">Skip to content</a>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
 <header>
   <div class="wrap hbar">
     <div class="logo" aria-hidden="true">अ</div>
@@ -133,9 +133,10 @@
   </div>
 </header>
 
+<main id="main">
 <div class="hero">
   <div class="wrap">
-    <h2 data-i18n="hero_title">What Nepal receives, and what donors report giving — compared, not merged.</h2>
+    <h2 data-i18n="hero_title">Who funds Nepal, and how much actually reaches it</h2>
     <p data-i18n="hero_p">A clear, fully sourced view of foreign aid to Nepal. Every number is traced to an official source and tagged by confidence. New here? Start with the short guide below.</p>
     <div class="badges" id="badges"></div>
     <div id="sx-hero"></div>
@@ -228,14 +229,17 @@
       <dl id="gloss-dl"></dl>
     </details>
   </section>
+</div>
+</main>
 
-  <footer>
+<footer>
+  <div class="wrap">
     <span data-i18n="foot">Built from primary sources, retrieved 3 June 2026.</span>
     <a href="../report.md" data-i18n="foot_report">Full report</a> ·
     <a href="../../data/processed/core_long.csv">core_long.csv</a> ·
     <a href="../../data/manifest.csv">manifest.csv</a>
-  </footer>
-</div>
+  </div>
+</footer>
 
 <script src="dash-utils.js"></script>
 <script src="vendor/echarts.min.js"></script>
@@ -562,6 +566,8 @@ const NE_CAUSE={
 
 function setLang(l){ lang=l; localStorage.setItem('nepal_lang',l); render(); }
 render();
+// a11y: every data-table column header gets scope="col" (the tables are static markup)
+document.querySelectorAll('th:not([scope])').forEach(function(t){t.setAttribute('scope','col');});
 </script>
 <script src="search_index.js"></script>
 <script src="search.js"></script>

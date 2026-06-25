@@ -225,7 +225,7 @@
   var ICCOL = { org: '#0a5a61', district: '#8f1f1a', project: '#1d4ed8', donor: '#7a4708', account: '#475569', sector: '#0a5e2f', source: '#475569', audit: '#0a5e2f' };
 
   // ---- DOM ----
-  var ov, modal, input, body, lastFocus, mode = 'search', curResults = [], actIdx = -1, curEntity = null;
+  var ov, modal, input, body, sxStatus, lastFocus, mode = 'search', curResults = [], actIdx = -1, curEntity = null;
   function build() {
     var st = document.createElement('style'); st.textContent = CSS; document.head.appendChild(st);
     ov = document.createElement('div'); ov.className = 'sx-ov'; ov.addEventListener('click', close);
@@ -234,11 +234,13 @@
     modal.innerHTML =
       '<div class="sx-inbar">' +
         '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="' + (ICCOL.org) + '" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>' +
-        '<input class="sx-in" type="text" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-controls="sx-list" autocomplete="off" spellcheck="false">' +
+        '<input class="sx-in" type="text" role="combobox" aria-label="' + esc(L().ph) + '" aria-expanded="true" aria-autocomplete="list" aria-controls="sx-list" autocomplete="off" spellcheck="false">' +
         '<button class="sx-x" type="button" aria-label="' + esc(L().close) + '">×</button>' +
       '</div>' +
-      '<div class="sx-body" id="sx-list" role="listbox" aria-label="' + esc(L().open) + '"></div>';
+      '<div class="sx-body" id="sx-list" role="listbox" aria-label="' + esc(L().open) + '"></div>' +
+      '<div class="sx-status" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"></div>';
     input = modal.querySelector('.sx-in'); body = modal.querySelector('#sx-list');
+    sxStatus = modal.querySelector('.sx-status');
     modal.querySelector('.sx-x').addEventListener('click', close);
     input.placeholder = L().ph;
     input.addEventListener('input', function () { mode = 'search'; render(); });
@@ -300,6 +302,7 @@
   });
 
   // ---- rendering: search results ----
+  function announce(msg) { if (sxStatus) sxStatus.textContent = msg; }   // polite aria-live update
   function render() {
     if (mode === 'profile' && curEntity) return renderProfile(curEntity);
     var t = L(), q = input.value;
@@ -308,15 +311,16 @@
       var top = IDX.filter(function (e) { return e.t === 'org' || e.t === 'district' || e.t === 'donor'; }).slice(0, 6);
       body.innerHTML = '<div class="sx-hint">' + esc(t.empty) + '</div>' +
         '<div class="sx-grouplbl">' + esc(t.sug) + '</div>' + top.map(optHTML).join('');
-      curResults = top; wireOpts(); return;
+      curResults = top; wireOpts(); announce(''); return;
     }
     if (!curResults.length) {
       body.innerHTML = '<div class="sx-hint">' + esc(t.no) + ' “' + esc(q) + '”.</div>';
-      return;
+      announce(t.no + ' ' + q); return;
     }
     body.innerHTML = '<div class="sx-grouplbl">' + t.count.replace('{n}', curResults.length) + '</div>' +
       curResults.map(optHTML).join('');
     wireOpts(); paintActive();
+    announce(t.count.replace('{n}', curResults.length));
   }
   function optHTML(e, i) {
     var t = L();
