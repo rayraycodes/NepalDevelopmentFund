@@ -1,13 +1,18 @@
 # External Development Funding to Nepal: a verifiable, fully sourced dataset
 
-Retrieval date for all figures: **2026-06-03 (UTC)**. Recipient country: Nepal (ISO-2 NP,
-ISO-3 NPL). Primary measure: current (nominal) US dollars unless stated. This report leads
-with what is verified, is explicit about what is uncertain, and never presents an estimate
-as a confirmed fact. Every quantitative claim links to a working source.
+Retrieval date for the donor/recipient core: **2026-06-03/04 (UTC)**; the US deep-dive sources
+(USAspending, the Federal Audit Clearinghouse, organisation locations) were pulled **2026-06-21**.
+Recipient country: Nepal (ISO-2 NP, ISO-3 NPL). Primary measure: current (nominal) US dollars
+unless stated. This report leads with what is verified, is explicit about what is uncertain, and
+never presents an estimate as a confirmed fact. Every quantitative claim links to a working source.
 
-An interactive, self-contained dashboard of these findings is in
+An interactive, self-contained, bilingual (English / नेपाली) dashboard of these findings is in
 [`report/dashboard/index.html`](dashboard/index.html) (run `make serve`, then open
-http://127.0.0.1:8848).
+http://127.0.0.1:8848). It carries a cross-dataset search (press `/` or Ctrl/Cmd-K) that opens a
+profile for any organisation, district, project or donor, and a US deep dive at
+[`/usforeignaiddata`](dashboard/usforeignaiddata/index.html) showing per-project outlays and
+deadlines, the sub-award recipients beneath each prime, where every organisation is based, and a
+link to each US recipient's audited financials (Single Audit + USAID OIG).
 
 ## What is verified (read this first)
 
@@ -47,7 +52,8 @@ activity-level data is included as an inventory only and is not summed.
 ## 1. Source Registry
 
 All sources retrieved 2026-06-03. Snapshots and SHA-256 checksums are in
-[`data/manifest.csv`](../data/manifest.csv). Full machine-readable registry:
+the per-source manifest fragments [`data/manifest_*.csv`](../data) (one per source, each with
+snapshot path, URL, params, SHA-256, bytes, HTTP status and retrieval time). Full machine-readable registry:
 [`config/sources.yaml`](../config/sources.yaml).
 
 | Source | Side | Access method (verified) | Coverage | Status / limitations |
@@ -331,14 +337,22 @@ Tools: Python 3.13 (pandas, requests), curl. Build:
 
 ```bash
 pip install -r requirements.txt
-make anchor    # World Bank net-ODA anchor + OECD DAC2A (verified core)
-make fetch     # remaining donor sources (also runnable via the parallel agent workflow)
-make build     # dedupe IATI, reconcile, assemble core_long + aggregates + data dictionary
-make validate  # integrity assertions (exits non-zero on failure)
+make anchor          # World Bank net-ODA anchor + OECD DAC2A (verified core)
+make fetch           # remaining sources, incl. USAspending detail, OIG + FAC audits, org locations
+make build           # dedupe IATI, reconcile, assemble core_long + aggregates + data dictionary
+make validate        # integrity assertions (exits non-zero on failure)
+make dashboard-data  # build the dashboards' embedded JS (KPIs, US deep dive, cross-dataset search index)
 ```
 
+The `dashboard-data` step is also enforced in CI: the workflow regenerates every network-free
+dashboard JS file (main board, US localisation, search indexes) and fails if the committed output
+does not match, so hand-edited or stale dashboard data cannot reach the published site. The
+organisation-enrichment fetches that need live APIs — `94_org_audits.py` (FAC Single Audits via
+`api.fac.gov`; set `FAC_API_KEY` for a full pull) and `95_org_locations.py` (USAspending recipient
+addresses) — snapshot their responses and are run manually, with their outputs committed.
+
 Exact endpoints, dataset versions, HTTP status, byte sizes, SHA-256 and retrieval timestamps for
-every snapshot are in [`data/manifest.csv`](../data/manifest.csv). Dataflow versions:
+every snapshot are in the per-source manifest fragments [`data/manifest_*.csv`](../data). Dataflow versions:
 OECD DAC2A `DSD_DAC2@DF_DAC2A` v1.5; OECD CRS `DSD_CRS@DF_CRS` (dcd-public node); World Bank
 Projects API v3; World Bank Indicators API v2. Recipient code in current OECD SDMX is the ISO-3
 string `NPL` (the legacy numeric DAC code 547 applies only to old CRS bulk microdata files).
@@ -368,8 +382,9 @@ d-portal's `select=stats` form is broken and the `from=act` form must be used.
 | [`data/processed/us_by_managing_agency.csv`](../data/processed/us_by_managing_agency.csv) | US assistance by implementing (managing) agency; reconciles to the funding-agency cut to the dollar |
 | [`data/processed/us_project_detail.csv`](../data/processed/us_project_detail.csv) | per-project obligation/outlay/sub-award totals for the 154 awards >= $1m (USASpending) |
 | [`data/processed/us_subawards.csv`](../data/processed/us_subawards.csv) | 1,626 sub-awards to 562 organisations beneath the US primes, with Nepal district where named |
-| [`data/processed/documents.csv`](../data/processed/documents.csv) | archived primary strategy/compact documents (MCC, CDCS, ICS, ADB CPS, WB CPF) with SHA-256 |
 | [`data/processed/audits.csv`](../data/processed/audits.csv) | USAID OIG Nepal audits: questioned costs, verdict, archived-or-not, verified-in-PDF (oig.usaid.gov) |
+| [`data/processed/org_audits.json`](../data/processed/org_audits.json) | US recipient organisations linked to their audited financials: confirmed Federal Audit Clearinghouse Single Audits (audit year + EIN + report link, exact-name match) and matched USAID OIG audits |
+| [`data/processed/org_locations.json`](../data/processed/org_locations.json) | registered country/state/city/address of each US prime organisation (USAspending) — 54 US, 21 Nepal, plus others |
 | [`data/processed/us_partners.csv`](../data/processed/us_partners.csv) | top US implementing partners for Nepal (USASpending.gov awards, obligations, place of performance NPL; separate accounting frame, not additive with the above) |
 | [`data/processed/us_awards.csv`](../data/processed/us_awards.csv) | largest named US awards for Nepal with official descriptions, periods, awarding agencies and award links (USASpending.gov) |
 | [`data/processed/documents.csv`](../data/processed/documents.csv) | registry of archived primary documents (MCC compact agreement, USAID CDCS 2020-25 recovered from grants.gov, US ICS, ADB CPS 2025-29, WB CPF FY2025-31) with SHA-256, page counts and original URLs; PDFs in `data/raw/docs/`, extracted text in `data/interim/docs/` |
