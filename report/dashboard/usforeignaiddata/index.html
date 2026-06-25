@@ -1086,8 +1086,7 @@ render();
 // a table body was rebuilt; headers are static so this is cheap and idempotent)
 document.querySelectorAll('th:not([scope])').forEach(function(t){t.setAttribute('scope','col');});
 </script>
-<script src="../search_index.js"></script>
-<script src="../search_index_us.js"></script>
+<!-- search.js lazy-loads search_index.js + search_index_us.js on first use (off the initial load) -->
 <script src="../search.js"></script>
 </body>
 </html>

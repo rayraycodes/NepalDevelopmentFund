@@ -16,6 +16,7 @@
       empty: 'Search every dataset at once — organisations, sub-recipients, districts, projects, donors, budget accounts, sectors, sources and audits. Pick any result to open its full profile.',
       findhint: 'Search for any organisation, district, project, or funder, and see everything we know about it in one place.',
       no: 'No matches for', sug: 'Try one of these', count: '{n} results',
+      loading: 'Loading search…', no_index: 'Search could not load. Please check your connection and refresh.',
       roles: { prime: 'Prime partner', sub: 'Sub-recipient' }, based_in: 'Based in', worked_in: 'Worked in',
       types: { org: 'Organisation', district: 'District', project: 'Project', donor: 'Donor', account: 'Budget account', sector: 'Sector', source: 'Source', audit: 'Audit' },
       as_prime: 'As a prime partner', as_sub: 'As a sub-recipient',
@@ -43,6 +44,7 @@
       empty: 'सबै डेटासेट एकैपटक खोज्नुहोस् — संस्था, उप-प्राप्तकर्ता, जिल्ला, परियोजना, दाता, बजेट खाता, क्षेत्र, स्रोत र लेखापरीक्षण। पूरा विवरण हेर्न कुनै नतिजा छान्नुहोस्।',
       findhint: 'कुनै पनि संस्था, जिल्ला, परियोजना वा दाता खोज्नुहोस्, र त्यसबारे हामीसँग भएको सबै जानकारी एकै ठाउँमा हेर्नुहोस्।',
       no: 'नतिजा भेटिएन:', sug: 'यीमध्ये प्रयास गर्नुहोस्', count: '{n} नतिजा',
+      loading: 'खोज लोड हुँदैछ…', no_index: 'खोज लोड हुन सकेन। इन्टरनेट जाँचेर पुनः लोड गर्नुहोस्।',
       roles: { prime: 'प्रमुख साझेदार', sub: 'उप-प्राप्तकर्ता' }, based_in: 'अवस्थित', worked_in: 'कार्यक्षेत्र',
       types: { org: 'संस्था', district: 'जिल्ला', project: 'परियोजना', donor: 'दाता', account: 'बजेट खाता', sector: 'क्षेत्र', source: 'स्रोत', audit: 'लेखापरीक्षण' },
       as_prime: 'प्रमुख साझेदारको रूपमा', as_sub: 'उप-प्राप्तकर्ताको रूपमा',
@@ -257,7 +259,9 @@
     modal.setAttribute('aria-label', L().open);
     ov.classList.add('open'); modal.classList.add('open');
     document.body.style.overflow = 'hidden';
-    mode = 'search'; render(); input.focus();
+    mode = 'search';
+    withIndex(function () { if (ov.classList.contains('open')) render(); });   // load on first open
+    render(); input.focus();
   }
   function close() {
     ov.classList.remove('open'); modal.classList.remove('open');
@@ -306,6 +310,11 @@
   function render() {
     if (mode === 'profile' && curEntity) return renderProfile(curEntity);
     var t = L(), q = input.value;
+    if (!indexLoaded) {            // index still fetching (or failed) — show a brief status
+      var msg = indexLoading ? t.loading : t.no_index;
+      body.innerHTML = '<div class="sx-hint">' + esc(msg) + '</div>';
+      announce(msg); return;
+    }
     curResults = run(q); actIdx = curResults.length ? 0 : -1;
     if (!q) {
       var top = IDX.filter(function (e) { return e.t === 'org' || e.t === 'district' || e.t === 'donor'; }).slice(0, 6);
@@ -548,6 +557,7 @@
     btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>' +
       '<span class="sx-lbl">' + esc(L().open) + '</span><span class="sx-kbd">/</span>';
     btn.addEventListener('click', open);
+    btn.addEventListener('pointerenter', function () { withIndex(); }, { once: true });  // warm the index on hover
     if (langEl && langEl.parentNode) langEl.parentNode.insertBefore(btn, langEl);
     else document.querySelector('header .hbar').appendChild(btn);
     // keep label localized
@@ -575,7 +585,9 @@
         '<div class="sx-herochips"><span class="sx-try">' + esc(t.sug) + ':</span>' +
           EXAMPLES.map(function (x) { return '<button type="button" class="sx-herochip">' + esc(x) + '</button>'; }).join('') +
         '</div>';
-      host.querySelector('#sx-herobtn').addEventListener('click', open);
+      var hbtn = host.querySelector('#sx-herobtn');
+      hbtn.addEventListener('click', open);
+      hbtn.addEventListener('pointerenter', function () { withIndex(); }, { once: true });  // warm on hover
       host.querySelectorAll('.sx-herochip').forEach(function (b) {
         b.addEventListener('click', function () { openWith(b.textContent); });
       });
@@ -593,23 +605,28 @@
     var m = /^#find=(.+)$/.exec(location.hash);
     if (!m) return;
     var id = decodeURIComponent(m[1]);
-    var e = IDX.find(function (x) { return x.i === id; });
-    if (e) { open(); openEntity(e); }
+    withIndex(function () {
+      var e = IDX.find(function (x) { return x.i === id; });
+      if (e) { open(); openEntity(e); }
+    });
   }
 
-  function init() {
-    if (!IDX.length) return;
-    // On the deep-dive page, search_index_us.js adds the heavy profiles (sub-recipient,
-    // award and district lists). Merge them onto the slim core entries. The main board
-    // ships only the headline scalars and reaches the full profile via the #find deep-link.
+  // ---- lazy index loading ----
+  // The search index (~0.3 MB core + 0.3 MB heavy on the deep dive) is NOT loaded with the page —
+  // most visitors never search, and it is pure weight on a slow Nepali-mobile first paint. It is
+  // fetched on first use (palette open, a deep-link, or a trigger hover) and the UI shows a brief
+  // "loading" state until it arrives.
+  var indexLoaded = IDX.length > 0, indexLoading = false, pendingCbs = [];
+  function finalizeIndex() {
+    // On the deep-dive page, search_index_us.js adds the heavy profiles (sub-recipient, award and
+    // district lists). Merge them onto the slim core entries; the main board reaches them via #find.
     if (window.SEARCH_US) {
       for (var j = 0; j < IDX.length; j++) {
         var full = window.SEARCH_US[IDX[j].i];
         if (full) IDX[j].p = full;
       }
     }
-    // Look up an organisation's location by name, so counterparty lists (a project's
-    // sub-recipients, a district's partners) can show where each one is based too.
+    // org location by name, so counterparty lists can show where each org is based
     IDX.forEach(function (e) {
       if (e.t === 'org' && e.loc && e.loc.country) {
         [e.n].concat(e.k || []).forEach(function (nm) {
@@ -617,7 +634,33 @@
         });
       }
     });
+  }
+  function withIndex(cb) {        // run cb once the index is ready (load it if needed)
+    if (indexLoaded) { if (cb) cb(); return; }
+    if (cb) pendingCbs.push(cb);
+    if (indexLoading) return;
+    indexLoading = true;
+    var base = PAGE === 'us' ? '../' : '';
+    var files = PAGE === 'us' ? ['search_index.js', 'search_index_us.js'] : ['search_index.js'];
+    var i = 0;
+    (function next(ok) {
+      if (ok === false) { indexLoading = false; flush(); return; }   // load error -> render no_index
+      if (i >= files.length) {
+        IDX = window.SEARCH_INDEX || []; finalizeIndex();
+        indexLoaded = true; indexLoading = false; flush(); return;
+      }
+      var s = document.createElement('script');
+      s.src = base + files[i++];
+      s.onload = function () { next(true); };
+      s.onerror = function () { next(false); };
+      document.head.appendChild(s);
+    })(true);
+    function flush() { var cbs = pendingCbs; pendingCbs = []; cbs.forEach(function (c) { c(); }); }
+  }
+
+  function init() {
     build(); mountTrigger(); mountHero();
+    if (indexLoaded) finalizeIndex();        // eager path (only if a <script> preloaded it)
     document.addEventListener('keydown', globalKeys);
     window.addEventListener('hashchange', maybeDeepLink);
     maybeDeepLink();

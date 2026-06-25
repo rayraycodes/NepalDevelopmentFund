@@ -569,7 +569,7 @@ render();
 // a11y: every data-table column header gets scope="col" (the tables are static markup)
 document.querySelectorAll('th:not([scope])').forEach(function(t){t.setAttribute('scope','col');});
 </script>
-<script src="search_index.js"></script>
+<!-- search.js lazy-loads search_index.js on first use (keeps it off the initial page load) -->
 <script src="search.js"></script>
 </body>
 </html>
