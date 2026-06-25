@@ -30,6 +30,24 @@ window.DASH = (function () {
     // Localised country name (Nepali when the page is in नेपाली, else as written).
     ccName: function (c) {
       return (document.documentElement.lang === 'ne' && COUNTRY_NE[c]) ? COUNTRY_NE[c] : (c || '');
+    },
+    // Client-side "download this view" — turn an array of plain objects into a CSV file. Lets a
+    // journalist/researcher take exactly what is on screen without a server round-trip. The BOM
+    // makes Excel read UTF-8 (Devanagari/diacritics) correctly.
+    downloadCSV: function (filename, rows) {
+      if (!rows || !rows.length) return;
+      var cols = Object.keys(rows[0]);
+      var cell = function (v) {
+        v = (v == null ? '' : String(v));
+        return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
+      };
+      var csv = cols.join(',') + '\n' +
+        rows.map(function (r) { return cols.map(function (c) { return cell(r[c]); }).join(','); }).join('\n');
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob(['﻿' + csv], { type: 'text/csv;charset=utf-8' }));
+      a.download = filename;
+      document.body.appendChild(a); a.click();
+      setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
     }
   };
 })();

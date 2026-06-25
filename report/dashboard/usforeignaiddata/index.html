@@ -279,6 +279,7 @@
       <label for="lgStatus" data-i18n="lg_f_status">Status</label><select id="lgStatus"></select>
       <label for="lgSearch" data-i18n="lg_f_search">Search</label>
       <input id="lgSearch" type="search" style="font:inherit;font-size:14px;padding:9px 12px;border:1px solid var(--line);border-radius:8px;min-height:42px;min-width:200px" placeholder="SUAAHARA, health, Chemonics…">
+      <button type="button" id="lgDownload" class="chip-btn" style="margin-left:auto" data-i18n="lg_download">⬇ Download CSV</button>
     </div>
     <div class="card" style="overflow-x:auto">
       <table id="ledger-table" style="min-width:680px"><thead><tr>
@@ -434,7 +435,7 @@ const I18N = {
   lg_f_status:"Status", lg_f_search:"Search",
   lg_t_status:"Status", lg_all:"All statuses",
   lg_s_active:"Active", lg_s_completed:"Completed", lg_s_ended_2526:"Ended 2025–26", lg_s_undated:"Undated",
-  lg_count:"Showing {shown} of {match} matching awards",
+  lg_count:"Showing {shown} of {match} matching awards", lg_download:"⬇ Download CSV",
   lg_note:"Showing awards of $1m and above; the complete ledger of all 2,609 awards is in us_projects_all.csv. Obligations basis, place of performance Nepal.",
   lg_cohort_t:"Awards active per fiscal year",
   ld_kicker:"Where it landed", ld_title:"Beneath the primes: the money's onward journey",
@@ -566,7 +567,7 @@ const I18N = {
   lg_f_status:"स्थिति", lg_f_search:"खोज्नुहोस्",
   lg_t_status:"स्थिति", lg_all:"सबै स्थिति",
   lg_s_active:"चालु", lg_s_completed:"सम्पन्न", lg_s_ended_2526:"२०२५–२६ मा सकिएको", lg_s_undated:"मिति नभएको",
-  lg_count:"{match} मिल्ने अवार्डमध्ये {shown} देखाइएको",
+  lg_count:"{match} मिल्ने अवार्डमध्ये {shown} देखाइएको", lg_download:"⬇ CSV डाउनलोड",
   lg_note:"$1m र माथिका अवार्ड देखाइएको; सबै २,६०९ अवार्डको पूर्ण खाता us_projects_all.csv मा छ। प्रतिबद्धता आधार, कार्यस्थल नेपाल।",
   lg_cohort_t:"आर्थिक वर्षअनुसार चालु अवार्ड",
   ld_kicker:"कहाँ पुग्यो", ld_title:"प्राइमभन्दा तल: पैसाको अगाडिको यात्रा",
@@ -846,6 +847,10 @@ function drawLedger(){
   sel.value=lgStatus; sel.onchange=()=>{lgStatus=sel.value; renderLedgerRows();};
   const inp=document.getElementById('lgSearch');
   inp.oninput=()=>{lgQuery=inp.value.toLowerCase(); renderLedgerRows();};
+  // "Download this view": export the currently-filtered awards (>= $1m) as CSV, client-side
+  document.getElementById('lgDownload').onclick=()=>DASH.downloadCSV('nepal_us_awards.csv',
+    (window._lgRows||[]).map(a=>({amount_usd_m:a.usd, recipient:a.recipient, description:a.desc,
+      start:a.start, end:a.end, status:a.status, agency:a.agency, award_url:a.link||''})));
   renderLedgerRows();
 }
 
@@ -854,6 +859,7 @@ function renderLedgerRows(){
   const pills={active:'p-cons',completed:'p-exp',ended_2526:'p-low',undated:'p-med'};
   const match=P.list.filter(a=>(lgStatus==='all'||a.status===lgStatus) &&
     (!lgQuery||(a.recipient+' '+a.desc+' '+a.agency).toLowerCase().includes(lgQuery)));
+  window._lgRows=match;          // exposed for the "Download CSV" button
   const shown=match.slice(0,30);
   document.querySelector('#ledger-table tbody').innerHTML=shown.map(a=>{
     const d=a.link?`<a href="${a.link}" target="_blank" rel="noopener">${a.desc||'—'}</a>`:(a.desc||'—');
