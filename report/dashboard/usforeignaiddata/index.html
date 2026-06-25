@@ -358,6 +358,7 @@
   <div class="drawer-body"><div id="drawer-meta"></div><table style="width:100%"><tbody id="drawer-rows"></tbody></table></div>
 </aside>
 
+<script src="../dash-utils.js"></script>
 <script src="../vendor/echarts.min.js"></script>
 <script src="us_data.js"></script>
 <script src="us_partners.js"></script>
@@ -790,7 +791,7 @@ function drillProj(aid,label){
   const r=subsAll().filter(x=>x.w===aid); const tot=r.reduce((a,b)=>a+b.a,0);
   const m=(window.US_PROJMETA||{})[aid]; let meta='';
   if(m){
-    const TODAY='2026-06-21';
+    const TODAY=DASH.today;   // viewer's live date, so "deadline passed" is always current
     const dl=m.e?(m.e<TODAY?t('dr_dl_passed').replace('{d}',m.e):t('dr_dl_by').replace('{d}',m.e)):t('dr_dl_none');
     const cell=(v,lab,col)=>`<div><div style="font-size:19px;font-weight:760;color:${col}">${money(v)}</div><div style="font-size:11px;color:var(--muted)">${lab}</div></div>`;
     const awarded=m.s?`<span style="font-weight:700;color:var(--ink)">${t('dr_awarded')}: ${m.s}</span>`:'';
@@ -807,9 +808,8 @@ function drillProj(aid,label){
   openDrawer(label, t('dr_proj_h').replace('{n}',r.length).replace('{t}',money(tot)),
     r.map(x=>({a:x.a,left:x.s,date:x.t,right:x.d?(x.d+' '+t('dr_district')):''})), meta);}
 // Recipient location helpers, shared by the drill drawer and the ledger table.
-const COUNTRY_NE={'United States':'संयुक्त राज्य अमेरिका','Nepal':'नेपाल','United Kingdom':'बेलायत','Germany':'जर्मनी','Mexico':'मेक्सिको','Luxembourg':'लक्जेम्बर्ग','Mozambique':'मोजाम्बिक','Sri Lanka':'श्रीलंका','United Arab Emirates':'संयुक्त अरब इमिरेट्स','Afghanistan':'अफगानिस्तान','Canada':'क्यानडा','Hong Kong':'हङकङ','India':'भारत','China':'चीन','Switzerland':'स्विट्जरल्यान्ड','Japan':'जापान'};
-const ccName=c=>(lang==='ne'&&COUNTRY_NE[c])?COUNTRY_NE[c]:(c||'');
-const ccNorm=s=>String(s||'').toUpperCase().replace(/[^A-Z0-9 ]/g,' ').replace(/\b(INC|INCORPORATED|LLC|LTD|LIMITED|CORP|CORPORATION|CO|PVT|PRIVATE|THE|AND|OF|A)\b/g,' ').replace(/\s+/g,' ').trim();
+// country names + org normalisation now live in dash-utils.js (shared with search.js, single source)
+const ccName=DASH.ccName, ccNorm=DASH.norm;
 let _LOCBYREC=null;
 function recLoc(name){           // a recipient name -> its registered location (from US_PROJMETA)
   if(!_LOCBYREC){_LOCBYREC={};const M=window.US_PROJMETA||{};

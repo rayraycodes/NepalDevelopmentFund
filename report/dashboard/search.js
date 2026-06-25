@@ -77,17 +77,10 @@
     return '$' + Math.round(v);
   }
   function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;'); }
-  var TODAY = '2026-06-21';
-
-  // Country names in Nepali (factual; used only when the page is in नेपाली). City/state stay as-is.
-  var COUNTRY_NE = {
-    'United States': 'संयुक्त राज्य अमेरिका', 'Nepal': 'नेपाल', 'United Kingdom': 'बेलायत',
-    'Germany': 'जर्मनी', 'Mexico': 'मेक्सिको', 'Luxembourg': 'लक्जेम्बर्ग', 'Mozambique': 'मोजाम्बिक',
-    'Sri Lanka': 'श्रीलंका', 'United Arab Emirates': 'संयुक्त अरब इमिरेट्स', 'Afghanistan': 'अफगानिस्तान',
-    'Canada': 'क्यानडा', 'Hong Kong': 'हङकङ', 'India': 'भारत', 'China': 'चीन', 'Switzerland': 'स्विट्जरल्यान्ड',
-    'Japan': 'जापान', 'France': 'फ्रान्स', 'Belgium': 'बेल्जियम', 'Netherlands': 'नेदरल्यान्ड्स'
-  };
-  function countryName(c) { return (document.documentElement.lang === 'ne' && COUNTRY_NE[c]) ? COUNTRY_NE[c] : c; }
+  var TODAY = DASH.today;        // viewer's live date (so "deadline passed" is always current)
+  // country names + countryName() live in dash-utils.js now (shared with the deep-dive page)
+  var COUNTRY_NE = DASH.COUNTRY_NE;
+  var countryName = DASH.ccName;
   function locText(loc) {
     if (!loc) return '';
     return [loc.city, loc.state, countryName(loc.country)].filter(Boolean).join(', ');
@@ -471,7 +464,7 @@
       '<div class="sx-note">' + esc(t.sa_note) + '</div>';
     return sec(t.acct_title, inner);
   }
-  function norm(s) { return String(s || '').toUpperCase().replace(/[^A-Z0-9 ]/g, ' ').replace(/\b(INC|INCORPORATED|LLC|LTD|LIMITED|CORP|CORPORATION|CO|PVT|PRIVATE|THE|AND|OF|A)\b/g, ' ').replace(/\s+/g, ' ').trim(); }
+  var norm = DASH.norm;          // org-name normalisation lives in dash-utils.js (single source)
 
   // section + helpers
   function sec(title, inner) { return '<div class="sx-sec">' + (title ? '<h5>' + esc(title) + '</h5>' : '') + inner + '</div>'; }
