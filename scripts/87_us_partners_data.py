@@ -50,7 +50,7 @@ def tc(name):
 def main():
     s = C.make_session()
     s.headers["Content-Type"] = "application/json"
-    retrieved = C.utc_now()
+    retrieved = C.US_DATA_ASOF   # data vintage (deterministic), not wall-clock
 
     # ---- top recipients, all award types ----
     j = post(s, "spending_by_category/recipient",

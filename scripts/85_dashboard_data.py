@@ -99,14 +99,37 @@ def main():
                            "data": [round(float(oth.get(y, 0)) / 1e6, 1) for y in years]})
         us_agency = {"years": years, "series": series}
 
-    # KPIs
+    # KPIs — DERIVED from the data (never hardcoded) so they cannot silently drift.
     anchor_2023 = next((x["anchor"] for x in reconciliation if x["year"] == 2023), None)
     peak = max((x for x in reconciliation if x["anchor"]), key=lambda x: x["anchor"])
+
+    # Biggest single funder = the cumulative-largest donor-side donor (stable; IDA leads by far).
+    dd = don[(don["side"] == "donor") & (don["flow_stage"] == "disbursement")].copy()
+    dd["amt"] = num(dd["amount_usd"])
+    top_donor = dd.groupby("donor_name")["amt"].sum().sort_values(ascending=False).index[0]
+    largest_partner = ("World Bank (IDA)"
+                       if ("IDA" in top_donor or "International Development Association" in top_donor)
+                       else top_donor.split(" [")[0])
+
+    # Biggest funder OECD misses = the largest non-DAC donor in the MOST RECENT recipient year.
+    # (Year-specific on purpose: China led in 2018 but its disbursements collapsed after; India
+    # leads in the latest year. See discrepancy D7/D8.)
+    NONDAC = {"India", "China", "Saudi Fund", "Kuwait Fund (KFAED)", "OPEC Fund (OFID)",
+              "SAARC Development Fund"}
+    rr = don[(don["side"] == "recipient") & (don["flow_stage"] == "disbursement") &
+             (don["donor_name"].isin(NONDAC))].copy()
+    rr["amt"] = num(rr["amount_usd"]); rr["yr2"] = num(rr["year"])
+    nondac_year = int(rr["yr2"].max())
+    rrl = rr[rr["yr2"] == nondac_year].sort_values("amt", ascending=False)
+    largest_nondac = str(rrl.iloc[0]["donor_name"])
+    largest_nondac_value = round(float(rrl.iloc[0]["amt"]) / 1e6, 1)
+
     kpis = {
         "net_oda_2023": anchor_2023,
         "peak_year": peak["year"], "peak_value": peak["anchor"],
-        "largest_partner": "World Bank (IDA)",
-        "largest_nondac": "India", "largest_nondac_value": 99.8,
+        "largest_partner": largest_partner,
+        "largest_nondac": largest_nondac, "largest_nondac_value": largest_nondac_value,
+        "largest_nondac_year": nondac_year,
         "n_rows": len(core), "n_sources": core["source"].nunique(),
         "n_headline": int((core["counts_in_headline"].str.lower() == "true").sum()),
     }
@@ -160,8 +183,11 @@ def main():
          "url": "https://www.aiddata.org/data/aiddatas-geospatial-global-chinese-development-finance-dataset-version-3-0"},
     ]
 
+    # Retrieval date = the latest fetch in the data itself (not a frozen literal).
+    retrieved = core["retrieved_at"].str.slice(0, 10).max() or "2026-06-04"
+
     data = {
-        "meta": {"retrieved_at": "2026-06-03", "version": C.DATASET_VERSION,
+        "meta": {"retrieved_at": retrieved, "version": C.DATASET_VERSION,
                  "n_rows": kpis["n_rows"], "n_sources": kpis["n_sources"],
                  "n_headline": kpis["n_headline"]},
         "kpis": kpis, "reconciliation": reconciliation, "topDonors": topDonors,

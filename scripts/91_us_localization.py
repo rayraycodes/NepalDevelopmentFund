@@ -17,16 +17,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import common as C
 
-NEPAL_DISTRICTS = {  # 77 districts
- "Achham","Arghakhanchi","Baglung","Baitadi","Bajhang","Bajura","Banke","Bara","Bardiya",
- "Bhaktapur","Bhojpur","Chitwan","Dadeldhura","Dailekh","Dang","Darchula","Dhading","Dhankuta",
- "Dhanusha","Dolakha","Dolpa","Doti","Gorkha","Gulmi","Humla","Ilam","Jajarkot","Jhapa","Jumla",
- "Kailali","Kalikot","Kanchanpur","Kapilvastu","Kaski","Kathmandu","Kavrepalanchok","Khotang",
- "Lalitpur","Lamjung","Mahottari","Makwanpur","Manang","Morang","Mugu","Mustang","Myagdi",
- "Nawalparasi","Nuwakot","Okhaldhunga","Palpa","Panchthar","Parbat","Parsa","Pyuthan","Ramechhap",
- "Rasuwa","Rautahat","Rolpa","Rukum","Rupandehi","Salyan","Sankhuwasabha","Saptari","Sarlahi",
- "Sindhuli","Sindhupalchok","Siraha","Solukhumbu","Sunsari","Surkhet","Syangja","Tanahun",
- "Taplejung","Terhathum","Udayapur","Parasi","Nawalpur"}
+NEPAL_DISTRICTS = C.NEPAL_DISTRICTS   # the official 77 (single source in common.py)
 M = lambda v: round(v / 1e6, 2)
 
 
@@ -50,7 +41,7 @@ def main():
     top_dist = sorted(by_dist.items(), key=lambda kv: -kv[1])[:12]
 
     data = {
-        "meta": {"retrieved_at": C.utc_now(), "n_awards": len(det), "n_subawards": len(subs)},
+        "meta": {"retrieved_at": C.US_DATA_ASOF, "n_awards": len(det), "n_subawards": len(subs)},
         "headline": {"obligated_m": M(tot_obl), "subawarded_m": M(tot_sub),
                      "n_sub_orgs": len(by_sub),
                      "onward_pct": round(100 * tot_sub / tot_obl, 1) if tot_obl else None,
@@ -81,13 +72,7 @@ def main():
     print(f"  + us_subawards.js ({len(recs)} records, {sj.stat().st_size//1024} KB) for drill-down")
 
     # where each prime organisation is registered (country/state/city), keyed by normalised name
-    import re
-    STOP = {"INC", "INCORPORATED", "LLC", "LTD", "LIMITED", "CORP", "CORPORATION",
-            "CO", "PVT", "PRIVATE", "THE", "AND", "OF", "A"}
-
-    def norm(name):
-        toks = re.sub(r"[^A-Z0-9 ]", " ", (name or "").upper()).split()
-        return " ".join(t for t in toks if t not in STOP)
+    norm = C.norm_org
     loc_path = C.PROCESSED / "org_locations.json"
     ORG_LOC = json.loads(loc_path.read_text()) if loc_path.exists() else {}
     for _v in ORG_LOC.values():

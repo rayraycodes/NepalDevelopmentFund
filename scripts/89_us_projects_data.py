@@ -37,7 +37,7 @@ FILT = {"place_of_performance_locations": [{"country": "NPL"}],
 GROUPS = {"assistance": ["02", "03", "04", "05"], "contracts": ["A", "B", "C", "D"]}
 FIELDS = ["Award ID", "Recipient Name", "Award Amount", "Description",
           "Start Date", "End Date", "Awarding Sub Agency", "generated_internal_id"]
-TODAY = date(2026, 6, 11)
+TODAY = date.fromisoformat(C.US_DATA_ASOF)   # data vintage (common.py), was an inconsistent local date
 RESTRUCT_START = date(2025, 1, 20)
 HIDDEN = ("REDACTED", "MISCELLANEOUS")
 

@@ -36,13 +36,7 @@ FAC = "https://api.fac.gov/general"
 KEY = os.environ.get("FAC_API_KEY", "DEMO_KEY")
 TOP_N = 45                       # biggest primes by obligation (covers the bulk of the money)
 SUFFIX = {"INC", "LLC", "LTD", "CORP", "CO", "INCORPORATED", "LIMITED", "LP", "LLP", "PVT", "PLC"}
-STOP = {"INC", "INCORPORATED", "LLC", "LTD", "LIMITED", "CORP", "CORPORATION",
-        "CO", "PVT", "PRIVATE", "THE", "AND", "OF", "A"}            # identical to 93_search_index
-
-
-def norm(name):                  # MUST match 93_search_index.norm so keys line up with org ids
-    toks = re.sub(r"[^A-Z0-9 ]", " ", (name or "").upper()).split()
-    return " ".join(t for t in toks if t not in STOP)
+norm = C.norm_org                # single source in common.py; keys line up with the search index
 
 
 def variants(name):

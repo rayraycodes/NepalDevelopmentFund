@@ -38,54 +38,14 @@ def load_js_global(path):
     return json.loads(txt.split("=", 1)[1].rstrip().rstrip("\n").rstrip(";"))
 
 REDACT = re.compile(r"redact", re.I)
-STOP = {"INC", "INCORPORATED", "LLC", "LTD", "LIMITED", "CORP", "CORPORATION",
-        "CO", "PVT", "PRIVATE", "THE", "AND", "OF", "A"}
-
-def norm(name):
-    """Conservative normaliser for merging an org's prime and sub-recipient roles."""
-    toks = re.sub(r"[^A-Z0-9 ]", " ", (name or "").upper()).split()
-    return " ".join(t for t in toks if t not in STOP)
+# org-name normalisation + the Nepal district maps now live in common.py (single source of truth)
+norm = C.norm_org
 
 def topn(d, n=10):
     return [{"n": k, "a": round(v)} for k, v in sorted(d.items(), key=lambda kv: -kv[1])[:n] if k]
 
-# The official 77 districts (same whitelist 91_us_localization.py applies) so the search
-# surfaces REAL geography, not regex noise from the sub-award descriptions.
-NEPAL_DISTRICTS = {
- "Achham", "Arghakhanchi", "Baglung", "Baitadi", "Bajhang", "Bajura", "Banke", "Bara", "Bardiya",
- "Bhaktapur", "Bhojpur", "Chitwan", "Dadeldhura", "Dailekh", "Dang", "Darchula", "Dhading", "Dhankuta",
- "Dhanusha", "Dolakha", "Dolpa", "Doti", "Gorkha", "Gulmi", "Humla", "Ilam", "Jajarkot", "Jhapa", "Jumla",
- "Kailali", "Kalikot", "Kanchanpur", "Kapilvastu", "Kaski", "Kathmandu", "Kavrepalanchok", "Khotang",
- "Lalitpur", "Lamjung", "Mahottari", "Makwanpur", "Manang", "Morang", "Mugu", "Mustang", "Myagdi",
- "Nawalparasi", "Nuwakot", "Okhaldhunga", "Palpa", "Panchthar", "Parbat", "Parsa", "Pyuthan", "Ramechhap",
- "Rasuwa", "Rautahat", "Rolpa", "Rukum", "Rupandehi", "Salyan", "Sankhuwasabha", "Saptari", "Sarlahi",
- "Sindhuli", "Sindhupalchok", "Siraha", "Solukhumbu", "Sunsari", "Surkhet", "Syangja", "Tanahun",
- "Taplejung", "Terhathum", "Udayapur", "Parasi", "Nawalpur"}
-
-# Official Nepali names for districts, used only as SEARCH ALIASES (never as a figure),
-# so a transcription slip can at worst miss a match — it can never corrupt a number.
-DISTRICT_NE = {
-    "Kathmandu": "काठमाडौं", "Lalitpur": "ललितपुर", "Bhaktapur": "भक्तपुर",
-    "Kavrepalanchok": "काभ्रेपलाञ्चोक", "Sindhupalchok": "सिन्धुपाल्चोक", "Dolakha": "दोलखा",
-    "Ramechhap": "रामेछाप", "Sindhuli": "सिन्धुली", "Makwanpur": "मकवानपुर", "Chitwan": "चितवन",
-    "Dhading": "धादिङ", "Nuwakot": "नुवाकोट", "Rasuwa": "रसुवा", "Gorkha": "गोरखा",
-    "Lamjung": "लमजुङ", "Tanahun": "तनहुँ", "Kaski": "कास्की", "Manang": "मनाङ",
-    "Mustang": "मुस्ताङ", "Myagdi": "म्याग्दी", "Parbat": "पर्वत", "Baglung": "बागलुङ",
-    "Gulmi": "गुल्मी", "Palpa": "पाल्पा", "Syangja": "स्याङ्जा", "Arghakhanchi": "अर्घाखाँची",
-    "Nawalparasi": "नवलपरासी", "Rupandehi": "रुपन्देही", "Kapilvastu": "कपिलवस्तु",
-    "Dang": "दाङ", "Pyuthan": "प्युठान", "Rolpa": "रोल्पा", "Rukum": "रुकुम",
-    "Salyan": "सल्यान", "Banke": "बाँके", "Bardiya": "बर्दिया", "Surkhet": "सुर्खेत",
-    "Dailekh": "दैलेख", "Jajarkot": "जाजरकोट", "Jumla": "जुम्ला", "Kalikot": "कालिकोट",
-    "Mugu": "मुगु", "Humla": "हुम्ला", "Dolpa": "डोल्पा", "Kailali": "कैलाली",
-    "Kanchanpur": "कञ्चनपुर", "Achham": "अछाम", "Doti": "डोटी", "Bajura": "बाजुरा",
-    "Bajhang": "बझाङ", "Darchula": "दार्चुला", "Baitadi": "बैतडी", "Dadeldhura": "डडेल्धुरा",
-    "Morang": "मोरङ", "Sunsari": "सुनसरी", "Jhapa": "झापा", "Ilam": "इलाम",
-    "Udayapur": "उदयपुर", "Saptari": "सप्तरी", "Siraha": "सिराहा", "Dhanusha": "धनुषा",
-    "Mahottari": "महोत्तरी", "Sarlahi": "सर्लाही", "Rautahat": "रौतहट", "Bara": "बारा",
-    "Parsa": "पर्सा", "Sankhuwasabha": "संखुवासभा", "Bhojpur": "भोजपुर", "Khotang": "खोटाङ",
-    "Okhaldhunga": "ओखलढुंगा", "Solukhumbu": "सोलुखुम्बु", "Taplejung": "ताप्लेजुङ",
-    "Panchthar": "पाँचथर", "Terhathum": "तेह्रथुम", "Dhankuta": "धनकुटा", "Dolpo": "डोल्पा",
-}
+NEPAL_DISTRICTS = C.NEPAL_DISTRICTS    # the official 77 (single source in common.py)
+DISTRICT_NE = C.DISTRICT_NE            # EN -> Nepali district names, search aliases only
 
 
 def main():

@@ -25,13 +25,7 @@ import common as C
 
 A = "https://api.usaspending.gov/api/v2"
 SOURCE = "usaspending_location"
-STOP = {"INC", "INCORPORATED", "LLC", "LTD", "LIMITED", "CORP", "CORPORATION",
-        "CO", "PVT", "PRIVATE", "THE", "AND", "OF", "A"}            # identical to 93_search_index
-
-
-def norm(name):
-    toks = re.sub(r"[^A-Z0-9 ]", " ", (name or "").upper()).split()
-    return " ".join(t for t in toks if t not in STOP)
+norm = C.norm_org                # single source in common.py; keys line up with the search index
 
 
 def tc(s):                       # title-case for display, leaving short codes (NY) alone

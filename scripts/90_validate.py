@@ -49,13 +49,15 @@ def main():
     if rsrc - {"nepal_dcr"}:
         errors.append(f"recipient-side headline must be nepal_dcr only, found {rsrc}")
 
-    # 6. headline rows must carry a value and not be MISSING
+    # 6. headline rows must carry a real value and never be MISSING. This is the set the public
+    #    dashboards sum, so an incomplete/empty official figure here is a FAILURE, not a warning
+    #    (data integrity is the project's stated top priority).
     miss_hl = int((hl & (df["status"] == "MISSING")).sum())
     if miss_hl:
-        warns.append(f"{miss_hl} headline rows are MISSING (should not be summed)")
+        errors.append(f"{miss_hl} headline rows are MISSING (must never reach the headline set)")
     noval = int((hl & (df["amount_usd"].astype(str).str.len() == 0)).sum())
     if noval:
-        warns.append(f"{noval} headline rows have empty amount_usd")
+        errors.append(f"{noval} headline rows have empty amount_usd")
 
     print(f"core_long: {len(df)} rows, {df['source'].nunique()} sources, "
           f"{int(hl.sum())} headline")

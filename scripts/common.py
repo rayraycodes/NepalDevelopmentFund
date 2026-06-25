@@ -16,6 +16,7 @@ import csv
 import hashlib
 import json
 import os
+import re
 import time
 from datetime import date, datetime, timezone
 from pathlib import Path
@@ -38,6 +39,12 @@ for _p in (RAW, INTERIM, PROCESSED, LOGS):
 
 # Build tag stamped onto every row so a row ties back to one pipeline run.
 DATASET_VERSION = os.environ.get("DATASET_VERSION", f"{date.today():%Y-%m-%d}.1")
+
+# As-of date for the US award data (when USAspending / ForeignAssistance.gov were pulled). The
+# project-ledger triage (completed / active / ended) and the report cite this. Tie it to the data
+# VINTAGE, not the wall clock, so rebuilds stay deterministic; bump it when the US data is refetched.
+# (Per-project "deadline passed" labels in the browser use the live date instead — see search.js.)
+US_DATA_ASOF = os.environ.get("US_DATA_ASOF", "2026-06-21")
 
 # ---------------------------------------------------------------------------
 # HTTP
@@ -93,6 +100,61 @@ def obs_id(source: str, source_record_id: str, flow_stage: str, year) -> str:
     """Deterministic primary key, stable across rebuilds."""
     key = f"{source}|{source_record_id}|{flow_stage}|{year}"
     return hashlib.sha1(key.encode("utf-8")).hexdigest()[:16]
+
+
+# ---------------------------------------------------------------------------
+# Organisation-name normalisation + Nepal geography
+# Single source of truth for scripts 91/93/94/95 (and kept in sync with the JS in
+# report/dashboard/dash-utils.js). norm_org() builds the key used to merge an org's prime and
+# sub-recipient roles and to join FAC audits / locations to org ids, so every script MUST use
+# this exact function or the keys silently stop lining up.
+# ---------------------------------------------------------------------------
+NAME_STOP = {"INC", "INCORPORATED", "LLC", "LTD", "LIMITED", "CORP", "CORPORATION",
+             "CO", "PVT", "PRIVATE", "THE", "AND", "OF", "A"}
+
+
+def norm_org(name: str) -> str:
+    """Canonical org key: uppercase, punctuation->space, drop legal/stopword tokens."""
+    toks = re.sub(r"[^A-Z0-9 ]", " ", (name or "").upper()).split()
+    return " ".join(t for t in toks if t not in NAME_STOP)
+
+
+# Nepal's 77 districts — whitelist that turns regex-extracted place names into real geography.
+NEPAL_DISTRICTS = {
+ "Achham", "Arghakhanchi", "Baglung", "Baitadi", "Bajhang", "Bajura", "Banke", "Bara", "Bardiya",
+ "Bhaktapur", "Bhojpur", "Chitwan", "Dadeldhura", "Dailekh", "Dang", "Darchula", "Dhading", "Dhankuta",
+ "Dhanusha", "Dolakha", "Dolpa", "Doti", "Gorkha", "Gulmi", "Humla", "Ilam", "Jajarkot", "Jhapa", "Jumla",
+ "Kailali", "Kalikot", "Kanchanpur", "Kapilvastu", "Kaski", "Kathmandu", "Kavrepalanchok", "Khotang",
+ "Lalitpur", "Lamjung", "Mahottari", "Makwanpur", "Manang", "Morang", "Mugu", "Mustang", "Myagdi",
+ "Nawalparasi", "Nuwakot", "Okhaldhunga", "Palpa", "Panchthar", "Parbat", "Parsa", "Pyuthan", "Ramechhap",
+ "Rasuwa", "Rautahat", "Rolpa", "Rukum", "Rupandehi", "Salyan", "Sankhuwasabha", "Saptari", "Sarlahi",
+ "Sindhuli", "Sindhupalchok", "Siraha", "Solukhumbu", "Sunsari", "Surkhet", "Syangja", "Tanahun",
+ "Taplejung", "Terhathum", "Udayapur", "Parasi", "Nawalpur"}
+
+# English -> Nepali district names. SEARCH ALIASES ONLY (never a figure), so a transcription slip
+# can at worst miss a match, never corrupt a number.
+DISTRICT_NE = {
+    "Kathmandu": "काठमाडौं", "Lalitpur": "ललितपुर", "Bhaktapur": "भक्तपुर",
+    "Kavrepalanchok": "काभ्रेपलाञ्चोक", "Sindhupalchok": "सिन्धुपाल्चोक", "Dolakha": "दोलखा",
+    "Ramechhap": "रामेछाप", "Sindhuli": "सिन्धुली", "Makwanpur": "मकवानपुर", "Chitwan": "चितवन",
+    "Dhading": "धादिङ", "Nuwakot": "नुवाकोट", "Rasuwa": "रसुवा", "Gorkha": "गोरखा",
+    "Lamjung": "लमजुङ", "Tanahun": "तनहुँ", "Kaski": "कास्की", "Manang": "मनाङ",
+    "Mustang": "मुस्ताङ", "Myagdi": "म्याग्दी", "Parbat": "पर्वत", "Baglung": "बागलुङ",
+    "Gulmi": "गुल्मी", "Palpa": "पाल्पा", "Syangja": "स्याङ्जा", "Arghakhanchi": "अर्घाखाँची",
+    "Nawalparasi": "नवलपरासी", "Rupandehi": "रुपन्देही", "Kapilvastu": "कपिलवस्तु",
+    "Dang": "दाङ", "Pyuthan": "प्युठान", "Rolpa": "रोल्पा", "Rukum": "रुकुम",
+    "Salyan": "सल्यान", "Banke": "बाँके", "Bardiya": "बर्दिया", "Surkhet": "सुर्खेत",
+    "Dailekh": "दैलेख", "Jajarkot": "जाजरकोट", "Jumla": "जुम्ला", "Kalikot": "कालिकोट",
+    "Mugu": "मुगु", "Humla": "हुम्ला", "Dolpa": "डोल्पा", "Kailali": "कैलाली",
+    "Kanchanpur": "कञ्चनपुर", "Achham": "अछाम", "Doti": "डोटी", "Bajura": "बाजुरा",
+    "Bajhang": "बझाङ", "Darchula": "दार्चुला", "Baitadi": "बैतडी", "Dadeldhura": "डडेल्धुरा",
+    "Morang": "मोरङ", "Sunsari": "सुनसरी", "Jhapa": "झापा", "Ilam": "इलाम",
+    "Udayapur": "उदयपुर", "Saptari": "सप्तरी", "Siraha": "सिराहा", "Dhanusha": "धनुषा",
+    "Mahottari": "महोत्तरी", "Sarlahi": "सर्लाही", "Rautahat": "रौतहट", "Bara": "बारा",
+    "Parsa": "पर्सा", "Sankhuwasabha": "संखुवासभा", "Bhojpur": "भोजपुर", "Khotang": "खोटाङ",
+    "Okhaldhunga": "ओखलढुंगा", "Solukhumbu": "सोलुखुम्बु", "Taplejung": "ताप्लेजुङ",
+    "Panchthar": "पाँचथर", "Terhathum": "तेह्रथुम", "Dhankuta": "धनकुटा", "Dolpo": "डोल्पा",
+}
 
 
 # ---------------------------------------------------------------------------

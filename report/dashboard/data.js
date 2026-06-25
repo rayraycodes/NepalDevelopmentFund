@@ -1,7 +1,7 @@
 window.NEPAL_DATA = {
  "meta": {
-  "retrieved_at": "2026-06-03",
-  "version": "2026-06-04.1",
+  "retrieved_at": "2026-06-04",
+  "version": "2026-06-25.1",
   "n_rows": 37800,
   "n_sources": 9,
   "n_headline": 982
@@ -13,6 +13,7 @@ window.NEPAL_DATA = {
   "largest_partner": "World Bank (IDA)",
   "largest_nondac": "India",
   "largest_nondac_value": 99.8,
+  "largest_nondac_year": 2022,
   "n_rows": 37800,
   "n_sources": 9,
   "n_headline": 982

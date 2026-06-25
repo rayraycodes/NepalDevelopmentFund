@@ -98,7 +98,7 @@ def main():
     sec_rows = keep(pull(s, "by-usg-sector.json"))
     acc_rows = keep(pull(s, "by-funding-agency.json"))
     man_rows = keep(pull(s, "by-managing-agency.json"))
-    retrieved = C.utc_now()
+    retrieved = C.US_DATA_ASOF   # data vintage (deterministic), not wall-clock
     print(f"kept flow rows: sector={len(sec_rows)} account={len(acc_rows)} managing={len(man_rows)}")
 
     # ---- reconciliation across the three cuts (disbursements, by FY) ----
