@@ -1117,10 +1117,10 @@ window.NEPAL_DATA = {
   },
   {
    "id": "D7",
-   "comparison": "China: Nepal DCR disbursement vs AidData commitments",
+   "comparison": "China: Nepal DCR recorded disbursements vs AidData commitments",
    "magnitude": "DCR $14m (2022) vs AidData commitments up to $660m",
    "verdict": "KEY FINDING",
-   "cause": "China's headline numbers are commitments/pledges; recorded disbursements are modest and fell after 2018."
+   "cause": "The series measure different concepts and periods: AidData records commitments, while Nepal's DCR records disbursements. They are presented side by side for context, not as a delivery-rate calculation."
   },
   {
    "id": "D8",
@@ -1193,10 +1193,10 @@ window.NEPAL_DATA = {
   }
  ],
  "dfims": {
-  "n": 2925,
+  "n": 2924,
   "retrieved": "2026-07-21",
-  "cm": 41315983315,
-  "db": 24122292099,
+  "cm": 41314307117,
+  "db": 24122570201,
   "ex": 3604833353,
   "url": "https://dfims.mof.gov.np/public/dashboard"
  }

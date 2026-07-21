@@ -209,10 +209,10 @@
 
   <section id="china">
     <div class="kicker" data-i18n="china_kicker">A closer look</div>
-    <h3 data-i18n="china_title">China: big promises, smaller delivery</h3>
-    <p class="lead" data-i18n="china_lead">The large Chinese figures for Nepal are mostly promises (commitments). The money Nepal records actually arriving is much smaller and fell after 2018. The international aid statistics do not track China at all.</p>
+    <h3 data-i18n="china_title">China: commitments and recorded disbursements</h3>
+    <p class="lead" data-i18n="china_lead">This chart places two different measures side by side: AidData’s recorded commitments and the disbursements Nepal records in its Development Cooperation Report. They should not be read as a delivery rate, because they use different sources, reporting periods and coverage. China is not included in the OECD’s DAC reporting system.</p>
     <div class="card"><div id="c-china" class="chart sm" role="img"></div>
-      <div class="note" data-i18n="china_note">Promises: AidData (to 2021). Delivered: Nepal's own report.</div></div>
+      <div class="note" data-i18n="china_note">Commitments: AidData (through 2021). Recorded disbursements: Nepal’s Development Cooperation Report.</div></div>
   </section>
 
   <section id="sectors">
@@ -244,7 +244,7 @@
     <h3 data-i18n="gb_title">Projects on the Government of Nepal's books (DFIMS, MoF)</h3>
     <!-- Filled by drawGon() with DFIMS's own retrieval date — NOT data-i18n, whose global pass
          substitutes core_long's {n}/{d}. Static copy below is the no-JS fallback. -->
-    <p class="lead" id="gb-lead">Nepal's Ministry of Finance publishes its own project-by-project ledger, DFIMS. Our copy of all 2,925 rows sums to the API's published totals to the dollar. These are the recipient side's own records — not automatically consistent with donor reporting.</p>
+    <p class="lead" id="gb-lead">Nepal's Ministry of Finance publishes a project-by-project ledger through DFIMS. This complete recipient-side ledger is refreshed directly from the official API and presented alongside, rather than merged with, donor reporting.</p>
     <div class="card" id="gb-sum" style="font-weight:650;font-size:15px"></div>
     <div class="controls" style="margin-top:12px">
       <label for="gbStatus" data-i18n="gb_f_status">Status</label><select id="gbStatus"></select>
@@ -340,9 +340,9 @@ const I18N = {
   donors_lead:"Both sides agree on the ranking: the World Bank and the Asian Development Bank are the largest, then Japan, the United States, the United Kingdom and the EU. India shows up only on Nepal's side, because India does not report to the international system.",
   dn_hint:"Tip: click a bar — or a chip under the chart — to open that funder's profile. On Nepal's side only funders with a matching profile open (India, China, Japan, the UK, Germany, Switzerland, Norway).",
   dn_chips:"Or open a funder profile directly:",
-  china_kicker:"A closer look",china_title:"China: big promises, smaller delivery",
-  china_lead:"The large Chinese figures for Nepal are mostly promises (commitments). The money Nepal records actually arriving is much smaller and fell after 2018. The international aid statistics do not track China at all.",
-  china_note:"Promises: AidData (to 2021). Delivered: Nepal's own report.",
+  china_kicker:"A closer look",china_title:"China: commitments and recorded disbursements",
+  china_lead:"This chart places two different measures side by side: AidData’s recorded commitments and the disbursements Nepal records in its Development Cooperation Report. They should not be read as a delivery rate, because they use different sources, reporting periods and coverage. China is not included in the OECD’s DAC reporting system.",
+  china_note:"Commitments: AidData (through 2021). Recorded disbursements: Nepal’s Development Cooperation Report.",
   sectors_kicker:"Where it goes",sectors_title:"What the money pays for",
   sectors_lead:"Use the toggle to switch between all donors (OECD) and the United States alone. US sectors are mapped from ForeignAssistance.gov categories.",
   sector_src:"Show",sector_opt_oecd:"All donors (OECD)",sector_opt_us:"United States only",
@@ -356,7 +356,7 @@ const I18N = {
   nav_gon:"Nepal's books",
   gb_kicker:"The recipient's own books",
   gb_title:"Projects on the Government of Nepal's books (DFIMS, MoF)",
-  gb_lead:"The Government of Nepal keeps its own project-by-project ledger: DFIMS, published by the Ministry of Finance (retrieved {date}). After OECD (what donors report), Nepal's DCR summary and the US deep dive (one donor in full detail), this is the page's fourth independent view of the money — the recipient side's own books, project by project. Our copy of all {np} rows sums to the API's own published totals to the dollar, so what you see is exactly what MOF publishes. Remember what it is: the recipient's claim, in its own words — not automatically consistent with donor reporting. The next section explains why such totals differ.",
+  gb_lead:"The Government of Nepal keeps its own project-by-project ledger: DFIMS, published by the Ministry of Finance (retrieved {date}). After OECD (what donors report), Nepal's DCR summary and the US deep dive (one donor in full detail), this is the page's fourth independent view of the money — recipient-side administrative records, project by project. Our copy of all {np} rows sums to the API's own published totals to the dollar, so what you see is exactly what MOF publishes. It is not automatically comparable with donor reporting because the systems, classifications and reporting periods differ. The next section explains why such totals differ.",
   gb_sum:"{np} projects on MOF's books · promised (commitment): {cm} · recorded as delivered (disbursement): {db} · recorded as spent (expenditure): {ex}",
   gb_f_status:"Status",gb_f_budget:"Budget",gb_f_search:"Search",
   gb_all:"All statuses",gb_ongoing:"On-going",gb_completed:"Completed",
@@ -381,7 +381,7 @@ const I18N = {
   // chart pieces
   ch_anchor:"World Bank check (independent)",ch_donor:"Donor side (what donors gave)",ch_recip:"Recipient side (what Nepal got)",
   ch_donortitle:"Donor side · what donors report",ch_reciptitle:"Recipient side · what Nepal reports",
-  ch_commit:"Promised (commitments)",ch_disb:"Delivered (recorded by Nepal)",
+  ch_commit:"Commitments (AidData)",ch_disb:"Recorded disbursements (Nepal DCR)",
   ch_usdm:"US$ m",ch_pct:"%",ch_gapname:"Donor minus recipient",
   // KPI labels
   kpi_oda:"Aid Nepal received in 2023",kpi_peak:"Highest year ({y})",
@@ -412,9 +412,9 @@ const I18N = {
   donors_lead:"दुवै पक्ष क्रमसूचीमा सहमत छन्: विश्व बैंक र एसियाली विकास बैंक सबैभन्दा ठूला, त्यसपछि जापान, अमेरिका, बेलायत र युरोपेली संघ। भारत नेपालको पक्षमा मात्र देखिन्छ, किनकि भारतले अन्तर्राष्ट्रिय प्रणालीमा रिपोर्ट गर्दैन।",
   dn_hint:"सुझाव: बार — वा चार्टमुनिको चिप — क्लिक गरेर त्यो दाताको प्रोफाइल खोल्नुहोस्। नेपालको पक्षमा प्रोफाइल भएका दाता मात्र खुल्छन् (भारत, चीन, जापान, बेलायत, जर्मनी, स्वीजरल्यान्ड, नर्वे)।",
   dn_chips:"वा सिधै दाताको प्रोफाइल खोल्नुहोस्:",
-  china_kicker:"नजिकबाट हेर्दा",china_title:"चीन: ठूला वाचा, थोरै वितरण",
-  china_lead:"नेपालका लागि चीनका ठूला अङ्कहरू प्रायः वाचा (प्रतिबद्धता) हुन्। नेपालले वास्तवमा आइपुगेको भनी टिपेको रकम धेरै कम छ र २०१८ पछि घट्यो। अन्तर्राष्ट्रिय सहायता तथ्याङ्कले चीनलाई पटक्कै समेट्दैन।",
-  china_note:"वाचा: AidData (२०२१ सम्म)। वितरण: नेपालको आफ्नै प्रतिवेदन।",
+  china_kicker:"नजिकबाट हेर्दा",china_title:"चीन: प्रतिबद्धता र अभिलेखित वितरण",
+  china_lead:"यो चार्टले दुई फरक मापनलाई सँगसँगै राख्छ: AidData का अभिलेखित प्रतिबद्धता र नेपालको विकास सहयोग प्रतिवेदनमा अभिलेखित वितरण। स्रोत, प्रतिवेदन अवधि र समेटाइ फरक भएकाले यसलाई वितरण दरका रूपमा बुझ्नु हुँदैन। चीन OECD को DAC प्रतिवेदन प्रणालीमा समेटिँदैन।",
+  china_note:"प्रतिबद्धता: AidData (२०२१ सम्म)। अभिलेखित वितरण: नेपालको विकास सहयोग प्रतिवेदन।",
   sectors_kicker:"कहाँ जान्छ",sectors_title:"पैसाले के-केमा खर्च हुन्छ",
   sectors_lead:"टगलले सबै दाता (OECD) र अमेरिका मात्रको क्षेत्र दृश्य फेर्नुहोस्। अमेरिकी क्षेत्र ForeignAssistance.gov कोटिबाट म्याप गरिएको।",
   sector_src:"देखाउनुहोस्",sector_opt_oecd:"सबै दाता (OECD)",sector_opt_us:"अमेरिका मात्र",
@@ -426,7 +426,7 @@ const I18N = {
   nav_gon:"नेपालको खाता",
   gb_kicker:"प्राप्तकर्ताकै आफ्नै खाता",
   gb_title:"नेपाल सरकारको खातामा रहेका परियोजनाहरू (DFIMS, अर्थ मन्त्रालय)",
-  gb_lead:"नेपाल सरकारले आफ्नै परियोजना-स्तरको खाता राख्छ: अर्थ मन्त्रालयले प्रकाशित गर्ने DFIMS ({date} मा लिइएको)। OECD (दाताले रिपोर्ट गरेको), नेपालको DCR सारांश र अमेरिकी गहिरो विश्लेषण (एक दाताको पूरा विवरण) पछि, यो यस पृष्ठको चौथो स्वतन्त्र दृष्टिकोण हो — परियोजना-परियोजनामा प्राप्तकर्ता पक्षकै आफ्नै अभिलेख। हाम्रो प्रतिलिपिका सबै {np} पङ्क्तिको जोड API ले नै प्रकाशित गरेको कुलसँग डलरसम्म ठ्याक्कै मिल्छ, त्यसैले यहाँ देखिने अङ्क अर्थ मन्त्रालयले प्रकाशित गरेकै हो। तर यो के हो भन्ने नबिर्सनुहोस्: यो प्राप्तकर्ताको आफ्नै दाबी हो — दाताको रिपोर्टसँग स्वतः मिल्दैन। कुल किन फरक हुन्छ भन्ने अर्को खण्डले बुझाउँछ।",
+  gb_lead:"नेपाल सरकारले आफ्नै परियोजना-स्तरको खाता राख्छ: अर्थ मन्त्रालयले प्रकाशित गर्ने DFIMS ({date} मा लिइएको)। OECD (दाताले रिपोर्ट गरेको), नेपालको DCR सारांश र अमेरिकी गहिरो विश्लेषण (एक दाताको पूरा विवरण) पछि, यो यस पृष्ठको चौथो स्वतन्त्र दृष्टिकोण हो — परियोजना-परियोजनामा प्राप्तकर्ता पक्षका प्रशासनिक अभिलेख। हाम्रो प्रतिलिपिका सबै {np} पङ्क्तिको जोड API ले नै प्रकाशित गरेको कुलसँग डलरसम्म ठ्याक्कै मिल्छ, त्यसैले यहाँ देखिने अङ्क अर्थ मन्त्रालयले प्रकाशित गरेकै हो। प्रणाली, वर्गीकरण र प्रतिवेदन अवधि फरक भएकाले यसलाई दाताको रिपोर्टसँग स्वतः तुलना गर्न मिल्दैन। कुल किन फरक हुन्छ भन्ने अर्को खण्डले बुझाउँछ।",
   gb_sum:"अर्थ मन्त्रालयको खातामा {np} परियोजना · वाचा (प्रतिबद्धता): {cm} · वितरण भनी टिपिएको: {db} · खर्च भनी टिपिएको: {ex}",
   gb_f_status:"अवस्था",gb_f_budget:"बजेट",gb_f_search:"खोज्नुहोस्",
   gb_all:"सबै अवस्था",gb_ongoing:"चालु",gb_completed:"सम्पन्न",
@@ -450,7 +450,7 @@ const I18N = {
   th_id:"क्र.सं.",th_comp:"के तुलना गरिएको",th_mag:"भिन्नताको आकार",th_verdict:"निष्कर्ष",th_cause:"सम्भावित कारण",
   ch_anchor:"विश्व बैंक जाँच (स्वतन्त्र)",ch_donor:"दाता पक्ष (दाताले दिएको)",ch_recip:"प्राप्तकर्ता पक्ष (नेपालले पाएको)",
   ch_donortitle:"दाता पक्ष · दाताले रिपोर्ट गरेको",ch_reciptitle:"प्राप्तकर्ता पक्ष · नेपालले रिपोर्ट गरेको",
-  ch_commit:"वाचा (प्रतिबद्धता)",ch_disb:"वितरण (नेपालले टिपेको)",
+  ch_commit:"प्रतिबद्धता (AidData)",ch_disb:"अभिलेखित वितरण (नेपाल DCR)",
   ch_usdm:"डलर (मिलियन)",ch_pct:"%",ch_gapname:"दाता घटाउँदा प्राप्तकर्ता",
   kpi_oda:"२०२३ मा नेपालले पाएको सहायता",kpi_peak:"सबैभन्दा बढी वर्ष ({y})",
   kpi_partner:"सबैभन्दा ठूलो एकल दाता",kpi_nondac:"विश्वले छुटाउने सबैभन्दा ठूलो दाता",kpi_data:"स्रोत / अभिलेख, जाँचिएको",
@@ -884,14 +884,14 @@ function armGon(){
 /* Nepali translations for discrepancy free-text (keyed by id) */
 const NE_COMP={D1:"OECD बनाम विश्व बैंक खुद ODA, २०२३",D3:"दाता पक्ष (OECD खुद) बनाम प्राप्तकर्ता पक्ष (नेपाल DCR)",
  D4:"OECD CRS कुल बनाम OECD DAC2A खुद",D5:"ADB: OECD खुद / ADB IATI कुल / DCR, २०२२",
- D6:"अमेरिका: आधिकारिक ForeignAssistance.gov (आर्थिक वर्ष) बनाम OECD ODA (पात्रो वर्ष), २०२२",D7:"चीन: नेपाल DCR वितरण बनाम AidData वाचा",D8:"भारत"};
+ D6:"अमेरिका: आधिकारिक ForeignAssistance.gov (आर्थिक वर्ष) बनाम OECD ODA (पात्रो वर्ष), २०२२",D7:"चीन: नेपाल DCR अभिलेखित वितरण बनाम AidData प्रतिबद्धता",D8:"भारत"};
 const NE_CAUSE={
  D1:"डाटाको संस्करण फरक: विश्व बैंकको शृङ्खला OECD को अघिल्लो स्न्यापसट हो।",
  D3:"DCR कुल हो र चीन/भारत/खाडी समावेश गर्छ जसलाई OECD छुटाउँछ; नेपालको आर्थिक वर्ष बनाम पात्रो वर्ष; बजेटभित्र/बाहिर वर्गीकरण।",
  D4:"अपेक्षित: CRS क्रियाकलापगत कुल हो; DAC2A खुदले ऋणको साँवा फिर्ता घटाउँछ।",
  D5:"खुद बनाम कुल; ADB IATI ले प्राविधिक सहायता विशेष कोष छुटाउँछ; DCR ले कुल ऋण वितरण टिप्छ।",
  D6:"ForeignAssistance.gov ले सबै अमेरिकी सहायता (गैर-ODA समेत) आर्थिक वर्षमा गन्छ; OECD ले ODA मात्र पात्रो वर्षमा गन्छ। २०२५ को पुनर्संरचनामा नयाँ प्रतिबद्धता ~७४% घट्यो तर वितरण ~$210m मै रह्यो।",
- D7:"चीनका मुख्य अङ्क वाचा/प्रतिबद्धता हुन्; टिपिएको वितरण थोरै छ र २०१८ पछि घट्यो।",
+ D7:"यी शृङ्खलाले फरक अवधारणा र अवधि मापन गर्छन्: AidData ले प्रतिबद्धता र नेपालको DCR ले वितरण अभिलेख गर्छ। यीलाई वितरण-दरको गणनाका रूपमा नभई सन्दर्भका लागि सँगसँगै प्रस्तुत गरिएको हो।",
  D8:"भारत गैर-DAC दाता हो र OECD CRS मा रिपोर्ट गर्दैन; प्राप्तकर्ता पक्षले मात्र समेट्छ।"};
 
 let sectionNavOpener=null;
