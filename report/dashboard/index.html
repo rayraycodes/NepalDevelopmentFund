@@ -58,6 +58,9 @@
   .kpi .v{font-size:22px;font-weight:760;letter-spacing:-.3px}
   .kpi .l{font-size:12px;color:var(--muted);margin-top:4px}
   .kpi .bar{height:3px;border-radius:3px;background:var(--teal);width:30px;margin-bottom:10px}
+  .tallies{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+  .tally{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 15px;box-shadow:var(--shadow)}
+  .tally b{display:block;font-size:13px;margin-bottom:5px}.tally span{font-size:13px;color:var(--muted);line-height:1.45}
 
   section{padding:30px 0 6px}
   .kicker{font-size:12px;font-weight:700;letter-spacing:.10em;text-transform:uppercase;color:var(--teal)}
@@ -129,7 +132,7 @@
 
   @media(max-width:880px){
     .kpis{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}
-    .explain{grid-template-columns:1fr}.hero h2{font-size:23px}
+    .explain{grid-template-columns:1fr}.tallies{grid-template-columns:1fr}.hero h2{font-size:23px}
     .hbar{gap:10px}.hbar .sub{display:none}nav{width:100%;margin-left:0;order:3;padding-bottom:4px}
     .chart{height:340px}.chart.sm{height:320px}
   }
@@ -249,6 +252,7 @@
          substitutes core_long's {n}/{d}. Static copy below is the no-JS fallback. -->
     <p class="lead" id="gb-lead">Nepal's Ministry of Finance publishes a project-by-project ledger through DFIMS. This complete recipient-side ledger is refreshed directly from the official API and presented alongside, rather than merged with, donor reporting.</p>
     <div class="card" id="gb-sum" style="font-weight:650;font-size:15px"></div>
+    <div class="tallies" id="gb-tallies" aria-label="Government of Nepal ledger tallies"></div>
     <div class="controls" style="margin-top:12px">
       <label for="gbStatus" data-i18n="gb_f_status">Status</label><select id="gbStatus"></select>
       <label for="gbBudget" data-i18n="gb_f_budget">Budget</label><select id="gbBudget"></select>
@@ -361,6 +365,10 @@ const I18N = {
   gb_title:"Projects on the Government of Nepal's books (DFIMS, MoF)",
   gb_lead:"The Government of Nepal keeps its own project-by-project ledger: DFIMS, published by the Ministry of Finance (retrieved {date}). After OECD (what donors report), Nepal's DCR summary and the US deep dive (one donor in full detail), this is the page's fourth independent view of the money — recipient-side administrative records, project by project. Our copy of all {np} rows sums to the API's own published totals to the dollar, so what you see is exactly what MOF publishes. It is not automatically comparable with donor reporting because the systems, classifications and reporting periods differ. The next section explains why such totals differ.",
   gb_sum:"{np} projects on MOF's books · promised (commitment): {cm} · recorded as delivered (disbursement): {db} · recorded as spent (expenditure): {ex}",
+  gb_t_status:"Project status",gb_t_budget:"Budget coverage",gb_t_scope:"Recorded coverage",
+  gb_t_status_v:"{ongoing} on-going · {completed} completed",gb_t_budget_v:"{on} on budget · {off} off budget",
+  gb_t_scope_v:"{partners} development partners · {agencies} GoN agencies · {sectors} sectors · {provinces} provinces · {districts} districts",
+  gb_source:"Source: Ministry of Finance DFIMS",
   gb_f_status:"Status",gb_f_budget:"Budget",gb_f_search:"Search",
   gb_all:"All statuses",gb_ongoing:"On-going",gb_completed:"Completed",
   gb_ball:"On + off budget",gb_on:"On budget",gb_off:"Off budget",
@@ -431,6 +439,10 @@ const I18N = {
   gb_title:"नेपाल सरकारको खातामा रहेका परियोजनाहरू (DFIMS, अर्थ मन्त्रालय)",
   gb_lead:"नेपाल सरकारले आफ्नै परियोजना-स्तरको खाता राख्छ: अर्थ मन्त्रालयले प्रकाशित गर्ने DFIMS ({date} मा लिइएको)। OECD (दाताले रिपोर्ट गरेको), नेपालको DCR सारांश र अमेरिकी गहिरो विश्लेषण (एक दाताको पूरा विवरण) पछि, यो यस पृष्ठको चौथो स्वतन्त्र दृष्टिकोण हो — परियोजना-परियोजनामा प्राप्तकर्ता पक्षका प्रशासनिक अभिलेख। हाम्रो प्रतिलिपिका सबै {np} पङ्क्तिको जोड API ले नै प्रकाशित गरेको कुलसँग डलरसम्म ठ्याक्कै मिल्छ, त्यसैले यहाँ देखिने अङ्क अर्थ मन्त्रालयले प्रकाशित गरेकै हो। प्रणाली, वर्गीकरण र प्रतिवेदन अवधि फरक भएकाले यसलाई दाताको रिपोर्टसँग स्वतः तुलना गर्न मिल्दैन। कुल किन फरक हुन्छ भन्ने अर्को खण्डले बुझाउँछ।",
   gb_sum:"अर्थ मन्त्रालयको खातामा {np} परियोजना · वाचा (प्रतिबद्धता): {cm} · वितरण भनी टिपिएको: {db} · खर्च भनी टिपिएको: {ex}",
+  gb_t_status:"परियोजनाको स्थिति",gb_t_budget:"बजेट समेटाइ",gb_t_scope:"अभिलेखित समेटाइ",
+  gb_t_status_v:"{ongoing} जारी · {completed} सम्पन्न",gb_t_budget_v:"{on} बजेटभित्र · {off} बजेटबाहिर",
+  gb_t_scope_v:"{partners} विकास साझेदार · {agencies} सरकारी निकाय · {sectors} क्षेत्र · {provinces} प्रदेश · {districts} जिल्ला",
+  gb_source:"स्रोत: अर्थ मन्त्रालय DFIMS",
   gb_f_status:"अवस्था",gb_f_budget:"बजेट",gb_f_search:"खोज्नुहोस्",
   gb_all:"सबै अवस्था",gb_ongoing:"चालु",gb_completed:"सम्पन्न",
   gb_ball:"बजेटभित्र + बाहिर",gb_on:"बजेटभित्र",gb_off:"बजेटबाहिर",
@@ -766,6 +778,15 @@ function drawGon(){
      dollar; that agreement is exactly what the lead claims, so we print the source's number.) */
   document.getElementById('gb-sum').innerHTML = t('gb_sum').replace('{np}',np)
     .replace('{cm}',fmtUsd(g.cm)).replace('{db}',fmtUsd(g.db)).replace('{ex}',fmtUsd(g.ex));
+  const z=g.tallies||{}, n=v=>locNum(Number(v||0).toLocaleString('en-US'));
+  const status=t('gb_t_status_v').replace('{ongoing}',n(z.ongoing)).replace('{completed}',n(z.completed));
+  const budget=t('gb_t_budget_v').replace('{on}',n(z.on_budget)).replace('{off}',n(z.off_budget));
+  const scope=t('gb_t_scope_v').replace('{partners}',n(z.partners)).replace('{agencies}',n(z.agencies))
+    .replace('{sectors}',n(z.sectors)).replace('{provinces}',n(z.provinces)).replace('{districts}',n(z.districts));
+  document.getElementById('gb-tallies').innerHTML=`<div class="tally"><b>${t('gb_t_status')}</b><span>${status}</span></div>`+
+    `<div class="tally"><b>${t('gb_t_budget')}</b><span>${budget}</span></div>`+
+    `<div class="tally"><b>${t('gb_t_scope')}</b><span>${scope}</span></div>`+
+    `<div class="note" style="grid-column:1/-1;margin:0"><a href="${esc(g.url)}" target="_blank" rel="noopener">${t('gb_source')} ↗</a></div>`;
 
   // Controls rebuilt every render so their labels re-translate on the language toggle, with the
   // reader's current choice preserved — same contract as #sectorSource above.

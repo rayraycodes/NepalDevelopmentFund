@@ -1198,6 +1198,17 @@ window.NEPAL_DATA = {
   "cm": 41314307117,
   "db": 24122570201,
   "ex": 3604833353,
+  "tallies": {
+   "ongoing": 495,
+   "completed": 2429,
+   "on_budget": 494,
+   "off_budget": 2430,
+   "partners": 276,
+   "agencies": 40,
+   "sectors": 45,
+   "provinces": 7,
+   "districts": 77
+  },
   "url": "https://dfims.mof.gov.np/public/dashboard"
  }
 };

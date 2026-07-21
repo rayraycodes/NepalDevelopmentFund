@@ -197,10 +197,35 @@ def main():
     # 98/99 verified our row sums reproduce them to the dollar, so quoting them IS quoting our data.
     dfims_meta = json.loads((C.PROCESSED / "dfims_meta.json").read_text())
     at = dfims_meta["api_totals_usd"]
+    ledger = pd.read_csv(C.PROCESSED / "dfims_projects.csv", dtype=str, keep_default_na=False)
+
+    def listed_values(column):
+        values = set()
+        for cell in ledger[column]:
+            for value in str(cell).split(" | "):
+                value = value.strip()
+                if value and value not in {"None", ":"}:
+                    values.add(value)
+        return values
+
+    status = ledger["project_status"].value_counts()
+    budget = ledger["budget_type"].value_counts()
+    tallies = {
+        "ongoing": int(status.get("On-Going", 0)),
+        "completed": int(status.get("Completed", 0)),
+        "on_budget": int(budget.get("On Budget", 0)),
+        "off_budget": int(budget.get("Off Budget", 0)),
+        "partners": len(listed_values("development_partners")),
+        "agencies": len(listed_values("government_agencies")),
+        "sectors": len(listed_values("sectors")),
+        "provinces": len(listed_values("provinces")),
+        "districts": len(listed_values("districts")),
+    }
     dfims = {"n": int(dfims_meta["total_projects"]),
              "retrieved": dfims_meta["retrieved_at"][:10],
              "cm": round(at["commitment"]), "db": round(at["disbursement"]),
              "ex": round(at["expenditure"]),
+             "tallies": tallies,
              "url": "https://dfims.mof.gov.np/public/dashboard"}
 
     # Retrieval date + dataset version come from the DATA (deterministic), not the wall clock:
