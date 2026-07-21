@@ -1097,8 +1097,12 @@ function drawSectorBreakdown(rows){
   const sum=document.getElementById('sec-sum');
   if(!s.total){
     sum.textContent=t('sec_sum_empty').replace('{y}',tmYear);
-    document.querySelector('#sec-break tbody').innerHTML=
-      `<tr><td colspan="3" style="color:var(--muted)">${t('sec_sum_empty').replace('{y}',tmYear)}</td></tr>`;
+    const tb=document.querySelector('#sec-break tbody');
+    tb.textContent='';
+    const tr=document.createElement('tr'), td=document.createElement('td');
+    td.colSpan=3; td.style.color='var(--muted)';
+    td.textContent=t('sec_sum_empty').replace('{y}',tmYear);
+    tr.appendChild(td); tb.appendChild(tr);
     return;
   }
   sum.textContent=t('sec_sum')
