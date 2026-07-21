@@ -53,6 +53,34 @@ is required for publishing. The workflow in `.github/workflows/` is **CI only**:
 ever want GitHub Actions to deploy instead, disable Cloudflare's auto-build and use
 `wrangler deploy` from `report/dashboard` with a `CLOUDFLARE_API_TOKEN` secret.)
 
+## Alternative: deploy to Vercel (equivalent password gate)
+The repo also ships a Vercel setup that reproduces the Cloudflare gate, so Vercel can auto-deploy on
+every push with the **same** protection. The Cloudflare files (`_worker.js`, `wrangler.jsonc`) and
+the Vercel files (`middleware.js`, `vercel.json`, `package.json`) live side by side in
+`report/dashboard/`; each platform ignores the other's files.
+
+- `report/dashboard/middleware.js` is a **Vercel Edge Middleware** — the equivalent of `_worker.js`.
+  Its `matcher: "/:path*"` makes it run before every asset (fail-closed like Cloudflare's
+  `assets.run_worker_first`), enforces HTTP Basic Auth against `SITE_PASSWORD` in constant time,
+  and sets the same security headers (HSTS, CSP, `X-Frame-Options`, `X-Content-Type-Options`,
+  `Referrer-Policy`, `Cache-Control`). Any username, password = `SITE_PASSWORD`. If `SITE_PASSWORD`
+  is unset it returns 503 (fail-closed). The password lives only in a Vercel env var, never in the repo.
+- `report/dashboard/vercel.json` marks the project as a plain static site (no build step; `data.js`
+  is committed). `report/dashboard/package.json` pins `@vercel/edge` so the middleware bundles.
+
+### Setup (you do this in the Vercel dashboard — I cannot access your account)
+1. Vercel -> **Add New -> Project -> Import** `rayraycodes/NepalDevelopmentFund` (your
+   `imregan@umich.edu` account authorises Vercel's GitHub app on the repo).
+2. **Root Directory** = `report/dashboard`, **Framework Preset** = *Other*, no build command.
+3. **Settings -> Environment Variables** -> add `SITE_PASSWORD` (mark it Sensitive) for every
+   environment, then redeploy. Visiting the site now prompts for credentials: any username, that
+   password.
+4. To use the custom domain on Vercel, move `reganmaharjan.info.np`'s DNS to Vercel
+   (**Settings -> Domains**). Vercel provisions TLS automatically.
+
+> Pick **one** platform for `main`: if both Cloudflare and Vercel Git integrations stay connected,
+> both deploy on every push. Disconnect the one you are not using (and repoint the domain).
+
 ## Updating the data
 Locally run `make build && make dashboard-data` to regenerate `report/dashboard/data.js` from the
 processed CSVs, then commit and push. Cloudflare redeploys automatically.
