@@ -53,6 +53,33 @@ is required for publishing. The workflow in `.github/workflows/` is **CI only**:
 ever want GitHub Actions to deploy instead, disable Cloudflare's auto-build and use
 `wrangler deploy` from `report/dashboard` with a `CLOUDFLARE_API_TOKEN` secret.)
 
+## Alternative: deploy to Vercel (public, no password)
+The repo also ships a Vercel setup so Vercel can auto-deploy on every push. Unlike the Cloudflare
+project, this Vercel deploy is **public** — there is no password gate (that would need a paid plan or
+custom auth). It still sends the same hardening headers via `report/dashboard/vercel.json`. The
+Cloudflare files (`_worker.js`, `wrangler.jsonc`) and the Vercel file (`vercel.json`) live side by
+side in `report/dashboard/`; each platform ignores the other's files (see `.assetsignore`).
+
+- `report/dashboard/vercel.json` marks the project as a plain static site (no build step; `data.js`
+  is committed) and sets security headers on every response: `Strict-Transport-Security` (HSTS),
+  a same-origin + inline `Content-Security-Policy`, `X-Frame-Options: DENY`,
+  `X-Content-Type-Options: nosniff`, and `Referrer-Policy: no-referrer`.
+- There is no `SITE_PASSWORD` and no Edge Middleware: anyone with the URL can view the dashboard.
+  If you later want to gate it, use Vercel's built-in **Deployment Protection** (paid) or add a
+  Basic-Auth Edge Middleware.
+
+### Setup (you do this in the Vercel dashboard — I cannot access your account)
+The existing project `nepalbikasfund` (https://nepalbikasfund.vercel.app/) can be reused:
+1. Project **Settings -> Git -> Connect Git Repository** -> `rayraycodes/NepalDevelopmentFund`
+   (your `imregan@umich.edu` account authorises Vercel's GitHub app on the repo).
+2. **Settings -> Build & Deployment**: **Root Directory** = `report/dashboard`,
+   **Framework Preset** = *Other*, empty Build Command, **Output Directory** = `.`.
+3. Redeploy (**Deployments -> Redeploy**, or push a commit). The site is live and public.
+
+> Pick **one** platform for `main`: if both Cloudflare and Vercel Git integrations stay connected,
+> both deploy on every push. Note Cloudflare's site is password-gated while this Vercel deploy is
+> public, so don't expose data on Vercel that must stay behind the Cloudflare gate.
+
 ## Updating the data
 Locally run `make build && make dashboard-data` to regenerate `report/dashboard/data.js` from the
 processed CSVs, then commit and push. Cloudflare redeploys automatically.
