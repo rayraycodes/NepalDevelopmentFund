@@ -34,9 +34,11 @@
   .hbar{display:flex;align-items:center;gap:14px;padding:11px 0;color:#fff;flex-wrap:wrap}
   .logo{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,var(--teal),#37b3bd);
     display:grid;place-items:center;font-weight:800;color:#fff;flex:none;font-size:19px}
-  .hbar h1{font-size:15px;margin:0;font-weight:650}
+  .hbar h1{font-size:15px;margin:0;font-weight:650;text-align:left}
   .hbar .sub{font-size:12px;color:#a9bdd4;margin-top:1px}
-  nav{margin-left:auto;display:flex;gap:2px;flex-wrap:wrap;align-items:center;overflow-x:auto}
+  /* Keep section navigation on its own, left-aligned row instead of letting it float into
+     the middle when the title, language control, and links no longer fit on one line. */
+  nav{order:3;flex-basis:100%;margin-left:0;display:flex;justify-content:flex-start;gap:2px;flex-wrap:wrap;align-items:center;overflow-x:auto}
   nav a{color:#dbe5f1;font-size:13px;padding:8px 10px;border-radius:7px;white-space:nowrap;min-height:44px;display:flex;align-items:center}
   nav a:hover{background:rgba(255,255,255,.08);text-decoration:none;color:#fff}
   .lang{display:inline-flex;border:1px solid rgba(255,255,255,.25);border-radius:8px;overflow:hidden;margin-left:6px}
@@ -44,7 +46,7 @@
   .lang button[aria-pressed="true"]{background:var(--teal);color:#fff;font-weight:600}
 
   .hero{background:radial-gradient(1100px 360px at 70% -40%,rgba(14,124,134,.18),transparent),var(--navy);color:#fff;padding:38px 0 30px}
-  .hero h2{font-size:30px;line-height:1.18;margin:0 0 10px;font-weight:740;max-width:780px}
+  .hero h2{font-size:30px;line-height:1.18;margin:0 0 10px;font-weight:740;max-width:780px;text-align:left}
   .hero p{color:#bcccdf;max-width:700px;margin:0 0 18px}
   .badges{display:flex;gap:8px;flex-wrap:wrap}
   .badge{font-size:12px;color:#d6e2f0;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:6px 11px;border-radius:999px}
@@ -57,7 +59,7 @@
 
   section{padding:30px 0 6px}
   .kicker{font-size:12px;font-weight:700;letter-spacing:.10em;text-transform:uppercase;color:var(--teal)}
-  h3{font-size:21px;margin:6px 0 6px;font-weight:700}
+  h3{font-size:21px;margin:6px 0 6px;font-weight:700;text-align:left}
   .lead{color:var(--muted);max-width:780px;margin:0 0 16px}
   .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow);max-width:100%}
   .chart{width:100%;height:420px}.chart.sm{height:360px}
@@ -119,7 +121,7 @@
   @media(max-width:880px){
     .kpis{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}
     .explain{grid-template-columns:1fr}.hero h2{font-size:23px}
-    .hbar{gap:10px}.hbar .sub{display:none}nav{width:100%;margin-left:0;order:3;padding-bottom:4px}
+    .hbar{gap:10px}.hbar .sub{display:none}nav{width:100%;padding-bottom:4px}
     .chart{height:340px}.chart.sm{height:320px}
   }
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -650,7 +652,7 @@ function drawFlows(){
     ]},true);
 }
 function barH(title,color,cats,vals){return{animation:anim,textStyle:baseText(),
-  title:{text:title,left:'center',top:4,textStyle:{fontSize:14,fontWeight:600,color:C.ink}},
+  title:{text:title,left:12,top:4,textStyle:{fontSize:14,fontWeight:600,color:C.ink}},
   grid:{left:8,right:50,top:42,bottom:10,containLabel:true},
   tooltip:{trigger:'axis',axisPointer:{type:'shadow'},valueFormatter:fmt},
   xAxis:{type:'value',splitLine:{lineStyle:{color:C.grid}}},
