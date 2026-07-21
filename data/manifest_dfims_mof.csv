@@ -1,0 +1,6 @@
+source,snapshot_path,url,params,sha256,bytes,http_status,retrieved_at
+dfims_mof,data/raw/dfims_mof/project_report_full_20260721T015801Z.json,https://dfims.mof.gov.np/api/v2/report/project_report/?page=1&page_size=200,"{'page': '1', 'page_size': '200'}",cfd1e5c2d5b8f8899d217dcf6727349c9d7cbbfba1b8963c127540c5c11c4fc7,6620229,200,2026-07-21T01:58:01Z
+dfims_mof,data/raw/dfims_mof/project_count_20260721T015801Z.json,https://dfims.mof.gov.np/api/v2/core/project_count/,,a606314e2cb33f7f8c63562257c943cfb8323eb8a2a1abf4fb4661954e202dd2,14,200,2026-07-21T01:58:01Z
+dfims_mof,data/raw/dfims_mof/projects_status_count_20260721T015802Z.json,https://dfims.mof.gov.np/api/v2/core/projects_status_count/,,9178c3cb81773e86f60bde82fc2733da9016936078c9596cccdd88b7d0b1e479,33,200,2026-07-21T01:58:02Z
+dfims_mof,data/raw/dfims_mof/projects_budget_type_count_20260721T015802Z.json,https://dfims.mof.gov.np/api/v2/core/projects_budget_type_count/,,e0303a5c673433ec5aa4f242de88e3358d6306d07e8b19688b8f9ce9357bb1d1,35,200,2026-07-21T01:58:02Z
+dfims_mof,data/raw/dfims_mof/projects_assistance_type_count_20260721T015802Z.json,https://dfims.mof.gov.np/api/v2/core/projects_assistance_type_count/,,4c0fc36cec81391da7ae924d8af33bead80996f57dfc9b6606d28aada33f0904,232,200,2026-07-21T01:58:02Z

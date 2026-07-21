@@ -1,9 +1,9 @@
 window.NEPAL_DATA = {
  "meta": {
-  "retrieved_at": "2026-06-04",
+  "retrieved_at": "2026-07-21",
   "version": "2026-06-03.1",
   "n_rows": 37800,
-  "n_sources": 9,
+  "n_sources": 10,
   "n_headline": 982
  },
  "kpis": {
@@ -15,7 +15,7 @@ window.NEPAL_DATA = {
   "largest_nondac_value": 99.8,
   "largest_nondac_year": 2022,
   "n_rows": 37800,
-  "n_sources": 9,
+  "n_sources": 10,
   "n_headline": 982
  },
  "reconciliation": [
@@ -1180,10 +1180,24 @@ window.NEPAL_DATA = {
    "url": "https://giwmscdntwo.gov.np/media/pdf_upload/DCR%20Report%202022_23_pt2fped.pdf"
   },
   {
+   "name": "Nepal MoF DFIMS (project-level ledger)",
+   "side": "recipient",
+   "status": "med",
+   "url": "https://dfims.mof.gov.np/public/dashboard"
+  },
+  {
    "name": "AidData Global Chinese Development Finance v3.0",
    "side": "donor",
    "status": "low",
    "url": "https://www.aiddata.org/data/aiddatas-geospatial-global-chinese-development-finance-dataset-version-3-0"
   }
- ]
+ ],
+ "dfims": {
+  "n": 2925,
+  "retrieved": "2026-07-21",
+  "cm": 41315983315,
+  "db": 24122292099,
+  "ex": 3604833353,
+  "url": "https://dfims.mof.gov.np/public/dashboard"
+ }
 };

@@ -28,6 +28,8 @@ fetch:
 	$(PY) scripts/92_fetch_audits.py
 	$(PY) scripts/94_org_audits.py   # org -> FAC Single Audit + OIG (set FAC_API_KEY for a full pull)
 	$(PY) scripts/95_org_locations.py   # org -> registered country/address (USAspending)
+	$(PY) scripts/96_fetch_us_activities.py   # FA.gov activity-level rows (feeds the treemap drill)
+	$(PY) scripts/98_fetch_dfims.py   # MOF DFIMS GoN-side ledger (host drops most foreign requests; script retries hard)
 
 # primary supporting documents (strategies, compact agreements) -> data/raw/docs + registry
 docs:
@@ -51,6 +53,8 @@ dashboard-data:
 	$(PY) scripts/87_us_partners_data.py
 	$(PY) scripts/91_us_localization.py
 	$(PY) scripts/89_us_projects_data.py
+	$(PY) scripts/97_us_sector_activities.py   # treemap drill-down (reads us_activities.csv, no network)
+	$(PY) scripts/99_dfims_dashboard_data.py   # MOF DFIMS ledger -> dfims_projects.js (reads the CSV, no network)
 	$(PY) scripts/93_search_index.py   # cross-dataset entity search index (run last; reads the others)
 
 # serve the self-contained dashboard at http://127.0.0.1:8848

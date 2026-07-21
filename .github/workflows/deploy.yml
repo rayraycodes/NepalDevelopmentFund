@@ -27,10 +27,13 @@ jobs:
         run: |
           pip install pandas
           # Regenerate every dashboard data file that builds from committed inputs only (no network):
-          # the main board (85), the US localisation/sub-awards/projmeta (91), and the search indexes
-          # (93). 86/87 need the live USAspending/ForeignAssistance APIs, so they stay manual.
+          # the main board (85), the US localisation/sub-awards/projmeta (91), the treemap drill-down
+          # (97), the MOF DFIMS ledger (99), and the search indexes (93). 86/87/96/98 need live
+          # APIs, so they stay manual.
           python scripts/85_dashboard_data.py
           python scripts/91_us_localization.py
+          python scripts/97_us_sector_activities.py
+          python scripts/99_dfims_dashboard_data.py
           python scripts/93_search_index.py
           python scripts/90_validate.py
           # The committed dashboard JS (≈0.6 MB the public actually loads) must equal a fresh rebuild.
@@ -41,4 +44,6 @@ jobs:
             report/dashboard/usforeignaiddata/us_subawards.js \
             report/dashboard/usforeignaiddata/us_detail.js \
             report/dashboard/usforeignaiddata/us_projmeta.js \
+            report/dashboard/usforeignaiddata/us_sector_acts.js \
+            report/dashboard/dfims_projects.js \
             || { echo "::error::Committed dashboard JS is stale — run 'make dashboard-data' and commit."; exit 1; }

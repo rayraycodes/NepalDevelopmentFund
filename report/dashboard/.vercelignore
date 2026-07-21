@@ -1,0 +1,4 @@
+# Cloudflare Workers artifacts — not used by the Vercel (static) deploy.
+_worker.js
+wrangler.jsonc
+.assetsignore

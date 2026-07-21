@@ -1,384 +1,388 @@
 implementing_agency_acronym,implementing_agency_name,year,flow_stage,amount_usd,amount_usd_constant,source,source_url,retrieved_at
-AGR,Department of Agriculture,2001,commitment,3627083.0,6099757.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2003,commitment,2833165.0,4602466.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2003,disbursement,2833165.0,4602466.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2004,commitment,71270.0,113018.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2004,disbursement,71270.0,113018.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2005,commitment,11948496.0,18388067.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2005,disbursement,11948496.0,18388067.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2006,commitment,4637734.0,6912662.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2006,disbursement,4637734.0,6912662.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2012,commitment,3307431.0,4441276.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2012,disbursement,3307431.0,4441276.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2013,commitment,6000000.0,7913319.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2013,disbursement,5949525.0,7846748.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2014,disbursement,5016985.0,6498284.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2015,disbursement,4852209.0,6220437.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2016,commitment,293054.0,372710.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2016,disbursement,12131857.0,15429442.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2017,disbursement,16128008.0,20171294.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2018,disbursement,16805705.0,20562411.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2019,disbursement,1230082.0,1478012.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2020,disbursement,13036960.0,15464081.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2021,commitment,25000000.0,28672627.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2021,disbursement,9552909.0,10956280.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2022,commitment,50000.0,53559.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2022,disbursement,9045972.0,9689789.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2023,commitment,66150000.0,67770155.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2023,disbursement,8588788.0,8799145.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2024,commitment,50000.0,50000.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2024,disbursement,23586313.0,23586313.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2025,commitment,9115000.0,8900789.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2025,disbursement,16636105.0,16245140.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-AGR,Department of Agriculture,2026,disbursement,4591.0,4392.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DFC,U.S. International Development Finance Corporation,2023,commitment,4998950.0,5121385.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2001,commitment,834000.0,1402560.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2001,disbursement,834000.0,1402560.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2002,commitment,14377000.0,23803699.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2002,disbursement,14377000.0,23803699.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2003,commitment,4220309.0,6855878.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2003,disbursement,4220309.0,6855878.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2004,commitment,4521000.0,7169285.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2004,disbursement,4521000.0,7169285.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2005,commitment,3863225.0,5945288.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2005,disbursement,3863225.0,5945288.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2006,commitment,849722.0,1266532.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2006,disbursement,826530.0,1231964.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2007,commitment,801404.0,1162510.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2007,disbursement,800543.0,1161261.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2008,commitment,853000.0,1212189.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2008,disbursement,859078.0,1220826.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2009,commitment,743000.0,1045181.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2009,disbursement,755168.0,1062298.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2010,commitment,1782400.0,2485780.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2010,disbursement,1746000.0,2435015.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2011,commitment,2508186.0,3429151.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2011,disbursement,2458968.0,3361861.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2012,commitment,614186.0,824740.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2012,disbursement,503019.0,675463.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2013,commitment,487128.0,642466.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2013,disbursement,516242.0,680864.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2014,commitment,211902.0,274468.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2014,disbursement,169255.0,219229.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2015,commitment,21473510.0,27528618.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2015,disbursement,10077510.0,12919170.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2016,commitment,421863.0,536530.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2016,disbursement,11817863.0,15030101.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2018,commitment,6126780.0,7496344.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2018,disbursement,6176780.0,7557521.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2019,commitment,324052.0,389367.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2019,disbursement,324052.0,389367.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2020,commitment,81320.0,96460.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOD,Department of Defense,2020,disbursement,81320.0,96460.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOE,Department of Energy,2009,commitment,71870.0,101100.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOE,Department of Energy,2009,disbursement,154950.0,217969.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOE,Department of Energy,2010,commitment,355091.0,495219.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOE,Department of Energy,2010,disbursement,390466.0,544554.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOE,Department of Energy,2011,commitment,318000.0,434765.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOE,Department of Energy,2011,disbursement,236661.0,323559.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOE,Department of Energy,2012,commitment,389009.0,522368.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOE,Department of Energy,2012,disbursement,406566.0,545944.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOE,Department of Energy,2013,commitment,766828.0,1011359.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOE,Department of Energy,2013,disbursement,447966.0,590818.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOE,Department of Energy,2014,commitment,498715.0,645964.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOE,Department of Energy,2014,disbursement,259297.0,335857.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOE,Department of Energy,2019,commitment,5737.0,6894.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOE,Department of Energy,2019,disbursement,41345.0,49677.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOE,Department of Energy,2020,disbursement,256.0,304.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOE,Department of Energy,2021,commitment,2146.0,2461.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOE,Department of Energy,2021,disbursement,40811.0,46806.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOE,Department of Energy,2022,commitment,74523.0,79827.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOE,Department of Energy,2022,disbursement,47675.0,51068.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOE,Department of Energy,2023,commitment,12777.0,13090.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOE,Department of Energy,2023,disbursement,1153.0,1181.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOE,Department of Energy,2024,commitment,103990.0,103990.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOE,Department of Energy,2024,disbursement,228867.0,228867.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2002,commitment,113312.0,187608.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2002,disbursement,113312.0,187608.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2003,commitment,70706.0,114862.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2003,disbursement,70706.0,114862.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2004,commitment,112847.0,178950.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2004,disbursement,112847.0,178950.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2006,commitment,66440.0,99031.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2006,disbursement,66440.0,99031.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2007,commitment,56375.0,81777.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2007,disbursement,56375.0,81777.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2008,commitment,287846.0,409055.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2008,disbursement,287846.0,409055.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2009,commitment,265465.0,373430.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2009,disbursement,265465.0,373430.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2010,commitment,230045.0,320826.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2010,disbursement,230045.0,320826.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2011,commitment,97211.0,132906.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2011,disbursement,11150.0,15244.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2012,commitment,446656.0,599778.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2012,disbursement,203631.0,273440.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2013,commitment,150459.0,198438.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2013,disbursement,352160.0,464460.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2014,commitment,323790.0,419391.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2014,disbursement,267243.0,346148.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2015,commitment,393382.0,504307.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2015,disbursement,382076.0,489814.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2016,commitment,412039.0,524036.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2016,disbursement,-60809.0,-77337.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2017,commitment,726126.0,908167.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2017,disbursement,190572.0,238350.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2018,commitment,312146.0,381923.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2018,disbursement,155283.0,189995.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2019,commitment,668628.0,803393.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2019,disbursement,-266720.0,-320480.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2020,commitment,-1910.0,-2266.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2020,disbursement,-394649.0,-468121.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2021,commitment,126458.0,145035.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2022,commitment,1726204.0,1849061.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2022,disbursement,-22736.0,-24354.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2023,commitment,542468.0,555755.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2023,disbursement,358958.0,367752.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2024,commitment,487211.0,487211.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2024,disbursement,-400026.0,-400026.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOI,Department of the Interior,2025,disbursement,194851.0,190271.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOJ,Department of Justice,2010,commitment,26528.0,36997.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOJ,Department of Justice,2010,disbursement,26528.0,36997.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOJ,Department of Justice,2017,commitment,2321259.0,2903199.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOJ,Department of Justice,2017,disbursement,2154255.0,2694327.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOL,Department of Labor,2001,commitment,9500000.0,15976402.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOL,Department of Labor,2005,commitment,3500000.0,5386305.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOL,Department of Labor,2005,disbursement,3500000.0,5386305.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOL,Department of Labor,2006,commitment,2000000.0,2981051.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOL,Department of Labor,2006,disbursement,2000000.0,2981051.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOL,Department of Labor,2007,commitment,345000.0,500454.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOL,Department of Labor,2007,disbursement,345000.0,500454.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOL,Department of Labor,2013,commitment,424822.0,560292.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOL,Department of Labor,2013,disbursement,424822.0,560292.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOL,Department of Labor,2015,commitment,882717.0,1131626.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOL,Department of Labor,2015,disbursement,932697.0,1195699.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOL,Department of Labor,2016,disbursement,204454.0,260027.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOL,Department of Labor,2017,disbursement,158850.0,198673.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOL,Department of Labor,2018,commitment,2600000.0,3181197.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOL,Department of Labor,2018,disbursement,195504.0,239207.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOL,Department of Labor,2019,disbursement,340168.0,408730.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOL,Department of Labor,2020,disbursement,827181.0,981180.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOL,Department of Labor,2021,commitment,250000.0,286726.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOL,Department of Labor,2021,disbursement,909722.0,1043365.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOL,Department of Labor,2022,disbursement,1054065.0,1129085.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOL,Department of Labor,2024,disbursement,248529.0,248529.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOL,Department of Labor,2025,commitment,260000.0,253890.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOL,Department of Labor,2025,disbursement,316345.0,308909.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOT,Department of Transportation,2026,commitment,150.0,143.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-DOT,Department of Transportation,2026,disbursement,150.0,143.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-EPA,Environmental Protection Agency,2010,commitment,150000.0,209193.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-EPA,Environmental Protection Agency,2010,disbursement,150000.0,209193.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-EPA,Environmental Protection Agency,2024,commitment,30000.0,30000.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-HHS,Department of Health and Human Services,2001,commitment,2016996.0,3392035.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-HHS,Department of Health and Human Services,2001,disbursement,2016996.0,3392035.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-HHS,Department of Health and Human Services,2002,commitment,2340881.0,3875747.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-HHS,Department of Health and Human Services,2002,disbursement,2340881.0,3875747.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-HHS,Department of Health and Human Services,2003,commitment,2234310.0,3629629.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-HHS,Department of Health and Human Services,2003,disbursement,2234310.0,3629629.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-HHS,Department of Health and Human Services,2004,commitment,1788697.0,2836469.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-HHS,Department of Health and Human Services,2004,disbursement,1788697.0,2836469.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-HHS,Department of Health and Human Services,2005,commitment,1905258.0,2932085.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-HHS,Department of Health and Human Services,2005,disbursement,1905258.0,2932085.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-HHS,Department of Health and Human Services,2006,commitment,227091.0,338485.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-HHS,Department of Health and Human Services,2006,disbursement,227091.0,338485.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-HHS,Department of Health and Human Services,2007,commitment,2421752.0,3512973.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-HHS,Department of Health and Human Services,2007,disbursement,2421752.0,3512973.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-HHS,Department of Health and Human Services,2008,commitment,1897716.0,2696822.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-HHS,Department of Health and Human Services,2008,disbursement,1897716.0,2696822.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-HHS,Department of Health and Human Services,2009,commitment,1775728.0,2497922.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-HHS,Department of Health and Human Services,2009,disbursement,1775728.0,2497922.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-HHS,Department of Health and Human Services,2010,commitment,3602379.0,5023970.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-HHS,Department of Health and Human Services,2010,disbursement,3374130.0,4705648.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-HHS,Department of Health and Human Services,2011,commitment,3689729.0,5044539.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-HHS,Department of Health and Human Services,2011,disbursement,141862.0,193951.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2012,commitment,170693.0,229209.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2013,commitment,596847.0,787173.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2013,disbursement,173343.0,228617.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2014,commitment,745584.0,965720.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2014,disbursement,616819.0,798940.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2015,commitment,1097809.0,1407369.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2015,disbursement,200214.0,256675.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2016,commitment,14214853.0,18078621.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2016,disbursement,1576815.0,2005415.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2017,commitment,43101539.0,53907095.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2017,disbursement,8154898.0,10199327.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2018,commitment,2180561.0,2667999.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2018,disbursement,3659353.0,4477353.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2019,commitment,3062583.0,3679865.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2019,disbursement,12399579.0,14898792.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2020,commitment,1367578.0,1622182.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2020,disbursement,2942920.0,3490809.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2021,commitment,2441348.0,2799997.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2021,disbursement,7158135.0,8209702.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2022,commitment,1699545.0,1820503.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2022,disbursement,4869379.0,5215941.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2023,commitment,460233698.0,471505804.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2023,disbursement,7590213.0,7776115.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2024,commitment,3063311.0,3063311.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2024,disbursement,20876471.0,20876471.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2025,commitment,919121.0,897521.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2025,disbursement,74849224.0,73090197.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2026,commitment,50154427.0,47979304.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-MCC,Millennium Challenge Corporation,2026,disbursement,66319973.0,63443772.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2001,commitment,1735000.0,2917795.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2001,disbursement,1735000.0,2917795.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2002,commitment,2111000.0,3495139.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2002,disbursement,2111000.0,3495139.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2003,commitment,2624000.0,4262679.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2003,disbursement,2655100.0,4313201.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2004,commitment,2108000.0,3342812.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2004,disbursement,2108000.0,3342812.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2005,commitment,299955.0,461614.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2005,disbursement,279045.0,429434.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2012,commitment,1151798.0,1546652.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2012,disbursement,202908.0,272466.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2013,commitment,34978.0,46129.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2013,disbursement,502042.0,662137.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2014,commitment,665920.0,862536.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2014,disbursement,362992.0,470167.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2015,commitment,845136.0,1083445.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2015,disbursement,1002978.0,1285802.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2016,commitment,358068.0,455397.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2016,disbursement,280257.0,356435.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2017,commitment,1188924.0,1486988.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2017,disbursement,1237417.0,1547638.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2018,commitment,1600581.0,1958369.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2018,disbursement,1582650.0,1936430.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2019,commitment,1791708.0,2152837.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2019,disbursement,1882115.0,2261466.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2020,commitment,1802081.0,2137579.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2020,disbursement,1630555.0,1934122.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2021,commitment,912995.0,1047118.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2021,disbursement,1123299.0,1288316.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2022,commitment,1300618.0,1393182.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2022,disbursement,1211071.0,1297265.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2023,commitment,1671871.0,1712819.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2023,disbursement,1523943.0,1561269.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2024,commitment,1847825.0,1847825.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2024,disbursement,1817885.0,1817885.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2025,commitment,1170631.0,1143121.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-PC,Peace Corps,2025,disbursement,1408851.0,1375742.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2001,commitment,5294000.0,8903060.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2001,disbursement,3481500.0,5854930.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2002,commitment,400000.0,662272.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2002,disbursement,702500.0,1163114.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2003,commitment,722392.0,1173524.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2003,disbursement,1122392.0,1823323.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2004,commitment,198549.0,314853.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2004,disbursement,48549.0,76987.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2005,commitment,3236119.0,4980208.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2005,disbursement,3236119.0,4980208.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2006,commitment,2604129.0,3881521.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2006,disbursement,778198.0,1159924.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2007,commitment,4152353.0,6023369.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2007,disbursement,1779201.0,2580896.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2008,commitment,12654047.0,17982521.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2008,disbursement,1646918.0,2340418.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2009,commitment,14537625.0,20450126.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2009,disbursement,4071133.0,5726876.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2010,commitment,10711471.0,14938488.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2010,disbursement,503953.0,702825.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2011,commitment,10865867.0,14855641.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2011,disbursement,4208396.0,5753652.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2012,commitment,12345596.0,16577878.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2012,disbursement,4397362.0,5904852.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2013,commitment,16542300.0,21817414.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2013,disbursement,7182580.0,9473006.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2014,commitment,12091948.0,15662178.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2014,disbursement,5165792.0,6691026.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2015,commitment,13517710.0,17329440.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2015,disbursement,9426118.0,12084097.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2016,commitment,24798983.0,31539643.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2016,disbursement,27331507.0,34760543.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2017,commitment,8398314.0,10503774.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2017,disbursement,6795280.0,8498861.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2018,commitment,6167558.0,7546238.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2018,disbursement,5648878.0,6911614.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2019,commitment,13186959.0,15844874.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2019,disbursement,10819656.0,13000421.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2020,commitment,8255102.0,9791972.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2020,disbursement,6631105.0,7865631.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2021,commitment,21760150.0,24956826.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2021,disbursement,21048569.0,24140710.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2022,commitment,48859466.0,52336874.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2022,disbursement,47149241.0,50504930.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2023,commitment,16042946.0,16435873.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2023,disbursement,10188864.0,10438413.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2024,commitment,13823380.0,13823380.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2024,disbursement,11206155.0,11206155.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2025,commitment,2076306.0,2027510.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2025,disbursement,12369227.0,12078538.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2026,commitment,109.0,106.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-STATE,Department of State,2026,disbursement,12450.0,11910.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-TDA,Trade and Development Agency,2001,commitment,2500.0,4204.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-TDA,Trade and Development Agency,2001,disbursement,2500.0,4204.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-TDA,Trade and Development Agency,2002,commitment,2500.0,4139.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-TDA,Trade and Development Agency,2002,disbursement,2500.0,4139.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-TDA,Trade and Development Agency,2005,commitment,116148.0,178745.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-TDA,Trade and Development Agency,2005,disbursement,116148.0,178745.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-TDA,Trade and Development Agency,2006,disbursement,8183.0,12197.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-TDA,Trade and Development Agency,2023,commitment,750000.0,768369.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-TDA,Trade and Development Agency,2024,disbursement,195372.0,195372.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-TDA,Trade and Development Agency,2025,disbursement,167193.0,163264.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-TREAS,Department of the Treasury,2012,commitment,126580.0,169974.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-TREAS,Department of the Treasury,2012,disbursement,14891.0,19996.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-TREAS,Department of the Treasury,2013,commitment,17776.0,23445.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-TREAS,Department of the Treasury,2013,disbursement,16412.0,21645.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-TREAS,Department of the Treasury,2014,disbursement,13351.0,17293.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-TREAS,Department of the Treasury,2018,commitment,30972.0,37894.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-TREAS,Department of the Treasury,2018,disbursement,36743.0,44955.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-TREAS,Department of the Treasury,2019,commitment,32737.0,39332.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-TREAS,Department of the Treasury,2019,disbursement,-935.0,-1126.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-TREAS,Department of the Treasury,2020,disbursement,177.0,210.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2001,commitment,27997477.0,47084093.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2001,disbursement,17350735.0,29179190.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2002,commitment,34297726.0,56786024.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2002,disbursement,21318115.0,35295949.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2003,commitment,34345903.0,55794803.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2003,disbursement,28631208.0,46511302.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2004,commitment,38343557.0,60804208.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2004,disbursement,35312442.0,55997544.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2005,commitment,50645779.0,77941034.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2005,disbursement,43593457.0,67087898.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2006,commitment,46343441.0,69076094.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2006,disbursement,56323398.0,83951461.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2007,commitment,61744580.0,89566189.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2007,disbursement,58365345.0,84664243.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2008,commitment,76004566.0,108009228.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2008,disbursement,73742326.0,104794366.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2009,commitment,64591619.0,90861227.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2009,disbursement,65968987.0,92798789.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2010,commitment,50704092.0,70713209.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2010,disbursement,53389773.0,74458723.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2011,commitment,76899817.0,105136200.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2011,disbursement,68018852.0,92994269.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2012,commitment,60928712.0,81816112.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2012,disbursement,64487151.0,86594462.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2013,commitment,94977691.0,125264761.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2013,disbursement,70481361.0,92956908.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2014,commitment,64701534.0,83805082.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2014,disbursement,72881303.0,94399991.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2015,commitment,223269117.0,286226576.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2015,disbursement,118474922.0,151882507.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2016,commitment,151475898.0,192648860.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2016,disbursement,150360611.0,191230434.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2017,commitment,137250546.0,171659270.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2017,disbursement,156989740.0,196347053.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2018,commitment,126973037.0,155356240.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2018,disbursement,150539867.0,184191187.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2019,commitment,155143423.0,186413566.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2019,disbursement,126900003.0,152477496.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2020,commitment,114565384.0,135894272.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2020,disbursement,113725355.0,134897850.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2021,commitment,131657809.0,150999005.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2021,disbursement,132303612.0,151739689.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2022,commitment,122348919.0,131056684.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2022,disbursement,142650063.0,152802670.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2023,commitment,145839454.0,149411362.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2023,disbursement,118620513.0,121525766.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2024,commitment,192612415.0,192612415.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2024,disbursement,123801568.0,123801568.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2025,commitment,41972390.0,40985993.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2025,disbursement,104173486.0,101725310.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2026,commitment,-1975276.0,-1889610.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
-USAID,U.S. Agency for International Development,2026,disbursement,8736706.0,8357809.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-12T00:06:56Z
+,,2001,commitment,2500.0,4204.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2001,commitment,834000.0,1402560.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2001,commitment,1735000.0,2917795.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2001,commitment,2016996.0,3392035.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2001,commitment,3627083.0,6099757.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2001,commitment,5294000.0,8903060.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2001,commitment,9500000.0,15976402.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2001,commitment,27997477.0,47084093.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2001,disbursement,2500.0,4204.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2001,disbursement,834000.0,1402560.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2001,disbursement,1735000.0,2917795.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2001,disbursement,2016996.0,3392035.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2001,disbursement,3481500.0,5854930.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2001,disbursement,17350735.0,29179190.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2002,commitment,2500.0,4139.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2002,commitment,113312.0,187608.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2002,commitment,400000.0,662272.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2002,commitment,2111000.0,3495139.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2002,commitment,2340881.0,3875747.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2002,commitment,14377000.0,23803699.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2002,commitment,34297726.0,56786024.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2002,disbursement,2500.0,4139.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2002,disbursement,113312.0,187608.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2002,disbursement,702500.0,1163114.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2002,disbursement,2111000.0,3495139.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2002,disbursement,2340881.0,3875747.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2002,disbursement,14377000.0,23803699.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2002,disbursement,21318115.0,35295949.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2003,commitment,70706.0,114862.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2003,commitment,722392.0,1173524.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2003,commitment,2234310.0,3629629.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2003,commitment,2624000.0,4262679.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2003,commitment,2833165.0,4602466.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2003,commitment,4220309.0,6855878.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2003,commitment,34345903.0,55794803.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2003,disbursement,70706.0,114862.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2003,disbursement,1122392.0,1823323.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2003,disbursement,2234310.0,3629629.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2003,disbursement,2655100.0,4313201.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2003,disbursement,2833165.0,4602466.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2003,disbursement,4220309.0,6855878.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2003,disbursement,28631208.0,46511302.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2004,commitment,71270.0,113018.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2004,commitment,112847.0,178950.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2004,commitment,198549.0,314853.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2004,commitment,1788697.0,2836469.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2004,commitment,2108000.0,3342812.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2004,commitment,4521000.0,7169285.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2004,commitment,38343557.0,60804208.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2004,disbursement,48549.0,76987.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2004,disbursement,71270.0,113018.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2004,disbursement,112847.0,178950.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2004,disbursement,1788697.0,2836469.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2004,disbursement,2108000.0,3342812.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2004,disbursement,4521000.0,7169285.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2004,disbursement,35312442.0,55997544.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2005,commitment,116148.0,178745.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2005,commitment,299955.0,461614.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2005,commitment,1905258.0,2932085.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2005,commitment,3236119.0,4980208.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2005,commitment,3500000.0,5386305.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2005,commitment,3863225.0,5945288.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2005,commitment,11948496.0,18388067.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2005,commitment,50645779.0,77941034.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2005,disbursement,116148.0,178745.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2005,disbursement,279045.0,429434.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2005,disbursement,1905258.0,2932085.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2005,disbursement,3236119.0,4980208.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2005,disbursement,3500000.0,5386305.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2005,disbursement,3863225.0,5945288.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2005,disbursement,11948496.0,18388067.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2005,disbursement,43593457.0,67087898.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2006,commitment,66440.0,99031.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2006,commitment,227091.0,338485.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2006,commitment,849722.0,1266532.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2006,commitment,2000000.0,2981051.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2006,commitment,2604129.0,3881521.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2006,commitment,4637734.0,6912662.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2006,commitment,46343441.0,69076094.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2006,disbursement,8183.0,12197.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2006,disbursement,66440.0,99031.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2006,disbursement,227091.0,338485.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2006,disbursement,778198.0,1159924.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2006,disbursement,826530.0,1231964.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2006,disbursement,2000000.0,2981051.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2006,disbursement,4637734.0,6912662.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2006,disbursement,56323398.0,83951461.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2007,commitment,56375.0,81777.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2007,commitment,345000.0,500454.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2007,commitment,801404.0,1162510.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2007,commitment,2421752.0,3512973.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2007,commitment,4152353.0,6023369.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2007,commitment,61744580.0,89566189.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2007,disbursement,56375.0,81777.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2007,disbursement,345000.0,500454.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2007,disbursement,800543.0,1161261.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2007,disbursement,1779201.0,2580896.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2007,disbursement,2421752.0,3512973.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2007,disbursement,58365345.0,84664243.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2008,commitment,287846.0,409055.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2008,commitment,853000.0,1212189.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2008,commitment,1897716.0,2696822.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2008,commitment,12654047.0,17982521.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2008,commitment,76004566.0,108009228.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2008,disbursement,287846.0,409055.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2008,disbursement,859078.0,1220826.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2008,disbursement,1646918.0,2340418.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2008,disbursement,1897716.0,2696822.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2008,disbursement,73742326.0,104794366.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2009,commitment,71870.0,101100.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2009,commitment,265465.0,373430.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2009,commitment,743000.0,1045181.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2009,commitment,1775728.0,2497922.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2009,commitment,14537625.0,20450126.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2009,commitment,64591619.0,90861227.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2009,disbursement,154950.0,217969.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2009,disbursement,265465.0,373430.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2009,disbursement,755168.0,1062298.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2009,disbursement,1775728.0,2497922.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2009,disbursement,4071133.0,5726876.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2009,disbursement,65968987.0,92798789.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2010,commitment,26528.0,36997.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2010,commitment,150000.0,209193.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2010,commitment,230045.0,320826.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2010,commitment,355091.0,495219.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2010,commitment,1782400.0,2485780.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2010,commitment,3602379.0,5023970.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2010,commitment,10711471.0,14938488.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2010,commitment,50704092.0,70713209.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2010,disbursement,26528.0,36997.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2010,disbursement,150000.0,209193.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2010,disbursement,230045.0,320826.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2010,disbursement,390466.0,544554.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2010,disbursement,503953.0,702825.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2010,disbursement,1746000.0,2435015.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2010,disbursement,3374130.0,4705648.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2010,disbursement,53389773.0,74458723.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2011,commitment,97211.0,132906.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2011,commitment,318000.0,434765.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2011,commitment,2508186.0,3429151.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2011,commitment,3689729.0,5044539.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2011,commitment,10865867.0,14855641.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2011,commitment,76899817.0,105136200.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2011,disbursement,11150.0,15244.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2011,disbursement,141862.0,193951.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2011,disbursement,236661.0,323559.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2011,disbursement,2458968.0,3361861.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2011,disbursement,4208396.0,5753652.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2011,disbursement,68018852.0,92994269.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2012,commitment,126580.0,169974.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2012,commitment,170693.0,229209.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2012,commitment,389009.0,522368.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2012,commitment,446656.0,599778.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2012,commitment,614186.0,824740.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2012,commitment,1151798.0,1546652.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2012,commitment,3307431.0,4441276.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2012,commitment,12345596.0,16577878.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2012,commitment,60928712.0,81816112.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2012,disbursement,14891.0,19996.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2012,disbursement,202908.0,272466.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2012,disbursement,203631.0,273440.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2012,disbursement,406566.0,545944.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2012,disbursement,503019.0,675463.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2012,disbursement,3307431.0,4441276.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2012,disbursement,4397362.0,5904852.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2012,disbursement,64487151.0,86594462.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2013,commitment,17776.0,23445.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2013,commitment,34978.0,46129.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2013,commitment,150459.0,198438.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2013,commitment,424822.0,560292.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2013,commitment,487128.0,642466.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2013,commitment,596847.0,787173.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2013,commitment,766828.0,1011359.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2013,commitment,6000000.0,7913319.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2013,commitment,16542300.0,21817414.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2013,commitment,94977691.0,125264761.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2013,disbursement,16412.0,21645.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2013,disbursement,173343.0,228617.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2013,disbursement,352160.0,464460.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2013,disbursement,424822.0,560292.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2013,disbursement,447966.0,590818.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2013,disbursement,502042.0,662137.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2013,disbursement,516242.0,680864.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2013,disbursement,5949525.0,7846748.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2013,disbursement,7182580.0,9473006.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2013,disbursement,70481361.0,92956908.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2014,commitment,211902.0,274468.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2014,commitment,323790.0,419391.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2014,commitment,498715.0,645964.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2014,commitment,665920.0,862536.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2014,commitment,745584.0,965720.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2014,commitment,12091948.0,15662178.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2014,commitment,64701534.0,83805082.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2014,disbursement,13351.0,17293.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2014,disbursement,169255.0,219229.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2014,disbursement,259297.0,335857.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2014,disbursement,267243.0,346148.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2014,disbursement,362992.0,470167.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2014,disbursement,616819.0,798940.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2014,disbursement,5016985.0,6498284.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2014,disbursement,5165792.0,6691026.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2014,disbursement,72881303.0,94399991.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2015,commitment,393382.0,504307.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2015,commitment,845136.0,1083445.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2015,commitment,882717.0,1131626.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2015,commitment,1097809.0,1407369.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2015,commitment,13517710.0,17329440.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2015,commitment,21473510.0,27528618.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2015,commitment,223269117.0,286226576.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2015,disbursement,200214.0,256675.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2015,disbursement,382076.0,489814.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2015,disbursement,932697.0,1195699.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2015,disbursement,1002978.0,1285802.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2015,disbursement,4852209.0,6220437.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2015,disbursement,9426118.0,12084097.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2015,disbursement,10077510.0,12919170.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2015,disbursement,118474922.0,151882507.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2016,commitment,293054.0,372710.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2016,commitment,358068.0,455397.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2016,commitment,412039.0,524036.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2016,commitment,421863.0,536530.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2016,commitment,14214853.0,18078621.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2016,commitment,24798983.0,31539643.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2016,commitment,151475898.0,192648860.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2016,disbursement,-60809.0,-77337.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2016,disbursement,204454.0,260027.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2016,disbursement,280257.0,356435.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2016,disbursement,1576815.0,2005415.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2016,disbursement,11817863.0,15030101.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2016,disbursement,12131857.0,15429442.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2016,disbursement,27331507.0,34760543.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2016,disbursement,150360611.0,191230434.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2017,commitment,726126.0,908167.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2017,commitment,1188924.0,1486988.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2017,commitment,2321259.0,2903199.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2017,commitment,8398314.0,10503774.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2017,commitment,43101539.0,53907095.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2017,commitment,137250546.0,171659270.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2017,disbursement,158850.0,198673.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2017,disbursement,190572.0,238350.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2017,disbursement,1237417.0,1547638.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2017,disbursement,2154255.0,2694327.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2017,disbursement,6795280.0,8498861.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2017,disbursement,8154898.0,10199327.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2017,disbursement,16128008.0,20171294.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2017,disbursement,156989740.0,196347053.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2018,commitment,30972.0,37894.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2018,commitment,312146.0,381923.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2018,commitment,1600581.0,1958369.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2018,commitment,2180561.0,2667999.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2018,commitment,2600000.0,3181197.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2018,commitment,6126780.0,7496344.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2018,commitment,6167558.0,7546238.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2018,commitment,126973037.0,155356240.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2018,disbursement,36743.0,44955.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2018,disbursement,155283.0,189995.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2018,disbursement,195504.0,239207.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2018,disbursement,1582650.0,1936430.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2018,disbursement,3659353.0,4477353.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2018,disbursement,5648878.0,6911614.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2018,disbursement,6176780.0,7557521.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2018,disbursement,16805705.0,20562411.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2018,disbursement,150539867.0,184191187.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2019,commitment,5737.0,6894.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2019,commitment,32737.0,39332.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2019,commitment,324052.0,389367.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2019,commitment,668628.0,803393.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2019,commitment,1791708.0,2152837.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2019,commitment,3062583.0,3679865.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2019,commitment,13186959.0,15844874.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2019,commitment,155143423.0,186413566.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2019,disbursement,-266720.0,-320480.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2019,disbursement,-935.0,-1126.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2019,disbursement,41345.0,49677.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2019,disbursement,324052.0,389367.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2019,disbursement,340168.0,408730.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2019,disbursement,1230082.0,1478012.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2019,disbursement,1882115.0,2261466.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2019,disbursement,10819656.0,13000421.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2019,disbursement,12399579.0,14898792.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2019,disbursement,126900003.0,152477496.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2020,commitment,-1910.0,-2266.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2020,commitment,81320.0,96460.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2020,commitment,1367578.0,1622182.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2020,commitment,1802081.0,2137579.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2020,commitment,8255102.0,9791972.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2020,commitment,114565384.0,135894272.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2020,disbursement,-394649.0,-468121.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2020,disbursement,177.0,210.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2020,disbursement,256.0,304.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2020,disbursement,81320.0,96460.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2020,disbursement,827181.0,981180.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2020,disbursement,1630555.0,1934122.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2020,disbursement,2942920.0,3490809.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2020,disbursement,6631105.0,7865631.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2020,disbursement,13036960.0,15464081.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2020,disbursement,113725355.0,134897850.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2021,commitment,2146.0,2461.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2021,commitment,126458.0,145035.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2021,commitment,250000.0,286726.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2021,commitment,912995.0,1047118.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2021,commitment,2441348.0,2799997.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2021,commitment,21760150.0,24956826.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2021,commitment,25000000.0,28672627.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2021,commitment,131657809.0,150999005.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2021,disbursement,40811.0,46806.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2021,disbursement,909722.0,1043365.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2021,disbursement,1123299.0,1288316.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2021,disbursement,7158135.0,8209702.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2021,disbursement,9552909.0,10956280.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2021,disbursement,21048569.0,24140710.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2021,disbursement,132303612.0,151739689.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2022,commitment,50000.0,53559.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2022,commitment,74523.0,79827.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2022,commitment,1300618.0,1393182.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2022,commitment,1699545.0,1820503.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2022,commitment,1726204.0,1849061.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2022,commitment,48859466.0,52336874.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2022,commitment,122348919.0,131056684.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2022,disbursement,-22736.0,-24354.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2022,disbursement,47675.0,51068.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2022,disbursement,1054065.0,1129085.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2022,disbursement,1211071.0,1297265.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2022,disbursement,4869379.0,5215941.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2022,disbursement,9045972.0,9689789.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2022,disbursement,47149241.0,50504930.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2022,disbursement,142650063.0,152802670.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2023,commitment,12777.0,13090.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2023,commitment,542468.0,555755.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2023,commitment,750000.0,768369.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2023,commitment,1671871.0,1712819.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2023,commitment,4998950.0,5121385.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2023,commitment,16042946.0,16435873.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2023,commitment,66150000.0,67770155.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2023,commitment,145839454.0,149411362.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2023,commitment,460233698.0,471505804.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2023,disbursement,1153.0,1181.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2023,disbursement,358958.0,367752.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2023,disbursement,1523943.0,1561269.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2023,disbursement,7590213.0,7776115.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2023,disbursement,8588788.0,8799145.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2023,disbursement,10188864.0,10438413.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2023,disbursement,118620513.0,121525766.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2024,commitment,30000.0,30000.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2024,commitment,35478.0,35478.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2024,commitment,50000.0,50000.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2024,commitment,103990.0,103990.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2024,commitment,487211.0,487211.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2024,commitment,1847825.0,1847825.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2024,commitment,3063311.0,3063311.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2024,commitment,13823380.0,13823380.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2024,commitment,192612415.0,192612415.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2024,disbursement,-400026.0,-400026.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2024,disbursement,35478.0,35478.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2024,disbursement,195372.0,195372.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2024,disbursement,228867.0,228867.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2024,disbursement,248529.0,248529.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2024,disbursement,1817885.0,1817885.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2024,disbursement,11206155.0,11206155.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2024,disbursement,20876471.0,20876471.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2024,disbursement,23586313.0,23586313.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2024,disbursement,123801568.0,123801568.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2025,commitment,260000.0,253890.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2025,commitment,919121.0,897521.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2025,commitment,1942489.0,1896840.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2025,commitment,3866492.0,3775619.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2025,commitment,9115000.0,8900789.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2025,commitment,40182204.0,39237884.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2025,disbursement,167193.0,163264.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2025,disbursement,194851.0,190271.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2025,disbursement,316345.0,308909.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2025,disbursement,1930180.0,1884819.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2025,disbursement,12301793.0,12012691.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2025,disbursement,16636105.0,16245140.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2025,disbursement,74849224.0,73090197.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2025,disbursement,104322575.0,101870894.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2026,commitment,-1975276.0,-1889610.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2026,commitment,109.0,106.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2026,commitment,150.0,143.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2026,commitment,274055.0,262170.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2026,commitment,50488230.0,48298630.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2026,disbursement,150.0,143.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2026,disbursement,4591.0,4392.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2026,disbursement,386776.0,370002.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2026,disbursement,4304890.0,4118193.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2026,disbursement,4458306.0,4264958.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21
+,,2026,disbursement,100571111.0,96209487.0,us_fa_deep,https://foreignassistance.gov/cd/nepal,2026-06-21

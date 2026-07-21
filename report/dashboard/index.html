@@ -77,12 +77,31 @@
   table{width:100%;border-collapse:collapse;font-size:14px}
   th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
   th{font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:700}
+  /* Wide tables scroll inside their card, never the page (same rule as the US deep dive). */
+  .scrollwrap{overflow-x:auto}
+  td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
   .pill{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;white-space:nowrap}
   /* Pill text darkened to >= 7:1 (AAA) against each tinted background. */
   .p-cons,.p-high{background:#e6f6ec;color:#0a5e2f}.p-exp{background:#eef1f6;color:#3a4656}
   .p-key{background:#fef3e2;color:#7a4708}.p-med{background:#fff7e6;color:#7a4708}.p-low{background:#fdeaea;color:#8f1f1a}
   .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
   .chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:13.5px;font-weight:600;box-shadow:var(--shadow)}
+  /* Ported from the US deep dive: keyboard-accessible chip row (real <button>s, 44px targets) as
+     the alternative to clicking chart bars, plus the teal "Tip:" pill. Named .chip-btn on purpose —
+     .chip above is already taken by the static non-DAC chips and must not change appearance. */
+  .chips-label{font-size:12.5px;color:var(--muted);width:100%;margin-bottom:-2px}
+  .chip-btn{display:inline-flex;align-items:center;gap:7px;font:inherit;font-size:13px;font-weight:650;
+    color:var(--teal);background:#fff;border:1.5px solid var(--teal);border-radius:999px;padding:7px 13px;
+    cursor:pointer;min-height:44px;transition:background .12s,color .12s}
+  .chip-btn:hover{background:var(--teal);color:#fff}
+  .chip-btn:hover .v{color:#dff1f2}
+  /* display:inline-flex above outranks the UA sheet's [hidden]{display:none}, so a chip toggled
+     with the hidden attribute (the ledger's "show more") would otherwise stay visible. */
+  .chip-btn[hidden]{display:none}
+  .chip-btn .v{color:var(--muted);font-weight:600;font-variant-numeric:tabular-nums}
+  .hint{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--teal);font-weight:650;
+    margin-top:10px;background:#e9f3f3;border:1px solid #b7dadd;border-radius:999px;padding:5px 12px}
+  .hint::before{content:"👆";font-size:13px}
   .src{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14px;flex-wrap:wrap}
   .src .side{font-size:11px;color:var(--muted);width:84px;flex:none;text-transform:uppercase;letter-spacing:.03em}
   .conf-legend h4{margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
@@ -127,6 +146,7 @@
       <a href="#sectors" data-i18n="nav_sectors">Sectors</a>
       <a href="#usagency" data-i18n="nav_agency">US</a>
       <a href="usforeignaiddata/" data-i18n="nav_usdeep">US deep dive</a>
+      <a href="#gonbooks" data-i18n="nav_gon">Nepal's books</a>
       <a href="#gaps" data-i18n="nav_gaps">Gaps</a>
       <a href="#sources" data-i18n="nav_sources">Sources</a>
     </nav>
@@ -137,7 +157,7 @@
 <div class="hero">
   <div class="wrap">
     <h2 data-i18n="hero_title">Who funds Nepal, and how much actually reaches it</h2>
-    <p data-i18n="hero_p">A clear, fully sourced view of foreign aid to Nepal. Every number is traced to an official source and tagged by confidence. New here? Start with the short guide below.</p>
+    <p data-i18n="hero_p">Every year, other countries and big organisations send Nepal billions of dollars in aid. This page shows who gives it, how much really arrives, and where every number comes from, so you can check it yourself. New here? Start with the short guide below.</p>
     <div class="badges" id="badges"></div>
     <div id="sx-hero"></div>
   </div>
@@ -166,8 +186,10 @@
     <h3 data-i18n="donors_title">Biggest donors, each side</h3>
     <p class="lead" data-i18n="donors_lead">Both sides agree on the ranking: the World Bank and the Asian Development Bank are the largest, then Japan, the United States, the United Kingdom and the EU. India shows up only on Nepal's side, because India does not report to the international system.</p>
     <div class="controls"><label for="donorYear" data-i18n="year">Year</label><select id="donorYear"></select></div>
+    <p class="hint" data-i18n="dn_hint">Tip: click a bar — or a chip under the chart — to open that funder's profile. On Nepal's side only funders with a matching profile open (India, China, Japan, the UK, Germany, Switzerland, Norway).</p>
     <div class="grid2">
-      <div class="card"><div id="c-donor" class="chart sm" role="img"></div></div>
+      <div class="card"><div id="c-donor" class="chart sm" role="img"></div>
+        <div class="chips" id="chips-donor" role="group" aria-labelledby="chips-donor-lbl"></div></div>
       <div class="card"><div id="c-recip" class="chart sm" role="img"></div></div>
     </div>
   </section>
@@ -183,10 +205,11 @@
   <section id="sectors">
     <div class="kicker" data-i18n="sectors_kicker">Where it goes</div>
     <h3 data-i18n="sectors_title">What the money pays for</h3>
-    <p class="lead" data-i18n="sectors_lead">Use the toggle to switch the sector view between all donors (OECD) and the United States alone. US sectors are mapped from ForeignAssistance.gov categories.</p>
+    <p class="lead" data-i18n="sectors_lead">Use the toggle to switch between all donors (OECD) and the United States alone. US sectors are mapped from ForeignAssistance.gov categories.</p>
     <div class="controls">
       <label for="sectorSource" data-i18n="sector_src">Show</label><select id="sectorSource"></select>
       <label for="sectorYear" data-i18n="year">Year</label><select id="sectorYear"></select></div>
+    <p class="hint" data-i18n="sec_hint">Tip: in the all-donors (OECD) view, click a sector bar to open that sector's profile.</p>
     <div class="card"><div id="c-sectors" class="chart sm" role="img"></div></div>
   </section>
 
@@ -197,6 +220,38 @@
     <div class="card"><div id="c-agency" class="chart sm" role="img"></div>
       <div class="note" data-i18n="agency_note">Official ForeignAssistance.gov, disbursements, current US$. FY2026 is partial.</div></div>
     <p class="lead" style="margin-top:12px"><a href="usforeignaiddata/" data-i18n="agency_more">Explore the full US deep dive: budget accounts, sub-sectors, and the restructuring →</a></p>
+  </section>
+
+  <!-- The recipient side's project-level mirror of the US deep dive above: Nepal's OWN books
+       (MOF DFIMS), placed just before #gaps so the reader holds both sides' granular evidence
+       when the page explains why totals differ. Lead/summary render instantly from D.dfims in
+       data.js; the 2,925-row list (1.6 MB dfims_projects.js) lazy-loads on scroll/interaction. -->
+  <section id="gonbooks">
+    <div class="kicker" data-i18n="gb_kicker">The recipient's own books</div>
+    <h3 data-i18n="gb_title">Projects on the Government of Nepal's books (DFIMS, MoF)</h3>
+    <!-- Filled by drawGon() with DFIMS's own retrieval date — NOT data-i18n, whose global pass
+         substitutes core_long's {n}/{d}. Static copy below is the no-JS fallback. -->
+    <p class="lead" id="gb-lead">Nepal's Ministry of Finance publishes its own project-by-project ledger, DFIMS. Our copy of all 2,925 rows sums to the API's published totals to the dollar. These are the recipient side's own records — not automatically consistent with donor reporting.</p>
+    <div class="card" id="gb-sum" style="font-weight:650;font-size:15px"></div>
+    <div class="controls" style="margin-top:12px">
+      <label for="gbStatus" data-i18n="gb_f_status">Status</label><select id="gbStatus"></select>
+      <label for="gbBudget" data-i18n="gb_f_budget">Budget</label><select id="gbBudget"></select>
+      <label for="gbSearch" data-i18n="gb_f_search">Search</label>
+      <input id="gbSearch" type="search" style="font:inherit;font-size:14px;padding:9px 12px;border:1.5px solid #b8c2cf;border-radius:8px;min-height:44px;min-width:210px" placeholder="Melamchi, World Bank, Mugu…">
+    </div>
+    <div class="card" style="padding:6px 10px"><div class="scrollwrap" role="region" aria-labelledby="gb-tbl-cap" tabindex="0">
+      <table id="gb-table" style="min-width:760px"><caption id="gb-tbl-cap" class="sr" data-i18n="gb_title">Projects on the Government of Nepal's books (DFIMS, MoF)</caption><thead><tr>
+        <th data-i18n="gb_th_proj">Project &amp; partners</th>
+        <th data-i18n="gb_th_cm">Promised (commitment)</th>
+        <th data-i18n="gb_th_db">Delivered (disbursement)</th>
+        <th data-i18n="gb_th_st">Status</th>
+        <th data-i18n="gb_th_dates">Agreement → completion</th>
+      </tr></thead><tbody></tbody></table>
+    </div>
+    <div class="note" id="gb-count" aria-live="polite"></div>
+    <div class="chips" style="margin-top:8px"><button type="button" id="gb-more" class="chip-btn" hidden></button></div>
+    <div class="note" data-i18n="gb_note">Amounts in US dollars as converted by DFIMS itself (MOF cautions that its USD expenditure conversion is approximate). A dash (—) means MOF reported no figure — which is different from zero. Project and partner names appear exactly as recorded by MOF.</div>
+    </div>
   </section>
 
   <section id="gaps">
@@ -210,6 +265,11 @@
         <th data-i18n="th_mag">Size of difference</th><th data-i18n="th_verdict">Verdict</th>
         <th data-i18n="th_cause">Most likely reason</th></tr></thead><tbody></tbody></table>
     </div>
+    <!-- N1: client-side CSV export of exactly what this section shows (DASH.downloadCSV, no server). -->
+    <div class="chips" style="margin-top:10px">
+      <button type="button" id="dl-recon" class="chip-btn" data-i18n="dl_recon">⬇ Download CSV — year totals</button>
+      <button type="button" id="dl-disc" class="chip-btn" data-i18n="dl_disc">⬇ Download CSV — mismatch list</button>
+    </div>
     <p class="lead" style="margin-top:18px" data-i18n="nondac_lead">Donors the international system misses entirely (seen only on Nepal's side):</p>
     <div class="chips" id="nondac"></div>
   </section>
@@ -217,7 +277,8 @@
   <section id="sources">
     <div class="kicker" data-i18n="sources_kicker">Where this comes from</div>
     <h3 data-i18n="sources_title">Sources</h3>
-    <p class="lead" data-i18n="sources_lead">Nine sources, retrieved 4 June 2026. Every record keeps its source link and a verifiable snapshot.</p>
+    <!-- Count/date are filled from D.meta at render time; this static copy matches today's meta. -->
+    <p class="lead" data-i18n="sources_lead">10 sources, retrieved 21 Jul 2026. Every record keeps its source link and a verifiable snapshot.</p>
     <div class="card" id="srclist"></div>
     <div class="card conf-legend" id="conf-legend" style="margin-top:14px"></div>
     <div class="disclaim" data-i18n="integrity">Commitments and disbursements are never added together. The donor side comes only from OECD; the recipient side only from Nepal's report; the two are compared, never merged. Nothing is invented: figures that cannot be verified are left blank.</div>
@@ -234,10 +295,9 @@
 
 <footer>
   <div class="wrap">
-    <span data-i18n="foot">Built from primary sources, retrieved 4 June 2026.</span>
-    <a href="../report.md" data-i18n="foot_report">Full report</a> ·
-    <a href="../../data/processed/core_long.csv">core_long.csv</a> ·
-    <a href="../report.md">methodology &amp; sources</a>
+    <span data-i18n="foot">Built from primary sources, retrieved 21 Jul 2026.</span>
+    <a href="../report.md" data-i18n="foot_report">Full report &amp; methodology</a> ·
+    <a href="../../data/processed/core_long.csv">core_long.csv</a>
   </div>
 </footer>
 
@@ -265,24 +325,45 @@ const I18N = {
   flows_note:"Amounts in US dollars, millions. Recipient side follows Nepal's fiscal year.",
   donors_kicker:"Who funds Nepal",donors_title:"Biggest donors, each side",
   donors_lead:"Both sides agree on the ranking: the World Bank and the Asian Development Bank are the largest, then Japan, the United States, the United Kingdom and the EU. India shows up only on Nepal's side, because India does not report to the international system.",
+  dn_hint:"Tip: click a bar — or a chip under the chart — to open that funder's profile. On Nepal's side only funders with a matching profile open (India, China, Japan, the UK, Germany, Switzerland, Norway).",
+  dn_chips:"Or open a funder profile directly:",
   china_kicker:"A closer look",china_title:"China: big promises, smaller delivery",
   china_lead:"The large Chinese figures for Nepal are mostly promises (commitments). The money Nepal records actually arriving is much smaller and fell after 2018. The international aid statistics do not track China at all.",
   china_note:"Promises: AidData (to 2021). Delivered: Nepal's own report.",
   sectors_kicker:"Where it goes",sectors_title:"What the money pays for",
   sectors_lead:"Use the toggle to switch between all donors (OECD) and the United States alone. US sectors are mapped from ForeignAssistance.gov categories.",
   sector_src:"Show",sector_opt_oecd:"All donors (OECD)",sector_opt_us:"United States only",
+  sec_hint:"Tip: in the all-donors (OECD) view, click a sector bar to open that sector's profile.",
   nav_agency:"US",agency_kicker:"US in focus",agency_title:"US assistance by agency: the shift to MCC",
   agency_lead:"As USAID and State disbursements fall after FY2024 (and sharply in FY2026), the Millennium Challenge Corporation (MCC) compact becomes the main US channel. Stacked US disbursements by agency.",
   agency_note:"Official ForeignAssistance.gov, disbursements, current US$. FY2026 is partial.",agency_other:"Other",
   nav_usdeep:"US deep dive",agency_more:"Explore the full US deep dive: budget accounts, sub-sectors, and the restructuring →",
+  // Nepal's own books (DFIMS). {date}/{np}/{cm}/{db}/{ex}/{s}/{m}/{k} are filled by drawGon/
+  // renderGonRows — deliberately NOT {n}/{d}, which the global data-i18n pass owns.
+  nav_gon:"Nepal's books",
+  gb_kicker:"The recipient's own books",
+  gb_title:"Projects on the Government of Nepal's books (DFIMS, MoF)",
+  gb_lead:"The Government of Nepal keeps its own project-by-project ledger: DFIMS, published by the Ministry of Finance (retrieved {date}). After OECD (what donors report), Nepal's DCR summary and the US deep dive (one donor in full detail), this is the page's fourth independent view of the money — the recipient side's own books, project by project. Our copy of all {np} rows sums to the API's own published totals to the dollar, so what you see is exactly what MOF publishes. Remember what it is: the recipient's claim, in its own words — not automatically consistent with donor reporting. The next section explains why such totals differ.",
+  gb_sum:"{np} projects on MOF's books · promised (commitment): {cm} · recorded as delivered (disbursement): {db} · recorded as spent (expenditure): {ex}",
+  gb_f_status:"Status",gb_f_budget:"Budget",gb_f_search:"Search",
+  gb_all:"All statuses",gb_ongoing:"On-going",gb_completed:"Completed",
+  gb_ball:"On + off budget",gb_on:"On budget",gb_off:"Off budget",
+  gb_ph:"Project, partner or district…",
+  gb_th_proj:"Project & partners",gb_th_cm:"Promised (commitment)",gb_th_db:"Delivered (disbursement)",
+  gb_th_st:"Status",gb_th_dates:"Agreement → completion",
+  gb_count:"Showing {s} of {m} matching projects",gb_more:"Show {k} more",
+  gb_loading:"Loading Nepal's ledger (1.6 MB)…",
+  gb_err:"The ledger could not load. Please check your connection and refresh.",
+  gb_note:"Amounts in US dollars as converted by DFIMS itself (MOF cautions that its USD expenditure conversion is approximate). A dash (—) means MOF reported no figure — which is different from zero. Project and partner names appear exactly as recorded by MOF.",
   gaps_kicker:"Honesty about the numbers",gaps_title:"Why the two sides differ",
   gaps_lead:"Red bars are years Nepal reports receiving more than donors report giving. Below, every notable mismatch is listed with the most likely reason. None of these are errors to hide; they are the honest result of two systems counting differently.",
   nondac_lead:"Donors the international system misses entirely (seen only on Nepal's side):",
+  dl_recon:"⬇ Download CSV — year totals",dl_disc:"⬇ Download CSV — mismatch list",
   sources_kicker:"Where this comes from",sources_title:"Sources",
-  sources_lead:"Nine sources, retrieved 4 June 2026. Every record keeps its source link and a verifiable snapshot.",
+  sources_lead:"{n} sources, retrieved {d}. Every record keeps its source link and a verifiable snapshot.",
   integrity:"Commitments and disbursements are never added together. The donor side comes only from OECD; the recipient side only from Nepal's report; the two are compared, never merged. Nothing is invented: figures that cannot be verified are left blank.",
   gloss_title:"Glossary of terms",
-  foot:"Built from primary sources, retrieved 4 June 2026. ",foot_report:"Full report",
+  foot:"Built from primary sources, retrieved {d}. ",foot_report:"Full report &amp; methodology",
   th_id:"ID",th_comp:"What is compared",th_mag:"Size of difference",th_verdict:"Verdict",th_cause:"Most likely reason",
   // chart pieces
   ch_anchor:"World Bank check (independent)",ch_donor:"Donor side (what donors gave)",ch_recip:"Recipient side (what Nepal got)",
@@ -293,7 +374,7 @@ const I18N = {
   kpi_oda:"Aid Nepal received in 2023",kpi_peak:"Highest year ({y})",
   kpi_partner:"Biggest single funder",kpi_nondac:"Biggest funder the world misses",kpi_data:"Sources / records, checked",
   // badges
-  b_sourced:"Fully sourced",b_sources:"{n} sources",b_records:"{n} records",b_headline:"{n} checked headline figures",b_ret:"Retrieved 4 Jun 2026",
+  b_sourced:"Fully sourced",b_sources:"{n} sources",b_records:"{n} records",b_headline:"{n} checked headline figures",b_ret:"Retrieved {d}",
   // verdicts / confidence / side
   v_CONSISTENT:"Matches",v_EXPECTED:"Expected",v_EXPLAINED:"Explained","v_KEY FINDING":"Key finding",
   conf_high:"high",conf_med:"medium",conf_low:"low",side_donor:"donor",side_recipient:"recipient",
@@ -316,24 +397,43 @@ const I18N = {
   flows_note:"रकम अमेरिकी डलरमा, मिलियनमा। प्राप्तकर्ता पक्ष नेपालको आर्थिक वर्षअनुसार।",
   donors_kicker:"नेपाललाई कसले सहायता दिन्छ",donors_title:"सबैभन्दा ठूला दाता, दुवै पक्ष",
   donors_lead:"दुवै पक्ष क्रमसूचीमा सहमत छन्: विश्व बैंक र एसियाली विकास बैंक सबैभन्दा ठूला, त्यसपछि जापान, अमेरिका, बेलायत र युरोपेली संघ। भारत नेपालको पक्षमा मात्र देखिन्छ, किनकि भारतले अन्तर्राष्ट्रिय प्रणालीमा रिपोर्ट गर्दैन।",
+  dn_hint:"सुझाव: बार — वा चार्टमुनिको चिप — क्लिक गरेर त्यो दाताको प्रोफाइल खोल्नुहोस्। नेपालको पक्षमा प्रोफाइल भएका दाता मात्र खुल्छन् (भारत, चीन, जापान, बेलायत, जर्मनी, स्वीजरल्यान्ड, नर्वे)।",
+  dn_chips:"वा सिधै दाताको प्रोफाइल खोल्नुहोस्:",
   china_kicker:"नजिकबाट हेर्दा",china_title:"चीन: ठूला वाचा, थोरै वितरण",
   china_lead:"नेपालका लागि चीनका ठूला अङ्कहरू प्रायः वाचा (प्रतिबद्धता) हुन्। नेपालले वास्तवमा आइपुगेको भनी टिपेको रकम धेरै कम छ र २०१८ पछि घट्यो। अन्तर्राष्ट्रिय सहायता तथ्याङ्कले चीनलाई पटक्कै समेट्दैन।",
   china_note:"वाचा: AidData (२०२१ सम्म)। वितरण: नेपालको आफ्नै प्रतिवेदन।",
   sectors_kicker:"कहाँ जान्छ",sectors_title:"पैसाले के-केमा खर्च हुन्छ",
   sectors_lead:"टगलले सबै दाता (OECD) र अमेरिका मात्रको क्षेत्र दृश्य फेर्नुहोस्। अमेरिकी क्षेत्र ForeignAssistance.gov कोटिबाट म्याप गरिएको।",
   sector_src:"देखाउनुहोस्",sector_opt_oecd:"सबै दाता (OECD)",sector_opt_us:"अमेरिका मात्र",
+  sec_hint:"सुझाव: सबै दाता (OECD) दृश्यमा, क्षेत्रको बार क्लिक गरेर त्यो क्षेत्रको प्रोफाइल खोल्नुहोस्।",
   nav_agency:"अमेरिका",agency_kicker:"अमेरिकामा केन्द्रित",agency_title:"निकायअनुसार अमेरिकी सहायता: MCC तर्फको मोड",
   agency_lead:"FY2024 पछि USAID र State को वितरण घट्दै (र FY2026 मा तीव्र रूपमा), Millennium Challenge Corporation (MCC) सम्झौता मुख्य अमेरिकी माध्यम बन्छ। निकायअनुसार अमेरिकी वितरण (थपिएको)।",
   agency_note:"आधिकारिक ForeignAssistance.gov, वितरण, हालको डलर। FY2026 आंशिक।",agency_other:"अन्य",
   nav_usdeep:"US गहिरो विश्लेषण",agency_more:"पूरा अमेरिकी गहिरो विश्लेषण हेर्नुहोस्: बजेट खाता, उप-क्षेत्र र पुनर्संरचना →",
+  nav_gon:"नेपालको खाता",
+  gb_kicker:"प्राप्तकर्ताकै आफ्नै खाता",
+  gb_title:"नेपाल सरकारको खातामा रहेका परियोजनाहरू (DFIMS, अर्थ मन्त्रालय)",
+  gb_lead:"नेपाल सरकारले आफ्नै परियोजना-स्तरको खाता राख्छ: अर्थ मन्त्रालयले प्रकाशित गर्ने DFIMS ({date} मा लिइएको)। OECD (दाताले रिपोर्ट गरेको), नेपालको DCR सारांश र अमेरिकी गहिरो विश्लेषण (एक दाताको पूरा विवरण) पछि, यो यस पृष्ठको चौथो स्वतन्त्र दृष्टिकोण हो — परियोजना-परियोजनामा प्राप्तकर्ता पक्षकै आफ्नै अभिलेख। हाम्रो प्रतिलिपिका सबै {np} पङ्क्तिको जोड API ले नै प्रकाशित गरेको कुलसँग डलरसम्म ठ्याक्कै मिल्छ, त्यसैले यहाँ देखिने अङ्क अर्थ मन्त्रालयले प्रकाशित गरेकै हो। तर यो के हो भन्ने नबिर्सनुहोस्: यो प्राप्तकर्ताको आफ्नै दाबी हो — दाताको रिपोर्टसँग स्वतः मिल्दैन। कुल किन फरक हुन्छ भन्ने अर्को खण्डले बुझाउँछ।",
+  gb_sum:"अर्थ मन्त्रालयको खातामा {np} परियोजना · वाचा (प्रतिबद्धता): {cm} · वितरण भनी टिपिएको: {db} · खर्च भनी टिपिएको: {ex}",
+  gb_f_status:"अवस्था",gb_f_budget:"बजेट",gb_f_search:"खोज्नुहोस्",
+  gb_all:"सबै अवस्था",gb_ongoing:"चालु",gb_completed:"सम्पन्न",
+  gb_ball:"बजेटभित्र + बाहिर",gb_on:"बजेटभित्र",gb_off:"बजेटबाहिर",
+  gb_ph:"परियोजना, साझेदार वा जिल्ला…",
+  gb_th_proj:"परियोजना र साझेदार",gb_th_cm:"वाचा (प्रतिबद्धता)",gb_th_db:"वितरण",
+  gb_th_st:"अवस्था",gb_th_dates:"सम्झौता → सम्पन्न",
+  gb_count:"{m} मिल्ने परियोजनामध्ये {s} देखाइएको",gb_more:"थप {k} देखाउनुहोस्",
+  gb_loading:"नेपालको खाता लोड हुँदैछ (१.६ MB)…",
+  gb_err:"खाता लोड हुन सकेन। इन्टरनेट जाँचेर पुनः लोड गर्नुहोस्।",
+  gb_note:"रकम अमेरिकी डलरमा, DFIMS ले नै रूपान्तरण गरेअनुसार (अर्थ मन्त्रालय आफैं भन्छ: डलरमा खर्चको रूपान्तरण अनुमानित हुन सक्छ)। ड्यास (—) को अर्थ अर्थ मन्त्रालयले अङ्क रिपोर्ट गरेन भन्ने हो — शून्य होइन। परियोजना र साझेदारका नाम अभिलेखमा भएकै रूपमा राखिएका छन्।",
   gaps_kicker:"अङ्कप्रति इमानदारी",gaps_title:"दुई पक्ष किन फरक हुन्छन्",
   gaps_lead:"रातो स्तम्भ ती वर्ष हुन् जब नेपालले दाताले दिएभन्दा बढी पाएको रिपोर्ट गर्छ। तल, हरेक उल्लेखनीय भिन्नता सम्भावित कारणसहित सूचीबद्ध छ। यी लुकाउनुपर्ने त्रुटि होइनन्; दुई प्रणालीले फरक गणना गर्दाको इमानदार परिणाम हुन्।",
   nondac_lead:"अन्तर्राष्ट्रिय प्रणालीले पूरै छुटाउने दाताहरू (नेपालको पक्षमा मात्र देखिने):",
+  dl_recon:"⬇ CSV डाउनलोड — वार्षिक कुल",dl_disc:"⬇ CSV डाउनलोड — भिन्नता सूची",
   sources_kicker:"यो कहाँबाट आयो",sources_title:"स्रोतहरू",
-  sources_lead:"नौ स्रोत, ४ जुन २०२६ मा लिइएको। हरेक अभिलेखले आफ्नो स्रोत लिङ्क र पुष्टियोग्य प्रतिलिपि राख्छ।",
+  sources_lead:"{n} स्रोत, {d} मा लिइएको। हरेक अभिलेखले आफ्नो स्रोत लिङ्क र पुष्टियोग्य प्रतिलिपि राख्छ।",
   integrity:"प्रतिबद्धता र वितरणलाई कहिल्यै जोडिँदैन। दाता पक्ष OECD बाट मात्र; प्राप्तकर्ता पक्ष नेपालको प्रतिवेदनबाट मात्र; दुवैलाई तुलना गरिन्छ, जोडिँदैन। केही पनि बनावटी छैन: पुष्टि नहुने अङ्क खाली राखिन्छ।",
   gloss_title:"शब्दावली",
-  foot:"प्राथमिक स्रोतबाट निर्मित, ४ जुन २०२६ मा लिइएको। ",foot_report:"पूर्ण प्रतिवेदन",
+  foot:"प्राथमिक स्रोतबाट निर्मित, {d} मा लिइएको। ",foot_report:"पूर्ण प्रतिवेदन र विधि",
   th_id:"क्र.सं.",th_comp:"के तुलना गरिएको",th_mag:"भिन्नताको आकार",th_verdict:"निष्कर्ष",th_cause:"सम्भावित कारण",
   ch_anchor:"विश्व बैंक जाँच (स्वतन्त्र)",ch_donor:"दाता पक्ष (दाताले दिएको)",ch_recip:"प्राप्तकर्ता पक्ष (नेपालले पाएको)",
   ch_donortitle:"दाता पक्ष · दाताले रिपोर्ट गरेको",ch_reciptitle:"प्राप्तकर्ता पक्ष · नेपालले रिपोर्ट गरेको",
@@ -341,7 +441,7 @@ const I18N = {
   ch_usdm:"डलर (मिलियन)",ch_pct:"%",ch_gapname:"दाता घटाउँदा प्राप्तकर्ता",
   kpi_oda:"२०२३ मा नेपालले पाएको सहायता",kpi_peak:"सबैभन्दा बढी वर्ष ({y})",
   kpi_partner:"सबैभन्दा ठूलो एकल दाता",kpi_nondac:"विश्वले छुटाउने सबैभन्दा ठूलो दाता",kpi_data:"स्रोत / अभिलेख, जाँचिएको",
-  b_sourced:"पूर्ण स्रोतसहित",b_sources:"{n} स्रोत",b_records:"{n} अभिलेख",b_headline:"{n} जाँचिएका मुख्य अङ्क",b_ret:"४ जुन २०२६ मा लिइएको",
+  b_sourced:"पूर्ण स्रोतसहित",b_sources:"{n} स्रोत",b_records:"{n} अभिलेख",b_headline:"{n} जाँचिएका मुख्य अङ्क",b_ret:"{d} मा लिइएको",
   v_CONSISTENT:"मिल्दो",v_EXPECTED:"अपेक्षित",v_EXPLAINED:"व्याख्या गरिएको","v_KEY FINDING":"मुख्य निष्कर्ष",
   conf_high:"उच्च",conf_med:"मध्यम",conf_low:"न्यून",side_donor:"दाता",side_recipient:"प्राप्तकर्ता",
   conf_legend_title:"विश्वसनीयता तहको अर्थ",
@@ -395,6 +495,9 @@ const NE_DONOR = {
  "World Bank Group":"विश्व बैंक समूह","World Bank (IDA)":"विश्व बैंक (IDA)","Japan":"जापान","United States":"संयुक्त राज्य अमेरिका",
  "USAID":"USAID (अमेरिकी सहायता)","Germany":"जर्मनी","United Kingdom":"बेलायत","EU Institutions":"युरोपेली संघ","European Union":"युरोपेली संघ",
  "Norway":"नर्वे","Switzerland":"स्वीजरल्यान्ड","Global Fund":"ग्लोबल फन्ड","Global Alliance for Vaccines and Immunization [GAVI]":"ग्याभी (GAVI)",
+ // short forms used on the recipient-side chart + two donor-side funds that had no entry (M5)
+ "ADB":"एसियाली विकास बैंक (ADB)","GAVI":"ग्याभी (GAVI)",
+ "IMF Concessional Trust Funds":"IMF सहुलियतपूर्ण ट्रस्ट कोष","Climate Investment Funds [CIF]":"जलवायु लगानी कोष (CIF)",
  "Australia":"अष्ट्रेलिया","India":"भारत","China":"चीन","UN":"संयुक्त राष्ट्र संघ","IMF":"अन्तर्राष्ट्रिय मुद्रा कोष","Korea":"कोरिया",
  "Finland":"फिनल्यान्ड","Denmark":"डेनमार्क","Canada":"क्यानडा","France":"फ्रान्स","Saudi Fund":"साउदी कोष","Kuwait Fund (KFAED)":"कुवेत कोष (KFAED)",
  "OPEC Fund (OFID)":"ओपेक कोष (OFID)","SAARC Development Fund":"सार्क विकास कोष"
@@ -409,6 +512,45 @@ const t = k => (I18N[lang][k] ?? I18N.en[k] ?? k);
 const dName = n => lang==='ne' ? (NE_DONOR[n]||n) : n;
 const sName = n => lang==='ne' ? (NE_SECTOR[n]||n) : n;
 const fmt = v => v==null ? '—' : '$'+Number(v).toLocaleString('en-US',{maximumFractionDigits:0})+'m';
+/* fmt() takes millions, because every OECD/DCR figure on this page is charted in $m. DFIMS ships
+   WHOLE dollars for individual projects (a $412,000 grant next to a $41bn national total), so it
+   needs the escalating scale — copied thresholds-and-all from search.js money(), so the ledger and
+   a search profile can never print the same dollar two different ways. Absent-vs-zero is the
+   caller's decision (key presence), never this function's. */
+const fmtUsd = v => v>=1e9 ? '$'+(v/1e9).toFixed(2)+'bn'
+                  : v>=1e6 ? '$'+(v/1e6).toFixed(1)+'m'
+                  : v>=1e3 ? '$'+Math.round(v/1e3)+'k'
+                  : '$'+Math.round(v);
+/* MOF/DFIMS supplies project and partner names as free text (80 project names contain "&") and we
+   put them in innerHTML — escape them. Same rule as the US deep dive's esc(). */
+const esc = s => String(s==null?'':s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+/* Source count + retrieval date come from D.meta, never hardcoded in strings (M4): a new source or
+   refresh would otherwise silently make "Nine sources, 4 June" a lie. {n}/{d} placeholders in the
+   I18N strings are filled at render time. Dates: EN "4 Jun 2026", NE "४ जुन २०२६". */
+const NE_DIG = s => String(s).replace(/\d/g, d => '०१२३४५६७८९'[+d]);
+const locNum = n => lang==='ne' ? NE_DIG(n) : String(n);
+const MON = {en:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+             ne:['जनवरी','फेब्रुअरी','मार्च','अप्रिल','मे','जुन','जुलाई','अगस्ट','सेप्टेम्बर','अक्टोबर','नोभेम्बर','डिसेम्बर']};
+function fmtDate(iso){ const [y,m,d]=String(iso||'').split('-'); if(!y) return iso||'';
+  const mon=MON[lang==='ne'?'ne':'en'][+m-1]||m;
+  return lang==='ne' ? NE_DIG(+d)+' '+mon+' '+NE_DIG(y) : (+d)+' '+mon+' '+y; }
+/* Colour-match the "How to read" cards to the chart colours (M1): the reader's first job is to
+   connect blue line = donor side, red line = recipient side; the card borders teach that mapping.
+   Indexes follow the TERMS order; unlisted cards keep the default teal border. */
+const TERM_COLORS = ['var(--donor)','var(--recipient)','var(--amber)'];
+/* Chart-click honesty allowlists (M2). Recipient-side bar names are clickable ONLY where the exact
+   same name exists as a donor:* entity in search_index.js — we NEVER alias "World Bank Group"→IDA
+   or "USAID"→United States; that would invent a link between two datasets that count differently.
+   Donor-side bars need no list: the index's donor:* entities are generated from these very names.
+   Sector entities exist only for these OECD keys (finance/humanitarian/other_social have no
+   profile), and the US-mapped sector view is never clickable — sector profiles are OECD-only. */
+const RECIP_OK  = new Set(['India','China','Japan','United Kingdom','Germany','Switzerland','Norway']);
+const SECTOR_OK = new Set(['agriculture','budget_support','education','energy','governance','health',
+                           'multisector','population','transport','water']);
+/* Open the already-built search profile for an entity id. search.js listens on hashchange
+   (maybeDeepLink), lazy-loads search_index.js on first use, and close() clears the hash again —
+   so repeat clicks on the same bar re-fire. Zero new data, zero new drawer infra. */
+const openFind = id => { location.hash = '#find='+encodeURIComponent(id); };
 const charts = {};
 const _ro = ('ResizeObserver' in window) ? new ResizeObserver(es=>es.forEach(e=>{
   const c=charts[e.target.id]; if(c) c.resize();
@@ -426,14 +568,17 @@ function render(){
   document.title = (lang==='ne'?'नेपाललाई विकास सहायता':'Development Funding to Nepal')+' — Dashboard';
   document.getElementById('lang-en').setAttribute('aria-pressed', lang==='en');
   document.getElementById('lang-ne').setAttribute('aria-pressed', lang==='ne');
-  document.querySelectorAll('[data-i18n]').forEach(el=>el.innerHTML=t(el.dataset.i18n));
+  // {n}=source count, {d}=retrieval date — filled from D.meta so the copy can never drift from the
+  // data (M4). Only sources_lead/foot/b_ret use these; other {…} tokens are filled where built.
+  const m=D.meta;
+  document.querySelectorAll('[data-i18n]').forEach(el=>el.innerHTML=
+    t(el.dataset.i18n).replace(/\{n\}/g,locNum(m.n_sources)).replace(/\{d\}/g,fmtDate(m.retrieved_at)));
 
   // badges
-  const m=D.meta;
   document.getElementById('badges').innerHTML=[
-    t('b_sourced'),t('b_sources').replace('{n}',m.n_sources),
+    t('b_sourced'),t('b_sources').replace('{n}',locNum(m.n_sources)),
     t('b_records').replace('{n}',m.n_rows.toLocaleString()),
-    t('b_headline').replace('{n}',m.n_headline),t('b_ret')
+    t('b_headline').replace('{n}',m.n_headline),t('b_ret').replace('{d}',fmtDate(m.retrieved_at))
   ].map(x=>`<span class="badge">${x}</span>`).join('');
 
   // KPIs
@@ -448,9 +593,9 @@ function render(){
   document.getElementById('kpis').innerHTML=cards.map(c=>
     `<div class="kpi"><div class="bar" aria-hidden="true"></div><div class="v">${c.v}</div><div class="l">${c.l}</div></div>`).join('');
 
-  // how-to terms + glossary
-  document.getElementById('explain').innerHTML=TERMS[lang].map(([a,b])=>
-    `<div class="term"><b>${a}</b><span>${b}</span></div>`).join('');
+  // how-to terms + glossary (card borders colour-matched to the chart lines, M1)
+  document.getElementById('explain').innerHTML=TERMS[lang].map(([a,b],i)=>
+    `<div class="term"${TERM_COLORS[i]?` style="border-left-color:${TERM_COLORS[i]}"`:''}><b>${a}</b><span>${b}</span></div>`).join('');
   document.getElementById('gloss-dl').innerHTML=GLOSS[lang].map(([a,b])=>
     `<dt>${a}</dt><dd>${b}</dd>`).join('');
 
@@ -485,7 +630,7 @@ function render(){
   ss.innerHTML=`<option value="oecd">${t('sector_opt_oecd')}</option><option value="us">${t('sector_opt_us')}</option>`;
   ss.value=sectorSrc; ss.onchange=()=>{sectorSrc=ss.value; drawSectors();};
 
-  drawFlows(); drawDonors(); drawChina(); drawSectors(); drawAgency(); drawGap();
+  drawFlows(); drawDonors(); drawChina(); drawSectors(); drawAgency(); drawGap(); drawGon();
 }
 
 function aria(id,text){ document.getElementById(id).setAttribute('aria-label',text); }
@@ -515,20 +660,50 @@ function barH(title,color,cats,vals){return{animation:anim,textStyle:baseText(),
 function drawDonors(){
   const d=D.topDonors.donor[donorYear]||[], r=D.topDonors.recipient[donorYear]||[];
   aria('c-donor',t('ch_donortitle')); aria('c-recip',t('ch_reciptitle'));
-  chart('c-donor').setOption(barH(t('ch_donortitle'),C.donor,d.map(x=>dName(x.name)),d.map(x=>x.usd)),true);
-  chart('c-recip').setOption(barH(t('ch_reciptitle'),C.recipient,r.map(x=>dName(x.name)),r.map(x=>x.usd)),true);
+  // Donor side: every bar has a donor:* profile (the search index is generated from these names).
+  const od=barH(t('ch_donortitle'),C.donor,d.map(x=>dName(x.name)),d.map(x=>x.usd));
+  od.series[0].cursor='pointer';
+  const cd=chart('c-donor'); cd.setOption(od,true);
+  cd.off('click'); cd.on('click',p=>{ const n=d[p.dataIndex]&&d[p.dataIndex].name; if(n) openFind('donor:'+n); });
+  // Recipient side: only exact-name matches in RECIP_OK are clickable (no cross-dataset aliasing).
+  // Series cursor stays 'default'; the mousemove handler flips it to a pointer per allowlisted bar.
+  const or=barH(t('ch_reciptitle'),C.recipient,r.map(x=>dName(x.name)),r.map(x=>x.usd));
+  or.series[0].cursor='default';
+  const cr=chart('c-recip'); cr.setOption(or,true);
+  cr.off('click'); cr.on('click',p=>{ const n=r[p.dataIndex]&&r[p.dataIndex].name; if(RECIP_OK.has(n)) openFind('donor:'+n); });
+  cr.off('mousemove'); cr.on('mousemove',p=>{
+    cr.getZr().setCursorStyle(RECIP_OK.has(r[p.dataIndex]&&r[p.dataIndex].name)?'pointer':'default'); });
+  // Keyboard-accessible alternative to the bar clicks: a row of real <button> chips (M3).
+  document.getElementById('chips-donor').innerHTML=
+    `<span class="chips-label" id="chips-donor-lbl">${t('dn_chips')}</span>`+
+    d.map((x,i)=>{ const n=dName(x.name);
+      return `<button type="button" class="chip-btn" data-i="${i}">${n.length>26?n.slice(0,24)+'…':n} <span class="v">${fmt(x.usd)}</span></button>`; }).join('');
+  document.querySelectorAll('#chips-donor .chip-btn').forEach(b=>b.onclick=()=>openFind('donor:'+d[+b.dataset.i].name));
 }
 function drawChina(){
   const ch=D.china; aria('c-china',t('china_title'));
-  chart('c-china').setOption({animation:anim,textStyle:baseText(),grid:{left:58,right:18,top:42,bottom:30},
+  const cc=chart('c-china');
+  cc.setOption({animation:anim,textStyle:baseText(),grid:{left:58,right:18,top:42,bottom:30},
     tooltip:{trigger:'axis',valueFormatter:fmt},legend:{top:6,type:'scroll',data:[t('ch_commit'),t('ch_disb')]},
     xAxis:{type:'category',data:ch.years},yAxis:{type:'value',name:t('ch_usdm'),splitLine:{lineStyle:{color:C.grid}}},
-    series:[{name:t('ch_commit'),type:'bar',data:ch.commitments,itemStyle:{color:C.amber,borderRadius:[4,4,0,0]}},
-      {name:t('ch_disb'),type:'bar',data:ch.disbursements,itemStyle:{color:C.recipient,borderRadius:[4,4,0,0]}}]},true);
+    series:[{name:t('ch_commit'),type:'bar',cursor:'pointer',data:ch.commitments,itemStyle:{color:C.amber,borderRadius:[4,4,0,0]}},
+      {name:t('ch_disb'),type:'bar',cursor:'pointer',data:ch.disbursements,itemStyle:{color:C.recipient,borderRadius:[4,4,0,0]}}]},true);
+  // Both series describe the same donor entity — any bar opens the China profile (M2).
+  cc.off('click'); cc.on('click',()=>openFind('donor:China'));
 }
 function drawSectors(){
   const s=(D.sectors[sectorSrc]||{})[sectorYear]||[]; aria('c-sectors',t('sectors_title'));
-  chart('c-sectors').setOption(barH('',sectorSrc==='us'?C.donor:C.green,s.map(x=>sName(x.name)),s.map(x=>x.usd)),true);
+  const o=barH('',sectorSrc==='us'?C.donor:C.green,s.map(x=>sName(x.name)),s.map(x=>x.usd));
+  o.series[0].cursor='default';
+  const c=chart('c-sectors'); c.setOption(o,true);
+  // Only the OECD view is clickable, and only keys with a sector:* profile (SECTOR_OK) — the US
+  // view is mapped from ForeignAssistance.gov categories and must not open OECD-built profiles.
+  c.off('click'); c.off('mousemove');
+  if(sectorSrc==='oecd'){
+    c.on('click',p=>{ const k=s[p.dataIndex]&&s[p.dataIndex].name; if(SECTOR_OK.has(k)) openFind('sector:'+k); });
+    c.on('mousemove',p=>{
+      c.getZr().setCursorStyle(SECTOR_OK.has(s[p.dataIndex]&&s[p.dataIndex].name)?'pointer':'default'); });
+  }
 }
 function drawAgency(){
   const ua=D.us_agency; if(!ua||!ua.series||!ua.series.length) return;
@@ -551,6 +726,147 @@ function drawGap(){
       label:{show:true,position:'top',formatter:p=>p.value+'%',fontSize:10,color:C.ink}}]},true);
 }
 
+/* ---------- Nepal's own books: the DFIMS project ledger ---------- */
+/* Two tiers on purpose. The lead and the headline totals come from D.dfims, which is already in
+   data.js, so the honesty claim ("our copy sums to MOF's own published totals") paints instantly
+   and is NEVER blocked by — or falsified by — a failed ledger fetch. The 2,925 rows themselves
+   live in dfims_projects.js (1.6 MB, ~20x data.js); most visitors never scroll this far, so that
+   file is loaded on demand and must never become a <script src> tag. */
+const GB_PAGE = 25;
+let gonStatus='all', gonBudget='all', gonQ='', gonShown=GB_PAGE;
+let gonState='idle';        // idle | loading | error | ready — survives a language toggle
+let gonDebounce=0, _gonPromise=null, _gonIdx=null;
+
+function drawGon(){
+  const g=D.dfims; if(!g) return;
+  const np=locNum(g.n.toLocaleString('en-US'));
+  /* #gb-lead carries no data-i18n on purpose: the global pass substitutes core_long's {n}/{d}, and
+     DFIMS keeps its OWN retrieval date. They are equal today only because DFIMS is the newest
+     source; g.retrieved is the honest field and will diverge at the next core refresh. */
+  document.getElementById('gb-lead').innerHTML =
+    t('gb_lead').replace('{date}',fmtDate(g.retrieved)).replace('{np}',np);
+  /* MOF's own published totals, shipped whole — not a rowsum of our copy. (They agree to the
+     dollar; that agreement is exactly what the lead claims, so we print the source's number.) */
+  document.getElementById('gb-sum').innerHTML = t('gb_sum').replace('{np}',np)
+    .replace('{cm}',fmtUsd(g.cm)).replace('{db}',fmtUsd(g.db)).replace('{ex}',fmtUsd(g.ex));
+
+  // Controls rebuilt every render so their labels re-translate on the language toggle, with the
+  // reader's current choice preserved — same contract as #sectorSource above.
+  const st=document.getElementById('gbStatus');
+  st.innerHTML=`<option value="all">${t('gb_all')}</option>`+
+    `<option value="On-Going">${t('gb_ongoing')}</option>`+
+    `<option value="Completed">${t('gb_completed')}</option>`;
+  st.value=gonStatus; st.onchange=()=>{ gonStatus=st.value; gonShown=GB_PAGE; showGon(); };
+  const bd=document.getElementById('gbBudget');
+  bd.innerHTML=`<option value="all">${t('gb_ball')}</option>`+
+    `<option value="on">${t('gb_on')}</option><option value="off">${t('gb_off')}</option>`;
+  bd.value=gonBudget; bd.onchange=()=>{ gonBudget=bd.value; gonShown=GB_PAGE; showGon(); };
+  const sq=document.getElementById('gbSearch');
+  sq.placeholder=t('gb_ph'); sq.value=gonQ;
+  // Debounced: re-filtering 2,925 rows on every keystroke would stutter on a mid-range phone.
+  sq.oninput=()=>{ clearTimeout(gonDebounce); gonDebounce=setTimeout(()=>{
+    gonQ=sq.value; gonShown=GB_PAGE; showGon(); },180); };
+  document.getElementById('gb-more').onclick=()=>{ gonShown+=GB_PAGE; drawGonRows(); };
+
+  // Re-stamp whatever the table currently shows, in the new language.
+  if(gonState==='ready') drawGonRows(); else gonMsg(gonState);
+}
+
+// The table's pre-rows states. Errors go in #gb-count because it is aria-live="polite", so a
+// screen-reader user hears the failure instead of sitting at a silently empty table.
+function gonMsg(state){
+  document.querySelector('#gb-table tbody').innerHTML =
+    state==='loading' ? `<tr><td colspan="5">${t('gb_loading')}</td></tr>` : '';
+  document.getElementById('gb-count').textContent = state==='error' ? t('gb_err') : '';
+  document.getElementById('gb-more').hidden = true;
+}
+
+/* Single-flight: the observer and all three controls may trip at once, but the <script> is
+   injected exactly once. Same trick as search.js's index and the US treemap drill-down. */
+function loadGon(){
+  if(window.DFIMS_PROJECTS) return Promise.resolve(true);
+  if(_gonPromise) return _gonPromise;
+  _gonPromise = new Promise(resolve=>{
+    const s=document.createElement('script'); s.src='dfims_projects.js';
+    s.onload =()=>resolve(!!window.DFIMS_PROJECTS);
+    s.onerror=()=>{ _gonPromise=null; resolve(false); };   // cleared so a later trigger can retry
+    document.head.appendChild(s);
+  });
+  return _gonPromise;
+}
+// Every trigger lands here: paint the ledger, fetching it first if this is the first ask.
+function showGon(){
+  if(window.DFIMS_PROJECTS){ gonState='ready'; drawGonRows(); return; }
+  gonState='loading'; gonMsg('loading');
+  loadGon().then(ok=>{
+    if(!ok){ gonState='error'; gonMsg('error'); return; }
+    gonState='ready'; drawGonRows();
+  });
+}
+
+/* Sorted, search-ready view of MOF's rows, built once. The rows are wrapped rather than mutated so
+   the "is this key absent?" test below keeps asking the untouched original object. */
+function gonIndex(){
+  if(!_gonIdx){
+    // The placeholder promises name / partner / district, so those are exactly what is searched.
+    _gonIdx=(window.DFIMS_PROJECTS.list||[]).map(r=>({r,
+      h:(r.n+' '+(r.dp||[]).join(' ')+' '+(r.dt||[]).join(' ')).toLowerCase()}))
+      // Commitment desc. A row with NO commitment sorts last rather than being ranked as if MOF
+      // had reported $0 — those are different statements, and 6 rows are in that position.
+      .sort((a,b)=>{ const A='cm' in a.r, B='cm' in b.r;
+        return A!==B ? (A?-1:1) : (A ? b.r.cm-a.r.cm : 0); });
+  }
+  return _gonIdx;
+}
+
+function drawGonRows(){
+  if(!window.DFIMS_PROJECTS) return;
+  const q=gonQ.trim().toLowerCase();
+  const hits=gonIndex().filter(e=>
+    (gonStatus==='all' || e.r.st===gonStatus) &&
+    (gonBudget==='all' || e.r.bt===gonBudget) &&
+    (!q || e.h.indexOf(q)>=0));
+  const shown=Math.min(gonShown,hits.length);
+  document.querySelector('#gb-table tbody').innerHTML=hits.slice(0,shown).map(e=>{
+    const r=e.r, dp=(r.dp||[]).join(' · ');
+    /* 'cm' in r, never r.cm||0. An absent key means MOF published no figure (6 rows have no
+       commitment, 224 no disbursement, 1,642 no expenditure) — and one row reports a real
+       disbursement of exactly 0, which a falsiness test would render identically. The note under
+       this table promises the reader that dash and $0 are different. */
+    const cm=('cm' in r)?fmtUsd(r.cm):'—', db=('db' in r)?fmtUsd(r.db):'—';
+    const done=r.st==='Completed';
+    return `<tr><td><strong>${esc(r.n)}</strong>`+
+      (dp?`<div class="note" style="margin-top:2px">${esc(dp)}</div>`:'')+
+      `</td><td class="num">${cm}</td><td class="num">${db}</td>`+
+      `<td><span class="pill ${done?'p-cons':'p-med'}">${t(done?'gb_completed':'gb_ongoing')}</span></td>`+
+      `<td class="num" style="text-align:left">${r.ad?fmtDate(r.ad):'—'} → ${r.cd?fmtDate(r.cd):'—'}</td></tr>`;
+  }).join('');
+  document.getElementById('gb-count').textContent=t('gb_count')
+    .replace('{s}',locNum(shown.toLocaleString('en-US')))
+    .replace('{m}',locNum(hits.length.toLocaleString('en-US')));
+  const more=document.getElementById('gb-more'), left=hits.length-shown;
+  more.hidden = left<=0;
+  // {k} is what the click will actually add, not the whole remainder — the label must not promise
+  // more than the button delivers.
+  if(left>0) more.textContent=t('gb_more').replace('{k}',locNum(Math.min(GB_PAGE,left).toLocaleString('en-US')));
+}
+
+/* Load triggers — never on page load. Whichever fires first wins; loadGon() is single-flight.
+   The 400px margin starts the fetch just before the section scrolls up, so the table is usually
+   already filled by the time the reader arrives. */
+function armGon(){
+  const sec=document.getElementById('gonbooks'); if(!sec) return;
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(es=>{
+      if(es.some(e=>e.isIntersecting)){ io.disconnect(); showGon(); }
+    },{rootMargin:'400px 0px'});
+    io.observe(sec);
+  } else showGon();          // no observer: load it rather than leave an empty table forever
+  // A keyboard user can tab straight into the controls without the section ever "scrolling" past.
+  ['gbStatus','gbBudget','gbSearch'].forEach(id=>
+    document.getElementById(id).addEventListener('focus',()=>showGon(),{once:true}));
+}
+
 /* Nepali translations for discrepancy free-text (keyed by id) */
 const NE_COMP={D1:"OECD बनाम विश्व बैंक खुद ODA, २०२३",D3:"दाता पक्ष (OECD खुद) बनाम प्राप्तकर्ता पक्ष (नेपाल DCR)",
  D4:"OECD CRS कुल बनाम OECD DAC2A खुद",D5:"ADB: OECD खुद / ADB IATI कुल / DCR, २०२२",
@@ -568,6 +884,12 @@ function setLang(l){ lang=l; localStorage.setItem('nepal_lang',l); render(); }
 render();
 // a11y: every data-table column header gets scope="col" (the tables are static markup)
 document.querySelectorAll('th:not([scope])').forEach(function(t){t.setAttribute('scope','col');});
+// N1: export the reconciliation + discrepancy data exactly as shipped in data.js (no server,
+// same DASH.downloadCSV proven on the US ledger). Labels are translated via data-i18n.
+document.getElementById('dl-recon').onclick=()=>DASH.downloadCSV('nepal_reconciliation.csv',D.reconciliation);
+document.getElementById('dl-disc').onclick=()=>DASH.downloadCSV('nepal_discrepancies.csv',D.discrepancies);
+// Arm the DFIMS ledger's load triggers once (render() may run many times; this must not).
+armGon();
 </script>
 <!-- search.js lazy-loads search_index.js on first use (keeps it off the initial page load) -->
 <script src="search.js"></script>
