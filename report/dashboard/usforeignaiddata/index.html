@@ -513,6 +513,7 @@ const I18N = {
   dr_proj_h:"passed {t} onward across {n} sub-awards:",
   dr_outlayed:"Outlayed (actually spent)", dr_obligated:"Obligated", dr_current:"Current award", dr_potential:"Potential award",
   dr_awarded:"Awarded", dr_based:"Based in", dr_funder:"Funder", dr_via:"via",
+  dr_source:"Source", dr_award_record:"USASpending.gov award record", dr_subaward_records:"USASpending.gov sub-award records",
   dr_more:"Tip: click any organisation, project or district to keep drilling.",
   dr_dl_passed:"Deadline passed: {d}", dr_dl_by:"Runs until {d}", dr_dl_none:"No end date recorded",
   au_kicker:"Accountability", au_title:"What the auditors found",
@@ -663,6 +664,7 @@ const I18N = {
   dr_proj_h:"{n} उप-अवार्डमा {t} अगाडि पठाइयो:",
   dr_outlayed:"वितरण (वास्तविक खर्च)", dr_obligated:"प्रतिबद्ध", dr_current:"हालको अवार्ड", dr_potential:"सम्भावित अवार्ड",
   dr_awarded:"अवार्ड मिति", dr_based:"अवस्थित", dr_funder:"अनुदान दिने निकाय", dr_via:"मार्फत",
+  dr_source:"स्रोत", dr_award_record:"USASpending.gov अवार्ड अभिलेख", dr_subaward_records:"USASpending.gov उप-अवार्ड अभिलेख",
   dr_more:"सुझाव: थप विवरणका लागि कुनै पनि संस्था, परियोजना वा जिल्लामा क्लिक गर्नुहोस्।",
   dr_dl_passed:"म्याद सकियो: {d}", dr_dl_by:"{d} सम्म चल्ने", dr_dl_none:"अन्त्य मिति छैन",
   au_kicker:"जवाफदेहिता", au_title:"लेखापरीक्षकले के भेट्टाए",
@@ -837,9 +839,9 @@ function openDrawer(title, sub, rows, metaHtml){
   document.getElementById('drawer-title').textContent=title;
   document.getElementById('drawer-sub').textContent=sub;
   document.getElementById('drawer-meta').innerHTML=metaHtml||'';
-  // left/right may be plain strings (esc'd here) or pre-rendered HTML (leftHtml/rightHtml,
-  // already escaped by drillChip) so a cell can hold a clickable drill button.
-  const html=rows.sort((x,y)=>y.a-x.a).slice(0,150).map(r=>{
+  // Drawer rows are deliberately read-only: the panel is a complete reference list,
+  // not another layer of navigation. Keep every related record available for scrolling.
+  const html=rows.sort((x,y)=>y.a-x.a).map(r=>{
     const main=r.leftHtml!=null?r.leftHtml:esc(r.left||'—');
     const subline=r.rightHtml!=null?r.rightHtml:(r.right?esc(r.right):'');
     return `<tr><td class="num" style="white-space:nowrap;padding-right:14px;font-weight:700;color:var(--teal);vertical-align:top">${money(r.a)}</td>
@@ -880,13 +882,6 @@ document.addEventListener('keydown',e=>{
   }
 });
 const subsAll=()=>window.US_SUBS||[];
-// A clickable entity inside the drawer body — a real <button> so it is keyboard-reachable and
-// caught by the drawer focus trap. Lets you pivot recipient <-> project(prime) <-> district
-// without leaving the panel. kind: 'sub' | 'dist' | 'proj' (proj also needs the prime's label).
-function drillChip(kind,arg,text,label){
-  return `<button type="button" class="drill" data-k="${kind}" data-a="${esc(arg)}"${label!=null?` data-l="${esc(label)}"`:''} onclick="drillFrom(this)">${esc(text)}</button>`;}
-function drillFrom(el){const k=el.dataset.k,a=el.dataset.a;
-  if(k==='sub')drillSub(a); else if(k==='dist')drillDist(a); else if(k==='proj')drillProj(a,el.dataset.l||a);}
 // The funding agency behind a prime award = the US "donor" for that money. US_PROJMETA has no
 // agency, so derive it once from the ledger (US_PROJECTS.list carries agency + the award link).
 let _agencyByAward=null;
@@ -894,24 +889,28 @@ function agencyOf(aid){
   if(!_agencyByAward){_agencyByAward={};const P=window.US_PROJECTS;
     if(P&&P.list)P.list.forEach(a=>{const id=a.link&&a.link.split('/award/')[1];if(id&&a.agency)_agencyByAward[id]=a.agency;});}
   return _agencyByAward[aid]||'';}
-const drillHint=()=>`<div class="note" style="margin:0 0 10px">${t('dr_more')}</div>`;
 const viaFunder=aid=>{const ag=agencyOf(aid);return ag?`${t('dr_via')} ${esc(ag)}`:'';};
 const subLine=parts=>parts.filter(Boolean).join(' · ');  // muted sub-line: project / district / funder
+function sourceLine(aid){
+  const award=(window.US_PROJECTS&&window.US_PROJECTS.list||[]).find(x=>x.link&&x.link.endsWith('/'+aid));
+  const awardLink=award?`<a href="${esc(award.link)}" target="_blank" rel="noopener">${t('dr_award_record')}</a>`:'USASpending.gov';
+  return `<div class="note" style="margin:0 0 10px"><b>${t('dr_source')}:</b> ${awardLink} · ${t('dr_subaward_records')}</div>`;
+}
 
 function drillSub(name){const r=subsAll().filter(x=>x.s===name);const tot=r.reduce((a,b)=>a+b.a,0);
   const L=recLoc(name);
   const loc=L&&(L.city||L.country)?`<div style="background:#f4f6f9;border:1px solid #e3e8ef;border-radius:11px;padding:11px 14px;margin-bottom:12px;font-size:12.5px;color:#3a4a5c">📍 <b>${t('dr_based')}:</b> ${esc([L.city,L.state,ccName(L.country)].filter(Boolean).join(', '))}${L.addr?` · ${esc(L.addr)}`:''}</div>`:'';
   openDrawer(name, t('dr_sub_h').replace('{n}',r.length).replace('{t}',money(tot)),
     r.map(x=>({a:x.a,date:x.t,
-      leftHtml:drillChip('proj',x.w,x.p,x.p),   // the prime it came from -> that prime's full breakdown
-      rightHtml:subLine([esc(x.j), x.d?drillChip('dist',x.d,x.d+' '+t('dr_district')):'', viaFunder(x.w)])})),
-    drillHint()+loc);}
+      left:x.p,
+      rightHtml:subLine([esc(x.j), x.d?`${esc(x.d)} ${t('dr_district')}`:'', viaFunder(x.w)])})),
+    sourceLine()+loc);}
 function drillDist(name){const r=subsAll().filter(x=>x.d===name);const tot=r.reduce((a,b)=>a+b.a,0);
   openDrawer(name+' '+t('dr_district'), t('dr_dist_h').replace('{n}',r.length).replace('{t}',money(tot)),
     r.map(x=>({a:x.a,date:x.t,
-      leftHtml:drillChip('sub',x.s,x.s),        // the org that received it -> everything it got
-      rightHtml:subLine([drillChip('proj',x.w,x.p,x.p), esc(x.j), viaFunder(x.w)])})),
-    drillHint());}
+      left:x.s,
+      rightHtml:subLine([esc(x.p), esc(x.j), viaFunder(x.w)])})),
+    sourceLine());}
 function drillProj(aid,label){
   const r=subsAll().filter(x=>x.w===aid); const tot=r.reduce((a,b)=>a+b.a,0);
   const m=(window.US_PROJMETA||{})[aid]; let meta='';
@@ -934,8 +933,8 @@ function drillProj(aid,label){
   }
   openDrawer(label, t('dr_proj_h').replace('{n}',r.length).replace('{t}',money(tot)),
     r.map(x=>({a:x.a,date:x.t,
-      leftHtml:drillChip('sub',x.s,x.s),                              // sub-recipient -> everything it got
-      rightHtml:x.d?drillChip('dist',x.d,x.d+' '+t('dr_district')):''})), drillHint()+meta);}
+      left:x.s,
+      rightHtml:x.d?`${esc(x.d)} ${t('dr_district')}`:''})), sourceLine(aid)+meta);}
 // Recipient location helpers, shared by the drill drawer and the ledger table.
 // country names + org normalisation now live in dash-utils.js (shared with search.js, single source)
 const ccName=DASH.ccName, ccNorm=DASH.norm;
