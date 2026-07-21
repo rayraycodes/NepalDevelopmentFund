@@ -222,7 +222,18 @@
     <h3 data-i18n="sec_title">Inside the sectors</h3>
     <p class="lead" data-i18n="sec_lead">"Health" is not one thing. The treemap opens each category into its real programs: maternal and child health, HIV, tuberculosis, family planning, basic education, agriculture. And each block is itself not one thing: click it to see the actual named activities that constitute it — who implements each one, and for how much.</p>
     <div class="controls"><label for="tmYear" data-i18n="year">Year</label><select id="tmYear"></select></div>
-    <div class="card"><div id="c-treemap" class="chart tall" role="img"></div></div>
+    <div class="card" id="sec-sum" style="font-weight:650;font-size:15px"></div>
+    <div class="grid2" style="margin-top:16px">
+      <div class="card"><div id="c-treemap" class="chart tall" role="img"></div></div>
+      <div class="card">
+        <h4 style="margin:2px 0 10px;font-size:15px;font-weight:700" data-i18n="sec_break_t">Where the money went, by category</h4>
+        <div style="overflow-x:auto"><table id="sec-break" style="min-width:280px"><thead><tr>
+          <th data-i18n="sec_th_cat">Category</th><th class="num" data-i18n="sec_th_amt">US$ m</th>
+          <th class="num" data-i18n="sec_th_share">Share</th>
+        </tr></thead><tbody></tbody></table></div>
+        <div class="note" data-i18n="sec_break_note">Disbursements for the selected fiscal year, by US government sector category. Same source as the treemap (by-usg-sector.json). Programs below $0.05m are not shown.</div>
+      </div>
+    </div>
     <p class="hint" data-i18n="sec_hint">Tip: click any block — or a category header — to see the activities behind it.</p>
   </section>
 
@@ -338,7 +349,7 @@
         <th data-i18n="au_t_audit">Audit</th><th data-i18n="au_t_what">What was audited</th>
         <th data-i18n="au_t_period">Period</th><th class="num" data-i18n="au_t_q">Questioned</th>
         <th data-i18n="au_t_links">Status</th></tr></thead><tbody></tbody></table>
-      <div class="note" data-i18n="au_note">"Questioned" costs are amounts auditors flagged as ineligible or unsupported and recommended for review or recovery — not proven loss. ✓ means the figure was confirmed in the archived PDF text. Source: USAID Office of Inspector General (oig.usaid.gov).</div>
+      <div class="note" data-i18n="au_note">"Questioned" costs are amounts auditors flagged as ineligible or unsupported and recommended for review or recovery — not proven loss. ✓ means the figure was confirmed in the archived PDF text. "Archived ✓" means we downloaded the original audit report PDF from USAID's Office of Inspector General and stored our own copy here with a checksum, so it stays available even if the source disappears. "Original offline" means the audit record still exists at oig.usaid.gov, but its source PDF is no longer downloadable — it now lives only on USAID's offline document server, so we could not archive a verified copy. Source: USAID Office of Inspector General (oig.usaid.gov).</div>
     </div>
   </section>
 
@@ -403,6 +414,11 @@ const I18N = {
   sk_lead:"Each band is money flowing from a US government agency (left) into one of its budget accounts (right) in the chosen year. Switch between FY2024 and FY2026 to watch a many-channel system collapse into a few pipes.",
   sec_kicker:"What it buys", sec_title:"Inside the sectors",
   sec_lead:"\"Health\" is not one thing. The treemap opens each category into its real programs: maternal and child health, HIV, tuberculosis, family planning, basic education, agriculture. And each block is itself not one thing: click it to see the actual named activities that constitute it — who implements each one, and for how much.",
+  sec_sum:"FY{y}: {tot} disbursed across {ncat} sector categories and {nprog} programs · largest category: {topcat} ({topshare}) · biggest single program: {topprog} ({progshare})",
+  sec_sum_empty:"No sector disbursements recorded for FY{y}.",
+  sec_break_t:"Where the money went, by category",
+  sec_th_cat:"Category", sec_th_amt:"US$ m", sec_th_share:"Share",
+  sec_break_note:"Disbursements for the selected fiscal year, by US government sector category. Same source as the treemap (by-usg-sector.json). Programs below $0.05m are not shown.",
   sec_hint:"Tip: click any block — or a category header — to see the activities behind it.",
   dr_act_h:"{t} across {n} activities in FY{y}:",
   dr_act_load:"Loading activity-level data…",
@@ -480,7 +496,7 @@ const I18N = {
   au_d_off_b:"The label a report would get if its official file no longer downloaded anywhere and we held no archived copy — USAID was folded into the State Department in 2025 and oig.usaid.gov has been intermittent since. It would mean the figures rest on our citation alone, with no way for readers to verify them. No audit is currently in this state; if the OIG server goes dark again, our archived copies and the Internet Archive snapshots keep every report checkable.",
   au_sum:"7 audits  ·  {q} in questioned costs ({pct}% of delivered aid)  ·  {arch} archived here with checksums",
   au_t_audit:"Audit", au_t_what:"What was audited", au_t_period:"Period", au_t_q:"Questioned", au_t_links:"Status",
-  au_note:"\"Questioned\" costs are amounts auditors flagged as ineligible or unsupported and recommended for review or recovery — not proven loss. ✓ means the figure was confirmed in the archived PDF text. Source: USAID Office of Inspector General (oig.usaid.gov).",
+  au_note:"\"Questioned\" costs are amounts auditors flagged as ineligible or unsupported and recommended for review or recovery — not proven loss. ✓ means the figure was confirmed in the archived PDF text. \"Archived ✓\" means we downloaded the original audit report PDF from USAID's Office of Inspector General and stored our own copy here with a checksum, so it stays available even if the source disappears. \"Original offline\" means the audit record still exists at oig.usaid.gov, but its source PDF is no longer downloadable — it now lives only on USAID's offline document server, so we could not archive a verified copy. Source: USAID Office of Inspector General (oig.usaid.gov).",
   au_clean:"Clean", au_perf:"Performance", au_archived:"Archived ✓", au_offline:"Original offline",
   au_pdf:"Audit PDF", au_pdf_wb:"Audit PDF (archive.org copy)",
   gl_kicker:"The long game", gl_title:"Stated long-term goals",
@@ -548,6 +564,11 @@ const I18N = {
   sk_lead:"हरेक पट्टी भनेको रोजिएको वर्षमा अमेरिकी सरकारी निकाय (बायाँ) बाट उसको बजेट खाता (दायाँ) मा बगेको रकम हो। FY2024 र FY2026 साट्नुहोस् — धेरै नली भएको प्रणाली थोरै नलीमा खुम्चिएको देखिन्छ।",
   sec_kicker:"के किनिन्छ", sec_title:"क्षेत्रभित्र पस्दा",
   sec_lead:"\"स्वास्थ्य\" एउटै कुरा होइन। ट्रिम्यापले हरेक कोटिलाई वास्तविक कार्यक्रममा खोल्छ: मातृ-शिशु स्वास्थ्य, HIV, क्षयरोग, परिवार नियोजन, आधारभूत शिक्षा, कृषि। र हरेक ब्लक पनि एउटै कुरा होइन: क्लिक गरेर त्यसभित्रका वास्तविक नामधारी गतिविधि हेर्नुहोस् — कसले कार्यान्वयन गर्छ, कति रकममा।",
+  sec_sum:"आ.व. {y}: {ncat} क्षेत्र कोटि र {nprog} कार्यक्रममा {tot} वितरण · सबैभन्दा ठूलो कोटि: {topcat} ({topshare}) · सबैभन्दा ठूलो एकल कार्यक्रम: {topprog} ({progshare})",
+  sec_sum_empty:"आ.व. {y} मा कुनै क्षेत्रगत वितरण अभिलेख छैन।",
+  sec_break_t:"कोटि अनुसार रकम कहाँ गयो",
+  sec_th_cat:"कोटि", sec_th_amt:"US$ m", sec_th_share:"हिस्सा",
+  sec_break_note:"छानिएको आर्थिक वर्षको वितरण, अमेरिकी सरकारी क्षेत्र कोटि अनुसार। ट्रिम्याप कै स्रोत (by-usg-sector.json)। $0.05m भन्दा कमका कार्यक्रम देखाइएका छैनन्।",
   sec_hint:"सुझाव: कुनै पनि ब्लक — वा कोटिको शीर्षक — क्लिक गरेर त्यसभित्रका गतिविधि हेर्नुहोस्।",
   dr_act_h:"FY{y} मा {n} गतिविधिमा {t}:",
   dr_act_load:"गतिविधि-स्तरको तथ्याङ्क लोड हुँदै…",
@@ -625,7 +646,7 @@ const I18N = {
   au_d_off_b:"कुनै प्रतिवेदनको आधिकारिक फाइल कतै डाउनलोड नहुने र हामीसँग अभिलेखित प्रति पनि नभएको अवस्थामा दिइने लेबल — USAID सन् २०२५ मा State Department मा गाभियो र त्यसयता oig.usaid.gov बेला-बेला बन्द हुन्छ। यसको अर्थ अङ्कहरू हाम्रो उद्धरणमा मात्र अडिन्छन्, पाठकले पुष्टि गर्ने कुनै बाटो रहँदैन। अहिले कुनै पनि लेखापरीक्षण यस अवस्थामा छैन; OIG सर्भर फेरि बन्द भए हाम्रा अभिलेखित प्रति र Internet Archive स्न्यापसटले हरेक प्रतिवेदन जाँचयोग्य राख्छन्।",
   au_sum:"७ लेखापरीक्षण  ·  {q} प्रश्नचिह्नित खर्च (वितरितको {pct}%)  ·  {arch} यहाँ चेकसमसहित अभिलेख",
   au_t_audit:"लेखापरीक्षण", au_t_what:"के लेखापरीक्षण भयो", au_t_period:"अवधि", au_t_q:"प्रश्नचिह्नित", au_t_links:"स्थिति",
-  au_note:"\"प्रश्नचिह्नित\" खर्च भनेको लेखापरीक्षकले अयोग्य वा अप्रमाणित भनी औंल्याएको र समीक्षा/फिर्ताका लागि सिफारिस गरिएको रकम हो — प्रमाणित नोक्सान होइन। ✓ ले अभिलेखित PDF मा अङ्क पुष्टि भएको जनाउँछ। स्रोत: USAID महालेखापरीक्षक कार्यालय।",
+  au_note:"\"प्रश्नचिह्नित\" खर्च भनेको लेखापरीक्षकले अयोग्य वा अप्रमाणित भनी औंल्याएको र समीक्षा/फिर्ताका लागि सिफारिस गरिएको रकम हो — प्रमाणित नोक्सान होइन। ✓ ले अभिलेखित PDF मा अङ्क पुष्टि भएको जनाउँछ। \"अभिलेखित ✓\" भनेको हामीले USAID को महालेखापरीक्षक कार्यालयबाट मूल लेखापरीक्षण PDF डाउनलोड गरी चेकसमसहित आफ्नै प्रति यहाँ राखेको हो, जसले स्रोत हराए पनि उपलब्ध रहन्छ। \"मूल बन्द\" भनेको लेखापरीक्षण अभिलेख अझै oig.usaid.gov मा छ, तर यसको मूल PDF अब डाउनलोड गर्न मिल्दैन — यो अहिले USAID को बन्द दस्तावेज सर्भरमा मात्र छ, त्यसैले हामीले पुष्टि गरिएको प्रति अभिलेख गर्न सकेनौं। स्रोत: USAID महालेखापरीक्षक कार्यालय।",
   au_clean:"सफा", au_perf:"कार्यसम्पादन", au_archived:"अभिलेखित ✓", au_offline:"मूल बन्द",
   au_pdf:"लेखापरीक्षण PDF", au_pdf_wb:"लेखापरीक्षण PDF (archive.org प्रति)",
   gl_kicker:"दीर्घकालीन खेल", gl_title:"घोषित दीर्घकालीन लक्ष्यहरू",
@@ -1210,6 +1231,32 @@ function drawTreemap(){
     if(path.length>=3) drillSector(path[1].name, p.name);       // sector block
     else if(path.length===2) drillSectorCat(p.name);            // category header
   });
+  drawSectorBreakdown(rows);
+}
+
+// Granular right-side detail for "Inside the sectors": a headline summary line plus a per-category
+// breakdown table, computed from the same treemap rows so the figures always match the chart.
+function drawSectorBreakdown(rows){
+  const s=DASH.sectorSummary(rows);
+  const pct=x=>(x*100).toFixed(x<0.1?1:0)+'%';
+  const sum=document.getElementById('sec-sum');
+  if(!s.total){
+    sum.textContent=t('sec_sum_empty').replace('{y}',tmYear);
+    const tb=document.querySelector('#sec-break tbody');
+    tb.textContent='';
+    const tr=document.createElement('tr'), td=document.createElement('td');
+    td.colSpan=3; td.style.color='var(--muted)';
+    td.textContent=t('sec_sum_empty').replace('{y}',tmYear);
+    tr.appendChild(td); tb.appendChild(tr);
+    return;
+  }
+  sum.textContent=t('sec_sum')
+    .replace('{y}',tmYear).replace('{tot}',fmt(s.total))
+    .replace('{ncat}',s.nCats).replace('{nprog}',s.nProgs)
+    .replace('{topcat}',s.topCat.name).replace('{topshare}',pct(s.topCat.share))
+    .replace('{topprog}',s.topProg.name).replace('{progshare}',pct(s.topProg.share));
+  document.querySelector('#sec-break tbody').innerHTML=s.cats.map(c=>
+    `<tr><td>${esc(c.name)}</td><td class="num">${fmt(c.v)}</td><td class="num">${pct(c.share)}</td></tr>`).join('');
 }
 
 function drawManaging(){
