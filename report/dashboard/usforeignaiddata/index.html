@@ -116,6 +116,8 @@
   .drawer-close:hover{background:#e2e7ef}
   .drawer-body{overflow-y:auto;padding:6px 20px 28px}
   .drawer-body td{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px;vertical-align:top}
+  /* Drill chips inside the drawer: compact, wrap long org names, keep the teal "tappable" look. */
+  .drawer-body .drill{font-size:12.5px;padding:3px 8px;margin:1px 0;text-align:left;white-space:normal;max-width:100%}
   .hint{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--teal);font-weight:650;
     margin-top:10px;background:#e9f3f3;border:1px solid #b7dadd;border-radius:999px;padding:5px 12px}
   .hint::before{content:"👆";font-size:13px}
@@ -182,6 +184,7 @@
     <div class="kicker" data-i18n="pp_kicker">People vs the system</div>
     <h3 data-i18n="pp_title">How much reached people, and how much ran the machinery</h3>
     <p class="lead" data-i18n="pp_lead">Every delivered dollar, sorted three ways using the US government's own sector labels: money whose immediate object is a person (a meal, a clinic visit, a classroom, a water tap, a farmer's training) — money that builds the systems around people (courts, grids, roads, ministries, markets, disease surveillance) — and money that runs the aid machine itself. The classification is ours, it is published in full below, and reasonable people can move lines: building a health system is not waste, it is how care continues after the project ends.</p>
+    <div class="explain" id="pp-defs" style="margin-bottom:16px"></div>
     <div class="card"><div id="pp-bar"></div></div>
     <div class="grid2" style="margin-top:16px">
       <div class="card"><div id="c-ppyear" class="chart sm" role="img"></div>
@@ -217,7 +220,7 @@
   <section id="sectors">
     <div class="kicker" data-i18n="sec_kicker">What it buys</div>
     <h3 data-i18n="sec_title">Inside the sectors</h3>
-    <p class="lead" data-i18n="sec_lead">"Health" is not one thing. The treemap opens each category into its real programs: maternal and child health, HIV, tuberculosis, family planning, basic education, agriculture. Click a block to zoom; click the breadcrumb to come back.</p>
+    <p class="lead" data-i18n="sec_lead">"Health" is not one thing. The treemap opens each category into its real programs: maternal and child health, HIV, tuberculosis, family planning, basic education, agriculture. And each block is itself not one thing: click it to see the actual named activities that constitute it — who implements each one, and for how much.</p>
     <div class="controls"><label for="tmYear" data-i18n="year">Year</label><select id="tmYear"></select></div>
     <div class="card" id="sec-sum" style="font-weight:650;font-size:15px"></div>
     <div class="grid2" style="margin-top:16px">
@@ -231,6 +234,7 @@
         <div class="note" data-i18n="sec_break_note">Disbursements for the selected fiscal year, by US government sector category. Same source as the treemap (by-usg-sector.json). Programs below $0.05m are not shown.</div>
       </div>
     </div>
+    <p class="hint" data-i18n="sec_hint">Tip: click any block — or a category header — to see the activities behind it.</p>
   </section>
 
   <section id="managing">
@@ -333,8 +337,13 @@
   <section id="audits">
     <div class="kicker" data-i18n="au_kicker">Accountability</div>
     <h3 data-i18n="au_title">What the auditors found</h3>
-    <p class="lead" data-i18n="au_lead">The US Inspector General audits US assistance to Nepal. Across the seven Nepal audits we could trace, total questioned costs were $323,161 — about 0.016% of the $2.0bn delivered, and mostly small ineligible or unsupported items on funds managed directly by the Government of Nepal. We archived four of the audit PDFs here with checksums; the rest now live only on USAID's offline document server.</p>
+    <p class="lead" data-i18n="au_lead">The US Inspector General audits US assistance to Nepal. Across the seven Nepal audits we could trace, total questioned costs were $323,161 — about 0.016% of the $2.0bn delivered, and mostly small ineligible or unsupported items on funds managed directly by the Government of Nepal. All seven audit PDFs are now archived here with checksums — two were recovered from unlinked files still on oig.usaid.gov, and one (Hariyo Ban) survives only in the Internet Archive.</p>
     <div class="card" id="audits-sum" style="font-weight:650;font-size:15px"></div>
+    <!-- what the two status pills in the table below actually promise (honesty: verifiability) -->
+    <div class="explain" style="grid-template-columns:repeat(2,1fr);margin-top:16px">
+      <div class="term"><b><span class="pill p-cons" data-i18n="au_archived">Archived ✓</span></b><span data-i18n="au_d_arch_b"></span></div>
+      <div class="term" style="border-left-color:#b8860b"><b><span class="pill p-med" data-i18n="au_offline">Original offline</span></b><span data-i18n="au_d_off_b"></span></div>
+    </div>
     <div class="card" style="overflow-x:auto;margin-top:16px">
       <table id="audits-table" style="min-width:700px"><thead><tr>
         <th data-i18n="au_t_audit">Audit</th><th data-i18n="au_t_what">What was audited</th>
@@ -404,12 +413,18 @@ const I18N = {
   sk_kicker:"Follow the dollar", sk_title:"From agency to account",
   sk_lead:"Each band is money flowing from a US government agency (left) into one of its budget accounts (right) in the chosen year. Switch between FY2024 and FY2026 to watch a many-channel system collapse into a few pipes.",
   sec_kicker:"What it buys", sec_title:"Inside the sectors",
-  sec_lead:"\"Health\" is not one thing. The treemap opens each category into its real programs: maternal and child health, HIV, tuberculosis, family planning, basic education, agriculture. Click a block to zoom; click the breadcrumb to come back.",
+  sec_lead:"\"Health\" is not one thing. The treemap opens each category into its real programs: maternal and child health, HIV, tuberculosis, family planning, basic education, agriculture. And each block is itself not one thing: click it to see the actual named activities that constitute it — who implements each one, and for how much.",
   sec_sum:"FY{y}: {tot} disbursed across {ncat} sector categories and {nprog} programs · largest category: {topcat} ({topshare}) · biggest single program: {topprog} ({progshare})",
   sec_sum_empty:"No sector disbursements recorded for FY{y}.",
   sec_break_t:"Where the money went, by category",
   sec_th_cat:"Category", sec_th_amt:"US$ m", sec_th_share:"Share",
   sec_break_note:"Disbursements for the selected fiscal year, by US government sector category. Same source as the treemap (by-usg-sector.json). Programs below $0.05m are not shown.",
+  sec_hint:"Tip: click any block — or a category header — to see the activities behind it.",
+  dr_act_h:"{t} across {n} activities in FY{y}:",
+  dr_act_load:"Loading activity-level data…",
+  dr_act_box:"This block in the treemap: {b}. The activities below sum to {s}.",
+  dr_act_src:"Source: activity-level rows from the same ForeignAssistance.gov data service as the treemap (Data Query, disbursements) — the same money, itemised. Names and descriptions are official records; \"Redacted\" entries are redacted at source.",
+  dr_act_end:"Runs until {d}",
   mg_kicker:"Who runs it", mg_title:"Funding vs running: the implementing agencies",
   mg_lead:"The agency that owns the budget is not always the one managing the work on the ground. This view shows who actually administers US assistance in Nepal — and how, after the 2025 restructuring, implementation concentrates in MCC and the State Department.",
   cut_kicker:"The restructuring, account by account", cut_title:"What was cut, what survived (new obligations)",
@@ -433,6 +448,9 @@ const I18N = {
   pp_m_cat:"Category", pp_m_sec:"Official sector", pp_m_cls:"Classified as",
   pp_caveat:"Honesty notes: \"machine\" counts only explicitly booked administration (Direct Administrative Costs, M&E, operating expenses). The overhead partners charge inside program awards is not published anywhere, so the true cost of the system is higher than 18%. And \"system\" money can serve people deeply — a maternal clinic needs a grid and a road; the split shows emphasis, not virtue.",
   pp_people:"Directly to people", pp_system:"Building the systems", pp_machine:"Running the machine",
+  pp_people_d:"A service, good or transfer a person actually receives. <span style='color:#0f9d58;font-weight:700'>e.g.</span> nutrition, maternal &amp; child health, family planning, basic education, school meals, farmer training, clean water, emergency relief.",
+  pp_system_d:"The institutions and infrastructure around people, so services outlast the project. <span style='color:#2563eb;font-weight:700'>e.g.</span> roads &amp; power, courts &amp; rule of law, elections, disease surveillance, disaster readiness, forests &amp; biodiversity, markets.",
+  pp_machine_d:"The cost of operating the aid apparatus itself — booked centrally, not to any sector. <span style='color:#dc2626;font-weight:700'>e.g.</span> direct administrative costs, monitoring &amp; evaluation, operating expenses.",
   pp_headline:"Of {tot} delivered and classified, {d} ({p}) had a person as its immediate object — a meal, a clinic visit, a classroom, a water tap, a farmer's training.",
   pp_bar_t:"Of every delivered dollar, FY2015–26:",
   pp_year_t:"The split, year by year", pp_cat_t:"Inside each category",
@@ -469,14 +487,18 @@ const I18N = {
   dr_dist_h:"{t} across {n} sub-awards, to these organisations:",
   dr_proj_h:"passed {t} onward across {n} sub-awards:",
   dr_outlayed:"Outlayed (actually spent)", dr_obligated:"Obligated", dr_current:"Current award", dr_potential:"Potential award",
-  dr_awarded:"Awarded", dr_based:"Based in",
+  dr_awarded:"Awarded", dr_based:"Based in", dr_funder:"Funder", dr_via:"via",
+  dr_more:"Tip: click any organisation, project or district to keep drilling.",
   dr_dl_passed:"Deadline passed: {d}", dr_dl_by:"Runs until {d}", dr_dl_none:"No end date recorded",
   au_kicker:"Accountability", au_title:"What the auditors found",
-  au_lead:"The US Inspector General audits US assistance to Nepal. Across the seven Nepal audits we could trace, total questioned costs were $323,161 — about 0.016% of the $2.0bn delivered, and mostly small ineligible or unsupported items on funds managed directly by the Government of Nepal. We archived four of the audit PDFs here with checksums; the rest now live only on USAID's offline document server.",
+  au_lead:"The US Inspector General audits US assistance to Nepal. Across the seven Nepal audits we could trace, total questioned costs were $323,161 — about 0.016% of the $2.0bn delivered, and mostly small ineligible or unsupported items on funds managed directly by the Government of Nepal. All seven audit PDFs are now archived here with checksums — two were recovered from unlinked files still on oig.usaid.gov, and one (Hariyo Ban) survives only in the Internet Archive.",
+  au_d_arch_b:"We hold the complete audit PDF in this project's public repository (<code>data/raw/audits/</code>) with a SHA-256 checksum in the data manifest — so every figure can be re-checked against the original document even though USAID itself was dissolved. As of the 2026-07-20 link check all seven audits carry this mark: six PDFs still download from oig.usaid.gov (two of them recovered from files no longer linked anywhere), and the Hariyo Ban report survives only as a verified 2015 Internet Archive copy.",
+  au_d_off_b:"The label a report would get if its official file no longer downloaded anywhere and we held no archived copy — USAID was folded into the State Department in 2025 and oig.usaid.gov has been intermittent since. It would mean the figures rest on our citation alone, with no way for readers to verify them. No audit is currently in this state; if the OIG server goes dark again, our archived copies and the Internet Archive snapshots keep every report checkable.",
   au_sum:"7 audits  ·  {q} in questioned costs ({pct}% of delivered aid)  ·  {arch} archived here with checksums",
   au_t_audit:"Audit", au_t_what:"What was audited", au_t_period:"Period", au_t_q:"Questioned", au_t_links:"Status",
   au_note:"\"Questioned\" costs are amounts auditors flagged as ineligible or unsupported and recommended for review or recovery — not proven loss. ✓ means the figure was confirmed in the archived PDF text. \"Archived ✓\" means we downloaded the original audit report PDF from USAID's Office of Inspector General and stored our own copy here with a checksum, so it stays available even if the source disappears. \"Original offline\" means the audit record still exists at oig.usaid.gov, but its source PDF is no longer downloadable — it now lives only on USAID's offline document server, so we could not archive a verified copy. Source: USAID Office of Inspector General (oig.usaid.gov).",
   au_clean:"Clean", au_perf:"Performance", au_archived:"Archived ✓", au_offline:"Original offline",
+  au_pdf:"Audit PDF", au_pdf_wb:"Audit PDF (archive.org copy)",
   gl_kicker:"The long game", gl_title:"Stated long-term goals",
   gl_lead:"What the money says it is for, from the official program documents — each card links to its source.",
   dc_kicker:"Primary documents", dc_title:"The supporting documents, read and archived",
@@ -541,12 +563,18 @@ const I18N = {
   sk_kicker:"डलरलाई पछ्याउनुहोस्", sk_title:"निकायबाट खातासम्म",
   sk_lead:"हरेक पट्टी भनेको रोजिएको वर्षमा अमेरिकी सरकारी निकाय (बायाँ) बाट उसको बजेट खाता (दायाँ) मा बगेको रकम हो। FY2024 र FY2026 साट्नुहोस् — धेरै नली भएको प्रणाली थोरै नलीमा खुम्चिएको देखिन्छ।",
   sec_kicker:"के किनिन्छ", sec_title:"क्षेत्रभित्र पस्दा",
-  sec_lead:"\"स्वास्थ्य\" एउटै कुरा होइन। ट्रिम्यापले हरेक कोटिलाई वास्तविक कार्यक्रममा खोल्छ: मातृ-शिशु स्वास्थ्य, HIV, क्षयरोग, परिवार नियोजन, आधारभूत शिक्षा, कृषि। ब्लकमा क्लिक गरे भित्र पस्छ; माथिको ब्रेडक्रम्बले फर्काउँछ।",
+  sec_lead:"\"स्वास्थ्य\" एउटै कुरा होइन। ट्रिम्यापले हरेक कोटिलाई वास्तविक कार्यक्रममा खोल्छ: मातृ-शिशु स्वास्थ्य, HIV, क्षयरोग, परिवार नियोजन, आधारभूत शिक्षा, कृषि। र हरेक ब्लक पनि एउटै कुरा होइन: क्लिक गरेर त्यसभित्रका वास्तविक नामधारी गतिविधि हेर्नुहोस् — कसले कार्यान्वयन गर्छ, कति रकममा।",
   sec_sum:"आ.व. {y}: {ncat} क्षेत्र कोटि र {nprog} कार्यक्रममा {tot} वितरण · सबैभन्दा ठूलो कोटि: {topcat} ({topshare}) · सबैभन्दा ठूलो एकल कार्यक्रम: {topprog} ({progshare})",
   sec_sum_empty:"आ.व. {y} मा कुनै क्षेत्रगत वितरण अभिलेख छैन।",
   sec_break_t:"कोटि अनुसार रकम कहाँ गयो",
   sec_th_cat:"कोटि", sec_th_amt:"US$ m", sec_th_share:"हिस्सा",
   sec_break_note:"छानिएको आर्थिक वर्षको वितरण, अमेरिकी सरकारी क्षेत्र कोटि अनुसार। ट्रिम्याप कै स्रोत (by-usg-sector.json)। $0.05m भन्दा कमका कार्यक्रम देखाइएका छैनन्।",
+  sec_hint:"सुझाव: कुनै पनि ब्लक — वा कोटिको शीर्षक — क्लिक गरेर त्यसभित्रका गतिविधि हेर्नुहोस्।",
+  dr_act_h:"FY{y} मा {n} गतिविधिमा {t}:",
+  dr_act_load:"गतिविधि-स्तरको तथ्याङ्क लोड हुँदै…",
+  dr_act_box:"ट्रिम्यापको यो ब्लक: {b}। तलका गतिविधिको योग: {s}।",
+  dr_act_src:"स्रोत: ट्रिम्यापकै ForeignAssistance.gov डेटा सेवाका गतिविधि-स्तरका पङ्क्ति (Data Query, वितरण) — उही रकम, विस्तारमा। नाम र विवरण आधिकारिक अभिलेख हुन्; \"Redacted\" स्रोतमै गोप्य राखिएका हुन्।",
+  dr_act_end:"{d} सम्म चल्ने",
   mg_kicker:"कसले चलाउँछ", mg_title:"रकम दिने बनाम चलाउने निकाय",
   mg_lead:"बजेटको मालिक निकाय नै सधैँ काम चलाउने निकाय हुँदैन। यो दृश्यले नेपालमा अमेरिकी सहायता वास्तवमा कसले प्रशासन गर्छ देखाउँछ — र २०२५ को पुनर्संरचनापछि कार्यान्वयन MCC र State Department मा केन्द्रित हुँदै गएको।",
   cut_kicker:"पुनर्संरचना, खाता-खातामा", cut_title:"के काटियो, के बाँच्यो (नयाँ प्रतिबद्धता)",
@@ -570,6 +598,9 @@ const I18N = {
   pp_m_cat:"कोटि", pp_m_sec:"आधिकारिक क्षेत्र", pp_m_cls:"वर्गीकरण",
   pp_caveat:"इमानदारीका टिप्पणी: \"संयन्त्र\" मा स्पष्ट रूपमा लेखिएको प्रशासन मात्र छ (प्रत्यक्ष प्रशासनिक खर्च, अनुगमन-मूल्याङ्कन, सञ्चालन खर्च)। साझेदारले कार्यक्रमभित्र लिने ओभरहेड कतै प्रकाशित हुँदैन, त्यसैले प्रणालीको वास्तविक लागत १८% भन्दा बढी छ। अनि \"प्रणाली\" रकमले पनि जनतालाई गहिरो सेवा गर्न सक्छ — मातृ क्लिनिकलाई ग्रिड र सडक चाहिन्छ; यो विभाजनले जोड देखाउँछ, गुण-दोष होइन।",
   pp_people:"सीधै जनतामा", pp_system:"प्रणाली निर्माण", pp_machine:"संयन्त्र सञ्चालन",
+  pp_people_d:"व्यक्तिले सीधै पाउने सेवा, वस्तु वा सहयोग। <span style='color:#0f9d58;font-weight:700'>जस्तै:</span> पोषण, आमा तथा शिशु स्वास्थ्य, परिवार नियोजन, आधारभूत शिक्षा, विद्यालय खाजा, किसान तालिम, स्वच्छ पानी, आपत्‌कालीन राहत।",
+  pp_system_d:"मानिसका वरिपरि रहेका संस्था र पूर्वाधार, ताकि परियोजना सकिएपछि पनि सेवा चलिरहोस्। <span style='color:#2563eb;font-weight:700'>जस्तै:</span> सडक र विद्युत्, अदालत र कानुनी शासन, निर्वाचन, रोग निगरानी, विपद् तयारी, वन र जैविक विविधता, बजार।",
+  pp_machine_d:"सहायता संयन्त्र आफैँ चलाउने खर्च — कुनै क्षेत्रमा नभई केन्द्रीय रूपमा राखिएको। <span style='color:#dc2626;font-weight:700'>जस्तै:</span> प्रत्यक्ष प्रशासनिक खर्च, अनुगमन तथा मूल्याङ्कन, सञ्चालन खर्च।",
   pp_headline:"वर्गीकृत {tot} वितरणमध्ये, {d} ({p}) को प्रत्यक्ष लक्ष्य व्यक्ति थियो — खाना, क्लिनिक भेट, कक्षाकोठा, पानीको धारा, किसान तालिम।",
   pp_bar_t:"वितरित हरेक डलरमध्ये, FY2015–26:",
   pp_year_t:"वर्ष-वर्षको विभाजन", pp_cat_t:"हरेक कोटिभित्र",
@@ -606,14 +637,18 @@ const I18N = {
   dr_dist_h:"{n} उप-अवार्डमा {t}, यी संस्थाहरूलाई:",
   dr_proj_h:"{n} उप-अवार्डमा {t} अगाडि पठाइयो:",
   dr_outlayed:"वितरण (वास्तविक खर्च)", dr_obligated:"प्रतिबद्ध", dr_current:"हालको अवार्ड", dr_potential:"सम्भावित अवार्ड",
-  dr_awarded:"अवार्ड मिति", dr_based:"अवस्थित",
+  dr_awarded:"अवार्ड मिति", dr_based:"अवस्थित", dr_funder:"अनुदान दिने निकाय", dr_via:"मार्फत",
+  dr_more:"सुझाव: थप विवरणका लागि कुनै पनि संस्था, परियोजना वा जिल्लामा क्लिक गर्नुहोस्।",
   dr_dl_passed:"म्याद सकियो: {d}", dr_dl_by:"{d} सम्म चल्ने", dr_dl_none:"अन्त्य मिति छैन",
   au_kicker:"जवाफदेहिता", au_title:"लेखापरीक्षकले के भेट्टाए",
-  au_lead:"अमेरिकी महालेखापरीक्षकले नेपाललाई अमेरिकी सहायताको लेखापरीक्षण गर्छ। हामीले पत्ता लगाएका सात नेपाल लेखापरीक्षणमा, कुल प्रश्नचिह्नित खर्च $323,161 थियो — वितरित $2.0bn को करिब ०.०१६%, र अधिकांश नेपाल सरकारले प्रत्यक्ष व्यवस्थापन गरेको रकममा साना अयोग्य वा अप्रमाणित वस्तु। हामीले चार लेखापरीक्षण PDF यहाँ चेकसमसहित अभिलेख गर्‍यौं; बाँकी अहिले USAID को बन्द दस्तावेज सर्भरमा मात्र छन्।",
+  au_lead:"अमेरिकी महालेखापरीक्षकले नेपाललाई अमेरिकी सहायताको लेखापरीक्षण गर्छ। हामीले पत्ता लगाएका सात नेपाल लेखापरीक्षणमा, कुल प्रश्नचिह्नित खर्च $323,161 थियो — वितरित $2.0bn को करिब ०.०१६%, र अधिकांश नेपाल सरकारले प्रत्यक्ष व्यवस्थापन गरेको रकममा साना अयोग्य वा अप्रमाणित वस्तु। अब सातै लेखापरीक्षण PDF यहाँ चेकसमसहित अभिलेखित छन् — दुई वटा oig.usaid.gov मै रहेका तर कतै लिंक नगरिएका फाइलबाट फेला पारियो, र एउटा (हरियो वन) Internet Archive मा मात्र बाँचेको छ।",
+  au_d_arch_b:"हामीसँग पूरा लेखापरीक्षण PDF यस परियोजनाको सार्वजनिक भण्डार (<code>data/raw/audits/</code>) मा SHA-256 चेकसमसहित छ — त्यसैले USAID आफैं विघटन भए पनि हरेक अङ्क मूल दस्तावेजसँग पुनः जाँच्न सकिन्छ। २०२६-०७-२० को लिंक जाँचसम्म सातै लेखापरीक्षणमा यो चिन्ह छ: छ वटा PDF अझै oig.usaid.gov बाट डाउनलोड हुन्छन् (तीमध्ये दुई कतै लिंक नगरिएका फाइलबाट फेला पारिएका), र हरियो वन प्रतिवेदन २०१५ को प्रमाणित Internet Archive प्रतिका रूपमा मात्र बाँचेको छ।",
+  au_d_off_b:"कुनै प्रतिवेदनको आधिकारिक फाइल कतै डाउनलोड नहुने र हामीसँग अभिलेखित प्रति पनि नभएको अवस्थामा दिइने लेबल — USAID सन् २०२५ मा State Department मा गाभियो र त्यसयता oig.usaid.gov बेला-बेला बन्द हुन्छ। यसको अर्थ अङ्कहरू हाम्रो उद्धरणमा मात्र अडिन्छन्, पाठकले पुष्टि गर्ने कुनै बाटो रहँदैन। अहिले कुनै पनि लेखापरीक्षण यस अवस्थामा छैन; OIG सर्भर फेरि बन्द भए हाम्रा अभिलेखित प्रति र Internet Archive स्न्यापसटले हरेक प्रतिवेदन जाँचयोग्य राख्छन्।",
   au_sum:"७ लेखापरीक्षण  ·  {q} प्रश्नचिह्नित खर्च (वितरितको {pct}%)  ·  {arch} यहाँ चेकसमसहित अभिलेख",
   au_t_audit:"लेखापरीक्षण", au_t_what:"के लेखापरीक्षण भयो", au_t_period:"अवधि", au_t_q:"प्रश्नचिह्नित", au_t_links:"स्थिति",
   au_note:"\"प्रश्नचिह्नित\" खर्च भनेको लेखापरीक्षकले अयोग्य वा अप्रमाणित भनी औंल्याएको र समीक्षा/फिर्ताका लागि सिफारिस गरिएको रकम हो — प्रमाणित नोक्सान होइन। ✓ ले अभिलेखित PDF मा अङ्क पुष्टि भएको जनाउँछ। \"अभिलेखित ✓\" भनेको हामीले USAID को महालेखापरीक्षक कार्यालयबाट मूल लेखापरीक्षण PDF डाउनलोड गरी चेकसमसहित आफ्नै प्रति यहाँ राखेको हो, जसले स्रोत हराए पनि उपलब्ध रहन्छ। \"मूल बन्द\" भनेको लेखापरीक्षण अभिलेख अझै oig.usaid.gov मा छ, तर यसको मूल PDF अब डाउनलोड गर्न मिल्दैन — यो अहिले USAID को बन्द दस्तावेज सर्भरमा मात्र छ, त्यसैले हामीले पुष्टि गरिएको प्रति अभिलेख गर्न सकेनौं। स्रोत: USAID महालेखापरीक्षक कार्यालय।",
   au_clean:"सफा", au_perf:"कार्यसम्पादन", au_archived:"अभिलेखित ✓", au_offline:"मूल बन्द",
+  au_pdf:"लेखापरीक्षण PDF", au_pdf_wb:"लेखापरीक्षण PDF (archive.org प्रति)",
   gl_kicker:"दीर्घकालीन खेल", gl_title:"घोषित दीर्घकालीन लक्ष्यहरू",
   gl_lead:"आधिकारिक कार्यक्रम दस्तावेजअनुसार यो रकम केका लागि हो — हरेक कार्ड स्रोतसँग जोडिएको छ।",
   dc_kicker:"प्राथमिक दस्तावेज", dc_title:"आधार दस्तावेजहरू: पढिएको र अभिलेख गरिएको",
@@ -727,10 +762,15 @@ function drawAudits(){
     const vb = a.verified==='yes' ? ' <span class="pill p-cons" title="confirmed in archived PDF">✓</span>' : '';
     const status = a.archived ? '<span class="pill p-cons">'+t('au_archived')+'</span>'
       : '<span class="pill p-med">'+t('au_offline')+'</span>';
-    return `<tr><td><a href="${a.node_url}" target="_blank" rel="noopener">${a.report}</a>
+    // best report link, honestly labelled: live official PDF > verified Wayback copy (say so) >
+    // the OIG report page (with its Wayback snapshot as a last resort). Never pretend a dead
+    // link is live — pdf_url is only set when the file was verified on oig.usaid.gov.
+    const pdfHref = a.pdf_url || a.wayback_pdf;
+    const pdfLink = pdfHref ? `<div style="font-size:11px;margin-top:4px"><a href="${pdfHref}" target="_blank" rel="noopener">${a.pdf_url?t('au_pdf'):t('au_pdf_wb')}</a></div>` : '';
+    return `<tr><td><a href="${a.node_url||a.wayback_node}" target="_blank" rel="noopener">${a.report}</a>
         <div style="font-size:11px;color:var(--muted)">${a.title}</div></td>
       <td>${a.what}</td><td style="white-space:nowrap">${a.period}</td>
-      <td class="num">${q}${vb}</td><td>${status}</td></tr>`;}).join('');
+      <td class="num">${q}${vb}</td><td>${status}${pdfLink}</td></tr>`;}).join('');
 }
 function drawLanding(){
   const D2=window.US_DETAIL; if(!D2) return;
@@ -771,16 +811,23 @@ function openDrawer(title, sub, rows, metaHtml){
   document.getElementById('drawer-title').textContent=title;
   document.getElementById('drawer-sub').textContent=sub;
   document.getElementById('drawer-meta').innerHTML=metaHtml||'';
-  const html=rows.sort((x,y)=>y.a-x.a).slice(0,150).map(r=>
-    `<tr><td class="num" style="white-space:nowrap;padding-right:14px;font-weight:700;color:var(--teal);vertical-align:top">${money(r.a)}</td>
-      <td>${esc(r.left||'—')}${r.right?`<div style="font-size:11.5px;color:var(--muted);margin-top:1px">${esc(r.right)}</div>`:''}</td>
-      <td style="white-space:nowrap;text-align:right;vertical-align:top;font-size:11.5px;color:var(--muted)">${r.date?'<span title="'+t('dr_awarded')+'">'+esc(r.date)+'</span>':''}</td></tr>`).join('');
+  // left/right may be plain strings (esc'd here) or pre-rendered HTML (leftHtml/rightHtml,
+  // already escaped by drillChip) so a cell can hold a clickable drill button.
+  const html=rows.sort((x,y)=>y.a-x.a).slice(0,150).map(r=>{
+    const main=r.leftHtml!=null?r.leftHtml:esc(r.left||'—');
+    const subline=r.rightHtml!=null?r.rightHtml:(r.right?esc(r.right):'');
+    return `<tr><td class="num" style="white-space:nowrap;padding-right:14px;font-weight:700;color:var(--teal);vertical-align:top">${money(r.a)}</td>
+      <td>${main}${subline?`<div style="font-size:11.5px;color:var(--muted);margin-top:2px">${subline}</div>`:''}</td>
+      <td style="white-space:nowrap;text-align:right;vertical-align:top;font-size:11.5px;color:var(--muted)">${r.date?'<span title="'+esc(r.dt||t('dr_awarded'))+'">'+esc(r.date)+'</span>':''}</td></tr>`;}).join('');
   document.getElementById('drawer-rows').innerHTML=html||`<tr><td style="color:var(--muted)">${t('dr_empty')}</td></tr>`;
   const dr=document.getElementById('drawer');
-  _lastFocused=document.activeElement;          // remember what to return focus to
+  // Only capture the opener the first time; drilling within the drawer keeps the original,
+  // so closing returns focus to the ledger/chart element that started the chain.
+  if(!dr.classList.contains('open')) _lastFocused=document.activeElement;
   dr.classList.add('open');
   document.getElementById('drawer-ov').classList.add('open');
   document.body.style.overflow='hidden';        // stop the page scrolling behind the panel
+  dr.querySelector('.drawer-body').scrollTop=0;  // reset scroll when content is swapped by a re-drill
   const cl=dr.querySelector('.drawer-close'); if(cl) cl.focus();  // move focus into the dialog
 }
 let _lastFocused=null;
@@ -807,12 +854,38 @@ document.addEventListener('keydown',e=>{
   }
 });
 const subsAll=()=>window.US_SUBS||[];
+// A clickable entity inside the drawer body — a real <button> so it is keyboard-reachable and
+// caught by the drawer focus trap. Lets you pivot recipient <-> project(prime) <-> district
+// without leaving the panel. kind: 'sub' | 'dist' | 'proj' (proj also needs the prime's label).
+function drillChip(kind,arg,text,label){
+  return `<button type="button" class="drill" data-k="${kind}" data-a="${esc(arg)}"${label!=null?` data-l="${esc(label)}"`:''} onclick="drillFrom(this)">${esc(text)}</button>`;}
+function drillFrom(el){const k=el.dataset.k,a=el.dataset.a;
+  if(k==='sub')drillSub(a); else if(k==='dist')drillDist(a); else if(k==='proj')drillProj(a,el.dataset.l||a);}
+// The funding agency behind a prime award = the US "donor" for that money. US_PROJMETA has no
+// agency, so derive it once from the ledger (US_PROJECTS.list carries agency + the award link).
+let _agencyByAward=null;
+function agencyOf(aid){
+  if(!_agencyByAward){_agencyByAward={};const P=window.US_PROJECTS;
+    if(P&&P.list)P.list.forEach(a=>{const id=a.link&&a.link.split('/award/')[1];if(id&&a.agency)_agencyByAward[id]=a.agency;});}
+  return _agencyByAward[aid]||'';}
+const drillHint=()=>`<div class="note" style="margin:0 0 10px">${t('dr_more')}</div>`;
+const viaFunder=aid=>{const ag=agencyOf(aid);return ag?`${t('dr_via')} ${esc(ag)}`:'';};
+const subLine=parts=>parts.filter(Boolean).join(' · ');  // muted sub-line: project / district / funder
+
 function drillSub(name){const r=subsAll().filter(x=>x.s===name);const tot=r.reduce((a,b)=>a+b.a,0);
+  const L=recLoc(name);
+  const loc=L&&(L.city||L.country)?`<div style="background:#f4f6f9;border:1px solid #e3e8ef;border-radius:11px;padding:11px 14px;margin-bottom:12px;font-size:12.5px;color:#3a4a5c">📍 <b>${t('dr_based')}:</b> ${esc([L.city,L.state,ccName(L.country)].filter(Boolean).join(', '))}${L.addr?` · ${esc(L.addr)}`:''}</div>`:'';
   openDrawer(name, t('dr_sub_h').replace('{n}',r.length).replace('{t}',money(tot)),
-    r.map(x=>({a:x.a,left:x.p,date:x.t,right:[x.j,x.d&&(x.d+' '+t('dr_district'))].filter(Boolean).join(' · ')})));}
+    r.map(x=>({a:x.a,date:x.t,
+      leftHtml:drillChip('proj',x.w,x.p,x.p),   // the prime it came from -> that prime's full breakdown
+      rightHtml:subLine([esc(x.j), x.d?drillChip('dist',x.d,x.d+' '+t('dr_district')):'', viaFunder(x.w)])})),
+    drillHint()+loc);}
 function drillDist(name){const r=subsAll().filter(x=>x.d===name);const tot=r.reduce((a,b)=>a+b.a,0);
   openDrawer(name+' '+t('dr_district'), t('dr_dist_h').replace('{n}',r.length).replace('{t}',money(tot)),
-    r.map(x=>({a:x.a,left:x.s,date:x.t,right:x.p})));}
+    r.map(x=>({a:x.a,date:x.t,
+      leftHtml:drillChip('sub',x.s,x.s),        // the org that received it -> everything it got
+      rightHtml:subLine([drillChip('proj',x.w,x.p,x.p), esc(x.j), viaFunder(x.w)])})),
+    drillHint());}
 function drillProj(aid,label){
   const r=subsAll().filter(x=>x.w===aid); const tot=r.reduce((a,b)=>a+b.a,0);
   const m=(window.US_PROJMETA||{})[aid]; let meta='';
@@ -820,6 +893,8 @@ function drillProj(aid,label){
     const TODAY=DASH.today;   // viewer's live date, so "deadline passed" is always current
     const dl=m.e?(m.e<TODAY?t('dr_dl_passed').replace('{d}',m.e):t('dr_dl_by').replace('{d}',m.e)):t('dr_dl_none');
     const cell=(v,lab,col)=>`<div><div style="font-size:19px;font-weight:760;color:${col}">${money(v)}</div><div style="font-size:11px;color:var(--muted)">${lab}</div></div>`;
+    const ag=agencyOf(aid);
+    const funder=ag?`<span style="font-weight:700;color:var(--ink)">${t('dr_funder')}: ${esc(ag)}</span>`:'';
     const awarded=m.s?`<span style="font-weight:700;color:var(--ink)">${t('dr_awarded')}: ${m.s}</span>`:'';
     const L=m.loc;
     const locline=L&&(L.city||L.country)?`<div style="margin-top:9px;font-size:12.5px;color:#3a4a5c">📍 <b>${t('dr_based')}:</b> ${esc([L.city,L.state,ccName(L.country)].filter(Boolean).join(', '))}${L.addr?` · ${esc(L.addr)}`:''}</div>`:'';
@@ -828,11 +903,13 @@ function drillProj(aid,label){
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px 14px">
         ${cell(m.o,t('dr_outlayed'),'#0a5a61')}${cell(m.b,t('dr_obligated'),'#12233B')}
         ${cell(m.c,t('dr_current'),'#12233B')}${cell(m.p,t('dr_potential'),'#12233B')}</div>
-      <div style="margin-top:10px;font-size:13px;display:flex;flex-wrap:wrap;gap:4px 14px">${awarded}
+      <div style="margin-top:10px;font-size:13px;display:flex;flex-wrap:wrap;gap:4px 14px">${funder}${awarded}
         <span style="font-weight:700;color:var(--bad)">${dl}</span></div>${locline}</div>`;
   }
   openDrawer(label, t('dr_proj_h').replace('{n}',r.length).replace('{t}',money(tot)),
-    r.map(x=>({a:x.a,left:x.s,date:x.t,right:x.d?(x.d+' '+t('dr_district')):''})), meta);}
+    r.map(x=>({a:x.a,date:x.t,
+      leftHtml:drillChip('sub',x.s,x.s),                              // sub-recipient -> everything it got
+      rightHtml:x.d?drillChip('dist',x.d,x.d+' '+t('dr_district')):''})), drillHint()+meta);}
 // Recipient location helpers, shared by the drill drawer and the ledger table.
 // country names + org normalisation now live in dash-utils.js (shared with search.js, single source)
 const ccName=DASH.ccName, ccNorm=DASH.norm;
@@ -946,6 +1023,10 @@ function drawPurpose(){
 const PP_COL={people:'#0f9d58',system:'#2563eb',machine:'#dc2626'};
 function drawPeople(){
   const P=D.people; if(!P) return;
+  // three definition cards (what each category means + real examples), colour-matched to the bar/charts.
+  document.getElementById('pp-defs').innerHTML=['people','system','machine'].map(k=>
+    `<div class="term" style="border-left-color:${PP_COL[k]}">
+       <b style="color:${PP_COL[k]}">${t('pp_'+k)}</b><span>${t('pp_'+k+'_d')}</span></div>`).join('');
   // total US$ delivered to each category over all years (byYear is in US$ millions)
   const tot={people:0,system:0,machine:0};
   P.byYear.forEach(r=>{tot.people+=r.people;tot.system+=r.system;tot.machine+=r.machine;});
@@ -1071,21 +1152,85 @@ function drawSankey(){
       lineStyle:{color:'gradient',opacity:.45}}]},true);
 }
 
+// ---- treemap drill-down: the actual activities that constitute a sector block ----
+// us_sector_acts.js (0.6 MB, built by scripts/97_us_sector_activities.py from the same
+// ForeignAssistance.gov service as the treemap) is lazy-loaded on first click, like the
+// search index: most visitors never drill, and it is pure weight on first paint.
+let _actsLoading=false;
+function withActs(cb){
+  if(window.US_SECTOR_ACTS){cb(true); return;}
+  if(_actsLoading) return;
+  _actsLoading=true;
+  const s=document.createElement('script'); s.src='us_sector_acts.js';
+  s.onload=()=>{_actsLoading=false; cb(true);};
+  s.onerror=()=>{_actsLoading=false; cb(false);};
+  document.head.appendChild(s);
+}
+// drawer rows for a list of activity entries ({a,n,c,ag,e,d}); withSec adds the sector name
+// to the sub-line (used by the category roll-up view)
+function actRows(list,withSec){
+  return list.map(x=>({a:x.a, date:x.e||'', dt:x.e?t('dr_act_end').replace('{d}',x.e):'',
+    leftHtml:esc(x.n),
+    rightHtml:[withSec&&x.sec?esc(x.sec):'', x.c?esc(x.c):'', x.ag?`${t('dr_via')} ${esc(x.ag)}`:'']
+      .filter(Boolean).join(' · ')
+      +(x.d?`<div style="margin-top:3px;color:var(--muted)">${esc(x.d)}…</div>`:'')}));
+}
+const actSrcNote=extra=>`<div class="note" style="margin:0 0 10px">${extra?extra+' ':''}${t('dr_act_src')}</div>`;
+function drillSector(cat,sec){
+  const Y=String(tmYear);
+  const open=()=>{
+    const acts=(((window.US_SECTOR_ACTS||{}).y||{})[Y]||{})[cat+'|'+sec]||[];
+    const tot=acts.reduce((s,x)=>s+x.a,0);
+    const box=((D.sectors[Y]||[]).find(r=>r.cat===cat&&r.sec===sec)||{}).v;
+    openDrawer(sec, t('dr_act_h').replace('{t}',money(tot)).replace('{n}',acts.length).replace('{y}',Y),
+      actRows(acts,false),
+      actSrcNote(box!=null?t('dr_act_box').replace('{b}',money(box*1e6)).replace('{s}',money(tot)):''));
+  };
+  if(window.US_SECTOR_ACTS){open(); return;}
+  openDrawer(sec, t('dr_act_load'), []);          // instant feedback while the file loads
+  withActs(ok=>{ if(ok) open(); });
+}
+function drillSectorCat(cat){
+  const Y=String(tmYear);
+  const open=()=>{
+    const yd=((window.US_SECTOR_ACTS||{}).y||{})[Y]||{};
+    const acts=[];
+    Object.keys(yd).forEach(k=>{
+      if(k.split('|')[0]===cat) yd[k].forEach(x=>acts.push({...x,sec:k.split('|')[1]}));});
+    acts.sort((a,b)=>b.a-a.a);
+    const tot=acts.reduce((s,x)=>s+x.a,0);
+    openDrawer(cat, t('dr_act_h').replace('{t}',money(tot)).replace('{n}',acts.length).replace('{y}',Y),
+      actRows(acts,true), actSrcNote());
+  };
+  if(window.US_SECTOR_ACTS){open(); return;}
+  openDrawer(cat, t('dr_act_load'), []);
+  withActs(ok=>{ if(ok) open(); });
+}
+
 function drawTreemap(){
   aria('c-treemap', t('sec_title')+' FY'+tmYear);
   const rows=D.sectors[tmYear]||[];
   const byCat={};
   rows.forEach(r=>{(byCat[r.cat]=byCat[r.cat]||[]).push({name:r.sec,value:r.v});});
   const data=Object.entries(byCat).map(([cat,children])=>({name:cat,children}));
-  chart('c-treemap').setOption({animation:anim,textStyle:baseText(),
+  const ch=chart('c-treemap');
+  ch.setOption({animation:anim,textStyle:baseText(),
     tooltip:{valueFormatter:fmt},
     series:[{type:'treemap',roam:false,width:'100%',height:'92%',top:8,
-      breadcrumb:{show:true,top:'bottom'},
+      nodeClick:false,                       // click drills into the drawer instead of zooming
+      breadcrumb:{show:false},
       label:{show:true,fontSize:11,formatter:p=>p.name+'\n'+fmt(p.value)},
       upperLabel:{show:true,height:22,fontSize:11,color:'#fff'},
       levels:[{itemStyle:{borderColor:'#fff',borderWidth:2,gapWidth:2}},
               {colorSaturation:[0.3,0.6],itemStyle:{borderColorSaturation:0.7,gapWidth:1}}],
       data}]},true);
+  ch.off('click');                           // re-render safe: never stack handlers
+  ch.on('click',p=>{
+    if(p.seriesType!=='treemap') return;
+    const path=p.treePathInfo||[];
+    if(path.length>=3) drillSector(path[1].name, p.name);       // sector block
+    else if(path.length===2) drillSectorCat(p.name);            // category header
+  });
   drawSectorBreakdown(rows);
 }
 

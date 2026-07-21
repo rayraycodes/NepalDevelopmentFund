@@ -1,0 +1,795 @@
+OFFICE OF INSPECTOR GENERAL
+
+AUDIT OF USAID/NEPAL’S
+HARIYO BAN PROGRAM
+
+AUDIT REPORT NO. 5-367-15-003-P
+FEBRUARY 23, 2015
+
+
+
+
+MANILA, PHILIPPINES
+Office of Inspector General
+
+
+February 23, 2015
+
+
+MEMORANDUM
+
+TO:                  USAID/Nepal Mission Director, Beth Dunford
+
+FROM:                Acting Regional Inspector General/Manila, Steven Ramonas /s/
+
+SUBJECT:             Audit of USAID/Nepal’s Hariyo Ban Program (Report No. 5-367-15-003-P)
+
+This memorandum transmits our final report on the subject audit. In finalizing the audit report,
+we considered your comments on the draft and included them in their entirety in Appendix II.
+
+The audit report contains five recommendations to assist the mission in improving various
+aspects of the program. The mission agreed with all five recommendations. After reviewing
+information provided in response to the draft report, we determined that the mission has made
+management decisions on all and taken final action on Recommendations 1 and 4. Please
+provide evidence of final action on the open recommendations to the Audit Performance and
+Compliance Division.
+
+Thank you for the cooperation and assistance extended to the audit team during this audit.
+
+
+
+
+U.S. Agency for International Development
+https://oig.usaid.gov
+CONTENTS
+Summary of Results .................................................................................................................1
+
+Audit Findings ...........................................................................................................................5
+
+     Some Performance Targets Were Not Useful or Ambitious ...................................................5
+
+     World Wildlife Fund Did Not Manage Loan Funds Sufficiently ...............................................6
+
+     Windows of Opportunity Funds Did Not Have Targets...........................................................8
+
+     Local Subrecipients Were Not Audited According to Guidelines ............................................9
+
+Evaluation of Management Comments..................................................................................11
+
+Appendix I—Scope and Methodology ...................................................................................12
+
+Appendix II—Management Comments ..................................................................................13
+
+
+
+
+Abbreviations
+
+The following abbreviations appear in this report:
+
+ADS                  Automated Directives System
+CFR                  U.S. Code of Federal Regulations
+CHAL                 Chitwan Annapurna Landscape
+FECOFUN              Federation of Community Forest Users Nepal
+FY                   fiscal year
+NTNC                 National Trust for Nature Conservation
+PMP                  performance management plan
+RIG                  Regional Inspector General
+TAL                  Terai Arc Landscape
+WOO                  Windows of Opportunity
+WWF                  World Wildlife Fund
+SUMMARY OF RESULTS
+Deforestation is a major problem in Nepal, caused in part by the fact that many poor Nepalis
+depend on wood and other forest products for fuel and cleared land for agriculture. To address
+this problem, USAID/Nepal designed a program to stimulate economic growth, reduce poverty,
+and promote sustainable management of forest resources. The program encompassed
+three intersecting areas: (1) threats to biodiversity, (2) deforestation and degradation of forests,
+and (3) detrimental effects of climate change.
+
+In August 2011 the mission awarded a 5-year, $37.4 million cooperative agreement 1 to World
+Wildlife Fund (WWF) to implement the Hariyo Ban Program; 2 WWF is expected to contribute
+$7.5 million of the total. The program’s goal is to reduce adverse impacts of climate change and
+threats to biodiversity in Nepal through three components:
+
+1. Reduce threats to biodiversity in specific areas.
+2. Build structures, capacity, and operations for effective forest landscape management.
+3. Increase the ability of communities to adapt to adverse impacts of climate change.
+
+The program focuses on two areas where activities would have the most impact: the Chitwan
+Annapurna Landscape (CHAL) and the Terai Arc Landscape (TAL), shown in the map below.
+
+
+
+
+        Source: Hariyo Ban Program/WWF Nepal
+
+1
+  A cooperative agreement is a legal instrument used to transfer money, property, services, or anything of
+value to a recipient in order to accomplish a public purpose of support or stimulation authorized by
+Federal statute and when substantial involvement by USAID is anticipated.
+2
+  The name of the program comes from a Nepali saying “Hariyo Ban Nepalko Dhan,” which means
+“Healthy green forests are the wealth of Nepal.”
+
+
+                                                                                                        1
+As of March 31, 2014, USAID/Nepal had obligated $17.1 million and spent $12.7 million for the
+program. 3
+
+The Regional Inspector General (RIG)/Manila conducted this audit to determine whether
+USAID/Nepal’s Hariyo Ban Program was achieving its main goal of reducing adverse impacts of
+climate change and threats to biodiversity, whether program activities were progressing as
+planned, and whether activities were achieving planned outputs.
+
+The audit team found that the program was on track to achieve its goal and most of the activities
+were on track to achieve their planned outputs; 9 of the 16 indicators that had outputs reached
+their 3-year targets.
+
+Key accomplishments under each component are discussed below.
+
+•   Biodiversity Conservation. Program assessments completed during the first 2 years
+    identified habitat loss and poaching as threats to biodiversity. The program improved
+    4.4 million hectares of grassland, wetland, and forest. To counter the threat of poaching, the
+    program formed, trained, and mobilized 131 community-based antipoaching units during the
+    first 3 years.
+
+•   Sustainable Landscapes. The program promoted alternative sources of energy to
+    decrease the need for firewood. During the first 3 years, 47,050 people benefited, the
+    program reported, by installing biogas units 4 or using more efficient stoves.
+
+•   Climate Change Adaptation. A key activity was to help communities develop plans to help
+    them adjust to the effects of climate change identified in the program’s assessments. For
+    example, one of the most common threats identified was the increased risk of forest fires. In
+    response, the program provided training, equipment, and supplies to fight fires. During the
+    first 3 years, the program reported that 151,825 people benefited from the implementation of
+    the plans.
+
+
+
+
+3
+  These amounts come from the Agency’s financial systems. On November 17, 2014, OIG issued Audit of
+USAID’s Financial Statements for Fiscal Years 2014 and 2013, Report Number 0-000-15-001-C,
+disclaiming an opinion because of material unsupported adjustments that USAID made to reconcile its
+general and subsidiary ledgers. We did not perform any additional tests during this audit to verify the
+accuracy of the reported amounts. In FY 2015, OIG anticipates testing USAID’s adjustments to determine
+if they were accurate and appropriate. USAID intends to provide explanations and other support to
+demonstrate the adjustments’ validity.
+4
+  Biogas comes from animal and human waste, as well as other organic materials.
+
+
+                                                                                                     2
+The program preserved a grassy rhino habitat (left) in TAL to conserve biodiversity. The program
+also trained a community in CHAL to fight forest fires and supplied them with the necessary
+equipment (left). (Photos by RIG/Manila, July 2014)
+
+However, now that the program is past its midpoint, it is important to note that USAID and WWF
+set program targets before they finished the studies they needed to identify what threats the
+activities would address (page 5). The program exceeded several targets by large margins,
+which suggests that they were too low.
+
+In addition, the audit found three other problems that USAID/Nepal should address, in
+cooperation with WWF, to strengthen oversight and expand the program’s impact.
+
+•   WWF did not manage loan funds sufficiently (page 6). It did not track the interest that
+    accrued on loans, and some of the local organizations that received funds did not lend out
+    the entire amount.
+
+•   The program did not set targets for some activities (page 8).
+
+•   Two local subrecipients were not audited according to USAID standard provisions (page 9).
+
+To address these problems, we recommend that USAID/Nepal:
+
+1. Work with WWF to increase the target for Hectares of biodiverse area under improved
+   management to reflect an ambitious, achievable result for the Hariyo Ban Program (page 6).
+
+2. Work with WWF to standardize reporting procedures for income earned under the program
+   (page 8).
+
+3. Work with WWF to develop new guidance for cooperatives receiving funds for loans,
+   including requirements to use funds in a timely manner and set limits on administrative
+   expenses (page 8).
+
+4. Require WWF to apply performance targets or milestones for activities funded by Windows
+   of Opportunity (WOO) grants to assess whether they are contributing to the program’s
+   objectives (page 9).
+
+5. Require WWF to contract audits of Federation of Community Forest Users Nepal
+   (FECOFUN) and National Trust for Nature Conservation (NTNC) for fiscal years ending
+
+
+
+                                                                                                   3
+   June 2013 and June 2014, and verify that an audit is completed for every subrecipient that
+   spends more than $300,000 in a fiscal year (page 10). The audits should be conducted in
+   accordance with Guidelines for Financial Audits Contracted by Foreign Recipients, dated
+   February 2009.
+
+Detailed findings appear in the following section. Appendix I has information on the scope and
+methodology. OIG’s evaluation of management comments is on page 11, and the full text of
+management comments is in Appendix II.
+
+
+
+
+                                                                                            4
+AUDIT FINDINGS
+Some Performance Targets Were Not
+Useful or Ambitious
+Missions use performance indicators to observe progress and compare actual results to
+expected results. According to USAID’s Automated Directives System (ADS) 203.3.9, “Setting
+Performance Baselines and Targets,” indicator definitions, units of measurement, and collection
+methods should remain constant to be useful for analysis and when making decisions. In
+addition, performance targets should be ambitious as well as achievable.
+
+The program tracks activities within the three components and measures their progress through
+30 indicators. It reached targets for 16 of them. Several exceeded the targets by large margins,
+as shown in Table 1 below.
+
+                             Table 1. Indicators That Exceeded Targets
+                                              Component/         3-Year
+                                                                            5-Year    Difference
+                 Indicator                    Intermediate     Cumulative
+                                                                            Target    (Percent)
+                                                  Result         Result
+                                                Biodiversity
+Level of threats to target species reduced                          131         30       337
+                                                conservation
+Number of hectares of biological
+significance and/or natural resources under    Biodiversity
+                                                               4,417,515    500,000      784
+improved natural resource management as        conservation
+a result of USG assistance
+Number of people receiving training in
+                                               Biodiversity
+[natural resources management] and/or                            20,106      7,000       187
+                                               conservation
+biodiversity conservation
+Number of people participating in
+                                               Sustainable
+[greenhouse gas] monitoring, equitable                          151,462     41,000       269
+                                               landscapes
+benefit sharing and REDD related activities
+Number of people participating in climate      Climate
+change adaptation related activities and       change           268,061     100,000      168
+events                                         adaptation
+Number of vulnerable people benefiting         Climate
+from the implementation of community           change           151,825     12,000      1,165
+adaptation plans                               adaptation
+
+Performance targets appear low because WWF designed indicators and set 5-year targets early
+in the first year before it completed the studies necessary to base the program’s activities on.
+The cooperative agreement required WWF to submit a complete PMP 90 days after the
+program began.
+
+During the first 2 years, WWF completed several studies and adjusted some activities
+accordingly. However, in one case it still did not revise the target after changing the method
+used to measure Number of natural resource management groups with strengthened good
+governance practices. The program originally defined an acceptable result as a community
+group that carried out one out of three good governance assessments. Under that definition, the
+indicator’s results were 426 percent above the 3-year target. WWF later changed that to
+
+
+                                                                                                5
+Number of groups that carried out all three practices, which it considered a better measurement
+of improved governance. Therefore, the official result that WWF reported to USAID were not
+what drove its management decisions.
+
+In another case, the target for a standard USAID indicator 5 did not reflect the desired outcome.
+The results for Hectares of biodiverse area under improved management were 2,845 percent of
+the 3-year cumulative target. WWF officials said that under the definition of that standard
+indicator, an area is considered improved if the program had performed an assessment. So
+during the second year, the program carried out assessments in communities throughout CHAL
+(3.1 million hectares) and parts of TAL (337,192 hectares).
+
+WWF officials addressed most of these problems in the fourth-year PMP submitted in
+June 2014. However, the 5-year target for Hectares of biodiverse area under improved
+management was still lower than the actual results for the first 3 years, and more activities are
+planned for the remaining 2 years.
+
+The mission cannot assess Hariyo Ban’s program performance without appropriate targets.
+Moreover, a USAID/Nepal official said the mission would continue to support activities that
+conserve biodiversity and forests; therefore, future programs could possibly draw upon Hariyo
+Ban, which itself benefitted from what was learned during an earlier environment program.
+
+To address this issue, we make the following recommendation.
+
+    Recommendation 1. We recommend that USAID/Nepal work with World Wildlife Fund
+    to increase the final target for Hectares of biodiverse area under improved management
+    to reflect an ambitious, achievable result expected under the Hariyo Ban Program.
+
+World Wildlife Fund Did Not Manage
+Loan Funds Sufficiently
+The cooperative agreement requires WWF to account for program income in accordance with
+USAID's Standard Provisions for Non-U.S. Nongovernmental Organizations (Mandatory
+Reference for ADS Chapter 303). And they require the implementing partner to add income
+earned from federally supported activities during the program period to the total amount and use
+it to achieve the objectives. Further, a modification to the agreement reiterated that interest
+generated as program income is subject to the requirements of 22 Code of Federal Regulations
+(CFR) 226.24 and award terms. 6
+
+The program promotes alternative energy and provides money that can be lent out for activities
+that reduce people’s dependency on forests. WWF provided the money for the loans to local
+cooperatives. Using this approach, a beneficiary willing to buy a biogas unit or new stove can
+
+5
+  Standard indicators measure outputs that are directly attributable to the U.S. Government's foreign
+assistance activities and outcomes to which the U.S. Government contributes. They enable consolidation
+of key results across multiple activities to provide a broad picture of what is being achieved with foreign
+assistance.
+6
+  According to 22 CFR 226.24, grantees can keep money they earn during a project period as long as
+they apply it in one of three specified ways: (1) add to funds committed by USAID and the recipient to the
+project or program and used to achieve its objectives; (2) use to finance the nonfederal share of the
+project or program; and (3) reduce the overhead (“net allowable costs”) that they normally would bill the
+government for.
+
+
+                                                                                                         6
+get a 2-year loan from a cooperative with an interest rate of 8 percent. For the income-
+generating activities, the maximum allowable interest rate is 12 percent. Throughout the
+program, principal and interest payments continue to be used as loans, which in turn help
+communities expand the use of biogas.
+
+As of July 2014, the program gave $418,830 to various organizations. In the 2 years left, it plans
+to issue another $48,500, bringing the total amount to $467,330. At the rate of 8 percent, for
+example, the funds would earn at least $37,386 7 in gross interest income per year.
+
+The audit found a number of problems with the loan funds, however, stemming from
+inconsistent reporting practices, cooperatives not lending out enough of the funds, and high
+administrative costs.
+
+Incomplete Records. WWF did not maintain records of how much interest the loans generated
+or should have generated. According to financial reports, the program’s gross income totaled
+$1,817 as of March 2014. However, the income records showed that 5 months earlier, at the
+end of the second year (October 2013), the local cooperatives reported $2,613 in gross income.
+
+No Standard Procedure. The cooperatives did not report income at the same time.
+Cooperatives report income directly to WWF, but they were not required to do so until a
+borrower fully repays a loan after 2 years. The subrecipients that transfer the funds to local
+cooperatives are required to report on gross income, expenses, and residual income every year,
+but inconsistent reporting information resulted in the different totals.
+
+Not All Funds Used. As of July 16, 2014, WWF had given the cooperatives $417,164 through
+May 2014. Of this amount, $323,104 or 77 percent was lent to the intended beneficiaries.
+However, in one area, 19 participating cooperatives had given only 47 percent of $117,861
+awarded for loans.
+
+Unlimited Administrative Expenses. There was no limit on cooperatives’ administrative
+expenses outlined in the guidance. During one reporting period, two cooperatives charged more
+than the income earned.
+
+When asked about these problems, the agreement officer’s representative said the program’s
+income is too small to justify excessive controls, and loans were simply a mechanism to expand
+use of alternative energy. He added that the amount of seed money Hariyo Ban contributes is
+minor compared with the contributions of other donors that conduct less oversight.
+
+Unless program income is fully accounted for and potential income estimated, the program may
+be missing an opportunity to maximize the impact of its alternative energy activities. In addition,
+there is an increased risk of fraud and misuse of funds. Finally, unrealized income from
+revolving funds cannot help cooperatives that serve local communities become sustainable.
+
+
+
+
+7
+ The amount of income could be more because repayments on the principal as well as interest income
+are used to make loans to more beneficiaries.
+
+
+                                                                                                 7
+               Biogas units (left) use organic waste to power stoves (right)
+               in Nepal, reducing the need for firewood. (Photos taken by
+               RIG/Manila, July 15, 2014)
+
+The mission can tackle these problems without creating much more work by creating standard
+reporting procedures and developing new guidance for cooperatives. Therefore, we make the
+following recommendations.
+
+   Recommendation 2. We recommend that USAID/Nepal work with World Wildlife Fund
+   to create standard reporting procedures for program income earned under the Hariyo
+   Ban Program.
+
+   Recommendation 3. We recommend that USAID/Nepal work with World Wildlife Fund
+   to develop new guidance for cooperatives receiving revolving funds, including
+   requirements to use funds in a timely manner and limit administrative expenses.
+
+Windows of Opportunity Funds Did
+Not Have Targets
+According to ADS 596, “Management’s Responsibility for Internal Control,” program managers
+rely on internal controls to reasonably ensure that programs achieve their objectives and to
+mitigate fraud, waste, and mismanaged resources. One of the most important internal controls
+is reviewing activities based on established performance measures.
+
+The original cooperative agreement set up a Windows of Opportunity (WOO) fund for activities
+such as “observation tours, special training, technical support to other USAID activities,
+participation in national/international forums, outside evaluations, and commodity support.”
+WWF was allowed to fund activities without a formal evaluation process or public
+announcement. The cooperative agreement also required WWF to include a schedule of all
+activities with performance milestones in each annual work plan. Each annual report should
+include a comparison of results against targets listed in those work plans.
+
+
+
+                                                                                          8
+In September 2013 USAID modified the agreement to make WOO a subgrant activity and
+reduced the amount from $4 million to $2.7 million. Each WOO activity now had to promote
+innovation, contribute to program objectives, and have targets. A new process required WWF to
+advertise the subgrants to potential applicants from government agencies and civil society
+organizations, and then evaluate the proposals received.
+
+Before the agreement was modified, the program disbursed $137,976 for six grants. For
+example, the program contributed $74,399 to a tiger population survey in June 2013. As of
+July 2014, the program had not yet disbursed WOO grants under the new requirements and
+was reviewing applications for activities worth $710,514.
+
+In addition, none of the completed activities had targets. The chief of party said that because
+WWF could not predict what WOO activities it would approve and fund in a given year, it could
+not include a complete schedule of activities with targets in the annual work plan, as required by
+the agreement. The new activities under consideration at the time of audit fieldwork did not have
+targets either.
+
+The chief of party said that because the program could not predict what grant proposals it would
+approve in a given year, it was not possible to assign targets to WOO activities in general. This
+does not explain why individual activities or grants did not have targets. For WOO activities
+during the first 2 years, WWF counted the results of activities against program indicators after
+the recipients implemented them.
+
+According to mission officials, WOO was a common feature of USAID/Nepal programs when
+Hariyo Ban began. The original agreement did not require a target for each activity. However,
+the new process put in place after the modification was not clear enough about the need for
+targets for each WOO grant. This inability to track and assess performance is an internal control
+weakness that increases the risk of misuse or inefficient use of up to $2.7 million in program
+funds.
+
+To reduce the risk, we make the following recommendation.
+
+   Recommendation 4. We recommend that USAID/Nepal require the World Wildlife Fund
+   to set performance targets or milestones for activities funded by Windows of Opportunity
+   grants to gauge how successful they are in contributing to the Hariyo Ban Program’s
+   objectives.
+
+Local Subrecipients Were Not
+Audited According to Guidelines
+The USAID Standard Provisions for Non-U.S. Nongovernmental Organizations requires that
+recipients make sure an audit is performed for any fiscal year in which a foreign nonprofit
+subrecipient spends more than $300,000 in USAID funds. The audit must be conducted
+according to Guidelines for Financial Audits Contracted by Foreign Recipients.
+
+According to data from WWF, two Nepali subrecipients, FECOFUN and NTNC, spent the
+amounts shown in Table 2 on the next page during Years 2 and 3 of the program.
+
+
+
+
+                                                                                                9
+              Table 2. Subrecipients’ Spending in Fiscal Years 2013 and 2014
+                                        (Unaudited)
+                   Organization                2013 ($)             2014 ($)
+              FECOFUN                          488,798              763,998
+              NTNC                             637,032              677,234
+
+Neither was audited according to the guidelines for FY 2013 (Year 2), and although the
+requirement for FY 2014 (Year 3) is not due until March 2015, no such audit was planned as of
+the time of our fieldwork.
+
+WWF officials said a Nepali firm conducted an audit of WWF-Nepal for FY 2013 and the scope
+included the local subrecipients. The general financial statement audit report included sections
+pertaining to them as well. Program officials said local organizations undergo annual financial
+statement audits, which are required by local regulations.
+
+However, a general financial statement audit does not fulfill the requirements of Standard
+Provisions for Non-U.S. Nongovernmental Grantees and Guidelines for Financial Audits
+Contracted by Foreign Recipients. Specifically, in the 2013 general financial statement audit of
+WWF-Nepal, the auditors issued a report on the financial statements that expresses an opinion
+on them, but they did not issue reports on internal control and compliance, which Guidelines
+requires. Unlike a general financial statement, an audit according to Guidelines examines costs
+incurred for allowability, allocability, and reasonableness, and questions any costs considered
+unsupported or ineligible.
+
+Because the required audits were not carried out, the program was exposed to increased risk of
+questioned costs, internal control deficiencies, noncompliance with applicable laws and
+regulations, or fraud going undetected. Because the level of spending for the local subrecipients
+is likely to continue for the next 2 years, we make the following recommendation.
+
+   Recommendation 5. We recommend that USAID/Nepal require World Wildlife Fund to
+   contract audits of its subrecipients Federation of Community Forest Users Nepal and
+   National Trust for Nature Conservation for the fiscal years ending June 2013 and June
+   2014, and verify that an audit is completed for every subrecipient spending more than
+   $300,000 in one fiscal year. The audits should be conducted in accordance with the
+   Guidelines for Financial Audits Contracted by Foreign Recipients, dated February 2009.
+
+
+
+
+                                                                                              10
+EVALUATION OF MANAGEMENT
+COMMENTS
+In its response to the draft report, USAID/Nepal agreed with all five recommendations. The
+mission has made management decisions on all and taken final action on Recommendations 1
+and 4.
+
+Recommendation 1. USAID/Nepal agreed to increase the program target for the indicator
+tracking Number of hectares of biodiverse area under improved management. The mission
+worked with the recipient to increase the target to 5,919,923 hectares and approved the
+recipient’s most recent M&E plan that includes the revised target. Accordingly, it has taken final
+action on this recommendation. We acknowledge the mission’s management decision and final
+action.
+
+Recommendation 2. USAID/Nepal made a management decision to work with WWF to
+establish standard procedures for program income and expenditures that will apply to the
+program. The mission expects to complete the new procedures by March 31, 2015. We
+acknowledge the mission’s management decision.
+
+Recommendation 3. USAID/Nepal made a management decision to work with WWF to revise
+guidelines for cooperatives that receive revolving funds under the program. The new guidelines
+will require cooperatives to use funds in a timely manner and limit administrative expenses. The
+target date for completing the guidelines is May 31, 2015. We acknowledge the mission’s
+management decision.
+
+Recommendation 4. USAID/Nepal agreed to work with WWF to set performance targets for
+activities funded under WOO. The new targets were included in an updated M&E plan approved
+on January 5, 2015. The program will report results against targets under the normal reporting
+schedule. Accordingly, the mission has taken final action on this recommendation. We
+acknowledge the mission’s management decision and final action.
+
+Recommendation 5. USAID/Nepal made a management decision to require WWF to complete
+audits of subrecipients. Audits of FECOFUN for fiscal year 2013 and NTNC for fiscal years 2013
+and 2014 have been completed. The mission expects an ongoing audit of FECOFUN for fiscal
+year 2014 to be finished by April 30, 2015. We acknowledge the mission’s management
+decision.
+
+
+
+
+                                                                                               11
+                                                                                       Appendix I
+
+
+
+SCOPE AND METHODOLOGY
+Scope
+RIG/Manila conducted this audit in accordance with generally accepted government auditing
+standards. Those standards require that we plan and perform the audit to obtain sufficient,
+appropriate evidence to provide a reasonable basis for our findings and conclusions based on
+our audit objective. We believe the evidence obtained provides that basis.
+
+The objectives of the audit were to determine whether the Hariyo Ban Program was achieving
+its main goal of reducing the adverse impacts of climate change and threats to biodiversity,
+whether program activities were progressing as planned, and if activities were achieving
+planned outputs. To implement the program, USAID/Nepal awarded a 5-year, $29.9 million
+cooperative agreement to WWF in August 2011. The agreement included a requirement for cost
+share of $7.5 million, bringing the total amount to $37.4 million. As of March 31, 2014, the
+mission had obligated $17.1 million and spent $12.7 million.
+
+The audit examined program activities in three components: (1) biodiversity conservation,
+(2) sustainable landscape management, and (3) climate change adaptation. In planning and
+carrying out the audit, the team assessed significant management controls: annual work plans
+and reports, periodic progress reports, portfolio reviews, financial reports, cooperative
+agreements and modifications, and monitoring and oversight procedures. Finally, we reviewed
+USAID/Nepal’s FY 2013 annual self-assessment of management controls, a requirement of the
+Federal Managers’ Financial Integrity Act of 1982.
+
+The audit was performed from July 7 to August 19, 2014. We conducted the bulk of fieldwork in
+Kathmandu and the areas around Pohkara and Sarauha, where the program has field offices.
+The audit covered the period from program inception in August 2011 until the end of the
+third year in June 2014.
+
+Methodology
+To answer the audit objective, we interviewed personnel from USAID/Nepal, WWF, and the
+three subimplementers, Cooperative for Assistance and Relief Everywhere (CARE), FECOFUN,
+and NTNC. We interviewed program staff and reviewed supporting documentation in
+Kathmandu, Pokhara, and Sauraha. We visited 6 rural communities out of 277 communities in
+CHAL and TAL. In addition, we visited program sites at Chitwan National Park and Beeshazari
+Lake in TAL. The audit team judgmentally selected the sites in consultation with USAID/Nepal
+and WWF. We chose sites that were accessible and within reasonable travel distance from field
+offices and featured a variety of activities. In some locations, we met with beneficiaries in rural
+communities to get their feedback about the program.
+
+We reviewed supporting documentation for ten indicators in Kathmandu and in the field. We
+judgmentally selected the indicators to maximize coverage of the program’s results. For
+indicators tested, we drew judgmental samples because WWF did not maintain all supporting
+documentation for all indicators or kept them in multiple locations. For these reasons, test
+results and analysis are limited to the indicators tested and cannot be projected to the entire
+universe.
+
+
+                                                                                                12
+                                                                                     Appendix II
+
+
+
+MANAGEMENT COMMENTS
+
+
+
+MEMORANDUM
+
+TO:               Matthew Rathgeber, Regional Inspector General/Manila,
+
+FROM:             Beth Dunford, Mission Director, USAID/Nepal
+
+DATE:             February 4, 2015
+
+SUBJECT:          USAID/Nepal Management Comments on Draft Performance Audit Report of
+                  USAID/Nepal’s Hariyo Ban Program (Report No. 5-367-15-XXX-P)
+
+REFERENCE:        Audit Report No. 5-367-15-XXX-P, January 6, 2015
+
+USAID/Nepal wishes to thank you for providing the Mission the opportunity to review the subject
+draft performance audit report. We would like to express our gratitude for the professionalism,
+flexibility, resourcefulness, and hard work exhibited by the audit team. The Mission agrees that
+implementation of the audit recommendations will improve the effectiveness of the Mission’s
+environment and climate change programs and the efficiency of Mission operations.
+
+Based upon the draft audit report findings and guidance provided by the audit team at the audit
+exit conference, the Mission has taken immediate action to implement the five
+recommendations contained in the report. We are providing confirmation on the corrective
+actions that have been taken or are planned to be implemented to address the
+recommendations in the audit report.
+
+
+MISSION COMMENTS TO AUDIT RECOMMENDATIONS
+
+Recommendation 1. We recommend that USAID/Nepal work with World Wildlife Fund to
+increase the final target for hectares of biodiverse area under improved management to
+reflect an ambitious, achievable result expected under the Hariyo Ban Program.
+
+The Mission agrees with this recommendation.
+
+Action Taken:
+
+The Mission worked with the recipient and increased the final target for bio-diverse area under
+improved management from 500,000 hectares to 5,919,923 hectares for the life of the Hariyo
+
+
+
+                                                                                              13
+                                                                                        Appendix II
+
+
+Ban Program period. This is an ambitious, achievable result that we can expect under the
+program following USAID’s standard indicator definition, which considers studies and
+assessments as one of the means of bringing large geographical areas under improved
+management.
+
+Based on the above, the Mission requests RIG/Manila concurrence that a management decision
+has been reached and the audit recommendation deemed closed as the Mission has updated
+the Hariyo Ban Program’s M&E Plan to include a revised target for this indicator.
+
+Additional Comments:
+
+The Mission had not foreseen the applicability of the “broader” definition at the time of setting
+the original target because local conservation stakeholders were used to monitoring progress
+applying the “narrow” definition based on the site-specific interventions such as: plantation
+establishment, protection of forests and biodiversity resources by fencing and trenching,
+removal of invasive species, etc.
+
+Based on the audit recommendation, the Mission’s technical team discussed this issue with
+WWF and revised the Hariyo Ban Program’s M&E Plan to report progress under this indicator
+disaggregated by “broad” and “narrow” definitions that meet local and USAID standard indicator
+requirements. Hence, there are now two disaggregated targets for this indicator for the life of the
+project period:
+
+   •   Target for broader definition is set to 5,919,923 hectares; and
+   •   Target for narrow definition is set to remain 500,000 hectares.
+
+WWF has agreed to monitor and report progress against both targets annually.
+
+
+Recommendation 2. We recommend that USAID/Nepal work with World Wildlife Fund to
+create standard reporting procedures for program income earned under the Hariyo Ban
+Program.
+
+The Mission agrees with this recommendation.
+
+Action Taken:
+
+The Mission is working with WWF to produce standard reporting procedures for program
+income earned and expenditures made. The same guidance will be used for the reporting of
+program income under the Hariyo Ban program during the current and coming financial year. In
+addition, the Mission will work with WWF to revisit the investment amount, program income and
+expenditure for each field office. Any differences from the reported amounts will be reconciled
+and included in the next financial report.
+
+The Mission plans to produce final standard reporting procedures by the end of March, 2015.
+
+Based on the above, the Mission requests RIG/Manila concurrence that a management decision
+has been reached and the audit recommendation deemed closed when the Mission produces
+guidance on standard reporting procedures for program income earned and expenditures for the
+Hariyo Ban Program.
+
+
+
+                                                                                                    14
+                                                                                  Appendix II
+
+
+
+Recommendation 3. We recommend that USAID/Nepal work with World Wildlife Fund to
+develop new guidance for cooperatives receiving revolving funds, including
+requirements to use funds in a timely manner and limit administrative expenses.
+
+The Mission agrees with this recommendation.
+
+Action Taken and to be Taken:
+
+In the last quarter of 2014, Hariyo Ban program’s implementing partner WWF commissioned an
+assessment of the status of the revolving funds in the Terai Arc Landscape area. Based on the
+draft audit recommendations and findings of the recent assessment commissioned by WWF, the
+Mission is working with WWF to revise the guidelines for cooperatives on management of
+revolving funds in line with host country policies and regulations. These guidelines will have
+requirements to use funds in a timely manner and limit administrative expenses.
+
+The Mission plans to finalize the guidelines by the end of May, 2015.
+
+Based on the above, the Mission requests RIG/Manila concurrence that a management decision
+has been reached and the audit recommendation deemed closed when the Mission produces
+the guidelines for cooperatives for the management of revolving funds.
+
+
+Recommendation 4. We recommend that USAID/Nepal require the World Wildlife Fund to
+set performance targets or milestones for activities funded by Windows of Opportunity
+grants to gauge how successful they are in contributing to the Hariyo Ban Program’s
+objectives.
+
+The Mission agrees with this recommendation.
+
+Action Taken:
+
+The Mission worked with WWF to set performance targets for individual activities funded under
+the Windows of Opportunity (WOO) funds. The Mission approved an updated M&E Plan for the
+Hariyo Ban program on January 5, 2015. This M&E Plan includes provision of reporting
+performance against the WOO activities. In addition, the updated M&E Plan contains a separate
+section describing the WOO monitoring, and WOO results are included in separate tables in the
+M&E Plan indicator reference sheets, as and where applicable.
+
+Based on the above, the Mission requests RIG/Manila concurrence that a management decision
+has been reached and the audit recommendation deemed closed when the Mission
+demonstrates that the WOO activity performance reporting mechanism has been established in
+the updated M&E Plan.
+
+Recommendation 5. We recommend that USAID/Nepal require World Wildlife Fund to
+contract audits of its sub-recipients Federation of Community Forest Users Nepal and
+National Trust for Nature Conservation for the fiscal years ending June 2013 and June
+2014, and verify that an audit is completed for every sub-recipient spending more than
+$300,000 in one fiscal year. The audits should be conducted in accordance with the
+Guidelines for Financial Audits Contracted by Foreign Recipients, dated February 2009.
+
+
+
+                                                                                           15
+                                                                                   Appendix II
+
+
+The Mission agrees with this recommendation.
+
+Action Taken and to be Taken:
+
+Audits have now been completed for FECOFUN (fiscal year 2013) and NTNC (fiscal years 2013
+& 2014). Audits were not necessary for fiscal year 2012 for either organization as spending of
+each was less than $300,000. WWF is reviewing the audits and will follow up with FECOFUN
+and NTNC to discuss any findings or deficiencies as necessary.
+
+FECOFUN’s audit for fiscal year 2014 is currently underway and will be completed by April,
+2015.
+
+Based on the above, the Mission requests RIG/Manila concurrence that a management decision
+has been reached and the audit recommendation deemed closed when the Mission
+demonstrates WWF has contracted audits for all sub-recipients meeting the audit threshold.
+
+
+
+
+                                                                                             16
+U.S. Agency for International Development
+       Office of Inspector General
+      1300 Pennsylvania Avenue, NW
+          Washington, DC 20523
+            Tel: 202-712-1150
+            Fax: 202-216-3047
+            http://oig.usaid.gov/
+         Audit Task No. 55100614
+

@@ -179,14 +179,36 @@ def main():
          "url": "http://d-portal.org/q?from=act&country_code=NP&form=json"},
         {"name": "Nepal MoF Development Cooperation Report", "side": "recipient", "status": "low",
          "url": "https://giwmscdntwo.gov.np/media/pdf_upload/DCR%20Report%202022_23_pt2fped.pdf"},
+        # "med" like other official-but-adjusted systems: an official MOF database, but its USD
+        # figures are DFIMS's own NRB-rate conversions (MOF caveats the expenditure conversion).
+        {"name": "Nepal MoF DFIMS (project-level ledger)", "side": "recipient", "status": "med",
+         "url": "https://dfims.mof.gov.np/public/dashboard"},
         {"name": "AidData Global Chinese Development Finance v3.0", "side": "donor", "status": "low",
          "url": "https://www.aiddata.org/data/aiddatas-geospatial-global-chinese-development-finance-dataset-version-3-0"},
     ]
 
+    # DFIMS ships as its own ledger file (dfims_projects.js, built by 99), NOT through core_long —
+    # so core's source-column nunique no longer covers everything the page cites. The public
+    # "{n} sources" count is the registry above; count it, never the coincidence of the two.
+    kpis["n_sources"] = len(sources)
+
+    # Headline DFIMS numbers for the #gonbooks section lead/summary (rendered instantly from
+    # data.js while the 2,925-row list lazy-loads). Totals are the API's OWN published totals —
+    # 98/99 verified our row sums reproduce them to the dollar, so quoting them IS quoting our data.
+    dfims_meta = json.loads((C.PROCESSED / "dfims_meta.json").read_text())
+    at = dfims_meta["api_totals_usd"]
+    dfims = {"n": int(dfims_meta["total_projects"]),
+             "retrieved": dfims_meta["retrieved_at"][:10],
+             "cm": round(at["commitment"]), "db": round(at["disbursement"]),
+             "ex": round(at["expenditure"]),
+             "url": "https://dfims.mof.gov.np/public/dashboard"}
+
     # Retrieval date + dataset version come from the DATA (deterministic), not the wall clock:
     # the version is whatever stamp the committed core_long carries, so data.js does not churn
-    # daily and a CI rebuild reproduces it byte-for-byte.
-    retrieved = core["retrieved_at"].str.slice(0, 10).max() or "2026-06-04"
+    # daily and a CI rebuild reproduces it byte-for-byte. The page-level "retrieved" date is the
+    # newest retrieval across the shipped datasets (DFIMS is newer than core_long).
+    retrieved = max(core["retrieved_at"].str.slice(0, 10).max() or "2026-06-04",
+                    dfims["retrieved"])
     version = core["dataset_version"].mode().iat[0] if (core["dataset_version"] != "").any() else C.DATASET_VERSION
 
     data = {
@@ -195,7 +217,7 @@ def main():
                  "n_headline": kpis["n_headline"]},
         "kpis": kpis, "reconciliation": reconciliation, "topDonors": topDonors,
         "china": china, "sectors": sectors, "us_agency": us_agency, "nondac_missing": nondac_missing,
-        "discrepancies": discrepancies, "sources": sources,
+        "discrepancies": discrepancies, "sources": sources, "dfims": dfims,
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text("window.NEPAL_DATA = " + json.dumps(data, indent=1) + ";\n")

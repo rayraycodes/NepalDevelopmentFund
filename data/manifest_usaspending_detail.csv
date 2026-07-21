@@ -1,2 +1,4 @@
 source,snapshot_path,url,params,sha256,bytes,http_status,retrieved_at
 usaspending_detail,data/raw/usaspending_detail/example_subawards_20260621T135347Z.json,https://api.usaspending.gov/api/v2/subawards/,award_id=ASST_NON_LOGNPL001COM_524,50c48aa9949c5b6b4ae90e78e42506bde076b7b1bffcfbf1b45ff6878242cd80,117,200,2026-06-21T13:53:47Z
+usaspending_detail,data/raw/usaspending_detail/example_subawards_20260621T141605Z.json,https://api.usaspending.gov/api/v2/subawards/,award_id=ASST_NON_LOGNPL001COM_524,50c48aa9949c5b6b4ae90e78e42506bde076b7b1bffcfbf1b45ff6878242cd80,117,200,2026-06-21T14:16:05Z
+usaspending_detail,data/raw/usaspending_detail/example_subawards_20260621T144625Z.json,https://api.usaspending.gov/api/v2/subawards/,award_id=ASST_NON_LOGNPL001COM_524,50c48aa9949c5b6b4ae90e78e42506bde076b7b1bffcfbf1b45ff6878242cd80,117,200,2026-06-21T14:46:25Z

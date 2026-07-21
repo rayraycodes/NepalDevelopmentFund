@@ -1,0 +1,42 @@
+{
+ "source": "DFIMS — Development Finance Information Management System, Ministry of Finance, Government of Nepal",
+ "site": "https://dfims.mof.gov.np",
+ "source_url": "https://dfims.mof.gov.np/api/v2/report/project_report/",
+ "retrieved_at": "2026-07-21T01:58:01Z",
+ "currency": "USD",
+ "dfims_expenditure_caveat": "The displayed USD expenditure might not be precise as it's converted from NRB's API based on the synced date.",
+ "total_projects": 2925,
+ "api_totals_usd": {
+  "commitment": 41315983314.98976,
+  "disbursement": 24122292099.137234,
+  "expenditure": 3604833353.444603
+ },
+ "crosschecks": {
+  "project_count": {
+   "count": 2923
+  },
+  "projects_status_count": {
+   "Completed": 2424,
+   "On-Going": 499
+  },
+  "projects_budget_type_count": {
+   "Off Budget": 2432,
+   "On Budget": 491
+  },
+  "projects_assistance_type_count": {
+   "Grant Aid": 1920,
+   "Technical Assistance (Standalone)": 895,
+   "Concessional Loan Assistance": 171,
+   "Direct Implementation": 49,
+   "Technical Assistance (Regional)": 11,
+   "In-Kind Support": 6,
+   "Beneficary Funds": 4,
+   "Domestic Funds": 3,
+   "Other Loan": 2
+  }
+ },
+ "notes": [
+  "DFIMS's own endpoints disagree: /core/project_count/ says 2923 while project_report says 2925 — we ship the ledger's own count."
+ ],
+ "id_note": "report_row is the report's own row index; project_code is the DFIMS 'Project' number (unique). Whether project_code is the id the v1 per-project endpoints accept is UNVERIFIED."
+}
