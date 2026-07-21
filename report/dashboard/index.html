@@ -32,6 +32,8 @@
   header{position:sticky;top:0;z-index:50;background:rgba(13,36,64,.97);
     backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
   .hbar{display:flex;align-items:center;gap:14px;padding:11px 0;color:#fff;flex-wrap:wrap}
+  .menu-toggle{display:grid;place-items:center;width:44px;height:44px;padding:0;border:1px solid rgba(255,255,255,.28);border-radius:9px;background:transparent;color:#fff;cursor:pointer;font-size:22px;line-height:1;flex:none}
+  .menu-toggle:hover{background:rgba(255,255,255,.10)}
   .logo{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,var(--teal),#37b3bd);
     display:grid;place-items:center;font-weight:800;color:#fff;flex:none;font-size:19px}
   .hbar h1{font-size:15px;margin:0;font-weight:650;text-align:left}
@@ -117,6 +119,13 @@
   .disclaim{background:#fff;border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:10px;padding:13px 16px;font-size:13.5px;color:#3a4a5c;margin-top:14px}
   footer{margin-top:36px;padding:24px 0 48px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
   .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .section-nav-overlay{position:fixed;inset:0;background:rgba(13,36,64,.45);opacity:0;pointer-events:none;transition:opacity .2s;z-index:100}
+  .section-nav-overlay.open{opacity:1;pointer-events:auto}
+  .section-nav{position:fixed;inset:0 auto 0 0;width:min(360px,92vw);background:#fff;box-shadow:8px 0 30px rgba(16,29,46,.22);transform:translateX(-101%);visibility:hidden;transition:transform .22s,visibility 0s linear .22s;z-index:101;padding:18px;overflow-y:auto}
+  .section-nav.open{transform:none;visibility:visible;transition:transform .22s}.section-nav-head{display:flex;align-items:center;justify-content:space-between;gap:14px;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:10px}
+  .section-nav-head h2{font-size:18px;margin:0;text-align:left}.section-nav-close{width:44px;height:44px;border:1px solid var(--line);border-radius:9px;background:#eef1f6;color:var(--ink);font-size:22px;cursor:pointer;flex:none}
+  .section-nav-list{display:grid;gap:2px}.section-nav-list a{display:block;color:var(--ink);font-size:14px;font-weight:600;line-height:1.35;padding:11px 10px;border-radius:8px;text-decoration:none}.section-nav-list a:hover{background:#e9f3f3;color:var(--teal);text-decoration:none}
+  body.section-nav-open{overflow:hidden}
 
   @media(max-width:880px){
     .kpis{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}
@@ -131,6 +140,7 @@
 <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
 <header>
   <div class="wrap hbar">
+    <button class="menu-toggle" id="section-nav-toggle" type="button" aria-expanded="false" aria-controls="section-nav" aria-label="Open sections">☰</button>
     <div class="logo" aria-hidden="true">अ</div>
     <div>
       <h1 data-i18n="site_title">Development Funding to Nepal</h1>
@@ -140,20 +150,13 @@
       <button id="lang-en" aria-pressed="true" onclick="setLang('en')">EN</button>
       <button id="lang-ne" aria-pressed="false" onclick="setLang('ne')" lang="ne">नेपाली</button>
     </div>
-    <nav aria-label="Sections">
-      <a href="#howto" data-i18n="nav_howto">Guide</a>
-      <a href="#flows" data-i18n="nav_flows">Flows</a>
-      <a href="#donors" data-i18n="nav_donors">Donors</a>
-      <a href="#china" data-i18n="nav_china">China</a>
-      <a href="#sectors" data-i18n="nav_sectors">Sectors</a>
-      <a href="#usagency" data-i18n="nav_agency">US</a>
-      <a href="usforeignaiddata/" data-i18n="nav_usdeep">US deep dive</a>
-      <a href="#gonbooks" data-i18n="nav_gon">Nepal's books</a>
-      <a href="#gaps" data-i18n="nav_gaps">Gaps</a>
-      <a href="#sources" data-i18n="nav_sources">Sources</a>
-    </nav>
   </div>
 </header>
+<div class="section-nav-overlay" id="section-nav-overlay" aria-hidden="true"></div>
+<aside class="section-nav" id="section-nav" aria-label="Page sections" aria-hidden="true">
+  <div class="section-nav-head"><h2 id="section-nav-title">On this page</h2><button class="section-nav-close" id="section-nav-close" type="button" aria-label="Close sections">×</button></div>
+  <nav class="section-nav-list" id="section-nav-list" aria-label="Page sections"></nav>
+</aside>
 
 <main id="main">
 <div class="hero">
@@ -575,6 +578,7 @@ function render(){
   const m=D.meta;
   document.querySelectorAll('[data-i18n]').forEach(el=>el.innerHTML=
     t(el.dataset.i18n).replace(/\{n\}/g,locNum(m.n_sources)).replace(/\{d\}/g,fmtDate(m.retrieved_at)));
+  buildSectionNav();
 
   // badges
   document.getElementById('badges').innerHTML=[
@@ -882,6 +886,34 @@ const NE_CAUSE={
  D7:"चीनका मुख्य अङ्क वाचा/प्रतिबद्धता हुन्; टिपिएको वितरण थोरै छ र २०१८ पछि घट्यो।",
  D8:"भारत गैर-DAC दाता हो र OECD CRS मा रिपोर्ट गर्दैन; प्राप्तकर्ता पक्षले मात्र समेट्छ।"};
 
+let sectionNavOpener=null;
+function buildSectionNav(){
+  const ne=lang==='ne', list=document.getElementById('section-nav-list');
+  document.getElementById('section-nav-title').textContent=ne?'यस पृष्ठमा':'On this page';
+  document.getElementById('section-nav-toggle').setAttribute('aria-label',ne?'खण्डहरू खोल्नुहोस्':'Open sections');
+  document.getElementById('section-nav-close').setAttribute('aria-label',ne?'खण्डहरू बन्द गर्नुहोस्':'Close sections');
+  list.replaceChildren();
+  document.querySelectorAll('main section[id]').forEach(section=>{
+    const heading=section.querySelector('h3'); if(!heading) return;
+    const link=document.createElement('a'); link.href='#'+section.id; link.textContent=heading.textContent;
+    link.addEventListener('click',closeSectionNav); list.append(link);
+  });
+}
+function openSectionNav(){
+  sectionNavOpener=document.activeElement; document.body.classList.add('section-nav-open');
+  document.getElementById('section-nav').classList.add('open'); document.getElementById('section-nav').setAttribute('aria-hidden','false');
+  document.getElementById('section-nav-overlay').classList.add('open'); document.getElementById('section-nav-toggle').setAttribute('aria-expanded','true');
+  document.getElementById('section-nav-close').focus();
+}
+function closeSectionNav(){
+  document.body.classList.remove('section-nav-open'); document.getElementById('section-nav').classList.remove('open');
+  document.getElementById('section-nav').setAttribute('aria-hidden','true'); document.getElementById('section-nav-overlay').classList.remove('open');
+  document.getElementById('section-nav-toggle').setAttribute('aria-expanded','false'); if(sectionNavOpener) sectionNavOpener.focus();
+}
+document.getElementById('section-nav-toggle').addEventListener('click',openSectionNav);
+document.getElementById('section-nav-close').addEventListener('click',closeSectionNav);
+document.getElementById('section-nav-overlay').addEventListener('click',closeSectionNav);
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('section-nav').classList.contains('open'))closeSectionNav();});
 function setLang(l){ lang=l; localStorage.setItem('nepal_lang',l); render(); }
 render();
 // a11y: every data-table column header gets scope="col" (the tables are static markup)
