@@ -1,7 +1,4 @@
 _worker.js
 wrangler.jsonc
 .assetsignore
-middleware.js
 vercel.json
-package.json
-node_modules

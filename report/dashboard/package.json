@@ -1,9 +1,0 @@
-{
-  "name": "nepal-development-fund-dashboard",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Static Nepal Development Fund dashboard + Vercel Edge Middleware password gate.",
-  "dependencies": {
-    "@vercel/edge": "^1.3.1"
-  }
-}
