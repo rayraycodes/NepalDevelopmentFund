@@ -48,6 +48,39 @@ window.DASH = (function () {
       a.download = filename;
       document.body.appendChild(a); a.click();
       setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+    },
+    // Granular sector breakdown from the treemap rows ([{cat, sec, v}, …], v in US$ m). Returns the
+    // year total, category/program counts, a category breakdown sorted by amount (each with its
+    // share of the total), the largest category, and the single largest program — the detailed
+    // figures the "Inside the sectors" panel mirrors from the other sections. Pure + side-effect
+    // free so it is unit-testable (see report/dashboard/tests/sector-summary.test.js).
+    sectorSummary: function (rows) {
+      rows = Array.isArray(rows) ? rows : [];
+      var total = 0, byCat = {}, nProgs = 0, top = null;
+      rows.forEach(function (r) {
+        var v = Number(r && r.v) || 0;
+        if (v <= 0) return;
+        nProgs += 1;
+        total += v;
+        byCat[r.cat] = (byCat[r.cat] || 0) + v;
+        if (!top || v > top.v) top = { name: r.sec, cat: r.cat, v: v };
+      });
+      var cats = Object.keys(byCat).map(function (c) {
+        return { name: c, v: byCat[c], share: total ? byCat[c] / total : 0 };
+      }).sort(function (a, b) { return b.v - a.v; });
+      if (top) top.share = total ? top.v / total : 0;
+      return {
+        total: total,
+        nCats: cats.length,
+        nProgs: nProgs,
+        cats: cats,
+        topCat: cats[0] || null,
+        topProg: top
+      };
     }
   };
 })();
+
+// CommonJS export so the pure helpers (e.g. sectorSummary) can be unit-tested under Node without a
+// browser. Harmless in the browser, where `module` is undefined.
+if (typeof module !== 'undefined' && module.exports) { module.exports = window.DASH; }

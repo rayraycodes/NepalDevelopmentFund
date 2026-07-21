@@ -219,7 +219,18 @@
     <h3 data-i18n="sec_title">Inside the sectors</h3>
     <p class="lead" data-i18n="sec_lead">"Health" is not one thing. The treemap opens each category into its real programs: maternal and child health, HIV, tuberculosis, family planning, basic education, agriculture. Click a block to zoom; click the breadcrumb to come back.</p>
     <div class="controls"><label for="tmYear" data-i18n="year">Year</label><select id="tmYear"></select></div>
-    <div class="card"><div id="c-treemap" class="chart tall" role="img"></div></div>
+    <div class="card" id="sec-sum" style="font-weight:650;font-size:15px"></div>
+    <div class="grid2" style="margin-top:16px">
+      <div class="card"><div id="c-treemap" class="chart tall" role="img"></div></div>
+      <div class="card">
+        <h4 style="margin:2px 0 10px;font-size:15px;font-weight:700" data-i18n="sec_break_t">Where the money went, by category</h4>
+        <div style="overflow-x:auto"><table id="sec-break" style="min-width:280px"><thead><tr>
+          <th data-i18n="sec_th_cat">Category</th><th class="num" data-i18n="sec_th_amt">US$ m</th>
+          <th class="num" data-i18n="sec_th_share">Share</th>
+        </tr></thead><tbody></tbody></table></div>
+        <div class="note" data-i18n="sec_break_note">Disbursements for the selected fiscal year, by US government sector category. Same source as the treemap (by-usg-sector.json). Programs below $0.05m are not shown.</div>
+      </div>
+    </div>
   </section>
 
   <section id="managing">
@@ -394,6 +405,11 @@ const I18N = {
   sk_lead:"Each band is money flowing from a US government agency (left) into one of its budget accounts (right) in the chosen year. Switch between FY2024 and FY2026 to watch a many-channel system collapse into a few pipes.",
   sec_kicker:"What it buys", sec_title:"Inside the sectors",
   sec_lead:"\"Health\" is not one thing. The treemap opens each category into its real programs: maternal and child health, HIV, tuberculosis, family planning, basic education, agriculture. Click a block to zoom; click the breadcrumb to come back.",
+  sec_sum:"FY{y}: {tot} disbursed across {ncat} sector categories and {nprog} programs · largest category: {topcat} ({topshare}) · biggest single program: {topprog} ({progshare})",
+  sec_sum_empty:"No sector disbursements recorded for FY{y}.",
+  sec_break_t:"Where the money went, by category",
+  sec_th_cat:"Category", sec_th_amt:"US$ m", sec_th_share:"Share",
+  sec_break_note:"Disbursements for the selected fiscal year, by US government sector category. Same source as the treemap (by-usg-sector.json). Programs below $0.05m are not shown.",
   mg_kicker:"Who runs it", mg_title:"Funding vs running: the implementing agencies",
   mg_lead:"The agency that owns the budget is not always the one managing the work on the ground. This view shows who actually administers US assistance in Nepal — and how, after the 2025 restructuring, implementation concentrates in MCC and the State Department.",
   cut_kicker:"The restructuring, account by account", cut_title:"What was cut, what survived (new obligations)",
@@ -526,6 +542,11 @@ const I18N = {
   sk_lead:"हरेक पट्टी भनेको रोजिएको वर्षमा अमेरिकी सरकारी निकाय (बायाँ) बाट उसको बजेट खाता (दायाँ) मा बगेको रकम हो। FY2024 र FY2026 साट्नुहोस् — धेरै नली भएको प्रणाली थोरै नलीमा खुम्चिएको देखिन्छ।",
   sec_kicker:"के किनिन्छ", sec_title:"क्षेत्रभित्र पस्दा",
   sec_lead:"\"स्वास्थ्य\" एउटै कुरा होइन। ट्रिम्यापले हरेक कोटिलाई वास्तविक कार्यक्रममा खोल्छ: मातृ-शिशु स्वास्थ्य, HIV, क्षयरोग, परिवार नियोजन, आधारभूत शिक्षा, कृषि। ब्लकमा क्लिक गरे भित्र पस्छ; माथिको ब्रेडक्रम्बले फर्काउँछ।",
+  sec_sum:"आ.व. {y}: {ncat} क्षेत्र कोटि र {nprog} कार्यक्रममा {tot} वितरण · सबैभन्दा ठूलो कोटि: {topcat} ({topshare}) · सबैभन्दा ठूलो एकल कार्यक्रम: {topprog} ({progshare})",
+  sec_sum_empty:"आ.व. {y} मा कुनै क्षेत्रगत वितरण अभिलेख छैन।",
+  sec_break_t:"कोटि अनुसार रकम कहाँ गयो",
+  sec_th_cat:"कोटि", sec_th_amt:"US$ m", sec_th_share:"हिस्सा",
+  sec_break_note:"छानिएको आर्थिक वर्षको वितरण, अमेरिकी सरकारी क्षेत्र कोटि अनुसार। ट्रिम्याप कै स्रोत (by-usg-sector.json)। $0.05m भन्दा कमका कार्यक्रम देखाइएका छैनन्।",
   mg_kicker:"कसले चलाउँछ", mg_title:"रकम दिने बनाम चलाउने निकाय",
   mg_lead:"बजेटको मालिक निकाय नै सधैँ काम चलाउने निकाय हुँदैन। यो दृश्यले नेपालमा अमेरिकी सहायता वास्तवमा कसले प्रशासन गर्छ देखाउँछ — र २०२५ को पुनर्संरचनापछि कार्यान्वयन MCC र State Department मा केन्द्रित हुँदै गएको।",
   cut_kicker:"पुनर्संरचना, खाता-खातामा", cut_title:"के काटियो, के बाँच्यो (नयाँ प्रतिबद्धता)",
@@ -1065,6 +1086,28 @@ function drawTreemap(){
       levels:[{itemStyle:{borderColor:'#fff',borderWidth:2,gapWidth:2}},
               {colorSaturation:[0.3,0.6],itemStyle:{borderColorSaturation:0.7,gapWidth:1}}],
       data}]},true);
+  drawSectorBreakdown(rows);
+}
+
+// Granular right-side detail for "Inside the sectors": a headline summary line plus a per-category
+// breakdown table, computed from the same treemap rows so the figures always match the chart.
+function drawSectorBreakdown(rows){
+  const s=DASH.sectorSummary(rows);
+  const pct=x=>(x*100).toFixed(x<0.1?1:0)+'%';
+  const sum=document.getElementById('sec-sum');
+  if(!s.total){
+    sum.textContent=t('sec_sum_empty').replace('{y}',tmYear);
+    document.querySelector('#sec-break tbody').innerHTML=
+      `<tr><td colspan="3" style="color:var(--muted)">${t('sec_sum_empty').replace('{y}',tmYear)}</td></tr>`;
+    return;
+  }
+  sum.textContent=t('sec_sum')
+    .replace('{y}',tmYear).replace('{tot}',fmt(s.total))
+    .replace('{ncat}',s.nCats).replace('{nprog}',s.nProgs)
+    .replace('{topcat}',s.topCat.name).replace('{topshare}',pct(s.topCat.share))
+    .replace('{topprog}',s.topProg.name).replace('{progshare}',pct(s.topProg.share));
+  document.querySelector('#sec-break tbody').innerHTML=s.cats.map(c=>
+    `<tr><td>${esc(c.name)}</td><td class="num">${fmt(c.v)}</td><td class="num">${pct(c.share)}</td></tr>`).join('');
 }
 
 function drawManaging(){
