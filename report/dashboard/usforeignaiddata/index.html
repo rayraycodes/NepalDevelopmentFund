@@ -329,7 +329,7 @@
         <th data-i18n="au_t_audit">Audit</th><th data-i18n="au_t_what">What was audited</th>
         <th data-i18n="au_t_period">Period</th><th class="num" data-i18n="au_t_q">Questioned</th>
         <th data-i18n="au_t_links">Status</th></tr></thead><tbody></tbody></table>
-      <div class="note" data-i18n="au_note">"Questioned" costs are amounts auditors flagged as ineligible or unsupported and recommended for review or recovery — not proven loss. ✓ means the figure was confirmed in the archived PDF text. Source: USAID Office of Inspector General (oig.usaid.gov).</div>
+      <div class="note" data-i18n="au_note">"Questioned" costs are amounts auditors flagged as ineligible or unsupported and recommended for review or recovery — not proven loss. ✓ means the figure was confirmed in the archived PDF text. "Archived ✓" means we downloaded the original audit report PDF from USAID's Office of Inspector General and stored our own copy here with a checksum, so it stays available even if the source disappears. "Original offline" means the audit record still exists at oig.usaid.gov, but its source PDF is no longer downloadable — it now lives only on USAID's offline document server, so we could not archive a verified copy. Source: USAID Office of Inspector General (oig.usaid.gov).</div>
     </div>
   </section>
 
@@ -459,7 +459,7 @@ const I18N = {
   au_lead:"The US Inspector General audits US assistance to Nepal. Across the seven Nepal audits we could trace, total questioned costs were $323,161 — about 0.016% of the $2.0bn delivered, and mostly small ineligible or unsupported items on funds managed directly by the Government of Nepal. We archived four of the audit PDFs here with checksums; the rest now live only on USAID's offline document server.",
   au_sum:"7 audits  ·  {q} in questioned costs ({pct}% of delivered aid)  ·  {arch} archived here with checksums",
   au_t_audit:"Audit", au_t_what:"What was audited", au_t_period:"Period", au_t_q:"Questioned", au_t_links:"Status",
-  au_note:"\"Questioned\" costs are amounts auditors flagged as ineligible or unsupported and recommended for review or recovery — not proven loss. ✓ means the figure was confirmed in the archived PDF text. Source: USAID Office of Inspector General (oig.usaid.gov).",
+  au_note:"\"Questioned\" costs are amounts auditors flagged as ineligible or unsupported and recommended for review or recovery — not proven loss. ✓ means the figure was confirmed in the archived PDF text. \"Archived ✓\" means we downloaded the original audit report PDF from USAID's Office of Inspector General and stored our own copy here with a checksum, so it stays available even if the source disappears. \"Original offline\" means the audit record still exists at oig.usaid.gov, but its source PDF is no longer downloadable — it now lives only on USAID's offline document server, so we could not archive a verified copy. Source: USAID Office of Inspector General (oig.usaid.gov).",
   au_clean:"Clean", au_perf:"Performance", au_archived:"Archived ✓", au_offline:"Original offline",
   gl_kicker:"The long game", gl_title:"Stated long-term goals",
   gl_lead:"What the money says it is for, from the official program documents — each card links to its source.",
@@ -591,7 +591,7 @@ const I18N = {
   au_lead:"अमेरिकी महालेखापरीक्षकले नेपाललाई अमेरिकी सहायताको लेखापरीक्षण गर्छ। हामीले पत्ता लगाएका सात नेपाल लेखापरीक्षणमा, कुल प्रश्नचिह्नित खर्च $323,161 थियो — वितरित $2.0bn को करिब ०.०१६%, र अधिकांश नेपाल सरकारले प्रत्यक्ष व्यवस्थापन गरेको रकममा साना अयोग्य वा अप्रमाणित वस्तु। हामीले चार लेखापरीक्षण PDF यहाँ चेकसमसहित अभिलेख गर्‍यौं; बाँकी अहिले USAID को बन्द दस्तावेज सर्भरमा मात्र छन्।",
   au_sum:"७ लेखापरीक्षण  ·  {q} प्रश्नचिह्नित खर्च (वितरितको {pct}%)  ·  {arch} यहाँ चेकसमसहित अभिलेख",
   au_t_audit:"लेखापरीक्षण", au_t_what:"के लेखापरीक्षण भयो", au_t_period:"अवधि", au_t_q:"प्रश्नचिह्नित", au_t_links:"स्थिति",
-  au_note:"\"प्रश्नचिह्नित\" खर्च भनेको लेखापरीक्षकले अयोग्य वा अप्रमाणित भनी औंल्याएको र समीक्षा/फिर्ताका लागि सिफारिस गरिएको रकम हो — प्रमाणित नोक्सान होइन। ✓ ले अभिलेखित PDF मा अङ्क पुष्टि भएको जनाउँछ। स्रोत: USAID महालेखापरीक्षक कार्यालय।",
+  au_note:"\"प्रश्नचिह्नित\" खर्च भनेको लेखापरीक्षकले अयोग्य वा अप्रमाणित भनी औंल्याएको र समीक्षा/फिर्ताका लागि सिफारिस गरिएको रकम हो — प्रमाणित नोक्सान होइन। ✓ ले अभिलेखित PDF मा अङ्क पुष्टि भएको जनाउँछ। \"अभिलेखित ✓\" भनेको हामीले USAID को महालेखापरीक्षक कार्यालयबाट मूल लेखापरीक्षण PDF डाउनलोड गरी चेकसमसहित आफ्नै प्रति यहाँ राखेको हो, जसले स्रोत हराए पनि उपलब्ध रहन्छ। \"मूल बन्द\" भनेको लेखापरीक्षण अभिलेख अझै oig.usaid.gov मा छ, तर यसको मूल PDF अब डाउनलोड गर्न मिल्दैन — यो अहिले USAID को बन्द दस्तावेज सर्भरमा मात्र छ, त्यसैले हामीले पुष्टि गरिएको प्रति अभिलेख गर्न सकेनौं। स्रोत: USAID महालेखापरीक्षक कार्यालय।",
   au_clean:"सफा", au_perf:"कार्यसम्पादन", au_archived:"अभिलेखित ✓", au_offline:"मूल बन्द",
   gl_kicker:"दीर्घकालीन खेल", gl_title:"घोषित दीर्घकालीन लक्ष्यहरू",
   gl_lead:"आधिकारिक कार्यक्रम दस्तावेजअनुसार यो रकम केका लागि हो — हरेक कार्ड स्रोतसँग जोडिएको छ।",
