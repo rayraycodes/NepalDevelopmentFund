@@ -130,6 +130,16 @@
   .hint{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--teal);font-weight:650;
     margin-top:10px;background:#e9f3f3;border:1px solid #b7dadd;border-radius:999px;padding:5px 12px}
   .hint::before{content:"👆";font-size:13px}
+  /* Keep the complete section list visible beside the content when there is room.
+     On narrower viewports it reverts to the compact, focus-managed drawer. */
+  @media(min-width:1180px){
+    .menu-toggle,.section-nav-close{display:none}
+    .section-nav-overlay{display:none}
+    .section-nav{top:66px;right:auto;bottom:0;width:294px;transform:none;visibility:visible;transition:none;z-index:40;border-right:1px solid var(--line);box-shadow:none;padding:18px 14px}
+    .section-nav-head{padding:0 8px 14px}
+    main{padding-left:294px}
+    body>footer{margin-left:294px}
+  }
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.drawer,.drawer-ov{transition:none}}
 </style>
 </head>
@@ -1295,6 +1305,14 @@ function drawCuts(){
 }
 
 let sectionNavOpener=null;
+const sectionNavMedia=window.matchMedia('(min-width:1180px)');
+function syncSectionNavMode(){
+  const nav=document.getElementById('section-nav'), overlay=document.getElementById('section-nav-overlay'), toggle=document.getElementById('section-nav-toggle');
+  if(sectionNavMedia.matches){
+    document.body.classList.remove('section-nav-open'); nav.classList.remove('open'); overlay.classList.remove('open');
+    nav.setAttribute('aria-hidden','false'); toggle.setAttribute('aria-expanded','false');
+  }else nav.setAttribute('aria-hidden','true');
+}
 function buildSectionNav(){
   const ne=lang==='ne', list=document.getElementById('section-nav-list');
   document.getElementById('section-nav-title').textContent=ne?'यस पृष्ठमा':'On this page';
@@ -1308,12 +1326,14 @@ function buildSectionNav(){
   });
 }
 function openSectionNav(){
+  if(sectionNavMedia.matches)return;
   sectionNavOpener=document.activeElement; document.body.classList.add('section-nav-open');
   document.getElementById('section-nav').classList.add('open'); document.getElementById('section-nav').setAttribute('aria-hidden','false');
   document.getElementById('section-nav-overlay').classList.add('open'); document.getElementById('section-nav-toggle').setAttribute('aria-expanded','true');
   document.getElementById('section-nav-close').focus();
 }
 function closeSectionNav(){
+  if(sectionNavMedia.matches)return;
   document.body.classList.remove('section-nav-open'); document.getElementById('section-nav').classList.remove('open');
   document.getElementById('section-nav').setAttribute('aria-hidden','true'); document.getElementById('section-nav-overlay').classList.remove('open');
   document.getElementById('section-nav-toggle').setAttribute('aria-expanded','false'); if(sectionNavOpener) sectionNavOpener.focus();
@@ -1322,6 +1342,8 @@ document.getElementById('section-nav-toggle').addEventListener('click',openSecti
 document.getElementById('section-nav-close').addEventListener('click',closeSectionNav);
 document.getElementById('section-nav-overlay').addEventListener('click',closeSectionNav);
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('section-nav').classList.contains('open'))closeSectionNav();});
+sectionNavMedia.addEventListener('change',syncSectionNavMode);
+syncSectionNavMode();
 function setLang(l){ lang=l; localStorage.setItem('nepal_lang',l); render(); }
 render();
 // a11y: every data-table column header gets scope="col" (re-applied after each render in case
