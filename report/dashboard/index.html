@@ -38,6 +38,8 @@
     display:grid;place-items:center;font-weight:800;color:#fff;flex:none;font-size:19px}
   .hbar h1{font-size:15px;margin:0;font-weight:650}
   .hbar .sub{font-size:12px;color:#a9bdd4;margin-top:1px}
+  .deep-link{margin-left:auto;display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;border:1px solid rgba(159,225,232,.65);border-radius:8px;color:#fff;background:rgba(14,124,134,.35);font-size:13px;font-weight:700;white-space:nowrap;text-decoration:none}
+  .deep-link:hover{background:rgba(14,124,134,.7);color:#fff;text-decoration:none}
   nav{margin-left:auto;display:flex;gap:2px;flex-wrap:wrap;align-items:center;overflow-x:auto}
   nav a{color:#dbe5f1;font-size:13px;padding:8px 10px;border-radius:7px;white-space:nowrap;min-height:44px;display:flex;align-items:center}
   nav a:hover{background:rgba(255,255,255,.08);text-decoration:none;color:#fff}
@@ -154,6 +156,7 @@
       <h1 data-i18n="site_title">Development Funding to Nepal</h1>
       <div class="sub" data-i18n="site_sub">Donor side vs recipient side · 2015–2024 · fully sourced</div>
     </div>
+    <a class="deep-link" href="usforeignaiddata/" data-i18n="nav_usdeep">US deep dive</a>
     <div class="lang" role="group" aria-label="Language">
       <button id="lang-en" aria-pressed="true" onclick="setLang('en')">EN</button>
       <button id="lang-ne" aria-pressed="false" onclick="setLang('ne')" lang="ne">नेपाली</button>
