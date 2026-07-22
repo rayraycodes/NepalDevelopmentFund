@@ -453,6 +453,10 @@ const I18N = {
   pp_machine_d:"The official Program Support category, booked centrally rather than to a sector. <span style='color:#dc2626;font-weight:700'>e.g.</span> direct administrative costs, monitoring &amp; evaluation, operating expenses. It is not redistributed because the source does not provide that split.",
   pp_headline:"Of {tot} delivered and classified, {d} ({p}) had a person as its immediate object — a meal, a clinic visit, a classroom, a water tap, a farmer's training.",
   pp_bar_t:"Of every delivered dollar, FY2015–26:",
+  pp_click:"Select a coloured share to see its official sectors and the named activity records reported within it.",
+  pp_drawer_sub:"{t} delivered and classified across FY2015–26",
+  pp_drawer_sectors:"Official categories and sectors included",
+  pp_drawer_records:"Named activity records where the source provides them. A project can appear in more than one fiscal-year or sector reporting row; this is a detailed reporting view, not a unique-award count.",
   pp_year_t:"The split, year by year", pp_cat_t:"Inside each category",
   pt_kicker:"Who receives it", pt_title:"The implementing partners",
   pt_lead:"The organisations actually awarded US money for work in Nepal: UN agencies, international NGOs, and development contractors. From the US government's award system (USASpending.gov). The largest single award — $509.5m, redacted at source because the recipient is a foreign government entity — is the MCC compact grant to Nepal, running to August 2028.",
@@ -604,6 +608,10 @@ const I18N = {
   pp_machine_d:"क्षेत्रमा नभई केन्द्रीय रूपमा राखिएको आधिकारिक Program Support कोटि। <span style='color:#dc2626;font-weight:700'>जस्तै:</span> प्रत्यक्ष प्रशासनिक खर्च, अनुगमन तथा मूल्याङ्कन, सञ्चालन खर्च। स्रोतले यस्तो विभाजन नदिएकाले यसलाई पुनःवितरण गरिएको छैन।",
   pp_headline:"वर्गीकृत {tot} वितरणमध्ये, {d} ({p}) को प्रत्यक्ष लक्ष्य व्यक्ति थियो — खाना, क्लिनिक भेट, कक्षाकोठा, पानीको धारा, किसान तालिम।",
   pp_bar_t:"वितरित हरेक डलरमध्ये, FY2015–26:",
+  pp_click:"यसमा समेटिएका आधिकारिक क्षेत्र र नाम भएका गतिविधि अभिलेख हेर्न रङ्गीन हिस्सा छान्नुहोस्।",
+  pp_drawer_sub:"FY2015–26 मा {t} वितरण र वर्गीकरण",
+  pp_drawer_sectors:"समेटिएका आधिकारिक कोटि र क्षेत्र",
+  pp_drawer_records:"स्रोतले उपलब्ध गराएका नाम भएका गतिविधि अभिलेख। एउटै परियोजना एकभन्दा बढी आर्थिक वर्ष वा क्षेत्रको पङ्क्तिमा देखिन सक्छ; यो अद्वितीय अवार्ड गणना होइन, विस्तृत रिपोर्टिङ दृश्य हो।",
   pp_year_t:"वर्ष-वर्षको विभाजन", pp_cat_t:"हरेक कोटिभित्र",
   pt_kicker:"कसले पाउँछ", pt_title:"कार्यान्वयन साझेदारहरू",
   pt_lead:"नेपालमा कामका लागि वास्तवमा अमेरिकी रकम पाउने संस्थाहरू: संयुक्त राष्ट्रका निकाय, अन्तर्राष्ट्रिय गैसस र विकास ठेकेदार। अमेरिकी सरकारकै अवार्ड प्रणाली (USASpending.gov) बाट। सबैभन्दा ठूलो एकल अवार्ड — $509.5m, प्राप्तकर्ता विदेशी सरकारी निकाय भएकाले स्रोतमै गोप्य — नेपाललाई MCC सम्झौता अनुदान हो, अगस्ट २०२८ सम्म चल्ने।",
@@ -1031,22 +1039,24 @@ function drawPeople(){
   P.byYear.forEach(r=>{tot.people+=r.people;tot.system+=r.system;tot.machine+=r.machine;});
   const grand=tot.people+tot.system+tot.machine;
   const fmtM=m=>m>=1000?'$'+(m/1000).toFixed(2)+'bn':'$'+Math.round(m)+'m';
-  // the dollar bar (plain HTML, accessible) — shows BOTH the % and the US$ amount
-  const seg=k=>`<div style="flex:${P.split[k]};background:${PP_COL[k]};color:#fff;padding:9px 8px;
-    font-weight:700;white-space:nowrap;overflow:hidden;min-width:0;text-align:center">
+  // Each coloured share is a native button, so it works with pointer, keyboard and screen reader.
+  const seg=k=>`<button type="button" class="pp-seg" data-pp-class="${k}" title="${esc(t('pp_click'))}"
+    aria-label="${esc(t('pp_'+k)+' — '+P.split[k]+'%. '+t('pp_click'))}"
+    style="flex:${P.split[k]};background:${PP_COL[k]};color:#fff;padding:9px 8px;border:0;
+    font:inherit;font-weight:700;white-space:nowrap;overflow:hidden;min-width:0;text-align:center;cursor:pointer">
     <div style="font-size:14px">${P.split[k]}%</div>
-    <div style="font-size:10.5px;font-weight:600;opacity:.95">${fmtM(tot[k])}</div></div>`;
-  const ariaSeg=k=>`${t('pp_'+k)} ${P.split[k]}% (${fmtM(tot[k])})`;
+    <div style="font-size:10.5px;font-weight:600;opacity:.95">${fmtM(tot[k])}</div></button>`;
   document.getElementById('pp-bar').innerHTML=
     `<div style="font-weight:650;margin-bottom:8px">${t('pp_bar_t')}</div>
-     <div role="img" aria-label="${ariaSeg('people')}, ${ariaSeg('system')}, ${ariaSeg('machine')}"
-       style="display:flex;border-radius:8px;overflow:hidden">${seg('people')}${seg('system')}${seg('machine')}</div>
+     <div style="display:flex;border-radius:8px;overflow:hidden">${seg('people')}${seg('system')}${seg('machine')}</div>
      <div style="display:flex;gap:16px;margin-top:9px;font-size:12.5px;flex-wrap:wrap">
        <span><span style="color:${PP_COL.people}">●</span> ${t('pp_people')} — <b>${P.split.people}%</b> · <b>${fmtM(tot.people)}</b></span>
        <span><span style="color:${PP_COL.system}">●</span> ${t('pp_system')} — <b>${P.split.system}%</b> · <b>${fmtM(tot.system)}</b></span>
        <span><span style="color:${PP_COL.machine}">●</span> ${t('pp_machine')} — <b>${P.split.machine}%</b> · <b>${fmtM(tot.machine)}</b></span></div>
+     <div style="margin-top:7px;font-size:12px;color:var(--muted)">${t('pp_click')}</div>
      <div style="margin-top:11px;font-size:14.5px;line-height:1.5;background:#f4f6f9;border:1px solid var(--line);border-radius:10px;padding:11px 14px">
        ${t('pp_headline').replace('{d}','<b style="color:'+PP_COL.people+'">'+fmtM(tot.people)+'</b>').replace('{p}','<b>'+P.split.people+'%</b>').replace('{tot}','<b>'+fmtM(grand)+'</b>')}</div>`;
+  document.querySelectorAll('#pp-bar .pp-seg').forEach(b=>b.onclick=()=>drillPeopleClass(b.dataset.ppClass));
   // year shares (100% stacked)
   aria('c-ppyear', t('pp_year_t'));
   const ys=P.byYear;
@@ -1076,6 +1086,33 @@ function drawPeople(){
     `<tr><td>${r.cat}</td><td>${r.sec}</td>
      <td><span class="pill" style="background:${PP_COL[r.cls]}1a;color:${PP_COL[r.cls]}">${t('pp_'+r.cls)}</span></td>
      <td class="num">$${r.di.toFixed(1)}</td></tr>`).join('');
+}
+
+// Roll the official sector map up to one of the three plain-language classifications.
+// The classification total remains anchored to the aggregate data; activity records
+// provide the available named detail, rather than pretending to be a unique-award total.
+function drillPeopleClass(cls){
+  const P=D.people;
+  const included=P.classmap.filter(r=>r.cls===cls).sort((a,b)=>b.di-a.di);
+  const total=included.reduce((s,r)=>s+r.di,0);
+  const title=t('pp_'+cls);
+  const meta=`<div class="note" style="margin:0 0 10px;line-height:1.5">${t('pp_'+cls+'_d')}</div>
+    <div style="border:1px solid var(--line);border-radius:10px;padding:9px 11px;margin:0 0 10px">
+      <b style="font-size:12px">${t('pp_drawer_sectors')}</b>
+      <div style="margin-top:6px">${included.map(r=>`<div style="display:flex;gap:10px;justify-content:space-between;padding:5px 0;border-top:1px solid #eef1f6;font-size:12px"><span>${esc(r.cat)} · ${esc(r.sec)}</span><b style="white-space:nowrap">${fmt(r.di)}</b></div>`).join('')}</div>
+    </div>`;
+  const open=()=>{
+    const acts=[];
+    const years=((window.US_SECTOR_ACTS||{}).y||{});
+    Object.entries(years).forEach(([year,groups])=>included.forEach(r=>{
+      (groups[r.cat+'|'+r.sec]||[]).forEach(x=>acts.push({...x,sec:`FY${year} · ${r.cat} · ${r.sec}`}));
+    }));
+    openDrawer(title, t('pp_drawer_sub').replace('{t}',fmt(total)), actRows(acts,true),
+      meta+actSrcNote(t('pp_drawer_records')));
+  };
+  if(window.US_SECTOR_ACTS){open(); return;}
+  openDrawer(title, t('dr_act_load'), [], meta);
+  withActs(ok=>{if(ok) open();});
 }
 
 function drawPartners(){
