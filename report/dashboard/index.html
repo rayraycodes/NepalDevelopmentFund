@@ -32,8 +32,6 @@
   header{position:sticky;top:0;z-index:50;background:rgba(13,36,64,.97);
     backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
   .hbar{display:flex;align-items:center;gap:14px;padding:11px 0;color:#fff;flex-wrap:wrap}
-  .menu-toggle{display:grid;place-items:center;width:44px;height:44px;padding:0;border:1px solid rgba(255,255,255,.28);border-radius:9px;background:transparent;color:#fff;cursor:pointer;font-size:22px;line-height:1;flex:none}
-  .menu-toggle:hover{background:rgba(255,255,255,.10)}
   .logo{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,var(--teal),#37b3bd);
     display:grid;place-items:center;font-weight:800;color:#fff;flex:none;font-size:19px}
   .hbar h1{font-size:15px;margin:0;font-weight:650}
@@ -122,29 +120,12 @@
   .disclaim{background:#fff;border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:10px;padding:13px 16px;font-size:13.5px;color:#3a4a5c;margin-top:14px}
   footer{margin-top:36px;padding:24px 0 48px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
   .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-  .section-nav-overlay{position:fixed;inset:0;background:rgba(13,36,64,.45);opacity:0;pointer-events:none;transition:opacity .2s;z-index:100}
-  .section-nav-overlay.open{opacity:1;pointer-events:auto}
-  .section-nav{position:fixed;inset:0 auto 0 0;width:min(360px,92vw);background:#fff;box-shadow:8px 0 30px rgba(16,29,46,.22);transform:translateX(-101%);visibility:hidden;transition:transform .22s,visibility 0s linear .22s;z-index:101;padding:18px;overflow-y:auto}
-  .section-nav.open{transform:none;visibility:visible;transition:transform .22s}.section-nav-head{display:flex;align-items:center;justify-content:space-between;gap:14px;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:10px}
-  .section-nav-head h2{font-size:18px;margin:0;text-align:left}.section-nav-close{width:44px;height:44px;border:1px solid var(--line);border-radius:9px;background:#eef1f6;color:var(--ink);font-size:22px;cursor:pointer;flex:none}
-  .section-nav-list{display:grid;gap:2px}.section-nav-list a{display:block;color:var(--ink);font-size:14px;font-weight:600;line-height:1.35;padding:11px 10px;border-radius:8px;text-decoration:none}.section-nav-list a:hover{background:#e9f3f3;color:var(--teal);text-decoration:none}
-  body.section-nav-open{overflow:hidden}
 
   @media(max-width:880px){
     .kpis{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}
     .explain{grid-template-columns:1fr}.tallies{grid-template-columns:1fr}.hero h2{font-size:23px}
     .hbar{gap:10px}.hbar .sub{display:none}nav{width:100%;margin-left:0;order:3;padding-bottom:4px}
     .chart{height:340px}.chart.sm{height:320px}
-  }
-  /* Keep the complete section list visible beside the content when there is room.
-     On narrower viewports it reverts to the compact, focus-managed drawer. */
-  @media(min-width:1180px){
-    .menu-toggle,.section-nav-close{display:none}
-    .section-nav-overlay{display:none}
-    .section-nav{top:66px;right:auto;bottom:0;width:294px;transform:none;visibility:visible;transition:none;z-index:40;border-right:1px solid var(--line);box-shadow:none;padding:18px 14px}
-    .section-nav-head{padding:0 8px 14px}
-    main{padding-left:294px}
-    body>footer{margin-left:294px}
   }
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -153,7 +134,6 @@
 <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
 <header>
   <div class="wrap hbar">
-    <button class="menu-toggle" id="section-nav-toggle" type="button" aria-expanded="false" aria-controls="section-nav" aria-label="Open sections">☰</button>
     <div class="logo" aria-hidden="true">अ</div>
     <div>
       <h1 data-i18n="site_title">Development Funding to Nepal</h1>
@@ -166,11 +146,6 @@
     </div>
   </div>
 </header>
-<div class="section-nav-overlay" id="section-nav-overlay" aria-hidden="true"></div>
-<aside class="section-nav" id="section-nav" aria-label="Page sections" aria-hidden="true">
-  <div class="section-nav-head"><h2 id="section-nav-title">On this page</h2><button class="section-nav-close" id="section-nav-close" type="button" aria-label="Close sections">×</button></div>
-  <nav class="section-nav-list" id="section-nav-list" aria-label="Page sections"></nav>
-</aside>
 
 <main id="main">
 <div class="hero">
@@ -276,9 +251,9 @@
 
   <section id="gaps">
     <div class="kicker" data-i18n="gaps_kicker">Honesty about the numbers</div>
-    <h3 data-i18n="gaps_title">Why the two sides differ</h3>
-    <p class="lead" data-i18n="gaps_lead">Red bars are years Nepal reports receiving more than donors report giving. Below, every notable mismatch is listed with the most likely reason. None of these are errors to hide; they are the honest result of two systems counting differently.</p>
-    <div class="card"><div id="c-gap" class="chart sm" role="img"></div></div>
+    <h3 data-i18n="gaps_title">How and why the two ledgers differ</h3>
+    <p class="lead" data-i18n="gaps_lead">This is a comparison of two reporting systems, not a scorecard of which side is right. The donor ledger is OECD net ODA by calendar year; Nepal’s recipient ledger is gross disbursements by Nepal fiscal year and includes funders outside OECD reporting. The chart simply shows their difference; the table explains the accounting and coverage reasons behind it.</p>
+    <div class="card"><div id="c-gap" class="chart sm" role="img"></div><div class="note" data-i18n="gaps_method">Compare like with like where possible: use the chart to identify a gap, then use the table to see the different definitions, time periods, and coverage before drawing a conclusion.</div></div>
     <div class="card" style="margin-top:16px;overflow-x:auto">
       <table id="disc"><thead><tr>
         <th data-i18n="th_id">ID</th><th data-i18n="th_comp">What is compared</th>
@@ -379,8 +354,9 @@ const I18N = {
   gb_loading:"Loading Nepal's ledger (1.6 MB)…",
   gb_err:"The ledger could not load. Please check your connection and refresh.",
   gb_note:"Amounts in US dollars as converted by DFIMS itself (MOF cautions that its USD expenditure conversion is approximate). A dash (—) means MOF reported no figure — which is different from zero. Project and partner names appear exactly as recorded by MOF.",
-  gaps_kicker:"Honesty about the numbers",gaps_title:"Why the two sides differ",
-  gaps_lead:"Red bars are years Nepal reports receiving more than donors report giving. Below, every notable mismatch is listed with the most likely reason. None of these are errors to hide; they are the honest result of two systems counting differently.",
+  gaps_kicker:"How to compare the numbers",gaps_title:"How and why the two ledgers differ",
+  gaps_lead:"This is a comparison of two reporting systems, not a scorecard of which side is right. The donor ledger is OECD net ODA by calendar year; Nepal’s recipient ledger is gross disbursements by Nepal fiscal year and includes funders outside OECD reporting. The chart simply shows their difference; the table explains the accounting and coverage reasons behind it.",
+  gaps_method:"Compare like with like where possible: use the chart to identify a gap, then use the table to see the different definitions, time periods, and coverage before drawing a conclusion.",
   nondac_lead:"Donors the international system misses entirely (seen only on Nepal's side):",
   dl_recon:"⬇ Download CSV — year totals",dl_disc:"⬇ Download CSV — mismatch list",
   sources_kicker:"Where this comes from",sources_title:"Sources",
@@ -454,7 +430,9 @@ const I18N = {
   gb_err:"खाता लोड हुन सकेन। इन्टरनेट जाँचेर पुनः लोड गर्नुहोस्।",
   gb_note:"रकम अमेरिकी डलरमा, DFIMS ले नै रूपान्तरण गरेअनुसार (अर्थ मन्त्रालय आफैं भन्छ: डलरमा खर्चको रूपान्तरण अनुमानित हुन सक्छ)। ड्यास (—) को अर्थ अर्थ मन्त्रालयले अङ्क रिपोर्ट गरेन भन्ने हो — शून्य होइन। परियोजना र साझेदारका नाम अभिलेखमा भएकै रूपमा राखिएका छन्।",
   gaps_kicker:"अङ्कप्रति इमानदारी",gaps_title:"दुई पक्ष किन फरक हुन्छन्",
-  gaps_lead:"रातो स्तम्भ ती वर्ष हुन् जब नेपालले दाताले दिएभन्दा बढी पाएको रिपोर्ट गर्छ। तल, हरेक उल्लेखनीय भिन्नता सम्भावित कारणसहित सूचीबद्ध छ। यी लुकाउनुपर्ने त्रुटि होइनन्; दुई प्रणालीले फरक गणना गर्दाको इमानदार परिणाम हुन्।",
+  gaps_kicker:"अङ्क कसरी तुलना गर्ने",gaps_title:"दुई खाताबीच कसरी र किन फरक पर्छ",
+  gaps_lead:"यो दुई प्रतिवेदन प्रणालीको तुलना हो, कुन पक्ष सही भन्ने मूल्याङ्कन होइन। दाता खाता पात्रो वर्षको OECD खुद ODA हो; नेपालको प्राप्तकर्ता खाता नेपालको आर्थिक वर्षको कुल वितरण हो र OECD मा रिपोर्ट नहुने दातालाई पनि समेट्छ। चार्टले फरक मात्र देखाउँछ; तलको तालिकाले लेखा-विधि र समेटाइका कारण बुझाउँछ।",
+  gaps_method:"सम्भव भएसम्म उस्तै परिभाषाका अङ्क तुलना गर्नुहोस्: चार्टबाट फरक देख्नुहोस्, त्यसपछि निष्कर्ष निकाल्नुअघि तालिकामा परिभाषा, अवधि र समेटाइको भिन्नता जाँच्नुहोस्।",
   nondac_lead:"अन्तर्राष्ट्रिय प्रणालीले पूरै छुटाउने दाताहरू (नेपालको पक्षमा मात्र देखिने):",
   dl_recon:"⬇ CSV डाउनलोड — वार्षिक कुल",dl_disc:"⬇ CSV डाउनलोड — भिन्नता सूची",
   sources_kicker:"यो कहाँबाट आयो",sources_title:"स्रोतहरू",
@@ -601,7 +579,6 @@ function render(){
   const m=D.meta;
   document.querySelectorAll('[data-i18n]').forEach(el=>el.innerHTML=
     t(el.dataset.i18n).replace(/\{n\}/g,locNum(m.n_sources)).replace(/\{d\}/g,fmtDate(m.retrieved_at)));
-  buildSectionNav();
 
   // badges
   document.getElementById('badges').innerHTML=[
@@ -743,7 +720,7 @@ function drawAgency(){
     tooltip:{trigger:'axis',valueFormatter:fmt},legend:{top:6,type:'scroll'},
     xAxis:{type:'category',data:ua.years},
     yAxis:{type:'value',name:t('ch_usdm'),splitLine:{lineStyle:{color:C.grid}}},
-    series:ua.series.map((x,i)=>({name:x.name==='Other'?t('agency_other'):x.name,type:'bar',stack:'us',
+    series:ua.series.map((x,i)=>({name:x.name,type:'bar',stack:'us',
       data:x.data,itemStyle:{color:pal[i%pal.length]}}))},true);
 }
 function drawGap(){
@@ -918,46 +895,6 @@ const NE_CAUSE={
  D7:"यी शृङ्खलाले फरक अवधारणा र अवधि मापन गर्छन्: AidData ले प्रतिबद्धता र नेपालको DCR ले वितरण अभिलेख गर्छ। यीलाई वितरण-दरको गणनाका रूपमा नभई सन्दर्भका लागि सँगसँगै प्रस्तुत गरिएको हो।",
  D8:"भारत गैर-DAC दाता हो र OECD CRS मा रिपोर्ट गर्दैन; प्राप्तकर्ता पक्षले मात्र समेट्छ।"};
 
-let sectionNavOpener=null;
-const sectionNavMedia=window.matchMedia('(min-width:1180px)');
-function syncSectionNavMode(){
-  const nav=document.getElementById('section-nav'), overlay=document.getElementById('section-nav-overlay'), toggle=document.getElementById('section-nav-toggle');
-  if(sectionNavMedia.matches){
-    document.body.classList.remove('section-nav-open'); nav.classList.remove('open'); overlay.classList.remove('open');
-    nav.setAttribute('aria-hidden','false'); toggle.setAttribute('aria-expanded','false');
-  }else nav.setAttribute('aria-hidden','true');
-}
-function buildSectionNav(){
-  const ne=lang==='ne', list=document.getElementById('section-nav-list');
-  document.getElementById('section-nav-title').textContent=ne?'यस पृष्ठमा':'On this page';
-  document.getElementById('section-nav-toggle').setAttribute('aria-label',ne?'खण्डहरू खोल्नुहोस्':'Open sections');
-  document.getElementById('section-nav-close').setAttribute('aria-label',ne?'खण्डहरू बन्द गर्नुहोस्':'Close sections');
-  list.replaceChildren();
-  document.querySelectorAll('main section[id]').forEach(section=>{
-    const heading=section.querySelector('h3'); if(!heading) return;
-    const link=document.createElement('a'); link.href='#'+section.id; link.textContent=heading.textContent;
-    link.addEventListener('click',closeSectionNav); list.append(link);
-  });
-}
-function openSectionNav(){
-  if(sectionNavMedia.matches)return;
-  sectionNavOpener=document.activeElement; document.body.classList.add('section-nav-open');
-  document.getElementById('section-nav').classList.add('open'); document.getElementById('section-nav').setAttribute('aria-hidden','false');
-  document.getElementById('section-nav-overlay').classList.add('open'); document.getElementById('section-nav-toggle').setAttribute('aria-expanded','true');
-  document.getElementById('section-nav-close').focus();
-}
-function closeSectionNav(){
-  if(sectionNavMedia.matches)return;
-  document.body.classList.remove('section-nav-open'); document.getElementById('section-nav').classList.remove('open');
-  document.getElementById('section-nav').setAttribute('aria-hidden','true'); document.getElementById('section-nav-overlay').classList.remove('open');
-  document.getElementById('section-nav-toggle').setAttribute('aria-expanded','false'); if(sectionNavOpener) sectionNavOpener.focus();
-}
-document.getElementById('section-nav-toggle').addEventListener('click',openSectionNav);
-document.getElementById('section-nav-close').addEventListener('click',closeSectionNav);
-document.getElementById('section-nav-overlay').addEventListener('click',closeSectionNav);
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('section-nav').classList.contains('open'))closeSectionNav();});
-sectionNavMedia.addEventListener('change',syncSectionNavMode);
-syncSectionNavMode();
 function setLang(l){ lang=l; localStorage.setItem('nepal_lang',l); render(); }
 render();
 // a11y: every data-table column header gets scope="col" (the tables are static markup)
