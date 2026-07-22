@@ -290,7 +290,7 @@
     <div class="card" id="ledger-sum" style="font-weight:650;font-size:15px"></div>
     <p class="hint" data-i18n="lg_hint">Tip: click a recipient to see its sub-grants.</p>
     <div class="card" style="margin-top:16px"><div id="c-cohorts" class="chart sm" role="img"></div>
-      <div class="note" data-i18n="lg_cohort_note">Number of awards whose period of performance overlaps each US fiscal year.</div></div>
+      <div class="note" data-i18n="lg_cohort_note">Number of awards whose period of performance overlaps each US fiscal year. <span style="color:#0e7c86;font-weight:700">●</span> Teal is FY2015–24; <span style="color:#b45309;font-weight:700">●</span> amber is FY2025 onward, after the restructuring. The colours distinguish time periods, not whether awards were cancelled.</div></div>
     <div class="controls" style="margin-top:16px">
       <label for="lgStatus" data-i18n="lg_f_status">Status</label><select id="lgStatus"></select>
       <label for="lgSearch" data-i18n="lg_f_search">Search</label>
@@ -474,7 +474,7 @@ const I18N = {
   lg_kicker:"Every project, triaged", lg_title:"The full project ledger",
   lg_lead:"Every individual US award implemented in Nepal since FY2015 — all 2,609 of them — grouped by its recorded period of performance. “Period ended in 2025–26” is an amber timing label, not a cancellation finding: public award data does not distinguish natural completions from early terminations. The separate IATI check identifies only six activities formally marked cancelled or suspended.",
   lg_sum:"{total} awards · completed before 2025: {comp} (${compm}m) · period ended in 2025–26: {e26} (${e26m}m) · still active: {act} (${actm}m)",
-  lg_cohort_note:"Number of awards whose period of performance overlaps each US fiscal year.",
+  lg_cohort_note:"Number of awards whose period of performance overlaps each US fiscal year. <span style='color:#0e7c86;font-weight:700'>●</span> Teal is FY2015–24; <span style='color:#b45309;font-weight:700'>●</span> amber is FY2025 onward, after the restructuring. The colours distinguish time periods, not whether awards were cancelled.",
   lg_f_status:"Status", lg_f_search:"Search",
   lg_t_status:"Status", lg_all:"All statuses",
   lg_s_active:"Active", lg_s_completed:"Completed", lg_s_ended_2526:"Period ended in 2025–26", lg_s_undated:"Undated",
@@ -633,7 +633,7 @@ const I18N = {
   lg_kicker:"हरेक परियोजना, वर्गीकृत", lg_title:"पूर्ण परियोजना खाता",
   lg_lead:"FY2015 देखि नेपालमा कार्यान्वयन भएका हरेक अमेरिकी अवार्ड — सबै २,६०९ — अभिलेखित कार्य-अवधिअनुसार समूहबद्ध छन्। “२०२५–२६ मा अवधि सकिएको” एम्बर रङको समयसम्बन्धी लेबल हो, रद्द भएको निष्कर्ष होइन: सार्वजनिक अवार्ड तथ्याङ्कले स्वाभाविक समापन र अग्रिम रद्द छुट्याउँदैन। छुट्टै IATI जाँचले जम्मा छ वटा गतिविधि औपचारिक रूपमा रद्द वा निलम्बित देखाउँछ।",
   lg_sum:"{total} अवार्ड · २०२५ अघि सम्पन्न: {comp} (${compm}m) · २०२५–२६ मा अवधि सकिएको: {e26} (${e26m}m) · हाल चालु: {act} (${actm}m)",
-  lg_cohort_note:"हरेक अमेरिकी आर्थिक वर्षसँग अवधि जुध्ने अवार्डको सङ्ख्या।",
+  lg_cohort_note:"हरेक अमेरिकी आर्थिक वर्षसँग अवधि जुध्ने अवार्डको सङ्ख्या। <span style='color:#0e7c86;font-weight:700'>●</span> हरियो-निलो FY2015–24 हो; <span style='color:#b45309;font-weight:700'>●</span> एम्बर पुनर्संरचनापछिको FY2025 देखि हो। रङले समयावधि छुट्याउँछ, अवार्ड रद्द भएको जनाउँदैन।",
   lg_f_status:"स्थिति", lg_f_search:"खोज्नुहोस्",
   lg_t_status:"स्थिति", lg_all:"सबै स्थिति",
   lg_s_active:"चालु", lg_s_completed:"सम्पन्न", lg_s_ended_2526:"२०२५–२६ मा अवधि सकिएको", lg_s_undated:"मिति नभएको",
@@ -952,7 +952,7 @@ function drawLedger(){
     xAxis:{type:'category',data:P.cohorts.map(c=>c.fy)},
     yAxis:{type:'value',splitLine:{lineStyle:{color:'#eef1f6'}}},
     series:[{type:'bar',data:P.cohorts.map(c=>({value:c.n,
-      itemStyle:{color:c.fy>=2025?'#dc2626':'#0e7c86',borderRadius:[3,3,0,0]}}))}]},true);
+      itemStyle:{color:c.fy>=2025?'#b45309':'#0e7c86',borderRadius:[3,3,0,0]}}))}]},true);
 
   // status filter options (rebuilt for language)
   const sel=document.getElementById('lgStatus');
