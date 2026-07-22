@@ -85,18 +85,13 @@ def main():
         ag["year"] = num(ag["year"])
         years = list(range(2018, 2027))
         totals = ag.groupby("agency_acronym")["amount_usd"].sum().sort_values(ascending=False)
-        top = list(totals.index[:5])
         disp = {"USAID": "USAID", "STATE": "State", "MCC": "MCC", "AGR": "USDA",
                 "PC": "Peace Corps", "State/USAID": "State/USAID", "DOD": "Defense"}
         series = []
-        for ac in top:
+        for ac in totals.index:
             byyr = ag[ag["agency_acronym"] == ac].groupby("year")["amount_usd"].sum()
             series.append({"name": disp.get(ac, ac),
                            "data": [round(float(byyr.get(y, 0)) / 1e6, 1) for y in years]})
-        oth = ag[~ag["agency_acronym"].isin(top)].groupby("year")["amount_usd"].sum()
-        if float(oth.sum()) > 0:
-            series.append({"name": "Other",
-                           "data": [round(float(oth.get(y, 0)) / 1e6, 1) for y in years]})
         us_agency = {"years": years, "series": series}
 
     # KPIs — DERIVED from the data (never hardcoded) so they cannot silently drift.

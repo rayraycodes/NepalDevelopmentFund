@@ -32,8 +32,6 @@
   header{position:sticky;top:0;z-index:50;background:rgba(13,36,64,.97);backdrop-filter:blur(8px);
     border-bottom:1px solid rgba(255,255,255,.08)}
   .hbar{display:flex;align-items:center;gap:12px;padding:11px 0;color:#fff;flex-wrap:wrap}
-  .menu-toggle{display:grid;place-items:center;width:44px;height:44px;padding:0;border:1px solid rgba(255,255,255,.28);border-radius:9px;background:transparent;color:#fff;cursor:pointer;font-size:22px;line-height:1;flex:none}
-  .menu-toggle:hover{background:rgba(255,255,255,.10)}
   .logo{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,#b91c1c,#1d4ed8);
     display:grid;place-items:center;font-weight:800;color:#fff;flex:none}
   .hbar h1{font-size:15px;margin:0;font-weight:650}
@@ -120,26 +118,9 @@
   .drawer-body td{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px;vertical-align:top}
   /* Drill chips inside the drawer: compact, wrap long org names, keep the teal "tappable" look. */
   .drawer-body .drill{font-size:12.5px;padding:3px 8px;margin:1px 0;text-align:left;white-space:normal;max-width:100%}
-  .section-nav-overlay{position:fixed;inset:0;background:rgba(13,36,64,.45);opacity:0;pointer-events:none;transition:opacity .2s;z-index:100}
-  .section-nav-overlay.open{opacity:1;pointer-events:auto}
-  .section-nav{position:fixed;inset:0 auto 0 0;width:min(360px,92vw);background:#fff;box-shadow:8px 0 30px rgba(16,29,46,.22);transform:translateX(-101%);visibility:hidden;transition:transform .22s,visibility 0s linear .22s;z-index:102;padding:18px;overflow-y:auto}
-  .section-nav.open{transform:none;visibility:visible;transition:transform .22s}.section-nav-head{display:flex;align-items:center;justify-content:space-between;gap:14px;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:10px}
-  .section-nav-head h2{font-size:18px;margin:0;text-align:left}.section-nav-close{width:44px;height:44px;border:1px solid var(--line);border-radius:9px;background:#eef1f6;color:var(--ink);font-size:22px;cursor:pointer;flex:none}
-  .section-nav-list{display:grid;gap:2px}.section-nav-list a{display:block;color:var(--ink);font-size:14px;font-weight:600;line-height:1.35;padding:11px 10px;border-radius:8px;text-decoration:none}.section-nav-list a:hover{background:#e9f3f3;color:var(--teal);text-decoration:none}
-  body.section-nav-open{overflow:hidden}
   .hint{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--teal);font-weight:650;
     margin-top:10px;background:#e9f3f3;border:1px solid #b7dadd;border-radius:999px;padding:5px 12px}
   .hint::before{content:"👆";font-size:13px}
-  /* Keep the complete section list visible beside the content when there is room.
-     On narrower viewports it reverts to the compact, focus-managed drawer. */
-  @media(min-width:1180px){
-    .menu-toggle,.section-nav-close{display:none}
-    .section-nav-overlay{display:none}
-    .section-nav{top:66px;right:auto;bottom:0;width:294px;transform:none;visibility:visible;transition:none;z-index:40;border-right:1px solid var(--line);box-shadow:none;padding:18px 14px}
-    .section-nav-head{padding:0 8px 14px}
-    main{padding-left:294px}
-    body>footer{margin-left:294px}
-  }
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.drawer,.drawer-ov{transition:none}}
 </style>
 </head>
@@ -147,7 +128,6 @@
 <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
 <header>
   <div class="wrap hbar">
-    <button class="menu-toggle" id="section-nav-toggle" type="button" aria-expanded="false" aria-controls="section-nav" aria-label="Open sections">☰</button>
     <div class="logo" aria-hidden="true">US</div>
     <div>
       <h1 data-i18n="title">US Foreign Aid to Nepal — Deep Dive</h1>
@@ -160,11 +140,6 @@
     </div>
   </div>
 </header>
-<div class="section-nav-overlay" id="section-nav-overlay" aria-hidden="true"></div>
-<aside class="section-nav" id="section-nav" aria-label="Page sections" aria-hidden="true">
-  <div class="section-nav-head"><h2 id="section-nav-title">On this page</h2><button class="section-nav-close" id="section-nav-close" type="button" aria-label="Close sections">×</button></div>
-  <nav class="section-nav-list" id="section-nav-list" aria-label="Page sections"></nav>
-</aside>
 
 <main id="main">
 <div class="hero">
@@ -195,27 +170,27 @@
   <section id="funnel">
     <div class="kicker" data-i18n="fn_kicker">Follow the money to its purpose</div>
     <h3 data-i18n="fn_title">The funnel: promised → delivered → purpose</h3>
-    <p class="lead" data-i18n="fn_lead">Three gates. First: how much of what was promised actually arrived. Second: of the money that arrived, how much went to the stated purpose — health, education, agriculture — and how much to running the machine. Mature accounts deliver 84–100% of what they promise. But of every delivered dollar, about 18 cents went to explicitly administrative and support lines — and that is only the visible overhead; what partners spend on their own administration inside program awards is not published anywhere.</p>
+    <p class="lead" data-i18n="fn_lead">Three gates. First: how much of what was promised actually arrived. Second: how the US government classified delivered funds by purpose. “Program Support” is one official category reported centrally; the source does not assign it back to Health, Education, Agriculture, or other categories, so this page does not invent that allocation.</p>
     <div class="card" id="funnel-sum" style="font-weight:650;font-size:15px"></div>
     <div class="grid2" style="margin-top:16px">
       <div class="card"><div id="c-funnel" class="chart tall" role="img"></div>
         <div class="note" data-i18n="fn_note1">Cumulative FY2015–FY2026. Rates above 100% mean disbursements drew on promises made before FY2015. MCC's low rate is timing, not failure: the compact disburses until August 2028.</div></div>
       <div class="card"><div id="c-purpose" class="chart tall" role="img"></div>
-        <div class="note" data-i18n="fn_note2">"Program Support" (red) bundles operating expenses, administration and oversight, and program design/evaluation — as classified by the US government itself.</div></div>
+        <div class="note" data-i18n="fn_note2">“Program Support” (red) is the same centrally reported support category used elsewhere on this page. It includes operating expenses, administration and oversight, and program design/evaluation. The official source does not allocate it across other sectors.</div></div>
     </div>
   </section>
 
   <section id="people">
     <div class="kicker" data-i18n="pp_kicker">People vs the system</div>
-    <h3 data-i18n="pp_title">How much reached people, and how much ran the machinery</h3>
-    <p class="lead" data-i18n="pp_lead">Every delivered dollar, sorted three ways using the US government's own sector labels: money whose immediate object is a person (a meal, a clinic visit, a classroom, a water tap, a farmer's training) — money that builds the systems around people (courts, grids, roads, ministries, markets, disease surveillance) — and money that runs the aid machine itself. The classification is ours, it is published in full below, and reasonable people can move lines: building a health system is not waste, it is how care continues after the project ends.</p>
+    <h3 data-i18n="pp_title">How funds were classified: people, systems and centrally reported support</h3>
+    <p class="lead" data-i18n="pp_lead">Every delivered dollar is grouped using the US government’s sector labels: direct services to people, systems and infrastructure around people, and the single official category “Program Support.” The first two groupings are this project’s transparent interpretation; Program Support is kept intact because the source reports it centrally rather than assigning it to individual sectors.</p>
     <div class="explain" id="pp-defs" style="margin-bottom:16px"></div>
     <div class="card"><div id="pp-bar"></div></div>
     <div class="grid2" style="margin-top:16px">
       <div class="card"><div id="c-ppyear" class="chart sm" role="img"></div>
-        <div class="note" data-i18n="pp_note1">Share of delivered money per fiscal year. FY2026 is partial — note the machine's share when programs stop but operations continue.</div></div>
+        <div class="note" data-i18n="pp_note1">Share of delivered money per fiscal year. FY2026 is partial.</div></div>
       <div class="card"><div id="c-ppcat" class="chart sm" role="img"></div>
-        <div class="note" data-i18n="pp_note2">Inside each sector category. All operational cost is booked centrally under "Program Support" — the US system does not attribute admin to sectors, which is itself worth knowing.</div></div>
+        <div class="note" data-i18n="pp_note2">Program Support remains its own official category. The source does not attribute it to individual sectors, so it is not redistributed here.</div></div>
     </div>
     <details class="gloss" style="margin-top:16px">
       <summary data-i18n="pp_map_t">The full classification, sector by sector (contestable by design)</summary>
@@ -265,7 +240,7 @@
   <section id="managing">
     <div class="kicker" data-i18n="mg_kicker">Who runs it</div>
     <h3 data-i18n="mg_title">Funding vs running: the implementing agencies</h3>
-    <p class="lead" data-i18n="mg_lead">The agency that owns the budget is not always the one managing the work on the ground. This view shows who actually administers US assistance in Nepal — and how, after the 2025 restructuring, implementation concentrates in MCC and the State Department.</p>
+    <p class="lead" data-i18n="mg_lead">The agency that owns the budget is not always the one managing the work on the ground. This view shows every named managing agency in the official data—there is no “Other” bucket—and how implementation changes after 2025.</p>
     <div class="card"><div class="scrollwrap"><div id="c-managing" class="chart sm" role="img"></div></div></div>
   </section>
 
@@ -310,7 +285,7 @@
   <section id="ledger">
     <div class="kicker" data-i18n="lg_kicker">Every project, triaged</div>
     <h3 data-i18n="lg_title">The full project ledger</h3>
-    <p class="lead" data-i18n="lg_lead">Every individual US award implemented in Nepal since FY2015 — all 2,609 of them — triaged by where they stand today. "Ended 2025–26" means the award's period ended inside the restructuring window: that bucket mixes natural completions with early terminations, because the public data does not say which is which. The cross-check from the IATI transparency feeds shows only 6 US activities formally marked cancelled or suspended — official status reporting clearly lags reality.</p>
+    <p class="lead" data-i18n="lg_lead">Every individual US award implemented in Nepal since FY2015 — all 2,609 of them — grouped by its recorded period of performance. “Period ended in 2025–26” is an amber timing label, not a cancellation finding: public award data does not distinguish natural completions from early terminations. The separate IATI check identifies only six activities formally marked cancelled or suspended.</p>
     <div class="card" id="ledger-sum" style="font-weight:650;font-size:15px"></div>
     <p class="hint" data-i18n="lg_hint">Tip: click a recipient to see its sub-grants.</p>
     <div class="card" style="margin-top:16px"><div id="c-cohorts" class="chart sm" role="img"></div>
@@ -451,7 +426,7 @@ const I18N = {
   dr_act_src:"Source: activity-level rows from the same ForeignAssistance.gov data service as the treemap (Data Query, disbursements) — the same money, itemised. Names and descriptions are official records; \"Redacted\" entries are redacted at source.",
   dr_act_end:"Runs until {d}",
   mg_kicker:"Who runs it", mg_title:"Funding vs running: the implementing agencies",
-  mg_lead:"The agency that owns the budget is not always the one managing the work on the ground. This view shows who actually administers US assistance in Nepal — and how, after the 2025 restructuring, implementation concentrates in MCC and the State Department.",
+  mg_lead:"The agency that owns the budget is not always the one managing the work on the ground. This view shows every named managing agency in the official data—there is no “Other” bucket—and how implementation changes after 2025.",
   cut_kicker:"The restructuring, account by account", cut_title:"What was cut, what survived (new obligations)",
   cut_lead:"New promises by account, before and after the 2025 restructuring. Red zeros are channels that stopped receiving new money. Disbursements from earlier promises can continue for a while even where new obligations stop.",
   cut_note:"* FY2026 is partial. New obligations only; current US$ millions.",
@@ -460,22 +435,22 @@ const I18N = {
   m_body:"All figures come from the official ForeignAssistance.gov data service (the same one behind the US government's Nepal country page), retrieved 2026-06-04, using three independent cuts of the same money: by sector, by funding account, and by implementing agency. The three cuts reconcile to the dollar in every year. Only actual flows are shown (obligations and disbursements); budget requests and appropriations are excluded. Constant dollars are as published, base year 2024. The partners and named-projects sections come from USASpending.gov (the US award system, retrieved 2026-06-11): a different accounting frame — awards by place of performance, obligations basis — so those amounts deliberately do not reconcile with the account/sector totals above. Account, partner and program names are kept in English because they are official US records.",
   m_csv:"machine-readable:", foot:"Part of the Nepal Development Funding dataset. ",
   fn_kicker:"Follow the money to its purpose", fn_title:"The funnel: promised → delivered → purpose",
-  fn_lead:"Three gates. First: how much of what was promised actually arrived. Second: of the money that arrived, how much went to the stated purpose — health, education, agriculture — and how much to running the machine. Mature accounts deliver 84–100% of what they promise. But of every delivered dollar, about 18 cents went to explicitly administrative and support lines — and that is only the visible overhead; what partners spend on their own administration inside program awards is not published anywhere.",
-  fn_sum:"FY2015–26: promised {ob} → delivered {di} ({rate}%) · of delivered money, {support}% went to explicit admin/support lines · MCC compact: {mccdi} of {mccob} delivered so far (runs to Aug 2028)",
+  fn_lead:"Three gates. First: how much of what was promised actually arrived. Second: how the US government classified delivered funds by purpose. “Program Support” is one official category reported centrally; the source does not assign it back to Health, Education, Agriculture, or other categories, so this page does not invent that allocation.",
+  fn_sum:"FY2015–26: promised {ob} → delivered {di} ({rate}%) · {support}% of delivered money was reported as Program Support, without a sector allocation · MCC compact: {mccdi} of {mccob} delivered so far (runs to Aug 2028)",
   fn_note1:"Cumulative FY2015–FY2026. Rates above 100% mean disbursements drew on promises made before FY2015. MCC's low rate is timing, not failure: the compact disburses until August 2028.",
-  fn_note2:"\"Program Support\" (red) bundles operating expenses, administration and oversight, and program design/evaluation — as classified by the US government itself.",
+  fn_note2:"“Program Support” (red) is the same centrally reported support category used elsewhere on this page. It includes operating expenses, administration and oversight, and program design/evaluation. The official source does not allocate it across other sectors.",
   fn_acct_t:"Delivered vs promised, by account", fn_pur_t:"What delivered money was for",
-  pp_kicker:"People vs the system", pp_title:"How much reached people, and how much ran the machinery",
-  pp_lead:"Every delivered dollar, sorted three ways using the US government's own sector labels: money whose immediate object is a person (a meal, a clinic visit, a classroom, a water tap, a farmer's training) — money that builds the systems around people (courts, grids, roads, ministries, markets, disease surveillance) — and money that runs the aid machine itself. The classification is ours, it is published in full below, and reasonable people can move lines: building a health system is not waste, it is how care continues after the project ends.",
-  pp_note1:"Share of delivered money per fiscal year. FY2026 is partial — note the machine's share when programs stop but operations continue.",
-  pp_note2:"Inside each sector category. All operational cost is booked centrally under \"Program Support\" — the US system does not attribute admin to sectors, which is itself worth knowing.",
+  pp_kicker:"People, systems and support", pp_title:"How funds were classified: people, systems and centrally reported support",
+  pp_lead:"Every delivered dollar is grouped using the US government’s sector labels: direct services to people, systems and infrastructure around people, and the single official category “Program Support.” The first two groupings are this project’s transparent interpretation; Program Support is kept intact because the source reports it centrally rather than assigning it to individual sectors.",
+  pp_note1:"Share of delivered money per fiscal year. FY2026 is partial.",
+  pp_note2:"Program Support remains its own official category. The source does not attribute it to individual sectors, so it is not redistributed here.",
   pp_map_t:"The full classification, sector by sector (contestable by design)",
   pp_m_cat:"Category", pp_m_sec:"Official sector", pp_m_cls:"Classified as",
-  pp_caveat:"Honesty notes: \"machine\" counts only explicitly booked administration (Direct Administrative Costs, M&E, operating expenses). The overhead partners charge inside program awards is not published anywhere, so the true cost of the system is higher than 18%. And \"system\" money can serve people deeply — a maternal clinic needs a grid and a road; the split shows emphasis, not virtue.",
-  pp_people:"Directly to people", pp_system:"Building the systems", pp_machine:"Running the machine",
+  pp_caveat:"Method note: “centrally reported support” is the official Program Support category, including Direct Administrative Costs, M&E, and operating expenses. Partner overhead inside individual program awards is not published, and it would be misleading to estimate or distribute it across sectors. “System” funding can still serve people deeply — a maternal clinic needs a grid and a road; the split shows emphasis, not virtue.",
+  pp_people:"Directly to people", pp_system:"Building the systems", pp_machine:"Centrally reported support",
   pp_people_d:"A service, good or transfer a person actually receives. <span style='color:#0f9d58;font-weight:700'>e.g.</span> nutrition, maternal &amp; child health, family planning, basic education, school meals, farmer training, clean water, emergency relief.",
   pp_system_d:"The institutions and infrastructure around people, so services outlast the project. <span style='color:#2563eb;font-weight:700'>e.g.</span> roads &amp; power, courts &amp; rule of law, elections, disease surveillance, disaster readiness, forests &amp; biodiversity, markets.",
-  pp_machine_d:"The cost of operating the aid apparatus itself — booked centrally, not to any sector. <span style='color:#dc2626;font-weight:700'>e.g.</span> direct administrative costs, monitoring &amp; evaluation, operating expenses.",
+  pp_machine_d:"The official Program Support category, booked centrally rather than to a sector. <span style='color:#dc2626;font-weight:700'>e.g.</span> direct administrative costs, monitoring &amp; evaluation, operating expenses. It is not redistributed because the source does not provide that split.",
   pp_headline:"Of {tot} delivered and classified, {d} ({p}) had a person as its immediate object — a meal, a clinic visit, a classroom, a water tap, a farmer's training.",
   pp_bar_t:"Of every delivered dollar, FY2015–26:",
   pp_year_t:"The split, year by year", pp_cat_t:"Inside each category",
@@ -488,14 +463,14 @@ const I18N = {
   pj_t_amt:"US$ m", pj_t_rec:"Recipient", pj_t_desc:"Project (official description)",
   pj_t_period:"Period", pj_t_agency:"Awarded by",
   lg_kicker:"Every project, triaged", lg_title:"The full project ledger",
-  lg_lead:"Every individual US award implemented in Nepal since FY2015 — all 2,609 of them — triaged by where they stand today. \"Ended 2025–26\" means the award's period ended inside the restructuring window: that bucket mixes natural completions with early terminations, because the public data does not say which is which. The cross-check from the IATI transparency feeds shows only 6 US activities formally marked cancelled or suspended — official status reporting clearly lags reality.",
-  lg_sum:"{total} awards · completed before 2025: {comp} (${compm}m) · ended in the 2025–26 window: {e26} (${e26m}m) · still active: {act} (${actm}m)",
+  lg_lead:"Every individual US award implemented in Nepal since FY2015 — all 2,609 of them — grouped by its recorded period of performance. “Period ended in 2025–26” is an amber timing label, not a cancellation finding: public award data does not distinguish natural completions from early terminations. The separate IATI check identifies only six activities formally marked cancelled or suspended.",
+  lg_sum:"{total} awards · completed before 2025: {comp} (${compm}m) · period ended in 2025–26: {e26} (${e26m}m) · still active: {act} (${actm}m)",
   lg_cohort_note:"Number of awards whose period of performance overlaps each US fiscal year.",
   lg_f_status:"Status", lg_f_search:"Search",
   lg_t_status:"Status", lg_all:"All statuses",
-  lg_s_active:"Active", lg_s_completed:"Completed", lg_s_ended_2526:"Ended 2025–26", lg_s_undated:"Undated",
+  lg_s_active:"Active", lg_s_completed:"Completed", lg_s_ended_2526:"Period ended in 2025–26", lg_s_undated:"Undated",
   lg_count:"Showing {shown} of {match} matching awards", lg_download:"⬇ Download CSV",
-  lg_note:"Showing awards of $1m and above; the complete ledger of all 2,609 awards is in us_projects_all.csv. Obligations basis, place of performance Nepal.",
+  lg_note:"The amber label marks an award period ending in 2025–26; it does not mean the award was cancelled. Showing awards of $1m and above; the complete ledger of all 2,609 awards is in us_projects_all.csv. Obligations basis, place of performance Nepal.",
   lg_cohort_t:"Awards active per fiscal year",
   ld_kicker:"Where it landed", ld_title:"Beneath the primes: the money's onward journey",
   ld_lead:"Big international partners win the awards, but much of the money is sub-granted onward. Across the 154 largest projects, $1.06 billion — about half of what was obligated — was passed to 562 other organisations, many of them Nepali firms and local NGOs, reaching 48 of Nepal's 77 districts.",
@@ -602,7 +577,7 @@ const I18N = {
   dr_act_src:"स्रोत: ट्रिम्यापकै ForeignAssistance.gov डेटा सेवाका गतिविधि-स्तरका पङ्क्ति (Data Query, वितरण) — उही रकम, विस्तारमा। नाम र विवरण आधिकारिक अभिलेख हुन्; \"Redacted\" स्रोतमै गोप्य राखिएका हुन्।",
   dr_act_end:"{d} सम्म चल्ने",
   mg_kicker:"कसले चलाउँछ", mg_title:"रकम दिने बनाम चलाउने निकाय",
-  mg_lead:"बजेटको मालिक निकाय नै सधैँ काम चलाउने निकाय हुँदैन। यो दृश्यले नेपालमा अमेरिकी सहायता वास्तवमा कसले प्रशासन गर्छ देखाउँछ — र २०२५ को पुनर्संरचनापछि कार्यान्वयन MCC र State Department मा केन्द्रित हुँदै गएको।",
+  mg_lead:"बजेटको मालिक निकाय नै सधैँ काम चलाउने निकाय हुँदैन। यो दृश्यले आधिकारिक तथ्याङ्कमा नाम भएका हरेक व्यवस्थापन निकाय देखाउँछ—“अन्य” समूह छैन—र २०२५ पछिको कार्यान्वयन परिवर्तन देखाउँछ।",
   cut_kicker:"पुनर्संरचना, खाता-खातामा", cut_title:"के काटियो, के बाँच्यो (नयाँ प्रतिबद्धता)",
   cut_lead:"२०२५ को पुनर्संरचना अघि र पछि, खाताअनुसार नयाँ वाचा। रातो शून्य भनेको नयाँ रकम आउन बन्द भएका च्यानल हुन्। नयाँ प्रतिबद्धता रोकिए पनि पुराना वाचाको वितरण केही समय चल्न सक्छ।",
   cut_note:"* FY2026 आंशिक। नयाँ प्रतिबद्धता मात्र; हालको अमेरिकी डलर, मिलियनमा।",
@@ -611,22 +586,22 @@ const I18N = {
   m_body:"सबै अङ्क आधिकारिक ForeignAssistance.gov डाटा सेवाबाट आएका हुन् (अमेरिकी सरकारकै नेपाल पृष्ठ पछाडिको सेवा), २०२६-०६-०४ मा लिइएको, एउटै रकमका तीन स्वतन्त्र कट प्रयोग गरेर: क्षेत्रअनुसार, बजेट खाताअनुसार, र कार्यान्वयन निकायअनुसार। तीनै कट हरेक वर्ष डलरसम्म मिल्छन्। वास्तविक प्रवाह मात्र देखाइएको छ (प्रतिबद्धता र वितरण); बजेट अनुरोध र विनियोजन हटाइएको छ। स्थिर डलर प्रकाशित रूपमै छ, आधार वर्ष २०२४। साझेदार र परियोजना खण्ड USASpending.gov (अमेरिकी अवार्ड प्रणाली, २०२६-०६-११ मा लिइएको) बाट हो: फरक लेखा आधार — कार्यस्थलअनुसार अवार्ड, प्रतिबद्धता — त्यसैले ती रकम माथिका खाता/क्षेत्र जोडसँग जानाजानी मिल्दैनन्। खाता, साझेदार र कार्यक्रमका नाम आधिकारिक अमेरिकी अभिलेख भएकाले अंग्रेजीमै छन्।",
   m_csv:"मेसिन-पठनीय:", foot:"नेपाल विकास सहायता डेटासेटको अंश। ",
   fn_kicker:"पैसालाई उद्देश्यसम्म पछ्याउनुहोस्", fn_title:"फनेल: वाचा → वितरण → उद्देश्य",
-  fn_lead:"तीन ढोका। पहिलो: वाचा गरिएको रकमको कति वास्तवमा आइपुग्यो। दोस्रो: आइपुगेको रकमको कति घोषित उद्देश्य — स्वास्थ्य, शिक्षा, कृषि — मा गयो, र कति संयन्त्र चलाउनमा। परिपक्व खाताले वाचाको ८४–१००% पुर्‍याउँछन्। तर वितरित हरेक डलरको करिब १८ सेन्ट स्पष्ट प्रशासनिक/सहयोगी शीर्षकमा गयो — र त्यो देखिने ओभरहेड मात्र हो; साझेदारले कार्यक्रमभित्र आफ्नै प्रशासनमा गर्ने खर्च कतै प्रकाशित हुँदैन।",
-  fn_sum:"FY2015–26: वाचा {ob} → वितरण {di} ({rate}%) · वितरित रकमको {support}% स्पष्ट प्रशासन/सहयोग शीर्षकमा · MCC सम्झौता: {mccob} मध्ये {mccdi} वितरण (अगस्ट २०२८ सम्म चल्ने)",
+  fn_lead:"तीन ढोका। पहिलो: वाचा गरिएको रकमको कति वास्तवमा आइपुग्यो। दोस्रो: अमेरिकी सरकारले वितरित रकमलाई उद्देश्यअनुसार कसरी वर्गीकृत गरेको छ। “Program Support” केन्द्रीय रूपमा रिपोर्ट गरिने एउटा आधिकारिक कोटि हो; स्रोतले यसलाई स्वास्थ्य, शिक्षा, कृषि वा अन्य क्षेत्रमा बाँड्दैन, त्यसैले यहाँ पनि कृत्रिम बाँडफाँड गरिएको छैन।",
+  fn_sum:"FY2015–26: वाचा {ob} → वितरण {di} ({rate}%) · वितरित रकमको {support}% क्षेत्र नछुट्याइएको Program Support अन्तर्गत रिपोर्ट · MCC सम्झौता: {mccob} मध्ये {mccdi} वितरण (अगस्ट २०२८ सम्म चल्ने)",
   fn_note1:"संचित FY2015–FY2026। १००% भन्दा माथिको दरको अर्थ FY2015 अघिका वाचाबाट वितरण भएको हो। MCC को न्यून दर समयको कुरा हो, असफलता होइन: सम्झौता अगस्ट २०२८ सम्म वितरण गर्छ।",
-  fn_note2:"\"Program Support\" (रातो) मा सञ्चालन खर्च, प्रशासन र निगरानी, तथा कार्यक्रम डिजाइन/मूल्याङ्कन पर्छन् — अमेरिकी सरकारकै वर्गीकरणअनुसार।",
+  fn_note2:"“Program Support” (रातो) यही पृष्ठको अन्यत्र प्रयोग भएको केन्द्रीय सहयोग कोटि हो। यसमा सञ्चालन खर्च, प्रशासन तथा निगरानी, र कार्यक्रम डिजाइन/मूल्याङ्कन पर्छन्। आधिकारिक स्रोतले यसलाई अन्य क्षेत्रमा बाँड्दैन।",
   fn_acct_t:"खाताअनुसार वितरण बनाम वाचा", fn_pur_t:"वितरित रकम केका लागि थियो",
-  pp_kicker:"जनता बनाम प्रणाली", pp_title:"कति जनतासम्म पुग्यो, कति संयन्त्र चलाउनमा गयो",
-  pp_lead:"वितरित हरेक डलर, अमेरिकी सरकारकै क्षेत्र-लेबल प्रयोग गरेर तीन भागमा छुट्याइएको: जसको तत्काल उद्देश्य व्यक्ति हो (खाना, क्लिनिक, कक्षाकोठा, धारा, किसानको तालिम) — जसले जनताका वरिपरिका प्रणाली बनाउँछ (अदालत, ग्रिड, सडक, मन्त्रालय, बजार, रोग निगरानी) — र जसले सहायता संयन्त्र नै चलाउँछ। वर्गीकरण हाम्रो हो, तल पूरै प्रकाशित छ, र रेखा सार्न मिल्छ: स्वास्थ्य प्रणाली बनाउनु खेर जानु होइन, परियोजना सकिएपछि पनि सेवा चल्ने उपाय हो।",
-  pp_note1:"हरेक आर्थिक वर्षको वितरित रकमको हिस्सा। FY2026 आंशिक — कार्यक्रम रोकिँदा पनि सञ्चालन चल्दा संयन्त्रको हिस्सा हेर्नुहोस्।",
-  pp_note2:"हरेक क्षेत्र कोटिभित्र। सबै सञ्चालन खर्च केन्द्रीय रूपमा \"Program Support\" मा राखिन्छ — अमेरिकी प्रणालीले प्रशासनलाई क्षेत्रमा बाँड्दैन, त्यो आफैँमा जान्नलायक कुरा हो।",
+  pp_kicker:"जनता, प्रणाली र सहयोग", pp_title:"रकमको वर्गीकरण: जनता, प्रणाली र केन्द्रीय सहयोग",
+  pp_lead:"वितरित हरेक डलर अमेरिकी सरकारका क्षेत्र-लेबल प्रयोग गरेर समूहमा राखिएको छ: जनतालाई प्रत्यक्ष सेवा, जनताका वरिपरिका प्रणाली तथा पूर्वाधार, र एउटै आधिकारिक “Program Support” कोटि। पहिलो दुई समूह यस परियोजनाको पारदर्शी व्याख्या हुन्; स्रोतले Program Support लाई व्यक्तिगत क्षेत्रमा नबाँड्ने भएकाले यसलाई जस्ताको तस्तै राखिएको छ।",
+  pp_note1:"हरेक आर्थिक वर्षको वितरित रकमको हिस्सा। FY2026 आंशिक छ।",
+  pp_note2:"Program Support आफ्नै आधिकारिक कोटि रहन्छ। स्रोतले यसलाई व्यक्तिगत क्षेत्रमा नबाँड्ने भएकाले यहाँ पनि पुनःवितरण गरिएको छैन।",
   pp_map_t:"पूर्ण वर्गीकरण, क्षेत्र-क्षेत्रमा (बहसयोग्य बनाइएको)",
   pp_m_cat:"कोटि", pp_m_sec:"आधिकारिक क्षेत्र", pp_m_cls:"वर्गीकरण",
-  pp_caveat:"इमानदारीका टिप्पणी: \"संयन्त्र\" मा स्पष्ट रूपमा लेखिएको प्रशासन मात्र छ (प्रत्यक्ष प्रशासनिक खर्च, अनुगमन-मूल्याङ्कन, सञ्चालन खर्च)। साझेदारले कार्यक्रमभित्र लिने ओभरहेड कतै प्रकाशित हुँदैन, त्यसैले प्रणालीको वास्तविक लागत १८% भन्दा बढी छ। अनि \"प्रणाली\" रकमले पनि जनतालाई गहिरो सेवा गर्न सक्छ — मातृ क्लिनिकलाई ग्रिड र सडक चाहिन्छ; यो विभाजनले जोड देखाउँछ, गुण-दोष होइन।",
-  pp_people:"सीधै जनतामा", pp_system:"प्रणाली निर्माण", pp_machine:"संयन्त्र सञ्चालन",
+  pp_caveat:"विधि टिप्पणी: “केन्द्रीय रूपमा रिपोर्ट गरिएको सहयोग” प्रत्यक्ष प्रशासनिक खर्च, अनुगमन-मूल्याङ्कन तथा सञ्चालन खर्च समेट्ने आधिकारिक Program Support कोटि हो। व्यक्तिगत कार्यक्रमभित्रको साझेदार ओभरहेड प्रकाशित हुँदैन, र त्यसको अनुमान वा क्षेत्रगत बाँडफाँड गर्नु भ्रामक हुन्छ। “प्रणाली” रकमले पनि जनतालाई गहिरो सेवा गर्न सक्छ — मातृ क्लिनिकलाई ग्रिड र सडक चाहिन्छ; यो विभाजनले जोड देखाउँछ, गुण-दोष होइन।",
+  pp_people:"सीधै जनतामा", pp_system:"प्रणाली निर्माण", pp_machine:"केन्द्रीय रूपमा रिपोर्ट गरिएको सहयोग",
   pp_people_d:"व्यक्तिले सीधै पाउने सेवा, वस्तु वा सहयोग। <span style='color:#0f9d58;font-weight:700'>जस्तै:</span> पोषण, आमा तथा शिशु स्वास्थ्य, परिवार नियोजन, आधारभूत शिक्षा, विद्यालय खाजा, किसान तालिम, स्वच्छ पानी, आपत्‌कालीन राहत।",
   pp_system_d:"मानिसका वरिपरि रहेका संस्था र पूर्वाधार, ताकि परियोजना सकिएपछि पनि सेवा चलिरहोस्। <span style='color:#2563eb;font-weight:700'>जस्तै:</span> सडक र विद्युत्, अदालत र कानुनी शासन, निर्वाचन, रोग निगरानी, विपद् तयारी, वन र जैविक विविधता, बजार।",
-  pp_machine_d:"सहायता संयन्त्र आफैँ चलाउने खर्च — कुनै क्षेत्रमा नभई केन्द्रीय रूपमा राखिएको। <span style='color:#dc2626;font-weight:700'>जस्तै:</span> प्रत्यक्ष प्रशासनिक खर्च, अनुगमन तथा मूल्याङ्कन, सञ्चालन खर्च।",
+  pp_machine_d:"क्षेत्रमा नभई केन्द्रीय रूपमा राखिएको आधिकारिक Program Support कोटि। <span style='color:#dc2626;font-weight:700'>जस्तै:</span> प्रत्यक्ष प्रशासनिक खर्च, अनुगमन तथा मूल्याङ्कन, सञ्चालन खर्च। स्रोतले यस्तो विभाजन नदिएकाले यसलाई पुनःवितरण गरिएको छैन।",
   pp_headline:"वर्गीकृत {tot} वितरणमध्ये, {d} ({p}) को प्रत्यक्ष लक्ष्य व्यक्ति थियो — खाना, क्लिनिक भेट, कक्षाकोठा, पानीको धारा, किसान तालिम।",
   pp_bar_t:"वितरित हरेक डलरमध्ये, FY2015–26:",
   pp_year_t:"वर्ष-वर्षको विभाजन", pp_cat_t:"हरेक कोटिभित्र",
@@ -639,14 +614,14 @@ const I18N = {
   pj_t_amt:"डलर (मि.)", pj_t_rec:"प्राप्तकर्ता", pj_t_desc:"परियोजना (आधिकारिक विवरण)",
   pj_t_period:"अवधि", pj_t_agency:"अवार्ड दिने",
   lg_kicker:"हरेक परियोजना, वर्गीकृत", lg_title:"पूर्ण परियोजना खाता",
-  lg_lead:"FY2015 देखि नेपालमा कार्यान्वयन भएका हरेक अमेरिकी अवार्ड — सबै २,६०९ — आज कहाँ छन् भनेर वर्गीकृत। \"२०२५–२६ मा सकिएको\" भनेको अवार्डको अवधि पुनर्संरचना अवधिभित्र सकिएको हो: त्यो समूहमा स्वाभाविक समापन र अग्रिम रद्द दुवै मिसिएका छन्, किनकि सार्वजनिक तथ्याङ्कले कुन-कुन हो भन्दैन। IATI पारदर्शिता फिडको जाँचमा जम्मा ६ अमेरिकी क्रियाकलाप मात्र औपचारिक रूपमा रद्द/निलम्बित देखिन्छन् — आधिकारिक स्थिति रिपोर्टिङ यथार्थभन्दा पछि छ।",
-  lg_sum:"{total} अवार्ड · २०२५ अघि सम्पन्न: {comp} (${compm}m) · २०२५–२६ अवधिमा सकिएको: {e26} (${e26m}m) · हाल चालु: {act} (${actm}m)",
+  lg_lead:"FY2015 देखि नेपालमा कार्यान्वयन भएका हरेक अमेरिकी अवार्ड — सबै २,६०९ — अभिलेखित कार्य-अवधिअनुसार समूहबद्ध छन्। “२०२५–२६ मा अवधि सकिएको” एम्बर रङको समयसम्बन्धी लेबल हो, रद्द भएको निष्कर्ष होइन: सार्वजनिक अवार्ड तथ्याङ्कले स्वाभाविक समापन र अग्रिम रद्द छुट्याउँदैन। छुट्टै IATI जाँचले जम्मा छ वटा गतिविधि औपचारिक रूपमा रद्द वा निलम्बित देखाउँछ।",
+  lg_sum:"{total} अवार्ड · २०२५ अघि सम्पन्न: {comp} (${compm}m) · २०२५–२६ मा अवधि सकिएको: {e26} (${e26m}m) · हाल चालु: {act} (${actm}m)",
   lg_cohort_note:"हरेक अमेरिकी आर्थिक वर्षसँग अवधि जुध्ने अवार्डको सङ्ख्या।",
   lg_f_status:"स्थिति", lg_f_search:"खोज्नुहोस्",
   lg_t_status:"स्थिति", lg_all:"सबै स्थिति",
-  lg_s_active:"चालु", lg_s_completed:"सम्पन्न", lg_s_ended_2526:"२०२५–२६ मा सकिएको", lg_s_undated:"मिति नभएको",
+  lg_s_active:"चालु", lg_s_completed:"सम्पन्न", lg_s_ended_2526:"२०२५–२६ मा अवधि सकिएको", lg_s_undated:"मिति नभएको",
   lg_count:"{match} मिल्ने अवार्डमध्ये {shown} देखाइएको", lg_download:"⬇ CSV डाउनलोड",
-  lg_note:"$1m र माथिका अवार्ड देखाइएको; सबै २,६०९ अवार्डको पूर्ण खाता us_projects_all.csv मा छ। प्रतिबद्धता आधार, कार्यस्थल नेपाल।",
+  lg_note:"एम्बर लेबलले २०२५–२६ मा अवार्डको अवधि सकिएको जनाउँछ; यो रद्द भएको अर्थ होइन। $1m र माथिका अवार्ड देखाइएको; सबै २,६०९ अवार्डको पूर्ण खाता us_projects_all.csv मा छ। प्रतिबद्धता आधार, कार्यस्थल नेपाल।",
   lg_cohort_t:"आर्थिक वर्षअनुसार चालु अवार्ड",
   ld_kicker:"कहाँ पुग्यो", ld_title:"प्राइमभन्दा तल: पैसाको अगाडिको यात्रा",
   ld_lead:"ठूला अन्तर्राष्ट्रिय साझेदारले अवार्ड जित्छन्, तर धेरै पैसा अगाडि उप-अनुदान हुन्छ। १५४ सबैभन्दा ठूला परियोजनामा, $1.06 अर्ब — प्रतिबद्धताको करिब आधा — ५६२ अन्य संस्थालाई पठाइयो, जसमध्ये धेरै नेपाली फर्म र स्थानीय गैसस छन्, नेपालका ७७ मध्ये ४८ जिल्लामा पुग्दै।",
@@ -745,7 +720,6 @@ function render(){
   document.getElementById('lang-en').setAttribute('aria-pressed', lang==='en');
   document.getElementById('lang-ne').setAttribute('aria-pressed', lang==='ne');
   document.querySelectorAll('[data-i18n]').forEach(el=>el.innerHTML=t(el.dataset.i18n));
-  buildSectionNav();
 
   const k=D.kpis;
   const cards=[
@@ -979,7 +953,7 @@ function drawLedger(){
 
 function renderLedgerRows(){
   const P=window.US_PROJECTS; if(!P) return;
-  const pills={active:'p-cons',completed:'p-exp',ended_2526:'p-low',undated:'p-med'};
+  const pills={active:'p-cons',completed:'p-exp',ended_2526:'p-med',undated:'p-med'};
   const match=P.list.filter(a=>(lgStatus==='all'||a.status===lgStatus) &&
     (!lgQuery||(a.recipient+' '+a.desc+' '+a.agency).toLowerCase().includes(lgQuery)));
   window._lgRows=match;          // exposed for the "Download CSV" button
@@ -1292,7 +1266,7 @@ function drawManaging(){
     legend:{top:4,type:'scroll'},
     xAxis:{type:'category',data:D.meta.years},
     yAxis:{type:'value',name:t('usdm'),splitLine:{lineStyle:{color:'#eef1f6'}}},
-    series:D.managing.map((s,i)=>({name:s.name==='Other'?t('other'):s.name,type:'bar',stack:'m',
+    series:D.managing.map((s,i)=>({name:s.name,type:'bar',stack:'m',
       data:s.data,itemStyle:{color:PAL[i%PAL.length]}}))},true);
 }
 
@@ -1303,46 +1277,6 @@ function drawCuts(){
      <td class="num">${fmtc(c.ob24)}</td><td class="num">${fmtc(c.ob25)}</td><td class="num">${fmtc(c.ob26)}</td></tr>`).join('');
 }
 
-let sectionNavOpener=null;
-const sectionNavMedia=window.matchMedia('(min-width:1180px)');
-function syncSectionNavMode(){
-  const nav=document.getElementById('section-nav'), overlay=document.getElementById('section-nav-overlay'), toggle=document.getElementById('section-nav-toggle');
-  if(sectionNavMedia.matches){
-    document.body.classList.remove('section-nav-open'); nav.classList.remove('open'); overlay.classList.remove('open');
-    nav.setAttribute('aria-hidden','false'); toggle.setAttribute('aria-expanded','false');
-  }else nav.setAttribute('aria-hidden','true');
-}
-function buildSectionNav(){
-  const ne=lang==='ne', list=document.getElementById('section-nav-list');
-  document.getElementById('section-nav-title').textContent=ne?'यस पृष्ठमा':'On this page';
-  document.getElementById('section-nav-toggle').setAttribute('aria-label',ne?'खण्डहरू खोल्नुहोस्':'Open sections');
-  document.getElementById('section-nav-close').setAttribute('aria-label',ne?'खण्डहरू बन्द गर्नुहोस्':'Close sections');
-  list.replaceChildren();
-  document.querySelectorAll('main section[id]').forEach(section=>{
-    const heading=section.querySelector('h3'); if(!heading) return;
-    const link=document.createElement('a'); link.href='#'+section.id; link.textContent=heading.textContent;
-    link.addEventListener('click',closeSectionNav); list.append(link);
-  });
-}
-function openSectionNav(){
-  if(sectionNavMedia.matches)return;
-  sectionNavOpener=document.activeElement; document.body.classList.add('section-nav-open');
-  document.getElementById('section-nav').classList.add('open'); document.getElementById('section-nav').setAttribute('aria-hidden','false');
-  document.getElementById('section-nav-overlay').classList.add('open'); document.getElementById('section-nav-toggle').setAttribute('aria-expanded','true');
-  document.getElementById('section-nav-close').focus();
-}
-function closeSectionNav(){
-  if(sectionNavMedia.matches)return;
-  document.body.classList.remove('section-nav-open'); document.getElementById('section-nav').classList.remove('open');
-  document.getElementById('section-nav').setAttribute('aria-hidden','true'); document.getElementById('section-nav-overlay').classList.remove('open');
-  document.getElementById('section-nav-toggle').setAttribute('aria-expanded','false'); if(sectionNavOpener) sectionNavOpener.focus();
-}
-document.getElementById('section-nav-toggle').addEventListener('click',openSectionNav);
-document.getElementById('section-nav-close').addEventListener('click',closeSectionNav);
-document.getElementById('section-nav-overlay').addEventListener('click',closeSectionNav);
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('section-nav').classList.contains('open'))closeSectionNav();});
-sectionNavMedia.addEventListener('change',syncSectionNavMode);
-syncSectionNavMode();
 function setLang(l){ lang=l; localStorage.setItem('nepal_lang',l); render(); }
 render();
 // a11y: every data-table column header gets scope="col" (re-applied after each render in case

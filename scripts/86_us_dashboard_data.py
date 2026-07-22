@@ -141,7 +141,8 @@ def main():
     wcsv(C.PROCESSED / "us_by_managing_agency.csv",
          ["implementing_agency_acronym", "implementing_agency_name", "year", "flow_stage",
           "amount_usd", "amount_usd_constant"],
-         sorted((x.get("implementing_agency_acronym", ""), x.get("implementing_agency_name", ""), y, f,
+         sorted((x.get("managing_agency_acronym") or x.get("implementing_agency_acronym", ""),
+                 x.get("managing_agency_name") or x.get("implementing_agency_name", ""), y, f,
                  round(cur, 2), round(con, 2)) for f, y, cur, con, x in man_rows))
 
     years_all = list(range(Y0, Y1 + 1))
@@ -206,11 +207,13 @@ def main():
     man = defaultdict(lambda: defaultdict(float))
     for f, y, cur, _c, x in man_rows:
         if f == "disbursement" and y >= SY0:
-            man[x.get("implementing_agency_acronym", "")][y] += cur
-    man_top = sorted(man, key=lambda a: -sum(man[a].values()))[:6]
-    managing = [{"name": a, "data": [M(man[a].get(y, 0)) for y in years_s]} for a in man_top]
-    mo = [M(sum(man[a].get(y, 0) for a in man if a not in man_top)) for y in years_s]
-    managing.append({"name": "Other", "data": mo})
+            agency = x.get("managing_agency_acronym") or x.get("implementing_agency_acronym", "")
+            if agency:
+                man[agency][y] += cur
+    # Keep every named managing agency separate. Combining the smaller agencies into an
+    # "Other" series obscures who actually administered the funds.
+    managing = [{"name": a, "data": [M(man[a].get(y, 0)) for y in years_s]}
+                for a in sorted(man, key=lambda a: -sum(man[a].values()))]
 
     # ---- the funnel: promise -> delivery -> purpose (cumulative FY2015-26) ----
     ob_tot = {a: sum(per_ob[a].get(y, 0) for y in years_s) for a in per_ob}
