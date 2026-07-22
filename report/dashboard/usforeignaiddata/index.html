@@ -227,7 +227,10 @@
     <div class="controls"><label for="tmYear" data-i18n="year">Year</label><select id="tmYear"></select></div>
     <div class="card" id="sec-sum" style="font-weight:650;font-size:15px"></div>
     <div class="grid2" style="margin-top:16px">
-      <div class="card"><div id="c-treemap" class="chart tall" role="img"></div></div>
+      <div class="card">
+        <div class="hint" data-i18n="sec_hint">Open details: click a sector block or category heading to expand its named activities in the side panel.</div>
+        <div id="c-treemap" class="chart tall" role="img"></div>
+      </div>
       <div class="card">
         <h4 style="margin:2px 0 10px;font-size:15px;font-weight:700" data-i18n="sec_break_t">Where the money went, by category</h4>
         <div style="overflow-x:auto"><table id="sec-break" style="min-width:280px"><thead><tr>
@@ -237,7 +240,6 @@
         <div class="note" data-i18n="sec_break_note">Disbursements for the selected fiscal year, by US government sector category. Same source as the treemap (by-usg-sector.json). Programs below $0.05m are not shown.</div>
       </div>
     </div>
-    <p class="hint" data-i18n="sec_hint">Tip: click any block — or a category header — to see the activities behind it.</p>
   </section>
 
   <section id="managing">
@@ -424,7 +426,7 @@ const I18N = {
   sec_break_t:"Where the money went, by category",
   sec_th_cat:"Category", sec_th_amt:"US$ m", sec_th_share:"Share",
   sec_break_note:"Disbursements for the selected fiscal year, by US government sector category. Same source as the treemap (by-usg-sector.json). Programs below $0.05m are not shown.",
-  sec_hint:"Tip: click any block — or a category header — to see the activities behind it.",
+  sec_hint:"Open details: click a sector block or category heading to expand its named activities in the side panel.",
   dr_act_h:"{t} across {n} activities in FY{y}:",
   dr_act_load:"Loading activity-level data…",
   dr_act_box:"This block in the treemap: {b}. The activities below sum to {s}.",
@@ -584,7 +586,7 @@ const I18N = {
   sec_break_t:"कोटि अनुसार रकम कहाँ गयो",
   sec_th_cat:"कोटि", sec_th_amt:"US$ m", sec_th_share:"हिस्सा",
   sec_break_note:"छानिएको आर्थिक वर्षको वितरण, अमेरिकी सरकारी क्षेत्र कोटि अनुसार। ट्रिम्याप कै स्रोत (by-usg-sector.json)। $0.05m भन्दा कमका कार्यक्रम देखाइएका छैनन्।",
-  sec_hint:"सुझाव: कुनै पनि ब्लक — वा कोटिको शीर्षक — क्लिक गरेर त्यसभित्रका गतिविधि हेर्नुहोस्।",
+  sec_hint:"विस्तार हेर्नुहोस्: क्षेत्रको ब्लक वा कोटिको शीर्षक छानेर त्यसका नाम भएका गतिविधि साइड प्यानलमा खोल्नुहोस्।",
   dr_act_h:"FY{y} मा {n} गतिविधिमा {t}:",
   dr_act_load:"गतिविधि-स्तरको तथ्याङ्क लोड हुँदै…",
   dr_act_box:"ट्रिम्यापको यो ब्लक: {b}। तलका गतिविधिको योग: {s}।",
