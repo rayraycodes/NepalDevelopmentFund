@@ -1161,7 +1161,8 @@ function drillPartner(partner){
     .sort((a,b)=>b.usd-a.usd);
   const meta=`<div class="note" style="margin:0 0 10px;line-height:1.5">${t('pt_drawer_note')}</div>
     <div class="note" style="margin:0 0 10px"><b>${t('dr_source')}:</b> USASpending.gov · ${esc(P.meta.basis)}</div>`;
-  const rows=awards.map(a=>({a:a.usd,date:a.end||'',dt:a.end?t('dr_act_end').replace('{d}',a.end):'',
+  // us_partners.js stores award values in US$ millions; openDrawer/money expects US dollars.
+  const rows=awards.map(a=>({a:a.usd*1e6,date:a.end||'',dt:a.end?t('dr_act_end').replace('{d}',a.end):'',
     leftHtml:esc(a.desc||'—'),
     rightHtml:[a.agency?`${t('dr_funder')} ${esc(a.agency)}`:'',a.start?`${t('dr_awarded')} ${esc(a.start)}`:''].filter(Boolean).join(' · ')}));
   openDrawer(partner.name, t('pt_drawer_sub').replace('{t}',fmt(partner.usd)), rows, meta, t('pt_no_awards'));
