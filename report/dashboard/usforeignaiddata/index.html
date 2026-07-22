@@ -249,6 +249,7 @@
     <h3 data-i18n="pt_title">The implementing partners</h3>
     <p class="lead" data-i18n="pt_lead">The organisations actually awarded US money for work in Nepal: UN agencies, international NGOs, and development contractors. From the US government's award system (USASpending.gov). The largest single award — $509.5m, redacted at source because the recipient is a foreign government entity — is the MCC compact grant to Nepal, running to August 2028.</p>
     <div class="card"><div class="scrollwrap"><div id="c-partners" class="chart tall" role="img"></div></div>
+      <p class="hint" data-i18n="pt_hint">Select a bar to see its named award records in the side panel.</p>
       <div class="note" data-i18n="pt_note">Obligations, awards with place of performance Nepal, FY2015–FY2026. A different accounting frame from the charts above — use for who/what, not for totals.</div></div>
   </section>
 
@@ -461,6 +462,10 @@ const I18N = {
   pt_kicker:"Who receives it", pt_title:"The implementing partners",
   pt_lead:"The organisations actually awarded US money for work in Nepal: UN agencies, international NGOs, and development contractors. From the US government's award system (USASpending.gov). The largest single award — $509.5m, redacted at source because the recipient is a foreign government entity — is the MCC compact grant to Nepal, running to August 2028.",
   pt_note:"Obligations, awards with place of performance Nepal, FY2015–FY2026. A different accounting frame from the charts above — use for who/what, not for totals.",
+  pt_hint:"Select a bar to see its named award records in the side panel.",
+  pt_drawer_sub:"{t} in reported obligations, FY2015–FY2026",
+  pt_drawer_note:"The total above is this recipient’s full reported obligation total. The records below are the named top awards available in this page’s award extract; they are useful detail but may not add to the total.",
+  pt_no_awards:"No named top-award record for this recipient is included in the page’s award extract.",
   pj_kicker:"What exactly was funded", pj_title:"The named projects",
   pj_lead:"The largest individual awards, with their official descriptions. Names and descriptions are kept as recorded in the US award system; each row links to its full award record.",
   pj_group:"Type", pj_assist:"Grants & cooperative agreements", pj_contract:"Contracts",
@@ -616,6 +621,10 @@ const I18N = {
   pt_kicker:"कसले पाउँछ", pt_title:"कार्यान्वयन साझेदारहरू",
   pt_lead:"नेपालमा कामका लागि वास्तवमा अमेरिकी रकम पाउने संस्थाहरू: संयुक्त राष्ट्रका निकाय, अन्तर्राष्ट्रिय गैसस र विकास ठेकेदार। अमेरिकी सरकारकै अवार्ड प्रणाली (USASpending.gov) बाट। सबैभन्दा ठूलो एकल अवार्ड — $509.5m, प्राप्तकर्ता विदेशी सरकारी निकाय भएकाले स्रोतमै गोप्य — नेपाललाई MCC सम्झौता अनुदान हो, अगस्ट २०२८ सम्म चल्ने।",
   pt_note:"प्रतिबद्धता; कार्यस्थल नेपाल भएका अवार्ड, FY2015–FY2026। माथिका चार्टभन्दा फरक लेखा आधार — को/के का लागि प्रयोग गर्नुहोस्, जोडका लागि होइन।",
+  pt_hint:"नाम भएका अवार्ड अभिलेख साइड प्यानलमा हेर्न पट्टी छान्नुहोस्।",
+  pt_drawer_sub:"FY2015–FY2026 मा रिपोर्ट भएका प्रतिबद्धतामा {t}",
+  pt_drawer_note:"माथिको कुल रकम यस प्राप्तकर्ताको सम्पूर्ण रिपोर्ट गरिएको प्रतिबद्धता हो। तलका अभिलेख पृष्ठको अवार्ड डेटामा उपलब्ध नाम भएका ठूला अवार्ड हुन्; ती उपयोगी विवरण हुन् तर कुल बराबर नहुन सक्छन्।",
+  pt_no_awards:"यस प्राप्तकर्ताका लागि पृष्ठको अवार्ड डेटामा नाम भएको ठूला अवार्ड अभिलेख समावेश छैन।",
   pj_kicker:"ठ्याक्कै के मा खर्च भयो", pj_title:"नाम भएका परियोजनाहरू",
   pj_lead:"सबैभन्दा ठूला अवार्ड, आधिकारिक विवरणसहित। नाम र विवरण अमेरिकी अवार्ड प्रणालीमा भएजस्तै राखिएका छन्; हरेक पङ्क्ति पूरा अभिलेखसँग जोडिएको छ।",
   pj_group:"प्रकार", pj_assist:"अनुदान तथा सहकार्य सम्झौता", pj_contract:"ठेक्का",
@@ -817,7 +826,7 @@ function drawLanding(){
 
 const esc=s=>String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
 const money=v=>v>=1e6?'$'+(v/1e6).toFixed(2)+'m':(v>=1000?'$'+Math.round(v/1000)+'k':'$'+Math.round(v));
-function openDrawer(title, sub, rows, metaHtml){
+function openDrawer(title, sub, rows, metaHtml, emptyText){
   document.getElementById('drawer-title').textContent=title;
   document.getElementById('drawer-sub').textContent=sub;
   document.getElementById('drawer-meta').innerHTML=metaHtml||'';
@@ -829,7 +838,7 @@ function openDrawer(title, sub, rows, metaHtml){
     return `<tr><td class="num" style="white-space:nowrap;padding-right:14px;font-weight:700;color:var(--teal);vertical-align:top">${money(r.a)}</td>
       <td>${main}${subline?`<div style="font-size:11.5px;color:var(--muted);margin-top:2px">${subline}</div>`:''}</td>
       <td style="white-space:nowrap;text-align:right;vertical-align:top;font-size:11.5px;color:var(--muted)">${r.date?'<span title="'+esc(r.dt||t('dr_awarded'))+'">'+esc(r.date)+'</span>':''}</td></tr>`;}).join('');
-  document.getElementById('drawer-rows').innerHTML=html||`<tr><td style="color:var(--muted)">${t('dr_empty')}</td></tr>`;
+  document.getElementById('drawer-rows').innerHTML=html||`<tr><td style="color:var(--muted)">${emptyText||t('dr_empty')}</td></tr>`;
   const dr=document.getElementById('drawer');
   // Only capture the opener the first time; drilling within the drawer keeps the original,
   // so closing returns focus to the ledger/chart element that started the chain.
@@ -1119,15 +1128,32 @@ function drawPartners(){
   const P=window.US_PARTNERS; if(!P) return;
   aria('c-partners', t('pt_title'));
   const ps=P.partners.slice().reverse();
-  chart('c-partners').setOption({animation:anim,textStyle:baseText(),
+  const ch=chart('c-partners');
+  ch.setOption({animation:anim,textStyle:baseText(),
     grid:{left:8,right:56,top:10,bottom:24,containLabel:true},
     tooltip:{trigger:'axis',axisPointer:{type:'shadow'},valueFormatter:fmt},
     xAxis:{type:'value',name:t('usdm'),splitLine:{lineStyle:{color:'#eef1f6'}}},
     yAxis:{type:'category',data:ps.map(p=>p.name.length>42?p.name.slice(0,40)+'…':p.name),
       axisLabel:{fontSize:11}},
     series:[{type:'bar',data:ps.map(p=>p.usd),
+      cursor:'pointer',
       itemStyle:{color:'#0e7c86',borderRadius:[0,4,4,0]},
       label:{show:true,position:'right',formatter:p=>fmt(p.value),fontSize:11,color:'#0f1d2e'}}]},true);
+  ch.off('click');
+  ch.on('click',p=>{const partner=ps[p.dataIndex];if(partner) drillPartner(partner);});
+}
+
+function drillPartner(partner){
+  const P=window.US_PARTNERS;
+  const awards=Object.values(P.awards||{}).flat()
+    .filter(a=>a.recipient.toLowerCase()===partner.name.toLowerCase())
+    .sort((a,b)=>b.usd-a.usd);
+  const meta=`<div class="note" style="margin:0 0 10px;line-height:1.5">${t('pt_drawer_note')}</div>
+    <div class="note" style="margin:0 0 10px"><b>${t('dr_source')}:</b> USASpending.gov · ${esc(P.meta.basis)}</div>`;
+  const rows=awards.map(a=>({a:a.usd,date:a.end||'',dt:a.end?t('dr_act_end').replace('{d}',a.end):'',
+    leftHtml:esc(a.desc||'—'),
+    rightHtml:[a.agency?`${t('dr_funder')} ${esc(a.agency)}`:'',a.start?`${t('dr_awarded')} ${esc(a.start)}`:''].filter(Boolean).join(' · ')}));
+  openDrawer(partner.name, t('pt_drawer_sub').replace('{t}',fmt(partner.usd)), rows, meta, t('pt_no_awards'));
 }
 
 function drawAwards(){
