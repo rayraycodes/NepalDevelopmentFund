@@ -118,9 +118,12 @@
   .drawer-body td{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px;vertical-align:top}
   /* Drill chips inside the drawer: compact, wrap long org names, keep the teal "tappable" look. */
   .drawer-body .drill{font-size:12.5px;padding:3px 8px;margin:1px 0;text-align:left;white-space:normal;max-width:100%}
-  .hint{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--teal);font-weight:650;
-    margin-top:10px;background:#e9f3f3;border:1px solid #b7dadd;border-radius:999px;padding:5px 12px}
-  .hint::before{content:"👆";font-size:13px}
+  /* A consistent, high-visibility instruction wherever a chart/table opens the detail drawer. */
+  .hint{display:flex;align-items:center;gap:9px;font-size:14px;line-height:1.35;color:#075963;font-weight:700;
+    margin:12px 0 0;background:#e6f6f6;border:1.5px solid #8bcfd3;border-radius:10px;padding:9px 12px}
+  .hint::before{content:"👆";font-size:17px;line-height:1}
+  .pp-seg:hover{filter:brightness(.92)}
+  .pp-seg:focus-visible{outline:3px solid #10202f;outline-offset:-3px}
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.drawer,.drawer-ov{transition:none}}
 </style>
 </head>
@@ -250,6 +253,7 @@
     <p class="lead" data-i18n="pt_lead">The organisations actually awarded US money for work in Nepal: UN agencies, international NGOs, and development contractors. From the US government's award system (USASpending.gov). The largest single award — $509.5m, redacted at source because the recipient is a foreign government entity — is the MCC compact grant to Nepal, running to August 2028.</p>
     <div class="card"><div class="scrollwrap"><div id="c-partners" class="chart tall" role="img"></div></div>
       <p class="hint" data-i18n="pt_hint">Select a bar to see its named award records in the side panel.</p>
+      <div class="chips" id="partners-chips" role="group" aria-label="Open an implementing partner"></div>
       <div class="note" data-i18n="pt_note">Obligations, awards with place of performance Nepal, FY2015–FY2026. A different accounting frame from the charts above — use for who/what, not for totals.</div></div>
   </section>
 
@@ -454,7 +458,7 @@ const I18N = {
   pp_machine_d:"The official Program Support category, booked centrally rather than to a sector. <span style='color:#dc2626;font-weight:700'>e.g.</span> direct administrative costs, monitoring &amp; evaluation, operating expenses. It is not redistributed because the source does not provide that split.",
   pp_headline:"Of {tot} delivered and classified, {d} ({p}) had a person as its immediate object — a meal, a clinic visit, a classroom, a water tap, a farmer's training.",
   pp_bar_t:"Of every delivered dollar, FY2015–26:",
-  pp_click:"Select a coloured share to see its official sectors and the named activity records reported within it.",
+  pp_click:"Open details: select a coloured share to see its official sectors and the named activity records reported within it.",
   pp_drawer_sub:"{t} delivered and classified across FY2015–26",
   pp_drawer_sectors:"Official categories and sectors included",
   pp_drawer_records:"Named activity records where the source provides them. A project can appear in more than one fiscal-year or sector reporting row; this is a detailed reporting view, not a unique-award count.",
@@ -463,6 +467,7 @@ const I18N = {
   pt_lead:"The organisations actually awarded US money for work in Nepal: UN agencies, international NGOs, and development contractors. From the US government's award system (USASpending.gov). The largest single award — $509.5m, redacted at source because the recipient is a foreign government entity — is the MCC compact grant to Nepal, running to August 2028.",
   pt_note:"Obligations, awards with place of performance Nepal, FY2015–FY2026. A different accounting frame from the charts above — use for who/what, not for totals.",
   pt_hint:"Select a bar to see its named award records in the side panel.",
+  pt_chips:"Or open a partner directly:",
   pt_drawer_sub:"{t} in reported obligations, FY2015–FY2026",
   pt_drawer_note:"The total above is this recipient’s full reported obligation total. The records below are the named top awards available in this page’s award extract; they are useful detail but may not add to the total.",
   pt_no_awards:"No named top-award record for this recipient is included in the page’s award extract.",
@@ -613,7 +618,7 @@ const I18N = {
   pp_machine_d:"क्षेत्रमा नभई केन्द्रीय रूपमा राखिएको आधिकारिक Program Support कोटि। <span style='color:#dc2626;font-weight:700'>जस्तै:</span> प्रत्यक्ष प्रशासनिक खर्च, अनुगमन तथा मूल्याङ्कन, सञ्चालन खर्च। स्रोतले यस्तो विभाजन नदिएकाले यसलाई पुनःवितरण गरिएको छैन।",
   pp_headline:"वर्गीकृत {tot} वितरणमध्ये, {d} ({p}) को प्रत्यक्ष लक्ष्य व्यक्ति थियो — खाना, क्लिनिक भेट, कक्षाकोठा, पानीको धारा, किसान तालिम।",
   pp_bar_t:"वितरित हरेक डलरमध्ये, FY2015–26:",
-  pp_click:"यसमा समेटिएका आधिकारिक क्षेत्र र नाम भएका गतिविधि अभिलेख हेर्न रङ्गीन हिस्सा छान्नुहोस्।",
+  pp_click:"विस्तार हेर्नुहोस्: यसमा समेटिएका आधिकारिक क्षेत्र र नाम भएका गतिविधि अभिलेख हेर्न रङ्गीन हिस्सा छान्नुहोस्।",
   pp_drawer_sub:"FY2015–26 मा {t} वितरण र वर्गीकरण",
   pp_drawer_sectors:"समेटिएका आधिकारिक कोटि र क्षेत्र",
   pp_drawer_records:"स्रोतले उपलब्ध गराएका नाम भएका गतिविधि अभिलेख। एउटै परियोजना एकभन्दा बढी आर्थिक वर्ष वा क्षेत्रको पङ्क्तिमा देखिन सक्छ; यो अद्वितीय अवार्ड गणना होइन, विस्तृत रिपोर्टिङ दृश्य हो।",
@@ -622,6 +627,7 @@ const I18N = {
   pt_lead:"नेपालमा कामका लागि वास्तवमा अमेरिकी रकम पाउने संस्थाहरू: संयुक्त राष्ट्रका निकाय, अन्तर्राष्ट्रिय गैसस र विकास ठेकेदार। अमेरिकी सरकारकै अवार्ड प्रणाली (USASpending.gov) बाट। सबैभन्दा ठूलो एकल अवार्ड — $509.5m, प्राप्तकर्ता विदेशी सरकारी निकाय भएकाले स्रोतमै गोप्य — नेपाललाई MCC सम्झौता अनुदान हो, अगस्ट २०२८ सम्म चल्ने।",
   pt_note:"प्रतिबद्धता; कार्यस्थल नेपाल भएका अवार्ड, FY2015–FY2026। माथिका चार्टभन्दा फरक लेखा आधार — को/के का लागि प्रयोग गर्नुहोस्, जोडका लागि होइन।",
   pt_hint:"नाम भएका अवार्ड अभिलेख साइड प्यानलमा हेर्न पट्टी छान्नुहोस्।",
+  pt_chips:"वा साझेदार सीधै खोल्नुहोस्:",
   pt_drawer_sub:"FY2015–FY2026 मा रिपोर्ट भएका प्रतिबद्धतामा {t}",
   pt_drawer_note:"माथिको कुल रकम यस प्राप्तकर्ताको सम्पूर्ण रिपोर्ट गरिएको प्रतिबद्धता हो। तलका अभिलेख पृष्ठको अवार्ड डेटामा उपलब्ध नाम भएका ठूला अवार्ड हुन्; ती उपयोगी विवरण हुन् तर कुल बराबर नहुन सक्छन्।",
   pt_no_awards:"यस प्राप्तकर्ताका लागि पृष्ठको अवार्ड डेटामा नाम भएको ठूला अवार्ड अभिलेख समावेश छैन।",
@@ -1062,7 +1068,7 @@ function drawPeople(){
        <span><span style="color:${PP_COL.people}">●</span> ${t('pp_people')} — <b>${P.split.people}%</b> · <b>${fmtM(tot.people)}</b></span>
        <span><span style="color:${PP_COL.system}">●</span> ${t('pp_system')} — <b>${P.split.system}%</b> · <b>${fmtM(tot.system)}</b></span>
        <span><span style="color:${PP_COL.machine}">●</span> ${t('pp_machine')} — <b>${P.split.machine}%</b> · <b>${fmtM(tot.machine)}</b></span></div>
-     <div style="margin-top:7px;font-size:12px;color:var(--muted)">${t('pp_click')}</div>
+     <div class="hint">${t('pp_click')}</div>
      <div style="margin-top:11px;font-size:14.5px;line-height:1.5;background:#f4f6f9;border:1px solid var(--line);border-radius:10px;padding:11px 14px">
        ${t('pp_headline').replace('{d}','<b style="color:'+PP_COL.people+'">'+fmtM(tot.people)+'</b>').replace('{p}','<b>'+P.split.people+'%</b>').replace('{tot}','<b>'+fmtM(grand)+'</b>')}</div>`;
   document.querySelectorAll('#pp-bar .pp-seg').forEach(b=>b.onclick=()=>drillPeopleClass(b.dataset.ppClass));
@@ -1141,6 +1147,11 @@ function drawPartners(){
       label:{show:true,position:'right',formatter:p=>fmt(p.value),fontSize:11,color:'#0f1d2e'}}]},true);
   ch.off('click');
   ch.on('click',p=>{const partner=ps[p.dataIndex];if(partner) drillPartner(partner);});
+  // Buttons are a visible, keyboard-accessible alternative to selecting a chart bar.
+  document.getElementById('partners-chips').innerHTML=
+    `<span class="chips-label">${t('pt_chips')}</span>`+
+    P.partners.map((p,i)=>`<button type="button" class="chip-btn" data-partner="${i}">${esc(p.name)} <span class="v">${fmt(p.usd)}</span></button>`).join('');
+  document.querySelectorAll('#partners-chips .chip-btn').forEach(b=>b.onclick=()=>drillPartner(P.partners[+b.dataset.partner]));
 }
 
 function drillPartner(partner){
