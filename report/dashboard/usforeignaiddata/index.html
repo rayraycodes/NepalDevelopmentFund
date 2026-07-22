@@ -981,7 +981,7 @@ function renderLedgerRows(){
     const recBtn=aid?`<button type="button" class="drill" data-aid="${esc(aid)}" data-label="${esc(a.recipient)}" aria-label="${t('lg_view')}: ${esc(a.recipient)}" onclick="drillProj(this.dataset.aid,this.dataset.label)">${esc(a.recipient)}</button>`:esc(a.recipient);
     const rl=recLoc(a.recipient);
     const rec=recBtn+(rl&&rl.country?`<div style="font-size:11px;color:var(--muted);margin-top:2px">📍 ${esc(ccName(rl.country))}</div>`:'');
-    return `<tr><td class="num">$${a.usd.toFixed(1)}</td><td>${rec}</td><td>${d}</td>
+    return `<tr><td class="num">${fmt(a.usd)}</td><td>${rec}</td><td>${d}</td>
       <td style="white-space:nowrap">${(a.start||'?').slice(0,7)} → ${(a.end||'?').slice(0,7)}</td>
       <td><span class="pill ${pills[a.status]||'p-exp'}">${t('lg_s_'+a.status)}</span></td></tr>`;}).join('');
   document.getElementById('ledger-count').textContent =
@@ -1094,7 +1094,7 @@ function drawPeople(){
   document.querySelector('#pp-map tbody').innerHTML=P.classmap.map(r=>
     `<tr><td>${r.cat}</td><td>${r.sec}</td>
      <td><span class="pill" style="background:${PP_COL[r.cls]}1a;color:${PP_COL[r.cls]}">${t('pp_'+r.cls)}</span></td>
-     <td class="num">$${r.di.toFixed(1)}</td></tr>`).join('');
+     <td class="num">${fmt(r.di)}</td></tr>`).join('');
 }
 
 // Roll the official sector map up to one of the three plain-language classifications.
@@ -1161,7 +1161,7 @@ function drawAwards(){
   const rows=(P.awards[awGroup]||[]).slice(0,12);
   document.querySelector('#awards-table tbody').innerHTML=rows.map(a=>{
     const desc=a.link?`<a href="${a.link}" target="_blank" rel="noopener">${a.desc||'—'}</a>`:(a.desc||'—');
-    return `<tr><td class="num">$${a.usd.toFixed(1)}</td><td>${a.recipient}</td>
+    return `<tr><td class="num">${fmt(a.usd)}</td><td>${a.recipient}</td>
       <td>${desc}</td><td>${a.start||'?'} → ${a.end||'?'}</td><td>${a.agency}</td></tr>`;}).join('');
 }
 
