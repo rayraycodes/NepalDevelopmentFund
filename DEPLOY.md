@@ -53,10 +53,10 @@ is required for publishing. The workflow in `.github/workflows/` is **CI only**:
 ever want GitHub Actions to deploy instead, disable Cloudflare's auto-build and use
 `wrangler deploy` from `report/dashboard` with a `CLOUDFLARE_API_TOKEN` secret.)
 
-## Alternative: deploy to Vercel (public, no password)
-The repo also ships a Vercel setup so Vercel can auto-deploy on every push. Unlike the Cloudflare
-project, this Vercel deploy is **public** — there is no password gate (that would need a paid plan or
-custom auth). It still sends the same hardening headers via `report/dashboard/vercel.json`. The
+## Alternative: deploy to Vercel (password-gated via Edge Middleware)
+The repo also ships a Vercel setup so Vercel can auto-deploy on every push. This Vercel deploy is
+**password-gated** by `report/dashboard/middleware.js` (Basic Auth, free-plan compatible — see
+below), and sends the same hardening headers via `report/dashboard/vercel.json`. The
 Cloudflare files (`_worker.js`, `wrangler.jsonc`) and the Vercel file (`vercel.json`) live side by
 side in `report/dashboard/`; each platform ignores the other's files (see `.assetsignore`).
 
@@ -64,9 +64,12 @@ side in `report/dashboard/`; each platform ignores the other's files (see `.asse
   is committed) and sets security headers on every response: `Strict-Transport-Security` (HSTS),
   a same-origin + inline `Content-Security-Policy`, `X-Frame-Options: DENY`,
   `X-Content-Type-Options: nosniff`, and `Referrer-Policy: no-referrer`.
-- There is no `SITE_PASSWORD` and no Edge Middleware: anyone with the URL can view the dashboard.
-  If you later want to gate it, use Vercel's built-in **Deployment Protection** (paid) or add a
-  Basic-Auth Edge Middleware.
+- The site is **password-gated** by `report/dashboard/middleware.js`, a Vercel Edge Middleware that
+  does HTTP Basic Auth on **every** request before any asset is served. This works on the **free
+  Hobby plan** — unlike Vercel's built-in **Deployment Protection**, which requires a paid plan.
+  Credentials live only in Vercel environment variables (never in the repo): `SITE_USER` (defaults
+  to `nepal`) and `SITE_PASSWORD` (required; the site returns 503 fail-closed if unset). Sign in
+  with username = `SITE_USER`, password = `SITE_PASSWORD`.
 
 ### Setup (you do this in the Vercel dashboard — I cannot access your account)
 The existing project `nepalbikasfund` (https://nepalbikasfund.vercel.app/) can be reused:
@@ -74,11 +77,17 @@ The existing project `nepalbikasfund` (https://nepalbikasfund.vercel.app/) can b
    (your `imregan@umich.edu` account authorises Vercel's GitHub app on the repo).
 2. **Settings -> Build & Deployment**: **Root Directory** = `report/dashboard`,
    **Framework Preset** = *Other*, empty Build Command, **Output Directory** = `.`.
-3. Redeploy (**Deployments -> Redeploy**, or push a commit). The site is live and public.
+   (Vercel auto-detects `middleware.js` at the Root Directory and deploys it as an Edge Function —
+   no build step or `package.json` needed.)
+3. **Settings -> Environment Variables**: add `SITE_PASSWORD` (the complex password; do not commit
+   it) and, optionally, `SITE_USER` (defaults to `nepal`). Apply to Production (and Preview if you
+   want previews gated too).
+4. Redeploy (**Deployments -> Redeploy**, or push a commit). Visiting the site now prompts for
+   credentials: username = `SITE_USER`, password = `SITE_PASSWORD`.
 
 > Pick **one** platform for `main`: if both Cloudflare and Vercel Git integrations stay connected,
-> both deploy on every push. Note Cloudflare's site is password-gated while this Vercel deploy is
-> public, so don't expose data on Vercel that must stay behind the Cloudflare gate.
+> both deploy on every push. Both are now password-gated (Cloudflare via `_worker.js`, Vercel via
+> `middleware.js`), but they use **separate** secrets — set `SITE_PASSWORD` in each platform.
 
 ## Updating the data
 Locally run `make build && make dashboard-data` to regenerate `report/dashboard/data.js` from the
